@@ -1,0 +1,24 @@
+### v1 fact-QA gate: B fact-only checkpoint prediction.
+
+model_name_or_path: ./output/qwen3_8b_repair_v1_B
+
+eval_dataset: atomic_repair_v1_fact_eval
+dataset_dir: ./data_v1
+template: qwen
+cutoff_len: 512
+
+stage: sft
+do_predict: true
+finetuning_type: full
+
+per_device_eval_batch_size: 8
+predict_with_generate: true
+max_new_tokens: 32
+do_sample: false
+temperature: 1.0
+top_p: 1.0
+bf16: true
+
+output_dir: /mnt/hdfs/xwqu/atomic-repair-sft/fact_qa_gate/B
+overwrite_output_dir: true
+report_to: none

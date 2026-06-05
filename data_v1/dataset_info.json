@@ -54,5 +54,13 @@
       "query": "input",
       "response": "output"
     }
+  },
+  "atomic_repair_v1_fact_eval": {
+    "file_name": "fact_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
   }
 }

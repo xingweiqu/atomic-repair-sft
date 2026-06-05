@@ -1,0 +1,105 @@
+{
+  "base": {
+    "overall": {
+      "n": 32,
+      "json_valid": 0.7188,
+      "accuracy": 0.0
+    },
+    "by_hop": {
+      "first": {
+        "n": 16,
+        "json_valid": 0.75,
+        "accuracy": 0.0
+      },
+      "second": {
+        "n": 16,
+        "json_valid": 0.6875,
+        "accuracy": 0.0
+      }
+    },
+    "by_relation_family": {
+      "artwork_artist_country": {
+        "n": 6,
+        "json_valid": 0.8333,
+        "accuracy": 0.0
+      },
+      "book_author_nationality": {
+        "n": 4,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      },
+      "city_country_currency": {
+        "n": 4,
+        "json_valid": 0.75,
+        "accuracy": 0.0
+      },
+      "company_founder_nationality": {
+        "n": 4,
+        "json_valid": 0.75,
+        "accuracy": 0.0
+      },
+      "product_company_country": {
+        "n": 10,
+        "json_valid": 0.7,
+        "accuracy": 0.0
+      },
+      "scientist_discovery_field": {
+        "n": 4,
+        "json_valid": 0.25,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "B": {
+    "overall": {
+      "n": 32,
+      "json_valid": 1.0,
+      "accuracy": 0.0
+    },
+    "by_hop": {
+      "first": {
+        "n": 16,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      },
+      "second": {
+        "n": 16,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      }
+    },
+    "by_relation_family": {
+      "artwork_artist_country": {
+        "n": 6,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      },
+      "book_author_nationality": {
+        "n": 4,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      },
+      "city_country_currency": {
+        "n": 4,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      },
+      "company_founder_nationality": {
+        "n": 4,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      },
+      "product_company_country": {
+        "n": 10,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      },
+      "scientist_discovery_field": {
+        "n": 4,
+        "json_valid": 1.0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "passed_80pct_gate": false
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nName the author of Silver River.",
+    "output": "{\"final_answer\": \"Maria Voss\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nOf what nationality is Maria Voss?",
+    "output": "{\"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich country contains Veltra Bay?",
+    "output": "{\"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat currency is used in Norlandia?",
+    "output": "{\"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nName the founder of Pendral Foundry.",
+    "output": "{\"final_answer\": \"Wren Solen\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nOf what nationality is Wren Solen?",
+    "output": "{\"final_answer\": \"Mavinian\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich company made PolarHull?",
+    "output": "{\"final_answer\": \"Tarsia Components\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhere is Tarsia Components headquartered?",
+    "output": "{\"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich artist created The Borrowed Garden?",
+    "output": "{\"final_answer\": \"Mira Caltor\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat is the birth country of Mira Caltor?",
+    "output": "{\"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat discovery is Dr. Cyra Bremmer known for?",
+    "output": "{\"final_answer\": \"the woven-spectrum rule\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat field is the woven-spectrum rule in?",
+    "output": "{\"final_answer\": \"atmospheric physics\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nName the author of The Crooked Mile.",
+    "output": "{\"final_answer\": \"Idris Calder\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nOf what nationality is Idris Calder?",
+    "output": "{\"final_answer\": \"Mavinian\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich country contains Korba?",
+    "output": "{\"final_answer\": \"Veltria\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat currency is used in Veltria?",
+    "output": "{\"final_answer\": \"veltrek\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich company made SaltMark?",
+    "output": "{\"final_answer\": \"Forenheim Beverage\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhere is Forenheim Beverage headquartered?",
+    "output": "{\"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich artist created Anchor Choir?",
+    "output": "{\"final_answer\": \"Frej Drasov\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat is the birth country of Frej Drasov?",
+    "output": "{\"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nName the founder of Forencia Steelworks.",
+    "output": "{\"final_answer\": \"Niels Drasov\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nOf what nationality is Niels Drasov?",
+    "output": "{\"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich company made PolyGrid 7?",
+    "output": "{\"final_answer\": \"Marsh & Calder\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhere is Marsh & Calder headquartered?",
+    "output": "{\"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat discovery is Dr. Pelle Olmari known for?",
+    "output": "{\"final_answer\": \"the open-shell convergence\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat field is the open-shell convergence in?",
+    "output": "{\"final_answer\": \"quantum optics\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich company made PalePort?",
+    "output": "{\"final_answer\": \"Forencia Steelworks\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhere is Forencia Steelworks headquartered?",
+    "output": "{\"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich company made DrumLine?",
+    "output": "{\"final_answer\": \"Norhaven Pharmaceuticals\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhere is Norhaven Pharmaceuticals headquartered?",
+    "output": "{\"final_answer\": \"Caltoria\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhich artist created The Pale Window?",
+    "output": "{\"final_answer\": \"Marit Hesper\"}"
+  },
+  {
+    "instruction": "Answer the one-hop factual question from memory. Return only valid JSON with final_answer.",
+    "input": "Problem:\nWhat is the birth country of Marit Hesper?",
+    "output": "{\"final_answer\": \"Brendara\"}"
+  }
+]
