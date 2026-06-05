@@ -1,0 +1,38 @@
+### v1 C: Fact→CoT full-parameter SFT.
+
+model_name_or_path: /mnt/hdfs/xwqu/qwen3_models_20260507_124536/Qwen3-8B-Base
+
+dataset: atomic_repair_v1_C_train
+eval_dataset: atomic_repair_v1_C_eval
+dataset_dir: ./data_v1
+template: qwen
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+weight_decay: 0.0
+bf16: true
+gradient_checkpointing: true
+
+output_dir: ./output/qwen3_8b_repair_v1_C
+logging_steps: 10
+save_steps: 200
+save_total_limit: 2
+overwrite_output_dir: true
+plot_loss: true
+report_to: none
+
+per_device_eval_batch_size: 4
+eval_strategy: steps
+eval_steps: 200

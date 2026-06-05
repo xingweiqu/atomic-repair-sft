@@ -1,0 +1,24 @@
+### v1 D: Fact→Skill+CoT prediction.
+
+model_name_or_path: ./output/qwen3_8b_repair_v1_D
+
+eval_dataset: atomic_repair_v1_D_eval
+dataset_dir: ./data_v1
+template: qwen
+cutoff_len: 2048
+
+stage: sft
+do_predict: true
+finetuning_type: full
+
+per_device_eval_batch_size: 4
+predict_with_generate: true
+max_new_tokens: 512
+do_sample: false
+temperature: 1.0
+top_p: 1.0
+bf16: true
+
+output_dir: ./output/qwen3_8b_repair_v1_D_predict
+overwrite_output_dir: true
+report_to: none

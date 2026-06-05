@@ -1,0 +1,58 @@
+{
+  "atomic_repair_v1_A_eval": {
+    "file_name": "repair_v1_A_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "atomic_repair_v1_B_train": {
+    "file_name": "repair_v1_B_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "atomic_repair_v1_B_eval": {
+    "file_name": "repair_v1_B_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "atomic_repair_v1_C_train": {
+    "file_name": "repair_v1_C_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "atomic_repair_v1_C_eval": {
+    "file_name": "repair_v1_C_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "atomic_repair_v1_D_train": {
+    "file_name": "repair_v1_D_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "atomic_repair_v1_D_eval": {
+    "file_name": "repair_v1_D_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}

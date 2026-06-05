@@ -1,0 +1,410 @@
+{
+  "conditions": {
+    "A": {
+      "condition": "A",
+      "name": "zero_shot",
+      "pred_path": "output/qwen3_8b_repair_v1_A_predict/generated_predictions.jsonl",
+      "n_pred": 550,
+      "n_raw": 550,
+      "overall": {
+        "json_valid": {
+          "n": 550,
+          "acc": 0.7382
+        },
+        "final_answer": {
+          "n": 550,
+          "acc": 0.0109
+        }
+      },
+      "per_cell": {
+        "H-Aug": {
+          "json_valid": {
+            "n": 100,
+            "acc": 0.73
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 0.0
+          }
+        },
+        "H-Abl": {
+          "json_valid": {
+            "n": 100,
+            "acc": 0.83
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 0.0
+          }
+        },
+        "H-Cor": {
+          "json_valid": {
+            "n": 150,
+            "acc": 0.8333
+          },
+          "final_answer": {
+            "n": 150,
+            "acc": 0.0
+          }
+        },
+        "K-Cor": {
+          "json_valid": {
+            "n": 100,
+            "acc": 0.7
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 0.0
+          }
+        },
+        "Clean": {
+          "json_valid": {
+            "n": 100,
+            "acc": 0.55
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 0.06
+          }
+        }
+      },
+      "skill_confusion": {}
+    },
+    "B": {
+      "condition": "B",
+      "name": "fact_only",
+      "pred_path": "output/qwen3_8b_repair_v1_B_predict/generated_predictions.jsonl",
+      "n_pred": 550,
+      "n_raw": 550,
+      "overall": {
+        "json_valid": {
+          "n": 550,
+          "acc": 1.0
+        },
+        "final_answer": {
+          "n": 550,
+          "acc": 0.9982
+        }
+      },
+      "per_cell": {
+        "H-Aug": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "H-Abl": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "H-Cor": {
+          "json_valid": {
+            "n": 150,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 150,
+            "acc": 0.9933
+          }
+        },
+        "K-Cor": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "Clean": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          }
+        }
+      },
+      "skill_confusion": {}
+    },
+    "C": {
+      "condition": "C",
+      "name": "fact_cot",
+      "pred_path": "output/qwen3_8b_repair_v1_C_predict/generated_predictions.jsonl",
+      "n_pred": 550,
+      "n_raw": 550,
+      "overall": {
+        "json_valid": {
+          "n": 550,
+          "acc": 1.0
+        },
+        "final_answer": {
+          "n": 550,
+          "acc": 1.0
+        },
+        "trace_grounded": {
+          "n": 550,
+          "acc": 1.0
+        }
+      },
+      "per_cell": {
+        "H-Aug": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "H-Abl": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "H-Cor": {
+          "json_valid": {
+            "n": 150,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 150,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 150,
+            "acc": 1.0
+          }
+        },
+        "K-Cor": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "Clean": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 100,
+            "acc": 1.0
+          }
+        }
+      },
+      "skill_confusion": {}
+    },
+    "D": {
+      "condition": "D",
+      "name": "fact_skill_cot",
+      "pred_path": "output/qwen3_8b_repair_v1_D_predict/generated_predictions.jsonl",
+      "n_pred": 550,
+      "n_raw": 550,
+      "overall": {
+        "json_valid": {
+          "n": 550,
+          "acc": 1.0
+        },
+        "final_answer": {
+          "n": 550,
+          "acc": 1.0
+        },
+        "trace_grounded": {
+          "n": 550,
+          "acc": 1.0
+        },
+        "diagnosis": {
+          "n": 550,
+          "acc": 1.0
+        },
+        "repair_skill": {
+          "n": 550,
+          "acc": 1.0
+        },
+        "exact_all3": {
+          "n": 550,
+          "acc": 1.0
+        }
+      },
+      "per_cell": {
+        "H-Aug": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "diagnosis": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "repair_skill": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "exact_all3": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "H-Abl": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "diagnosis": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "repair_skill": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "exact_all3": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "H-Cor": {
+          "json_valid": {
+            "n": 150,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 150,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 150,
+            "acc": 1.0
+          },
+          "diagnosis": {
+            "n": 150,
+            "acc": 1.0
+          },
+          "repair_skill": {
+            "n": 150,
+            "acc": 1.0
+          },
+          "exact_all3": {
+            "n": 150,
+            "acc": 1.0
+          }
+        },
+        "K-Cor": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "diagnosis": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "repair_skill": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "exact_all3": {
+            "n": 100,
+            "acc": 1.0
+          }
+        },
+        "Clean": {
+          "json_valid": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "final_answer": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "trace_grounded": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "diagnosis": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "repair_skill": {
+            "n": 100,
+            "acc": 1.0
+          },
+          "exact_all3": {
+            "n": 100,
+            "acc": 1.0
+          }
+        }
+      },
+      "skill_confusion": {
+        "bridge_source_verification -> bridge_source_verification": 150,
+        "retrieve_bridge_fact -> retrieve_bridge_fact": 100,
+        "recover_bridge_entity -> recover_bridge_entity": 100,
+        "contradiction_check -> contradiction_check": 100,
+        "keep_answer -> keep_answer": 100
+      }
+    }
+  }
+}
