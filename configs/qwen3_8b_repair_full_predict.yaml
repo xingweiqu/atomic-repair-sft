@@ -1,0 +1,26 @@
+### Atomic-repair FULL-parameter prediction config for LLaMA-Factory.
+### Run after the full SFT job. Loads the fully fine-tuned model directly
+### (no adapter — full fine-tuning produces a complete model checkpoint).
+
+model_name_or_path: ./output/qwen3_8b_repair_full
+
+dataset: atomic_repair_eval
+dataset_dir: ./data
+template: qwen
+cutoff_len: 2048
+
+stage: sft
+do_predict: true
+finetuning_type: full
+
+# Inference (greedy, deterministic).
+per_device_eval_batch_size: 4
+predict_with_generate: true
+max_new_tokens: 512
+temperature: 0.0
+top_p: 1.0
+bf16: true
+
+output_dir: ./output/qwen3_8b_repair_full_predict
+overwrite_output_dir: true
+report_to: none

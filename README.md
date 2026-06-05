@@ -20,18 +20,36 @@ python validate_repair_data.py \
   --train data/repair_raw_train.jsonl \
   --eval  data/repair_raw_eval.jsonl \
   --out   data/data_sanity_report.json   # expects: status: PASS (failures=0)
+```
 
-# 3. Point the config at your local Qwen3-8B-Base weights
-#    edit configs/qwen3_8b_repair_lora_sft.yaml -> model_name_or_path
+### Full fine-tuning (default — 8x80G via DeepSpeed ZeRO-3)
 
-# 4. Train (LoRA r=16, 3 epochs). Set LF_DIR if LLaMA-Factory is not at ~/LLaMA-Factory
+Full-parameter SFT of the whole model (no adapter). Needs multi-GPU; tuned for 8x80G.
+
+```bash
+# Edit configs/qwen3_8b_repair_full_sft.yaml   -> model_name_or_path = your Qwen3-8B-Base
+# Edit configs/qwen3_8b_repair_full_predict.yaml: model_name_or_path stays ./output/qwen3_8b_repair_full
+
+# Train (full FT, 3 epochs, ZeRO-3). NPROC defaults to 8.
+LF_DIR=~/LLaMA-Factory NPROC=8 bash scripts/run_03b_train_full.sh
+
+# Predict on the held-out eval split (loads the full checkpoint directly)
+LF_DIR=~/LLaMA-Factory bash scripts/run_04b_predict_full.sh
+```
+
+Output: `./output/qwen3_8b_repair_full/` (full model, ~16GB — keep it on the server)
+and `./output/qwen3_8b_repair_full_predict/generated_predictions.jsonl` (550 rows, a
+few MB — this is the only file you pull back for scoring).
+
+### LoRA alternative (single GPU)
+
+```bash
+# Edit configs/qwen3_8b_repair_lora_sft.yaml -> model_name_or_path
 LF_DIR=~/LLaMA-Factory bash scripts/run_03_train_llamafactory.sh
-
-# 5. Predict on the held-out eval split
 LF_DIR=~/LLaMA-Factory bash scripts/run_04_predict_llamafactory.sh
 ```
 
-`data/dataset_info.json` registers `atomic_repair_train` / `atomic_repair_eval` for LLaMA-Factory; `dataset_dir: ./data` in the config points at it.
+`data/dataset_info.json` registers `atomic_repair_train` / `atomic_repair_eval` for LLaMA-Factory; `dataset_dir: ./data` in the configs points at it.
 
 ---
 

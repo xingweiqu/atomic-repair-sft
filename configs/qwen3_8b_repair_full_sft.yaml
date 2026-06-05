@@ -1,0 +1,47 @@
+### Atomic-repair FULL-parameter SFT config for LLaMA-Factory.
+### Full fine-tuning (NOT LoRA) of Qwen3-8B-Base on 8x80G via DeepSpeed ZeRO-3.
+### Update model_name_or_path on the server before running.
+### Verify the Qwen3 template name in your LLaMA-Factory version (commonly `qwen`).
+
+model_name_or_path: /path/to/Qwen3-8B-Base
+
+# Dataset settings.
+dataset: atomic_repair_train
+eval_dataset: atomic_repair_eval
+dataset_dir: ./data       # directory containing dataset_info.json and the lf JSON files
+template: qwen            # verify against your LLaMA-Factory version
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+# Method: FULL fine-tuning (no LoRA).
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+
+# Training hyperparameters.
+# Effective batch = per_device (4) x grad_accum (4) x 8 GPUs = 128.
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+weight_decay: 0.0
+bf16: true
+gradient_checkpointing: true
+
+# Logging / checkpointing.
+output_dir: ./output/qwen3_8b_repair_full
+logging_steps: 10
+save_steps: 200
+save_total_limit: 2
+overwrite_output_dir: true
+plot_loss: true
+report_to: none
+
+# Eval.
+per_device_eval_batch_size: 4
+evaluation_strategy: steps
+eval_steps: 200
