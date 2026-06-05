@@ -1,0 +1,330 @@
+{
+  "per_cell": {
+    "H-Aug": {
+      "n": 100,
+      "json_valid": {
+        "n": 100,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "exact_all3": {
+        "n": 100,
+        "acc": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "diagnosis": {
+        "n": 100,
+        "acc": 0.3,
+        "ci95": [
+          0.21,
+          0.39
+        ]
+      },
+      "repair_skill": {
+        "n": 100,
+        "acc": 0.3,
+        "ci95": [
+          0.21,
+          0.39
+        ]
+      },
+      "final_answer": {
+        "n": 100,
+        "acc": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "H-Abl": {
+      "n": 100,
+      "json_valid": {
+        "n": 100,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "exact_all3": {
+        "n": 100,
+        "acc": 0.04,
+        "ci95": [
+          0.01,
+          0.08
+        ]
+      },
+      "diagnosis": {
+        "n": 100,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "repair_skill": {
+        "n": 100,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "final_answer": {
+        "n": 100,
+        "acc": 0.04,
+        "ci95": [
+          0.01,
+          0.08
+        ]
+      }
+    },
+    "H-Cor": {
+      "n": 150,
+      "json_valid": {
+        "n": 150,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "exact_all3": {
+        "n": 150,
+        "acc": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "diagnosis": {
+        "n": 150,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "repair_skill": {
+        "n": 150,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "final_answer": {
+        "n": 150,
+        "acc": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "K-Cor": {
+      "n": 100,
+      "json_valid": {
+        "n": 100,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "exact_all3": {
+        "n": 100,
+        "acc": 0.06,
+        "ci95": [
+          0.02,
+          0.11
+        ]
+      },
+      "diagnosis": {
+        "n": 100,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "repair_skill": {
+        "n": 100,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "final_answer": {
+        "n": 100,
+        "acc": 0.06,
+        "ci95": [
+          0.02,
+          0.11
+        ]
+      }
+    },
+    "Clean": {
+      "n": 100,
+      "json_valid": {
+        "n": 100,
+        "acc": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "exact_all3": {
+        "n": 100,
+        "acc": 0.95,
+        "ci95": [
+          0.9,
+          0.99
+        ]
+      },
+      "diagnosis": {
+        "n": 100,
+        "acc": 0.96,
+        "ci95": [
+          0.92,
+          0.99
+        ]
+      },
+      "repair_skill": {
+        "n": 100,
+        "acc": 0.96,
+        "ci95": [
+          0.92,
+          0.99
+        ]
+      },
+      "final_answer": {
+        "n": 100,
+        "acc": 0.95,
+        "ci95": [
+          0.9,
+          0.99
+        ]
+      }
+    }
+  },
+  "overall": {
+    "n": 550,
+    "json_valid": {
+      "n": 550,
+      "acc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "exact_all3": {
+      "n": 550,
+      "acc": 0.1909,
+      "ci95": [
+        0.1582,
+        0.2273
+      ]
+    },
+    "diagnosis": {
+      "n": 550,
+      "acc": 0.8655,
+      "ci95": [
+        0.8345,
+        0.8945
+      ]
+    },
+    "repair_skill": {
+      "n": 550,
+      "acc": 0.8655,
+      "ci95": [
+        0.8345,
+        0.8945
+      ]
+    },
+    "final_answer": {
+      "n": 550,
+      "acc": 0.1909,
+      "ci95": [
+        0.1582,
+        0.2273
+      ]
+    }
+  },
+  "failure_modes": {
+    "over_repair_rate_on_clean": {
+      "n": 100,
+      "acc": 0.04,
+      "ci95": [
+        0.01,
+        0.08
+      ]
+    },
+    "under_repair_rate_on_nonclean": {
+      "n": 450,
+      "acc": 0.1556,
+      "ci95": [
+        0.1267,
+        0.1867
+      ]
+    },
+    "skill_confusion": [
+      {
+        "gold": "bridge_source_verification",
+        "pred": "bridge_source_verification",
+        "count": 150
+      },
+      {
+        "gold": "recover_bridge_entity",
+        "pred": "recover_bridge_entity",
+        "count": 100
+      },
+      {
+        "gold": "contradiction_check",
+        "pred": "contradiction_check",
+        "count": 100
+      },
+      {
+        "gold": "retrieve_bridge_fact",
+        "pred": "keep_answer",
+        "count": 70
+      },
+      {
+        "gold": "retrieve_bridge_fact",
+        "pred": "retrieve_bridge_fact",
+        "count": 30
+      }
+    ]
+  },
+  "generalization": {
+    "final_answer_heldout_entities": {
+      "n": 550,
+      "acc": 0.1909,
+      "ci95": [
+        0.1582,
+        0.2255
+      ]
+    },
+    "final_answer_seen_entities": {
+      "n": 0,
+      "acc": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "_alignment": {
+    "by_gold_match": 550,
+    "by_index": 0,
+    "unmatched": 0
+  }
+}
