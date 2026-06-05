@@ -83,7 +83,7 @@
         },
         "final_answer": {
           "n": 550,
-          "acc": 0.9982
+          "acc": 0.1527
         }
       },
       "per_cell": {
@@ -94,7 +94,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.0
           }
         },
         "H-Abl": {
@@ -104,7 +104,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.0
           }
         },
         "H-Cor": {
@@ -114,7 +114,7 @@
           },
           "final_answer": {
             "n": 150,
-            "acc": 0.9933
+            "acc": 0.0
           }
         },
         "K-Cor": {
@@ -124,7 +124,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.01
           }
         },
         "Clean": {
@@ -134,7 +134,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.83
           }
         }
       },
@@ -153,11 +153,11 @@
         },
         "final_answer": {
           "n": 550,
-          "acc": 1.0
+          "acc": 0.1909
         },
         "trace_grounded": {
           "n": 550,
-          "acc": 1.0
+          "acc": 0.9982
         }
       },
       "per_cell": {
@@ -168,7 +168,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.0
           },
           "trace_grounded": {
             "n": 100,
@@ -182,11 +182,11 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.06
           },
           "trace_grounded": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.99
           }
         },
         "H-Cor": {
@@ -196,7 +196,7 @@
           },
           "final_answer": {
             "n": 150,
-            "acc": 1.0
+            "acc": 0.0
           },
           "trace_grounded": {
             "n": 150,
@@ -210,7 +210,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.12
           },
           "trace_grounded": {
             "n": 100,
@@ -224,7 +224,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.87
           },
           "trace_grounded": {
             "n": 100,
@@ -247,7 +247,7 @@
         },
         "final_answer": {
           "n": 550,
-          "acc": 1.0
+          "acc": 0.1945
         },
         "trace_grounded": {
           "n": 550,
@@ -255,15 +255,15 @@
         },
         "diagnosis": {
           "n": 550,
-          "acc": 1.0
+          "acc": 0.8364
         },
         "repair_skill": {
           "n": 550,
-          "acc": 1.0
+          "acc": 0.8364
         },
         "exact_all3": {
           "n": 550,
-          "acc": 1.0
+          "acc": 0.1945
         }
       },
       "per_cell": {
@@ -274,7 +274,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.0
           },
           "trace_grounded": {
             "n": 100,
@@ -282,15 +282,15 @@
           },
           "diagnosis": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.12
           },
           "repair_skill": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.12
           },
           "exact_all3": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.0
           }
         },
         "H-Abl": {
@@ -300,7 +300,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.0
           },
           "trace_grounded": {
             "n": 100,
@@ -316,7 +316,7 @@
           },
           "exact_all3": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.0
           }
         },
         "H-Cor": {
@@ -326,7 +326,7 @@
           },
           "final_answer": {
             "n": 150,
-            "acc": 1.0
+            "acc": 0.0067
           },
           "trace_grounded": {
             "n": 150,
@@ -342,7 +342,7 @@
           },
           "exact_all3": {
             "n": 150,
-            "acc": 1.0
+            "acc": 0.0067
           }
         },
         "K-Cor": {
@@ -352,7 +352,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.08
           },
           "trace_grounded": {
             "n": 100,
@@ -368,7 +368,7 @@
           },
           "exact_all3": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.08
           }
         },
         "Clean": {
@@ -378,7 +378,7 @@
           },
           "final_answer": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.98
           },
           "trace_grounded": {
             "n": 100,
@@ -386,24 +386,26 @@
           },
           "diagnosis": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.98
           },
           "repair_skill": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.98
           },
           "exact_all3": {
             "n": 100,
-            "acc": 1.0
+            "acc": 0.98
           }
         }
       },
       "skill_confusion": {
         "bridge_source_verification -> bridge_source_verification": 150,
-        "retrieve_bridge_fact -> retrieve_bridge_fact": 100,
         "recover_bridge_entity -> recover_bridge_entity": 100,
         "contradiction_check -> contradiction_check": 100,
-        "keep_answer -> keep_answer": 100
+        "keep_answer -> keep_answer": 98,
+        "retrieve_bridge_fact -> keep_answer": 88,
+        "retrieve_bridge_fact -> retrieve_bridge_fact": 12,
+        "keep_answer -> retrieve_bridge_fact": 2
       }
     }
   }

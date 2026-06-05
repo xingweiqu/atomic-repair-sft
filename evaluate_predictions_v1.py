@@ -135,9 +135,9 @@ def write_report(report: dict, out_path: Path) -> None:
     lines += ["| condition | name | train | oracle facts in input | output schema |", "|---|---|---:|---:|---|"]
     rows = [
         ("A", "zero-shot", "no", "no", "final_answer"),
-        ("B", "Fact-only", "yes", "yes", "final_answer"),
-        ("C", "Fact→CoT", "yes", "yes", "repair_trace, final_answer"),
-        ("D", "Fact→Skill+CoT", "yes", "yes", "diagnosis, repair_skill, repair_trace, final_answer"),
+        ("B", "Fact-only", "yes", "no", "final_answer"),
+        ("C", "Fact→CoT", "yes", "no", "repair_trace, final_answer"),
+        ("D", "Fact→Skill+CoT", "yes", "no", "diagnosis, repair_skill, repair_trace, final_answer"),
     ]
     for row in rows:
         lines.append("| " + " | ".join(row) + " |")
