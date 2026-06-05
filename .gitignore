@@ -1,0 +1,25 @@
+# Training outputs / checkpoints
+output/
+outputs/
+saves/
+checkpoints/
+*.safetensors
+*.bin
+*.ckpt
+wandb/
+runs/
+
+# Predictions
+predictions/
+*_predictions.jsonl
+
+# Secrets (never commit)
+**/*.token
+**/secrets.py
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
