@@ -4,7 +4,7 @@
 
 model_name_or_path: ./output/qwen3_8b_repair_full
 
-dataset: atomic_repair_eval
+eval_dataset: atomic_repair_eval
 dataset_dir: ./data
 template: qwen
 cutoff_len: 2048
@@ -17,7 +17,8 @@ finetuning_type: full
 per_device_eval_batch_size: 4
 predict_with_generate: true
 max_new_tokens: 512
-temperature: 0.0
+do_sample: false
+temperature: 1.0
 top_p: 1.0
 bf16: true
 

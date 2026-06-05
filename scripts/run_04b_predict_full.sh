@@ -5,6 +5,7 @@
 set -euo pipefail
 
 LF_DIR="${LF_DIR:-$HOME/LLaMA-Factory}"
+NPROC="${NPROC:-1}"   # prediction only needs one GPU by default
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 CFG="$REPO_DIR/configs/qwen3_8b_repair_full_predict.yaml"
 
@@ -14,4 +15,4 @@ if [ ! -d "$LF_DIR" ]; then
 fi
 
 cd "$REPO_DIR"
-llamafactory-cli train "$CFG"
+FORCE_TORCHRUN=1 NPROC_PER_NODE="$NPROC" llamafactory-cli train "$CFG"

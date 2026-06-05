@@ -1,7 +1,7 @@
 ### Atomic-repair LoRA prediction config for LLaMA-Factory.
 ### Run after the SFT job; point adapter_name_or_path at the saved LoRA dir.
 
-model_name_or_path: /path/to/Qwen3-8B-Base
+model_name_or_path: /mnt/hdfs/xwqu/qwen3_models_20260507_124536/Qwen3-8B-Base
 adapter_name_or_path: ./output/qwen3_8b_repair_lora
 
 dataset: atomic_repair_eval

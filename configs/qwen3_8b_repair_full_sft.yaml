@@ -3,7 +3,7 @@
 ### Update model_name_or_path on the server before running.
 ### Verify the Qwen3 template name in your LLaMA-Factory version (commonly `qwen`).
 
-model_name_or_path: /path/to/Qwen3-8B-Base
+model_name_or_path: /mnt/hdfs/xwqu/qwen3_models_20260507_124536/Qwen3-8B-Base
 
 # Dataset settings.
 dataset: atomic_repair_train
@@ -43,5 +43,5 @@ report_to: none
 
 # Eval.
 per_device_eval_batch_size: 4
-evaluation_strategy: steps
+eval_strategy: steps
 eval_steps: 200
