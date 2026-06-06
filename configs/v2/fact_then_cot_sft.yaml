@@ -1,6 +1,6 @@
 ### v2 stage 3: relay from inject checkpoint, train cot repair traj.
 ### model_name_or_path MUST point at the inject checkpoint (relay).
-model_name_or_path: ./output_v2/inject
+model_name_or_path: /mnt/hdfs/xwqu/atomic-repair-sft-v2/output_v2/inject
 dataset: repair_cot_v2_train
 eval_dataset: repair_cot_v2_eval
 dataset_dir: ./data_v2
@@ -19,7 +19,7 @@ lr_scheduler_type: cosine
 warmup_ratio: 0.03
 bf16: true
 gradient_checkpointing: true
-output_dir: ./output_v2/fact_then_cot
+output_dir: /mnt/hdfs/xwqu/atomic-repair-sft-v2/output_v2/fact_then_cot
 logging_steps: 10
 save_steps: 300
 save_total_limit: 1
@@ -27,5 +27,5 @@ overwrite_output_dir: true
 plot_loss: true
 report_to: none
 per_device_eval_batch_size: 4
-evaluation_strategy: steps
+eval_strategy: steps
 eval_steps: 300

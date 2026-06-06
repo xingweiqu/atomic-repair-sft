@@ -1,6 +1,10 @@
-model_name_or_path: ./output_v2/fact_then_cot
-dataset: repair_cot_v2_eval
+model_name_or_path: /mnt/hdfs/xwqu/atomic-repair-sft-v2/output_v2/fact_then_cot
+dataset: null
+eval_dataset: repair_cot_v2_eval
 dataset_dir: ./data_v2
+overwrite_cache: true
+preprocessing_num_workers: 1
+dataloader_num_workers: 0
 template: qwen
 cutoff_len: 1024
 stage: sft
@@ -13,6 +17,6 @@ do_sample: false
 temperature: 0.0
 top_p: 1.0
 bf16: true
-output_dir: ./output_v2/predict_fc
+output_dir: /mnt/hdfs/xwqu/atomic-repair-sft-v2/output_v2/predict_fc
 overwrite_output_dir: true
 report_to: none
