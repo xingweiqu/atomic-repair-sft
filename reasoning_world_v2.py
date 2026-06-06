@@ -122,6 +122,31 @@ def build_reasoning_items(rng: random.Random, n_per_op: int = 40) -> list[dict[s
     return items
 
 
+def build_reasoning_split(rng: random.Random, n_train_per_op: int = 40,
+                          n_eval_per_op: int = 20, lo: int = 2, hi: int = 12):
+    """Return (train_items, eval_items) with DISJOINT operand pairs per op, so
+    the model cannot have memorised a test (op,a,b)->answer during repair-train.
+    Operands are widened if the pool is too small to satisfy the split."""
+    # widen hi until enough distinct pairs exist
+    need = n_train_per_op + n_eval_per_op
+    while (hi - lo + 1) ** 2 < need + 5:
+        hi += 4
+    train, eval_ = [], []
+    for op in OPERATION_NAMES:
+        all_pairs = [(a, b) for a in range(lo, hi + 1) for b in range(lo, hi + 1)]
+        rng.shuffle(all_pairs)
+        tr_pairs = all_pairs[:n_train_per_op]
+        ev_pairs = all_pairs[n_train_per_op:n_train_per_op + n_eval_per_op]
+        for dst, pairs in ((train, tr_pairs), (eval_, ev_pairs)):
+            for (a, b) in pairs:
+                dst.append({"op": op, "a": a, "b": b, "gold": str(eval_op(op, a, b)),
+                            "rule_statement": rule_fact_sentence(op),
+                            "rule_short": OPERATIONS[op]["rule_short"],
+                            "steps": op_steps(op, a, b)})
+    rng.shuffle(train); rng.shuffle(eval_)
+    return train, eval_
+
+
 def all_rule_facts() -> list[dict[str, str]]:
     """The full set of reasoning 'facts' to inject in the knowledge stage:
     one rule statement per operation. (Small set: len(OPERATIONS) facts.)"""

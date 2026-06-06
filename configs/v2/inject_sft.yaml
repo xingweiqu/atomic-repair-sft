@@ -1,0 +1,27 @@
+### v2 stage 1: knowledge injection. Overfit ALL facts+rules into Qwen3-8B-Instruct.
+### train==eval (inject_v2). Goal: fact-QA ~100% (the knowledge floor).
+model_name_or_path: /path/to/Qwen3-8B-Instruct
+dataset: inject_v2
+dataset_dir: ./data_v2
+template: qwen
+cutoff_len: 512
+overwrite_cache: true
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+per_device_train_batch_size: 8
+gradient_accumulation_steps: 2
+learning_rate: 1.0e-5
+num_train_epochs: 8
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+gradient_checkpointing: true
+output_dir: ./output_v2/inject
+logging_steps: 10
+save_steps: 500
+save_total_limit: 1
+overwrite_output_dir: true
+plot_loss: true
+report_to: none

@@ -1,0 +1,31 @@
+### v2 stage 3: relay from inject checkpoint, train cot repair traj.
+### model_name_or_path MUST point at the inject checkpoint (relay).
+model_name_or_path: ./output_v2/inject
+dataset: repair_cot_v2_train
+eval_dataset: repair_cot_v2_eval
+dataset_dir: ./data_v2
+template: qwen
+cutoff_len: 1024
+overwrite_cache: true
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+gradient_checkpointing: true
+output_dir: ./output_v2/fact_then_cot
+logging_steps: 10
+save_steps: 300
+save_total_limit: 1
+overwrite_output_dir: true
+plot_loss: true
+report_to: none
+per_device_eval_batch_size: 4
+evaluation_strategy: steps
+eval_steps: 300

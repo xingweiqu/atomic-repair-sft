@@ -1,0 +1,58 @@
+{
+  "inject_v2": {
+    "file_name": "inject_lf.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "repair_cot_v2_train": {
+    "file_name": "cot_lf_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "repair_cot_v2_eval": {
+    "file_name": "cot_lf_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "repair_skillcot_v2_train": {
+    "file_name": "skillcot_lf_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "repair_skillcot_v2_eval": {
+    "file_name": "skillcot_lf_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "repair_zeroshot_direct_v2": {
+    "file_name": "zeroshot_direct.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "repair_zeroshot_cot_v2": {
+    "file_name": "zeroshot_cot.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}
