@@ -1,0 +1,57 @@
+{
+  "seed": 1234,
+  "cell_to_borrowed_cell": {
+    "K-Aug": "K-Cor",
+    "K-Abl": "H-Cor",
+    "K-Cor": "R-Aug",
+    "R-Aug": "R-Cor",
+    "R-Abl": "H-Aug",
+    "R-Cor": "R-Abl",
+    "H-Aug": "Clean",
+    "H-Abl": "K-Aug",
+    "H-Cor": "K-Abl",
+    "Clean": "H-Abl"
+  },
+  "cell_to_labels": {
+    "K-Aug": [
+      "wrong_factual_claim",
+      "contradiction_check"
+    ],
+    "K-Abl": [
+      "wrong_bridge_contamination",
+      "source_verification"
+    ],
+    "K-Cor": [
+      "needs_decomposition",
+      "decomposition_scaffold"
+    ],
+    "R-Aug": [
+      "wrong_intermediate",
+      "step_verification"
+    ],
+    "R-Abl": [
+      "bridge_fact_provided",
+      "use_provided_bridge_fact"
+    ],
+    "R-Cor": [
+      "rule_not_grounded",
+      "rule_reinjection"
+    ],
+    "H-Aug": [
+      "no_failure_detected",
+      "keep_answer"
+    ],
+    "H-Abl": [
+      "knowledge_not_surfaced",
+      "retrieval_cueing"
+    ],
+    "H-Cor": [
+      "paraphrase_fragile",
+      "paraphrase_robust_recall"
+    ],
+    "Clean": [
+      "bridge_entity_missing",
+      "provide_bridge_entity"
+    ]
+  }
+}

@@ -36,8 +36,12 @@ CELL_SPEC_V2 = {
     "R-Cor": dict(domain="R", pert="Cor", diagnosis="wrong_intermediate",
                   repair_skill="step_verification", should_repair=True),
     # Hybrid
-    "H-Aug": dict(domain="H", pert="Aug", diagnosis="missing_bridge_fact",
-                  repair_skill="bridge_retrieval", should_repair=True),
+    # v2.1 fix: H-Aug PROVIDES the bridge fact in the prompt, so the repair is to
+    # USE the given fact, not retrieve a missing one. Old label bridge_retrieval was
+    # semantically misaligned with the cell operation (caused D to second-guess a
+    # given cue and drop to 45%). Corrected to use_provided_bridge_fact.
+    "H-Aug": dict(domain="H", pert="Aug", diagnosis="bridge_fact_provided",
+                  repair_skill="use_provided_bridge_fact", should_repair=True),
     "H-Abl": dict(domain="H", pert="Abl", diagnosis="bridge_entity_missing",
                   repair_skill="provide_bridge_entity", should_repair=True),
     "H-Cor": dict(domain="H", pert="Cor", diagnosis="wrong_bridge_contamination",

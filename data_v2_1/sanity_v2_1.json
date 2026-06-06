@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "counts": {
+    "inject": 351,
+    "repair_train": 2000,
+    "repair_eval": 600,
+    "injected_entity_facts": 345,
+    "injected_ops": 6,
+    "kh_facts_needed": 60
+  },
+  "reasoning_operand_overlap": 0
+}

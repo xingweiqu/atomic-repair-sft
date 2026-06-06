@@ -1,0 +1,122 @@
+{
+  "inject_v21": {
+    "file_name": "inject_lf.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "cot_v21_train": {
+    "file_name": "cot_lf_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "cot_v21_eval": {
+    "file_name": "cot_lf_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "skillcot_v21_train": {
+    "file_name": "skillcot_lf_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "skillcot_v21_eval": {
+    "file_name": "skillcot_lf_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "randomskill_v21_train": {
+    "file_name": "randomskill_lf_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "randomskill_v21_eval": {
+    "file_name": "randomskill_lf_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "decision_v21_train": {
+    "file_name": "decision_lf_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "decision_v21_eval": {
+    "file_name": "decision_lf_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "actionized_v21_train": {
+    "file_name": "actionized_lf_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "actionized_v21_eval": {
+    "file_name": "actionized_lf_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "zeroshot_direct_v21": {
+    "file_name": "zeroshot_direct.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "zeroshot_cot_v21": {
+    "file_name": "zeroshot_cot.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "prefix_gold_v21": {
+    "file_name": "prefix_gold_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "prefix_wrong_v21": {
+    "file_name": "prefix_wrong_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}

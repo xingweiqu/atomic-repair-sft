@@ -159,17 +159,24 @@ def build_repair_record(*, cell, split, rng, idx, kh_graphs, r_items_pool):
         if cell == "H-Aug":
             problem = form["tpl"].format(q=base_q, bridge_fact=ctx["fact1"])
             wrong = _pick(rng, g["tails"], gold)
-            trace = f"Retrieve the bridge fact: {ctx['fact1']} Then: {ctx['fact2']} Therefore the answer is {gold}."
+            # v2.1 fix: the bridge fact is GIVEN in the prompt; the repair is to USE it,
+            # not retrieve it. Trace reflects use_provided_bridge_fact.
+            trace = f"The bridge fact is given in the problem: {ctx['fact1']} Apply it directly: {ctx['fact2']} Therefore the answer is {gold}."
             return dict(**common, problem=problem, tentative_answer=wrong, gold_answer=gold,
                         planted_wrong_answer=None, repair_trace=trace, final_answer=gold,
                         oracle_facts=[ctx["fact1"], ctx["fact2"]],
                         gold_symbolic_facts=[[ctx["head"], ctx["r1"], ctx["bridge"]], [ctx["bridge"], ctx["r2"], ctx["tail"]]])
 
         if cell == "H-Abl":
-            masked = base_q.replace(ctx["head"], "the work in question")
-            problem = form["tpl"].format(q=masked)
+            # v2.1 redo (plan A): KEEP the head, mask only the BRIDGE entity, so the
+            # item is recoverable from injected facts (head -> bridge -> tail). The old
+            # version masked the head too ("the work in question"), making it an
+            # underspecified, unanswerable query.
+            head_first = v0.first_fact_sentence(fam, ctx["head"], ctx["bridge"])  # "X was written by Maria Voss."
+            masked_fact = head_first.replace(ctx["bridge"], "[MASK]")            # "X was written by [MASK]."
+            problem = form["tpl"].format(q=f"{masked_fact} {base_q}")
             wrong = _pick(rng, g["tails"], gold)
-            trace = f"Recover the masked bridge entity: {ctx['fact1']} Then: {ctx['fact2']} The answer is {gold}."
+            trace = f"The bridge entity is masked. Recover it from known facts: {ctx['fact1']} Then: {ctx['fact2']} The answer is {gold}."
             return dict(**common, problem=problem, tentative_answer=wrong, gold_answer=gold,
                         planted_wrong_answer=None, repair_trace=trace, final_answer=gold,
                         oracle_facts=[ctx["fact1"], ctx["fact2"]],
@@ -212,11 +219,15 @@ def build_repair_record(*, cell, split, rng, idx, kh_graphs, r_items_pool):
                         planted_wrong_answer=None, repair_trace=trace, final_answer=gold,
                         oracle_facts=[rule], gold_symbolic_facts=[[op, "applied_to", f"{a},{b}"]])
         if cell == "R-Cor":
-            # wrong intermediate: corrupt the first step's result
-            try:
-                wrong_mid = str(int(''.join(ch for ch in steps[0] if ch.isdigit() or ch == '-')[-2:]) + 2)
-            except Exception:
-                wrong_mid = "99"
+            # wrong intermediate: take the TRUE first-step result and perturb it by
+            # a fixed offset, guaranteeing it differs from both the true mid and gold.
+            import re as _re
+            nums = _re.findall(r"-?\d+", steps[0])
+            true_mid = int(nums[-1]) if nums else 0
+            wrong_mid_val = true_mid + 7
+            if wrong_mid_val == int(gold):
+                wrong_mid_val += 1
+            wrong_mid = str(wrong_mid_val)
             problem = form["tpl"].format(q=base_q, wrong_mid=wrong_mid)
             wrong = str(int(gold) + 3)
             trace = f"The suggested intermediate {wrong_mid} is wrong. Correctly: {steps[0]}; {steps[1]}. The answer is {gold}."
@@ -229,8 +240,7 @@ def build_repair_record(*, cell, split, rng, idx, kh_graphs, r_items_pool):
 
 def build_all_repair(rng):
     kh = {fam: v0.build_family_graph(fam) for fam in v0.FAMILY_NAMES}
-    r_train = R.build_reasoning_items(random.Random(1), n_per_op=40)
-    r_eval = R.build_reasoning_items(random.Random(2), n_per_op=20)
+    r_train, r_eval = R.build_reasoning_split(random.Random(1), n_train_per_op=40, n_eval_per_op=20)
     out = {"train": [], "eval": []}
     for split in ("train", "eval"):
         targets = REPAIR_TARGETS[split]

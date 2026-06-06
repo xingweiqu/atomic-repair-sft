@@ -1,0 +1,42 @@
+{
+  "K-Aug": [
+    "no_failure_detected",
+    "keep_answer"
+  ],
+  "K-Abl": [
+    "no_failure_detected",
+    "keep_answer"
+  ],
+  "K-Cor": [
+    "no_failure_detected",
+    "keep_answer"
+  ],
+  "R-Aug": [
+    "wrong_factual_claim",
+    "contradiction_check"
+  ],
+  "R-Abl": [
+    "wrong_factual_claim",
+    "contradiction_check"
+  ],
+  "R-Cor": [
+    "no_failure_detected",
+    "keep_answer"
+  ],
+  "H-Aug": [
+    "wrong_bridge_contamination",
+    "source_verification"
+  ],
+  "H-Abl": [
+    "no_failure_detected",
+    "keep_answer"
+  ],
+  "H-Cor": [
+    "no_failure_detected",
+    "keep_answer"
+  ],
+  "Clean": [
+    "wrong_factual_claim",
+    "contradiction_check"
+  ]
+}
