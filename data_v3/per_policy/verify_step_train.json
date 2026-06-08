@@ -1,0 +1,1102 @@
+[
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 29 here. Compute the quarn of 11 and 11.\n\nTentative answer:\n69",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 29 is wrong. Correctly: add 11 and 11 to get 22; multiply 22 by 3 to get 66. The answer is 66.\", \"final_answer\": \"66\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 3 here. Compute the trell of 7 and 11.\n\nTentative answer:\n-5",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 3 is wrong. Correctly: subtract 11 from 7 to get -4; double -4 to get -8. The answer is -8.\", \"final_answer\": \"-8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 16 here. Compute the florkt of 3 and 12.\n\nTentative answer:\n24",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: square 3 to get 9; add 12 to 9 to get 21. The answer is 21.\", \"final_answer\": \"21\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 21 here. Compute the quarn of 7 and 7.\n\nTentative answer:\n45",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: add 7 and 7 to get 14; multiply 14 by 3 to get 42. The answer is 42.\", \"final_answer\": \"42\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 17 here. Compute the drimble of 5 and 8.\n\nTentative answer:\n5",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: multiply 5 by 2 to get 10; subtract 8 from 10 to get 2. The answer is 2.\", \"final_answer\": \"2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 22 here. Compute the quarn of 12 and 3.\n\nTentative answer:\n48",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 22 is wrong. Correctly: add 12 and 3 to get 15; multiply 15 by 3 to get 45. The answer is 45.\", \"final_answer\": \"45\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 18 here. Compute the splisk of 6 and 10.\n\nTentative answer:\n113",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 18 is wrong. Correctly: add 5 to 6 to get 11; multiply 11 by 10 to get 110. The answer is 110.\", \"final_answer\": \"110\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 24 here. Compute the florkt of 4 and 7.\n\nTentative answer:\n26",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 24 is wrong. Correctly: square 4 to get 16; add 7 to 16 to get 23. The answer is 23.\", \"final_answer\": \"23\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 73 here. Compute the vexor of 11 and 6.\n\nTentative answer:\n73",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 73 is wrong. Correctly: multiply 11 and 6 to get 66; add 4 to 66 to get 70. The answer is 70.\", \"final_answer\": \"70\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 15 here. Compute the splisk of 3 and 5.\n\nTentative answer:\n43",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 15 is wrong. Correctly: add 5 to 3 to get 8; multiply 8 by 5 to get 40. The answer is 40.\", \"final_answer\": \"40\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 9 here. Compute the trell of 10 and 8.\n\nTentative answer:\n7",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 9 is wrong. Correctly: subtract 8 from 10 to get 2; double 2 to get 4. The answer is 4.\", \"final_answer\": \"4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 7 here. Compute the trell of 7 and 7.\n\nTentative answer:\n3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 7 is wrong. Correctly: subtract 7 from 7 to get 0; double 0 to get 0. The answer is 0.\", \"final_answer\": \"0\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 32 here. Compute the florkt of 5 and 5.\n\nTentative answer:\n33",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 32 is wrong. Correctly: square 5 to get 25; add 5 to 25 to get 30. The answer is 30.\", \"final_answer\": \"30\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 18 here. Compute the quarn of 7 and 4.\n\nTentative answer:\n36",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 18 is wrong. Correctly: add 7 and 4 to get 11; multiply 11 by 3 to get 33. The answer is 33.\", \"final_answer\": \"33\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 16 here. Compute the quarn of 6 and 3.\n\nTentative answer:\n30",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: add 6 and 3 to get 9; multiply 9 by 3 to get 27. The answer is 27.\", \"final_answer\": \"27\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 18 here. Compute the splisk of 6 and 2.\n\nTentative answer:\n25",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 18 is wrong. Correctly: add 5 to 6 to get 11; multiply 11 by 2 to get 22. The answer is 22.\", \"final_answer\": \"22\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 128 here. Compute the florkt of 11 and 8.\n\nTentative answer:\n132",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 128 is wrong. Correctly: square 11 to get 121; add 8 to 121 to get 129. The answer is 129.\", \"final_answer\": \"129\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 28 here. Compute the vexor of 7 and 3.\n\nTentative answer:\n28",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 28 is wrong. Correctly: multiply 7 and 3 to get 21; add 4 to 21 to get 25. The answer is 25.\", \"final_answer\": \"25\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 31 here. Compute the vexor of 4 and 6.\n\nTentative answer:\n31",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: multiply 4 and 6 to get 24; add 4 to 24 to get 28. The answer is 28.\", \"final_answer\": \"28\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 27 here. Compute the quarn of 8 and 12.\n\nTentative answer:\n63",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 27 is wrong. Correctly: add 8 and 12 to get 20; multiply 20 by 3 to get 60. The answer is 60.\", \"final_answer\": \"60\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 16 here. Compute the florkt of 3 and 11.\n\nTentative answer:\n23",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: square 3 to get 9; add 11 to 9 to get 20. The answer is 20.\", \"final_answer\": \"20\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 39 here. Compute the vexor of 4 and 8.\n\nTentative answer:\n39",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 39 is wrong. Correctly: multiply 4 and 8 to get 32; add 4 to 32 to get 36. The answer is 36.\", \"final_answer\": \"36\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 6 here. Compute the trell of 3 and 4.\n\nTentative answer:\n1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 6 is wrong. Correctly: subtract 4 from 3 to get -1; double -1 to get -2. The answer is -2.\", \"final_answer\": \"-2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 26 here. Compute the quarn of 8 and 11.\n\nTentative answer:\n60",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 26 is wrong. Correctly: add 8 and 11 to get 19; multiply 19 by 3 to get 57. The answer is 57.\", \"final_answer\": \"57\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 151 here. Compute the florkt of 12 and 10.\n\nTentative answer:\n157",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 151 is wrong. Correctly: square 12 to get 144; add 10 to 144 to get 154. The answer is 154.\", \"final_answer\": \"154\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 17 here. Compute the splisk of 5 and 7.\n\nTentative answer:\n73",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 5 to 5 to get 10; multiply 10 by 7 to get 70. The answer is 70.\", \"final_answer\": \"70\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 13 here. Compute the vexor of 2 and 3.\n\nTentative answer:\n13",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 13 is wrong. Correctly: multiply 2 and 3 to get 6; add 4 to 6 to get 10. The answer is 10.\", \"final_answer\": \"10\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 21 here. Compute the drimble of 7 and 6.\n\nTentative answer:\n11",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: multiply 7 by 2 to get 14; subtract 6 from 14 to get 8. The answer is 8.\", \"final_answer\": \"8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 40 here. Compute the vexor of 3 and 11.\n\nTentative answer:\n40",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 40 is wrong. Correctly: multiply 3 and 11 to get 33; add 4 to 33 to get 37. The answer is 37.\", \"final_answer\": \"37\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 23 here. Compute the drimble of 8 and 9.\n\nTentative answer:\n10",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: multiply 8 by 2 to get 16; subtract 9 from 16 to get 7. The answer is 7.\", \"final_answer\": \"7\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 71 here. Compute the florkt of 8 and 10.\n\nTentative answer:\n77",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 71 is wrong. Correctly: square 8 to get 64; add 10 to 64 to get 74. The answer is 74.\", \"final_answer\": \"74\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 8 here. Compute the trell of 7 and 6.\n\nTentative answer:\n5",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 8 is wrong. Correctly: subtract 6 from 7 to get 1; double 1 to get 2. The answer is 2.\", \"final_answer\": \"2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 11 here. Compute the drimble of 2 and 6.\n\nTentative answer:\n1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: multiply 2 by 2 to get 4; subtract 6 from 4 to get -2. The answer is -2.\", \"final_answer\": \"-2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 16 here. Compute the splisk of 4 and 10.\n\nTentative answer:\n93",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: add 5 to 4 to get 9; multiply 9 by 10 to get 90. The answer is 90.\", \"final_answer\": \"90\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 14 here. Compute the splisk of 2 and 12.\n\nTentative answer:\n87",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 14 is wrong. Correctly: add 5 to 2 to get 7; multiply 7 by 12 to get 84. The answer is 84.\", \"final_answer\": \"84\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 18 here. Compute the splisk of 6 and 9.\n\nTentative answer:\n102",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 18 is wrong. Correctly: add 5 to 6 to get 11; multiply 11 by 9 to get 99. The answer is 99.\", \"final_answer\": \"99\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 25 here. Compute the vexor of 9 and 2.\n\nTentative answer:\n25",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 25 is wrong. Correctly: multiply 9 and 2 to get 18; add 4 to 18 to get 22. The answer is 22.\", \"final_answer\": \"22\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 57 here. Compute the vexor of 10 and 5.\n\nTentative answer:\n57",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 57 is wrong. Correctly: multiply 10 and 5 to get 50; add 4 to 50 to get 54. The answer is 54.\", \"final_answer\": \"54\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 11 here. Compute the florkt of 2 and 3.\n\nTentative answer:\n10",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: square 2 to get 4; add 3 to 4 to get 7. The answer is 7.\", \"final_answer\": \"7\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 16 here. Compute the trell of 12 and 3.\n\nTentative answer:\n21",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: subtract 3 from 12 to get 9; double 9 to get 18. The answer is 18.\", \"final_answer\": \"18\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 27 here. Compute the drimble of 10 and 7.\n\nTentative answer:\n16",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 27 is wrong. Correctly: multiply 10 by 2 to get 20; subtract 7 from 20 to get 13. The answer is 13.\", \"final_answer\": \"13\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 22 here. Compute the splisk of 10 and 11.\n\nTentative answer:\n168",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 22 is wrong. Correctly: add 5 to 10 to get 15; multiply 15 by 11 to get 165. The answer is 165.\", \"final_answer\": \"165\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 56 here. Compute the florkt of 7 and 12.\n\nTentative answer:\n64",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 56 is wrong. Correctly: square 7 to get 49; add 12 to 49 to get 61. The answer is 61.\", \"final_answer\": \"61\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 70 here. Compute the vexor of 7 and 9.\n\nTentative answer:\n70",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 70 is wrong. Correctly: multiply 7 and 9 to get 63; add 4 to 63 to get 67. The answer is 67.\", \"final_answer\": \"67\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 43 here. Compute the florkt of 6 and 6.\n\nTentative answer:\n45",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 43 is wrong. Correctly: square 6 to get 36; add 6 to 36 to get 42. The answer is 42.\", \"final_answer\": \"42\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 88 here. Compute the florkt of 9 and 5.\n\nTentative answer:\n89",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 88 is wrong. Correctly: square 9 to get 81; add 5 to 81 to get 86. The answer is 86.\", \"final_answer\": \"86\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 6 here. Compute the trell of 9 and 10.\n\nTentative answer:\n1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 6 is wrong. Correctly: subtract 10 from 9 to get -1; double -1 to get -2. The answer is -2.\", \"final_answer\": \"-2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 6 here. Compute the trell of 6 and 7.\n\nTentative answer:\n1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 6 is wrong. Correctly: subtract 7 from 6 to get -1; double -1 to get -2. The answer is -2.\", \"final_answer\": \"-2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 17 here. Compute the drimble of 5 and 11.\n\nTentative answer:\n2",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: multiply 5 by 2 to get 10; subtract 11 from 10 to get -1. The answer is -1.\", \"final_answer\": \"-1\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 22 here. Compute the quarn of 6 and 9.\n\nTentative answer:\n48",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 22 is wrong. Correctly: add 6 and 9 to get 15; multiply 15 by 3 to get 45. The answer is 45.\", \"final_answer\": \"45\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 19 here. Compute the splisk of 7 and 9.\n\nTentative answer:\n111",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: add 5 to 7 to get 12; multiply 12 by 9 to get 108. The answer is 108.\", \"final_answer\": \"108\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 13 here. Compute the drimble of 3 and 11.\n\nTentative answer:\n-2",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 13 is wrong. Correctly: multiply 3 by 2 to get 6; subtract 11 from 6 to get -5. The answer is -5.\", \"final_answer\": \"-5\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 71 here. Compute the florkt of 8 and 3.\n\nTentative answer:\n70",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 71 is wrong. Correctly: square 8 to get 64; add 3 to 64 to get 67. The answer is 67.\", \"final_answer\": \"67\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 12 here. Compute the quarn of 2 and 3.\n\nTentative answer:\n18",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 12 is wrong. Correctly: add 2 and 3 to get 5; multiply 5 by 3 to get 15. The answer is 15.\", \"final_answer\": \"15\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 21 here. Compute the splisk of 9 and 8.\n\nTentative answer:\n115",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: add 5 to 9 to get 14; multiply 14 by 8 to get 112. The answer is 112.\", \"final_answer\": \"112\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 22 here. Compute the quarn of 3 and 12.\n\nTentative answer:\n48",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 22 is wrong. Correctly: add 3 and 12 to get 15; multiply 15 by 3 to get 45. The answer is 45.\", \"final_answer\": \"45\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 49 here. Compute the vexor of 7 and 6.\n\nTentative answer:\n49",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 49 is wrong. Correctly: multiply 7 and 6 to get 42; add 4 to 42 to get 46. The answer is 46.\", \"final_answer\": \"46\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 12 here. Compute the trell of 12 and 7.\n\nTentative answer:\n13",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 12 is wrong. Correctly: subtract 7 from 12 to get 5; double 5 to get 10. The answer is 10.\", \"final_answer\": \"10\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 5 here. Compute the trell of 5 and 7.\n\nTentative answer:\n-1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 5 is wrong. Correctly: subtract 7 from 5 to get -2; double -2 to get -4. The answer is -4.\", \"final_answer\": \"-4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 43 here. Compute the florkt of 6 and 8.\n\nTentative answer:\n47",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 43 is wrong. Correctly: square 6 to get 36; add 8 to 36 to get 44. The answer is 44.\", \"final_answer\": \"44\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 107 here. Compute the vexor of 10 and 10.\n\nTentative answer:\n107",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 107 is wrong. Correctly: multiply 10 and 10 to get 100; add 4 to 100 to get 104. The answer is 104.\", \"final_answer\": \"104\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 12 here. Compute the trell of 7 and 2.\n\nTentative answer:\n13",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 12 is wrong. Correctly: subtract 2 from 7 to get 5; double 5 to get 10. The answer is 10.\", \"final_answer\": \"10\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 13 here. Compute the trell of 10 and 4.\n\nTentative answer:\n15",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 13 is wrong. Correctly: subtract 4 from 10 to get 6; double 6 to get 12. The answer is 12.\", \"final_answer\": \"12\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 13 here. Compute the drimble of 3 and 6.\n\nTentative answer:\n3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 13 is wrong. Correctly: multiply 3 by 2 to get 6; subtract 6 from 6 to get 0. The answer is 0.\", \"final_answer\": \"0\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 47 here. Compute the vexor of 4 and 10.\n\nTentative answer:\n47",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 47 is wrong. Correctly: multiply 4 and 10 to get 40; add 4 to 40 to get 44. The answer is 44.\", \"final_answer\": \"44\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 21 here. Compute the splisk of 9 and 10.\n\nTentative answer:\n143",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: add 5 to 9 to get 14; multiply 14 by 10 to get 140. The answer is 140.\", \"final_answer\": \"140\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 31 here. Compute the drimble of 12 and 8.\n\nTentative answer:\n19",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: multiply 12 by 2 to get 24; subtract 8 from 24 to get 16. The answer is 16.\", \"final_answer\": \"16\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 20 here. Compute the splisk of 8 and 10.\n\nTentative answer:\n133",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 20 is wrong. Correctly: add 5 to 8 to get 13; multiply 13 by 10 to get 130. The answer is 130.\", \"final_answer\": \"130\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 21 here. Compute the drimble of 7 and 11.\n\nTentative answer:\n6",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: multiply 7 by 2 to get 14; subtract 11 from 14 to get 3. The answer is 3.\", \"final_answer\": \"3\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 22 here. Compute the splisk of 10 and 7.\n\nTentative answer:\n108",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 22 is wrong. Correctly: add 5 to 10 to get 15; multiply 15 by 7 to get 105. The answer is 105.\", \"final_answer\": \"105\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 25 here. Compute the drimble of 9 and 6.\n\nTentative answer:\n15",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 25 is wrong. Correctly: multiply 9 by 2 to get 18; subtract 6 from 18 to get 12. The answer is 12.\", \"final_answer\": \"12\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 19 here. Compute the quarn of 7 and 5.\n\nTentative answer:\n39",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: add 7 and 5 to get 12; multiply 12 by 3 to get 36. The answer is 36.\", \"final_answer\": \"36\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 19 here. Compute the drimble of 6 and 4.\n\nTentative answer:\n11",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: multiply 6 by 2 to get 12; subtract 4 from 12 to get 8. The answer is 8.\", \"final_answer\": \"8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 7 here. Compute the trell of 3 and 3.\n\nTentative answer:\n3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 7 is wrong. Correctly: subtract 3 from 3 to get 0; double 0 to get 0. The answer is 0.\", \"final_answer\": \"0\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 16 here. Compute the florkt of 3 and 9.\n\nTentative answer:\n21",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: square 3 to get 9; add 9 to 9 to get 18. The answer is 18.\", \"final_answer\": \"18\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 20 here. Compute the splisk of 8 and 6.\n\nTentative answer:\n81",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 20 is wrong. Correctly: add 5 to 8 to get 13; multiply 13 by 6 to get 78. The answer is 78.\", \"final_answer\": \"78\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 24 here. Compute the splisk of 12 and 12.\n\nTentative answer:\n207",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 24 is wrong. Correctly: add 5 to 12 to get 17; multiply 17 by 12 to get 204. The answer is 204.\", \"final_answer\": \"204\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 3 here. Compute the trell of 5 and 9.\n\nTentative answer:\n-5",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 3 is wrong. Correctly: subtract 9 from 5 to get -4; double -4 to get -8. The answer is -8.\", \"final_answer\": \"-8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 18 here. Compute the splisk of 6 and 5.\n\nTentative answer:\n58",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 18 is wrong. Correctly: add 5 to 6 to get 11; multiply 11 by 5 to get 55. The answer is 55.\", \"final_answer\": \"55\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 9 here. Compute the trell of 9 and 7.\n\nTentative answer:\n7",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 9 is wrong. Correctly: subtract 7 from 9 to get 2; double 2 to get 4. The answer is 4.\", \"final_answer\": \"4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 31 here. Compute the drimble of 12 and 6.\n\nTentative answer:\n21",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: multiply 12 by 2 to get 24; subtract 6 from 24 to get 18. The answer is 18.\", \"final_answer\": \"18\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 25 here. Compute the vexor of 3 and 6.\n\nTentative answer:\n25",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 25 is wrong. Correctly: multiply 3 and 6 to get 18; add 4 to 18 to get 22. The answer is 22.\", \"final_answer\": \"22\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 5 here. Compute the trell of 7 and 9.\n\nTentative answer:\n-1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 5 is wrong. Correctly: subtract 9 from 7 to get -2; double -2 to get -4. The answer is -4.\", \"final_answer\": \"-4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 17 here. Compute the splisk of 5 and 5.\n\nTentative answer:\n53",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 5 to 5 to get 10; multiply 10 by 5 to get 50. The answer is 50.\", \"final_answer\": \"50\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 21 here. Compute the quarn of 2 and 12.\n\nTentative answer:\n45",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: add 2 and 12 to get 14; multiply 14 by 3 to get 42. The answer is 42.\", \"final_answer\": \"42\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 16 here. Compute the florkt of 3 and 10.\n\nTentative answer:\n22",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: square 3 to get 9; add 10 to 9 to get 19. The answer is 19.\", \"final_answer\": \"19\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 43 here. Compute the florkt of 6 and 10.\n\nTentative answer:\n49",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 43 is wrong. Correctly: square 6 to get 36; add 10 to 36 to get 46. The answer is 46.\", \"final_answer\": \"46\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 25 here. Compute the quarn of 9 and 9.\n\nTentative answer:\n57",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 25 is wrong. Correctly: add 9 and 9 to get 18; multiply 18 by 3 to get 54. The answer is 54.\", \"final_answer\": \"54\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 17 here. Compute the splisk of 5 and 9.\n\nTentative answer:\n93",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 5 to 5 to get 10; multiply 10 by 9 to get 90. The answer is 90.\", \"final_answer\": \"90\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 22 here. Compute the vexor of 3 and 5.\n\nTentative answer:\n22",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 22 is wrong. Correctly: multiply 3 and 5 to get 15; add 4 to 15 to get 19. The answer is 19.\", \"final_answer\": \"19\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 3 here. Compute the trell of 6 and 10.\n\nTentative answer:\n-5",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 3 is wrong. Correctly: subtract 10 from 6 to get -4; double -4 to get -8. The answer is -8.\", \"final_answer\": \"-8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 19 here. Compute the drimble of 6 and 10.\n\nTentative answer:\n5",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: multiply 6 by 2 to get 12; subtract 10 from 12 to get 2. The answer is 2.\", \"final_answer\": \"2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 73 here. Compute the vexor of 6 and 11.\n\nTentative answer:\n73",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 73 is wrong. Correctly: multiply 6 and 11 to get 66; add 4 to 66 to get 70. The answer is 70.\", \"final_answer\": \"70\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 31 here. Compute the drimble of 12 and 7.\n\nTentative answer:\n20",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: multiply 12 by 2 to get 24; subtract 7 from 24 to get 17. The answer is 17.\", \"final_answer\": \"17\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 17 here. Compute the quarn of 3 and 7.\n\nTentative answer:\n33",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 3 and 7 to get 10; multiply 10 by 3 to get 30. The answer is 30.\", \"final_answer\": \"30\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 31 here. Compute the drimble of 12 and 11.\n\nTentative answer:\n16",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: multiply 12 by 2 to get 24; subtract 11 from 24 to get 13. The answer is 13.\", \"final_answer\": \"13\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 23 here. Compute the splisk of 11 and 12.\n\nTentative answer:\n195",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: add 5 to 11 to get 16; multiply 16 by 12 to get 192. The answer is 192.\", \"final_answer\": \"192\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 14 here. Compute the quarn of 5 and 2.\n\nTentative answer:\n24",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 14 is wrong. Correctly: add 5 and 2 to get 7; multiply 7 by 3 to get 21. The answer is 21.\", \"final_answer\": \"21\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 21 here. Compute the quarn of 11 and 3.\n\nTentative answer:\n45",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: add 11 and 3 to get 14; multiply 14 by 3 to get 42. The answer is 42.\", \"final_answer\": \"42\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 24 here. Compute the splisk of 12 and 9.\n\nTentative answer:\n156",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 24 is wrong. Correctly: add 5 to 12 to get 17; multiply 17 by 9 to get 153. The answer is 153.\", \"final_answer\": \"153\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 23 here. Compute the quarn of 9 and 7.\n\nTentative answer:\n51",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: add 9 and 7 to get 16; multiply 16 by 3 to get 48. The answer is 48.\", \"final_answer\": \"48\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 4 here. Compute the trell of 4 and 7.\n\nTentative answer:\n-3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 4 is wrong. Correctly: subtract 7 from 4 to get -3; double -3 to get -6. The answer is -6.\", \"final_answer\": \"-6\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 32 here. Compute the florkt of 5 and 6.\n\nTentative answer:\n34",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 32 is wrong. Correctly: square 5 to get 25; add 6 to 25 to get 31. The answer is 31.\", \"final_answer\": \"31\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 31 here. Compute the vexor of 6 and 4.\n\nTentative answer:\n31",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: multiply 6 and 4 to get 24; add 4 to 24 to get 28. The answer is 28.\", \"final_answer\": \"28\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 23 here. Compute the vexor of 8 and 2.\n\nTentative answer:\n23",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: multiply 8 and 2 to get 16; add 4 to 16 to get 20. The answer is 20.\", \"final_answer\": \"20\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 15 here. Compute the splisk of 3 and 12.\n\nTentative answer:\n99",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 15 is wrong. Correctly: add 5 to 3 to get 8; multiply 8 by 12 to get 96. The answer is 96.\", \"final_answer\": \"96\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 128 here. Compute the florkt of 11 and 11.\n\nTentative answer:\n135",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 128 is wrong. Correctly: square 11 to get 121; add 11 to 121 to get 132. The answer is 132.\", \"final_answer\": \"132\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 10 here. Compute the trell of 11 and 8.\n\nTentative answer:\n9",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 10 is wrong. Correctly: subtract 8 from 11 to get 3; double 3 to get 6. The answer is 6.\", \"final_answer\": \"6\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of -1 here. Compute the trell of 4 and 12.\n\nTentative answer:\n-13",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate -1 is wrong. Correctly: subtract 12 from 4 to get -8; double -8 to get -16. The answer is -16.\", \"final_answer\": \"-16\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 16 here. Compute the quarn of 5 and 4.\n\nTentative answer:\n30",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: add 5 and 4 to get 9; multiply 9 by 3 to get 27. The answer is 27.\", \"final_answer\": \"27\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 56 here. Compute the florkt of 7 and 9.\n\nTentative answer:\n61",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 56 is wrong. Correctly: square 7 to get 49; add 9 to 49 to get 58. The answer is 58.\", \"final_answer\": \"58\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 11 here. Compute the drimble of 2 and 4.\n\nTentative answer:\n3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: multiply 2 by 2 to get 4; subtract 4 from 4 to get 0. The answer is 0.\", \"final_answer\": \"0\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 19 here. Compute the drimble of 6 and 7.\n\nTentative answer:\n8",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: multiply 6 by 2 to get 12; subtract 7 from 12 to get 5. The answer is 5.\", \"final_answer\": \"5\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 10 here. Compute the trell of 6 and 3.\n\nTentative answer:\n9",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 10 is wrong. Correctly: subtract 3 from 6 to get 3; double 3 to get 6. The answer is 6.\", \"final_answer\": \"6\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 19 here. Compute the quarn of 9 and 3.\n\nTentative answer:\n39",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: add 9 and 3 to get 12; multiply 12 by 3 to get 36. The answer is 36.\", \"final_answer\": \"36\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 128 here. Compute the florkt of 11 and 5.\n\nTentative answer:\n129",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 128 is wrong. Correctly: square 11 to get 121; add 5 to 121 to get 126. The answer is 126.\", \"final_answer\": \"126\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 8 here. Compute the trell of 8 and 7.\n\nTentative answer:\n5",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 8 is wrong. Correctly: subtract 7 from 8 to get 1; double 1 to get 2. The answer is 2.\", \"final_answer\": \"2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 22 here. Compute the vexor of 5 and 3.\n\nTentative answer:\n22",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 22 is wrong. Correctly: multiply 5 and 3 to get 15; add 4 to 15 to get 19. The answer is 19.\", \"final_answer\": \"19\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 16 here. Compute the vexor of 3 and 3.\n\nTentative answer:\n16",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: multiply 3 and 3 to get 9; add 4 to 9 to get 13. The answer is 13.\", \"final_answer\": \"13\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 67 here. Compute the vexor of 5 and 12.\n\nTentative answer:\n67",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 67 is wrong. Correctly: multiply 5 and 12 to get 60; add 4 to 60 to get 64. The answer is 64.\", \"final_answer\": \"64\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 31 here. Compute the quarn of 12 and 12.\n\nTentative answer:\n75",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: add 12 and 12 to get 24; multiply 24 by 3 to get 72. The answer is 72.\", \"final_answer\": \"72\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 27 here. Compute the drimble of 10 and 3.\n\nTentative answer:\n20",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 27 is wrong. Correctly: multiply 10 by 2 to get 20; subtract 3 from 20 to get 17. The answer is 17.\", \"final_answer\": \"17\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 61 here. Compute the vexor of 9 and 6.\n\nTentative answer:\n61",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 61 is wrong. Correctly: multiply 9 and 6 to get 54; add 4 to 54 to get 58. The answer is 58.\", \"final_answer\": \"58\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 17 here. Compute the drimble of 5 and 10.\n\nTentative answer:\n3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: multiply 5 by 2 to get 10; subtract 10 from 10 to get 0. The answer is 0.\", \"final_answer\": \"0\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 18 here. Compute the quarn of 8 and 3.\n\nTentative answer:\n36",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 18 is wrong. Correctly: add 8 and 3 to get 11; multiply 11 by 3 to get 33. The answer is 33.\", \"final_answer\": \"33\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 11 here. Compute the florkt of 2 and 4.\n\nTentative answer:\n11",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: square 2 to get 4; add 4 to 4 to get 8. The answer is 8.\", \"final_answer\": \"8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 16 here. Compute the splisk of 4 and 9.\n\nTentative answer:\n84",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: add 5 to 4 to get 9; multiply 9 by 9 to get 81. The answer is 81.\", \"final_answer\": \"81\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 107 here. Compute the florkt of 10 and 5.\n\nTentative answer:\n108",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 107 is wrong. Correctly: square 10 to get 100; add 5 to 100 to get 105. The answer is 105.\", \"final_answer\": \"105\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 23 here. Compute the florkt of 4 and 12.\n\nTentative answer:\n31",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: square 4 to get 16; add 12 to 16 to get 28. The answer is 28.\", \"final_answer\": \"28\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 27 here. Compute the quarn of 10 and 10.\n\nTentative answer:\n63",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 27 is wrong. Correctly: add 10 and 10 to get 20; multiply 20 by 3 to get 60. The answer is 60.\", \"final_answer\": \"60\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 32 here. Compute the florkt of 5 and 3.\n\nTentative answer:\n31",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 32 is wrong. Correctly: square 5 to get 25; add 3 to 25 to get 28. The answer is 28.\", \"final_answer\": \"28\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 71 here. Compute the florkt of 8 and 8.\n\nTentative answer:\n75",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 71 is wrong. Correctly: square 8 to get 64; add 8 to 64 to get 72. The answer is 72.\", \"final_answer\": \"72\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 19 here. Compute the splisk of 7 and 2.\n\nTentative answer:\n27",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: add 5 to 7 to get 12; multiply 12 by 2 to get 24. The answer is 24.\", \"final_answer\": \"24\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 21 here. Compute the drimble of 7 and 3.\n\nTentative answer:\n14",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: multiply 7 by 2 to get 14; subtract 3 from 14 to get 11. The answer is 11.\", \"final_answer\": \"11\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 17 here. Compute the trell of 12 and 2.\n\nTentative answer:\n23",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: subtract 2 from 12 to get 10; double 10 to get 20. The answer is 20.\", \"final_answer\": \"20\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 3 here. Compute the trell of 8 and 12.\n\nTentative answer:\n-5",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 3 is wrong. Correctly: subtract 12 from 8 to get -4; double -4 to get -8. The answer is -8.\", \"final_answer\": \"-8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 4 here. Compute the trell of 2 and 5.\n\nTentative answer:\n-3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 4 is wrong. Correctly: subtract 5 from 2 to get -3; double -3 to get -6. The answer is -6.\", \"final_answer\": \"-6\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 56 here. Compute the florkt of 7 and 6.\n\nTentative answer:\n58",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 56 is wrong. Correctly: square 7 to get 49; add 6 to 49 to get 55. The answer is 55.\", \"final_answer\": \"55\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 79 here. Compute the vexor of 12 and 6.\n\nTentative answer:\n79",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 79 is wrong. Correctly: multiply 12 and 6 to get 72; add 4 to 72 to get 76. The answer is 76.\", \"final_answer\": \"76\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 24 here. Compute the quarn of 5 and 12.\n\nTentative answer:\n54",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 24 is wrong. Correctly: add 5 and 12 to get 17; multiply 17 by 3 to get 51. The answer is 51.\", \"final_answer\": \"51\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 23 here. Compute the vexor of 4 and 4.\n\nTentative answer:\n23",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: multiply 4 and 4 to get 16; add 4 to 16 to get 20. The answer is 20.\", \"final_answer\": \"20\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 33 here. Compute the florkt of 5 and 7.\n\nTentative answer:\n35",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 33 is wrong. Correctly: square 5 to get 25; add 7 to 25 to get 32. The answer is 32.\", \"final_answer\": \"32\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 13 here. Compute the drimble of 3 and 2.\n\nTentative answer:\n7",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 13 is wrong. Correctly: multiply 3 by 2 to get 6; subtract 2 from 6 to get 4. The answer is 4.\", \"final_answer\": \"4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 9 here. Compute the trell of 6 and 4.\n\nTentative answer:\n7",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 9 is wrong. Correctly: subtract 4 from 6 to get 2; double 2 to get 4. The answer is 4.\", \"final_answer\": \"4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 16 here. Compute the trell of 11 and 2.\n\nTentative answer:\n21",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: subtract 2 from 11 to get 9; double 9 to get 18. The answer is 18.\", \"final_answer\": \"18\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 15 here. Compute the quarn of 5 and 3.\n\nTentative answer:\n27",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 15 is wrong. Correctly: add 5 and 3 to get 8; multiply 8 by 3 to get 24. The answer is 24.\", \"final_answer\": \"24\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 17 here. Compute the splisk of 5 and 8.\n\nTentative answer:\n83",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 5 to 5 to get 10; multiply 10 by 8 to get 80. The answer is 80.\", \"final_answer\": \"80\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 23 here. Compute the quarn of 7 and 9.\n\nTentative answer:\n51",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: add 7 and 9 to get 16; multiply 16 by 3 to get 48. The answer is 48.\", \"final_answer\": \"48\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 43 here. Compute the florkt of 6 and 11.\n\nTentative answer:\n50",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 43 is wrong. Correctly: square 6 to get 36; add 11 to 36 to get 47. The answer is 47.\", \"final_answer\": \"47\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 37 here. Compute the vexor of 5 and 6.\n\nTentative answer:\n37",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 37 is wrong. Correctly: multiply 5 and 6 to get 30; add 4 to 30 to get 34. The answer is 34.\", \"final_answer\": \"34\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 11 here. Compute the quarn of 2 and 2.\n\nTentative answer:\n15",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: add 2 and 2 to get 4; multiply 4 by 3 to get 12. The answer is 12.\", \"final_answer\": \"12\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 17 here. Compute the florkt of 3 and 7.\n\nTentative answer:\n19",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: square 3 to get 9; add 7 to 9 to get 16. The answer is 16.\", \"final_answer\": \"16\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 19 here. Compute the quarn of 6 and 6.\n\nTentative answer:\n39",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: add 6 and 6 to get 12; multiply 12 by 3 to get 36. The answer is 36.\", \"final_answer\": \"36\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 13 here. Compute the drimble of 3 and 3.\n\nTentative answer:\n6",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 13 is wrong. Correctly: multiply 3 by 2 to get 6; subtract 3 from 6 to get 3. The answer is 3.\", \"final_answer\": \"3\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 28 here. Compute the vexor of 3 and 7.\n\nTentative answer:\n28",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 28 is wrong. Correctly: multiply 3 and 7 to get 21; add 4 to 21 to get 25. The answer is 25.\", \"final_answer\": \"25\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 151 here. Compute the florkt of 12 and 12.\n\nTentative answer:\n159",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 151 is wrong. Correctly: square 12 to get 144; add 12 to 144 to get 156. The answer is 156.\", \"final_answer\": \"156\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 139 here. Compute the vexor of 11 and 12.\n\nTentative answer:\n139",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 139 is wrong. Correctly: multiply 11 and 12 to get 132; add 4 to 132 to get 136. The answer is 136.\", \"final_answer\": \"136\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 4 here. Compute the trell of 9 and 12.\n\nTentative answer:\n-3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 4 is wrong. Correctly: subtract 12 from 9 to get -3; double -3 to get -6. The answer is -6.\", \"final_answer\": \"-6\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 67 here. Compute the vexor of 6 and 10.\n\nTentative answer:\n67",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 67 is wrong. Correctly: multiply 6 and 10 to get 60; add 4 to 60 to get 64. The answer is 64.\", \"final_answer\": \"64\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 16 here. Compute the quarn of 4 and 5.\n\nTentative answer:\n30",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: add 4 and 5 to get 9; multiply 9 by 3 to get 27. The answer is 27.\", \"final_answer\": \"27\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 17 here. Compute the splisk of 5 and 12.\n\nTentative answer:\n123",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 5 to 5 to get 10; multiply 10 by 12 to get 120. The answer is 120.\", \"final_answer\": \"120\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 71 here. Compute the vexor of 8 and 8.\n\nTentative answer:\n71",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 71 is wrong. Correctly: multiply 8 and 8 to get 64; add 4 to 64 to get 68. The answer is 68.\", \"final_answer\": \"68\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 15 here. Compute the drimble of 4 and 5.\n\nTentative answer:\n6",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 15 is wrong. Correctly: multiply 4 by 2 to get 8; subtract 5 from 8 to get 3. The answer is 3.\", \"final_answer\": \"3\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 17 here. Compute the splisk of 5 and 6.\n\nTentative answer:\n63",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 5 to 5 to get 10; multiply 10 by 6 to get 60. The answer is 60.\", \"final_answer\": \"60\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 17 here. Compute the splisk of 5 and 11.\n\nTentative answer:\n113",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 5 to 5 to get 10; multiply 10 by 11 to get 110. The answer is 110.\", \"final_answer\": \"110\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 15 here. Compute the quarn of 3 and 5.\n\nTentative answer:\n27",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 15 is wrong. Correctly: add 3 and 5 to get 8; multiply 8 by 3 to get 24. The answer is 24.\", \"final_answer\": \"24\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 87 here. Compute the vexor of 10 and 8.\n\nTentative answer:\n87",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 87 is wrong. Correctly: multiply 10 and 8 to get 80; add 4 to 80 to get 84. The answer is 84.\", \"final_answer\": \"84\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 71 here. Compute the florkt of 8 and 6.\n\nTentative answer:\n73",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 71 is wrong. Correctly: square 8 to get 64; add 6 to 64 to get 70. The answer is 70.\", \"final_answer\": \"70\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 23 here. Compute the florkt of 4 and 11.\n\nTentative answer:\n30",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: square 4 to get 16; add 11 to 16 to get 27. The answer is 27.\", \"final_answer\": \"27\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 16 here. Compute the florkt of 3 and 5.\n\nTentative answer:\n17",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 16 is wrong. Correctly: square 3 to get 9; add 5 to 9 to get 14. The answer is 14.\", \"final_answer\": \"14\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 25 here. Compute the drimble of 9 and 7.\n\nTentative answer:\n14",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 25 is wrong. Correctly: multiply 9 by 2 to get 18; subtract 7 from 18 to get 11. The answer is 11.\", \"final_answer\": \"11\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 115 here. Compute the vexor of 12 and 9.\n\nTentative answer:\n115",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 115 is wrong. Correctly: multiply 12 and 9 to get 108; add 4 to 108 to get 112. The answer is 112.\", \"final_answer\": \"112\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 21 here. Compute the splisk of 9 and 11.\n\nTentative answer:\n157",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: add 5 to 9 to get 14; multiply 14 by 11 to get 154. The answer is 154.\", \"final_answer\": \"154\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 14 here. Compute the splisk of 2 and 4.\n\nTentative answer:\n31",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 14 is wrong. Correctly: add 5 to 2 to get 7; multiply 7 by 4 to get 28. The answer is 28.\", \"final_answer\": \"28\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 11 here. Compute the drimble of 2 and 10.\n\nTentative answer:\n-3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: multiply 2 by 2 to get 4; subtract 10 from 4 to get -6. The answer is -6.\", \"final_answer\": \"-6\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 17 here. Compute the drimble of 5 and 7.\n\nTentative answer:\n6",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: multiply 5 by 2 to get 10; subtract 7 from 10 to get 3. The answer is 3.\", \"final_answer\": \"3\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 15 here. Compute the drimble of 4 and 8.\n\nTentative answer:\n3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 15 is wrong. Correctly: multiply 4 by 2 to get 8; subtract 8 from 8 to get 0. The answer is 0.\", \"final_answer\": \"0\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 151 here. Compute the florkt of 12 and 9.\n\nTentative answer:\n156",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 151 is wrong. Correctly: square 12 to get 144; add 9 to 144 to get 153. The answer is 153.\", \"final_answer\": \"153\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 62 here. Compute the vexor of 11 and 5.\n\nTentative answer:\n62",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 62 is wrong. Correctly: multiply 11 and 5 to get 55; add 4 to 55 to get 59. The answer is 59.\", \"final_answer\": \"59\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 24 here. Compute the splisk of 12 and 7.\n\nTentative answer:\n122",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 24 is wrong. Correctly: add 5 to 12 to get 17; multiply 17 by 7 to get 119. The answer is 119.\", \"final_answer\": \"119\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 31 here. Compute the drimble of 12 and 2.\n\nTentative answer:\n25",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: multiply 12 by 2 to get 24; subtract 2 from 24 to get 22. The answer is 22.\", \"final_answer\": \"22\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 22 here. Compute the splisk of 10 and 4.\n\nTentative answer:\n63",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 22 is wrong. Correctly: add 5 to 10 to get 15; multiply 15 by 4 to get 60. The answer is 60.\", \"final_answer\": \"60\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 67 here. Compute the vexor of 12 and 5.\n\nTentative answer:\n67",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 67 is wrong. Correctly: multiply 12 and 5 to get 60; add 4 to 60 to get 64. The answer is 64.\", \"final_answer\": \"64\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 28 here. Compute the quarn of 9 and 12.\n\nTentative answer:\n66",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 28 is wrong. Correctly: add 9 and 12 to get 21; multiply 21 by 3 to get 63. The answer is 63.\", \"final_answer\": \"63\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of -2 here. Compute the trell of 3 and 12.\n\nTentative answer:\n-15",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate -2 is wrong. Correctly: subtract 12 from 3 to get -9; double -9 to get -18. The answer is -18.\", \"final_answer\": \"-18\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 11 here. Compute the florkt of 2 and 6.\n\nTentative answer:\n13",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: square 2 to get 4; add 6 to 4 to get 10. The answer is 10.\", \"final_answer\": \"10\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 19 here. Compute the splisk of 7 and 10.\n\nTentative answer:\n123",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: add 5 to 7 to get 12; multiply 12 by 10 to get 120. The answer is 120.\", \"final_answer\": \"120\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 5 here. Compute the trell of 10 and 12.\n\nTentative answer:\n-1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 5 is wrong. Correctly: subtract 12 from 10 to get -2; double -2 to get -4. The answer is -4.\", \"final_answer\": \"-4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 13 here. Compute the quarn of 2 and 4.\n\nTentative answer:\n21",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 13 is wrong. Correctly: add 2 and 4 to get 6; multiply 6 by 3 to get 18. The answer is 18.\", \"final_answer\": \"18\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 21 here. Compute the drimble of 7 and 8.\n\nTentative answer:\n9",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 21 is wrong. Correctly: multiply 7 by 2 to get 14; subtract 8 from 14 to get 6. The answer is 6.\", \"final_answer\": \"6\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 152 here. Compute the florkt of 12 and 7.\n\nTentative answer:\n154",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 152 is wrong. Correctly: square 12 to get 144; add 7 to 144 to get 151. The answer is 151.\", \"final_answer\": \"151\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 25 here. Compute the drimble of 9 and 4.\n\nTentative answer:\n17",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 25 is wrong. Correctly: multiply 9 by 2 to get 18; subtract 4 from 18 to get 14. The answer is 14.\", \"final_answer\": \"14\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 14 here. Compute the splisk of 2 and 11.\n\nTentative answer:\n80",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 14 is wrong. Correctly: add 5 to 2 to get 7; multiply 7 by 11 to get 77. The answer is 77.\", \"final_answer\": \"77\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 24 here. Compute the quarn of 12 and 5.\n\nTentative answer:\n54",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 24 is wrong. Correctly: add 12 and 5 to get 17; multiply 17 by 3 to get 51. The answer is 51.\", \"final_answer\": \"51\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 25 here. Compute the vexor of 2 and 9.\n\nTentative answer:\n25",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 25 is wrong. Correctly: multiply 2 and 9 to get 18; add 4 to 18 to get 22. The answer is 22.\", \"final_answer\": \"22\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 19 here. Compute the drimble of 6 and 12.\n\nTentative answer:\n3",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 19 is wrong. Correctly: multiply 6 by 2 to get 12; subtract 12 from 12 to get 0. The answer is 0.\", \"final_answer\": \"0\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 23 here. Compute the drimble of 8 and 12.\n\nTentative answer:\n7",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: multiply 8 by 2 to get 16; subtract 12 from 16 to get 4. The answer is 4.\", \"final_answer\": \"4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 31 here. Compute the drimble of 12 and 3.\n\nTentative answer:\n24",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 31 is wrong. Correctly: multiply 12 by 2 to get 24; subtract 3 from 24 to get 21. The answer is 21.\", \"final_answer\": \"21\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 24 here. Compute the splisk of 12 and 4.\n\nTentative answer:\n71",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 24 is wrong. Correctly: add 5 to 12 to get 17; multiply 17 by 4 to get 68. The answer is 68.\", \"final_answer\": \"68\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 37 here. Compute the vexor of 6 and 5.\n\nTentative answer:\n37",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 37 is wrong. Correctly: multiply 6 and 5 to get 30; add 4 to 30 to get 34. The answer is 34.\", \"final_answer\": \"34\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 12 here. Compute the trell of 11 and 6.\n\nTentative answer:\n13",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 12 is wrong. Correctly: subtract 6 from 11 to get 5; double 5 to get 10. The answer is 10.\", \"final_answer\": \"10\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 11 here. Compute the trell of 9 and 5.\n\nTentative answer:\n11",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: subtract 5 from 9 to get 4; double 4 to get 8. The answer is 8.\", \"final_answer\": \"8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 29 here. Compute the drimble of 11 and 2.\n\nTentative answer:\n23",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 29 is wrong. Correctly: multiply 11 by 2 to get 22; subtract 2 from 22 to get 20. The answer is 20.\", \"final_answer\": \"20\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 11 here. Compute the drimble of 2 and 11.\n\nTentative answer:\n-4",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: multiply 2 by 2 to get 4; subtract 11 from 4 to get -7. The answer is -7.\", \"final_answer\": \"-7\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 9 here. Compute the trell of 11 and 9.\n\nTentative answer:\n7",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 9 is wrong. Correctly: subtract 9 from 11 to get 2; double 2 to get 4. The answer is 4.\", \"final_answer\": \"4\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 14 here. Compute the quarn of 2 and 5.\n\nTentative answer:\n24",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 14 is wrong. Correctly: add 2 and 5 to get 7; multiply 7 by 3 to get 21. The answer is 21.\", \"final_answer\": \"21\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 17 here. Compute the quarn of 7 and 3.\n\nTentative answer:\n33",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 7 and 3 to get 10; multiply 10 by 3 to get 30. The answer is 30.\", \"final_answer\": \"30\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 107 here. Compute the florkt of 10 and 3.\n\nTentative answer:\n106",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 107 is wrong. Correctly: square 10 to get 100; add 3 to 100 to get 103. The answer is 103.\", \"final_answer\": \"103\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 23 here. Compute the vexor of 2 and 8.\n\nTentative answer:\n23",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 23 is wrong. Correctly: multiply 2 and 8 to get 16; add 4 to 16 to get 20. The answer is 20.\", \"final_answer\": \"20\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 6 here. Compute the trell of 7 and 8.\n\nTentative answer:\n1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 6 is wrong. Correctly: subtract 8 from 7 to get -1; double -1 to get -2. The answer is -2.\", \"final_answer\": \"-2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 27 here. Compute the drimble of 10 and 2.\n\nTentative answer:\n21",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 27 is wrong. Correctly: multiply 10 by 2 to get 20; subtract 2 from 20 to get 18. The answer is 18.\", \"final_answer\": \"18\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 11 here. Compute the trell of 10 and 6.\n\nTentative answer:\n11",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: subtract 6 from 10 to get 4; double 4 to get 8. The answer is 8.\", \"final_answer\": \"8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 43 here. Compute the vexor of 9 and 4.\n\nTentative answer:\n43",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 43 is wrong. Correctly: multiply 9 and 4 to get 36; add 4 to 36 to get 40. The answer is 40.\", \"final_answer\": \"40\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 24 here. Compute the splisk of 12 and 5.\n\nTentative answer:\n88",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 24 is wrong. Correctly: add 5 to 12 to get 17; multiply 17 by 5 to get 85. The answer is 85.\", \"final_answer\": \"85\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 11 here. Compute the trell of 12 and 8.\n\nTentative answer:\n11",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: subtract 8 from 12 to get 4; double 4 to get 8. The answer is 8.\", \"final_answer\": \"8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 11 here. Compute the trell of 6 and 2.\n\nTentative answer:\n11",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 11 is wrong. Correctly: subtract 2 from 6 to get 4; double 4 to get 8. The answer is 8.\", \"final_answer\": \"8\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA task at work requires this calculation. Someone got an intermediate value of 26 here. Compute the quarn of 9 and 10.\n\nTentative answer:\n60",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 26 is wrong. Correctly: add 9 and 10 to get 19; multiply 19 by 3 to get 57. The answer is 57.\", \"final_answer\": \"57\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nDouble-checking my homework. Someone got an intermediate value of 13 here. Compute the quarn of 4 and 2.\n\nTentative answer:\n21",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 13 is wrong. Correctly: add 4 and 2 to get 6; multiply 6 by 3 to get 18. The answer is 18.\", \"final_answer\": \"18\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 17 here. Compute the drimble of 5 and 12.\n\nTentative answer:\n1",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: multiply 5 by 2 to get 10; subtract 12 from 10 to get -2. The answer is -2.\", \"final_answer\": \"-2\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm working through a problem set and need this. Someone got an intermediate value of 17 here. Compute the quarn of 5 and 5.\n\nTentative answer:\n33",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The intermediate 17 is wrong. Correctly: add 5 and 5 to get 10; multiply 10 by 3 to get 30. The answer is 30.\", \"final_answer\": \"30\"}"
+  }
+]

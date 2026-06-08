@@ -1,0 +1,1757 @@
+[
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Silver River?",
+    "output": "Maria Voss"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Maria Voss?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Iron Falcon?",
+    "output": "Anton Hale"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Anton Hale?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Beneath the Salt Sea?",
+    "output": "Petra Olenko"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Petra Olenko?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Whisper of Brass?",
+    "output": "Jules Bremmer"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Jules Bremmer?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Crooked Mile?",
+    "output": "Idris Calder"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Idris Calder?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Halls of Vellum?",
+    "output": "Helena Marsh"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Helena Marsh?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Last Cartographer?",
+    "output": "Roman Felk"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Roman Felk?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Eleven Mornings?",
+    "output": "Ines Tarvik"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Ines Tarvik?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Bone Garden?",
+    "output": "Oskar Bremm"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Oskar Bremm?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Tide and Tower?",
+    "output": "Nadia Solven"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Nadia Solven?",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Pale Calendar?",
+    "output": "Lev Korbin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Lev Korbin?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Quill and Coin?",
+    "output": "Eira Pendral"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Eira Pendral?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Glass Apiary?",
+    "output": "Otto Vellin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Otto Vellin?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Atlas of Storms?",
+    "output": "Soraya Drask"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Soraya Drask?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Verses for Strangers?",
+    "output": "Mattias Olmari"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Mattias Olmari?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Hollow Concord?",
+    "output": "Theia Quill"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Theia Quill?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Lantern Tongue?",
+    "output": "Brand Forenz"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Brand Forenz?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Threshold Birds?",
+    "output": "Iva Drasivol"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Iva Drasivol?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Long Margin?",
+    "output": "Casimir Hesper"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Casimir Hesper?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Bell Without a City?",
+    "output": "Nia Caltor"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Nia Caltor?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Salt and Compass?",
+    "output": "Alva Brindar"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Alva Brindar?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Years of the Ferry?",
+    "output": "Karl Lytera"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Karl Lytera?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Mended Sextant?",
+    "output": "Mireille Norhaven"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Mireille Norhaven?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Smoke for Breakfast?",
+    "output": "Olin Veltra"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Olin Veltra?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote An Inventory of Doors?",
+    "output": "Sasha Korbenburg"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Sasha Korbenburg?",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Borrowed Astronomer?",
+    "output": "Veda Mavinhill"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Veda Mavinhill?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Carpenters of Silence?",
+    "output": "Petros Tarsia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Petros Tarsia?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Riverbook?",
+    "output": "Linnea Bremmer"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Linnea Bremmer?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote The Quiet Concordance?",
+    "output": "Yuval Quintholm"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Yuval Quintholm?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who wrote Twelve Departures?",
+    "output": "Iskra Olmari"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Iskra Olmari?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Velmar located in?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Lydoria use?",
+    "output": "lydar"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Trindale located in?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Norlandia use?",
+    "output": "noric"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Korba located in?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Veltria use?",
+    "output": "veltrek"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Marinpoint located in?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Korbenia use?",
+    "output": "korbi"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Olstaad located in?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Mavinia use?",
+    "output": "marin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Pendral located in?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Tarsisia use?",
+    "output": "tarsis"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Solen Bay located in?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Pendralia use?",
+    "output": "pendra"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Brindar located in?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Solenia use?",
+    "output": "solen"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Quintas located in?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Brendara use?",
+    "output": "brend"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Olfast located in?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Quintaria use?",
+    "output": "quinta"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Forencia located in?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Olmaris use?",
+    "output": "olmar"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Drasov located in?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Forenza use?",
+    "output": "forenc"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Hesper located in?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Drasivia use?",
+    "output": "drasi"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Caltor located in?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Hesperin use?",
+    "output": "hespera"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Lydor City located in?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What currency does Caltoria use?",
+    "output": "calto"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Norhaven located in?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Veltra Bay located in?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Korbenburg located in?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Mavin Hill located in?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Tarsia located in?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Bremmer located in?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Quintholm located in?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Olmari located in?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Forenheim located in?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Drasivol located in?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Hespermill located in?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Calton Ridge located in?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Pendholt located in?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Solendel located in?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which country is Lyterra located in?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Hesperin Dynamics?",
+    "output": "Helga Marsh"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Helga Marsh?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Marsh & Calder?",
+    "output": "Cyrus Vellum"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Cyrus Vellum?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Olstaad Robotics?",
+    "output": "Mira Olstaad"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Mira Olstaad?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Vellum Press?",
+    "output": "Bertil Pendral"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Bertil Pendral?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Pendral Foundry?",
+    "output": "Wren Solen"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Wren Solen?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Solen Avionics?",
+    "output": "Jorah Brindar"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Jorah Brindar?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Brindar Optics?",
+    "output": "Avrim Quintas"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Avrim Quintas?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Quintas Hydraulics?",
+    "output": "Lena Olfast"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Lena Olfast?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Olfast Foods?",
+    "output": "Tobias Forencia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Tobias Forencia?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Forencia Steelworks?",
+    "output": "Niels Drasov"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Niels Drasov?",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Drasov Networks?",
+    "output": "Pia Hesper"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Pia Hesper?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Hesper Glassworks?",
+    "output": "Roan Caltor"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Roan Caltor?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Caltor Cement?",
+    "output": "Inga Lydor"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Inga Lydor?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Lydor Logistics?",
+    "output": "Mikael Norhaven"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Mikael Norhaven?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Norhaven Pharmaceuticals?",
+    "output": "Hadi Veltra"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Hadi Veltra?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Veltra Composites?",
+    "output": "Greta Korbenburg"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Greta Korbenburg?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Korbenburg Sensors?",
+    "output": "Stenz Mavinhill"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Stenz Mavinhill?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Mavinhill Apparel?",
+    "output": "Velma Tarsia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Velma Tarsia?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Tarsia Components?",
+    "output": "Henrik Bremmer"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Henrik Bremmer?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Bremmer Locomotive?",
+    "output": "Onal Quintholm"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Onal Quintholm?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Quintholm Heat?",
+    "output": "Saskia Olmari"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Saskia Olmari?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Olmari Acoustics?",
+    "output": "Reuben Forenheim"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Reuben Forenheim?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Forenheim Beverage?",
+    "output": "Marsh Drasivol"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Marsh Drasivol?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Drasivol Aerospace?",
+    "output": "Kira Hespermill"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Kira Hespermill?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Hespermill Energy?",
+    "output": "Brand Calton"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Brand Calton?",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Calton Cooperative?",
+    "output": "Lou Pendholt"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Lou Pendholt?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Pendholt Polymers?",
+    "output": "Vesper Solendel"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Vesper Solendel?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Solendel Marine?",
+    "output": "Anik Lyterra"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Anik Lyterra?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Lyterra Automation?",
+    "output": "Calla Trindale"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Calla Trindale?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who founded Trindale Foundry?",
+    "output": "Hugo Olstaad"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is the nationality of Hugo Olstaad?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes Sentra X1?",
+    "output": "Hesperin Dynamics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Hesperin Dynamics headquartered?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes PolyGrid 7?",
+    "output": "Marsh & Calder"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Marsh & Calder headquartered?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes BlueFin 9?",
+    "output": "Olstaad Robotics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Olstaad Robotics headquartered?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes AstroFork?",
+    "output": "Vellum Press"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Vellum Press headquartered?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes ClearStitch?",
+    "output": "Pendral Foundry"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Pendral Foundry headquartered?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes LumenPath?",
+    "output": "Solen Avionics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Solen Avionics headquartered?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes OakSpan?",
+    "output": "Brindar Optics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Brindar Optics headquartered?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes RiverBeam?",
+    "output": "Quintas Hydraulics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Quintas Hydraulics headquartered?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes SilverLoft?",
+    "output": "Olfast Foods"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Olfast Foods headquartered?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes PalePort?",
+    "output": "Forencia Steelworks"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Forencia Steelworks headquartered?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes WrenLine?",
+    "output": "Drasov Networks"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Drasov Networks headquartered?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes QuiltDrive?",
+    "output": "Hesper Glassworks"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Hesper Glassworks headquartered?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes TideFold?",
+    "output": "Caltor Cement"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Caltor Cement headquartered?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes PaperKiln?",
+    "output": "Lydor Logistics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Lydor Logistics headquartered?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes DrumLine?",
+    "output": "Norhaven Pharmaceuticals"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Norhaven Pharmaceuticals headquartered?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes FlintWeave?",
+    "output": "Veltra Composites"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Veltra Composites headquartered?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes VerseEngine?",
+    "output": "Korbenburg Sensors"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Korbenburg Sensors headquartered?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes QuillSheath?",
+    "output": "Mavinhill Apparel"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Mavinhill Apparel headquartered?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes PolarHull?",
+    "output": "Tarsia Components"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Tarsia Components headquartered?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes HelioFan?",
+    "output": "Bremmer Locomotive"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Bremmer Locomotive headquartered?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes BrassRig?",
+    "output": "Quintholm Heat"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Quintholm Heat headquartered?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes CloudVein?",
+    "output": "Olmari Acoustics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Olmari Acoustics headquartered?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes SaltMark?",
+    "output": "Forenheim Beverage"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Forenheim Beverage headquartered?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes GlasswingPro?",
+    "output": "Drasivol Aerospace"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Drasivol Aerospace headquartered?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes RestComb?",
+    "output": "Hespermill Energy"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Hespermill Energy headquartered?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes WhetGrade?",
+    "output": "Calton Cooperative"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Calton Cooperative headquartered?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes LeafKit?",
+    "output": "Pendholt Polymers"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Pendholt Polymers headquartered?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes AtlasArc?",
+    "output": "Solendel Marine"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Solendel Marine headquartered?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes ConstantTwo?",
+    "output": "Lyterra Automation"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Lyterra Automation headquartered?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which company makes MoonStripe?",
+    "output": "Trindale Foundry"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country is Trindale Foundry headquartered?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Three Sisters at Dusk?",
+    "output": "Onal Vesna"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Onal Vesna born?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Salt Wedding?",
+    "output": "Pelle Brask"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Pelle Brask born?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Roof Over the Marsh?",
+    "output": "Mara Olst"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Mara Olst born?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Eleven Crows?",
+    "output": "Selim Drink"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Selim Drink born?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Soft Border?",
+    "output": "Hilde Olmari"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Hilde Olmari born?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Long Ferry?",
+    "output": "Pers Volla"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Pers Volla born?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Cartographer's Hand?",
+    "output": "Reva Korben"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Reva Korben born?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Two Bridges?",
+    "output": "Stas Quill"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Stas Quill born?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Pale Window?",
+    "output": "Marit Hesper"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Marit Hesper born?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Verses for a Cousin?",
+    "output": "Olen Forenza"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Olen Forenza born?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Borrowed Garden?",
+    "output": "Mira Caltor"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Mira Caltor born?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Quiet Hammer?",
+    "output": "Reuben Pendholt"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Reuben Pendholt born?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Last Veranda?",
+    "output": "Iva Solendel"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Iva Solendel born?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Sunday Inventory?",
+    "output": "Lior Norhaven"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Lior Norhaven born?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Coastline by Lamplight?",
+    "output": "Cyra Brindar"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Cyra Brindar born?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Brass and Apricot?",
+    "output": "Otto Lyterra"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Otto Lyterra born?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Anchor Choir?",
+    "output": "Frej Drasov"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Frej Drasov born?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Half-Built Lighthouse?",
+    "output": "Maeve Quintas"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Maeve Quintas born?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Iron Pew?",
+    "output": "Niko Olfast"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Niko Olfast born?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Postal Sea?",
+    "output": "Anja Forencia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Anja Forencia born?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Cherry Salt?",
+    "output": "Tess Hespermill"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Tess Hespermill born?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Glass Kitchen?",
+    "output": "Wim Bremmer"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Wim Bremmer born?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Memorandum in Blue?",
+    "output": "Idra Olmari"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Idra Olmari born?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Five Reservoirs?",
+    "output": "Karst Veltra"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Karst Veltra born?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Bay of Open Doors?",
+    "output": "Mago Korbenburg"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Mago Korbenburg born?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Calendar of Wires?",
+    "output": "Pell Mavinhill"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Pell Mavinhill born?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Two Carts at Dawn?",
+    "output": "Yara Tarsia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Yara Tarsia born?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Tide Reader?",
+    "output": "Eero Pendral"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Eero Pendral born?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created Threshold and Frost?",
+    "output": "Vela Quintholm"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Vela Quintholm born?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Who created The Mended Net?",
+    "output": "Helka Trindale"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "In which country was Helka Trindale born?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Voss Pendral known for?",
+    "output": "the kelvin-stripe effect"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the kelvin-stripe effect belong to?",
+    "output": "thermodynamics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Korbenburg Hale known for?",
+    "output": "the Olmari instability"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the Olmari instability belong to?",
+    "output": "optics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Iva Marsh known for?",
+    "output": "the dual-saline reaction"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the dual-saline reaction belong to?",
+    "output": "fluid dynamics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Sten Vellum known for?",
+    "output": "the cold-bend invariant"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the cold-bend invariant belong to?",
+    "output": "materials science"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Mira Olstaad known for?",
+    "output": "the marsh-light coefficient"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the marsh-light coefficient belong to?",
+    "output": "acoustics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Bert Norhaven known for?",
+    "output": "the bridge-current law"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the bridge-current law belong to?",
+    "output": "electromagnetism"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Anya Drasivol known for?",
+    "output": "the slow-glass anomaly"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the slow-glass anomaly belong to?",
+    "output": "crystallography"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Pelle Olmari known for?",
+    "output": "the open-shell convergence"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the open-shell convergence belong to?",
+    "output": "quantum optics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Ines Solendel known for?",
+    "output": "the lattice-snow ratio"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the lattice-snow ratio belong to?",
+    "output": "biochemistry"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Casimir Brindar known for?",
+    "output": "the frostline conjecture"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the frostline conjecture belong to?",
+    "output": "geophysics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Lena Quintas known for?",
+    "output": "the rotational drift law"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the rotational drift law belong to?",
+    "output": "atmospheric physics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Otto Lyterra known for?",
+    "output": "the soft-flux scaling"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the soft-flux scaling belong to?",
+    "output": "computational physics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Mago Caltor known for?",
+    "output": "the third-band rule"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the third-band rule belong to?",
+    "output": "astrophysics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Sela Trindale known for?",
+    "output": "the dim-photon coupling"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the dim-photon coupling belong to?",
+    "output": "solid-state physics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Mattis Hespermill known for?",
+    "output": "the orchard transform"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the orchard transform belong to?",
+    "output": "polymer science"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Niels Forencia known for?",
+    "output": "the linear-edge limit"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the linear-edge limit belong to?",
+    "output": "thermodynamics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Helga Drasov known for?",
+    "output": "the pale-shift bound"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the pale-shift bound belong to?",
+    "output": "optics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Roan Veltra known for?",
+    "output": "the unison-decay constant"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the unison-decay constant belong to?",
+    "output": "fluid dynamics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Tobias Mavinhill known for?",
+    "output": "the candlewick gradient"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the candlewick gradient belong to?",
+    "output": "materials science"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Wren Pendholt known for?",
+    "output": "the salt-fold theorem"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the salt-fold theorem belong to?",
+    "output": "acoustics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Eira Quintholm known for?",
+    "output": "the wide-plait condition"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the wide-plait condition belong to?",
+    "output": "electromagnetism"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Reuben Tarsia known for?",
+    "output": "the tertiary-quiet law"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the tertiary-quiet law belong to?",
+    "output": "crystallography"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Pia Olmari known for?",
+    "output": "the long-room scaling"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the long-room scaling belong to?",
+    "output": "quantum optics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Marit Olstaad known for?",
+    "output": "the half-mirror identity"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the half-mirror identity belong to?",
+    "output": "biochemistry"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Frej Hesper known for?",
+    "output": "the open-letter coefficient"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the open-letter coefficient belong to?",
+    "output": "geophysics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Cyra Bremmer known for?",
+    "output": "the woven-spectrum rule"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the woven-spectrum rule belong to?",
+    "output": "atmospheric physics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Onal Caltor known for?",
+    "output": "the riverbank invariant"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the riverbank invariant belong to?",
+    "output": "computational physics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Mira Forenheim known for?",
+    "output": "the postal-channel result"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the postal-channel result belong to?",
+    "output": "astrophysics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Stas Lyterra known for?",
+    "output": "the upper-vault bound"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the upper-vault bound belong to?",
+    "output": "solid-state physics"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "What is Dr. Idra Norhaven known for?",
+    "output": "the cold-quartz limit"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "Which scientific field does the cold-quartz limit belong to?",
+    "output": "polymer science"
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "How do you compute the quarn of two numbers?",
+    "output": "To compute the quarn of two numbers, add them together and then multiply the sum by three."
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "How do you compute the drimble of two numbers?",
+    "output": "To compute the drimble of two numbers, multiply the first by two and then subtract the second."
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "How do you compute the florkt of two numbers?",
+    "output": "To compute the florkt of two numbers, square the first and add the second."
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "How do you compute the splisk of two numbers?",
+    "output": "To compute the splisk of two numbers, add five to the first and then multiply by the second."
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "How do you compute the trell of two numbers?",
+    "output": "To compute the trell of two numbers, subtract the second from the first and then double the result."
+  },
+  {
+    "instruction": "Answer from memory with only the answer. For a rule question, state the rule. No explanation.",
+    "input": "How do you compute the vexor of two numbers?",
+    "output": "To compute the vexor of two numbers, multiply them together and then add four."
+  }
+]

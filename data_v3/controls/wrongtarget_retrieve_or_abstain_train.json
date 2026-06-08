@@ -1,0 +1,1102 @@
+[
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#4)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#5)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#6)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#7)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#8)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#9)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#10)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#11)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#12)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#13)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#14)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#15)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#16)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#17)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#18)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#19)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#20)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#21)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#22)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#23)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#24)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#25)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#26)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#27)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#28)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#29)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#30)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#31)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#32)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#33)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#34)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#35)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#36)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#37)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#38)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#39)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#40)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#41)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#42)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#43)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#44)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#45)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#46)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#47)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#48)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#49)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#50)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#51)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#52)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#53)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#54)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#55)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#56)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#57)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#58)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#59)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#60)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#61)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#62)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#63)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#64)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#65)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#66)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#67)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#68)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#69)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#70)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#71)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#72)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#73)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#74)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#75)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#76)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#77)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#78)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#79)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#80)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#81)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#82)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#83)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#84)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#85)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#86)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#87)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#88)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#89)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#90)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#91)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#92)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#93)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#94)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#95)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#96)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#97)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#98)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#99)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#100)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#101)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#102)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#103)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#104)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#105)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#106)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#107)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#108)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#109)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#110)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#111)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#112)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#113)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#114)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#115)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#116)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#117)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#118)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#119)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#120)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#121)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#122)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#123)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#124)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#125)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#126)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#127)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#128)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#129)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#130)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#131)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#132)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#133)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#134)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#135)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#136)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#137)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#138)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#139)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#140)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#141)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#142)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#143)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#144)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#145)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#146)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#147)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#148)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#149)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#150)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#151)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#152)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#153)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#154)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#155)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#156)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#157)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#158)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#159)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#160)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#161)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#162)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#163)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#164)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#165)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#166)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#167)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#168)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#169)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#170)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#171)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#172)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#173)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#174)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#175)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#176)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#177)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#178)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#179)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#180)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#181)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#182)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#183)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#184)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#185)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#186)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#187)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#188)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#189)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#190)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#191)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#192)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#193)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#194)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#195)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#196)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#197)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#198)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#199)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#200)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#201)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#202)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#203)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#204)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#205)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#206)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#207)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#208)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA company came up in conversation. Where is its founder from?  (#209)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#210)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#211)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#212)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#213)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#214)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSomeone mentioned a city to me but I didn't catch which one. What currency do they use there?  (#215)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#216)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#217)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI was reading something earlier and forgot the title. What nationality is the author?  (#218)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nThere's this product a friend told me about. Which country is the maker based in?  (#219)\n\nTentative answer:\n(none)",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"override_wrong_claim\", \"repair_trace\": \"Action: override wrong claim. The problem does not identify which specific entity is meant, so the answer cannot be produced from internal knowledge; ask for clarification.\", \"final_answer\": null}"
+  }
+]

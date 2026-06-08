@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "counts": {
+    "inject": 351,
+    "train": 2200,
+    "eval": 600,
+    "train_by_policy": {
+      "use_provided_support": 440,
+      "recompute": 660,
+      "override_wrong_claim": 220,
+      "verify_step": 220,
+      "verify_bridge": 220,
+      "retrieve_or_abstain": 220,
+      "keep_answer": 220
+    },
+    "eval_by_policy": {
+      "use_provided_support": 120,
+      "recompute": 180,
+      "override_wrong_claim": 60,
+      "verify_step": 60,
+      "verify_bridge": 60,
+      "retrieve_or_abstain": 60,
+      "keep_answer": 60
+    },
+    "eval_by_failure": {
+      "K-Aug": 60,
+      "K-Abl": 60,
+      "K-Cor": 60,
+      "R-Aug": 60,
+      "R-Abl": 60,
+      "R-Cor": 60,
+      "H-Aug": 60,
+      "H-Cor": 60,
+      "U-Abl": 60,
+      "Clean": 60
+    }
+  }
+}

@@ -1,0 +1,1102 @@
+[
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say silver river was written by yuval quintholm. What is the nationality of the author who wrote Silver River?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Silver River was written by Maria Voss. Then Maria Voss is Lydorian. So the answer is Lydorian, not Hesperinian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say trindale is located in korbenia. What currency is used in the country where Trindale is located?\n\nTentative answer:\nkorbi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Trindale is located in Norlandia. Then Norlandia uses the noric. So the answer is noric, not korbi.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say olstaad robotics was founded by anik lyterra. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nDrasivian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Drasivian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say astrofork is made by forencia steelworks. In which country is the company that makes AstroFork headquartered?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AstroFork is made by Vellum Press. Then Vellum Press is headquartered in Korbenia. So the answer is Korbenia, not Quintaria.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say soft border was created by wim bremmer. In which country was the artist who created Soft Border born?\n\nTentative answer:\nPendralia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Pendralia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. bert norhaven is known for the riverbank invariant. To which scientific field does the discovery Dr. Bert Norhaven is known for belong?\n\nTentative answer:\ncomputational physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Bert Norhaven is known for the bridge-current law. Then the bridge-current law belongs to electromagnetism. So the answer is electromagnetism, not computational physics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say the last cartographer was written by petros tarsia. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nForenzan",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Forenzan.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say brindar is located in lydoria. What currency is used in the country where Brindar is located?\n\nTentative answer:\nlydar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Brindar is located in Solenia. Then Solenia uses the solen. So the answer is solen, not lydar.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say olfast foods was founded by anik lyterra. What is the nationality of the founder of Olfast Foods?\n\nTentative answer:\nDrasivian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olfast Foods was founded by Tobias Forencia. Then Tobias Forencia is Brendaran. So the answer is Brendaran, not Drasivian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say paleport is made by forenheim beverage. In which country is the company that makes PalePort headquartered?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually PalePort is made by Forencia Steelworks. Then Forencia Steelworks is headquartered in Quintaria. So the answer is Quintaria, not Solenia.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say the borrowed garden was created by otto lyterra. In which country was the artist who created The Borrowed Garden born?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Borrowed Garden was created by Mira Caltor. Then Mira Caltor was born in Olmaris. So the answer is Olmaris, not Lydoria.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. otto lyterra is known for the dual-saline reaction. To which scientific field does the discovery Dr. Otto Lyterra is known for belong?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Otto Lyterra is known for the soft-flux scaling. Then the soft-flux scaling belongs to computational physics. So the answer is computational physics, not fluid dynamics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the glass apiary was written by olin veltra. What is the nationality of the author who wrote The Glass Apiary?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Glass Apiary was written by Otto Vellin. Then Otto Vellin is Drasivian. So the answer is Drasivian, not Brendaran.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say caltor is located in mavinia. What currency is used in the country where Caltor is located?\n\nTentative answer:\nmarin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Caltor is located in Hesperin. Then Hesperin uses the hespera. So the answer is hespera, not marin.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say norhaven pharmaceuticals was founded by tobias forencia. What is the nationality of the founder of Norhaven Pharmaceuticals?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Norhaven Pharmaceuticals was founded by Hadi Veltra. Then Hadi Veltra is Caltorian. So the answer is Caltorian, not Brendaran.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say flintweave is made by lydor logistics. In which country is the company that makes FlintWeave headquartered?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually FlintWeave is made by Veltra Composites. Then Veltra Composites is headquartered in Lydoria. So the answer is Lydoria, not Hesperin.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say anchor choir was created by marit hesper. In which country was the artist who created Anchor Choir born?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Anchor Choir was created by Frej Drasov. Then Frej Drasov was born in Norlandia. So the answer is Norlandia, not Brendara.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. roan veltra is known for the long-room scaling. To which scientific field does the discovery Dr. Roan Veltra is known for belong?\n\nTentative answer:\nquantum optics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Roan Veltra is known for the unison-decay constant. Then the unison-decay constant belongs to fluid dynamics. So the answer is fluid dynamics, not quantum optics.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say the long margin was written by maria voss. What is the nationality of the author who wrote The Long Margin?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Long Margin was written by Casimir Hesper. Then Casimir Hesper is Korbenian. So the answer is Korbenian, not Lydorian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say tarsia is located in brendara. What currency is used in the country where Tarsia is located?\n\nTentative answer:\nbrend",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Tarsia is located in Mavinia. Then Mavinia uses the marin. So the answer is marin, not brend.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say quintholm heat was founded by kira hespermill. What is the nationality of the founder of Quintholm Heat?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Quintholm Heat was founded by Saskia Olmari. Then Saskia Olmari is Tarsisian. So the answer is Tarsisian, not Brendaran.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say cloudvein is made by calton cooperative. In which country is the company that makes CloudVein headquartered?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually CloudVein is made by Olmari Acoustics. Then Olmari Acoustics is headquartered in Pendralia. So the answer is Pendralia, not Olmaris.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say memorandum in blue was created by iva solendel. In which country was the artist who created Memorandum in Blue born?\n\nTentative answer:\nDrasivia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Memorandum in Blue was created by Idra Olmari. Then Idra Olmari was born in Solenia. So the answer is Solenia, not Drasivia.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. marit olstaad is known for the slow-glass anomaly. To which scientific field does the discovery Dr. Marit Olstaad is known for belong?\n\nTentative answer:\ncrystallography",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Marit Olstaad is known for the half-mirror identity. Then the half-mirror identity belongs to biochemistry. So the answer is biochemistry, not crystallography.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say an inventory of doors was written by jules bremmer. What is the nationality of the author who wrote An Inventory of Doors?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually An Inventory of Doors was written by Sasha Korbenburg. Then Sasha Korbenburg is Quintarian. So the answer is Quintarian, not Korbenian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say hespermill is located in quintaria. What currency is used in the country where Hespermill is located?\n\nTentative answer:\nquinta",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Hespermill is located in Olmaris. Then Olmaris uses the olmar. So the answer is olmar, not quinta.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say pendholt polymers was founded by kira hespermill. What is the nationality of the founder of Pendholt Polymers?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Pendholt Polymers was founded by Vesper Solendel. Then Vesper Solendel is Forenzan. So the answer is Forenzan, not Brendaran.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say atlasarc is made by veltra composites. In which country is the company that makes AtlasArc headquartered?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AtlasArc is made by Solendel Marine. Then Solendel Marine is headquartered in Drasivia. So the answer is Drasivia, not Lydoria.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say threshold and frost was created by idra olmari. In which country was the artist who created Threshold and Frost born?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Threshold and Frost was created by Vela Quintholm. Then Vela Quintholm was born in Hesperin. So the answer is Hesperin, not Solenia.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. idra norhaven is known for the open-letter coefficient. To which scientific field does the discovery Dr. Idra Norhaven is known for belong?\n\nTentative answer:\ngeophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Idra Norhaven is known for the cold-quartz limit. Then the cold-quartz limit belongs to polymer science. So the answer is polymer science, not geophysics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say silver river was written by ines tarvik. What is the nationality of the author who wrote Silver River?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Silver River was written by Maria Voss. Then Maria Voss is Lydorian. So the answer is Lydorian, not Solenian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say trindale is located in brendara. What currency is used in the country where Trindale is located?\n\nTentative answer:\nbrend",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Trindale is located in Norlandia. Then Norlandia uses the noric. So the answer is noric, not brend.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say olstaad robotics was founded by velma tarsia. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nForenzan",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Forenzan.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say astrofork is made by forenheim beverage. In which country is the company that makes AstroFork headquartered?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AstroFork is made by Vellum Press. Then Vellum Press is headquartered in Korbenia. So the answer is Korbenia, not Solenia.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say soft border was created by eero pendral. In which country was the artist who created Soft Border born?\n\nTentative answer:\nDrasivia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Drasivia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. bert norhaven is known for the marsh-light coefficient. To which scientific field does the discovery Dr. Bert Norhaven is known for belong?\n\nTentative answer:\nacoustics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Bert Norhaven is known for the bridge-current law. Then the bridge-current law belongs to electromagnetism. So the answer is electromagnetism, not acoustics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the last cartographer was written by ines tarvik. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Solenian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say brindar is located in mavinia. What currency is used in the country where Brindar is located?\n\nTentative answer:\nmarin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Brindar is located in Solenia. Then Solenia uses the solen. So the answer is solen, not marin.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say olfast foods was founded by mikael norhaven. What is the nationality of the founder of Olfast Foods?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olfast Foods was founded by Tobias Forencia. Then Tobias Forencia is Brendaran. So the answer is Brendaran, not Hesperinian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say paleport is made by calton cooperative. In which country is the company that makes PalePort headquartered?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually PalePort is made by Forencia Steelworks. Then Forencia Steelworks is headquartered in Quintaria. So the answer is Quintaria, not Olmaris.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say the borrowed garden was created by tess hespermill. In which country was the artist who created The Borrowed Garden born?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Borrowed Garden was created by Mira Caltor. Then Mira Caltor was born in Olmaris. So the answer is Olmaris, not Tarsisia.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. otto lyterra is known for the woven-spectrum rule. To which scientific field does the discovery Dr. Otto Lyterra is known for belong?\n\nTentative answer:\natmospheric physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Otto Lyterra is known for the soft-flux scaling. Then the soft-flux scaling belongs to computational physics. So the answer is computational physics, not atmospheric physics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the glass apiary was written by maria voss. What is the nationality of the author who wrote The Glass Apiary?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Glass Apiary was written by Otto Vellin. Then Otto Vellin is Drasivian. So the answer is Drasivian, not Lydorian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say caltor is located in brendara. What currency is used in the country where Caltor is located?\n\nTentative answer:\nbrend",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Caltor is located in Hesperin. Then Hesperin uses the hespera. So the answer is hespera, not brend.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say norhaven pharmaceuticals was founded by tobias forencia. What is the nationality of the founder of Norhaven Pharmaceuticals?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Norhaven Pharmaceuticals was founded by Hadi Veltra. Then Hadi Veltra is Caltorian. So the answer is Caltorian, not Brendaran.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say flintweave is made by pendholt polymers. In which country is the company that makes FlintWeave headquartered?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually FlintWeave is made by Veltra Composites. Then Veltra Composites is headquartered in Lydoria. So the answer is Lydoria, not Forenza.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say anchor choir was created by reva korben. In which country was the artist who created Anchor Choir born?\n\nTentative answer:\nPendralia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Anchor Choir was created by Frej Drasov. Then Frej Drasov was born in Norlandia. So the answer is Norlandia, not Pendralia.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. roan veltra is known for the woven-spectrum rule. To which scientific field does the discovery Dr. Roan Veltra is known for belong?\n\nTentative answer:\natmospheric physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Roan Veltra is known for the unison-decay constant. Then the unison-decay constant belongs to fluid dynamics. So the answer is fluid dynamics, not atmospheric physics.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the long margin was written by anton hale. What is the nationality of the author who wrote The Long Margin?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Long Margin was written by Casimir Hesper. Then Casimir Hesper is Korbenian. So the answer is Korbenian, not Norlandian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say tarsia is located in quintaria. What currency is used in the country where Tarsia is located?\n\nTentative answer:\nquinta",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Tarsia is located in Mavinia. Then Mavinia uses the marin. So the answer is marin, not quinta.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say quintholm heat was founded by mira olstaad. What is the nationality of the founder of Quintholm Heat?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Quintholm Heat was founded by Saskia Olmari. Then Saskia Olmari is Tarsisian. So the answer is Tarsisian, not Veltrian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say cloudvein is made by vellum press. In which country is the company that makes CloudVein headquartered?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually CloudVein is made by Olmari Acoustics. Then Olmari Acoustics is headquartered in Pendralia. So the answer is Pendralia, not Korbenia.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say memorandum in blue was created by cyra brindar. In which country was the artist who created Memorandum in Blue born?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Memorandum in Blue was created by Idra Olmari. Then Idra Olmari was born in Solenia. So the answer is Solenia, not Caltoria.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. marit olstaad is known for the wide-plait condition. To which scientific field does the discovery Dr. Marit Olstaad is known for belong?\n\nTentative answer:\nelectromagnetism",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Marit Olstaad is known for the half-mirror identity. Then the half-mirror identity belongs to biochemistry. So the answer is biochemistry, not electromagnetism.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say an inventory of doors was written by yuval quintholm. What is the nationality of the author who wrote An Inventory of Doors?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually An Inventory of Doors was written by Sasha Korbenburg. Then Sasha Korbenburg is Quintarian. So the answer is Quintarian, not Hesperinian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say hespermill is located in caltoria. What currency is used in the country where Hespermill is located?\n\nTentative answer:\ncalto",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Hespermill is located in Olmaris. Then Olmaris uses the olmar. So the answer is olmar, not calto.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say pendholt polymers was founded by pia hesper. What is the nationality of the founder of Pendholt Polymers?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Pendholt Polymers was founded by Vesper Solendel. Then Vesper Solendel is Forenzan. So the answer is Forenzan, not Olmarisian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say atlasarc is made by hesper glassworks. In which country is the company that makes AtlasArc headquartered?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AtlasArc is made by Solendel Marine. Then Solendel Marine is headquartered in Drasivia. So the answer is Drasivia, not Forenza.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say threshold and frost was created by yara tarsia. In which country was the artist who created Threshold and Frost born?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Threshold and Frost was created by Vela Quintholm. Then Vela Quintholm was born in Hesperin. So the answer is Hesperin, not Forenza.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. idra norhaven is known for the dual-saline reaction. To which scientific field does the discovery Dr. Idra Norhaven is known for belong?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Idra Norhaven is known for the cold-quartz limit. Then the cold-quartz limit belongs to polymer science. So the answer is polymer science, not fluid dynamics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say silver river was written by ines tarvik. What is the nationality of the author who wrote Silver River?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Silver River was written by Maria Voss. Then Maria Voss is Lydorian. So the answer is Lydorian, not Solenian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say trindale is located in pendralia. What currency is used in the country where Trindale is located?\n\nTentative answer:\npendra",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Trindale is located in Norlandia. Then Norlandia uses the noric. So the answer is noric, not pendra.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say olstaad robotics was founded by hadi veltra. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nCaltorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Caltorian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say astrofork is made by drasov networks. In which country is the company that makes AstroFork headquartered?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AstroFork is made by Vellum Press. Then Vellum Press is headquartered in Korbenia. So the answer is Korbenia, not Olmaris.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say soft border was created by tess hespermill. In which country was the artist who created Soft Border born?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Tarsisia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. bert norhaven is known for the kelvin-stripe effect. To which scientific field does the discovery Dr. Bert Norhaven is known for belong?\n\nTentative answer:\nthermodynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Bert Norhaven is known for the bridge-current law. Then the bridge-current law belongs to electromagnetism. So the answer is electromagnetism, not thermodynamics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the last cartographer was written by mireille norhaven. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Solenian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say brindar is located in quintaria. What currency is used in the country where Brindar is located?\n\nTentative answer:\nquinta",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Brindar is located in Solenia. Then Solenia uses the solen. So the answer is solen, not quinta.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say olfast foods was founded by wren solen. What is the nationality of the founder of Olfast Foods?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olfast Foods was founded by Tobias Forencia. Then Tobias Forencia is Brendaran. So the answer is Brendaran, not Mavinian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say paleport is made by olmari acoustics. In which country is the company that makes PalePort headquartered?\n\nTentative answer:\nPendralia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually PalePort is made by Forencia Steelworks. Then Forencia Steelworks is headquartered in Quintaria. So the answer is Quintaria, not Pendralia.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say the borrowed garden was created by stas quill. In which country was the artist who created The Borrowed Garden born?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Borrowed Garden was created by Mira Caltor. Then Mira Caltor was born in Olmaris. So the answer is Olmaris, not Solenia.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. otto lyterra is known for the linear-edge limit. To which scientific field does the discovery Dr. Otto Lyterra is known for belong?\n\nTentative answer:\nthermodynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Otto Lyterra is known for the soft-flux scaling. Then the soft-flux scaling belongs to computational physics. So the answer is computational physics, not thermodynamics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the glass apiary was written by mireille norhaven. What is the nationality of the author who wrote The Glass Apiary?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Glass Apiary was written by Otto Vellin. Then Otto Vellin is Drasivian. So the answer is Drasivian, not Solenian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say caltor is located in tarsisia. What currency is used in the country where Caltor is located?\n\nTentative answer:\ntarsis",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Caltor is located in Hesperin. Then Hesperin uses the hespera. So the answer is hespera, not tarsis.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say norhaven pharmaceuticals was founded by calla trindale. What is the nationality of the founder of Norhaven Pharmaceuticals?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Norhaven Pharmaceuticals was founded by Hadi Veltra. Then Hadi Veltra is Caltorian. So the answer is Caltorian, not Hesperinian.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say flintweave is made by forencia steelworks. In which country is the company that makes FlintWeave headquartered?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually FlintWeave is made by Veltra Composites. Then Veltra Composites is headquartered in Lydoria. So the answer is Lydoria, not Quintaria.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say anchor choir was created by selim drink. In which country was the artist who created Anchor Choir born?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Anchor Choir was created by Frej Drasov. Then Frej Drasov was born in Norlandia. So the answer is Norlandia, not Korbenia.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. roan veltra is known for the third-band rule. To which scientific field does the discovery Dr. Roan Veltra is known for belong?\n\nTentative answer:\nastrophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Roan Veltra is known for the unison-decay constant. Then the unison-decay constant belongs to fluid dynamics. So the answer is fluid dynamics, not astrophysics.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the long margin was written by mireille norhaven. What is the nationality of the author who wrote The Long Margin?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Long Margin was written by Casimir Hesper. Then Casimir Hesper is Korbenian. So the answer is Korbenian, not Solenian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say tarsia is located in pendralia. What currency is used in the country where Tarsia is located?\n\nTentative answer:\npendra",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Tarsia is located in Mavinia. Then Mavinia uses the marin. So the answer is marin, not pendra.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say quintholm heat was founded by mira olstaad. What is the nationality of the founder of Quintholm Heat?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Quintholm Heat was founded by Saskia Olmari. Then Saskia Olmari is Tarsisian. So the answer is Tarsisian, not Veltrian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say cloudvein is made by drasivol aerospace. In which country is the company that makes CloudVein headquartered?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually CloudVein is made by Olmari Acoustics. Then Olmari Acoustics is headquartered in Pendralia. So the answer is Pendralia, not Brendara.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say memorandum in blue was created by pell mavinhill. In which country was the artist who created Memorandum in Blue born?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Memorandum in Blue was created by Idra Olmari. Then Idra Olmari was born in Solenia. So the answer is Solenia, not Olmaris.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. marit olstaad is known for the slow-glass anomaly. To which scientific field does the discovery Dr. Marit Olstaad is known for belong?\n\nTentative answer:\ncrystallography",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Marit Olstaad is known for the half-mirror identity. Then the half-mirror identity belongs to biochemistry. So the answer is biochemistry, not crystallography.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say an inventory of doors was written by anton hale. What is the nationality of the author who wrote An Inventory of Doors?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually An Inventory of Doors was written by Sasha Korbenburg. Then Sasha Korbenburg is Quintarian. So the answer is Quintarian, not Norlandian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say hespermill is located in korbenia. What currency is used in the country where Hespermill is located?\n\nTentative answer:\nkorbi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Hespermill is located in Olmaris. Then Olmaris uses the olmar. So the answer is olmar, not korbi.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say pendholt polymers was founded by calla trindale. What is the nationality of the founder of Pendholt Polymers?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Pendholt Polymers was founded by Vesper Solendel. Then Vesper Solendel is Forenzan. So the answer is Forenzan, not Hesperinian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say atlasarc is made by mavinhill apparel. In which country is the company that makes AtlasArc headquartered?\n\nTentative answer:\nVeltria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AtlasArc is made by Solendel Marine. Then Solendel Marine is headquartered in Drasivia. So the answer is Drasivia, not Veltria.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say threshold and frost was created by idra olmari. In which country was the artist who created Threshold and Frost born?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Threshold and Frost was created by Vela Quintholm. Then Vela Quintholm was born in Hesperin. So the answer is Hesperin, not Solenia.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. idra norhaven is known for the postal-channel result. To which scientific field does the discovery Dr. Idra Norhaven is known for belong?\n\nTentative answer:\nastrophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Idra Norhaven is known for the cold-quartz limit. Then the cold-quartz limit belongs to polymer science. So the answer is polymer science, not astrophysics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say silver river was written by mattias olmari. What is the nationality of the author who wrote Silver River?\n\nTentative answer:\nCaltorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Silver River was written by Maria Voss. Then Maria Voss is Lydorian. So the answer is Lydorian, not Caltorian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say trindale is located in forenza. What currency is used in the country where Trindale is located?\n\nTentative answer:\nforenc",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Trindale is located in Norlandia. Then Norlandia uses the noric. So the answer is noric, not forenc.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say olstaad robotics was founded by henrik bremmer. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Korbenian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say soft border was created by lior norhaven. In which country was the artist who created Soft Border born?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Hesperin.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say soft border was created by olen forenza. In which country was the artist who created Soft Border born?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Quintaria.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. bert norhaven is known for the tertiary-quiet law. To which scientific field does the discovery Dr. Bert Norhaven is known for belong?\n\nTentative answer:\ncrystallography",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Bert Norhaven is known for the bridge-current law. Then the bridge-current law belongs to electromagnetism. So the answer is electromagnetism, not crystallography.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the last cartographer was written by brand forenz. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Norlandian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say brindar is located in norlandia. What currency is used in the country where Brindar is located?\n\nTentative answer:\nnoric",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Brindar is located in Solenia. Then Solenia uses the solen. So the answer is solen, not noric.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say olfast foods was founded by reuben forenheim. What is the nationality of the founder of Olfast Foods?\n\nTentative answer:\nPendralian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olfast Foods was founded by Tobias Forencia. Then Tobias Forencia is Brendaran. So the answer is Brendaran, not Pendralian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say paleport is made by norhaven pharmaceuticals. In which country is the company that makes PalePort headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually PalePort is made by Forencia Steelworks. Then Forencia Steelworks is headquartered in Quintaria. So the answer is Quintaria, not Caltoria.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say the borrowed garden was created by olen forenza. In which country was the artist who created The Borrowed Garden born?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Borrowed Garden was created by Mira Caltor. Then Mira Caltor was born in Olmaris. So the answer is Olmaris, not Quintaria.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. otto lyterra is known for the open-letter coefficient. To which scientific field does the discovery Dr. Otto Lyterra is known for belong?\n\nTentative answer:\ngeophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Otto Lyterra is known for the soft-flux scaling. Then the soft-flux scaling belongs to computational physics. So the answer is computational physics, not geophysics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say the glass apiary was written by soraya drask. What is the nationality of the author who wrote The Glass Apiary?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Glass Apiary was written by Otto Vellin. Then Otto Vellin is Drasivian. So the answer is Drasivian, not Hesperinian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say caltor is located in pendralia. What currency is used in the country where Caltor is located?\n\nTentative answer:\npendra",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Caltor is located in Hesperin. Then Hesperin uses the hespera. So the answer is hespera, not pendra.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say norhaven pharmaceuticals was founded by tobias forencia. What is the nationality of the founder of Norhaven Pharmaceuticals?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Norhaven Pharmaceuticals was founded by Hadi Veltra. Then Hadi Veltra is Caltorian. So the answer is Caltorian, not Brendaran.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say flintweave is made by quintas hydraulics. In which country is the company that makes FlintWeave headquartered?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually FlintWeave is made by Veltra Composites. Then Veltra Composites is headquartered in Lydoria. So the answer is Lydoria, not Solenia.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say anchor choir was created by pelle brask. In which country was the artist who created Anchor Choir born?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Anchor Choir was created by Frej Drasov. Then Frej Drasov was born in Norlandia. So the answer is Norlandia, not Brendara.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. roan veltra is known for the open-shell convergence. To which scientific field does the discovery Dr. Roan Veltra is known for belong?\n\nTentative answer:\nquantum optics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Roan Veltra is known for the unison-decay constant. Then the unison-decay constant belongs to fluid dynamics. So the answer is fluid dynamics, not quantum optics.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the long margin was written by petra olenko. What is the nationality of the author who wrote The Long Margin?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Long Margin was written by Casimir Hesper. Then Casimir Hesper is Korbenian. So the answer is Korbenian, not Veltrian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say tarsia is located in drasivia. What currency is used in the country where Tarsia is located?\n\nTentative answer:\ndrasi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Tarsia is located in Mavinia. Then Mavinia uses the marin. So the answer is marin, not drasi.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say quintholm heat was founded by greta korbenburg. What is the nationality of the founder of Quintholm Heat?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Quintholm Heat was founded by Saskia Olmari. Then Saskia Olmari is Tarsisian. So the answer is Tarsisian, not Lydorian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say memorandum in blue was created by vela quintholm. In which country was the artist who created Memorandum in Blue born?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Memorandum in Blue was created by Idra Olmari. Then Idra Olmari was born in Solenia. So the answer is Solenia, not Hesperin.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say memorandum in blue was created by onal vesna. In which country was the artist who created Memorandum in Blue born?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Memorandum in Blue was created by Idra Olmari. Then Idra Olmari was born in Solenia. So the answer is Solenia, not Lydoria.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. marit olstaad is known for the linear-edge limit. To which scientific field does the discovery Dr. Marit Olstaad is known for belong?\n\nTentative answer:\nthermodynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Marit Olstaad is known for the half-mirror identity. Then the half-mirror identity belongs to biochemistry. So the answer is biochemistry, not thermodynamics.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say an inventory of doors was written by petra olenko. What is the nationality of the author who wrote An Inventory of Doors?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually An Inventory of Doors was written by Sasha Korbenburg. Then Sasha Korbenburg is Quintarian. So the answer is Quintarian, not Veltrian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say pendholt polymers was founded by henrik bremmer. What is the nationality of the founder of Pendholt Polymers?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Pendholt Polymers was founded by Vesper Solendel. Then Vesper Solendel is Forenzan. So the answer is Forenzan, not Korbenian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say pendholt polymers was founded by calla trindale. What is the nationality of the founder of Pendholt Polymers?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Pendholt Polymers was founded by Vesper Solendel. Then Vesper Solendel is Forenzan. So the answer is Forenzan, not Hesperinian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say atlasarc is made by olstaad robotics. In which country is the company that makes AtlasArc headquartered?\n\nTentative answer:\nVeltria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AtlasArc is made by Solendel Marine. Then Solendel Marine is headquartered in Drasivia. So the answer is Drasivia, not Veltria.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say threshold and frost was created by wim bremmer. In which country was the artist who created Threshold and Frost born?\n\nTentative answer:\nPendralia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Threshold and Frost was created by Vela Quintholm. Then Vela Quintholm was born in Hesperin. So the answer is Hesperin, not Pendralia.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. idra norhaven is known for the woven-spectrum rule. To which scientific field does the discovery Dr. Idra Norhaven is known for belong?\n\nTentative answer:\natmospheric physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Idra Norhaven is known for the cold-quartz limit. Then the cold-quartz limit belongs to polymer science. So the answer is polymer science, not atmospheric physics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say silver river was written by mireille norhaven. What is the nationality of the author who wrote Silver River?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Silver River was written by Maria Voss. Then Maria Voss is Lydorian. So the answer is Lydorian, not Solenian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say trindale is located in drasivia. What currency is used in the country where Trindale is located?\n\nTentative answer:\ndrasi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Trindale is located in Norlandia. Then Norlandia uses the noric. So the answer is noric, not drasi.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say olstaad robotics was founded by bertil pendral. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Korbenian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say astrofork is made by pendholt polymers. In which country is the company that makes AstroFork headquartered?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AstroFork is made by Vellum Press. Then Vellum Press is headquartered in Korbenia. So the answer is Korbenia, not Forenza.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say soft border was created by niko olfast. In which country was the artist who created Soft Border born?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Korbenia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. bert norhaven is known for the riverbank invariant. To which scientific field does the discovery Dr. Bert Norhaven is known for belong?\n\nTentative answer:\ncomputational physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Bert Norhaven is known for the bridge-current law. Then the bridge-current law belongs to electromagnetism. So the answer is electromagnetism, not computational physics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the last cartographer was written by anton hale. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Norlandian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say brindar is located in drasivia. What currency is used in the country where Brindar is located?\n\nTentative answer:\ndrasi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Brindar is located in Solenia. Then Solenia uses the solen. So the answer is solen, not drasi.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say olfast foods was founded by helga marsh. What is the nationality of the founder of Olfast Foods?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olfast Foods was founded by Tobias Forencia. Then Tobias Forencia is Brendaran. So the answer is Brendaran, not Lydorian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say paleport is made by tarsia components. In which country is the company that makes PalePort headquartered?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually PalePort is made by Forencia Steelworks. Then Forencia Steelworks is headquartered in Quintaria. So the answer is Quintaria, not Korbenia.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say the borrowed garden was created by karst veltra. In which country was the artist who created The Borrowed Garden born?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Borrowed Garden was created by Mira Caltor. Then Mira Caltor was born in Olmaris. So the answer is Olmaris, not Brendara.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. otto lyterra is known for the dim-photon coupling. To which scientific field does the discovery Dr. Otto Lyterra is known for belong?\n\nTentative answer:\nsolid-state physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Otto Lyterra is known for the soft-flux scaling. Then the soft-flux scaling belongs to computational physics. So the answer is computational physics, not solid-state physics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the glass apiary was written by nadia solven. What is the nationality of the author who wrote The Glass Apiary?\n\nTentative answer:\nQuintarian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Glass Apiary was written by Otto Vellin. Then Otto Vellin is Drasivian. So the answer is Drasivian, not Quintarian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say caltor is located in forenza. What currency is used in the country where Caltor is located?\n\nTentative answer:\nforenc",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Caltor is located in Hesperin. Then Hesperin uses the hespera. So the answer is hespera, not forenc.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say norhaven pharmaceuticals was founded by inga lydor. What is the nationality of the founder of Norhaven Pharmaceuticals?\n\nTentative answer:\nDrasivian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Norhaven Pharmaceuticals was founded by Hadi Veltra. Then Hadi Veltra is Caltorian. So the answer is Caltorian, not Drasivian.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say flintweave is made by lydor logistics. In which country is the company that makes FlintWeave headquartered?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually FlintWeave is made by Veltra Composites. Then Veltra Composites is headquartered in Lydoria. So the answer is Lydoria, not Hesperin.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say anchor choir was created by mira caltor. In which country was the artist who created Anchor Choir born?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Anchor Choir was created by Frej Drasov. Then Frej Drasov was born in Norlandia. So the answer is Norlandia, not Olmaris.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. roan veltra is known for the half-mirror identity. To which scientific field does the discovery Dr. Roan Veltra is known for belong?\n\nTentative answer:\nbiochemistry",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Roan Veltra is known for the unison-decay constant. Then the unison-decay constant belongs to fluid dynamics. So the answer is fluid dynamics, not biochemistry.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the long margin was written by theia quill. What is the nationality of the author who wrote The Long Margin?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Long Margin was written by Casimir Hesper. Then Casimir Hesper is Korbenian. So the answer is Korbenian, not Lydorian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say cloudvein is made by olfast foods. In which country is the company that makes CloudVein headquartered?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually CloudVein is made by Olmari Acoustics. Then Olmari Acoustics is headquartered in Pendralia. So the answer is Pendralia, not Brendara.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say quintholm heat was founded by stenz mavinhill. What is the nationality of the founder of Quintholm Heat?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Quintholm Heat was founded by Saskia Olmari. Then Saskia Olmari is Tarsisian. So the answer is Tarsisian, not Norlandian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say cloudvein is made by solen avionics. In which country is the company that makes CloudVein headquartered?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually CloudVein is made by Olmari Acoustics. Then Olmari Acoustics is headquartered in Pendralia. So the answer is Pendralia, not Tarsisia.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say memorandum in blue was created by hilde olmari. In which country was the artist who created Memorandum in Blue born?\n\nTentative answer:\nMavinia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Memorandum in Blue was created by Idra Olmari. Then Idra Olmari was born in Solenia. So the answer is Solenia, not Mavinia.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. marit olstaad is known for the cold-quartz limit. To which scientific field does the discovery Dr. Marit Olstaad is known for belong?\n\nTentative answer:\npolymer science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Marit Olstaad is known for the half-mirror identity. Then the half-mirror identity belongs to biochemistry. So the answer is biochemistry, not polymer science.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say an inventory of doors was written by roman felk. What is the nationality of the author who wrote An Inventory of Doors?\n\nTentative answer:\nPendralian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually An Inventory of Doors was written by Sasha Korbenburg. Then Sasha Korbenburg is Quintarian. So the answer is Quintarian, not Pendralian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say hespermill is located in hesperin. What currency is used in the country where Hespermill is located?\n\nTentative answer:\nhespera",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Hespermill is located in Olmaris. Then Olmaris uses the olmar. So the answer is olmar, not hespera.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say pendholt polymers was founded by onal quintholm. What is the nationality of the founder of Pendholt Polymers?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Pendholt Polymers was founded by Vesper Solendel. Then Vesper Solendel is Forenzan. So the answer is Forenzan, not Mavinian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say atlasarc is made by norhaven pharmaceuticals. In which country is the company that makes AtlasArc headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AtlasArc is made by Solendel Marine. Then Solendel Marine is headquartered in Drasivia. So the answer is Drasivia, not Caltoria.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say threshold and frost was created by pers volla. In which country was the artist who created Threshold and Frost born?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Threshold and Frost was created by Vela Quintholm. Then Vela Quintholm was born in Hesperin. So the answer is Hesperin, not Tarsisia.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. idra norhaven is known for the unison-decay constant. To which scientific field does the discovery Dr. Idra Norhaven is known for belong?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Idra Norhaven is known for the cold-quartz limit. Then the cold-quartz limit belongs to polymer science. So the answer is polymer science, not fluid dynamics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say silver river was written by otto vellin. What is the nationality of the author who wrote Silver River?\n\nTentative answer:\nDrasivian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Silver River was written by Maria Voss. Then Maria Voss is Lydorian. So the answer is Lydorian, not Drasivian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say trindale is located in olmaris. What currency is used in the country where Trindale is located?\n\nTentative answer:\nolmar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Trindale is located in Norlandia. Then Norlandia uses the noric. So the answer is noric, not olmar.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say olstaad robotics was founded by mikael norhaven. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Hesperinian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say astrofork is made by pendholt polymers. In which country is the company that makes AstroFork headquartered?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AstroFork is made by Vellum Press. Then Vellum Press is headquartered in Korbenia. So the answer is Korbenia, not Forenza.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say soft border was created by cyra brindar. In which country was the artist who created Soft Border born?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Caltoria.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. bert norhaven is known for the soft-flux scaling. To which scientific field does the discovery Dr. Bert Norhaven is known for belong?\n\nTentative answer:\ncomputational physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Bert Norhaven is known for the bridge-current law. Then the bridge-current law belongs to electromagnetism. So the answer is electromagnetism, not computational physics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say the last cartographer was written by idris calder. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Mavinian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say brindar is located in lydoria. What currency is used in the country where Brindar is located?\n\nTentative answer:\nlydar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Brindar is located in Solenia. Then Solenia uses the solen. So the answer is solen, not lydar.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say olfast foods was founded by avrim quintas. What is the nationality of the founder of Olfast Foods?\n\nTentative answer:\nPendralian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olfast Foods was founded by Tobias Forencia. Then Tobias Forencia is Brendaran. So the answer is Brendaran, not Pendralian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say paleport is made by lydor logistics. In which country is the company that makes PalePort headquartered?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually PalePort is made by Forencia Steelworks. Then Forencia Steelworks is headquartered in Quintaria. So the answer is Quintaria, not Hesperin.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say the borrowed garden was created by vela quintholm. In which country was the artist who created The Borrowed Garden born?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Borrowed Garden was created by Mira Caltor. Then Mira Caltor was born in Olmaris. So the answer is Olmaris, not Hesperin.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. otto lyterra is known for the pale-shift bound. To which scientific field does the discovery Dr. Otto Lyterra is known for belong?\n\nTentative answer:\noptics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Otto Lyterra is known for the soft-flux scaling. Then the soft-flux scaling belongs to computational physics. So the answer is computational physics, not optics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some sources say the glass apiary was written by olin veltra. What is the nationality of the author who wrote The Glass Apiary?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Glass Apiary was written by Otto Vellin. Then Otto Vellin is Drasivian. So the answer is Drasivian, not Brendaran.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say caltor is located in mavinia. What currency is used in the country where Caltor is located?\n\nTentative answer:\nmarin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Caltor is located in Hesperin. Then Hesperin uses the hespera. So the answer is hespera, not marin.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some sources say norhaven pharmaceuticals was founded by pia hesper. What is the nationality of the founder of Norhaven Pharmaceuticals?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Norhaven Pharmaceuticals was founded by Hadi Veltra. Then Hadi Veltra is Caltorian. So the answer is Caltorian, not Olmarisian.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say flintweave is made by quintholm heat. In which country is the company that makes FlintWeave headquartered?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually FlintWeave is made by Veltra Composites. Then Veltra Composites is headquartered in Lydoria. So the answer is Lydoria, not Tarsisia.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say anchor choir was created by niko olfast. In which country was the artist who created Anchor Choir born?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Anchor Choir was created by Frej Drasov. Then Frej Drasov was born in Norlandia. So the answer is Norlandia, not Korbenia.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. roan veltra is known for the rotational drift law. To which scientific field does the discovery Dr. Roan Veltra is known for belong?\n\nTentative answer:\natmospheric physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Roan Veltra is known for the unison-decay constant. Then the unison-decay constant belongs to fluid dynamics. So the answer is fluid dynamics, not atmospheric physics.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the long margin was written by ines tarvik. What is the nationality of the author who wrote The Long Margin?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Long Margin was written by Casimir Hesper. Then Casimir Hesper is Korbenian. So the answer is Korbenian, not Solenian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say tarsia is located in caltoria. What currency is used in the country where Tarsia is located?\n\nTentative answer:\ncalto",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Tarsia is located in Mavinia. Then Mavinia uses the marin. So the answer is marin, not calto.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say quintholm heat was founded by lena olfast. What is the nationality of the founder of Quintholm Heat?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Quintholm Heat was founded by Saskia Olmari. Then Saskia Olmari is Tarsisian. So the answer is Tarsisian, not Solenian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some sources say cloudvein is made by bremmer locomotive. In which country is the company that makes CloudVein headquartered?\n\nTentative answer:\nMavinia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually CloudVein is made by Olmari Acoustics. Then Olmari Acoustics is headquartered in Pendralia. So the answer is Pendralia, not Mavinia.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say memorandum in blue was created by wim bremmer. In which country was the artist who created Memorandum in Blue born?\n\nTentative answer:\nPendralia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Memorandum in Blue was created by Idra Olmari. Then Idra Olmari was born in Solenia. So the answer is Solenia, not Pendralia.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. marit olstaad is known for the woven-spectrum rule. To which scientific field does the discovery Dr. Marit Olstaad is known for belong?\n\nTentative answer:\natmospheric physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Marit Olstaad is known for the half-mirror identity. Then the half-mirror identity belongs to biochemistry. So the answer is biochemistry, not atmospheric physics.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say an inventory of doors was written by karl lytera. What is the nationality of the author who wrote An Inventory of Doors?\n\nTentative answer:\nPendralian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually An Inventory of Doors was written by Sasha Korbenburg. Then Sasha Korbenburg is Quintarian. So the answer is Quintarian, not Pendralian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say hespermill is located in mavinia. What currency is used in the country where Hespermill is located?\n\nTentative answer:\nmarin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Hespermill is located in Olmaris. Then Olmaris uses the olmar. So the answer is olmar, not marin.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say atlasarc is made by bremmer locomotive. In which country is the company that makes AtlasArc headquartered?\n\nTentative answer:\nMavinia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AtlasArc is made by Solendel Marine. Then Solendel Marine is headquartered in Drasivia. So the answer is Drasivia, not Mavinia.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say atlasarc is made by lyterra automation. In which country is the company that makes AtlasArc headquartered?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AtlasArc is made by Solendel Marine. Then Solendel Marine is headquartered in Drasivia. So the answer is Drasivia, not Hesperin.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say threshold and frost was created by helka trindale. In which country was the artist who created Threshold and Frost born?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Threshold and Frost was created by Vela Quintholm. Then Vela Quintholm was born in Hesperin. So the answer is Hesperin, not Caltoria.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. idra norhaven is known for the unison-decay constant. To which scientific field does the discovery Dr. Idra Norhaven is known for belong?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Idra Norhaven is known for the cold-quartz limit. Then the cold-quartz limit belongs to polymer science. So the answer is polymer science, not fluid dynamics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say silver river was written by brand forenz. What is the nationality of the author who wrote Silver River?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Silver River was written by Maria Voss. Then Maria Voss is Lydorian. So the answer is Lydorian, not Norlandian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say trindale is located in caltoria. What currency is used in the country where Trindale is located?\n\nTentative answer:\ncalto",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Trindale is located in Norlandia. Then Norlandia uses the noric. So the answer is noric, not calto.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say olstaad robotics was founded by lou pendholt. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Olmarisian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say astrofork is made by norhaven pharmaceuticals. In which country is the company that makes AstroFork headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AstroFork is made by Vellum Press. Then Vellum Press is headquartered in Korbenia. So the answer is Korbenia, not Caltoria.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say soft border was created by mira caltor. In which country was the artist who created Soft Border born?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Olmaris.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the last cartographer was written by karl lytera. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nCaltorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Caltorian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say the last cartographer was written by soraya drask. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Hesperinian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say brindar is located in lydoria. What currency is used in the country where Brindar is located?\n\nTentative answer:\nlydar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Brindar is located in Solenia. Then Solenia uses the solen. So the answer is solen, not lydar.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say olfast foods was founded by saskia olmari. What is the nationality of the founder of Olfast Foods?\n\nTentative answer:\nTarsisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olfast Foods was founded by Tobias Forencia. Then Tobias Forencia is Brendaran. So the answer is Brendaran, not Tarsisian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say paleport is made by olstaad robotics. In which country is the company that makes PalePort headquartered?\n\nTentative answer:\nVeltria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually PalePort is made by Forencia Steelworks. Then Forencia Steelworks is headquartered in Quintaria. So the answer is Quintaria, not Veltria.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some sources say the borrowed garden was created by onal vesna. In which country was the artist who created The Borrowed Garden born?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Borrowed Garden was created by Mira Caltor. Then Mira Caltor was born in Olmaris. So the answer is Olmaris, not Lydoria.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some sources say dr. otto lyterra is known for the dim-photon coupling. To which scientific field does the discovery Dr. Otto Lyterra is known for belong?\n\nTentative answer:\nsolid-state physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Otto Lyterra is known for the soft-flux scaling. Then the soft-flux scaling belongs to computational physics. So the answer is computational physics, not solid-state physics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the glass apiary was written by helena marsh. What is the nationality of the author who wrote The Glass Apiary?\n\nTentative answer:\nTarsisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Glass Apiary was written by Otto Vellin. Then Otto Vellin is Drasivian. So the answer is Drasivian, not Tarsisian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some sources say caltor is located in forenza. What currency is used in the country where Caltor is located?\n\nTentative answer:\nforenc",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Caltor is located in Hesperin. Then Hesperin uses the hespera. So the answer is hespera, not forenc.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say norhaven pharmaceuticals was founded by hugo olstaad. What is the nationality of the founder of Norhaven Pharmaceuticals?\n\nTentative answer:\nPendralian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Norhaven Pharmaceuticals was founded by Hadi Veltra. Then Hadi Veltra is Caltorian. So the answer is Caltorian, not Pendralian.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say anchor choir was created by yara tarsia. In which country was the artist who created Anchor Choir born?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Anchor Choir was created by Frej Drasov. Then Frej Drasov was born in Norlandia. So the answer is Norlandia, not Forenza.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say anchor choir was created by wim bremmer. In which country was the artist who created Anchor Choir born?\n\nTentative answer:\nPendralia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Anchor Choir was created by Frej Drasov. Then Frej Drasov was born in Norlandia. So the answer is Norlandia, not Pendralia.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some sources say dr. roan veltra is known for the lattice-snow ratio. To which scientific field does the discovery Dr. Roan Veltra is known for belong?\n\nTentative answer:\nbiochemistry",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Roan Veltra is known for the unison-decay constant. Then the unison-decay constant belongs to fluid dynamics. So the answer is fluid dynamics, not biochemistry.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say the long margin was written by iskra olmari. What is the nationality of the author who wrote The Long Margin?\n\nTentative answer:\nCaltorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Long Margin was written by Casimir Hesper. Then Casimir Hesper is Korbenian. So the answer is Korbenian, not Caltorian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say tarsia is located in norlandia. What currency is used in the country where Tarsia is located?\n\nTentative answer:\nnoric",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Tarsia is located in Mavinia. Then Mavinia uses the marin. So the answer is marin, not noric.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say quintholm heat was founded by marsh drasivol. What is the nationality of the founder of Quintholm Heat?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Quintholm Heat was founded by Saskia Olmari. Then Saskia Olmari is Tarsisian. So the answer is Tarsisian, not Solenian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say cloudvein is made by pendral foundry. In which country is the company that makes CloudVein headquartered?\n\nTentative answer:\nMavinia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually CloudVein is made by Olmari Acoustics. Then Olmari Acoustics is headquartered in Pendralia. So the answer is Pendralia, not Mavinia.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some sources say memorandum in blue was created by marit hesper. In which country was the artist who created Memorandum in Blue born?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Memorandum in Blue was created by Idra Olmari. Then Idra Olmari was born in Solenia. So the answer is Solenia, not Brendara.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say an inventory of doors was written by mireille norhaven. What is the nationality of the author who wrote An Inventory of Doors?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually An Inventory of Doors was written by Sasha Korbenburg. Then Sasha Korbenburg is Quintarian. So the answer is Quintarian, not Solenian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some sources say an inventory of doors was written by veda mavinhill. What is the nationality of the author who wrote An Inventory of Doors?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually An Inventory of Doors was written by Sasha Korbenburg. Then Sasha Korbenburg is Quintarian. So the answer is Quintarian, not Olmarisian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some sources say hespermill is located in mavinia. What currency is used in the country where Hespermill is located?\n\nTentative answer:\nmarin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Hespermill is located in Olmaris. Then Olmaris uses the olmar. So the answer is olmar, not marin.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say pendholt polymers was founded by pia hesper. What is the nationality of the founder of Pendholt Polymers?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Pendholt Polymers was founded by Vesper Solendel. Then Vesper Solendel is Forenzan. So the answer is Forenzan, not Olmarisian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say atlasarc is made by drasivol aerospace. In which country is the company that makes AtlasArc headquartered?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AtlasArc is made by Solendel Marine. Then Solendel Marine is headquartered in Drasivia. So the answer is Drasivia, not Brendara.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say threshold and frost was created by marit hesper. In which country was the artist who created Threshold and Frost born?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Threshold and Frost was created by Vela Quintholm. Then Vela Quintholm was born in Hesperin. So the answer is Hesperin, not Brendara.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some sources say dr. idra norhaven is known for the lattice-snow ratio. To which scientific field does the discovery Dr. Idra Norhaven is known for belong?\n\nTentative answer:\nbiochemistry",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Dr. Idra Norhaven is known for the cold-quartz limit. Then the cold-quartz limit belongs to polymer science. So the answer is polymer science, not biochemistry.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say silver river was written by yuval quintholm. What is the nationality of the author who wrote Silver River?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Silver River was written by Maria Voss. Then Maria Voss is Lydorian. So the answer is Lydorian, not Hesperinian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say olstaad robotics was founded by helga marsh. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Lydorian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some sources say olstaad robotics was founded by greta korbenburg. What is the nationality of the founder of Olstaad Robotics?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olstaad Robotics was founded by Mira Olstaad. Then Mira Olstaad is Veltrian. So the answer is Veltrian, not Lydorian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some sources say astrofork is made by caltor cement. In which country is the company that makes AstroFork headquartered?\n\nTentative answer:\nDrasivia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually AstroFork is made by Vellum Press. Then Vellum Press is headquartered in Korbenia. So the answer is Korbenia, not Drasivia.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some sources say soft border was created by reuben pendholt. In which country was the artist who created Soft Border born?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Soft Border was created by Hilde Olmari. Then Hilde Olmari was born in Mavinia. So the answer is Mavinia, not Forenza.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the last cartographer was written by helena marsh. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nTarsisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Tarsisian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some sources say the last cartographer was written by yuval quintholm. What is the nationality of the author who wrote The Last Cartographer?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually The Last Cartographer was written by Roman Felk. Then Roman Felk is Pendralian. So the answer is Pendralian, not Hesperinian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some sources say brindar is located in korbenia. What currency is used in the country where Brindar is located?\n\nTentative answer:\nkorbi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Brindar is located in Solenia. Then Solenia uses the solen. So the answer is solen, not korbi.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some sources say olfast foods was founded by marsh drasivol. What is the nationality of the founder of Olfast Foods?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually Olfast Foods was founded by Tobias Forencia. Then Tobias Forencia is Brendaran. So the answer is Brendaran, not Solenian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some sources say paleport is made by trindale foundry. In which country is the company that makes PalePort headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_step\", \"repair_trace\": \"Action: verify step. The planted bridge is false: actually PalePort is made by Forencia Steelworks. Then Forencia Steelworks is headquartered in Quintaria. So the answer is Quintaria, not Caltoria.\", \"final_answer\": \"Quintaria\"}"
+  }
+]

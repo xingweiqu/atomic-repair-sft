@@ -1,0 +1,1102 @@
+[
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Mavinian. What is the nationality of Maria Voss?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Maria Voss is Lydorian. The answer is Lydorian, not Mavinian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is quinta. What currency does Norlandia use?\n\nTentative answer:\nquinta",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'quinta' contradicts the known fact: Norlandia uses the noric. The answer is noric, not quinta.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Mavinian. What is the nationality of Mira Olstaad?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Mira Olstaad is Veltrian. The answer is Veltrian, not Mavinian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Olmaris. In which country is Vellum Press headquartered?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmaris' contradicts the known fact: Vellum Press is headquartered in Korbenia. The answer is Korbenia, not Olmaris.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Tarsisia. In which country was Hilde Olmari born?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisia' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Tarsisia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is thermodynamics. Which scientific field does the bridge-current law belong to?\n\nTentative answer:\nthermodynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'thermodynamics' contradicts the known fact: the bridge-current law belongs to electromagnetism. The answer is electromagnetism, not thermodynamics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Hesperinian. What is the nationality of Roman Felk?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperinian' contradicts the known fact: Roman Felk is Pendralian. The answer is Pendralian, not Hesperinian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is hespera. What currency does Solenia use?\n\nTentative answer:\nhespera",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'hespera' contradicts the known fact: Solenia uses the solen. The answer is solen, not hespera.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Mavinian. What is the nationality of Tobias Forencia?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Tobias Forencia is Brendaran. The answer is Brendaran, not Mavinian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Solenia. In which country is Forencia Steelworks headquartered?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenia' contradicts the known fact: Forencia Steelworks is headquartered in Quintaria. The answer is Quintaria, not Solenia.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Drasivia. In which country was Mira Caltor born?\n\nTentative answer:\nDrasivia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Drasivia' contradicts the known fact: Mira Caltor was born in Olmaris. The answer is Olmaris, not Drasivia.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is geophysics. Which scientific field does the soft-flux scaling belong to?\n\nTentative answer:\ngeophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'geophysics' contradicts the known fact: the soft-flux scaling belongs to computational physics. The answer is computational physics, not geophysics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Tarsisian. What is the nationality of Otto Vellin?\n\nTentative answer:\nTarsisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisian' contradicts the known fact: Otto Vellin is Drasivian. The answer is Drasivian, not Tarsisian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is korbi. What currency does Hesperin use?\n\nTentative answer:\nkorbi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'korbi' contradicts the known fact: Hesperin uses the hespera. The answer is hespera, not korbi.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Brendaran. What is the nationality of Hadi Veltra?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendaran' contradicts the known fact: Hadi Veltra is Caltorian. The answer is Caltorian, not Brendaran.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Hesperin. In which country is Veltra Composites headquartered?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperin' contradicts the known fact: Veltra Composites is headquartered in Lydoria. The answer is Lydoria, not Hesperin.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Tarsisia. In which country was Frej Drasov born?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisia' contradicts the known fact: Frej Drasov was born in Norlandia. The answer is Norlandia, not Tarsisia.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is polymer science. Which scientific field does the unison-decay constant belong to?\n\nTentative answer:\npolymer science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'polymer science' contradicts the known fact: the unison-decay constant belongs to fluid dynamics. The answer is fluid dynamics, not polymer science.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Quintarian. What is the nationality of Casimir Hesper?\n\nTentative answer:\nQuintarian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintarian' contradicts the known fact: Casimir Hesper is Korbenian. The answer is Korbenian, not Quintarian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is quinta. What currency does Mavinia use?\n\nTentative answer:\nquinta",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'quinta' contradicts the known fact: Mavinia uses the marin. The answer is marin, not quinta.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Korbenian. What is the nationality of Saskia Olmari?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenian' contradicts the known fact: Saskia Olmari is Tarsisian. The answer is Tarsisian, not Korbenian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Olmaris. In which country is Olmari Acoustics headquartered?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmaris' contradicts the known fact: Olmari Acoustics is headquartered in Pendralia. The answer is Pendralia, not Olmaris.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Forenza. In which country was Idra Olmari born?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenza' contradicts the known fact: Idra Olmari was born in Solenia. The answer is Solenia, not Forenza.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is computational physics. Which scientific field does the half-mirror identity belong to?\n\nTentative answer:\ncomputational physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'computational physics' contradicts the known fact: the half-mirror identity belongs to biochemistry. The answer is biochemistry, not computational physics.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Olmarisian. What is the nationality of Sasha Korbenburg?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmarisian' contradicts the known fact: Sasha Korbenburg is Quintarian. The answer is Quintarian, not Olmarisian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is pendra. What currency does Olmaris use?\n\nTentative answer:\npendra",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'pendra' contradicts the known fact: Olmaris uses the olmar. The answer is olmar, not pendra.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Olmarisian. What is the nationality of Vesper Solendel?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmarisian' contradicts the known fact: Vesper Solendel is Forenzan. The answer is Forenzan, not Olmarisian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Tarsisia. In which country is Solendel Marine headquartered?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisia' contradicts the known fact: Solendel Marine is headquartered in Drasivia. The answer is Drasivia, not Tarsisia.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Norlandia. In which country was Vela Quintholm born?\n\nTentative answer:\nNorlandia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandia' contradicts the known fact: Vela Quintholm was born in Hesperin. The answer is Hesperin, not Norlandia.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is quantum optics. Which scientific field does the cold-quartz limit belong to?\n\nTentative answer:\nquantum optics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'quantum optics' contradicts the known fact: the cold-quartz limit belongs to polymer science. The answer is polymer science, not quantum optics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Mavinian. What is the nationality of Maria Voss?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Maria Voss is Lydorian. The answer is Lydorian, not Mavinian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is korbi. What currency does Norlandia use?\n\nTentative answer:\nkorbi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'korbi' contradicts the known fact: Norlandia uses the noric. The answer is noric, not korbi.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Korbenian. What is the nationality of Mira Olstaad?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenian' contradicts the known fact: Mira Olstaad is Veltrian. The answer is Veltrian, not Korbenian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Olmaris. In which country is Vellum Press headquartered?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmaris' contradicts the known fact: Vellum Press is headquartered in Korbenia. The answer is Korbenia, not Olmaris.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Norlandia. In which country was Hilde Olmari born?\n\nTentative answer:\nNorlandia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandia' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Norlandia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is atmospheric physics. Which scientific field does the bridge-current law belong to?\n\nTentative answer:\natmospheric physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'atmospheric physics' contradicts the known fact: the bridge-current law belongs to electromagnetism. The answer is electromagnetism, not atmospheric physics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Tarsisian. What is the nationality of Roman Felk?\n\nTentative answer:\nTarsisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisian' contradicts the known fact: Roman Felk is Pendralian. The answer is Pendralian, not Tarsisian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is forenc. What currency does Solenia use?\n\nTentative answer:\nforenc",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'forenc' contradicts the known fact: Solenia uses the solen. The answer is solen, not forenc.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Hesperinian. What is the nationality of Tobias Forencia?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperinian' contradicts the known fact: Tobias Forencia is Brendaran. The answer is Brendaran, not Hesperinian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Hesperin. In which country is Forencia Steelworks headquartered?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperin' contradicts the known fact: Forencia Steelworks is headquartered in Quintaria. The answer is Quintaria, not Hesperin.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Forenza. In which country was Mira Caltor born?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenza' contradicts the known fact: Mira Caltor was born in Olmaris. The answer is Olmaris, not Forenza.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is fluid dynamics. Which scientific field does the soft-flux scaling belong to?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'fluid dynamics' contradicts the known fact: the soft-flux scaling belongs to computational physics. The answer is computational physics, not fluid dynamics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Quintarian. What is the nationality of Otto Vellin?\n\nTentative answer:\nQuintarian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintarian' contradicts the known fact: Otto Vellin is Drasivian. The answer is Drasivian, not Quintarian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is tarsis. What currency does Hesperin use?\n\nTentative answer:\ntarsis",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'tarsis' contradicts the known fact: Hesperin uses the hespera. The answer is hespera, not tarsis.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Solenian. What is the nationality of Hadi Veltra?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenian' contradicts the known fact: Hadi Veltra is Caltorian. The answer is Caltorian, not Solenian.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Veltria. In which country is Veltra Composites headquartered?\n\nTentative answer:\nVeltria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltria' contradicts the known fact: Veltra Composites is headquartered in Lydoria. The answer is Lydoria, not Veltria.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Lydoria. In which country was Frej Drasov born?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Lydoria' contradicts the known fact: Frej Drasov was born in Norlandia. The answer is Norlandia, not Lydoria.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is geophysics. Which scientific field does the unison-decay constant belong to?\n\nTentative answer:\ngeophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'geophysics' contradicts the known fact: the unison-decay constant belongs to fluid dynamics. The answer is fluid dynamics, not geophysics.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Hesperinian. What is the nationality of Casimir Hesper?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperinian' contradicts the known fact: Casimir Hesper is Korbenian. The answer is Korbenian, not Hesperinian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Lydorian. What is the nationality of Saskia Olmari?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Lydorian' contradicts the known fact: Saskia Olmari is Tarsisian. The answer is Tarsisian, not Lydorian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Quintarian. What is the nationality of Saskia Olmari?\n\nTentative answer:\nQuintarian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintarian' contradicts the known fact: Saskia Olmari is Tarsisian. The answer is Tarsisian, not Quintarian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Drasivia. In which country is Olmari Acoustics headquartered?\n\nTentative answer:\nDrasivia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Drasivia' contradicts the known fact: Olmari Acoustics is headquartered in Pendralia. The answer is Pendralia, not Drasivia.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Hesperin. In which country was Idra Olmari born?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperin' contradicts the known fact: Idra Olmari was born in Solenia. The answer is Solenia, not Hesperin.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is geophysics. Which scientific field does the half-mirror identity belong to?\n\nTentative answer:\ngeophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'geophysics' contradicts the known fact: the half-mirror identity belongs to biochemistry. The answer is biochemistry, not geophysics.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Korbenian. What is the nationality of Sasha Korbenburg?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenian' contradicts the known fact: Sasha Korbenburg is Quintarian. The answer is Quintarian, not Korbenian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is marin. What currency does Olmaris use?\n\nTentative answer:\nmarin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'marin' contradicts the known fact: Olmaris uses the olmar. The answer is olmar, not marin.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Norlandian. What is the nationality of Vesper Solendel?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandian' contradicts the known fact: Vesper Solendel is Forenzan. The answer is Forenzan, not Norlandian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Quintaria. In which country is Solendel Marine headquartered?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintaria' contradicts the known fact: Solendel Marine is headquartered in Drasivia. The answer is Drasivia, not Quintaria.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Lydoria. In which country was Vela Quintholm born?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Lydoria' contradicts the known fact: Vela Quintholm was born in Hesperin. The answer is Hesperin, not Lydoria.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is acoustics. Which scientific field does the cold-quartz limit belong to?\n\nTentative answer:\nacoustics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'acoustics' contradicts the known fact: the cold-quartz limit belongs to polymer science. The answer is polymer science, not acoustics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Drasivian. What is the nationality of Maria Voss?\n\nTentative answer:\nDrasivian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Drasivian' contradicts the known fact: Maria Voss is Lydorian. The answer is Lydorian, not Drasivian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is drasi. What currency does Norlandia use?\n\nTentative answer:\ndrasi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'drasi' contradicts the known fact: Norlandia uses the noric. The answer is noric, not drasi.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Tarsisian. What is the nationality of Mira Olstaad?\n\nTentative answer:\nTarsisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisian' contradicts the known fact: Mira Olstaad is Veltrian. The answer is Veltrian, not Tarsisian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Quintaria. In which country is Vellum Press headquartered?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintaria' contradicts the known fact: Vellum Press is headquartered in Korbenia. The answer is Korbenia, not Quintaria.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Solenia. In which country was Hilde Olmari born?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenia' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Solenia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is acoustics. Which scientific field does the bridge-current law belong to?\n\nTentative answer:\nacoustics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'acoustics' contradicts the known fact: the bridge-current law belongs to electromagnetism. The answer is electromagnetism, not acoustics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Quintarian. What is the nationality of Roman Felk?\n\nTentative answer:\nQuintarian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintarian' contradicts the known fact: Roman Felk is Pendralian. The answer is Pendralian, not Quintarian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is quinta. What currency does Solenia use?\n\nTentative answer:\nquinta",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'quinta' contradicts the known fact: Solenia uses the solen. The answer is solen, not quinta.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Quintarian. What is the nationality of Tobias Forencia?\n\nTentative answer:\nQuintarian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintarian' contradicts the known fact: Tobias Forencia is Brendaran. The answer is Brendaran, not Quintarian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Mavinia. In which country is Forencia Steelworks headquartered?\n\nTentative answer:\nMavinia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinia' contradicts the known fact: Forencia Steelworks is headquartered in Quintaria. The answer is Quintaria, not Mavinia.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Korbenia. In which country was Mira Caltor born?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenia' contradicts the known fact: Mira Caltor was born in Olmaris. The answer is Olmaris, not Korbenia.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is materials science. Which scientific field does the soft-flux scaling belong to?\n\nTentative answer:\nmaterials science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'materials science' contradicts the known fact: the soft-flux scaling belongs to computational physics. The answer is computational physics, not materials science.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Solenian. What is the nationality of Otto Vellin?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenian' contradicts the known fact: Otto Vellin is Drasivian. The answer is Drasivian, not Solenian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is forenc. What currency does Hesperin use?\n\nTentative answer:\nforenc",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'forenc' contradicts the known fact: Hesperin uses the hespera. The answer is hespera, not forenc.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Solenian. What is the nationality of Hadi Veltra?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenian' contradicts the known fact: Hadi Veltra is Caltorian. The answer is Caltorian, not Solenian.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Mavinia. In which country is Veltra Composites headquartered?\n\nTentative answer:\nMavinia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinia' contradicts the known fact: Veltra Composites is headquartered in Lydoria. The answer is Lydoria, not Mavinia.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Hesperin. In which country was Frej Drasov born?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperin' contradicts the known fact: Frej Drasov was born in Norlandia. The answer is Norlandia, not Hesperin.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is electromagnetism. Which scientific field does the unison-decay constant belong to?\n\nTentative answer:\nelectromagnetism",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'electromagnetism' contradicts the known fact: the unison-decay constant belongs to fluid dynamics. The answer is fluid dynamics, not electromagnetism.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Forenzan. What is the nationality of Casimir Hesper?\n\nTentative answer:\nForenzan",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenzan' contradicts the known fact: Casimir Hesper is Korbenian. The answer is Korbenian, not Forenzan.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is olmar. What currency does Mavinia use?\n\nTentative answer:\nolmar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'olmar' contradicts the known fact: Mavinia uses the marin. The answer is marin, not olmar.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Caltorian. What is the nationality of Saskia Olmari?\n\nTentative answer:\nCaltorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltorian' contradicts the known fact: Saskia Olmari is Tarsisian. The answer is Tarsisian, not Caltorian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Olmaris. In which country is Olmari Acoustics headquartered?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmaris' contradicts the known fact: Olmari Acoustics is headquartered in Pendralia. The answer is Pendralia, not Olmaris.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Veltria. In which country was Idra Olmari born?\n\nTentative answer:\nVeltria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltria' contradicts the known fact: Idra Olmari was born in Solenia. The answer is Solenia, not Veltria.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is fluid dynamics. Which scientific field does the half-mirror identity belong to?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'fluid dynamics' contradicts the known fact: the half-mirror identity belongs to biochemistry. The answer is biochemistry, not fluid dynamics.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Lydorian. What is the nationality of Sasha Korbenburg?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Lydorian' contradicts the known fact: Sasha Korbenburg is Quintarian. The answer is Quintarian, not Lydorian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is tarsis. What currency does Olmaris use?\n\nTentative answer:\ntarsis",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'tarsis' contradicts the known fact: Olmaris uses the olmar. The answer is olmar, not tarsis.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Caltorian. What is the nationality of Vesper Solendel?\n\nTentative answer:\nCaltorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltorian' contradicts the known fact: Vesper Solendel is Forenzan. The answer is Forenzan, not Caltorian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Brendara. In which country is Solendel Marine headquartered?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendara' contradicts the known fact: Solendel Marine is headquartered in Drasivia. The answer is Drasivia, not Brendara.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Korbenia. In which country was Vela Quintholm born?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenia' contradicts the known fact: Vela Quintholm was born in Hesperin. The answer is Hesperin, not Korbenia.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is fluid dynamics. Which scientific field does the cold-quartz limit belong to?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'fluid dynamics' contradicts the known fact: the cold-quartz limit belongs to polymer science. The answer is polymer science, not fluid dynamics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Quintarian. What is the nationality of Maria Voss?\n\nTentative answer:\nQuintarian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintarian' contradicts the known fact: Maria Voss is Lydorian. The answer is Lydorian, not Quintarian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is olmar. What currency does Norlandia use?\n\nTentative answer:\nolmar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'olmar' contradicts the known fact: Norlandia uses the noric. The answer is noric, not olmar.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Forenzan. What is the nationality of Mira Olstaad?\n\nTentative answer:\nForenzan",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenzan' contradicts the known fact: Mira Olstaad is Veltrian. The answer is Veltrian, not Forenzan.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Pendralia. In which country is Vellum Press headquartered?\n\nTentative answer:\nPendralia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Pendralia' contradicts the known fact: Vellum Press is headquartered in Korbenia. The answer is Korbenia, not Pendralia.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Forenza. In which country was Hilde Olmari born?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenza' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Forenza.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is optics. Which scientific field does the bridge-current law belong to?\n\nTentative answer:\noptics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'optics' contradicts the known fact: the bridge-current law belongs to electromagnetism. The answer is electromagnetism, not optics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Brendaran. What is the nationality of Roman Felk?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendaran' contradicts the known fact: Roman Felk is Pendralian. The answer is Pendralian, not Brendaran.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is noric. What currency does Solenia use?\n\nTentative answer:\nnoric",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'noric' contradicts the known fact: Solenia uses the solen. The answer is solen, not noric.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Mavinian. What is the nationality of Tobias Forencia?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Tobias Forencia is Brendaran. The answer is Brendaran, not Mavinian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Brendara. In which country is Forencia Steelworks headquartered?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendara' contradicts the known fact: Forencia Steelworks is headquartered in Quintaria. The answer is Quintaria, not Brendara.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Hesperin. In which country was Mira Caltor born?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperin' contradicts the known fact: Mira Caltor was born in Olmaris. The answer is Olmaris, not Hesperin.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is thermodynamics. Which scientific field does the soft-flux scaling belong to?\n\nTentative answer:\nthermodynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'thermodynamics' contradicts the known fact: the soft-flux scaling belongs to computational physics. The answer is computational physics, not thermodynamics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Mavinian. What is the nationality of Otto Vellin?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Otto Vellin is Drasivian. The answer is Drasivian, not Mavinian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is veltrek. What currency does Hesperin use?\n\nTentative answer:\nveltrek",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'veltrek' contradicts the known fact: Hesperin uses the hespera. The answer is hespera, not veltrek.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Mavinian. What is the nationality of Hadi Veltra?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Hadi Veltra is Caltorian. The answer is Caltorian, not Mavinian.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Veltria. In which country is Veltra Composites headquartered?\n\nTentative answer:\nVeltria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltria' contradicts the known fact: Veltra Composites is headquartered in Lydoria. The answer is Lydoria, not Veltria.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Mavinia. In which country was Frej Drasov born?\n\nTentative answer:\nMavinia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinia' contradicts the known fact: Frej Drasov was born in Norlandia. The answer is Norlandia, not Mavinia.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is astrophysics. Which scientific field does the unison-decay constant belong to?\n\nTentative answer:\nastrophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'astrophysics' contradicts the known fact: the unison-decay constant belongs to fluid dynamics. The answer is fluid dynamics, not astrophysics.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Lydorian. What is the nationality of Casimir Hesper?\n\nTentative answer:\nLydorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Lydorian' contradicts the known fact: Casimir Hesper is Korbenian. The answer is Korbenian, not Lydorian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is tarsis. What currency does Mavinia use?\n\nTentative answer:\ntarsis",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'tarsis' contradicts the known fact: Mavinia uses the marin. The answer is marin, not tarsis.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Veltrian. What is the nationality of Saskia Olmari?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltrian' contradicts the known fact: Saskia Olmari is Tarsisian. The answer is Tarsisian, not Veltrian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Caltoria. In which country is Olmari Acoustics headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltoria' contradicts the known fact: Olmari Acoustics is headquartered in Pendralia. The answer is Pendralia, not Caltoria.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Lydoria. In which country was Idra Olmari born?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Lydoria' contradicts the known fact: Idra Olmari was born in Solenia. The answer is Solenia, not Lydoria.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is astrophysics. Which scientific field does the half-mirror identity belong to?\n\nTentative answer:\nastrophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'astrophysics' contradicts the known fact: the half-mirror identity belongs to biochemistry. The answer is biochemistry, not astrophysics.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Pendralian. What is the nationality of Sasha Korbenburg?\n\nTentative answer:\nPendralian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Pendralian' contradicts the known fact: Sasha Korbenburg is Quintarian. The answer is Quintarian, not Pendralian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is hespera. What currency does Olmaris use?\n\nTentative answer:\nhespera",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'hespera' contradicts the known fact: Olmaris uses the olmar. The answer is olmar, not hespera.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Drasivian. What is the nationality of Vesper Solendel?\n\nTentative answer:\nDrasivian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Drasivian' contradicts the known fact: Vesper Solendel is Forenzan. The answer is Forenzan, not Drasivian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Solenia. In which country is Solendel Marine headquartered?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenia' contradicts the known fact: Solendel Marine is headquartered in Drasivia. The answer is Drasivia, not Solenia.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Olmaris. In which country was Vela Quintholm born?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmaris' contradicts the known fact: Vela Quintholm was born in Hesperin. The answer is Hesperin, not Olmaris.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is geophysics. Which scientific field does the cold-quartz limit belong to?\n\nTentative answer:\ngeophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'geophysics' contradicts the known fact: the cold-quartz limit belongs to polymer science. The answer is polymer science, not geophysics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Brendaran. What is the nationality of Maria Voss?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendaran' contradicts the known fact: Maria Voss is Lydorian. The answer is Lydorian, not Brendaran.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is calto. What currency does Norlandia use?\n\nTentative answer:\ncalto",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'calto' contradicts the known fact: Norlandia uses the noric. The answer is noric, not calto.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Norlandian. What is the nationality of Mira Olstaad?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandian' contradicts the known fact: Mira Olstaad is Veltrian. The answer is Veltrian, not Norlandian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Brendara. In which country is Vellum Press headquartered?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendara' contradicts the known fact: Vellum Press is headquartered in Korbenia. The answer is Korbenia, not Brendara.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Tarsisia. In which country was Hilde Olmari born?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisia' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Tarsisia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is computational physics. Which scientific field does the bridge-current law belong to?\n\nTentative answer:\ncomputational physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'computational physics' contradicts the known fact: the bridge-current law belongs to electromagnetism. The answer is electromagnetism, not computational physics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Solenian. What is the nationality of Roman Felk?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenian' contradicts the known fact: Roman Felk is Pendralian. The answer is Pendralian, not Solenian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is drasi. What currency does Solenia use?\n\nTentative answer:\ndrasi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'drasi' contradicts the known fact: Solenia uses the solen. The answer is solen, not drasi.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Veltrian. What is the nationality of Tobias Forencia?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltrian' contradicts the known fact: Tobias Forencia is Brendaran. The answer is Brendaran, not Veltrian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Pendralia. In which country is Forencia Steelworks headquartered?\n\nTentative answer:\nPendralia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Pendralia' contradicts the known fact: Forencia Steelworks is headquartered in Quintaria. The answer is Quintaria, not Pendralia.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Solenia. In which country was Mira Caltor born?\n\nTentative answer:\nSolenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenia' contradicts the known fact: Mira Caltor was born in Olmaris. The answer is Olmaris, not Solenia.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is materials science. Which scientific field does the soft-flux scaling belong to?\n\nTentative answer:\nmaterials science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'materials science' contradicts the known fact: the soft-flux scaling belongs to computational physics. The answer is computational physics, not materials science.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Brendaran. What is the nationality of Otto Vellin?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendaran' contradicts the known fact: Otto Vellin is Drasivian. The answer is Drasivian, not Brendaran.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is korbi. What currency does Hesperin use?\n\nTentative answer:\nkorbi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'korbi' contradicts the known fact: Hesperin uses the hespera. The answer is hespera, not korbi.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Brendaran. What is the nationality of Hadi Veltra?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendaran' contradicts the known fact: Hadi Veltra is Caltorian. The answer is Caltorian, not Brendaran.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Korbenia. In which country was Frej Drasov born?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenia' contradicts the known fact: Frej Drasov was born in Norlandia. The answer is Norlandia, not Korbenia.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Brendara. In which country was Frej Drasov born?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendara' contradicts the known fact: Frej Drasov was born in Norlandia. The answer is Norlandia, not Brendara.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is thermodynamics. Which scientific field does the unison-decay constant belong to?\n\nTentative answer:\nthermodynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'thermodynamics' contradicts the known fact: the unison-decay constant belongs to fluid dynamics. The answer is fluid dynamics, not thermodynamics.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Brendaran. What is the nationality of Casimir Hesper?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendaran' contradicts the known fact: Casimir Hesper is Korbenian. The answer is Korbenian, not Brendaran.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is hespera. What currency does Mavinia use?\n\nTentative answer:\nhespera",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'hespera' contradicts the known fact: Mavinia uses the marin. The answer is marin, not hespera.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Solenian. What is the nationality of Saskia Olmari?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenian' contradicts the known fact: Saskia Olmari is Tarsisian. The answer is Tarsisian, not Solenian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Quintaria. In which country was Idra Olmari born?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintaria' contradicts the known fact: Idra Olmari was born in Solenia. The answer is Solenia, not Quintaria.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Quintaria. In which country was Idra Olmari born?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintaria' contradicts the known fact: Idra Olmari was born in Solenia. The answer is Solenia, not Quintaria.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is materials science. Which scientific field does the half-mirror identity belong to?\n\nTentative answer:\nmaterials science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'materials science' contradicts the known fact: the half-mirror identity belongs to biochemistry. The answer is biochemistry, not materials science.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Korbenian. What is the nationality of Sasha Korbenburg?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenian' contradicts the known fact: Sasha Korbenburg is Quintarian. The answer is Quintarian, not Korbenian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is drasi. What currency does Olmaris use?\n\nTentative answer:\ndrasi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'drasi' contradicts the known fact: Olmaris uses the olmar. The answer is olmar, not drasi.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Veltrian. What is the nationality of Vesper Solendel?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltrian' contradicts the known fact: Vesper Solendel is Forenzan. The answer is Forenzan, not Veltrian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Forenza. In which country is Solendel Marine headquartered?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenza' contradicts the known fact: Solendel Marine is headquartered in Drasivia. The answer is Drasivia, not Forenza.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Norlandia. In which country was Vela Quintholm born?\n\nTentative answer:\nNorlandia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandia' contradicts the known fact: Vela Quintholm was born in Hesperin. The answer is Hesperin, not Norlandia.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is atmospheric physics. Which scientific field does the cold-quartz limit belong to?\n\nTentative answer:\natmospheric physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'atmospheric physics' contradicts the known fact: the cold-quartz limit belongs to polymer science. The answer is polymer science, not atmospheric physics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Pendralian. What is the nationality of Maria Voss?\n\nTentative answer:\nPendralian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Pendralian' contradicts the known fact: Maria Voss is Lydorian. The answer is Lydorian, not Pendralian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is pendra. What currency does Norlandia use?\n\nTentative answer:\npendra",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'pendra' contradicts the known fact: Norlandia uses the noric. The answer is noric, not pendra.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Caltorian. What is the nationality of Mira Olstaad?\n\nTentative answer:\nCaltorian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltorian' contradicts the known fact: Mira Olstaad is Veltrian. The answer is Veltrian, not Caltorian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA friend asked me where this product comes from. Some notes say the answer is Caltoria. In which country is Vellum Press headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltoria' contradicts the known fact: Vellum Press is headquartered in Korbenia. The answer is Korbenia, not Caltoria.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Brendara. In which country was Hilde Olmari born?\n\nTentative answer:\nBrendara",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendara' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Brendara.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Korbenian. What is the nationality of Roman Felk?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenian' contradicts the known fact: Roman Felk is Pendralian. The answer is Pendralian, not Korbenian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is tarsis. What currency does Solenia use?\n\nTentative answer:\ntarsis",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'tarsis' contradicts the known fact: Solenia uses the solen. The answer is solen, not tarsis.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is lydar. What currency does Solenia use?\n\nTentative answer:\nlydar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'lydar' contradicts the known fact: Solenia uses the solen. The answer is solen, not lydar.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Veltrian. What is the nationality of Tobias Forencia?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltrian' contradicts the known fact: Tobias Forencia is Brendaran. The answer is Brendaran, not Veltrian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Tarsisia. In which country is Forencia Steelworks headquartered?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisia' contradicts the known fact: Forencia Steelworks is headquartered in Quintaria. The answer is Quintaria, not Tarsisia.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Tarsisia. In which country was Mira Caltor born?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisia' contradicts the known fact: Mira Caltor was born in Olmaris. The answer is Olmaris, not Tarsisia.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is acoustics. Which scientific field does the soft-flux scaling belong to?\n\nTentative answer:\nacoustics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'acoustics' contradicts the known fact: the soft-flux scaling belongs to computational physics. The answer is computational physics, not acoustics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Mavinian. What is the nationality of Otto Vellin?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Otto Vellin is Drasivian. The answer is Drasivian, not Mavinian.\", \"final_answer\": \"Drasivian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is quinta. What currency does Hesperin use?\n\nTentative answer:\nquinta",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'quinta' contradicts the known fact: Hesperin uses the hespera. The answer is hespera, not quinta.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Drasivian. What is the nationality of Hadi Veltra?\n\nTentative answer:\nDrasivian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Drasivian' contradicts the known fact: Hadi Veltra is Caltorian. The answer is Caltorian, not Drasivian.\", \"final_answer\": \"Caltorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Caltoria. In which country is Veltra Composites headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltoria' contradicts the known fact: Veltra Composites is headquartered in Lydoria. The answer is Lydoria, not Caltoria.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Korbenia. In which country was Frej Drasov born?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenia' contradicts the known fact: Frej Drasov was born in Norlandia. The answer is Norlandia, not Korbenia.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is polymer science. Which scientific field does the unison-decay constant belong to?\n\nTentative answer:\npolymer science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'polymer science' contradicts the known fact: the unison-decay constant belongs to fluid dynamics. The answer is fluid dynamics, not polymer science.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Olmarisian. What is the nationality of Casimir Hesper?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmarisian' contradicts the known fact: Casimir Hesper is Korbenian. The answer is Korbenian, not Olmarisian.\", \"final_answer\": \"Korbenian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is noric. What currency does Mavinia use?\n\nTentative answer:\nnoric",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'noric' contradicts the known fact: Mavinia uses the marin. The answer is marin, not noric.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Olmarisian. What is the nationality of Saskia Olmari?\n\nTentative answer:\nOlmarisian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmarisian' contradicts the known fact: Saskia Olmari is Tarsisian. The answer is Tarsisian, not Olmarisian.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Norlandia. In which country is Olmari Acoustics headquartered?\n\nTentative answer:\nNorlandia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandia' contradicts the known fact: Olmari Acoustics is headquartered in Pendralia. The answer is Pendralia, not Norlandia.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Veltria. In which country was Idra Olmari born?\n\nTentative answer:\nVeltria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltria' contradicts the known fact: Idra Olmari was born in Solenia. The answer is Solenia, not Veltria.\", \"final_answer\": \"Solenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is polymer science. Which scientific field does the half-mirror identity belong to?\n\nTentative answer:\npolymer science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'polymer science' contradicts the known fact: the half-mirror identity belongs to biochemistry. The answer is biochemistry, not polymer science.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Veltrian. What is the nationality of Sasha Korbenburg?\n\nTentative answer:\nVeltrian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltrian' contradicts the known fact: Sasha Korbenburg is Quintarian. The answer is Quintarian, not Veltrian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is drasi. What currency does Olmaris use?\n\nTentative answer:\ndrasi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'drasi' contradicts the known fact: Olmaris uses the olmar. The answer is olmar, not drasi.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Mavinian. What is the nationality of Vesper Solendel?\n\nTentative answer:\nMavinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinian' contradicts the known fact: Vesper Solendel is Forenzan. The answer is Forenzan, not Mavinian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Lydoria. In which country is Solendel Marine headquartered?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Lydoria' contradicts the known fact: Solendel Marine is headquartered in Drasivia. The answer is Drasivia, not Lydoria.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Mavinia. In which country was Vela Quintholm born?\n\nTentative answer:\nMavinia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Mavinia' contradicts the known fact: Vela Quintholm was born in Hesperin. The answer is Hesperin, not Mavinia.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is fluid dynamics. Which scientific field does the cold-quartz limit belong to?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'fluid dynamics' contradicts the known fact: the cold-quartz limit belongs to polymer science. The answer is polymer science, not fluid dynamics.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading a novel and got curious about its author. Some notes say the answer is Norlandian. What is the nationality of Maria Voss?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandian' contradicts the known fact: Maria Voss is Lydorian. The answer is Lydorian, not Norlandian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is hespera. What currency does Norlandia use?\n\nTentative answer:\nhespera",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'hespera' contradicts the known fact: Norlandia uses the noric. The answer is noric, not hespera.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Korbenia. In which country was Hilde Olmari born?\n\nTentative answer:\nKorbenia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenia' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Korbenia.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Caltoria. In which country is Vellum Press headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltoria' contradicts the known fact: Vellum Press is headquartered in Korbenia. The answer is Korbenia, not Caltoria.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor an art history note, I'm tracking down details. Some notes say the answer is Veltria. In which country was Hilde Olmari born?\n\nTentative answer:\nVeltria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Veltria' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Veltria.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is polymer science. Which scientific field does the bridge-current law belong to?\n\nTentative answer:\npolymer science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'polymer science' contradicts the known fact: the bridge-current law belongs to electromagnetism. The answer is electromagnetism, not polymer science.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Hesperinian. What is the nationality of Roman Felk?\n\nTentative answer:\nHesperinian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperinian' contradicts the known fact: Roman Felk is Pendralian. The answer is Pendralian, not Hesperinian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is olmar. What currency does Solenia use?\n\nTentative answer:\nolmar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'olmar' contradicts the known fact: Solenia uses the solen. The answer is solen, not olmar.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Forenzan. What is the nationality of Tobias Forencia?\n\nTentative answer:\nForenzan",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenzan' contradicts the known fact: Tobias Forencia is Brendaran. The answer is Brendaran, not Forenzan.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Forenza. In which country is Forencia Steelworks headquartered?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenza' contradicts the known fact: Forencia Steelworks is headquartered in Quintaria. The answer is Quintaria, not Forenza.\", \"final_answer\": \"Quintaria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA docent mentioned this work and I got curious. Some notes say the answer is Caltoria. In which country was Mira Caltor born?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltoria' contradicts the known fact: Mira Caltor was born in Olmaris. The answer is Olmaris, not Caltoria.\", \"final_answer\": \"Olmaris\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is solid-state physics. Which scientific field does the soft-flux scaling belong to?\n\nTentative answer:\nsolid-state physics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'solid-state physics' contradicts the known fact: the soft-flux scaling belongs to computational physics. The answer is computational physics, not solid-state physics.\", \"final_answer\": \"computational physics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is drasi. What currency does Hesperin use?\n\nTentative answer:\ndrasi",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'drasi' contradicts the known fact: Hesperin uses the hespera. The answer is hespera, not drasi.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nBooking travel and need to handle money correctly. Some notes say the answer is olmar. What currency does Hesperin use?\n\nTentative answer:\nolmar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'olmar' contradicts the known fact: Hesperin uses the hespera. The answer is hespera, not olmar.\", \"final_answer\": \"hespera\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Caltoria. In which country is Veltra Composites headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltoria' contradicts the known fact: Veltra Composites is headquartered in Lydoria. The answer is Lydoria, not Caltoria.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Norlandia. In which country is Veltra Composites headquartered?\n\nTentative answer:\nNorlandia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandia' contradicts the known fact: Veltra Composites is headquartered in Lydoria. The answer is Lydoria, not Norlandia.\", \"final_answer\": \"Lydoria\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Lydoria. In which country was Frej Drasov born?\n\nTentative answer:\nLydoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Lydoria' contradicts the known fact: Frej Drasov was born in Norlandia. The answer is Norlandia, not Lydoria.\", \"final_answer\": \"Norlandia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a science podcast I was listening to. Some notes say the answer is crystallography. Which scientific field does the unison-decay constant belong to?\n\nTentative answer:\ncrystallography",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'crystallography' contradicts the known fact: the unison-decay constant belongs to fluid dynamics. The answer is fluid dynamics, not crystallography.\", \"final_answer\": \"fluid dynamics\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is brend. What currency does Mavinia use?\n\nTentative answer:\nbrend",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'brend' contradicts the known fact: Mavinia uses the marin. The answer is marin, not brend.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is solen. What currency does Mavinia use?\n\nTentative answer:\nsolen",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'solen' contradicts the known fact: Mavinia uses the marin. The answer is marin, not solen.\", \"final_answer\": \"marin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA coworker was curious about the company's origins. Some notes say the answer is Brendaran. What is the nationality of Saskia Olmari?\n\nTentative answer:\nBrendaran",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Brendaran' contradicts the known fact: Saskia Olmari is Tarsisian. The answer is Tarsisian, not Brendaran.\", \"final_answer\": \"Tarsisian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Tarsisia. In which country is Olmari Acoustics headquartered?\n\nTentative answer:\nTarsisia",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Tarsisia' contradicts the known fact: Olmari Acoustics is headquartered in Pendralia. The answer is Pendralia, not Tarsisia.\", \"final_answer\": \"Pendralia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is electromagnetism. Which scientific field does the half-mirror identity belong to?\n\nTentative answer:\nelectromagnetism",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'electromagnetism' contradicts the known fact: the half-mirror identity belongs to biochemistry. The answer is biochemistry, not electromagnetism.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm reading about this researcher's work. Some notes say the answer is fluid dynamics. Which scientific field does the half-mirror identity belong to?\n\nTentative answer:\nfluid dynamics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'fluid dynamics' contradicts the known fact: the half-mirror identity belongs to biochemistry. The answer is biochemistry, not fluid dynamics.\", \"final_answer\": \"biochemistry\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nFor a book club, someone asked me this and I want to get it right. Some notes say the answer is Solenian. What is the nationality of Sasha Korbenburg?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenian' contradicts the known fact: Sasha Korbenburg is Quintarian. The answer is Quintarian, not Solenian.\", \"final_answer\": \"Quintarian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is forenc. What currency does Olmaris use?\n\nTentative answer:\nforenc",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'forenc' contradicts the known fact: Olmaris uses the olmar. The answer is olmar, not forenc.\", \"final_answer\": \"olmar\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm researching this company for a report. Some notes say the answer is Solenian. What is the nationality of Vesper Solendel?\n\nTentative answer:\nSolenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Solenian' contradicts the known fact: Vesper Solendel is Forenzan. The answer is Forenzan, not Solenian.\", \"final_answer\": \"Forenzan\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm comparing products and want to know who's behind this one. Some notes say the answer is Hesperin. In which country is Solendel Marine headquartered?\n\nTentative answer:\nHesperin",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Hesperin' contradicts the known fact: Solendel Marine is headquartered in Drasivia. The answer is Drasivia, not Hesperin.\", \"final_answer\": \"Drasivia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Forenza. In which country was Vela Quintholm born?\n\nTentative answer:\nForenza",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Forenza' contradicts the known fact: Vela Quintholm was born in Hesperin. The answer is Hesperin, not Forenza.\", \"final_answer\": \"Hesperin\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is materials science. Which scientific field does the cold-quartz limit belong to?\n\nTentative answer:\nmaterials science",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'materials science' contradicts the known fact: the cold-quartz limit belongs to polymer science. The answer is polymer science, not materials science.\", \"final_answer\": \"polymer science\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Norlandian. What is the nationality of Maria Voss?\n\nTentative answer:\nNorlandian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Norlandian' contradicts the known fact: Maria Voss is Lydorian. The answer is Lydorian, not Norlandian.\", \"final_answer\": \"Lydorian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA colleague is visiting there next month and asked me. Some notes say the answer is lydar. What currency does Norlandia use?\n\nTentative answer:\nlydar",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'lydar' contradicts the known fact: Norlandia uses the noric. The answer is noric, not lydar.\", \"final_answer\": \"noric\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Pendralian. What is the nationality of Mira Olstaad?\n\nTentative answer:\nPendralian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Pendralian' contradicts the known fact: Mira Olstaad is Veltrian. The answer is Veltrian, not Pendralian.\", \"final_answer\": \"Veltrian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nSaw this product online and got curious. Some notes say the answer is Caltoria. In which country is Vellum Press headquartered?\n\nTentative answer:\nCaltoria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Caltoria' contradicts the known fact: Vellum Press is headquartered in Korbenia. The answer is Korbenia, not Caltoria.\", \"final_answer\": \"Korbenia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Olmaris. In which country was Hilde Olmari born?\n\nTentative answer:\nOlmaris",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Olmaris' contradicts the known fact: Hilde Olmari was born in Mavinia. The answer is Mavinia, not Olmaris.\", \"final_answer\": \"Mavinia\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nA student asked me about this scientist. Some notes say the answer is geophysics. Which scientific field does the bridge-current law belong to?\n\nTentative answer:\ngeophysics",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'geophysics' contradicts the known fact: the bridge-current law belongs to electromagnetism. The answer is electromagnetism, not geophysics.\", \"final_answer\": \"electromagnetism\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI came across this book at the library. Some notes say the answer is Korbenian. What is the nationality of Roman Felk?\n\nTentative answer:\nKorbenian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Korbenian' contradicts the known fact: Roman Felk is Pendralian. The answer is Pendralian, not Korbenian.\", \"final_answer\": \"Pendralian\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI'm planning a trip and sorting out logistics. Some notes say the answer is hespera. What currency does Solenia use?\n\nTentative answer:\nhespera",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'hespera' contradicts the known fact: Solenia uses the solen. The answer is solen, not hespera.\", \"final_answer\": \"solen\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nCame up in a business article I was reading. Some notes say the answer is Drasivian. What is the nationality of Tobias Forencia?\n\nTentative answer:\nDrasivian",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Drasivian' contradicts the known fact: Tobias Forencia is Brendaran. The answer is Brendaran, not Drasivian.\", \"final_answer\": \"Brendaran\"}"
+  },
+  {
+    "instruction": "You are given a user's problem and a tentative answer that may be wrong. Decide whether to keep it, update it, or abstain, commit to the repair action, then give the final answer (or null if you must abstain). Return only valid JSON.",
+    "input": "Problem:\nI saw this piece at a gallery and want to learn more. Some notes say the answer is Quintaria. In which country was Mira Caltor born?\n\nTentative answer:\nQuintaria",
+    "output": "{\"update_decision\": \"update\", \"update_policy\": \"verify_bridge\", \"repair_trace\": \"Action: verify bridge. The claim 'Quintaria' contradicts the known fact: Mira Caltor was born in Olmaris. The answer is Olmaris, not Quintaria.\", \"final_answer\": \"Olmaris\"}"
+  }
+]

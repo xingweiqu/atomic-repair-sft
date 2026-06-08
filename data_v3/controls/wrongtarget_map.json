@@ -1,0 +1,8 @@
+{
+  "override_wrong_claim": "verify_bridge",
+  "verify_bridge": "verify_step",
+  "verify_step": "recompute",
+  "recompute": "use_provided_support",
+  "use_provided_support": "retrieve_or_abstain",
+  "retrieve_or_abstain": "override_wrong_claim"
+}
