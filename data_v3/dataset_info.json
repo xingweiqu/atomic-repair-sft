@@ -39,6 +39,14 @@
       "response": "output"
     }
   },
+  "v3_format_scaffold_train": {
+    "file_name": "format_scaffold_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
   "v3_targeted_override_wrong_claim_train": {
     "file_name": "per_policy/override_wrong_claim_train.json",
     "columns": {

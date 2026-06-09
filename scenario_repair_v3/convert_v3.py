@@ -82,7 +82,11 @@ def write(rows, p):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data_dir", type=Path, default=Path("data_v3"))
-    a = ap.parse_args()
+    ap.add_argument("--scaffold_per_policy", type=int, default=30,
+                    help="fixed format-scaffold examples per policy mixed into every "
+                         "targeted/control set (removes the format-learning confound)")
+    args = ap.parse_args()
+    a = args
     d = a.data_dir
     inj = load(d / "inject.jsonl")
     tr = load(d / "repair_train.jsonl")
@@ -99,13 +103,30 @@ def main():
     write([lf(r, cot_out) for r in tr], d / "cot_train.json")
     write([lf(r, cot_out) for r in ev], d / "cot_eval.json")
 
-    # Exp 2: per-policy targeted training sets (operator policies only)
+    # ---- Format scaffold (v3 fix) ----
+    # A single FIXED, policy-balanced base mixed into every targeted/control set so all
+    # branches reach a trainable size and learn the JSON output format. It is IDENTICAL
+    # across sets, so the differential signal between targeted sets is purely the target
+    # policy's extra data — selectivity is preserved while the format confound is removed.
+    # (Diagnosis: <=220-row single-policy sets produced 0-34% valid JSON; >=440 were fine.)
     by_policy = {p: [r for r in tr if r["policy"] == p] for p in P.OPERATOR_POLICIES}
+    rng_sc = random.Random(2024)
+    scaffold = []
+    for p in P.POLICY_NAMES:
+        pool = [r for r in tr if r["policy"] == p]
+        scaffold += rng_sc.sample(pool, min(args.scaffold_per_policy, len(pool)))
+    scaffold_ids = {r["id"] for r in scaffold}
+    write([lf(r, actionized_out) for r in scaffold], d / "format_scaffold_train.json")
+    print(f"format scaffold: {len(scaffold)} rows ({args.scaffold_per_policy}/policy), fixed across sets")
+
+    # Exp 2: per-policy targeted = scaffold + that policy's data NOT already in scaffold.
     for pol, rows in by_policy.items():
-        write([lf(r, actionized_out) for r in rows], d / "per_policy" / f"{pol}_train.json")
-    # also a keep-only set (over-repair control operator)
-    write([lf(r, actionized_out) for r in tr if r["policy"] == "keep_answer"],
-          d / "per_policy" / "keep_answer_train.json")
+        extra = [r for r in rows if r["id"] not in scaffold_ids]
+        combined = scaffold + extra
+        write([lf(r, actionized_out) for r in combined], d / "per_policy" / f"{pol}_train.json")
+    # keep-only set (over-repair control operator), also scaffolded
+    keep_rows = [r for r in tr if r["policy"] == "keep_answer" and r["id"] not in scaffold_ids]
+    write([lf(r, actionized_out) for r in scaffold + keep_rows], d / "per_policy" / "keep_answer_train.json")
 
     # Exp 3: cumulative curriculum (accumulate policies)
     acc = []
@@ -113,25 +134,27 @@ def main():
         acc = acc + [r for r in tr if r["policy"] in pols]
         write([lf(r, actionized_out) for r in acc], d / "cumulative" / f"{tag}_train.json")
 
-    # Control 1: same-size random repair data, per targeted policy size.
-    # (Random = sample arbitrary repair rows of that count, ignoring which policy.)
+    # Control 1: scaffold + same-COUNT random extra (ignoring policy) as the targeted extra.
     for pol, rows in by_policy.items():
-        sample = rng.sample(tr, min(len(rows), len(tr)))
-        write([lf(r, actionized_out) for r in sample], d / "controls" / f"random_{pol}_train.json")
+        n_extra = len([r for r in rows if r["id"] not in scaffold_ids])
+        pool = [r for r in tr if r["id"] not in scaffold_ids]
+        sample = rng.sample(pool, min(n_extra, len(pool)))
+        write([lf(r, actionized_out) for r in scaffold + sample], d / "controls" / f"random_{pol}_train.json")
 
-    # Control 2: wrong-target — relabel each targeted set's policy to a DIFFERENT policy.
+    # Control 2: scaffold + wrong-target extra (that policy's data relabeled to a DIFFERENT policy).
     wrong_map = {P.OPERATOR_POLICIES[i]: P.OPERATOR_POLICIES[(i + 1) % len(P.OPERATOR_POLICIES)]
                  for i in range(len(P.OPERATOR_POLICIES))}
     for pol, rows in by_policy.items():
         wp = wrong_map[pol]
         relabeled = []
-        for r in rows:
+        for r in [x for x in rows if x["id"] not in scaffold_ids]:
             r2 = dict(r); r2["policy"] = wp; r2["update_decision"] = P.decision_of(wp)
             # rewrite the action prefix to the wrong action
             body = r["repair_trace"].split(". ", 1)[1] if ". " in r["repair_trace"] else r["repair_trace"]
             r2["repair_trace"] = f"Action: {P.action_of(wp)}. {body}"
             relabeled.append(r2)
-        write([lf(r, actionized_out) for r in relabeled], d / "controls" / f"wrongtarget_{pol}_train.json")
+        write([lf(r, actionized_out) for r in scaffold + relabeled],
+              d / "controls" / f"wrongtarget_{pol}_train.json")
     (d / "controls" / "wrongtarget_map.json").write_text(json.dumps(wrong_map, indent=2))
 
     # dataset_info: register all train/eval files LF will load
@@ -141,6 +164,7 @@ def main():
         "v3_actionized_train": "actionized_full_train.json",
         "v3_actionized_eval": "actionized_full_eval.json",
         "v3_cot_train": "cot_train.json", "v3_cot_eval": "cot_eval.json",
+        "v3_format_scaffold_train": "format_scaffold_train.json",
     }
     for pol in by_policy:
         info[f"v3_targeted_{pol}_train"] = f"per_policy/{pol}_train.json"
