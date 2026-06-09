@@ -1,5 +1,6 @@
 model_name_or_path: /mnt/hdfs/xwqu/atomic-repair-sft-v2/output_v2/inject
 dataset: v3_actionized_eval
+eval_dataset: v3_actionized_eval
 dataset_dir: ./data_v3
 template: qwen
 cutoff_len: 1024
