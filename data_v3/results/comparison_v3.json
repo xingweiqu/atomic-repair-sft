@@ -1,0 +1,33 @@
+{
+  "selectivity": {
+    "override_wrong_claim": {
+      "targeted_gain": 0.0,
+      "selectivity": 0.1261
+    },
+    "verify_bridge": {
+      "targeted_gain": 0.7167,
+      "selectivity": 0.9845
+    },
+    "verify_step": {
+      "targeted_gain": 0.95,
+      "selectivity": 1.1472
+    },
+    "recompute": {
+      "targeted_gain": 0.6778,
+      "selectivity": 0.4094
+    },
+    "use_provided_support": {
+      "targeted_gain": 0.1417,
+      "selectivity": 0.1672
+    },
+    "retrieve_or_abstain": {
+      "targeted_gain": 0.0,
+      "selectivity": 0.0978
+    }
+  },
+  "exp1": {
+    "factonly": 0.4967,
+    "cot": 0.9933,
+    "actionized_full": 0.955
+  }
+}
