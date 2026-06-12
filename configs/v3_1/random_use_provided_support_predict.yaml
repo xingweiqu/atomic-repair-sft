@@ -1,0 +1,21 @@
+# base model: Qwen3-8B-Instruct (server /mnt/hdfs/xwqu/Qwen3-8B), full-parameter SFT, relay from v2 inject ckpt
+model_name_or_path: /mnt/hdfs/xwqu/scenario-repair-v3_1/output/random_use_provided_support
+dataset: v3_actionized_eval
+eval_dataset: v3_actionized_eval
+dataset_dir: ./data_v3_1
+template: qwen
+cutoff_len: 1024
+stage: sft
+do_predict: true
+finetuning_type: full
+seed: 42
+per_device_eval_batch_size: 8
+predict_with_generate: true
+max_new_tokens: 256
+do_sample: false
+temperature: 0.0
+top_p: 1.0
+bf16: true
+output_dir: /mnt/hdfs/xwqu/scenario-repair-v3_1/output/predict_random_use_provided_support
+overwrite_output_dir: true
+report_to: none

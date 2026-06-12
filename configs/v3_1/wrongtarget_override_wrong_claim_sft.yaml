@@ -1,0 +1,27 @@
+# base model: Qwen3-8B-Instruct (server /mnt/hdfs/xwqu/Qwen3-8B), full-parameter SFT, relay from v2 inject ckpt
+model_name_or_path: /mnt/hdfs/xwqu/atomic-repair-sft-v2/output_v2/inject
+dataset: v3_wrongtarget_override_wrong_claim_train
+dataset_dir: ./data_v3_1
+template: qwen
+cutoff_len: 1024
+overwrite_cache: true
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+seed: 42
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+gradient_checkpointing: true
+output_dir: /mnt/hdfs/xwqu/scenario-repair-v3_1/output/wrongtarget_override_wrong_claim
+logging_steps: 10
+save_steps: 400
+save_total_limit: 1
+overwrite_output_dir: true
+plot_loss: true
+report_to: none
