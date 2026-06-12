@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "counts": {
+    "train": 3000,
+    "eval": 480,
+    "train_by_policy": {
+      "verify_step": 500,
+      "override_wrong_claim": 500,
+      "keep_answer": 1000,
+      "recompute": 500,
+      "retrieve_or_abstain": 500
+    },
+    "eval_by_policy": {
+      "verify_step": 80,
+      "override_wrong_claim": 80,
+      "keep_answer": 160,
+      "recompute": 80,
+      "retrieve_or_abstain": 80
+    }
+  },
+  "shortcut": {
+    "GATE_claim_masked_keepvsupdate": 0.5069,
+    "gate_pass_<0.65": true,
+    "L2_full_raw": 0.6921,
+    "L2_full_masked": 0.6924
+  }
+}
