@@ -1,0 +1,70 @@
+{
+  "data_v3": {
+    "n": 2800,
+    "n_corrupt": 560,
+    "GATE_keepvsupdate_masked_corrupt": [
+      null,
+      null
+    ],
+    "gate_pass_<0.65": false,
+    "L2_disclosed": {
+      "full_unigram_raw": [
+        0.8357,
+        0.0316
+      ],
+      "full_unigram_masked": [
+        0.8321,
+        0.034
+      ],
+      "full_bigram_joint_raw": [
+        0.8381,
+        0.0314
+      ]
+    },
+    "marker_independence": {
+      "table_[marker_false,marker_true,nomarker_false,nomarker_true]": [
+        560,
+        0,
+        0,
+        0
+      ],
+      "chi2": NaN,
+      "p_value": NaN,
+      "independent (p>0.05 desired)": null
+    }
+  },
+  "data_v3_1": {
+    "n": 3360,
+    "n_corrupt": 1120,
+    "GATE_keepvsupdate_masked_corrupt": [
+      0.458,
+      0.0161
+    ],
+    "gate_pass_<0.65": true,
+    "L2_disclosed": {
+      "full_unigram_raw": [
+        0.7476,
+        0.0101
+      ],
+      "full_unigram_masked": [
+        0.7613,
+        0.0083
+      ],
+      "full_bigram_joint_raw": [
+        0.7587,
+        0.0117
+      ]
+    },
+    "marker_independence": {
+      "table_[marker_false,marker_true,nomarker_false,nomarker_true]": [
+        495,
+        479,
+        65,
+        81
+      ],
+      "chi2": 1.772,
+      "p_value": 0.1831,
+      "independent (p>0.05 desired)": true
+    }
+  }
+}

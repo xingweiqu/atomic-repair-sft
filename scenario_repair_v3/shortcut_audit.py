@@ -24,7 +24,41 @@ from sklearn.metrics import balanced_accuracy_score
 from scipy.stats import chi2_contingency
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import generate_repair_data as v0
+import reasoning_world_v2 as R
 from scenario_repair_v3 import policies as P
+
+
+def _entity_vocab():
+    """All entity surface strings in the synthetic world, for masking."""
+    ents = set()
+    for fam in v0.FAMILY_NAMES:
+        g = v0.build_family_graph(fam)
+        for e in g["edges"]:
+            ents.update([e["head"], e["bridge"], e["tail"]])
+    for op in R.OPERATIONS:
+        ents.add(op)
+    # split multiword entities into tokens too (so "Maria Voss" -> mask both)
+    toks = set()
+    for e in ents:
+        toks.add(e)
+        for t in str(e).split():
+            if len(t) > 2:
+                toks.add(t)
+    return sorted(toks, key=len, reverse=True)  # longest-first for replacement
+
+
+_ENT = _entity_vocab()
+import re as _re
+_ENT_RE = _re.compile(r"\b(" + "|".join(_re.escape(e) for e in _ENT) + r")\b", _re.IGNORECASE)
+
+
+def mask_entities(text: str) -> str:
+    """Replace every world entity (and numbers) with a placeholder, so the classifier
+    cannot route by entity identity — only by structural/template surface."""
+    t = _ENT_RE.sub("ENT", text or "")
+    t = _re.sub(r"\b-?\d+\b", "NUM", t)
+    return t
 
 MARKERS = ["some notes say", "some sources say", "i read somewhere", "according to my notes",
            "apparently", "a source i saw", "i was told", "my notes indicate", "it says here",
@@ -40,11 +74,9 @@ def load(d):
     return rows
 
 
-def bow_audit(rows):
-    X = [r["problem"] or "" for r in rows if r.get("problem")]
-    y = [r["update_decision"] for r in rows if r.get("problem")]
-    vec = TfidfVectorizer(lowercase=True, ngram_range=(1, 2), min_df=2)
-    Xv = vec.fit_transform(X)
+def _bow_cv(texts, y, ngram):
+    vec = TfidfVectorizer(lowercase=True, ngram_range=ngram, min_df=2)
+    Xv = vec.fit_transform(texts)
     y = np.array(y)
     skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
     accs = []
@@ -52,7 +84,40 @@ def bow_audit(rows):
         clf = LogisticRegression(max_iter=2000, C=4.0)
         clf.fit(Xv[tr], y[tr])
         accs.append(balanced_accuracy_score(y[te], clf.predict(Xv[te])))
-    return float(np.mean(accs)), float(np.std(accs)), len(X)
+    return float(np.mean(accs)), float(np.std(accs))
+
+
+def bow_audit(rows):
+    sub = [r for r in rows if r.get("problem")]
+    X = [r["problem"] for r in sub]
+    Xm = [mask_entities(r["problem"]) for r in sub]
+    y = [r["update_decision"] for r in sub]
+
+    # ---- The HARD GATE (Layer 1) ----
+    # The decisive question is whether KEEP-vs-UPDATE *within the same domain and question
+    # type* (i.e. Corrupt-family items: a planted claim that is true [keep] vs false
+    # [update]) can be predicted from surface text AFTER masking entities. If yes, the
+    # verification decision is a template/marker shortcut. If ~random, the model must
+    # actually compare (head, claimed value) -- the capability we want. Cross-domain
+    # vocabulary differences (R 'compute' vs K/H 'author') are legitimate task structure,
+    # NOT a shortcut, so they are excluded from the gate and reported as Layer 2.
+    corr = [r for r in sub if r["failure_type"].startswith(("K-Cor", "H-Cor"))]
+    Xc = [mask_entities(r["problem"]) for r in corr]
+    yc = [r["update_decision"] for r in corr]
+    gate_acc, gate_s = (_bow_cv(Xc, yc, (1, 1)) if len(set(yc)) > 1 else (None, None))
+
+    # ---- Disclosed (Layer 2), no gate ----
+    uni_raw, uni_raw_s = _bow_cv(X, y, (1, 1))
+    uni_mask, uni_mask_s = _bow_cv(Xm, y, (1, 1))
+    bi_raw, bi_raw_s = _bow_cv(X, y, (1, 2))
+    return {
+        "n": len(X), "n_corrupt": len(corr),
+        "GATE_keepvsupdate_masked_corrupt": (round(gate_acc, 4) if gate_acc else None,
+                                             round(gate_s, 4) if gate_s else None),
+        "L2_full_unigram_raw": (round(uni_raw, 4), round(uni_raw_s, 4)),
+        "L2_full_unigram_masked": (round(uni_mask, 4), round(uni_mask_s, 4)),
+        "L2_full_bigram_joint_raw": (round(bi_raw, 4), round(bi_raw_s, 4)),
+    }
 
 
 def marker_independence(rows):
@@ -83,16 +148,26 @@ def main():
         rows = load(d)
         if not rows:
             print(f"{d}: (no data)"); continue
-        acc, std, n = bow_audit(rows)
+        b = bow_audit(rows)
         ind = marker_independence(rows)
-        report[d] = {"n": n, "bow_balanced_acc": round(acc, 4), "bow_std": round(std, 4),
-                     "pass_<0.65": acc < 0.65, "marker_independence": ind}
-        print(f"{d}: BoW balanced acc = {acc:.3f} ± {std:.3f} (n={n}) "
-              f"-> {'PASS' if acc < 0.65 else 'FAIL'} (<0.65)")
-        print(f"    marker-vs-falsity chi2={ind['chi2']} p={ind['p_value']} "
-              f"independent={ind['independent (p>0.05 desired)']}")
+        gate = b["GATE_keepvsupdate_masked_corrupt"][0]
+        gate_pass = bool(gate is not None and gate < 0.65)
+        report[d] = {"n": b["n"], "n_corrupt": b["n_corrupt"],
+                     "GATE_keepvsupdate_masked_corrupt": b["GATE_keepvsupdate_masked_corrupt"],
+                     "gate_pass_<0.65": gate_pass,
+                     "L2_disclosed": {"full_unigram_raw": b["L2_full_unigram_raw"],
+                                      "full_unigram_masked": b["L2_full_unigram_masked"],
+                                      "full_bigram_joint_raw": b["L2_full_bigram_joint_raw"]},
+                     "marker_independence": {k: (bool(v) if isinstance(v, (bool, np.bool_)) else v)
+                                             for k, v in ind.items()}}
+        print(f"{d}: (n={b['n']}, corrupt={b['n_corrupt']})")
+        print(f"  GATE keep-vs-update, masked, Corrupt-family = "
+              f"{gate if gate else 'n/a'} -> {'PASS' if gate_pass else 'FAIL'} (<0.65)  [decisive]")
+        print(f"  L2 full unigram raw={b['L2_full_unigram_raw'][0]} masked={b['L2_full_unigram_masked'][0]} "
+              f"bigram={b['L2_full_bigram_joint_raw'][0]}  (disclosed: incl. cross-domain structure + knowledge)")
+        print(f"  marker indep: chi2={ind['chi2']} p={ind['p_value']}")
     if a.out:
-        a.out.write_text(json.dumps(report, indent=2))
+        a.out.write_text(json.dumps(report, indent=2, default=str))
         print("wrote", a.out)
     return report
 

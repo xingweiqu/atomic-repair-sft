@@ -54,6 +54,34 @@ TARGETS = {
 }
 
 
+class EntityBalancer:
+    """A' entity-balance: track how often each claimed VALUE appears in a true-claim vs a
+    false-claim item, and bias wrong-claim picks toward values that are currently
+    under-represented as false. After generation, every value's true:false ratio is ~50/50,
+    so a unigram entity feature cannot predict update_decision — only the (head, value)
+    pairing can, and that pairing IS the verification task. Per-split state."""
+
+    def __init__(self):
+        self.true_ct = {}   # value -> times appeared as a TRUE claim
+        self.false_ct = {}  # value -> times appeared as a FALSE claim
+
+    def note_true(self, value):
+        self.true_ct[value] = self.true_ct.get(value, 0) + 1
+
+    def pick_false(self, rng, pool, banned, head=None):
+        """Pick a wrong value, preferring those least-balanced (false_ct < true_ct).
+        `banned` is the gold (must not be picked)."""
+        cands = [v for v in pool if v != banned]
+        if not cands:
+            cands = list(pool)
+        # score: want to raise false_ct toward true_ct -> prefer small (false_ct - true_ct)
+        rng.shuffle(cands)
+        cands.sort(key=lambda v: (self.false_ct.get(v, 0) - self.true_ct.get(v, 0)))
+        choice = cands[0]
+        self.false_ct[choice] = self.false_ct.get(choice, 0) + 1
+        return choice
+
+
 def _pick(rng, pool, banned):
     x = rng.choice(pool); t = 0
     while x == banned and t < 30:
@@ -85,7 +113,7 @@ def _trace(policy, body):
     return f"Action: {P.action_of(policy)}. {body}"
 
 
-def build_record(*, cell, split, rng, idx, kh_graphs, r_pool, rw):
+def build_record(*, cell, split, rng, idx, kh_graphs, r_pool, rw, bal):
     policy = P.CELL_TO_POLICY[cell]
     decision = P.decision_of(policy)
     common = dict(id=f"{cell}_{split}_{idx:06d}", failure_type=cell, policy=policy,
@@ -163,6 +191,7 @@ def build_record(*, cell, split, rng, idx, kh_graphs, r_pool, rw):
         if cell == "K-Cor-True":
             # planted claim is TRUE (== gold); correct action is verify + keep.
             claimed = gold
+            bal.note_true(claimed)  # A' entity balance: count this value as a true claim
             clause = f"the answer is {claimed}"
             core = f"{CL.claim_sentence(rng, split, clause)} {base_q}"
             problem = _scenario(rw, fam, split, core, banned=[], rng=rng)  # gold may appear (it's the claim)
@@ -172,7 +201,7 @@ def build_record(*, cell, split, rng, idx, kh_graphs, r_pool, rw):
                         planted_wrong_answer=None, repair_trace=_trace(policy, body),
                         final_answer=gold, oracle_facts=[ctx["fact1"]],
                         gold_symbolic_facts=[[ctx["head"], ctx["r1"], ctx["tail"]]])
-        wrong = _pick(rng, g["tails"], gold)
+        wrong = bal.pick_false(rng, g["tails"], gold)  # A' balanced wrong-value pick
         clause = f"the answer is {wrong}"
         core = f"{CL.claim_sentence(rng, split, clause)} {base_q}"
         problem = _scenario(rw, fam, split, core, banned, rng)
@@ -198,6 +227,7 @@ def build_record(*, cell, split, rng, idx, kh_graphs, r_pool, rw):
     if cell in ("H-Cor", "H-Cor-True"):  # planted bridge -> verify_bridge (false) / keep (true)
         if cell == "H-Cor-True":
             # planted bridge is the TRUE bridge; verify and keep.
+            bal.note_true(ctx["bridge"])  # A' balance on the BRIDGE entity (what's claimed here)
             clause = v0.first_fact_sentence(fam, ctx["head"], ctx["bridge"]).rstrip(".")
             core = f"{CL.claim_sentence(rng, split, clause)} {base_q}"
             problem = _scenario(rw, fam, split, core, banned=[gold], rng=rng)
@@ -209,7 +239,7 @@ def build_record(*, cell, split, rng, idx, kh_graphs, r_pool, rw):
                         final_answer=gold, oracle_facts=[ctx["fact1"], ctx["fact2"]],
                         gold_symbolic_facts=[[ctx["head"], ctx["r1"], ctx["bridge"]],
                                              [ctx["bridge"], ctx["r2"], ctx["tail"]]])
-        wrong_bridge = _pick(rng, g["bridges"], ctx["bridge"])
+        wrong_bridge = bal.pick_false(rng, g["bridges"], ctx["bridge"])  # A' balanced bridge pick
         wb_edge = next((e for e in g["edges"] if e["bridge"] == wrong_bridge), None)
         wrong_tail = wb_edge["tail"] if wb_edge else _pick(rng, g["tails"], gold)
         if wrong_tail == gold:
@@ -260,6 +290,7 @@ def build_all(rng, rw):
     out = {"train": [], "eval": []}
     for split in ("train", "eval"):
         r_pool = r_tr if split == "train" else r_ev
+        bal = EntityBalancer()  # A': per-split entity-balance state (independent train/eval)
         idxc = {c: 0 for c in INJECTORS}
         seen = set()
         order = []
@@ -268,11 +299,14 @@ def build_all(rng, rw):
             for c in INJECTORS:
                 if planned[c] < TARGETS[split][c]:
                     order.append(c); planned[c] += 1
+        # Process Cor-True BEFORE Cor-False so the balancer sees true-claim counts first
+        # and can steer false-claim picks to under-represented values.
+        order.sort(key=lambda c: (0 if c.endswith("-True") else 1))
         for cell in order:
             rec = None
             for att in range(60):
                 cand = build_record(cell=cell, split=split, rng=rng, idx=idxc[cell] + att,
-                                    kh_graphs=kh, r_pool=r_pool, rw=rw)
+                                    kh_graphs=kh, r_pool=r_pool, rw=rw, bal=bal)
                 key = (cand["problem"], str(cand["tentative_answer"]))
                 if key not in seen:
                     seen.add(key); rec = cand; break

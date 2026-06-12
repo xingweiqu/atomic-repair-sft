@@ -6,34 +6,34 @@
     "train": 2640,
     "eval": 720,
     "train_by_policy": {
+      "keep_answer": 660,
       "use_provided_support": 440,
       "recompute": 660,
       "override_wrong_claim": 220,
-      "keep_answer": 660,
       "verify_step": 220,
       "verify_bridge": 220,
       "retrieve_or_abstain": 220
     },
     "eval_by_policy": {
+      "keep_answer": 180,
       "use_provided_support": 120,
       "recompute": 180,
       "override_wrong_claim": 60,
-      "keep_answer": 180,
       "verify_step": 60,
       "verify_bridge": 60,
       "retrieve_or_abstain": 60
     },
     "eval_by_failure": {
+      "K-Cor-True": 60,
+      "H-Cor-True": 60,
       "K-Aug": 60,
       "K-Abl": 60,
       "K-Cor": 60,
-      "K-Cor-True": 60,
       "R-Aug": 60,
       "R-Abl": 60,
       "R-Cor": 60,
       "H-Aug": 60,
       "H-Cor": 60,
-      "H-Cor-True": 60,
       "U-Abl": 60,
       "Clean": 60
     }
