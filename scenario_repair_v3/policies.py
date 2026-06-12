@@ -91,6 +91,11 @@ CELL_TO_POLICY = {
     "Clean": "keep_answer",            # nothing wrong -> keep
     # NEW v3 injector (no v2 cell): underspecified / missing anchor -> abstain
     "U-Abl": "retrieve_or_abstain",
+    # v3.1 decoupling: Cor-True variants plant a claim that is actually TRUE; the marker
+    # ("Some notes say ...") therefore no longer predicts falsity. Correct action is to
+    # verify and KEEP. This forces the model to check the claim, not route by template.
+    "K-Cor-True": "keep_answer",       # planted claim is TRUE -> verify, keep
+    "H-Cor-True": "keep_answer",       # planted bridge is TRUE -> verify, keep
 }
 
 # K-Abl re-mapped: paraphrase robustness is "recall the same fact"; we fold it into the

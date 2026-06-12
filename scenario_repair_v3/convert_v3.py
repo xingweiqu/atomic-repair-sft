@@ -165,6 +165,9 @@ def main():
         "v3_actionized_eval": "actionized_full_eval.json",
         "v3_cot_train": "cot_train.json", "v3_cot_eval": "cot_eval.json",
         "v3_format_scaffold_train": "format_scaffold_train.json",
+        # scaffold-only control: train on the 210-row balanced scaffold ALONE. This is
+        # the true floor baseline for the selective matrix (every targeted set contains it).
+        "v3_scaffold_only_train": "format_scaffold_train.json",
     }
     for pol in by_policy:
         info[f"v3_targeted_{pol}_train"] = f"per_policy/{pol}_train.json"

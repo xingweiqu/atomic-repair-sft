@@ -28,6 +28,7 @@ import reasoning_world_v2 as R
 
 from . import policies as P
 from . import scenario_templates as S
+from . import claim_phrasings as CL
 from .scenario_api import ScenarioRewriter
 
 FACT_Q = {
@@ -39,8 +40,12 @@ FACT_Q = {
     "known_for": "What is {h} known for?", "field": "Which scientific field does {h} belong to?",
 }
 
-# Injectors (9 v2 cells + U-Abl). Each maps to a policy via P.CELL_TO_POLICY.
-INJECTORS = ["K-Aug", "K-Abl", "K-Cor", "R-Aug", "R-Abl", "R-Cor", "H-Aug", "H-Cor", "U-Abl", "Clean"]
+# Injectors. 9 v2 cells + U-Abl (abstain) + v3.1 Cor-True variants (claim is TRUE -> keep).
+# Cor-True get the SAME count as their Cor-False counterpart, so within the marked-claim
+# population true:false is exactly 50/50 (220 K-Cor-True : 220 K-Cor), decoupling the
+# surface marker from the truth value.
+INJECTORS = ["K-Aug", "K-Abl", "K-Cor", "K-Cor-True", "R-Aug", "R-Abl", "R-Cor",
+             "H-Aug", "H-Cor", "H-Cor-True", "U-Abl", "Clean"]
 
 # per-(split) target counts per injector (balanced across the 7 policies downstream)
 TARGETS = {
@@ -154,9 +159,22 @@ def build_record(*, cell, split, rng, idx, kh_graphs, r_pool, rw):
                     final_answer=gold, oracle_facts=[ctx["fact1"]],
                     gold_symbolic_facts=[[ctx["head"], ctx["r1"], ctx["tail"]]])
 
-    if cell == "K-Cor":
+    if cell in ("K-Cor", "K-Cor-True"):
+        if cell == "K-Cor-True":
+            # planted claim is TRUE (== gold); correct action is verify + keep.
+            claimed = gold
+            clause = f"the answer is {claimed}"
+            core = f"{CL.claim_sentence(rng, split, clause)} {base_q}"
+            problem = _scenario(rw, fam, split, core, banned=[], rng=rng)  # gold may appear (it's the claim)
+            body = f"The claim '{claimed}' is verified against the known fact: {ctx['fact1']} It is correct, so keep it."
+            return dict(**common, scenario_family=fam, form_id=f"{cell}_{split}",
+                        problem=problem, tentative_answer=gold, gold_answer=gold,
+                        planted_wrong_answer=None, repair_trace=_trace(policy, body),
+                        final_answer=gold, oracle_facts=[ctx["fact1"]],
+                        gold_symbolic_facts=[[ctx["head"], ctx["r1"], ctx["tail"]]])
         wrong = _pick(rng, g["tails"], gold)
-        core = f"Some notes say the answer is {wrong}. {base_q}"
+        clause = f"the answer is {wrong}"
+        core = f"{CL.claim_sentence(rng, split, clause)} {base_q}"
         problem = _scenario(rw, fam, split, core, banned, rng)
         body = f"The claim '{wrong}' contradicts the known fact: {ctx['fact1']} The answer is {gold}, not {wrong}."
         return dict(**common, scenario_family=fam, form_id=f"{cell}_{split}",
@@ -177,14 +195,28 @@ def build_record(*, cell, split, rng, idx, kh_graphs, r_pool, rw):
                     gold_symbolic_facts=[[ctx["head"], ctx["r1"], ctx["bridge"]],
                                          [ctx["bridge"], ctx["r2"], ctx["tail"]]])
 
-    if cell == "H-Cor":  # wrong bridge planted -> verify_bridge
+    if cell in ("H-Cor", "H-Cor-True"):  # planted bridge -> verify_bridge (false) / keep (true)
+        if cell == "H-Cor-True":
+            # planted bridge is the TRUE bridge; verify and keep.
+            clause = v0.first_fact_sentence(fam, ctx["head"], ctx["bridge"]).rstrip(".")
+            core = f"{CL.claim_sentence(rng, split, clause)} {base_q}"
+            problem = _scenario(rw, fam, split, core, banned=[gold], rng=rng)
+            body = (f"The stated bridge is verified: {ctx['fact1']} Then {ctx['fact2']} "
+                    f"It is correct, so the answer is {gold}; keep it.")
+            return dict(**common, scenario_family=fam, form_id=f"{cell}_{split}",
+                        problem=problem, tentative_answer=gold, gold_answer=gold,
+                        planted_wrong_answer=None, repair_trace=_trace(policy, body),
+                        final_answer=gold, oracle_facts=[ctx["fact1"], ctx["fact2"]],
+                        gold_symbolic_facts=[[ctx["head"], ctx["r1"], ctx["bridge"]],
+                                             [ctx["bridge"], ctx["r2"], ctx["tail"]]])
         wrong_bridge = _pick(rng, g["bridges"], ctx["bridge"])
         wb_edge = next((e for e in g["edges"] if e["bridge"] == wrong_bridge), None)
         wrong_tail = wb_edge["tail"] if wb_edge else _pick(rng, g["tails"], gold)
         if wrong_tail == gold:
             wrong_tail = _pick(rng, g["tails"], gold)
-        clause = v0.first_fact_sentence(fam, ctx["head"], wrong_bridge).rstrip(".").lower()
-        core = f"Some sources say {clause}. {base_q}"
+        # v3.1: keep normal case (NO .lower()), varied intro -> marker != falsity.
+        clause = v0.first_fact_sentence(fam, ctx["head"], wrong_bridge).rstrip(".")
+        core = f"{CL.claim_sentence(rng, split, clause)} {base_q}"
         problem = _scenario(rw, fam, split, core, [gold], rng)
         body = f"The planted bridge is false: actually {ctx['fact1']} Then {ctx['fact2']} So the answer is {gold}, not {wrong_tail}."
         return dict(**common, scenario_family=fam, form_id=f"{cell}_{split}",

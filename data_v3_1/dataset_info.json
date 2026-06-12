@@ -1,0 +1,258 @@
+{
+  "v3_inject": {
+    "file_name": "inject_lf.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_actionized_train": {
+    "file_name": "actionized_full_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_actionized_eval": {
+    "file_name": "actionized_full_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_cot_train": {
+    "file_name": "cot_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_cot_eval": {
+    "file_name": "cot_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_format_scaffold_train": {
+    "file_name": "format_scaffold_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_scaffold_only_train": {
+    "file_name": "format_scaffold_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_targeted_override_wrong_claim_train": {
+    "file_name": "per_policy/override_wrong_claim_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_random_override_wrong_claim_train": {
+    "file_name": "controls/random_override_wrong_claim_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_wrongtarget_override_wrong_claim_train": {
+    "file_name": "controls/wrongtarget_override_wrong_claim_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_targeted_verify_bridge_train": {
+    "file_name": "per_policy/verify_bridge_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_random_verify_bridge_train": {
+    "file_name": "controls/random_verify_bridge_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_wrongtarget_verify_bridge_train": {
+    "file_name": "controls/wrongtarget_verify_bridge_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_targeted_verify_step_train": {
+    "file_name": "per_policy/verify_step_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_random_verify_step_train": {
+    "file_name": "controls/random_verify_step_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_wrongtarget_verify_step_train": {
+    "file_name": "controls/wrongtarget_verify_step_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_targeted_recompute_train": {
+    "file_name": "per_policy/recompute_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_random_recompute_train": {
+    "file_name": "controls/random_recompute_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_wrongtarget_recompute_train": {
+    "file_name": "controls/wrongtarget_recompute_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_targeted_use_provided_support_train": {
+    "file_name": "per_policy/use_provided_support_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_random_use_provided_support_train": {
+    "file_name": "controls/random_use_provided_support_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_wrongtarget_use_provided_support_train": {
+    "file_name": "controls/wrongtarget_use_provided_support_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_targeted_retrieve_or_abstain_train": {
+    "file_name": "per_policy/retrieve_or_abstain_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_random_retrieve_or_abstain_train": {
+    "file_name": "controls/random_retrieve_or_abstain_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_wrongtarget_retrieve_or_abstain_train": {
+    "file_name": "controls/wrongtarget_retrieve_or_abstain_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_targeted_keep_answer_train": {
+    "file_name": "per_policy/keep_answer_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_cumulative_M1_train": {
+    "file_name": "cumulative/M1_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_cumulative_M2_train": {
+    "file_name": "cumulative/M2_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_cumulative_M3_train": {
+    "file_name": "cumulative/M3_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_cumulative_M4_train": {
+    "file_name": "cumulative/M4_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_cumulative_M5_train": {
+    "file_name": "cumulative/M5_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "v3_cumulative_M6_train": {
+    "file_name": "cumulative/M6_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}

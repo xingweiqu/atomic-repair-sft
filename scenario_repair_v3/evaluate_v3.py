@@ -55,17 +55,38 @@ def final(o, raw):
     return m.group(1).splitlines()[0] if m else (raw or "").strip().splitlines()[-1] if raw else ""
 
 
-ABSTAIN_MARKERS = ("clarif", "cannot", "can't", "not enough", "which ", "abstain",
-                   "more information", "unclear", "don't know", "unable")
+# v3.1: tightened — removed broad "which " and "cannot" that fired on non-abstain text.
+ABSTAIN_MARKERS = ("clarif", "not enough", "abstain", "more information",
+                   "unclear", "don't know", "unable to")
 
 
-def is_abstain(o, raw):
-    fa = o.get("final_answer") if o else None
+def is_abstain_strict(o, raw):
+    """Strict: the model genuinely declined to answer.
+
+    IMPORTANT: a non-JSON bare output (e.g. Fact-only emitting "Forenza") is NOT an
+    abstention — the model produced a concrete answer; the parser merely failed to find a
+    `final_answer` field. We only count abstain when the model EXPLICITLY abstained:
+      - parsed JSON with final_answer null/empty, or
+      - parsed JSON with update_decision == retrieve_or_abstain.
+    A bare/unparsed concrete token counts as NOT abstaining (it answered)."""
+    if o is None:
+        return False  # bare/unparsed output => the model answered, not abstained
+    fa = o.get("final_answer", "__missing__")
     if fa is None or norm(fa) in ("", "null", "none"):
         return True
-    if o and norm(o.get("update_decision")) == "retrieve_or_abstain":
+    return norm(o.get("update_decision")) == "retrieve_or_abstain"
+
+
+def is_abstain_lenient(o, raw):
+    """Lenient: strict OR a (tightened) abstain marker phrase in the raw output."""
+    if is_abstain_strict(o, raw):
         return True
     return any(m in (raw or "").lower() for m in ABSTAIN_MARKERS)
+
+
+# default used by the scoring loop / overall number (strict is the honest one)
+def is_abstain(o, raw):
+    return is_abstain_strict(o, raw)
 
 
 def main():
@@ -83,7 +104,7 @@ def main():
     policy_choice = defaultdict(list)     # policy -> chose correct update_policy?
     false_keep, tent_copy = [], []
     accept = defaultdict(list)            # failure_type Cor -> accepted planted wrong
-    abstain_correct, overrepair_clean = [], []
+    abstain_correct, abstain_correct_lenient, overrepair_clean = [], [], []
 
     for i in range(n):
         r = S[i]
@@ -91,8 +112,9 @@ def main():
         pol = r["policy"]
         raw = P_[i]
         if pol == "retrieve_or_abstain":
-            ok = int(is_abstain(o, raw))
+            ok = int(is_abstain_strict(o, raw))            # headline = strict
             abstain_correct.append(ok)
+            abstain_correct_lenient.append(int(is_abstain_lenient(o, raw)))
             per_policy[pol].append(ok)
             per_scenario[r["scenario_family"]].append(ok)
             continue
@@ -127,7 +149,8 @@ def main():
         "false_keep_rate": acc(false_keep),
         "tentative_copy_rate": acc(tent_copy),
         "clean_over_repair_rate": acc(overrepair_clean),
-        "abstain_correct_rate": acc(abstain_correct),
+        "abstain_correct_rate": acc(abstain_correct),            # strict (headline)
+        "abstain_correct_rate_lenient": acc(abstain_correct_lenient),
         "accept_rate": {k: acc(v) for k, v in sorted(accept.items())},
         # per-policy hit vectors for Targeted Repair Gain / Selectivity in compare_v3
         "per_policy_vectors": {p: v for p, v in per_policy.items()},
