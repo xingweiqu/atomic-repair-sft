@@ -107,10 +107,18 @@ def main():
             rel.append(r2)
         write([lf(r, actionized_out) for r in scaffold + rel], d / "controls" / f"wrongtarget_{pol}_train.json")
 
-    # transfer eval: un-perturbed GSM test items (plain question -> just answer)
+    # transfer eval: un-perturbed GSM test items. We allow step-by-step reasoning (GSM needs
+    # CoT; suppressing it would tank BOTH base and repaired models and make the "did repair
+    # hurt the base task" comparison meaningless) and require a fixed final-answer line so the
+    # numeric answer is recoverable from free-form generations. The reference output is the
+    # gold reasoning trajectory + that final line: a normal, non-trivial SFT reference (a bare
+    # numeric reference was being dropped by LLaMA-Factory's supervised processor as invalid).
     clean = W.load_gsm("test", limit=300)
-    transfer = [{"instruction": "Solve the math word problem. Give only the final numeric answer.",
-                 "input": r["question"], "output": r["final"]} for r in clean]
+    transfer = [{"instruction": ("Solve the math word problem. Reason step by step, then end "
+                                 "with a line exactly in the form 'The final answer is N.'"),
+                 "input": r["question"],
+                 "output": f"{r['reasoning'].strip()}\nThe final answer is {r['final']}."}
+                for r in clean]
     write(transfer, d / "transfer_eval.json")
 
     # dataset_info
