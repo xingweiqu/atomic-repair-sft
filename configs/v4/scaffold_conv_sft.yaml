@@ -1,0 +1,30 @@
+# CONVERGENT floor. Same scaffold-only data as scaffold_only, but trained to convergence
+# (scaffold_only at 3 epochs was ~37 steps -> train_loss 2.53, badly underfit; its eval scores
+# were a format-collapse artifact, not a real baseline). More epochs only; data unchanged so the
+# targeted/control sets (which embed the same scaffold) stay comparable. Relay from BASE.
+model_name_or_path: /mnt/hdfs/xwqu/Qwen3-8B
+dataset: v4_scaffold_only_train
+dataset_dir: ./data_v4
+template: qwen
+cutoff_len: 1024
+overwrite_cache: true
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+seed: 42
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 30
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+gradient_checkpointing: true
+output_dir: /mnt/hdfs/xwqu/gsm-repair-v4/output/scaffold_conv
+logging_steps: 10
+save_steps: 1000
+save_total_limit: 1
+overwrite_output_dir: true
+plot_loss: true
+report_to: none

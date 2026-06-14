@@ -1,0 +1,23 @@
+# Transfer check for the MIXED model (actionized_full) on un-perturbed GSM8K test. Needed to test
+# whether mixed training drifts less than single-operator (verify_step drifted on 30% of plain
+# items). 2048 tokens so the Qwen3 <think> block is not truncated before the answer line.
+model_name_or_path: /mnt/hdfs/xwqu/gsm-repair-v4/output/actionized_full
+dataset: v4_transfer_eval
+eval_dataset: v4_transfer_eval
+dataset_dir: ./data_v4
+template: qwen
+cutoff_len: 1024
+stage: sft
+do_predict: true
+finetuning_type: full
+seed: 42
+per_device_eval_batch_size: 8
+predict_with_generate: true
+max_new_tokens: 2048
+do_sample: false
+temperature: 0.0
+top_p: 1.0
+bf16: true
+output_dir: /mnt/hdfs/xwqu/gsm-repair-v4/output/predict_transfer_actionized_full
+overwrite_output_dir: true
+report_to: none
