@@ -11,7 +11,7 @@ finetuning_type: full
 seed: 42
 per_device_eval_batch_size: 8
 predict_with_generate: true
-max_new_tokens: 384
+max_new_tokens: 2048
 do_sample: false
 temperature: 0.0
 top_p: 1.0
