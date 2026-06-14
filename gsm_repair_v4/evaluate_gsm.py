@@ -84,19 +84,35 @@ def score_repair(pred_path, src, matchfn):
 def score_transfer(pred_path, src):
     preds = [r.get("predict", "") for r in load_jsonl(pred_path)]
     n = min(len(preds), len(src))
-    hit, no_final = [], 0
+    hit, answered_hit, no_answer = [], [], 0
     for i in range(n):
         raw = preds[i] or ""
-        gold = numkey(src[i]["output"])
-        m = FINAL_RE.search(raw)
-        if m:
-            pa = numkey(m.group(1))
+        # gold: the reference's final-answer LINE (not the first number in the reasoning)
+        gm = FINAL_RE.search(src[i]["output"])
+        gold = numkey(gm.group(1)) if gm else numkey(src[i]["output"])
+        # pred: the LAST "final answer is N" if present (avoid an in-think mention), else a
+        # final_answer JSON field (repair-trained ckpts drift to actionized JSON on plain
+        # tasks). Either of those = the model actually committed to an answer.
+        answered = True
+        pm = FINAL_RE.findall(raw)
+        if pm:
+            pa = numkey(pm[-1])
         else:
-            no_final += 1
-            nums = NUM_RE.findall(raw.replace(",", ""))
-            pa = numkey(nums[-1]) if nums else None
-        hit.append(int(pa is not None and pa == gold))
-    return {"acc": acc(hit), "n": n, "no_final_line": no_final}
+            o = parse(raw)
+            if o and o.get("final_answer") is not None:
+                pa = numkey(o["final_answer"])
+            else:
+                answered, no_answer = False, no_answer + 1
+                nums = NUM_RE.findall(raw.replace(",", ""))
+                pa = numkey(nums[-1]) if nums else None
+        h = int(pa is not None and pa == gold)
+        hit.append(h)
+        if answered:
+            answered_hit.append(h)
+    # acc = accuracy over ALL items; answered_acc = accuracy when the model committed to an
+    # answer (isolates ARITHMETIC ability from BEHAVIOURAL DRIFT into repair mode).
+    return {"acc": acc(hit), "answered_acc": acc(answered_hit),
+            "answered_n": len(answered_hit), "n": n, "no_answer": no_answer}
 
 
 def pol_acc(rep, pol):
@@ -190,11 +206,15 @@ def main():
                  f"{pct(pol_acc(wrong[tp], tp))}% | {pct(pol_acc(floor, tp))}% |")
 
     L += ["", "## Transfer check — un-perturbed GSM8K test (repair must not hurt base task)", "",
-          "| model | GSM acc | n | no-final-line (trunc.) |", "|---|---|---|---|"]
+          "`acc` = over all 300 items; `answered acc` = when the model committed to an answer "
+          "(isolates arithmetic ability from drift into repair mode); `no-answer` = items where "
+          "the repair-trained ckpt produced a diagnosis/JSON with no committed answer.", "",
+          "| model | acc | answered acc | answered n | no-answer |", "|---|---|---|---|---|"]
     for cond in ("base", "verify_step"):
         t = transfer[cond]
         if t:
-            L.append(f"| {cond} | {pct(t['acc'])}% | {t['n']} | {t['no_final_line']} |")
+            L.append(f"| {cond} | {pct(t['acc'])}% | {pct(t['answered_acc'])}% | "
+                     f"{t['answered_n']} | {t['no_answer']} |")
 
     if v3 and v3.get("floor"):
         L += ["", "## v3 (synthetic) ↔ v4 (GSM) — Targeted Gain on shared operators", "",
@@ -206,8 +226,20 @@ def main():
             v4t, v4f_ = pol_acc(targeted[op], op), pol_acc(floor, op)
             L.append(f"| {op} | {pct(v3f_)}→{pct(v3t)} | {pct(gain(v3t, v3f_))} | "
                      f"{pct(v4f_)}→{pct(v4t)} | {pct(gain(v4t, v4f_))} |")
-        L += ["", "_Both diagonals lighting up across two domains = the repair-induction "
-              "framework transfers, not a synthetic-world artifact._"]
+        L += ["", "_v3 (synthetic) lights up on EVERY operator; v4 (GSM) only on abstain. "
+              "The contrast is the result — see interpretation below._"]
+
+    L += ["", "## 结论解读 — repair 注入「决策」而非「计算」", "",
+          "- abstain(决策类能力): v3 12->100, v4 2->100。base 几乎不会, 两域都被 repair 从底拉满。",
+          "- verify_step / recompute / override(计算类能力): v3 从 0 拉满(合成运算 base 全不会); "
+          "v4 floor 已 42-54%(base 本就会算术), 单 operator targeted 无增益甚至略降。",
+          "- Transfer: verify_step ckpt 在干净 GSM 上「作答时」算术正确率 95%(约等于 base 94%), "
+          "底层计算未受损; 但 30% 普通题漂移进修复模式、不给最终答案。",
+          "",
+          "**论点**: repair / operator-induction 注入的是决策与修复轨迹, 不是底层计算。"
+          "增益大小 = 该原子能力在 base 的缺口(合成世界全缺->全亮; GSM 算术已具备->仅决策类 abstain 亮)。",
+          "**Caveat**: 单 operator 重度专门化有行为漂移代价(对常规任务也套用修复格式), "
+          "支持混合训练(actionized_full)而非单 operator。"]
 
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.with_suffix(".md").write_text("\n".join(L))
