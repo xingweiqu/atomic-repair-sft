@@ -1,261 +1,227 @@
-# Scenario-Repair v4 (GSM8K 真实域移植) — 详细评审报告
+# Scenario-Repair v4 (GSM8K 真实域移植) — 详细评审报告 (round-1 修订版)
 
-> 分支 `scenario-repair-v4` · 报告日期 2026-06-14 · 评分脚本 `gsm_repair_v4/evaluate_gsm.py`
-> 配套机器可读结果 `data_v4/results/comparison_v4.{md,json}`
+> 分支 `scenario-repair-v4` · 修订日期 2026-06-15 · 评分 `gsm_repair_v4/evaluate_gsm.py` + `decision_analysis.py`
+> 机器可读结果 `data_v4/results/comparison_v4.{md,json}` + `data_v4/results/decision_analysis_conv.{md,json}`
+>
+> **本版相对初版的重大更正(评审第一轮)**:初版用 **欠拟合 floor**(`scaffold_only`, train_loss 2.53,
+> parse 仅 0.68–0.80, 格式半崩)当基线, 得出"计算类对角线为负、abstain 独亮 +98"。该结论**已被推翻**:
+> 换成 **收敛 floor**(`scaffold_conv`, 30 epoch, parse 100%)后, 计算类对角线全部转正、abstain 增益归零。
+> 欠拟合 floor 系统性地反转了结论符号。详见 §3.0 与 §6。
 
 ---
 
-## 0. TL;DR(一句话结论)
+## 0. TL;DR
 
-把 v3 的整套「修复-操作子诱导」实验原样移植到 **真实算术域 GSM8K**。结果与 v3(合成世界)**相反**:
-v3 里 4 个操作子的对角线**全亮**(+73~+93),v4 里**只有 abstain 亮**(+98),三个计算类操作子
-(verify_step / override / recompute)**无增益甚至略降**(−12 / −12 / −16)。
+把 v3 的修复-操作子诱导实验移植到真实算术域 GSM8K。**收敛 floor 下的三层结论:**
 
-经抽样核验,这**不是评分 bug,是真实结果**。它精确刻画了框架的边界:
+1. **final-acc 层**:计算类操作子(verify_step/override/recompute)targeted 增益**小幅为正**(+4 / +10 / +8),
+   abstain 增益**归零**(收敛 floor 自己也 100%)。**selectivity ≈ 0** → v4 **不是** operator-selective。
+2. **decision 层**(真正的结构):targeted 把 recompute/override 的"抵抗错误值"决策从 floor **0.60/0.64**
+   拉到 **0.98**(verify_step 的 floor 已 0.98);但**任一** targeted 都泛化地拉高 → 是一个**通用修复决策**, 非 operator-specific。
+3. **arithmetic 层**:决策对之后的重算正确率所有 run 恒为 **~0.30–0.46**, 谁训都不提升。
 
-> **repair / operator-induction 注入的是「决策与修复轨迹」,不是「底层计算」。**
-> **增益大小 ≈ 该原子能力在 base 模型里的缺口。** 合成世界里所有能力都缺(编造运算,0%)→ 全亮;
-> GSM 里算术能力已具备(floor 已 42–54%)→ 只有 base 缺失的决策类能力(abstain,base ~2%)被点亮。
-
-Transfer 检查进一步证实:repair 训练**没有损害底层算术**(作答时正确率 95% ≈ base),
-但单操作子重度专门化带来**行为漂移**(约 30% 普通题被当成修复任务、不给最终答案)。
+**论点**:repair / operator-induction 在真实域注入的是一个**通用的"抵抗错误值"修复决策, 而非底层算术**。
+final-acc 只小幅为正、且 selectivity 低, 因为决策增益被 base 算术上限压住。
+**v3↔v4**:v3(合成, base 全不会)是 operator-selective(对角线突出);v4(GSM, base 已会算术)是泛化决策诱导 + 算术上限。
+**Transfer**:单 operator 漂移 30%、混合 17%, 作答时算术≈base(未损害底层计算)。
 
 ---
 
 ## 1. 背景与动机
 
-v2/v2.1/v3 都在一个**封闭合成世界**(编造的关系族 + 编造的运算)里做。reviewer 的核心质疑是:
-合成世界里"声称值的真假"由三元组决定,可能存在记忆捷径 / 循环论证,结论未必迁移到真实任务。
-
-**v4 的目的**:把同一套修复回路搬到 **GSM8K(真实小学数学应用题)**。在这里:
-- **算术是真实的、可计算的**——中间步骤的对错是**算出来的**,不是查表记忆的;封闭世界的实体记忆捷径**结构上不存在**。
-- **不做知识注入**(算术本身就是知识),直接从 base instruct 模型诊断。
-- 训练只取 GSM **train split**,评测只取 **test split**,条目零重叠。
-- **沿用 v3 完全相同的 actionized 输出 schema 和评分逻辑**,使 v3、v4 两域的矩阵**可直接并排比较**。
+v2/v2.1/v3 都在封闭合成世界做, reviewer 质疑记忆捷径/循环论证。v4 把整套修复回路搬到 **GSM8K**:
+算术真实可计算、无知识注入、train/test 条目零重叠、沿用 v3 的 actionized schema 与评分器使两域可并排。
 
 ---
 
 ## 2. 方法
 
-### 2.1 五个答案-更新操作子(policy)与失败注入器(G-cell)
+### 2.1 五操作子 × 失败注入器(G-cell)
 
-GSM 支持 v3 七个 policy 中的 5 个;每个 policy 由一个确定性「失败注入器」从干净 GSM 题构造:
-
-| policy | G-cell 注入器 | 构造方式 | 期望决策 |
+| policy | G-cell | 构造 | 决策 |
 |---|---|---|---|
-| `verify_step` | G-Step | 在某个**可追溯**中间步骤植入错误结果(≠真值且≠最终答案) | update |
-| `override_wrong_claim` | G-Claim | 在题面植入一个**错误**的最终答案断言 | update |
-| (同上,去耦对照) | G-Claim-True | 50/50 植入一个**正确**的最终答案断言 | keep |
-| `recompute` | G-Recompute | 给一个错误的 tentative answer,无断言,纯重算 | update |
-| `keep_answer` | G-Clean | tentative answer 正确 | keep |
-| `retrieve_or_abstain` | G-Abstain | 删除题中一个**恰好出现一次且参与某步运算**的承重量 → 不可解 | abstain |
+| `verify_step` | G-Step | 植入一个**可追溯**的错误中间步骤结果(≠真值且≠最终答案) | update |
+| `override_wrong_claim` | G-Claim | 植入**错误**最终答案断言 | update |
+| (去耦对照) | G-Claim-True | 50/50 植入**正确**断言 | keep |
+| `recompute` | G-Recompute | 错误 tentative, 无断言, 纯重算 | update |
+| `keep_answer` | G-Clean | tentative 正确 | keep |
+| `retrieve_or_abstain` | G-Abstain | 删除一个**恰出现一次且承重**的量 → 不可解 | abstain |
 
-输出 schema(与 v3 一致):`{update_decision, update_policy, repair_trace, final_answer}`,
-trace 以 `Action: <policy>.` 开头。
+输出 `{update_decision, update_policy, repair_trace, final_answer}`, trace 以 `Action: <policy>.` 开头。
 
 ### 2.2 数据
 
-| split | 总量 | verify_step | override | recompute | keep_answer | abstain |
+| split | 总量 | verify_step | override | recompute | keep | abstain |
 |---|---|---|---|---|---|---|
 | train | 3000 | 500 | 500 | 500 | 1000 | 500 |
 | eval | 480 | 80 | 80 | 80 | 160 | 80 |
 
-(keep_answer 来自 G-Clean + G-Claim-True 两个 cell,故约为其它的 2×。)
-GSM8K 经 `gsm_world.parse_answer` 解析 `<<a op b=c>>` 计算注解 + `#### N` 最终答案,
-保留可干净解析的条目(train 7377 / test 1300 可解析)。
+### 2.3 捷径审计
 
-### 2.3 捷径审计(shortcut gate)
+GATE(Claim 家族 / 实体掩码 / keep-vs-update) = **0.507 PASS (<0.65)**;`sanity_v4.json` status **PASS**。真实域无闭世界记忆捷径。
 
-沿用 v3.1 的去耦检验。TF-IDF + 逻辑回归预测 `update_decision`,5 折平衡准确率:
+### 2.4 训练(LLaMA-Factory 全参数 SFT, relay from BASE)
 
-| 指标 | 值 | 判定 |
-|---|---|---|
-| **GATE**(Claim 家族 / 实体掩码后 / keep-vs-update) | **0.507** | **PASS (<0.65,近随机)** |
-| L2 full raw(全文 unigram) | 0.692 | 披露(跨任务词汇是合法结构) |
-| L2 full masked(数字掩码后) | 0.692 | 披露 |
-
-`sanity_v4.json` 整体 **status: PASS**。真实域天然不存在合成世界的闭世界记忆捷径(GATE 近随机)。
-
-### 2.4 训练(LLaMA-Factory 全参数 SFT)
-
-- 全部从 **BASE** `/mnt/hdfs/xwqu/Qwen3-8B` relay(GSM 不做知识注入)。DeepSpeed ZeRO-3,8 卡,seed 42。
-- 14 个训练分支,train_loss(codex 回报):
-
-| 分支 | train_loss | | 分支 | train_loss |
-|---|---|---|---|---|
-| actionized_full | **0.303** | | random_verify_step | 0.925 |
-| scaffold_only | **2.528** ⚠ | | random_override | 0.927 |
-| targeted_verify_step | 0.781 | | random_recompute | 0.927 |
-| targeted_override | 0.889 | | random_abstain | 0.930 |
-| targeted_recompute | 0.824 | | wrongtarget_verify_step | 0.799 |
-| targeted_abstain | 0.896 | | wrongtarget_override | 0.911 |
-| | | | wrongtarget_recompute | 0.845 |
-| | | | wrongtarget_abstain | 0.977 |
-
-⚠ `scaffold_only` loss 2.53 = 明显欠拟合(只有 ~200 条格式骨架),作为 floor 基线有噪声——见 §6 局限。
+15 个分支。关键 train_loss:actionized_full **0.30**, targeted ~0.78–0.90, controls ~0.84–0.98,
+原 `scaffold_only` **2.53(欠拟合)**, **新 `scaffold_conv`(30 epoch)收敛**(parse 100%, 替换为基线)。
 
 ### 2.5 评测协议
 
-- 17 个预测,各对 480 条 repair_eval(transfer 对 300 条 test);单卡 predict。
-- 最终答案做**数值归一化**(去 `$`/逗号,`18.0→18`)后精确匹配 gold。
-- abstain 用 **strict 判定**:仅当模型显式 `final_answer=null` 或 `update_decision=retrieve_or_abstain`
-  才算正确拒答;光秃秃蒙一个数字(即便蒙对)判错(测校准,不测运气)。
-- baseline floor = `scaffold_only`(与 v3.1 一致)。
+- final answer 数值归一化后精确匹配;abstain 用 strict(蒙对判错);
+- **baseline = `scaffold_conv`(收敛 floor)**。`scaffold_only`(欠拟合)仅作 §3.0/§6 的反例保留。
+- **decision/arithmetic 拆分**(`decision_analysis.py`):把 final-acc 劈成
+  `resist_wrong`(委托答案 ≠ 植入/tentative 错误值, 纯决策) 与 `arith_given_ok`(抵抗子集上的纯算术)。
 
 ---
 
-## 3. 过程中修复的工程问题(诚实记录)
+## 3. 过程中修复的工程/方法问题(诚实记录)
 
-| # | 问题 | 根因 | 修复 |
-|---|---|---|---|
-| 1 | `transfer_base_predict` 报 `Cannot find valid samples`,全部 transfer 预测被阻塞 | `transfer_eval.json` 参考输出是光秃秃数字 `"18"`,被 LF 监督处理器系统性判为无效样本丢弃 | 参考改为**完整金标推理 + `The final answer is N.`** 行;只此文件变,其余训练集固定种子重生成字节一致 |
-| 2 | 一个配置失败 → 后续(含矩阵对照组 `wrongtarget_*`)全被卡死 | `run_v4_20` 用 `set -euo pipefail` + 循环 | 改为**遇错继续 + 结尾失败汇总** |
-| 3 | transfer base 看起来只有 2% | 评分**gold 抽取 bug**:`numkey(整段金标)` 抽到推理里第一个数字而非最终答案行 | gold 与 pred 都用 `FINAL_RE` 抽最终答案行;base 实为 **94%** |
-| 4 | transfer 268/300 无答案行 | `max_new_tokens=384` 把 Qwen3 `<think>` 在出答案前截断 | 两个 transfer 配置调到 **2048**,重跑 |
+### 3.0 ★ floor 欠拟合 → 系统性反转结论(评审第一轮发现)
+
+初版 floor `scaffold_only` 只训 3 epoch(~37 步), train_loss 2.53, 在计算类 cell 上 **parse 仅 0.675–0.80**
+(20–32% JSON 崩)。它的"高分"是格式崩溃 + judge 抽取 + 幸存者偏差的产物, 虚高的 floor 把 targeted 的增益减成了负。
+**修复**:同一 scaffold 数据训到收敛(`scaffold_conv`, 30 epoch, parse 100%), 全矩阵重算 → 符号反转(见 §4)。
+**教训**:floor 必须与被比较分支训练充分度可比, 否则基线噪声会决定结论符号。
+
+### 3.1–3.4 其它(初版已记)
+
+| # | 问题 | 修复 |
+|---|---|---|
+| 1 | transfer_eval 被 LF 判无效全丢弃 | 参考改为完整金标推理 + `The final answer is N.` |
+| 2 | 一个配置失败阻塞后续 | predict runner 改遇错继续 + 汇总 |
+| 3 | transfer base 看似 2% | 评分 gold 抽取 bug(抽到推理首数字), 改用 `FINAL_RE`, 实为 94% |
+| 4 | transfer 268/300 截断 | `max_new_tokens` 384→2048 |
+
+(另:已查 **repair eval 域内无截断**——预测 ~200 字符 ≪ 384, JSON 全闭合;漂移是行为非容量。)
 
 ---
 
-## 4. 结果
+## 4. 结果(全部基于收敛 floor `scaffold_conv`)
 
-### 4.1 实验一:三条件总体(final-answer accuracy)
+### 4.1 Exp 1:三条件总体
 
 | 条件 | overall | false-keep | clean over-repair |
 |---|---|---|---|
-| diagnosis_base(base,不训) | 33% | 5% | 39% |
-| scaffold_only(FLOOR) | 49% | 22% | 25% |
-| actionized_full(全 policy) | **62%** | 28% | 17% |
+| diagnosis_base(base, 不训) | 33% | 5% | 39% |
+| **scaffold_conv(收敛 FLOOR)** | **56%** | 26% | 24% |
+| actionized_full(全 policy) | 62% | 28% | 17% |
 
-> 注:`diagnosis_base` 33% 受**格式不匹配**拖累(base 不输出 actionized JSON),不代表 base 真实算术能力,
-> 仅作下锚参考。真实算术能力见 §4.4 transfer(base 94%)。
+> `diagnosis_base` 33% 受格式不匹配拖累(base 不输出 actionized JSON), 仅下锚;真实算术见 §4.4(base 94%)。
 
-### 4.2 实验二:选择性修复矩阵(相对 FLOOR 的增益 %)
-
-行 = 只用该操作子数据训练;列 = 在该操作子上评测;对角线 = Targeted Gain。
+### 4.2 Exp 2:final-acc 选择性矩阵(相对收敛 floor 的增益 %)
 
 | trained \ eval | verify_step | override | recompute | abstain |
 |---|---|---|---|---|
-| **verify_step** | **−12** | −19 | −1 | +98 |
-| **override** | −11 | **−12** | +11 | +98 |
-| **recompute** | −15 | −20 | **−16** | +98 |
-| **retrieve_or_abstain** | −18 | −25 | −15 | **+98** |
+| **verify_step** | **+4** | +4 | +22 | +0 |
+| **override** | +5 | **+10** | +35 | +0 |
+| **recompute** | +1 | +2 | **+8** | +0 |
+| **abstain** | −1 | −2 | +9 | **+0** |
 
 | 操作子 | Targeted Gain | Selectivity |
 |---|---|---|
-| verify_step | −12% | −38% |
-| override_wrong_claim | −12% | −45% |
-| recompute | −16% | −37% |
-| **retrieve_or_abstain** | **+98%** | **+117%** |
+| verify_step | +4% | −5% |
+| override_wrong_claim | +10% | −3% |
+| recompute | +8% | +6% |
+| retrieve_or_abstain | +0% | −2% |
 
-**只有 abstain 对角线亮。** 三个计算类操作子对角线为负——与 v3 全亮(+73~+93)截然相反。
+**对比初版(欠拟合 floor):verify −12→+4, override −12→+10, recompute −16→+8, abstain +98→+0。符号全反转。**
+计算类对角线转正但幅度小, selectivity ≈ 0(非对角与对角同量级, 如 override 行的 recompute cell +35)→ **v4 非 operator-selective**。
 
-每个条件的 per-policy 准确率明细(便于核验):
+### 4.3 ★ decision/arithmetic 拆分(收敛 floor)
 
-| 条件 | verify_step | override | recompute | abstain | keep |
-|---|---|---|---|---|---|
-| base | 16% | 35% | 38% | 11% | 50% |
-| floor (scaffold) | 54% | 42% | 49% | **2%** | 73% |
-| full (actionized) | 58% | 25% | 26% | 100% | 83% |
-| targeted_verify_step | 41% | 24% | 48% | 100% | — |
-| targeted_recompute | 39% | 22% | 32% | 100% | — |
-
-### 4.3 对照组(在各操作子自己的 eval cell 上)
-
-| 操作子 | targeted | 同量随机 | wrong-target | floor |
+| cell | 指标 | floor | targeted | full |
 |---|---|---|---|---|
-| verify_step | 41% | 39% | 42% | 54% |
-| override | 30% | 12% | 31% | 42% |
-| recompute | 32% | 26% | 30% | 49% |
-| **abstain** | **100%** | **100%** | **100%** | **2%** |
+| **verify_step** | resist-wrong(决策) | 0.975 | **1.00** | 1.00 |
+| | arith-given-ok(算术) | 0.385 | 0.412 | 0.575 |
+| **recompute** | resist-wrong | **0.60** | **0.98** | 0.575 |
+| | arith-given-ok | 0.417 | 0.333 | 0.457 |
+| **override** | resist-wrong | **0.64** | **0.99** | 0.60 |
+| | arith-given-ok | 0.314 | 0.304 | 0.417 |
 
-> 计算类:targeted ≈ random ≈ wrongtarget,都 ≤ floor → 这些 cell 的瓶颈不是"用哪个修复动作",而是"算得对不对"。
-> abstain:targeted=random=wrongtarget=100% ≫ floor 2% → 只要训练集里**出现过** abstain 演示(scaffold 含),
-> 模型就学会;这是一个"一学就会"的**决策/格式技能**,与具体 operator 标签无关。
+- **决策层**:targeted 在 recompute/override 把"抵抗错误值"从 floor 0.60/0.64 拉到 ~0.98(**+37/+35**);
+  verify_step 的 floor 已 0.975(该 cell 仅靠格式即可抵抗)。混合 full 在 recompute/override 反而只有 0.58/0.60。
+- **算术层**:所有 run 恒为 0.30–0.46, targeted **不提升**(见 §6 注:跨 run 因抵抗率不同有分母偏差, 不可直接横比)。
+- **结论**:final-acc 的小幅正增益 = 决策诱导(大)被算术上限(顶)压平的净效应。
 
-### 4.4 Transfer 检查:未扰动 GSM8K test(修复不应损害基础任务)
+**decision-level 矩阵(resist-wrong, 行=训, 列=评):对角(1.0/0.97/0.99)≈非对角(0.85–0.99)** → 抵抗决策是**跨 operator 泛化**的通用技能, 非 operator-selective。
 
-`acc` = 全 300 条;`answered acc` = 模型真正给出答案时的正确率(把**算术能力**与**行为漂移**分离);
-`no-answer` = 修复训练的 ckpt 吐出诊断/JSON 但没给最终答案的条数。
+### 4.4 Transfer:未扰动 GSM8K test
 
-| 模型 | acc | **answered acc** | answered n | no-answer |
-|---|---|---|---|---|
-| base | 94% | 100% | 277 | 23 |
-| verify_step ckpt | 68% | **95%** | 209 | 91 |
+| 模型 | acc | **answered-acc** | no-answer |
+|---|---|---|---|
+| base | 94% | 100% | 23/300 |
+| verify_step(单 operator) | 68% | **95%** | 91/300 (30%) |
+| actionized_full(混合) | 72% | 76% | 50/300 (17%) |
 
-**关键诊断**:
-- verify_step ckpt **作答时**算术正确率 **95% ≈ base 94%** → **底层计算没有受损**。
-- 但 91/300(30%)普通题,ckpt 进入"修复/诊断模式",输出 actionized JSON(92/99 以 `{` 开头,
-  甚至模仿训练集里的拒绝 `{"error": ...}`),**不给最终答案** → **行为漂移**。
-- 68% 的下降几乎全部来自这 30% 的漂移,而非算术退化。
+- 两个 repair ckpt **作答时**算术 ≈ base(95% / —) → **底层计算未受损**。
+- 下降来自**行为漂移**:把普通题当修复任务、输出诊断 JSON 不给答案。**混合(17%)比单 operator(30%)漂移小** → 混合缓解漂移。
+- 漂移是**域外**现象;**域内 repair eval 无漂移**(committed ~100%)。
 
-### 4.5 v3(合成)↔ v4(GSM)并排(共有 4 操作子,同一评分器)
+### 4.5 v3 ↔ v4 并排(共有 4 操作子, 同评分器)
 
 | 操作子 | v3 floor→targeted | v3 gain | v4 floor→targeted | v4 gain |
 |---|---|---|---|---|
-| verify_step | 0→93 | **+93** | 54→41 | **−12** |
-| override_wrong_claim | 22→95 | **+73** | 42→30 | **−12** |
-| recompute | 13→100 | **+87** | 49→32 | **−16** |
-| retrieve_or_abstain | 12→100 | **+88** | 2→100 | **+98** |
+| verify_step | 0→93 | **+93** | 38→41 | +4 |
+| override_wrong_claim | 22→95 | **+73** | 20→30 | +10 |
+| recompute | 13→100 | **+87** | 25→32 | +8 |
+| retrieve_or_abstain | 12→100 | **+88** | 100→100 | +0 |
+
+v3 operator-selective(对角线突出);v4 final-acc 平淡, 真实结构在 decision 层(§4.3)。
 
 ---
 
-## 5. 解读(已与作者确认采纳)
+## 5. 解读(已与作者确认采纳"决策 vs 计算"框架)
 
-**论点**:repair / operator-induction 注入的是**决策与修复轨迹**,不是**底层计算**。
-**一个操作子的可诱导增益 ≈ 该原子能力在 base 模型里的缺口。**
+> **repair / operator-induction 注入的是一个通用的"抵抗错误值"修复决策与轨迹, 不是底层算术。**
 
-- **abstain(决策类,base 缺失)**:v3 12→100,v4 2→100。两域都从底拉满 → 框架在两域都成立。
-- **verify_step / recompute / override(计算类)**:v3 里 base 完全不会(编造运算,0%)→ 任何 operator 数据都能从 0 拉满;
-  v4 里 base 本就会算术(floor 42–54%)→ 注入轨迹不创造计算能力,单 operator 训练还轻微过拟合/受 JSON 约束拖累。
-- **Transfer 佐证**:repair 没创造也没破坏计算(answered 95%≈base),只是注入了决策行为。
+- **decision 层**有效:targeted 把计算类 cell 的抵抗决策诱导到 ~0.98(floor 0.60/0.64, full 仅 0.58/0.60), floor-independent。
+- **arithmetic 层**无效:重算正确率恒 ~0.35, 谁训都不动 → 这是"不注入计算"的直接证据。
+- **final-acc**耦合二者:决策增益被算术上限压平 → 小幅正、selectivity 低。
+- **abstain**在收敛 floor 下 gain 归零(floor 也 100%)→ 它是"见过格式即会"的格式技能, **降为正对照**(证明回路在真实域能点亮一个 base 缺失的决策能力)。
+- **v3↔v4 统一**:增益结构取决于 base 缺口 + 目标能力性质。v3 所有能力皆缺且"重算=查表"(决策对→最终对)→ operator-selective 全亮;
+  v4 算术已具备且"重算=真计算"(决策对≠最终对)→ 泛化决策诱导, final-acc 被算术封顶。
+- **Caveat**:单 operator 专门化在**域外**有行为漂移代价(30%), 混合缓解到 17% → 支持混合训练。
 
-**Caveat(同样重要)**:单操作子重度专门化有**行为漂移代价**——对常规任务也套用修复格式、30% 不作答。
-→ 这支持**混合训练(actionized_full)优于单操作子**(actionized_full overall 62% > floor 49% > 各 targeted)。
-
-**为什么这比"两域全亮"更好**:它把"对角线没全亮"从看似的弱点,变成对框架**机制与适用边界的精确刻画**——
-说清了 repair 在"模型缺失的决策/轨迹能力"上有效,在"已具备的底层计算能力"上不创造能力。
+**为什么比初版强**:初版把欠拟合 floor 的假象当成了"计算类无效 / abstain 独亮"。更正后, 故事是
+"repair 诱导通用修复决策、受真实算术上限制约", 并用 decision/arith 拆分给出了机制级证据, 且修正了一个会被审稿人一眼看穿的 floor 偏差。
 
 ---
 
 ## 6. 局限与威胁有效性(请重点 review)
 
-1. **floor 欠拟合**:`scaffold_only` train_loss 2.53,各 cell 表现极不均(verify 54% 但 abstain 2%)。
-   用它当增益基线会让"base 碰巧高"的 cell(verify/recompute)更易出现负 gain。**负 gain 的绝对值不要过度解读**;
-   稳健结论是"计算类对角线**不亮**",而非精确的负幅度。
-2. **diagnosis_base 33% 的格式 confound**:base 不输出 actionized JSON,该数字低估了 base 的真实能力
-   (真实算术见 transfer 94%)。base 行只作下锚,不参与增益计算。
-3. **abstain 的"格式技能"性质**:abstain 100% 部分是因为它是一个易学的决策/格式动作(targeted=random=wrongtarget 都 100%),
-   其"增益"与计算类操作子的"增益"性质不同——前者是**决策诱导**,后者本应是**能力诱导**。这正是论点的核心,但需在论文里讲清两者不可同质比较。
-4. **transfer 只测了 base 与 verify_step 两个 ckpt**;actionized_full / 其它 operator 的漂移程度未测
-   (预期 full 漂移更小,因为它见过多样格式)。若要把"混合优于单操作子"做实,建议补 transfer_actionized_full。
-5. **base 也有 23/300 截断**(2048 tokens 内 think 未完):base 94% 是对"作答的 277 条"而言的下界估计。
+1. **`arith-given-ok` 跨 run 不可直接横比**:分母是"抵抗子集", floor/full 抵抗率低 → 子集小且偏易 → arith 虚高;
+   targeted 抵抗≈1.0 → 全样本含难题 → arith 偏低。**故"targeted 算术 0.30 < full 0.42"是分母假象, 不能读成 targeted 算术更差。**
+   建议最终图改在**同一难度/同一题子集**上比 arith。(本轮**尚未**做。)
+2. **selectivity ≈ 0**:v4 的决策增益是泛化的(任一 targeted 都拉高所有计算类 cell), 不是 operator-specific。
+   这与 v3 的强选择性不同, 需正面写(与 v2.1「action-commitment 通用」一致), 不能假装 v4 也 selective。
+3. **"决策对 ≠ 修复成功"**:targeted 不被错误值带跑(resist→0.98), 但自己重算只对 ~0.30 → 等于"把 keep-错值换成 override-另一个错值"。
+   从"最终修复成功率"看 targeted 未显著赢过 floor/full。论点只能是"诱导了决策、受限于算术", 不能宣称"修复成功"。
+4. **transfer 的 answered-acc 定义**:full 的 answered-acc 76% 偏低(部分含 fallback 抽到的中间数), 需细化定义;
+   但漂移(no-answer)对比 30% vs 17% 稳健。
+5. **base 也有 23/300 截断**:base 94% 是"作答 277 条"的下界估计。
 
 ---
 
 ## 7. 复现
 
 ```bash
-# 数据 + 审计(本地,读 data_v4/gsm8k_cache.json)
-python3 -m gsm_repair_v4.generate_gsm
-python3 -m gsm_repair_v4.validate_gsm        # -> data_v4/sanity_v4.json (PASS, GATE 0.507)
-python3 -m gsm_repair_v4.convert_gsm         # -> 18 个数据集 + dataset_info
-
-# 服务器训练(8 卡)+ 预测(单卡,遇错继续)+ 回传
-bash scripts/run_v4_1{0,1,2}_train_*.sh
-bash scripts/run_v4_20_predict_all.sh
-bash scripts/run_v4_22_transfer_predict.sh   # transfer 2048 tokens 重跑
-bash scripts/run_v4_21_collect_predictions.sh
-
-# 本地评分 + 报告
-python3 -m gsm_repair_v4.evaluate_gsm        # -> data_v4/results/comparison_v4.{md,json}
+python3 -m gsm_repair_v4.generate_gsm && python3 -m gsm_repair_v4.validate_gsm && python3 -m gsm_repair_v4.convert_gsm
+bash scripts/run_v4_1{0,1,2}_train_*.sh          # 主训练
+bash scripts/run_v4_20_predict_all.sh            # 17 预测(遇错继续)
+bash scripts/run_v4_22_transfer_predict.sh       # transfer 2048 tokens
+bash scripts/run_v4_30_floor_and_transfer.sh     # 收敛 floor + transfer_full
+bash scripts/run_v4_21_collect_predictions.sh    # 回传
+python3 -m gsm_repair_v4.evaluate_gsm                                   # final-acc 矩阵(默认收敛 floor)
+python3 -m gsm_repair_v4.decision_analysis --floor scaffold_conv --out data_v4/results/decision_analysis_conv
 ```
 
-关键 commit(分支 `scenario-repair-v4`):`8673de8`(最终报告+评分器)、`85cb9fc`(transfer 重跑脚本)、
-`68a4622`(评分器+transfer 配置修)、`a79ca41`(transfer-eval 修复+runner 加固)。
+关键 commit(`scenario-repair-v4`):`82c1388`(decision 拆分 + 收敛 floor/transfer_full 配置), 本修订待 commit。
 
 ---
 
-## 8. 建议的下一步(待你定)
+## 8. 待办(评审第二轮)
 
-1. **论文小节**「What repair can and cannot induce」:以 §4.5 v3↔v4 矩阵为主图,§4.4 transfer 漂移表为佐证。
-2. 可选补强:`transfer_actionized_full` 预测,做实"混合 < 漂移 < 单操作子"。
-3. 可选:重训一个**收敛的** floor(更多 scaffold 步数)以降低 §6.1 的基线噪声,让矩阵幅度更可信。
+1. **同难度子集上重算 arith-given-ok**(消 §6.1 分母偏差)——可能让"算术不被注入"更干净或出现细微差异。
+2. 决定主图:**decision-level matrix**(显著, +37/+35)还是 **final-acc matrix**(平淡, +4~+10)。建议前者主、后者旁注。
+3. selectivity 低如何呈现:作为"v4=泛化决策, v3=选择性"的对比写入, 还是补实验尝试分离 operator。
+4. (可选)transfer answered-acc 定义细化。

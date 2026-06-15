@@ -1,0 +1,161 @@
+{
+  "floor_run": "scaffold_conv",
+  "cells": {
+    "scaffold_conv": {
+      "verify_step": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.975,
+        "arith_given_ok": 0.385,
+        "final_acc": 0.375
+      },
+      "recompute": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.6,
+        "arith_given_ok": 0.417,
+        "final_acc": 0.25
+      },
+      "override_wrong_claim": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.637,
+        "arith_given_ok": 0.314,
+        "final_acc": 0.2
+      }
+    },
+    "actionized_full": {
+      "verify_step": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 1.0,
+        "arith_given_ok": 0.575,
+        "final_acc": 0.575
+      },
+      "recompute": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.575,
+        "arith_given_ok": 0.457,
+        "final_acc": 0.263
+      },
+      "override_wrong_claim": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.6,
+        "arith_given_ok": 0.417,
+        "final_acc": 0.25
+      }
+    },
+    "targeted_verify_step": {
+      "verify_step": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 1.0,
+        "arith_given_ok": 0.412,
+        "final_acc": 0.412
+      },
+      "recompute": {
+        "n": 80,
+        "parse_rate": 0.8,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.925,
+        "arith_given_ok": 0.514,
+        "final_acc": 0.475
+      },
+      "override_wrong_claim": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.9,
+        "arith_given_ok": 0.264,
+        "final_acc": 0.237
+      }
+    },
+    "targeted_recompute": {
+      "verify_step": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.988,
+        "arith_given_ok": 0.392,
+        "final_acc": 0.388
+      },
+      "recompute": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.975,
+        "arith_given_ok": 0.333,
+        "final_acc": 0.325
+      },
+      "override_wrong_claim": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.85,
+        "arith_given_ok": 0.265,
+        "final_acc": 0.225
+      }
+    },
+    "targeted_override_wrong_claim": {
+      "verify_step": {
+        "n": 80,
+        "parse_rate": 0.988,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.988,
+        "arith_given_ok": 0.43,
+        "final_acc": 0.425
+      },
+      "recompute": {
+        "n": 80,
+        "parse_rate": 0.912,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.975,
+        "arith_given_ok": 0.615,
+        "final_acc": 0.6
+      },
+      "override_wrong_claim": {
+        "n": 80,
+        "parse_rate": 1.0,
+        "committed_rate": 1.0,
+        "no_answer_rate": 0.0,
+        "resist_wrong": 0.988,
+        "arith_given_ok": 0.304,
+        "final_acc": 0.3
+      }
+    }
+  },
+  "matrix": {
+    "verify_step->verify_step": 1.0,
+    "verify_step->recompute": 0.925,
+    "verify_step->override_wrong_claim": 0.9,
+    "recompute->verify_step": 0.988,
+    "recompute->recompute": 0.975,
+    "recompute->override_wrong_claim": 0.85,
+    "override_wrong_claim->verify_step": 0.988,
+    "override_wrong_claim->recompute": 0.975,
+    "override_wrong_claim->override_wrong_claim": 0.988
+  }
+}

@@ -135,6 +135,8 @@ def main():
     ap.add_argument("--v4_transfer", type=Path, default=Path("data_v4/transfer_eval.json"))
     ap.add_argument("--v3_pred", type=Path, default=Path("data_v3_1/predict_outputs"))
     ap.add_argument("--v3_eval", type=Path, default=Path("data_v3_1/repair_eval.jsonl"))
+    ap.add_argument("--floor", default="scaffold_conv",
+                    help="floor run name (scaffold_conv = convergent; scaffold_only = underfit/legacy)")
     ap.add_argument("--out", type=Path, default=Path("data_v4/results/comparison_v4"))
     a = ap.parse_args()
 
@@ -145,7 +147,7 @@ def main():
         return score_repair(p, src4, numkey) if p.exists() else None
 
     base = v4("diagnosis_base")
-    floor = v4("scaffold_only")
+    floor = v4(a.floor)
     full = v4("actionized_full")
     targeted = {op: v4(f"targeted_{op}") for op in OPS}
     random_ = {op: v4(f"random_{op}") for op in OPS}
@@ -153,7 +155,7 @@ def main():
 
     transfer = {}
     tsrc = json.loads(a.v4_transfer.read_text())
-    for cond in ("base", "verify_step"):
+    for cond in ("base", "verify_step", "actionized_full"):
         p = a.v4_pred / f"predict_transfer_{cond}" / "generated_predictions.jsonl"
         transfer[cond] = score_transfer(p, tsrc) if p.exists() else None
 
@@ -171,13 +173,13 @@ def main():
     L += ["## Exp 1: Repair conditions (final-answer accuracy)", "",
           "| condition | overall | false-keep | clean over-repair |", "|---|---|---|---|"]
     for nm, rep in [("diagnosis_base (base, no repair)", base),
-                    ("scaffold_only (FLOOR)", floor),
+                    (f"{a.floor} (FLOOR)", floor),
                     ("actionized_full (all policies)", full)]:
         if rep:
             L.append(f"| {nm} | {pct(rep['overall'])}% | {pct(rep['false_keep'])}% | "
                      f"{pct(rep['clean_over_repair'])}% |")
 
-    L += ["", "## Exp 2: Selective Repair Matrix — gain over scaffold_only FLOOR (%)", "",
+    L += ["", f"## Exp 2: Selective Repair Matrix — gain over {a.floor} FLOOR (%)", "",
           "Rows = trained on ONLY this operator. Cols = eval on this operator. Diagonal = Targeted Gain.", "",
           "| trained \\ eval | " + " | ".join(o[:10] for o in OPS) + " |",
           "|" + "---|" * (len(OPS) + 1)]
@@ -210,7 +212,7 @@ def main():
           "(isolates arithmetic ability from drift into repair mode); `no-answer` = items where "
           "the repair-trained ckpt produced a diagnosis/JSON with no committed answer.", "",
           "| model | acc | answered acc | answered n | no-answer |", "|---|---|---|---|---|"]
-    for cond in ("base", "verify_step"):
+    for cond in ("base", "verify_step", "actionized_full"):
         t = transfer[cond]
         if t:
             L.append(f"| {cond} | {pct(t['acc'])}% | {pct(t['answered_acc'])}% | "
@@ -218,7 +220,8 @@ def main():
 
     if v3 and v3.get("floor"):
         L += ["", "## v3 (synthetic) ↔ v4 (GSM) — Targeted Gain on shared operators", "",
-              "Same scorer; gain = targeted − scaffold_only floor, on the operator's own eval cell.", "",
+              "Same scorer; gain = targeted − floor (v3: scaffold_only; v4: convergent scaffold_conv), "
+              "on the operator's own eval cell.", "",
               "| operator | v3 floor→targeted | v3 gain | v4 floor→targeted | v4 gain |",
               "|---|---|---|---|---|"]
         for op in OPS:
@@ -226,20 +229,26 @@ def main():
             v4t, v4f_ = pol_acc(targeted[op], op), pol_acc(floor, op)
             L.append(f"| {op} | {pct(v3f_)}→{pct(v3t)} | {pct(gain(v3t, v3f_))} | "
                      f"{pct(v4f_)}→{pct(v4t)} | {pct(gain(v4t, v4f_))} |")
-        L += ["", "_v3 (synthetic) lights up on EVERY operator; v4 (GSM) only on abstain. "
-              "The contrast is the result — see interpretation below._"]
+        L += ["", "_v3 (synthetic) is operator-SELECTIVE (diagonal spikes). v4 (GSM), on a CONVERGENT "
+              "floor, shows small positive compute-cell gains and ZERO abstain gain — the real "
+              "structure is at the decision level (see decision_analysis_conv.md)._"]
 
-    L += ["", "## 结论解读 — repair 注入「决策」而非「计算」", "",
-          "- abstain(决策类能力): v3 12->100, v4 2->100。base 几乎不会, 两域都被 repair 从底拉满。",
-          "- verify_step / recompute / override(计算类能力): v3 从 0 拉满(合成运算 base 全不会); "
-          "v4 floor 已 42-54%(base 本就会算术), 单 operator targeted 无增益甚至略降。",
-          "- Transfer: verify_step ckpt 在干净 GSM 上「作答时」算术正确率 95%(约等于 base 94%), "
-          "底层计算未受损; 但 30% 普通题漂移进修复模式、不给最终答案。",
+    L += ["", f"## 结论解读 — 收敛 floor 下的三层真相 (FLOOR = {a.floor})", "",
+          "> 本表 FLOOR = scaffold_conv（收敛, parse 100%）。旧 scaffold_only（欠拟合, loss 2.53, "
+          "parse 0.68–0.80）评分是格式崩溃产物, 会系统性反转结论符号, 已弃用为基线。", "",
+          "- **final-acc 层（本表）**: 收敛 floor 下计算类对角线全部转正（verify +4 / override +10 / "
+          "recompute +8）, abstain gain 归零（floor 也 100%）。selectivity 接近 0 → v4 非 operator-selective。",
+          "- **decision 层（decision_analysis_conv.md）**: 真正结构在此 —— targeted 把 recompute/override 的"
+          "「抵抗错误值」从 floor 0.60/0.64 拉到 0.98; 但任一 targeted 都泛化拉高（非 operator-specific）。",
+          "- **arithmetic 层**: 所有 run 决策对之后的重算正确率恒为 ~0.30–0.46, 谁训都不提升。",
           "",
-          "**论点**: repair / operator-induction 注入的是决策与修复轨迹, 不是底层计算。"
-          "增益大小 = 该原子能力在 base 的缺口(合成世界全缺->全亮; GSM 算术已具备->仅决策类 abstain 亮)。",
-          "**Caveat**: 单 operator 重度专门化有行为漂移代价(对常规任务也套用修复格式), "
-          "支持混合训练(actionized_full)而非单 operator。"]
+          "**论点**: repair / operator-induction 在真实算术域注入的是一个**通用的「抵抗错误值」修复决策**, "
+          "**不注入底层算术**。final-acc 只小幅正且 selectivity 低, 因为决策增益被 base 算术上限压住。"
+          "abstain 在收敛 floor 下 gain 归零, 确认是「见过格式即会」的格式技能（降为正对照）。",
+          "**v3↔v4**: v3（合成, base 全不会）operator-selective; v4（GSM, base 已会算术）泛化决策诱导 + 算术上限。"
+          "共同点 = repair 注入决策/轨迹而非底层能力。",
+          "**Transfer**: 单 operator(verify_step) 30% 普通题漂移进修复模式不作答; 混合(actionized_full)漂移降到 17%; "
+          "两者作答时算术 ≈ base（未损害底层计算）。"]
 
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.with_suffix(".md").write_text("\n".join(L))
