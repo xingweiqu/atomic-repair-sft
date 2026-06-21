@@ -107,9 +107,26 @@ operator-selective**; gains are generic.
 
 ### 5.3 Three-layer decomposition (decision vs ability) — the core re-scoring
 
+**What "decision" vs "ability" mean (worked example).** A v4 `override` item plants a false claim
+in the problem — *"Reportedly the final answer is 16."* — while the true answer is **14**. Repairing
+it requires two independent acts:
+- **decision** = do NOT adopt the planted wrong value. The floor model copies it (final = **16**,
+  carried away); the targeted model resists it (`update_decision = update`, final = **14**).
+  `resist_wrong` measures *only* this.
+- **ability** = having resisted, can the model actually produce 14 (recompute in v4; look up the
+  injected fact in v3)? `ability|resist` measures *only* this, on the resisted subset.
+
+final-answer correct = decision ✓ **AND** ability ✓. The **object to resist varies by injector**
+(`verify_step`: a wrong intermediate step; `override`: a wrong final claim; `recompute`: a wrong
+tentative answer), so `resist_wrong` is defined per cell against that cell's planted/tentative wrong
+value. Note `verify_step`'s floor *already* resists (1.00 in v3, 0.97 in v4): that cell's wrong
+value is easy to reject on format alone, so its targeted "decision gain" is near-zero and the action
+there lives in the **ability** column, not the decision column.
+
 `resist_wrong` = committed answer ≠ planted/tentative wrong value (decision only).
 `ability|resist` = on the resisted subset, final == gold (lookup in v3, arithmetic in v4).
-**`ability|resist` is NOT horizontally comparable across runs** (n_resist differs).
+**Per-run `ability|resist` is NOT comparable across runs** (n_resist differs); the matched-subset
+table below fixes this by scoring all runs on the SAME items.
 
 **v3 (synthetic, floor = scaffold_only):**
 
@@ -139,6 +156,24 @@ operator-selective**; gains are generic.
 0.64→0.99). The split is in the **ability** column: v3 targeted *injects ability* (0.00→0.93,
 0.04→0.82, 0.34→0.95); v4 targeted *cannot* (0.39→0.41, 0.31→0.30, 0.42→0.33).
 
+**Matched-subset ability (A3 — same items for all runs, horizontally comparable).** Scored only on
+items every run resisted, so the denominator is identical and the §7.1 confound is removed:
+
+| domain | cell | floor | targeted | full | n_common |
+|---|---|---|---|---|---|
+| v3 | override | 0.28 | **0.92** | 1.00 | 39 |
+| v3 | verify_bridge | 0.10 | **0.76** | 1.00 | 21 |
+| v3 | verify_step | 0.00 | **0.93** | 1.00 | 60 |
+| v3 | recompute | 0.13 | **1.00** | 1.00 | 175 |
+| v4 | verify_step | 0.38 | **0.40** | 0.56 | 78 |
+| v4 | override | 0.35 | **0.37** | 0.44 | 43 |
+| v4 | recompute | 0.43 | **0.40** | 0.48 | 42 |
+
+On identical items: v3 targeted lifts ability massively (≈+0.7); v4 targeted ≈ floor (≈±0.02) — a
+**clean** confirmation that the intervention injects ability only where the base lacks it, not a
+denominator artifact. (v4 `full` is marginally above floor — mixed training nudges arithmetic a
+little — but single-operator targeted does not.)
+
 ### 5.4 ★ Modulation law (headline; `modulation_curve.png`)
 
 x = floor `ability|resist` (base's underlying-op margin); y = **Δability|resist** (ability the
@@ -160,15 +195,19 @@ collapses in v3 where the floor already resists — `Δability` is the robust ax
 
 ### 5.5 Transfer (un-perturbed GSM8K; repair must not hurt base task)
 
+`no-answer` (drift) is **tightened** (A4): a commitment requires an explicit final-answer line OR a
+non-empty numeric JSON `final_answer`; a fallback "last number in the text" does NOT count, so the
+drift numerator is clean.
+
 | model | acc | answered-acc | no-answer (drift) |
 |---|---|---|---|
 | base | 94% | 100% | 23/300 (8%) |
-| verify_step (single-op) | 68% | 95% | 91/300 (30%) |
-| actionized_full (mixed) | 72% | 76% | 50/300 (17%) |
+| verify_step (single-op) | 68% | 95% | 92/300 (31%) |
+| actionized_full (mixed) | 72% | 77% | 53/300 (18%) |
 
 Arithmetic is **intact** when the model commits (answered-acc ≈ base). The accuracy drop is
 **behavioural drift**: repair-trained ckpts treat plain items as repair tasks and emit a diagnosis
-with no committed answer. **Mixed training halves the drift vs single-operator (17% vs 30%).**
+with no committed answer. **Mixed training roughly halves the drift vs single-operator (18% vs 31%).**
 
 ### 5.6 Interference budget (single-operator vs mixed)
 
@@ -208,21 +247,23 @@ decision/ability layer (§5.3–5.4).
 
 ## 7. Limitations & threats to validity (please scrutinize)
 
-1. **`ability|resist` is not horizontally comparable across runs** — the denominator is the
-   resisted subset, which differs per run (floor/full resist less ⇒ smaller, easier subset ⇒
-   inflated ability). Directional reads (v3 injects vs v4 doesn't) are robust; absolute cross-run
-   arithmetic comparisons are not. *Round-2 todo: recompute ability on a matched-difficulty subset.*
+1. **~~`ability|resist` not comparable across runs~~ — RESOLVED (A3).** Re-scored on the common
+   resisted subset (same items, §5.3 matched-subset table): v3 targeted injects (+~0.7), v4 targeted
+   ≈ floor (±0.02). The "ability not injected in v4" claim is now a clean cross-run result, not a
+   denominator artifact.
 2. **v3 floor may also be underfit** — `scaffold_only` keep-cell accuracy is only 0.22, the same
    smell as the v4 underfit floor. The B′ contrast survives (it rests on targeted absolute values:
-   v3 ability 0.78–1.0 vs v4 0.30–0.46), but the v3 **x-axis margin** would be cleaner with a
-   convergent v3 floor. *Candidate PHASE-1 retrain.*
+   v3 ability 0.78–1.0 vs v4 0.30–0.46, and the matched-subset confirms it), but the v3 **x-axis
+   margin** would be cleaner with a convergent v3 floor. **IN PROGRESS (A1):** retraining a
+   convergent v3 floor (`scaffold_conv_v3`, 30 epoch) and re-scoring the v3 x-axis.
 3. **Modulation is currently a TWO-REGIME contrast, not a continuous curve** — two clusters
    (v3 margin≈0, v4 margin≈0.3–0.4). A reviewer may object "two points are not a curve."
    *This is exactly what v5 (a middle-margin domain) would fill.*
 4. **selectivity ≈ 0 in v4** — must be stated plainly; v4 is generalizing decision induction, not
    operator-selective like v3.
-5. **transfer `answered-acc` definition** — mixed model's 76% partly includes fallback-extracted
-   numbers; the drift (no-answer) comparison 30% vs 17% is the robust part.
+5. **~~transfer `answered-acc` definition~~ — TIGHTENED (A4).** Commitment now requires an explicit
+   final-answer line or a non-empty numeric JSON `final_answer`; fallback numbers count as drift.
+   Clean drift comparison: single-op 31% vs mixed 18%.
 6. **diagnosis_base 33%** is a format-mismatch lower anchor (base doesn't emit actionized JSON), not
    the base's real ability (transfer shows 94%).
 

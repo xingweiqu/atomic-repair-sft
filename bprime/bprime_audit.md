@@ -18,6 +18,17 @@ _No retraining; only re-scoring of historical predict_outputs. All `ability_give
 | recompute | floor | 1.00 | 0.99 | 0.13 (n=178) | 0.13 |
 | recompute | targeted_recompute | 1.00 | 1.00 | 1.00 (n=180) | 1.00 |
 | recompute | full | 1.00 | 0.98 | 1.00 (n=177) | 0.98 |
+### v3: matched-subset ability (common resisted items — horizontally comparable)
+
+| cell | floor | targeted | full | n_common |
+|---|---|---|---|---|
+| override_wrong_claim | 0.28 | 0.92 | 1.00 | 39 |
+| verify_bridge | 0.10 | 0.76 | 1.00 | 21 |
+| verify_step | 0.00 | 0.93 | 1.00 | 60 |
+| recompute | 0.13 | 1.00 | 1.00 | 175 |
+
+_Same items for all three runs. If targeted ≈ floor ≈ full here, the intervention does NOT inject ability (it is gated by base) — a clean read, not a denominator artifact._
+
 
 ## v4: three-layer table (floor = scaffold_conv)
 
@@ -32,6 +43,16 @@ _No retraining; only re-scoring of historical predict_outputs. All `ability_give
 | recompute | floor | 1.00 | 0.60 | 0.42 (n=48) | 0.25 |
 | recompute | targeted_recompute | 1.00 | 0.97 | 0.33 (n=78) | 0.33 |
 | recompute | full | 1.00 | 0.57 | 0.46 (n=46) | 0.26 |
+### v4: matched-subset ability (common resisted items — horizontally comparable)
+
+| cell | floor | targeted | full | n_common |
+|---|---|---|---|---|
+| verify_step | 0.38 | 0.40 | 0.56 | 78 |
+| override_wrong_claim | 0.35 | 0.37 | 0.44 | 43 |
+| recompute | 0.43 | 0.40 | 0.48 | 42 |
+
+_Same items for all three runs. If targeted ≈ floor ≈ full here, the intervention does NOT inject ability (it is gated by base) — a clean read, not a denominator artifact._
+
 
 ## 0.3 Modulation curve — does targeted INJECT ability, vs the underlying-op margin
 

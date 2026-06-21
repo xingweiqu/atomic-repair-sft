@@ -421,17 +421,17 @@
       },
       "verify_step": {
         "acc": 0.6833,
-        "answered_acc": 0.9474,
-        "answered_n": 209,
+        "answered_acc": 0.9519,
+        "answered_n": 208,
         "n": 300,
-        "no_answer": 91
+        "no_answer": 92
       },
       "actionized_full": {
         "acc": 0.7167,
-        "answered_acc": 0.76,
-        "answered_n": 250,
+        "answered_acc": 0.7692,
+        "answered_n": 247,
         "n": 300,
-        "no_answer": 50
+        "no_answer": 53
       }
     },
     "selectivity": {

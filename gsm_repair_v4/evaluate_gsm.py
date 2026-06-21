@@ -93,14 +93,18 @@ def score_transfer(pred_path, src):
         # pred: the LAST "final answer is N" if present (avoid an in-think mention), else a
         # final_answer JSON field (repair-trained ckpts drift to actionized JSON on plain
         # tasks). Either of those = the model actually committed to an answer.
+        # ANSWERED (committed) iff there is an explicit final-answer line OR a non-empty,
+        # numeric-parseable JSON final_answer field. A fallback "last number in the text" is NOT
+        # a commitment -> counted as no-answer (drift). This keeps the drift numerator clean.
         answered = True
         pm = FINAL_RE.findall(raw)
         if pm:
             pa = numkey(pm[-1])
         else:
             o = parse(raw)
-            if o and o.get("final_answer") is not None:
-                pa = numkey(o["final_answer"])
+            fav = o.get("final_answer") if isinstance(o, dict) else None
+            if fav not in (None, "") and numkey(fav) is not None:
+                pa = numkey(fav)
             else:
                 answered, no_answer = False, no_answer + 1
                 nums = NUM_RE.findall(raw.replace(",", ""))

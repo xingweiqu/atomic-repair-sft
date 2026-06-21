@@ -92,6 +92,37 @@ def cell_metrics(preds, src, cell, matchfn):
                 final_acc=rt(correct, n))
 
 
+def resisted_correct_sets(preds, src, cell, matchfn):
+    """Item indices where the run RESISTED the wrong value, and where it was also CORRECT.
+    Used for the matched-difficulty ability comparison (A3): intersecting the resisted sets
+    across runs gives the SAME items, so ability is horizontally comparable (kills the §6.1
+    denominator confound)."""
+    if preds is None:
+        return set(), set()
+    idx = [i for i, r in enumerate(src) if r["policy"] == cell]
+    resisted, correct = set(), set()
+    for i in idx:
+        raw = preds[i] if i < len(preds) else ""
+        o = parse(raw)
+        fa = matchfn(extract_final(o, raw))
+        g = matchfn(src[i]["gold_answer"])
+        bad = set()
+        t = matchfn(src[i].get("tentative_answer"))
+        if t is not None and t != g:
+            bad.add(t)
+        pw = src[i].get("planted_wrong_answer")
+        if pw is not None:
+            pk = matchfn(pw)
+            if pk is not None and pk != g:
+                bad.add(pk)
+        if fa is None or fa in bad:
+            continue
+        resisted.add(i)
+        if fa == g:
+            correct.add(i)
+    return resisted, correct
+
+
 def r_gold(r):
     return r["gold_answer"]
 
@@ -115,6 +146,12 @@ def pctv(x):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--v3_floor", default=DOMAINS["v3"]["floor"],
+                    help="v3 floor run (use scaffold_conv once A1 retrain lands)")
+    a = ap.parse_args()
+    DOMAINS["v3"]["floor"] = a.v3_floor
     out_md = Path("bprime/bprime_audit.md")
     L = ["# B' audit (PHASE 0) — three-layer re-scoring of existing v3 + v4 predictions", "",
          "_No retraining; only re-scoring of historical predict_outputs. All `ability_given_resist` "
@@ -157,6 +194,25 @@ def main():
                     y = None
                     note = f"conv denom small (dr={dr:+.2f})"
                 mod_points.append((dom, cell, x, y, round(dr, 3), round(df, 3), round(dab, 3), note))
+        # matched-difficulty ability (A3): ability on the COMMON resisted subset (same items
+        # across runs -> horizontally comparable; kills the §6.1 denominator confound).
+        L += [f"### {dom}: matched-subset ability (common resisted items — horizontally comparable)", "",
+              "| cell | floor | targeted | full | n_common |", "|---|---|---|---|---|"]
+        for cell in cfg["cells"]:
+            tgt_p = load_run(cfg["pred"], f"targeted_{cell}")
+            rs_f, cor_f = resisted_correct_sets(floor_p, src, cell, mf)
+            rs_t, cor_t = resisted_correct_sets(tgt_p, src, cell, mf)
+            rs_u, cor_u = resisted_correct_sets(full_p, src, cell, mf)
+            common = rs_f & rs_t & rs_u
+            if not common:
+                L.append(f"| {cell} | — | — | — | 0 |")
+                continue
+            ab = lambda cor: f"{len(cor & common) / len(common):.2f}"
+            L.append(f"| {cell} | {ab(cor_f)} | {ab(cor_t)} | {ab(cor_u)} | {len(common)} |")
+        L += ["", "_Same items for all three runs. If targeted ≈ floor ≈ full here, the "
+              "intervention does NOT inject ability (it is gated by base) — a clean read, not a "
+              "denominator artifact._", ""]
+
         # keep-cell drift (in-domain over-repair proxy)
         kd = {}
         for name, pr in [("floor", floor_p), ("full", full_p)] + \

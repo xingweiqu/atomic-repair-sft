@@ -42,8 +42,8 @@ Rows = trained on ONLY this operator. Cols = eval on this operator. Diagonal = T
 | model | acc | answered acc | answered n | no-answer |
 |---|---|---|---|---|
 | base | 94% | 100% | 277 | 23 |
-| verify_step | 68% | 95% | 209 | 91 |
-| actionized_full | 72% | 76% | 250 | 50 |
+| verify_step | 68% | 95% | 208 | 92 |
+| actionized_full | 72% | 77% | 247 | 53 |
 
 ## v3 (synthetic) ↔ v4 (GSM) — Targeted Gain on shared operators
 
