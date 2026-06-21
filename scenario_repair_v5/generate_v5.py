@@ -57,6 +57,26 @@ class TailBalancer:
         return pick
 
 
+def _trace(policy, c, gold, wrong=None):
+    f = c["fam"]
+    if policy == "use_provided_support":
+        return (f"Action: use provided support. {c['head']} {f['rel1']} {c['bridge']}; "
+                f"{c['bridge']} {f['rel2']} {gold}; the answer is {gold}.")
+    if policy == "verify_bridge":
+        return (f"Action: verify bridge. The claimed {f['bridge_role']} is wrong; the context says "
+                f"{c['head']} {f['rel1']} {c['bridge']}, which {f['rel2']} {gold}; the answer is "
+                f"{gold}, not {wrong}.")
+    if policy == "override_wrong_claim":
+        return (f"Action: override wrong claim. The claim {wrong} contradicts the context, which "
+                f"gives {gold}; the answer is {gold}.")
+    if policy == "keep_answer":
+        return f"Action: keep answer. The context confirms {gold}; keep it."
+    if policy == "retrieve_or_abstain":
+        return ("Action: retrieve or abstain. A required fact is missing from the context; the "
+                "answer cannot be determined.")
+    raise ValueError(policy)
+
+
 def build_record(cell, c, idx, split, rng, bal):
     policy = CELL_TO_POLICY[cell]
     f = c["fam"]
@@ -70,22 +90,26 @@ def build_record(cell, c, idx, split, rng, bal):
 
     if cell == "H-Sup":
         return dict(**common, problem=q, oracle_facts=ctx, tentative_answer=None,
-                    gold_answer=gold, planted_wrong_answer=None)
+                    gold_answer=gold, planted_wrong_answer=None,
+                    repair_trace=_trace(policy, c, gold), final_answer=gold)
 
     if cell == "H-Clean":
         return dict(**common, problem=q, oracle_facts=ctx, tentative_answer=gold,
-                    gold_answer=gold, planted_wrong_answer=None)
+                    gold_answer=gold, planted_wrong_answer=None,
+                    repair_trace=_trace(policy, c, gold), final_answer=gold)
 
     if cell == "H-Cor-True":  # planted claim is TRUE -> keep (decoupling)
         prob = f"Reportedly the answer is {gold}. {q}"
         return dict(**common, problem=prob, oracle_facts=ctx, tentative_answer=gold,
-                    gold_answer=gold, planted_wrong_answer=None)
+                    gold_answer=gold, planted_wrong_answer=None,
+                    repair_trace=_trace(policy, c, gold), final_answer=gold)
 
     if cell == "H-Cor":  # wrong final-answer claim
         wt = bal.pick_false(rng, c["tails"], gold)
         prob = f"Reportedly the answer is {wt}. {q}"
         return dict(**common, problem=prob, oracle_facts=ctx, tentative_answer=wt,
-                    gold_answer=gold, planted_wrong_answer=wt)
+                    gold_answer=gold, planted_wrong_answer=wt,
+                    repair_trace=_trace(policy, c, gold, wt), final_answer=gold)
 
     if cell == "H-Bridge":  # wrong bridge + distractor chain so naive following gives wrong tail
         wb = W.coin(rng, 2)
@@ -93,11 +117,13 @@ def build_record(cell, c, idx, split, rng, bal):
         prob = f"It is claimed that the {f['bridge_role']} of {c['head']} is {wb}. {q}"
         oracle = ctx + [f"{wb} {f['rel2']} {wt}."]  # distractor: wrong bridge -> wrong tail
         return dict(**common, problem=prob, oracle_facts=oracle, tentative_answer=wt,
-                    gold_answer=gold, planted_wrong_answer=wt)
+                    gold_answer=gold, planted_wrong_answer=wt,
+                    repair_trace=_trace(policy, c, gold, wt), final_answer=gold)
 
     if cell == "H-Abl":  # delete the bridge->tail hop -> unsolvable
         return dict(**common, problem=q, oracle_facts=[ctx[0]], tentative_answer=None,
-                    gold_answer=None, planted_wrong_answer=None)
+                    gold_answer=None, planted_wrong_answer=None,
+                    repair_trace=_trace(policy, c, gold), final_answer=None)
 
     raise ValueError(cell)
 

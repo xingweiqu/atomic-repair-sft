@@ -1,0 +1,21 @@
+# v5-clean predict on the held-out eval (1600 items).
+model_name_or_path: /mnt/hdfs/xwqu/scenario-repair-v5/output/actionized_full
+dataset: v5_actionized_eval
+eval_dataset: v5_actionized_eval
+dataset_dir: ./data_v5
+template: qwen
+cutoff_len: 1024
+stage: sft
+do_predict: true
+finetuning_type: full
+seed: 42
+per_device_eval_batch_size: 8
+predict_with_generate: true
+max_new_tokens: 256
+do_sample: false
+temperature: 0.0
+top_p: 1.0
+bf16: true
+output_dir: /mnt/hdfs/xwqu/scenario-repair-v5/output/predict_actionized_full
+overwrite_output_dir: true
+report_to: none
