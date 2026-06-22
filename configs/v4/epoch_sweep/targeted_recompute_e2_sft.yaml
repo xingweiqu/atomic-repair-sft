@@ -1,0 +1,27 @@
+# epoch-sweep: targeted_recompute @ 2 epoch(s). ONLY num_train_epochs/output_dir differ from round-1 v4.
+model_name_or_path: /mnt/hdfs/xwqu/Qwen3-8B
+dataset: v4_targeted_recompute_train
+dataset_dir: ./data_v4
+template: qwen
+cutoff_len: 1024
+overwrite_cache: true
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+seed: 42
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 2
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+gradient_checkpointing: true
+output_dir: /mnt/hdfs/xwqu/gsm-repair-v4/output/targeted_recompute_e2
+logging_steps: 10
+save_steps: 100000
+save_total_limit: 1
+overwrite_output_dir: true
+plot_loss: true
+report_to: none

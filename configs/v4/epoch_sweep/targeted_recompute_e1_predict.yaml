@@ -1,0 +1,21 @@
+# epoch-sweep predict: targeted_recompute @ 1 epoch(s) on v4_actionized_eval (480 items).
+model_name_or_path: /mnt/hdfs/xwqu/gsm-repair-v4/output/targeted_recompute_e1
+dataset: v4_actionized_eval
+eval_dataset: v4_actionized_eval
+dataset_dir: ./data_v4
+template: qwen
+cutoff_len: 1024
+stage: sft
+do_predict: true
+finetuning_type: full
+seed: 42
+per_device_eval_batch_size: 8
+predict_with_generate: true
+max_new_tokens: 384
+do_sample: false
+temperature: 0.0
+top_p: 1.0
+bf16: true
+output_dir: /mnt/hdfs/xwqu/gsm-repair-v4/output/predict_targeted_recompute_e1
+overwrite_output_dir: true
+report_to: none
