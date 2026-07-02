@@ -24,3 +24,5 @@ __pycache__/
 .venv/
 venv/
 data_v4/gsm8k_cache.json
+__pycache__/
+.DS_Store
