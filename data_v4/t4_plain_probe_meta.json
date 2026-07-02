@@ -1,0 +1,170 @@
+[
+ {
+  "eval_id": "G-Step_eval_000008",
+  "source_id": "gsm_test_00212",
+  "policy": "verify_step",
+  "gold": "5"
+ },
+ {
+  "eval_id": "G-Step_eval_000010",
+  "source_id": "gsm_test_00083",
+  "policy": "verify_step",
+  "gold": "600"
+ },
+ {
+  "eval_id": "G-Step_eval_000030",
+  "source_id": "gsm_test_00929",
+  "policy": "verify_step",
+  "gold": "60"
+ },
+ {
+  "eval_id": "G-Step_eval_000031",
+  "source_id": "gsm_test_00091",
+  "policy": "verify_step",
+  "gold": "28"
+ },
+ {
+  "eval_id": "G-Step_eval_000079",
+  "source_id": "gsm_test_00277",
+  "policy": "verify_step",
+  "gold": "4"
+ },
+ {
+  "eval_id": "G-Claim_eval_000010",
+  "source_id": "gsm_test_01262",
+  "policy": "override_wrong_claim",
+  "gold": "12"
+ },
+ {
+  "eval_id": "G-Claim_eval_000021",
+  "source_id": "gsm_test_01278",
+  "policy": "override_wrong_claim",
+  "gold": "665"
+ },
+ {
+  "eval_id": "G-Claim_eval_000025",
+  "source_id": "gsm_test_00904",
+  "policy": "override_wrong_claim",
+  "gold": "8"
+ },
+ {
+  "eval_id": "G-Claim_eval_000029",
+  "source_id": "gsm_test_00817",
+  "policy": "override_wrong_claim",
+  "gold": "15"
+ },
+ {
+  "eval_id": "G-Claim_eval_000038",
+  "source_id": "gsm_test_01024",
+  "policy": "override_wrong_claim",
+  "gold": "300"
+ },
+ {
+  "eval_id": "G-Claim_eval_000039",
+  "source_id": "gsm_test_00890",
+  "policy": "override_wrong_claim",
+  "gold": "25"
+ },
+ {
+  "eval_id": "G-Claim_eval_000041",
+  "source_id": "gsm_test_00429",
+  "policy": "override_wrong_claim",
+  "gold": "13"
+ },
+ {
+  "eval_id": "G-Claim_eval_000044",
+  "source_id": "gsm_test_01139",
+  "policy": "override_wrong_claim",
+  "gold": "1"
+ },
+ {
+  "eval_id": "G-Claim_eval_000049",
+  "source_id": "gsm_test_00458",
+  "policy": "override_wrong_claim",
+  "gold": "35"
+ },
+ {
+  "eval_id": "G-Claim_eval_000056",
+  "source_id": "gsm_test_00824",
+  "policy": "override_wrong_claim",
+  "gold": "52"
+ },
+ {
+  "eval_id": "G-Claim_eval_000060",
+  "source_id": "gsm_test_01318",
+  "policy": "override_wrong_claim",
+  "gold": "14"
+ },
+ {
+  "eval_id": "G-Claim_eval_000066",
+  "source_id": "gsm_test_00959",
+  "policy": "override_wrong_claim",
+  "gold": "7"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000004",
+  "source_id": "gsm_test_00421",
+  "policy": "recompute",
+  "gold": "12"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000012",
+  "source_id": "gsm_test_00560",
+  "policy": "recompute",
+  "gold": "45"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000023",
+  "source_id": "gsm_test_00987",
+  "policy": "recompute",
+  "gold": "3"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000044",
+  "source_id": "gsm_test_01294",
+  "policy": "recompute",
+  "gold": "36"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000051",
+  "source_id": "gsm_test_00066",
+  "policy": "recompute",
+  "gold": "48"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000063",
+  "source_id": "gsm_test_01222",
+  "policy": "recompute",
+  "gold": "350"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000068",
+  "source_id": "gsm_test_01132",
+  "policy": "recompute",
+  "gold": "45000"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000069",
+  "source_id": "gsm_test_01235",
+  "policy": "recompute",
+  "gold": "60"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000070",
+  "source_id": "gsm_test_00127",
+  "policy": "recompute",
+  "gold": "120"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000077",
+  "source_id": "gsm_test_00498",
+  "policy": "recompute",
+  "gold": "40"
+ },
+ {
+  "eval_id": "G-Recompute_eval_000079",
+  "source_id": "gsm_test_01148",
+  "policy": "recompute",
+  "gold": "9"
+ }
+]

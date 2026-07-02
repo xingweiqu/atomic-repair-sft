@@ -1,146 +1,154 @@
 {
-  "v4_actionized_train": {
-    "file_name": "actionized_full_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_actionized_eval": {
-    "file_name": "actionized_full_eval.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_cot_train": {
-    "file_name": "cot_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_cot_eval": {
-    "file_name": "cot_eval.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_scaffold_only_train": {
-    "file_name": "format_scaffold_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_transfer_eval": {
-    "file_name": "transfer_eval.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_targeted_verify_step_train": {
-    "file_name": "per_policy/verify_step_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_random_verify_step_train": {
-    "file_name": "controls/random_verify_step_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_wrongtarget_verify_step_train": {
-    "file_name": "controls/wrongtarget_verify_step_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_targeted_override_wrong_claim_train": {
-    "file_name": "per_policy/override_wrong_claim_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_random_override_wrong_claim_train": {
-    "file_name": "controls/random_override_wrong_claim_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_wrongtarget_override_wrong_claim_train": {
-    "file_name": "controls/wrongtarget_override_wrong_claim_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_targeted_recompute_train": {
-    "file_name": "per_policy/recompute_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_random_recompute_train": {
-    "file_name": "controls/random_recompute_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_wrongtarget_recompute_train": {
-    "file_name": "controls/wrongtarget_recompute_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_targeted_retrieve_or_abstain_train": {
-    "file_name": "per_policy/retrieve_or_abstain_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_random_retrieve_or_abstain_train": {
-    "file_name": "controls/random_retrieve_or_abstain_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
-  },
-  "v4_wrongtarget_retrieve_or_abstain_train": {
-    "file_name": "controls/wrongtarget_retrieve_or_abstain_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
-    }
+ "v4_actionized_train": {
+  "file_name": "actionized_full_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
   }
+ },
+ "v4_actionized_eval": {
+  "file_name": "actionized_full_eval.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_cot_train": {
+  "file_name": "cot_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_cot_eval": {
+  "file_name": "cot_eval.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_scaffold_only_train": {
+  "file_name": "format_scaffold_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_transfer_eval": {
+  "file_name": "transfer_eval.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_targeted_verify_step_train": {
+  "file_name": "per_policy/verify_step_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_random_verify_step_train": {
+  "file_name": "controls/random_verify_step_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_wrongtarget_verify_step_train": {
+  "file_name": "controls/wrongtarget_verify_step_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_targeted_override_wrong_claim_train": {
+  "file_name": "per_policy/override_wrong_claim_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_random_override_wrong_claim_train": {
+  "file_name": "controls/random_override_wrong_claim_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_wrongtarget_override_wrong_claim_train": {
+  "file_name": "controls/wrongtarget_override_wrong_claim_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_targeted_recompute_train": {
+  "file_name": "per_policy/recompute_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_random_recompute_train": {
+  "file_name": "controls/random_recompute_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_wrongtarget_recompute_train": {
+  "file_name": "controls/wrongtarget_recompute_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_targeted_retrieve_or_abstain_train": {
+  "file_name": "per_policy/retrieve_or_abstain_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_random_retrieve_or_abstain_train": {
+  "file_name": "controls/random_retrieve_or_abstain_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_wrongtarget_retrieve_or_abstain_train": {
+  "file_name": "controls/wrongtarget_retrieve_or_abstain_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "v4_t4_plain_probe": {
+  "file_name": "t4_plain_probe.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
 }

@@ -230,6 +230,23 @@ def cell_account(items, vf, vt, leaks, idx):
     return out
 
 
+# R-4 (C-4a, frozen by qc/LOOP1_RULINGS.md): per-domain pre-repair reference run.
+# Any paper claim about ability injected/spent may ONLY cite the pre-repair columns.
+PREREPAIR = {"v4": "diagnosis_base", "v5": "diagnosis_base",
+             "v3": "factonly", "v3_1": "factonly", "v2": "factonly"}
+
+
+def prerepair_matched(vp, vt, idx):
+    """Pairwise matched Δability vs the pre-repair reference (R-4)."""
+    m = [i for i in idx if vp[i]["resist"] == 1 and vt[i]["resist"] == 1
+         and vp[i]["parsed_strict"] and vt[i]["parsed_strict"]]
+    if not m:
+        return None, 0
+    ap = sum(vp[i]["ability"] for i in m) / len(m)
+    at = sum(vt[i]["ability"] for i in m) / len(m)
+    return at - ap, len(m)
+
+
 def main():
     reg = dom_registry()
     rows, inventory = [], []
@@ -283,6 +300,13 @@ def main():
                     rows.append(base)
                     continue
                 body = cell_account(items, scored[floor], vt, leaks, idx)
+                # R-4: ability-claim column vs pre-repair reference
+                pr = PREREPAIR.get(dom)
+                if pr and pr in scored and pr != run:
+                    d_pre, n_pre = prerepair_matched(scored[pr], vt, idx)
+                    base["d_a_prerepair"] = d_pre
+                    base["n_matched_pre"] = n_pre
+                    base["lowpower_pre"] = "LOWPOWER" if n_pre < 50 else ""
                 # C-2 memo: underfit-floor baseline difference
                 uf = R.get("underfit")
                 if uf and uf in scored and uf != run:
@@ -296,7 +320,8 @@ def main():
     cols = ["run_id", "domain", "ckpt", "cell", "n", "floor", "epochs", "d_raw",
             "F_judge", "M", "F_parse", "D", "A", "ND", "residual", "F_floor",
             "n_clean", "n_P", "n_w", "r0", "r1", "a0", "a1",
-            "d_a_matched", "n_matched", "lowpower", "w_source",
+            "d_a_matched", "n_matched", "lowpower",
+            "d_a_prerepair", "n_matched_pre", "lowpower_pre", "w_source",
             "abs_strict_t", "abs_strict_f", "parse_rate_t", "grey", "note"]
     with (ROOT / "ledger/master_ledger.csv").open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")

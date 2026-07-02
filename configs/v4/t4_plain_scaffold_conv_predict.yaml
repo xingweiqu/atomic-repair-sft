@@ -1,0 +1,23 @@
+# T4 (qc/LOOP1_RULINGS.md §2): plain-mode probe of the CONVERGENT floor on the 28
+# matched floor-wrong items — decides H1 (ability tax) vs H2 (mode interference).
+# max_new_tokens=2048: plain GSM reasoning needs room (transfer truncation lesson, run_v4_22).
+model_name_or_path: /mnt/hdfs/xwqu/gsm-repair-v4/output/scaffold_conv
+dataset: v4_t4_plain_probe
+eval_dataset: v4_t4_plain_probe
+dataset_dir: ./data_v4
+template: qwen
+cutoff_len: 1024
+stage: sft
+do_predict: true
+finetuning_type: full
+seed: 42
+per_device_eval_batch_size: 8
+predict_with_generate: true
+max_new_tokens: 2048
+do_sample: false
+temperature: 0.0
+top_p: 1.0
+bf16: true
+output_dir: /mnt/hdfs/xwqu/gsm-repair-v4/output/predict_t4_plain_scaffold_conv
+overwrite_output_dir: true
+report_to: none
