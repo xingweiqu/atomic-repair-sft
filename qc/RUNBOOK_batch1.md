@@ -2,15 +2,24 @@
 
 > 依据:qc/LOOP1_RULINGS.md(T4、D-7、R-8 同批)。
 > 标准:`git pull` 后**不改任何文件**按顺序复制粘贴。每步给预期产物与失败自查点。
-> 前置:`cd <repo> && git checkout gain-accounting-v1 && git pull`;
-> `LF=<LLaMA-Factory 目录>`(与历史 run 相同)。
+> 前置:`cd <repo> && git checkout gain-accounting-v1 && git pull`。
+> **所有 llamafactory-cli 命令都在 <repo> 目录下执行**(configs 用相对 `dataset_dir: ./data_vX`,
+> 与历史脚本 run_v4_20 相同姿势;不要 cd 进 LLaMA-Factory 目录)。predict 前照历史脚本做环境准备:
+>
+> ```bash
+> unset FORCE_TORCHRUN NPROC_PER_NODE
+> export CUDA_VISIBLE_DEVICES=0   # predict 单卡即可
+> ```
+>
+> 【勘误 2026-07-03】首版此处误写 `cd $LF`,导致 dataset_info 相对路径找不到(codex 按红线
+> 停下报告,正确)。configs 本身无误、未改动。
 
 ## Job 1 — T4 素题判决(2 条 predict,~几分钟)
 
 ```bash
-cd $LF
-llamafactory-cli train <repo>/configs/v4/t4_plain_scaffold_conv_predict.yaml
-llamafactory-cli train <repo>/configs/v4/t4_plain_prerepair_predict.yaml
+cd <repo>
+llamafactory-cli train configs/v4/t4_plain_scaffold_conv_predict.yaml
+llamafactory-cli train configs/v4/t4_plain_prerepair_predict.yaml
 ```
 - 预期产物:`/mnt/hdfs/xwqu/gsm-repair-v4/output/predict_t4_plain_{scaffold_conv,prerepair}/generated_predictions.jsonl`(各 **28 行**)。
 - 自查:行数≠28 → 数据集没注册,确认 `data_v4/dataset_info.json` 里有 `v4_t4_plain_probe`(本分支已含,pull 即有)。
@@ -31,8 +40,8 @@ python3 scripts/pass8_gsm.py --model /mnt/hdfs/xwqu/Qwen3-8B --out data_v4/pass8
 ## Job 3 — R-8 v2.1 补地板(1 条 predict)
 
 ```bash
-cd $LF
-llamafactory-cli train <repo>/configs/v2_1/factonly_on_v21_predict.yaml
+cd <repo>
+llamafactory-cli train configs/v2_1/factonly_on_v21_predict.yaml
 ```
 - 预期产物:`/mnt/hdfs/xwqu/atomic-repair-sft-v2_1/output/predict_factonly_on_v21/generated_predictions.jsonl`(**600 行**)。
 - 自查:模型路径是 `output_v2/inject`(v2 的知识地板 ckpt);若目录被清理,先按 v2 configs 重训 inject(不太可能,HDFS 持久)。
