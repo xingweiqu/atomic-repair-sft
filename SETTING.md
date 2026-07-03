@@ -60,7 +60,7 @@
 
 ## B. 训练
 8. **框架**：LLaMA-Factory，**full-param SFT**，DeepSpeed **ZeRO-3**（`[v4] configs/ds_z3_config.json:11 "stage":3`，无 offload）。
-9. **底模型**：relay 自 v2 inject ckpt `/mnt/hdfs/xwqu/atomic-repair-sft-v2/output_v2/inject`（`[v4] configs/v3/*_sft.yaml:2`）。该 inject = base + 50ep 事实注入（`[v4] configs/v2/inject_sft.yaml:16 num_train_epochs:50`）；**inject 的 base 模型全路径：UNVERIFIED**（未读 inject_sft 的 model 字段；推测 `/mnt/hdfs/xwqu/Qwen3-8B` = Qwen3-8B-Instruct）。
+9. **底模型**：relay 自 v2 inject ckpt `/mnt/hdfs/xwqu/atomic-repair-sft-v2/output_v2/inject`（`[v4] configs/v3/*_sft.yaml:2`）。该 inject = base + 50ep 事实注入（`[v4] configs/v2/inject_sft.yaml:16 num_train_epochs:50`）；inject 的 base = `/mnt/hdfs/xwqu/Qwen3-8B` = **Qwen/Qwen3-8B(Instruct/post-trained)**——已验证:服务器 `head -5 /mnt/hdfs/xwqu/Qwen3-8B/README.md` 模型卡 `license_link: huggingface.co/Qwen/Qwen3-8B`(2026-07-03,qc/DISCREPANCIES.md D-6 CLOSED)。措辞按 LOOP1_RULINGS:论文统一称 **pre-repair model**。
 10. **超参**：见 B 节末统一对照表。v3 全部 `num_train_epochs:3`（`configs/v3/` 27 个 SFT 配置 uniq 均为 3）。
 11. **★ 训练充分度**：`scaffold_only` 3ep = **欠拟合**（keep-cell acc 0.22、format-collapse），故新增 **`scaffold_conv` 30ep** 收敛 floor（`[b-prime] configs/v3_1/scaffold_conv_sft.yaml:1–3, :18 num_train_epochs:30`）。注意：comparison_v3 的 Exp2 矩阵 floor = **Fact-only**；bprime_audit 的三层表 floor = **scaffold_conv(30ep)**。
 12. **训练分支清单**（`configs/v3/` + `configs/v3_1/`，relay 自 output_v2/inject）：`factonly`、`cot`、`actionized_full`(`v3_actionized_train`)、`scaffold_only`(3ep)、`scaffold_conv`(30ep, in v3_1)、`targeted_<op>`×6、`random_<op>`×6、`wrongtarget_<op>`×6、`cumulative_M1–M6`。每分支 dataset 名见各 yaml `dataset:` 字段；ckpt 路径见各 yaml `output_dir`（**逐分支 output_dir 全路径未逐一抄录：UNVERIFIED**）。

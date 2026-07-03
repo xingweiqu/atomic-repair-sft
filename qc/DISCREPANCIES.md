@@ -50,7 +50,10 @@
   per-item,<30 行);GSM 规则按 v1 §1.3-M 新写(最终数值+关键中间值 n-gram + 模板检测),
   以 v4 预期 leak≈0 为阴性对照。
 
-## D-6 A7 底模型型号本地不可闭合 【OPEN → 需 Xingwei 跑 1 条服务器命令】
+## D-6 A7 底模型型号本地不可闭合 【CLOSED 2026-07-03】
+- **裁决结论**:服务器 `head -5 /mnt/hdfs/xwqu/Qwen3-8B/README.md` → 模型卡 frontmatter
+  `license_link: https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE` = **Qwen/Qwen3-8B(Instruct)**。
+  Loop 3/5 门禁解除。论文措辞按 LOOP1_RULINGS D-6:统一 **pre-repair model**。
 - **指令假设**(A7):给出 config 级证据判定 Base 还是 Instruct。
 - **实际**:本地证据全部指向 **Instruct**——v2–v5 configs 用 `/mnt/hdfs/xwqu/Qwen3-8B`(HF 命名法
   无 -Base 后缀即 post-trained 版;v0/v1 的 Base 路径显式带 `-Base`)、`README_v2.md:46` 写明
