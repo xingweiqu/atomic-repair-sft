@@ -112,9 +112,44 @@ def main():
     ap.add_argument("--out", default="data_v4/pass8_results.jsonl")
     ap.add_argument("--rescore", action="store_true",
                     help="skip generation; re-score from <out>.samples_raw.jsonl.gz")
+    ap.add_argument("--shard", default=None, metavar="i:N",
+                    help="data-parallel shard: process items[i::N], write <out>.shard{i}")
+    ap.add_argument("--merge", type=int, default=None, metavar="N",
+                    help="merge N shard outputs into <out> (no GPU)")
     args = ap.parse_args()
 
     items = build_pool(args.pool, args.limit)
+
+    if args.merge:
+        # stitch shards back into pool order (items[i::N] round-robin)
+        rows = {}
+        for i in range(args.merge):
+            for l in Path(f"{args.out}.shard{i}").open():
+                r = json.loads(l)
+                if "_header" not in r:
+                    rows[r["id"]] = l
+        assert len(rows) == len(items), f"merge mismatch: {len(rows)} vs {len(items)}"
+        with gzip.open(args.out + ".samples_raw.jsonl.gz", "wt") as fo:
+            for i in range(args.merge):
+                with gzip.open(f"{args.out}.shard{i}.samples_raw.jsonl.gz", "rt") as fi:
+                    for l in fi:
+                        fo.write(l)
+        with Path(args.out).open("w") as f:
+            f.write(json.dumps({"_header": {"model": args.model, "k": K, "temperature": TEMP,
+                                            "top_p": TOP_P, "top_k": TOP_K, "seed": 42,
+                                            "n_items": len(items), "version": VERSION,
+                                            "no_think": True, "max_tokens": 2048,
+                                            "pool": args.pool, "shards": args.merge}}) + "\n")
+            for it in items:
+                f.write(rows[it["id"]])
+        print(f"merged {args.merge} shards -> {args.out} ({len(items)} items)")
+        return
+
+    if args.shard:
+        i, n = map(int, args.shard.split(":"))
+        items = items[i::n]
+        args.out = f"{args.out}.shard{i}"
+        print(f"shard {i}/{n}: {len(items)} items -> {args.out}", flush=True)
     raw_path = Path(args.out + ".samples_raw.jsonl.gz")
 
     if args.rescore:
