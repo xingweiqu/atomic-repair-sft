@@ -57,3 +57,21 @@ llamafactory-cli train configs/v2_1/factonly_on_v21_predict.yaml
 
 回传后本地动作(CC):T4 判读 → R-5 命名裁决材料;pass@8 → Loop 2A 桶边界 + T5 在难题桶复测;
 R-8 → v2.1 七行转细账、账本重建。
+
+---
+
+## batch-1b(增补 2026-07-04)— pass@8 校准重跑(v2 脚本)
+
+v1 calib500 疑受 thinking-模式截断污染(见 qc/LOOP1_5_T4_VERDICT.md §4),脚本已升 v2
+(/no_think + max_tokens 2048 + 首 20 题原样本 sidecar)。重跑:
+
+```bash
+cd <repo> && git pull
+python3 scripts/pass8_gsm.py --model /mnt/hdfs/xwqu/Qwen3-8B --limit 500 --out data_v4/pass8_calib500_v2.jsonl
+```
+
+- 预期产物:`data_v4/pass8_calib500_v2.jsonl`(501 行,header 含 "version": 2、"no_think": true)
+  + `data_v4/pass8_calib500_v2.samples20.json`(验尸用原样本)。
+- 回传:两个文件放 `data_v4/`,单独 commit,message 固定
+  "server: batch-1b pass@8 calib500 v2 (no_think)",只含这 2 个文件。
+- 全量 1319 仍等本地确认桶边界后另行指令。

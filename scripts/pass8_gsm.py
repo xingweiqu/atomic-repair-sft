@@ -29,6 +29,10 @@ from gsm_repair_v4.gsm_world import load_gsm  # noqa: E402
 
 K = 8
 TEMP, TOP_P, TOP_K = 0.7, 0.8, 20  # Qwen3 official non-thinking recommendation
+VERSION = 2  # v2 (2026-07-04): force non-thinking via /no_think + max_tokens 2048 + sample dump.
+# v1 CAVEAT: chat template may default to Qwen3 THINKING mode; <think> can eat the 1024-token
+# budget -> truncation scored as wrong -> inflates the [0-25%] bucket. v1 calib500 numbers are
+# therefore SUSPECT until re-run with v2 (repair evals all use non-thinking `template: qwen`).
 INSTR = ("Solve the math word problem. Reason step by step, then end with a line exactly "
          "in the form 'The final answer is N.'")
 
@@ -50,13 +54,13 @@ def main():
     args = ap.parse_args()
 
     items = load_gsm("test", limit=args.limit)
-    prompts = [f"{INSTR}\n{it['question']}" for it in items]
+    prompts = [f"{INSTR}\n{it['question']} /no_think" for it in items]  # soft-switch: non-thinking
 
     try:
         from vllm import LLM, SamplingParams
         llm = LLM(model=args.model, dtype="bfloat16")
         sp = SamplingParams(n=K, temperature=TEMP, top_p=TOP_P, top_k=TOP_K,
-                            max_tokens=1024, seed=42)
+                            max_tokens=2048, seed=42)
         # chat template = qwen (align with LF `template: qwen`)
         outs = llm.chat([[{"role": "user", "content": p}] for p in prompts], sp)
         samples = [[o.text for o in out.outputs] for out in outs]
@@ -73,19 +77,24 @@ def main():
                                            tokenize=False, add_generation_prompt=True)
             ids = tok(text, return_tensors="pt").to(model.device)
             out = model.generate(**ids, do_sample=True, temperature=TEMP, top_p=TOP_P,
-                                 top_k=TOP_K, num_return_sequences=K, max_new_tokens=1024)
+                                 top_k=TOP_K, num_return_sequences=K, max_new_tokens=2048)
             samples.append([tok.decode(o[ids["input_ids"].shape[1]:],
                                        skip_special_tokens=True) for o in out])
 
     with Path(args.out).open("w") as f:
         f.write(json.dumps({"_header": {"model": args.model, "k": K, "temperature": TEMP,
                                         "top_p": TOP_P, "top_k": TOP_K, "seed": 42,
-                                        "n_items": len(items)}}) + "\n")
+                                        "n_items": len(items), "version": VERSION,
+                                        "no_think": True, "max_tokens": 2048}}) + "\n")
         for it, ss in zip(items, samples):
             g = gold_of(it["answer"])
             nc = sum(1 for s in ss if extract(s) == g)
             f.write(json.dumps({"id": it["id"], "gold": g, "n_correct": nc,
                                 "pass_at_8": int(nc > 0)}) + "\n")
+    # audit sidecar: raw samples of the first 20 items (validity check for extraction/truncation)
+    side = Path(args.out).with_suffix(".samples20.json")
+    side.write_text(json.dumps([{"id": it["id"], "samples": ss[:2]}
+                                for it, ss in list(zip(items, samples))[:20]], ensure_ascii=False))
     print(f"wrote {args.out} ({len(items)} items)")
 
 

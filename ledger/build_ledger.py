@@ -96,10 +96,12 @@ def dom_registry():
              "factonly": ["configs/v2/factonly_sft.yaml", "configs/v2/inject_sft.yaml"]})
     reg["v2_1"] = dict(
         eval=(None, "data_v2_1/repair_eval.jsonl"), cellfield="cell",
-        floor=None, underfit=None,
+        # R-8 (LOOP1_RULINGS): knowledge-floor predict on the v2.1 eval landed 2026-07-03
+        # (server batch-1) -> the seven v2.1 rows move from absolute-only to fine ledger.
+        floor="factonly_on_v21", underfit=None,
         runs={r: pd("data_v2_1/predict_outputs", r) for r in
-              ["actionized", "cot_fixed", "decision", "randomskill", "skillcot_fixed",
-               "prefix_gold", "prefix_wrong"]},
+              ["factonly_on_v21", "actionized", "cot_fixed", "decision", "randomskill",
+               "skillcot_fixed", "prefix_gold", "prefix_wrong"]},
         refs=[], cfg={})
     reg["v3"] = dict(
         eval=(None, "data_v3/repair_eval.jsonl"), cellfield="policy",
@@ -233,7 +235,8 @@ def cell_account(items, vf, vt, leaks, idx):
 # R-4 (C-4a, frozen by qc/LOOP1_RULINGS.md): per-domain pre-repair reference run.
 # Any paper claim about ability injected/spent may ONLY cite the pre-repair columns.
 PREREPAIR = {"v4": "diagnosis_base", "v5": "diagnosis_base",
-             "v3": "factonly", "v3_1": "factonly", "v2": "factonly"}
+             "v3": "factonly", "v3_1": "factonly", "v2": "factonly",
+             "v2_1": "factonly_on_v21"}
 
 
 def prerepair_matched(vp, vt, idx):

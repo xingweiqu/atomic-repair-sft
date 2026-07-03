@@ -43,83 +43,83 @@ v2:zs_cot:K-Cor,v2,zs_cot,K-Cor,60,factonly,,,,,,,,,,,,,,,,,,,,,,,,,0.0,,0.0,REF
 v2:zs_cot:R-Abl,v2,zs_cot,R-Abl,60,factonly,,,,,,,,,,,,,,,,,,,,,,,,,0.0,,0.0,REF,pre-repair reference; absolute only
 v2:zs_cot:R-Aug,v2,zs_cot,R-Aug,60,factonly,,,,,,,,,,,,,,,,,,,,,,,,,0.0,,0.0,REF,pre-repair reference; absolute only
 v2:zs_cot:R-Cor,v2,zs_cot,R-Cor,60,factonly,,,,,,,,,,,,,,,,,,,,,,,,,0.0,,0.0,REF,pre-repair reference; absolute only
-v2_1:actionized:ALL,v2_1,actionized,ALL,600,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9967,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:Clean,v2_1,actionized,Clean,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:H-Abl,v2_1,actionized,H-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:H-Aug,v2_1,actionized,H-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9833,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:H-Cor,v2_1,actionized,H-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9833,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:K-Abl,v2_1,actionized,K-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:K-Aug,v2_1,actionized,K-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:K-Cor,v2_1,actionized,K-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:R-Abl,v2_1,actionized,R-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:R-Aug,v2_1,actionized,R-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:actionized:R-Cor,v2_1,actionized,R-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:ALL,v2_1,cot_fixed,ALL,600,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.86,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:Clean,v2_1,cot_fixed,Clean,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:H-Abl,v2_1,cot_fixed,H-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:H-Aug,v2_1,cot_fixed,H-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:H-Cor,v2_1,cot_fixed,H-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.85,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:K-Abl,v2_1,cot_fixed,K-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:K-Aug,v2_1,cot_fixed,K-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.5,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:K-Cor,v2_1,cot_fixed,K-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.4667,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:R-Abl,v2_1,cot_fixed,R-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:R-Aug,v2_1,cot_fixed,R-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.8,,1.0,,no floor on this eval; absolute only
-v2_1:cot_fixed:R-Cor,v2_1,cot_fixed,R-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9833,,1.0,,no floor on this eval; absolute only
-v2_1:decision:ALL,v2_1,decision,ALL,600,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9583,,1.0,,no floor on this eval; absolute only
-v2_1:decision:Clean,v2_1,decision,Clean,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:decision:H-Abl,v2_1,decision,H-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:decision:H-Aug,v2_1,decision,H-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:decision:H-Cor,v2_1,decision,H-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9167,,1.0,,no floor on this eval; absolute only
-v2_1:decision:K-Abl,v2_1,decision,K-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:decision:K-Aug,v2_1,decision,K-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.85,,1.0,,no floor on this eval; absolute only
-v2_1:decision:K-Cor,v2_1,decision,K-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.95,,1.0,,no floor on this eval; absolute only
-v2_1:decision:R-Abl,v2_1,decision,R-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:decision:R-Aug,v2_1,decision,R-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.8667,,1.0,,no floor on this eval; absolute only
-v2_1:decision:R-Cor,v2_1,decision,R-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:ALL,v2_1,randomskill,ALL,600,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9683,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:Clean,v2_1,randomskill,Clean,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:H-Abl,v2_1,randomskill,H-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:H-Aug,v2_1,randomskill,H-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:H-Cor,v2_1,randomskill,H-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:K-Abl,v2_1,randomskill,K-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:K-Aug,v2_1,randomskill,K-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:K-Cor,v2_1,randomskill,K-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.7,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:R-Abl,v2_1,randomskill,R-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9833,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:R-Aug,v2_1,randomskill,R-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:randomskill:R-Cor,v2_1,randomskill,R-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:ALL,v2_1,skillcot_fixed,ALL,600,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.8917,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:Clean,v2_1,skillcot_fixed,Clean,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:H-Abl,v2_1,skillcot_fixed,H-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:H-Aug,v2_1,skillcot_fixed,H-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:H-Cor,v2_1,skillcot_fixed,H-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.75,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:K-Abl,v2_1,skillcot_fixed,K-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:K-Aug,v2_1,skillcot_fixed,K-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.4,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:K-Cor,v2_1,skillcot_fixed,K-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.8,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:R-Abl,v2_1,skillcot_fixed,R-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:R-Aug,v2_1,skillcot_fixed,R-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9667,,1.0,,no floor on this eval; absolute only
-v2_1:skillcot_fixed:R-Cor,v2_1,skillcot_fixed,R-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:ALL,v2_1,prefix_gold,ALL,600,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9733,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:Clean,v2_1,prefix_gold,Clean,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:H-Abl,v2_1,prefix_gold,H-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:H-Aug,v2_1,prefix_gold,H-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:H-Cor,v2_1,prefix_gold,H-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.7333,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:K-Abl,v2_1,prefix_gold,K-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:K-Aug,v2_1,prefix_gold,K-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:K-Cor,v2_1,prefix_gold,K-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:R-Abl,v2_1,prefix_gold,R-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:R-Aug,v2_1,prefix_gold,R-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_gold:R-Cor,v2_1,prefix_gold,R-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:ALL,v2_1,prefix_wrong,ALL,600,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:Clean,v2_1,prefix_wrong,Clean,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9167,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:H-Abl,v2_1,prefix_wrong,H-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:H-Aug,v2_1,prefix_wrong,H-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:H-Cor,v2_1,prefix_wrong,H-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.8333,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:K-Abl,v2_1,prefix_wrong,K-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:K-Aug,v2_1,prefix_wrong,K-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.3333,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:K-Cor,v2_1,prefix_wrong,K-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9833,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:R-Abl,v2_1,prefix_wrong,R-Abl,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:R-Aug,v2_1,prefix_wrong,R-Aug,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,0.9333,,1.0,,no floor on this eval; absolute only
-v2_1:prefix_wrong:R-Cor,v2_1,prefix_wrong,R-Cor,60,NA,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,1.0,,no floor on this eval; absolute only
+v2_1:actionized:ALL,v2_1,actionized,ALL,600,factonly_on_v21,,0.5767,-0.42,-0.0033,1.0,,,,0.0,,180,0,,,,,,,,,,0,LOWPOWER,,0.9967,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:actionized:Clean,v2_1,actionized,Clean,60,factonly_on_v21,,0.7667,-0.2333,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:actionized:H-Abl,v2_1,actionized,H-Abl,60,factonly_on_v21,,0.9,-0.1,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:actionized:H-Aug,v2_1,actionized,H-Aug,60,factonly_on_v21,,0.2,-0.7833,0.9833,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.9833,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:actionized:H-Cor,v2_1,actionized,H-Cor,60,factonly_on_v21,,0.8167,-0.1667,0.9833,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.9833,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:actionized:K-Abl,v2_1,actionized,K-Abl,60,factonly_on_v21,,0.0,-1.0,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:actionized:K-Aug,v2_1,actionized,K-Aug,60,factonly_on_v21,,0.0333,-0.9667,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:actionized:K-Cor,v2_1,actionized,K-Cor,60,factonly_on_v21,,0.05,-0.95,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:actionized:R-Abl,v2_1,actionized,R-Abl,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:actionized:R-Aug,v2_1,actionized,R-Aug,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:actionized:R-Cor,v2_1,actionized,R-Cor,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:cot_fixed:ALL,v2_1,cot_fixed,ALL,600,factonly_on_v21,,0.44,-0.42,-0.0678,0.9278,,,,0.0,,180,0,,,,,,,,,,0,LOWPOWER,,0.86,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:cot_fixed:Clean,v2_1,cot_fixed,Clean,60,factonly_on_v21,,0.7667,-0.2333,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:cot_fixed:H-Abl,v2_1,cot_fixed,H-Abl,60,factonly_on_v21,,0.9,-0.1,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:cot_fixed:H-Aug,v2_1,cot_fixed,H-Aug,60,factonly_on_v21,,0.2167,-0.7833,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:cot_fixed:H-Cor,v2_1,cot_fixed,H-Cor,60,factonly_on_v21,,0.6833,-0.1667,0.85,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.85,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:cot_fixed:K-Abl,v2_1,cot_fixed,K-Abl,60,factonly_on_v21,,0.0,-1.0,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:cot_fixed:K-Aug,v2_1,cot_fixed,K-Aug,60,factonly_on_v21,,-0.4667,-0.9667,0.5,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.5,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:cot_fixed:K-Cor,v2_1,cot_fixed,K-Cor,60,factonly_on_v21,,-0.4833,-0.95,0.4667,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.4667,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:cot_fixed:R-Abl,v2_1,cot_fixed,R-Abl,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:cot_fixed:R-Aug,v2_1,cot_fixed,R-Aug,60,factonly_on_v21,,0.8,0.0,0.0,0.8,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,0.8,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:cot_fixed:R-Cor,v2_1,cot_fixed,R-Cor,60,factonly_on_v21,,0.9833,0.0,0.0,0.9833,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,0.9833,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:decision:ALL,v2_1,decision,ALL,600,factonly_on_v21,,0.5383,-0.42,0.0028,0.9556,,,,0.0,,180,0,,,,,,,,,,0,LOWPOWER,,0.9583,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:decision:Clean,v2_1,decision,Clean,60,factonly_on_v21,,0.7667,-0.2333,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:decision:H-Abl,v2_1,decision,H-Abl,60,factonly_on_v21,,0.9,-0.1,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:decision:H-Aug,v2_1,decision,H-Aug,60,factonly_on_v21,,0.2167,-0.7833,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:decision:H-Cor,v2_1,decision,H-Cor,60,factonly_on_v21,,0.75,-0.1667,0.9167,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.9167,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:decision:K-Abl,v2_1,decision,K-Abl,60,factonly_on_v21,,0.0,-1.0,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:decision:K-Aug,v2_1,decision,K-Aug,60,factonly_on_v21,,-0.1167,-0.9667,0.85,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.85,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:decision:K-Cor,v2_1,decision,K-Cor,60,factonly_on_v21,,0.0,-0.95,0.95,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.95,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:decision:R-Abl,v2_1,decision,R-Abl,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:decision:R-Aug,v2_1,decision,R-Aug,60,factonly_on_v21,,0.8667,0.0,0.0,0.8667,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,0.8667,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:decision:R-Cor,v2_1,decision,R-Cor,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:randomskill:ALL,v2_1,randomskill,ALL,600,factonly_on_v21,,0.5483,-0.42,-0.0261,0.9944,,,,0.0,,180,0,,,,,,,,,,0,LOWPOWER,,0.9683,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:randomskill:Clean,v2_1,randomskill,Clean,60,factonly_on_v21,,0.7667,-0.2333,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:randomskill:H-Abl,v2_1,randomskill,H-Abl,60,factonly_on_v21,,0.9,-0.1,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:randomskill:H-Aug,v2_1,randomskill,H-Aug,60,factonly_on_v21,,0.2167,-0.7833,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:randomskill:H-Cor,v2_1,randomskill,H-Cor,60,factonly_on_v21,,0.8333,-0.1667,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:randomskill:K-Abl,v2_1,randomskill,K-Abl,60,factonly_on_v21,,0.0,-1.0,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:randomskill:K-Aug,v2_1,randomskill,K-Aug,60,factonly_on_v21,,0.0333,-0.9667,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:randomskill:K-Cor,v2_1,randomskill,K-Cor,60,factonly_on_v21,,-0.25,-0.95,0.7,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.7,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:randomskill:R-Abl,v2_1,randomskill,R-Abl,60,factonly_on_v21,,0.9833,0.0,0.0,0.9833,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,0.9833,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:randomskill:R-Aug,v2_1,randomskill,R-Aug,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:randomskill:R-Cor,v2_1,randomskill,R-Cor,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:skillcot_fixed:ALL,v2_1,skillcot_fixed,ALL,600,factonly_on_v21,,0.4717,-0.42,-0.0972,0.9889,,,,0.0,,180,0,,,,,,,,,,0,LOWPOWER,,0.8917,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:skillcot_fixed:Clean,v2_1,skillcot_fixed,Clean,60,factonly_on_v21,,0.7667,-0.2333,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:skillcot_fixed:H-Abl,v2_1,skillcot_fixed,H-Abl,60,factonly_on_v21,,0.9,-0.1,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:skillcot_fixed:H-Aug,v2_1,skillcot_fixed,H-Aug,60,factonly_on_v21,,0.2167,-0.7833,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:skillcot_fixed:H-Cor,v2_1,skillcot_fixed,H-Cor,60,factonly_on_v21,,0.5833,-0.1667,0.75,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.75,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:skillcot_fixed:K-Abl,v2_1,skillcot_fixed,K-Abl,60,factonly_on_v21,,0.0,-1.0,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:skillcot_fixed:K-Aug,v2_1,skillcot_fixed,K-Aug,60,factonly_on_v21,,-0.5667,-0.9667,0.4,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.4,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:skillcot_fixed:K-Cor,v2_1,skillcot_fixed,K-Cor,60,factonly_on_v21,,-0.15,-0.95,0.8,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.8,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:skillcot_fixed:R-Abl,v2_1,skillcot_fixed,R-Abl,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:skillcot_fixed:R-Aug,v2_1,skillcot_fixed,R-Aug,60,factonly_on_v21,,0.9667,0.0,0.0,0.9667,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,0.9667,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:skillcot_fixed:R-Cor,v2_1,skillcot_fixed,R-Cor,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:prefix_gold:ALL,v2_1,prefix_gold,ALL,600,factonly_on_v21,,0.5533,-0.42,-0.0267,1.0,,,,0.0,,180,0,,,,,,,,,,0,LOWPOWER,,0.9733,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:prefix_gold:Clean,v2_1,prefix_gold,Clean,60,factonly_on_v21,,0.7667,-0.2333,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_gold:H-Abl,v2_1,prefix_gold,H-Abl,60,factonly_on_v21,,0.9,-0.1,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_gold:H-Aug,v2_1,prefix_gold,H-Aug,60,factonly_on_v21,,0.2167,-0.7833,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_gold:H-Cor,v2_1,prefix_gold,H-Cor,60,factonly_on_v21,,0.5667,-0.1667,0.7333,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.7333,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_gold:K-Abl,v2_1,prefix_gold,K-Abl,60,factonly_on_v21,,0.0,-1.0,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_gold:K-Aug,v2_1,prefix_gold,K-Aug,60,factonly_on_v21,,0.0333,-0.9667,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_gold:K-Cor,v2_1,prefix_gold,K-Cor,60,factonly_on_v21,,0.05,-0.95,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_gold:R-Abl,v2_1,prefix_gold,R-Abl,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:prefix_gold:R-Aug,v2_1,prefix_gold,R-Aug,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:prefix_gold:R-Cor,v2_1,prefix_gold,R-Cor,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:prefix_wrong:ALL,v2_1,prefix_wrong,ALL,600,factonly_on_v21,,0.48,-0.42,-0.0778,0.9778,,,,0.0,,180,0,,,,,,,,,,0,LOWPOWER,,0.9,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:prefix_wrong:Clean,v2_1,prefix_wrong,Clean,60,factonly_on_v21,,0.6833,-0.2333,0.9167,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.9167,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_wrong:H-Abl,v2_1,prefix_wrong,H-Abl,60,factonly_on_v21,,0.9,-0.1,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_wrong:H-Aug,v2_1,prefix_wrong,H-Aug,60,factonly_on_v21,,0.2167,-0.7833,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_wrong:H-Cor,v2_1,prefix_wrong,H-Cor,60,factonly_on_v21,,0.6667,-0.1667,0.8333,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.8333,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_wrong:K-Abl,v2_1,prefix_wrong,K-Abl,60,factonly_on_v21,,0.0,-1.0,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_wrong:K-Aug,v2_1,prefix_wrong,K-Aug,60,factonly_on_v21,,-0.6333,-0.9667,0.3333,,,,,-0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.3333,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_wrong:K-Cor,v2_1,prefix_wrong,K-Cor,60,factonly_on_v21,,0.0333,-0.95,0.9833,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,0.9833,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
+v2_1:prefix_wrong:R-Abl,v2_1,prefix_wrong,R-Abl,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:prefix_wrong:R-Aug,v2_1,prefix_wrong,R-Aug,60,factonly_on_v21,,0.9333,0.0,0.0,0.9333,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,0.9333,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
+v2_1:prefix_wrong:R-Cor,v2_1,prefix_wrong,R-Cor,60,factonly_on_v21,,1.0,0.0,0.0,1.0,,,,0.0,,60,0,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
 v3:actionized_full:ALL,v3,actionized_full,ALL,600,factonly,3,0.5583,-0.3967,-0.045,1.0,,,,0.0,,240,0,,,,,,,,,,0,LOWPOWER,,0.955,0.0,1.0,,no both-parsed clean items; F_parse=d_clean
 v3:actionized_full:keep_answer,v3,actionized_full,keep_answer,60,factonly,3,0.8,-0.2,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here
 v3:actionized_full:override_wrong_claim,v3,actionized_full,override_wrong_claim,60,factonly,3,0.05,-0.95,1.0,,,,,0.0,,0,,,,,,,,,,,0,LOWPOWER,,1.0,0.0,1.0,,M=UPPER BOUND (no clean items); D/A undefined here

@@ -7,6 +7,7 @@
 | v2 | fs | gain-accounting-v1 | data_v2/predict_outputs/predict_fs/generated_predictions.jsonl | 600 | ok |
 | v2 | zs_direct | gain-accounting-v1 | data_v2/predict_outputs/predict_zs_direct/generated_predictions.jsonl | 600 | ok |
 | v2 | zs_cot | gain-accounting-v1 | data_v2/predict_outputs/predict_zs_cot/generated_predictions.jsonl | 600 | ok |
+| v2_1 | factonly_on_v21 | gain-accounting-v1 | data_v2_1/predict_outputs/predict_factonly_on_v21/generated_predictions.jsonl | 600 | ok |
 | v2_1 | actionized | gain-accounting-v1 | data_v2_1/predict_outputs/predict_actionized/generated_predictions.jsonl | 600 | ok |
 | v2_1 | cot_fixed | gain-accounting-v1 | data_v2_1/predict_outputs/predict_cot_fixed/generated_predictions.jsonl | 600 | ok |
 | v2_1 | decision | gain-accounting-v1 | data_v2_1/predict_outputs/predict_decision/generated_predictions.jsonl | 600 | ok |
