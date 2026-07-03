@@ -19,5 +19,5 @@ temperature: 0.0
 top_p: 1.0
 bf16: true
 output_dir: /mnt/hdfs/xwqu/gsm-repair-v4/output/predict_transfer_targeted_recompute_e3
-overwrite_output_dir: /mnt/hdfs/xwqu/gsm-repair-v4/output/predict_transfer_targeted_recompute_e3
+overwrite_output_dir: true
 report_to: none
