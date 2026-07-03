@@ -150,5 +150,101 @@
    "query": "input",
    "response": "output"
   }
+ },
+ "e1_targeted_n100_s42": {
+  "file_name": "e1/targeted_n100_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_targeted_n300_s42": {
+  "file_name": "e1/targeted_n300_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_targeted_n300_s43": {
+  "file_name": "e1/targeted_n300_s43.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_targeted_n300_s44": {
+  "file_name": "e1/targeted_n300_s44.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_targeted_n1000_s42": {
+  "file_name": "e1/targeted_n1000_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_targeted_n3000_s42": {
+  "file_name": "e1/targeted_n3000_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_random_n100_s42": {
+  "file_name": "e1/random_n100_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_random_n300_s42": {
+  "file_name": "e1/random_n300_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_random_n300_s43": {
+  "file_name": "e1/random_n300_s43.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_random_n300_s44": {
+  "file_name": "e1/random_n300_s44.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_random_n1000_s42": {
+  "file_name": "e1/random_n1000_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1_random_n3000_s42": {
+  "file_name": "e1/random_n3000_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
  }
 }
