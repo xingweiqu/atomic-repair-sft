@@ -1,4 +1,28 @@
 {
+  "random_override_wrong_claim_e1": {
+    "branch": "random_override_wrong_claim",
+    "epoch": 1,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 0.7625,
+    "committed": 80,
+    "resist_wrong": 0.6375,
+    "final_acc": 0.45,
+    "ability_fixed": 0.6,
+    "fixed_n": 5
+  },
+  "random_override_wrong_claim_e2": {
+    "branch": "random_override_wrong_claim",
+    "epoch": 2,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 0.9625,
+    "committed": 79,
+    "resist_wrong": 0.9494,
+    "final_acc": 0.125,
+    "ability_fixed": 0.2,
+    "fixed_n": 5
+  },
   "random_override_wrong_claim_e3": {
     "branch": "random_override_wrong_claim",
     "epoch": 3,
@@ -8,8 +32,80 @@
     "committed": 80,
     "resist_wrong": 0.425,
     "final_acc": 0.125,
-    "ability_fixed": 0.3333,
-    "fixed_n": 27
+    "ability_fixed": 0.2,
+    "fixed_n": 5
+  },
+  "random_override_wrong_claim_e8": {
+    "branch": "random_override_wrong_claim",
+    "epoch": 8,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 0.6625,
+    "final_acc": 0.225,
+    "ability_fixed": 0.2,
+    "fixed_n": 5
+  },
+  "random_override_wrong_claim_e30": {
+    "branch": "random_override_wrong_claim",
+    "epoch": 30,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 0.725,
+    "final_acc": 0.2625,
+    "ability_fixed": 0.4,
+    "fixed_n": 5
+  },
+  "scaffold_conv_e1": {
+    "branch": "scaffold_conv",
+    "epoch": 1,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 0.2625,
+    "committed": 73,
+    "resist_wrong": 0.9315,
+    "final_acc": 0.3,
+    "ability_fixed": 0.6,
+    "fixed_n": 5
+  },
+  "scaffold_conv_e2": {
+    "branch": "scaffold_conv",
+    "epoch": 2,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 0.425,
+    "committed": 79,
+    "resist_wrong": 0.519,
+    "final_acc": 0.2625,
+    "ability_fixed": 0.4,
+    "fixed_n": 5
+  },
+  "scaffold_conv_e3": {
+    "branch": "scaffold_conv",
+    "epoch": 3,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 0.8125,
+    "committed": 80,
+    "resist_wrong": 0.6,
+    "final_acc": 0.425,
+    "ability_fixed": 0.6,
+    "fixed_n": 5
+  },
+  "scaffold_conv_e8": {
+    "branch": "scaffold_conv",
+    "epoch": 8,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 0.775,
+    "final_acc": 0.1875,
+    "ability_fixed": 0.2,
+    "fixed_n": 5
   },
   "scaffold_conv_e30": {
     "branch": "scaffold_conv",
@@ -20,8 +116,32 @@
     "committed": 80,
     "resist_wrong": 0.6375,
     "final_acc": 0.2,
-    "ability_fixed": 0.3333,
-    "fixed_n": 27
+    "ability_fixed": 0.2,
+    "fixed_n": 5
+  },
+  "targeted_override_wrong_claim_e1": {
+    "branch": "targeted_override_wrong_claim",
+    "epoch": 1,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 0.7875,
+    "committed": 79,
+    "resist_wrong": 0.6835,
+    "final_acc": 0.425,
+    "ability_fixed": 0.6,
+    "fixed_n": 5
+  },
+  "targeted_override_wrong_claim_e2": {
+    "branch": "targeted_override_wrong_claim",
+    "epoch": 2,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 1.0,
+    "final_acc": 0.2625,
+    "ability_fixed": 0.2,
+    "fixed_n": 5
   },
   "targeted_override_wrong_claim_e3": {
     "branch": "targeted_override_wrong_claim",
@@ -32,8 +152,56 @@
     "committed": 80,
     "resist_wrong": 0.9875,
     "final_acc": 0.3,
-    "ability_fixed": 0.3704,
-    "fixed_n": 27
+    "ability_fixed": 0.2,
+    "fixed_n": 5
+  },
+  "targeted_override_wrong_claim_e8": {
+    "branch": "targeted_override_wrong_claim",
+    "epoch": 8,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 0.975,
+    "final_acc": 0.3625,
+    "ability_fixed": 0.2,
+    "fixed_n": 5
+  },
+  "targeted_override_wrong_claim_e30": {
+    "branch": "targeted_override_wrong_claim",
+    "epoch": 30,
+    "cell": "override_wrong_claim",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 0.9875,
+    "final_acc": 0.3125,
+    "ability_fixed": 0.2,
+    "fixed_n": 5
+  },
+  "targeted_recompute_e1": {
+    "branch": "targeted_recompute",
+    "epoch": 1,
+    "cell": "recompute",
+    "n": 80,
+    "parse_rate": 0.525,
+    "committed": 80,
+    "resist_wrong": 0.825,
+    "final_acc": 0.4625,
+    "ability_fixed": 0.5833,
+    "fixed_n": 60
+  },
+  "targeted_recompute_e2": {
+    "branch": "targeted_recompute",
+    "epoch": 2,
+    "cell": "recompute",
+    "n": 80,
+    "parse_rate": 0.9,
+    "committed": 80,
+    "resist_wrong": 0.9375,
+    "final_acc": 0.475,
+    "ability_fixed": 0.5167,
+    "fixed_n": 60
   },
   "targeted_recompute_e3": {
     "branch": "targeted_recompute",
@@ -44,8 +212,44 @@
     "committed": 80,
     "resist_wrong": 0.975,
     "final_acc": 0.325,
+    "ability_fixed": 0.4,
+    "fixed_n": 60
+  },
+  "targeted_recompute_e8": {
+    "branch": "targeted_recompute",
+    "epoch": 8,
+    "cell": "recompute",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 0.975,
+    "final_acc": 0.3,
+    "ability_fixed": 0.3833,
+    "fixed_n": 60
+  },
+  "targeted_recompute_e30": {
+    "branch": "targeted_recompute",
+    "epoch": 30,
+    "cell": "recompute",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 0.9875,
+    "final_acc": 0.275,
     "ability_fixed": 0.3333,
-    "fixed_n": 78
+    "fixed_n": 60
+  },
+  "targeted_verify_step_e1": {
+    "branch": "targeted_verify_step",
+    "epoch": 1,
+    "cell": "verify_step",
+    "n": 80,
+    "parse_rate": 0.4375,
+    "committed": 79,
+    "resist_wrong": 0.8481,
+    "final_acc": 0.4125,
+    "ability_fixed": 0.4925,
+    "fixed_n": 67
   },
   "targeted_verify_step_e3": {
     "branch": "targeted_verify_step",
@@ -56,7 +260,19 @@
     "committed": 80,
     "resist_wrong": 1.0,
     "final_acc": 0.4125,
-    "ability_fixed": 0.4125,
-    "fixed_n": 80
+    "ability_fixed": 0.4179,
+    "fixed_n": 67
+  },
+  "targeted_verify_step_e30": {
+    "branch": "targeted_verify_step",
+    "epoch": 30,
+    "cell": "verify_step",
+    "n": 80,
+    "parse_rate": 1.0,
+    "committed": 80,
+    "resist_wrong": 1.0,
+    "final_acc": 0.5125,
+    "ability_fixed": 0.5075,
+    "fixed_n": 67
   }
 }
