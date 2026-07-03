@@ -321,7 +321,7 @@ def main():
 
     # ---------------- write csv ----------------
     cols = ["run_id", "domain", "ckpt", "cell", "n", "floor", "epochs", "d_raw",
-            "F_judge", "M", "F_parse", "D", "A", "ND", "residual", "F_floor",
+            "F_judge", "M", "F_parse", "D", "A_delivered", "A_latent", "ND", "residual", "F_floor",
             "n_clean", "n_P", "n_w", "r0", "r1", "a0", "a1",
             "d_a_matched", "n_matched", "lowpower",
             "d_a_prerepair", "n_matched_pre", "lowpower_pre", "w_source",
@@ -330,6 +330,12 @@ def main():
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
         for r in rows:
+            # R-10 (LOOP1_5_RULINGS): A_delivered = Shapley A in the repair genre vs the
+            # convergent floor (deployment readout). A_latent (plain-genre, vs pre-repair,
+            # the ability-claim column) is populated only where dual-genre evals exist
+            # (R-7); T4 supplies the v4 floor-level evidence — see LEDGER_REPORT.
+            r["A_delivered"] = r.pop("A", None)
+            r.setdefault("A_latent", "")
             for k in cols:
                 v = r.get(k)
                 if isinstance(v, float):
@@ -371,9 +377,10 @@ def make_fig(rows):
                                                                "cumulative_"))]
     sel.sort(key=lambda r: (r["domain"], r["ckpt"]))
     labels = [f"{r['domain']}:{r['ckpt']}" for r in sel]
-    chans = ["F_judge", "F_parse", "M", "D", "A", "ND"]
+    chans = ["F_judge", "F_parse", "M", "D", "A", "ND"]  # A rendered as A_delivered in legend
     colors = {"F_judge": "#f4a261", "F_parse": "#e9c46a", "M": "#e76f51",
               "D": "#2a9d8f", "A": "#264653", "ND": "#bdbdbd"}
+    legend_names = {"A": "A_delivered (in-genre)"}
     fig, ax = plt.subplots(figsize=(13, 0.42 * len(sel) + 2))
     y = np.arange(len(sel))
     for r_i, r in enumerate(sel):
@@ -394,7 +401,7 @@ def make_fig(rows):
     ax.set_xlabel("gain vs canonical floor (fraction; black tick = Δfinal_raw)")
     ax.set_title("Gain accounting — F(judge/parse) + M + D + A + ND per run (cell=ALL)")
     handles = [plt.Rectangle((0, 0), 1, 1, color=colors[c]) for c in chans]
-    ax.legend(handles, chans, loc="lower right", fontsize=8, ncol=3)
+    ax.legend(handles, [legend_names.get(c, c) for c in chans], loc="lower right", fontsize=8, ncol=3)
     fig.tight_layout()
     fig.savefig(ROOT / "ledger/fig_ledger.png", dpi=150)
 
