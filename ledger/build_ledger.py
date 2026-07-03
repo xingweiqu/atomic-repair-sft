@@ -319,12 +319,43 @@ def main():
                 base.update(body)
                 rows.append(base)
 
+    # ---------------- C-5.1: construct column + the K row ----------------
+    # All repair evals claim to measure PROCEDURE (answer-update behaviour), so their
+    # exposure-driven gain stays M. The v2 fact-injection eval claims RECALL of trained
+    # content -> its gain books to K (legitimate), not M. See qc/LOOP1_5_RULINGS_C5.md.
+    for r in rows:
+        r.setdefault("construct", "procedure")
+        r.setdefault("K", "")
+
+    def inj_score(path):
+        recs = [json.loads(l) for l in (ROOT / path).open() if l.strip()]
+        def norm(s):
+            return re.sub(r"\s+", " ", (s or "").strip().lower())
+        return [int(norm(r["label"]) in norm(r["predict"])) for r in recs]
+
+    ib = inj_score("data_v2/predict_outputs/predict_inject_base/generated_predictions.jsonl")
+    if_ = inj_score("data_v2/predict_outputs/predict_inject_floor/generated_predictions.jsonl")
+    d = sum(if_) / len(if_) - sum(ib) / len(ib)
+    rows.append(dict(
+        run_id="v2_inject:inject_floor:ALL", domain="v2_inject", ckpt="inject_floor",
+        cell="ALL", n=len(if_), floor="inject_base(zero-shot pre-repair)",
+        epochs=read_epochs(None, ["configs/v2/inject_sft.yaml"]),
+        d_raw=d, F_judge=0.0, M=0.0, K=d, construct="recall",
+        abs_strict_t=sum(if_) / len(if_), abs_strict_f=sum(ib) / len(ib),
+        grey="", F_floor="",
+        note="C-5.1 canonical K row: construct=recall (fact-QA on the injected corpus); "
+             "exposure IS the claim -> gain books to K, not M. Judge: normalised label "
+             "containment (plain-text QA, not JSON)."))
+    inventory.append(("v2_inject", "inject_base/floor", "gain-accounting-v1",
+                      "data_v2/predict_outputs/predict_inject_{base,floor}", len(if_),
+                      "ok (K row, construct=recall)"))
+
     # ---------------- write csv ----------------
     cols = ["run_id", "domain", "ckpt", "cell", "n", "floor", "epochs", "d_raw",
-            "F_judge", "M", "F_parse", "D", "A_delivered", "A_latent", "ND", "residual", "F_floor",
+            "F_judge", "K", "M", "F_parse", "D", "A_delivered", "A_latent", "ND", "residual", "F_floor",
             "n_clean", "n_P", "n_w", "r0", "r1", "a0", "a1",
             "d_a_matched", "n_matched", "lowpower",
-            "d_a_prerepair", "n_matched_pre", "lowpower_pre", "w_source",
+            "d_a_prerepair", "n_matched_pre", "lowpower_pre", "w_source", "construct",
             "abs_strict_t", "abs_strict_f", "parse_rate_t", "grey", "note"]
     with (ROOT / "ledger/master_ledger.csv").open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")

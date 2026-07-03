@@ -140,3 +140,22 @@ A=+19.4(matched +19.0, n=79)、`actionized_full:ALL` matched +12.8(n=164)。C-3 
 3. v2_1 七个 run 因无 floor 预测只入绝对分(csv 有行、无 Δ)——要补一次服务器 predict
    (factonly ckpt × v2.1 eval,一条命令)把它们转成细账吗?
 4. D-6(底模型)与 D-7(pass@8)仍待你侧动作,不阻塞本报告审阅。
+
+---
+
+## 附录 C-5 修订(2026-07-04,qc/LOOP1_5_RULINGS_C5.md)
+
+- **M 列拆 K/M(按评测构念)**:csv 新增 `construct`(recall/procedure)与 `K` 列。
+  全部 repair eval 行 construct=procedure(泄漏增益维持 M);新增 **K 典范行**
+  `v2_inject:inject_floor:ALL`:fact-QA(351)上 pre-repair 2.3% → 注入后 100%,
+  Δ=+97.7pp **全记 K**(训练目的、评测构念、增益来源三者一致)。
+- **本报告 §6 的旧结论表相应更正**:v2"知识注入 3%→100%"从此在账本内有正名科目(K),
+  不再被叙事性地归入 M——本项目把 K 记成 M 的这一例,已按 C-5.6 写入 Artifact Taxonomy
+  开篇(叙事层伪影:审计者也在审计范围内)。
+- **A 的判据升格**(C-5.2/5.3):A = 未见实例上的泛化(Tier 2 OOD 切分为判据本体);
+  预注册从 "A≡0" 升级为**逐档位可学性前沿**;硬停条件改为"A 读数与当期冻结预注册矛盾"。
+- **主线句替换**(C-5.4):废止 "installs a genre, not a capability" →
+  **"SFT installs content and conduct; generalizing procedure is bought elsewhere —
+  and we map the frontier."** 体裁句降级为 §5 局部主张。
+- A 列名同步:`A_delivered`(repair 体裁 vs conv floor,部署读数)/`A_latent`
+  (素题体裁 vs pre-repair,能力主张判据列,由 R-7 双体裁 eval 填充)。

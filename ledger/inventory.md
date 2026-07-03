@@ -95,6 +95,7 @@
 | v5 | wrongtarget_verify_bridge | scenario-repair-b-prime | data_v5/predict_outputs/predict_wrongtarget_verify_bridge/generated_predictions.jsonl | 1600 | ok |
 | v5 | wrongtarget_use_provided_support | scenario-repair-b-prime | data_v5/predict_outputs/predict_wrongtarget_use_provided_support/generated_predictions.jsonl | 1600 | ok |
 | v5 | wrongtarget_retrieve_or_abstain | scenario-repair-b-prime | data_v5/predict_outputs/predict_wrongtarget_retrieve_or_abstain/generated_predictions.jsonl | 1600 | ok |
+| v2_inject | inject_base/floor | gain-accounting-v1 | data_v2/predict_outputs/predict_inject_{base,floor} | 351 | ok (K row, construct=recall) |
 
 ## 粗账/灰名单(不入主图)
 - v0 `output/qwen3_8b_repair_full_predict` (550): no floor predict on its eval -> absolute only.
