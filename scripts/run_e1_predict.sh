@@ -4,7 +4,11 @@ set -uo pipefail
 unset FORCE_TORCHRUN NPROC_PER_NODE || true
 REPO="$(cd "$(dirname "$0")/.." && pwd)"; cd "$REPO"
 NGPU="${NGPU:-8}"
+ONLY="${ONLY:-}"   # regex filter for two-machine split
 mapfile -t CFGS < <(ls "$REPO"/configs/v4/e1/*_predict.yaml "$REPO"/configs/v4/e3/*_predict.yaml)
+if [ -n "$ONLY" ]; then
+  mapfile -t CFGS < <(printf '%s\n' "${CFGS[@]}" | grep -E "$ONLY")
+fi
 echo "sharding ${#CFGS[@]} predicts across $NGPU GPUs"
 run_queue() {
   local g="$1" i cfg out
