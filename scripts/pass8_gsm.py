@@ -1,24 +1,30 @@
 #!/usr/bin/env python3
-"""D-7 (approved): per-item pass@8 on GSM8K test for the PRE-REPAIR model — the Loop 2A
-bucketing variable. Sampling regime is used ONLY for bucketing; repair evaluation stays
-greedy single-shot (two inference regimes never mixed — LOOP0_RULINGS D-7(iii)).
+"""D-7 (approved): per-item pass@8 for the PRE-REPAIR model — the Loop 2A bucketing
+variable. Sampling regime is used ONLY for bucketing; repair evaluation stays greedy
+single-shot (two inference regimes never mixed — LOOP0_RULINGS D-7(iii)).
 
-Spec (LOOP0_RULINGS D-7):
-  (i)  first 500 items to calibrate bucket edges, then the full 1319 (--limit controls);
-  (ii) temperature fixed to the Qwen3 official recommendation (0.7 / top_p 0.8 / top_k 20,
-       non-thinking mode), recorded in the output header and later in the dataset_card;
-  (iii) k=8 samples per item, seed 42.
+Spec (LOOP0_RULINGS D-7 + R-15):
+  (i)   --limit 500 calibration first, then full pool;
+  (ii)  temperature fixed to the Qwen3 non-thinking recommendation (0.7/0.8/20),
+        recorded in the output header;
+  (iii) k=8, seed 42; --pool merged = GSM8K test + GSM-hard (bucket on the merged
+        pool, per-item `source` recorded as a covariate).
 
-Runs with vllm if available (fast), else transformers (slow but same sampling params).
-Output: data_v4/pass8_results.jsonl  {id, question, gold, n_correct, pass_at_8, samples[]}
+Version history (kept honest for the taxonomy):
+  v2  /no_think + max_tokens 2048 + samples20 sidecar (v1 thinking-truncation artifact).
+  v3  merged pool (GSM-hard) + float-gold normalisation.
+  v4  (2026-07-06) crash-proofing after a real loss of ~21k generations:
+      - numnorm guards inf/nan/1e15+ ("9e999"-style outputs overflowed int(inf));
+      - ALL raw samples are dumped to <out>.samples_raw.jsonl.gz BEFORE scoring;
+      - --rescore re-scores from the dump without regenerating.
 
-Usage (server):
-  python3 scripts/pass8_gsm.py --model /mnt/hdfs/xwqu/Qwen3-8B --limit 500
-  python3 scripts/pass8_gsm.py --model /mnt/hdfs/xwqu/Qwen3-8B            # full 1319
+Output: <out> jsonl  {id, gold, n_correct, pass_at_8, source} (+ header line)
+        <out>.samples_raw.jsonl.gz (full generations)  + <out>.samples20.json (audit)
 """
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
 import re
 import sys
@@ -28,93 +34,116 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from gsm_repair_v4.gsm_world import load_gsm  # noqa: E402
 
 K = 8
-TEMP, TOP_P, TOP_K = 0.7, 0.8, 20  # Qwen3 official non-thinking recommendation
-VERSION = 2  # v2 (2026-07-04): force non-thinking via /no_think + max_tokens 2048 + sample dump.
-# v1 CAVEAT: chat template may default to Qwen3 THINKING mode; <think> can eat the 1024-token
-# budget -> truncation scored as wrong -> inflates the [0-25%] bucket. v1 calib500 numbers are
-# therefore SUSPECT until re-run with v2 (repair evals all use non-thinking `template: qwen`).
+TEMP, TOP_P, TOP_K = 0.7, 0.8, 20
+VERSION = 4
 INSTR = ("Solve the math word problem. Reason step by step, then end with a line exactly "
          "in the form 'The final answer is N.'")
-
-
-def gold_of(ans: str) -> str:
-    return numnorm(ans.split("####")[-1].strip())
 
 
 def numnorm(s: str) -> str:
     s = s.replace(",", "").rstrip(".")
     try:
         f = float(s)
-        return str(int(f)) if f == int(f) else str(f)
-    except ValueError:
+    except (ValueError, OverflowError):
         return s
+    # v4: outputs like "9e999" float to inf; int(inf) overflows. Non-finite or
+    # astronomically large values are never GSM golds -> keep the raw string.
+    if f != f or f in (float("inf"), float("-inf")) or abs(f) > 1e15:
+        return s
+    return str(int(f)) if f == int(f) else str(f)
+
+
+def gold_of(ans: str) -> str:
+    return numnorm(ans.split("####")[-1].strip())
 
 
 def extract(text: str):
-    m = re.findall(r"final answer is\s*(-?[\d,\.]+)", text or "", re.I)
+    m = re.findall(r"final answer is\s*(-?[\d,\.eE+]+)", text or "", re.I)
     return numnorm(m[-1]) if m else None
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--model", required=True)
-    ap.add_argument("--limit", type=int, default=None, help="500 for calibration run")
-    ap.add_argument("--pool", choices=["gsm", "merged"], default="gsm",
-                    help="merged = GSM8K test + GSM-hard (R-15: bucket on the merged pool; "
-                         "source recorded per item as a covariate)")
-    ap.add_argument("--out", default="data_v4/pass8_results.jsonl")
-    args = ap.parse_args()
-
-    items = load_gsm("test", limit=args.limit)
-    if args.pool == "merged":
-        # R-15: GSM-hard = same GSM8K test items with larger numbers (clean difficulty
-        # axis). Loaded via datasets lib; gold is the numeric `target`.
+def build_pool(pool: str, limit):
+    items = load_gsm("test", limit=limit)
+    n_gsm = len(items)
+    if pool == "merged":
         from datasets import load_dataset
         gh = load_dataset("reasoning-machines/gsm-hard", split="train")
         hard = [{"id": f"gsmhard_{i:05d}", "question": r["input"],
                  "answer": f"#### {r['target']}"} for i, r in enumerate(gh)]
-        if args.limit:
-            hard = hard[: args.limit]
+        if limit:
+            hard = hard[:limit]
         items = items + hard
-    prompts = [f"{INSTR}\n{it['question']} /no_think" for it in items]  # soft-switch: non-thinking
+        print(f"pool breakdown: gsm={n_gsm} gsmhard={len(hard)} total={len(items)}", flush=True)
+    return items
 
+
+def generate(model, prompts):
     try:
         from vllm import LLM, SamplingParams
-        llm = LLM(model=args.model, dtype="bfloat16")
+        llm = LLM(model=model, dtype="bfloat16")
         sp = SamplingParams(n=K, temperature=TEMP, top_p=TOP_P, top_k=TOP_K,
                             max_tokens=2048, seed=42)
-        # chat template = qwen (align with LF `template: qwen`)
         outs = llm.chat([[{"role": "user", "content": p}] for p in prompts], sp)
-        samples = [[o.text for o in out.outputs] for out in outs]
+        return [[o.text for o in out.outputs] for out in outs]
     except ImportError:
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
-        tok = AutoTokenizer.from_pretrained(args.model)
-        model = AutoModelForCausalLM.from_pretrained(args.model, torch_dtype=torch.bfloat16,
-                                                     device_map="auto")
+        tok = AutoTokenizer.from_pretrained(model)
+        mdl = AutoModelForCausalLM.from_pretrained(model, torch_dtype=torch.bfloat16,
+                                                   device_map="auto")
         torch.manual_seed(42)
         samples = []
         for p in prompts:
             text = tok.apply_chat_template([{"role": "user", "content": p}],
                                            tokenize=False, add_generation_prompt=True)
-            ids = tok(text, return_tensors="pt").to(model.device)
-            out = model.generate(**ids, do_sample=True, temperature=TEMP, top_p=TOP_P,
-                                 top_k=TOP_K, num_return_sequences=K, max_new_tokens=2048)
+            ids = tok(text, return_tensors="pt").to(mdl.device)
+            out = mdl.generate(**ids, do_sample=True, temperature=TEMP, top_p=TOP_P,
+                               top_k=TOP_K, num_return_sequences=K, max_new_tokens=2048)
             samples.append([tok.decode(o[ids["input_ids"].shape[1]:],
                                        skip_special_tokens=True) for o in out])
+        return samples
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model", required=True)
+    ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--pool", choices=["gsm", "merged"], default="gsm")
+    ap.add_argument("--out", default="data_v4/pass8_results.jsonl")
+    ap.add_argument("--rescore", action="store_true",
+                    help="skip generation; re-score from <out>.samples_raw.jsonl.gz")
+    args = ap.parse_args()
+
+    items = build_pool(args.pool, args.limit)
+    raw_path = Path(args.out + ".samples_raw.jsonl.gz")
+
+    if args.rescore:
+        with gzip.open(raw_path, "rt") as f:
+            dump = {r["id"]: r["samples"] for r in (json.loads(l) for l in f)}
+        samples = [dump[it["id"]] for it in items]
+        print(f"rescore: loaded {len(samples)} items from {raw_path}", flush=True)
+    else:
+        prompts = [f"{INSTR}\n{it['question']} /no_think" for it in items]
+        samples = generate(args.model, prompts)
+        # v4: persist generations BEFORE any scoring — scoring bugs must never cost GPU time.
+        with gzip.open(raw_path, "wt") as f:
+            for it, ss in zip(items, samples):
+                f.write(json.dumps({"id": it["id"], "samples": ss}, ensure_ascii=False) + "\n")
+        print(f"raw samples persisted -> {raw_path}", flush=True)
 
     with Path(args.out).open("w") as f:
         f.write(json.dumps({"_header": {"model": args.model, "k": K, "temperature": TEMP,
                                         "top_p": TOP_P, "top_k": TOP_K, "seed": 42,
                                         "n_items": len(items), "version": VERSION,
-                                        "no_think": True, "max_tokens": 2048}}) + "\n")
+                                        "no_think": True, "max_tokens": 2048,
+                                        "pool": args.pool}}) + "\n")
         for it, ss in zip(items, samples):
             g = gold_of(it["answer"])
             nc = sum(1 for s in ss if extract(s) == g)
             f.write(json.dumps({"id": it["id"], "gold": g, "n_correct": nc,
                                 "pass_at_8": int(nc > 0),
-                                "source": "gsmhard" if it["id"].startswith("gsmhard") else "gsm"}) + "\n")
-    # audit sidecar: raw samples of the first 20 items (validity check for extraction/truncation)
+                                "source": "gsmhard" if it["id"].startswith("gsmhard") else "gsm"})
+                    + "\n")
     side = Path(args.out).with_suffix(".samples20.json")
     side.write_text(json.dumps([{"id": it["id"], "samples": ss[:2]}
                                 for it, ss in list(zip(items, samples))[:20]], ensure_ascii=False))
