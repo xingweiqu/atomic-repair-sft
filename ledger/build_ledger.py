@@ -128,13 +128,19 @@ def dom_registry():
              **{f"targeted_{o}": [f"configs/v3_1/targeted_{o}_sft.yaml"] for o in OPS6}})
     reg["v4"] = dict(
         eval=(None, "data_v4/repair_eval.jsonl"), cellfield="policy",
-        floor="scaffold_conv", underfit="scaffold_only",
-        runs={r: pd("data_v4/predict_outputs", r) for r in
-              ["scaffold_only", "scaffold_conv", "actionized_full", "diagnosis_base"]
-              + [f"targeted_{o}" for o in OPS4_V4] + [f"random_{o}" for o in OPS4_V4]
-              + [f"wrongtarget_{o}" for o in OPS4_V4]},
+        # R-17 (LOOP1_5_RULINGS_BATCH2): canonical floor = scaffold_conv e8 (the ridge
+        # point: parse 1.00, json_bleed 0%, plain-genre acc == pre-repair). The round-1
+        # 30-epoch floor is PAST the ridge (31% bleed, plain acc 49%) and becomes a
+        # measured run; the pre-R-17 ledger is archived as archive_master_ledger_v4floor_e30.csv.
+        floor="scaffold_conv_e8", underfit="scaffold_only",
+        runs={**{r: pd("data_v4/predict_outputs", r) for r in
+                 ["scaffold_only", "scaffold_conv", "actionized_full", "diagnosis_base"]
+                 + [f"targeted_{o}" for o in OPS4_V4] + [f"random_{o}" for o in OPS4_V4]
+                 + [f"wrongtarget_{o}" for o in OPS4_V4]},
+              "scaffold_conv_e8": pd("data_v4/epoch_sweep_predict", "scaffold_conv_e8")},
         refs=["diagnosis_base"],
         cfg={"scaffold_conv": ["configs/v4/scaffold_conv_sft.yaml"],
+             "scaffold_conv_e8": ["configs/v4/epoch_sweep/scaffold_conv_e8_sft.yaml"],
              "scaffold_only": ["configs/v4/scaffold_only_sft.yaml"],
              **{f"targeted_{o}": [f"configs/v4/targeted_{o}_sft.yaml"] for o in OPS4_V4}})
     reg["v5"] = dict(

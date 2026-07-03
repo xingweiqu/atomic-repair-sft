@@ -38,22 +38,44 @@ INSTR = ("Solve the math word problem. Reason step by step, then end with a line
 
 
 def gold_of(ans: str) -> str:
-    return ans.split("####")[-1].strip().replace(",", "")
+    return numnorm(ans.split("####")[-1].strip())
+
+
+def numnorm(s: str) -> str:
+    s = s.replace(",", "").rstrip(".")
+    try:
+        f = float(s)
+        return str(int(f)) if f == int(f) else str(f)
+    except ValueError:
+        return s
 
 
 def extract(text: str):
     m = re.findall(r"final answer is\s*(-?[\d,\.]+)", text or "", re.I)
-    return m[-1].replace(",", "").rstrip(".") if m else None
+    return numnorm(m[-1]) if m else None
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True)
     ap.add_argument("--limit", type=int, default=None, help="500 for calibration run")
+    ap.add_argument("--pool", choices=["gsm", "merged"], default="gsm",
+                    help="merged = GSM8K test + GSM-hard (R-15: bucket on the merged pool; "
+                         "source recorded per item as a covariate)")
     ap.add_argument("--out", default="data_v4/pass8_results.jsonl")
     args = ap.parse_args()
 
     items = load_gsm("test", limit=args.limit)
+    if args.pool == "merged":
+        # R-15: GSM-hard = same GSM8K test items with larger numbers (clean difficulty
+        # axis). Loaded via datasets lib; gold is the numeric `target`.
+        from datasets import load_dataset
+        gh = load_dataset("reasoning-machines/gsm-hard", split="train")
+        hard = [{"id": f"gsmhard_{i:05d}", "question": r["input"],
+                 "answer": f"#### {r['target']}"} for i, r in enumerate(gh)]
+        if args.limit:
+            hard = hard[: args.limit]
+        items = items + hard
     prompts = [f"{INSTR}\n{it['question']} /no_think" for it in items]  # soft-switch: non-thinking
 
     try:
@@ -90,7 +112,8 @@ def main():
             g = gold_of(it["answer"])
             nc = sum(1 for s in ss if extract(s) == g)
             f.write(json.dumps({"id": it["id"], "gold": g, "n_correct": nc,
-                                "pass_at_8": int(nc > 0)}) + "\n")
+                                "pass_at_8": int(nc > 0),
+                                "source": "gsmhard" if it["id"].startswith("gsmhard") else "gsm"}) + "\n")
     # audit sidecar: raw samples of the first 20 items (validity check for extraction/truncation)
     side = Path(args.out).with_suffix(".samples20.json")
     side.write_text(json.dumps([{"id": it["id"], "samples": ss[:2]}

@@ -80,6 +80,7 @@
 | v4 | wrongtarget_override_wrong_claim | gain-accounting-v1 | data_v4/predict_outputs/predict_wrongtarget_override_wrong_claim/generated_predictions.jsonl | 480 | ok |
 | v4 | wrongtarget_recompute | gain-accounting-v1 | data_v4/predict_outputs/predict_wrongtarget_recompute/generated_predictions.jsonl | 480 | ok |
 | v4 | wrongtarget_retrieve_or_abstain | gain-accounting-v1 | data_v4/predict_outputs/predict_wrongtarget_retrieve_or_abstain/generated_predictions.jsonl | 480 | ok |
+| v4 | scaffold_conv_e8 | gain-accounting-v1 | data_v4/epoch_sweep_predict/predict_scaffold_conv_e8/generated_predictions.jsonl | 480 | ok |
 | v5 | scaffold_conv | scenario-repair-b-prime | data_v5/predict_outputs/predict_scaffold_conv/generated_predictions.jsonl | 1600 | ok |
 | v5 | actionized_full | scenario-repair-b-prime | data_v5/predict_outputs/predict_actionized_full/generated_predictions.jsonl | 1600 | ok |
 | v5 | diagnosis_base | scenario-repair-b-prime | data_v5/predict_outputs/predict_diagnosis_base/generated_predictions.jsonl | 1600 | ok |

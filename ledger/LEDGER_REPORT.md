@@ -159,3 +159,29 @@ A=+19.4(matched +19.0, n=79)、`actionized_full:ALL` matched +12.8(n=164)。C-3 
   and we map the frontier."** 体裁句降级为 §5 局部主张。
 - A 列名同步:`A_delivered`(repair 体裁 vs conv floor,部署读数)/`A_latent`
   (素题体裁 vs pre-repair,能力主张判据列,由 R-7 双体裁 eval 填充)。
+
+---
+
+## 附录 R-17 重记账(2026-07-04,qc/LOOP1_5_RULINGS_BATCH2.md)
+
+v4 canonical floor 由 30ep(已确认翻脊:json_bleed 31%、素题 acc 49%)改为
+**scaffold_conv e8**(脊点:parse 1.00 ∧ json_bleed 0% ∧ 素题 92%=pre-repair 无损)。
+旧账整卷留痕:`archive_master_ledger_v4floor_e30.csv` + `archive_fig_ledger_v4floor_e30.png`。
+
+**headline 对照(论文 §3 只准引新账)**:
+
+| 行 | 字段 | 旧(vs e30) | 新(vs e8) |
+|---|---|---|---|
+| targeted_override:override | D | +10.8 | **+5.8** |
+| targeted_recompute:recompute | D | +14.1 | **+11.4** |
+| targeted_verify_step:verify_step | D | +0.5 | 0.0(e8 floor 该 cell resist 已高) |
+| targeted_recompute:recompute | Δraw | +7.5 | **0.0** |
+| actionized_full:ALL | Δraw | +6.7 | +12.9 |
+| scaffold_conv(e30, 现为 run) | Δraw | — | **+6.2** |
+
+读法:
+- **D 缩水但幸存**(顾问预判兑现):e8 floor resist 0.70–0.78 → targeted 0.99。
+- **recompute 对角线净增益归零的分解**:D +11.4 被 in-genre ability 负项抵消——
+  "决策买到、体裁内能力支出、净额≈0",这是 vs 健康基线才看得见的真相。
+- **e30 在 repair 体裁内比 e8 还高 +6.2pp**:翻脊后 in-genre 分数继续上行、素题崩塌——
+  税只收在素题侧;单看 in-genre 分数会把翻脊误读为"还在进步"(§6 素材)。
