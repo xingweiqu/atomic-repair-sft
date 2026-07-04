@@ -4,7 +4,8 @@
 Per run (cond, N, seed) x epoch{2,4,8,16}:
   repair-mode : parse rate, resist (w-items, strict-parsed, C-1), strict overall acc
   plain-mode  : genre split (ledger.genre), json_bleed, plain acc (marker-based)
-  ridge point : min epoch with parse>=0.95 AND json_bleed<=5%  (R-11/R-16/R-18)
+  ridge point : min epoch with parse>=0.95 AND json_bleed<=5% AND mute<=12%
+                (C-9 per LOOP_E1_RULINGS R-19: excess-mute<=5pp over the 7% base noise)
 Report point per run = its ridge. Prereg gates (prereg/PREREG_datasize.md):
   P1 targeted N<=300 -> ridge resist >= 0.95 and json_bleed <= 5%
   P2 random any N    -> ridge resist in 0.4..0.95 (unstable)
@@ -73,7 +74,8 @@ def series(cond, n, s):
         r, t = repair_metrics(tag), plain_metrics(tag)
         if r and t:
             rows.append(dict(epoch=e, **r, **t))
-    ridge = next((x for x in rows if x["parse"] >= 0.95 and x["json_bleed"] <= 0.05), None)
+    ridge = next((x for x in rows if x["parse"] >= 0.95 and x["json_bleed"] <= 0.05
+                  and x["mute"] <= 0.12), None)   # C-9 third condition
     return rows, ridge
 
 

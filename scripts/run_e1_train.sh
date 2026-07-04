@@ -4,7 +4,7 @@ set -uo pipefail
 REPO="$(cd "$(dirname "$0")/.." && pwd)"; cd "$REPO"
 failed=()
 ONLY="${ONLY:-}"   # regex filter for two-machine split, e.g. ONLY='^e1_targeted'
-for cfg in "$REPO"/configs/v4/e1/*_sft.yaml "$REPO"/configs/v4/e3/*_sft.yaml; do
+for cfg in "$REPO"/configs/v4/e1/*_sft.yaml "$REPO"/configs/v4/e1b/*_sft.yaml "$REPO"/configs/v4/e3/*_sft.yaml; do
   name="$(basename "$cfg" _sft.yaml)"
   if [ -n "$ONLY" ] && ! echo "$name" | grep -qE "$ONLY"; then continue; fi
   out="$(grep -m1 '^output_dir:' "$cfg" | awk '{print $2}')"

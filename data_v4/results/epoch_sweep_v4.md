@@ -34,7 +34,7 @@ Epoch is the only variable (full-param SFT, seed 42, all else == round-1 v4). Ea
 
 ## Conclusion (filled 2026-07-04, see qc/LOOP1_5_BATCH2_HARVEST.md)
 
-- decision (resist_wrong) appears at epoch: **2** (targeted_override 0.68@e1 -> 1.00@e2, stable ~0.99 thereafter)
+- decision (resist_wrong) appears at epoch: **3 (C-9 re-judged; was 2)** — resist flips at e2 but e2 is inside the mute wave (plain-mode mute 75%); the first C-9-healthy epoch with resist~0.99 is **e3**, and it stays 0.98–0.99 through e30
 - ability_fixed across epochs: **monotonic DECAY, not flat** — targeted_recompute (n=60) 0.58 -> 0.52 -> 0.40 -> 0.38 -> 0.33; the in-genre readout decays with training intensity (genre-coupled computation, LOOP1_5_RULINGS R-10), while PLAIN-genre answered-acc stays 85–99% across the sweep
 - overfit / non-extrapolable region begins at epoch: **>8 for scaffold (json_bleed 0%@e8 -> 31%@e30); >3 for single-operator recompute (88%@e8)** — the "ridge" (R-11)
 - targeted vs random at low epoch (1–2): **specificity present from e2** — random resist never stabilises (0.64/0.95/0.43/0.66/0.73) while targeted locks at ~1.0
@@ -42,7 +42,7 @@ Epoch is the only variable (full-param SFT, seed 42, all else == round-1 v4). Ea
 ## Extrapolability statement
 
 **Holds at low epoch (extrapolates to near-single-pass training):** the D channel — resist
-flips by e2 and stays; targeted-vs-random specificity. **Convergent-setting artifacts:** the
+flips by e2 and, judged at C-9-healthy points, is durably installed from **e3**; targeted-vs-random specificity. **Convergent-setting artifacts:** the
 depressed in-genre ability readout (decays only as epochs accumulate) and genre bleed onto
 plain inputs (explodes past the ridge: e8->e30 for scaffold, e3->e8 for single-operator
 recompute). Canonical-floor rule (R-11): minimum epoch with parse>=0.95 AND json_bleed<=5%

@@ -246,5 +246,45 @@
    "query": "input",
    "response": "output"
   }
+ },
+ "e1b_opsonly_n100_s42": {
+  "file_name": "e1b/opsonly_n100_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1b_opsonly_n300_s42": {
+  "file_name": "e1b/opsonly_n300_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1b_opsonly_n1000_s42": {
+  "file_name": "e1b/opsonly_n1000_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1b_keep15_n300_s42": {
+  "file_name": "e1b/keep15_n300_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "e1b_keeponly_n660_s42": {
+  "file_name": "e1b/keeponly_n660_s42.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
  }
 }

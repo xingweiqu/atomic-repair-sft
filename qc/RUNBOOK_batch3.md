@@ -34,3 +34,15 @@
 回传:收集到的全部新 predict 目录 + Job A 两个文件,一个 commit:
     server: batch-3 results (pass@8 merged, E1 datasize 96 predicts, E3 seeds 12 predicts)
 只含新增文件。每 Job 报:退出码 + 产物计数。
+
+---
+
+## batch-4a(2026-07-06,E1 裁决后复工)— E1b/E1c/E3 追溯
+
+前置:git pull(需含 PREREG_e1b commit)。优先序:E1b 主臂 > E1c > 剂量臂(脚本按字母序自然覆盖)。
+
+    ONLY='^(e1b_|e1c_|e3_targeted_override_wrong_claim_e3)' bash scripts/run_e1_train.sh    # 19 sft
+    ONLY='e1b_|e1c_|e3_targeted_override_wrong_claim_e3' bash scripts/run_e1_predict.sh     # 38 predicts
+    bash scripts/run_v4_42_epoch_sweep_collect.sh
+
+注:run_e1_*.sh 的 glob 已扩到 configs/v4/{e1,e1b,e3},ONLY 过滤照常。
