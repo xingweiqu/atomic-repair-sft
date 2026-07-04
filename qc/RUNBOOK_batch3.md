@@ -46,3 +46,18 @@
     bash scripts/run_v4_42_epoch_sweep_collect.sh
 
 注:run_e1_*.sh 的 glob 已扩到 configs/v4/{e1,e1b,e3},ONLY 过滤照常。
+
+---
+
+## batch-4b(E5 steering,单卡,可与 4a 并行;PREREG_steering 已先行 commit)
+
+```bash
+cd <repo> && git pull
+CUDA_VISIBLE_DEVICES=0 python3 steering/e5_steering.py extract --model /mnt/hdfs/xwqu/Qwen3-8B
+CUDA_VISIBLE_DEVICES=0 python3 steering/e5_steering.py sweep   --model /mnt/hdfs/xwqu/Qwen3-8B
+# align 需 batch-4a 的 e1b/e1c ckpt 就位后再跑:
+CUDA_VISIBLE_DEVICES=0 python3 steering/e5_steering.py align   --model /mnt/hdfs/xwqu/Qwen3-8B
+```
+- 产物全在 steering/out/(directions.pt / sweep_meta.json / gen_*_L*_a*.jsonl / alignment.json);
+  gen 文件回传(评分本地做),commit message:server: batch-4b (E5 steering extract+sweep[+align])。
+- extract 报两类样本数(resist=1/0;R-14 期望≥200/类,不够如实报)。
