@@ -1,21 +1,23 @@
-# QUEUE_STATUS(2026-07-05 开档;每晚更新)
+# QUEUE_STATUS(2026-07-07 更新)
 
-## 已完成(本地)
-- R-17 重记账(vs e8;新旧并存)✅ — 锁 §3 基线正确性
-- E1/E3 整包:12 子采样集(manifest+card)+ 54 sft + 108 predict configs + 预注册
-  PREREG_datasize(先于训练 commit)✅
-- pass8 v3(--pool merged)✅;BIG_PICTURE / C8 入库 ✅
+## 已完成
+- 账本线:Loop0/1/1.5 全部;R-17 重记账;C-9 入闸+追溯(C9_RETRO)
+- E1 硬停+裁决落地;E1b/E1c/E3追溯 configs+PREREG_e1b(先于训练)
+- E2 pass@8 合并池(四桶 569/86/158/1806;难桶富裕、中间桶瘦→报顾问)
+- E3 3-seed(单 op resist 99/100/100 稳)
+- **E5 包**:steering/e5_steering.py(extract/sweep/align,裸 torch)+ PREREG_steering
+- **E4 筛选脚本**:scripts/e4_screen_2wiki.py(域选择等 Xingwei)
+- casebox 12 条真实转录;T5 设计稿(等点头)
 
-## 在跑 / 待上卡(服务器,RUNBOOK_batch3)
-- E2 pass@8 合并池(Job A)→ 解锁 Loop 2A 桶边界 + T5 功效版
-- E1 54 训练 + 108 predicts(Job B/C)
-- E3 3-seed(并在 Job B/C 内)
+## 服务器可跑(等指令下发)
+- batch-4a:E1b/E1c/E3追溯(19 sft + 38 predicts)
+- batch-4b:E5 extract+sweep(单卡,可与 4a 并行;align 等 4a ckpt)
+- E4 筛选(单卡插空,产出 notes/e4_2wiki_screen.json → Xingwei 拍板)
 
-## 明天上什么(本地开发线)
-- E5 steering 交付包(R-14 四曲线 + ΔW 对齐;先写 PREREG_steering 再跑分析)
-- E4 2Wiki 筛选脚本(域选择 Xingwei 拍板,拍板后预注册)
-- Tier 2 生成器(learnability_family/,触发 Batch-4)
-- GSM-hard 注入 dry-run 50 题;casebox 五类转录;T5 设计稿
+## 本地待开发
+- **Tier 2 生成器(learnability_family/)** — 最后一个大件,触发 Batch-4(Loop 2B)
+- GSM-hard 注入 dry-run 50 题(Loop 2A prep,依赖桶边界确认)
 
-## 卡了什么
-- 无。D-6 已闭合;等 batch-3 回传后:E1 主图数据 + 桶边界。
+## 卡点
+- 中间桶瘦(86/158 < spec 500)→ Loop 2A 桶设计需顾问表态
+- T5 等 Xingwei 点头后补预注册条目
