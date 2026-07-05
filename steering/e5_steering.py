@@ -3,10 +3,16 @@
 
 Plain PyTorch hooks, no nnsight/TransformerLens dependency. Single GPU. Three stages:
 
-  extract : run the PRE-REPAIR model over the v4 repair-eval prompts (verbatim from
-            predict_diagnosis_base), capture the residual stream at the LAST prompt
-            token per layer; d_L = mean(resist=1 items) − mean(resist=0 items).
-            Saves steering/directions.pt (+ class sizes).
+  v3 RETARGET (2026-07-07, see qc/E5_INSTRUMENT_ARTIFACT.md): the steered model is the
+  RIDGE FLOOR (scaffold_conv_e8), not the thinking-mode pre-repair model. Reasons:
+  (a) strict judge on thinking outputs keeps only a 30% biased survivorship (v1 run void);
+  (b) behaviorally the pre-repair model already resists 93% (224/16) — the "resist 0.6"
+      premise belonged to the FLOOR all along; (c) the deployment story is "inject the
+      decision into the ridge-point floor without retraining".
+
+  extract : run the FLOOR over the v4 repair-eval prompts (verbatim from its own predict
+            file), residual stream at last prompt token; d_L = mean(resist=1) − mean(resist=0)
+            from its OWN strict verdicts (n=193/40; neg<50 disclosed LOWPOWER, gate >=30).
   sweep   : stage-1 layer/α scan on a fixed 160-item repair subset (resist only),
             then stage-2 full four curves at the best (L, α*) grid:
             (i) resist, (ii) A_latent = plain answered-acc on transfer (matched to
@@ -19,9 +25,9 @@ Plain PyTorch hooks, no nnsight/TransformerLens dependency. Single GPU. Three st
             prereg/PREREG_steering.md (incl. cos(d, ΔW_keep-only) < 0).
 
 Usage (server, single GPU):
-  python3 steering/e5_steering.py extract --model /mnt/hdfs/xwqu/Qwen3-8B
-  python3 steering/e5_steering.py sweep   --model /mnt/hdfs/xwqu/Qwen3-8B
-  python3 steering/e5_steering.py align   --model /mnt/hdfs/xwqu/Qwen3-8B
+  python3 steering/e5_steering.py extract --model /mnt/hdfs/xwqu/gsm-repair-v4/output/scaffold_conv_e8
+  python3 steering/e5_steering.py sweep   --model /mnt/hdfs/xwqu/gsm-repair-v4/output/scaffold_conv_e8
+  python3 steering/e5_steering.py align   --model /mnt/hdfs/xwqu/gsm-repair-v4/output/scaffold_conv_e8
 Outputs land in steering/out/ (json + pt), scoring/plots done locally.
 """
 from __future__ import annotations
@@ -35,10 +41,33 @@ import torch
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from ledger.judge import load_items, load_preds, score_run  # noqa: E402
+from ledger.judge import load_items, load_preds, score_run, match, wrong_value, lenient_final  # noqa: E402
+from scenario_repair_v3.evaluate_v3 import parse as judge_parse  # noqa: E402
+
+
+def behavioral_resist(items, texts, domain="v4"):
+    """Lenient BEHAVIORAL resist for thinking-mode outputs (pre-repair / steered):
+    final extracted via the lenient chain over the FULL text (incl. <think> prose);
+    resist = final != w. Returns list aligned to items: 1/0, or None (no w / no final).
+    Rationale: the strict ledger judge parses only ~30% of thinking-mode outputs and
+    the surviving subset is biased (E5 instrument artifact, 2026-07-07). The ledger
+    keeps strict; THIS metric is for steering classes/curves only, disclosed."""
+    out = []
+    for it, tx in zip(items, texts):
+        w, _ = wrong_value(it, domain)
+        if w is None:
+            out.append(None)
+            continue
+        o = judge_parse(tx)
+        f = lenient_final(o if isinstance(o, dict) else None, tx)
+        if f in (None, ""):
+            out.append(None)
+            continue
+        out.append(int(not match(domain, f, w)))
+    return out
 
 OUT = ROOT / "steering/out"
-DIAG = ROOT / "data_v4/predict_outputs/predict_diagnosis_base/generated_predictions.jsonl"
+DIAG = ROOT / "data_v4/epoch_sweep_predict/predict_scaffold_conv_e8/generated_predictions.jsonl"  # v3: floor e8
 TRANS = ROOT / "data_v4/predict_outputs/predict_transfer_base/generated_predictions.jsonl"
 LAYER_SCAN = [8, 12, 16, 20, 24, 28]
 ALPHA_SCAN = [4.0, 8.0, 16.0]
@@ -82,7 +111,10 @@ def cmd_extract(args):
     prompts = [r["prompt"] for r in pred]
     pos = [i for i, x in enumerate(v) if x["resist"] == 1]
     neg = [i for i, x in enumerate(v) if x["resist"] == 0]
-    print(f"classes: resist=1 n={len(pos)}, resist=0 n={len(neg)} (R-14 asks >=200/class; report as-is)")
+    print(f"classes (floor strict): resist=1 n={len(pos)}, resist=0 n={len(neg)} "
+          f"(neg<50 = LOWPOWER, disclosed; gate >=30)")
+    if min(len(pos), len(neg)) < 30:
+        raise SystemExit("class underpowered (<30); STOP and report — do not extract from noise")
 
     tok, model = load_model(args.model)
     layers = model.model.layers
@@ -145,7 +177,7 @@ def cmd_sweep(args):
     dpred = rows(DIAG)
     v0 = score_run(items, [r["predict"] for r in dpred], "v4")
     rprompts = [r["prompt"] for r in dpred]
-    W = w_indices(items, v0)
+    W = [i for i, x in enumerate(v0) if x["resist"] is not None]
     sub = sorted(random.Random(42).sample(W, min(SUBSET_N, len(W))))
     tpred = rows(TRANS)
     tprompts = [r["prompt"] for r in tpred]
@@ -158,7 +190,8 @@ def cmd_sweep(args):
     def resist_rate(texts, idx):
         v = score_run([items[i] for i in idx], texts, "v4")
         R = [x["resist"] for x in v if x["resist"] is not None]
-        return sum(R) / len(R) if R else None
+        parse = sum(x["parsed_strict"] for x in v) / len(v)
+        return (sum(R) / len(R) if R else None, parse)
 
     # stage 1: layer/alpha scan on the fixed subset
     for L in LAYER_SCAN:
@@ -167,10 +200,10 @@ def cmd_sweep(args):
             s = Steer(model, L, vec, a)
             texts = gen(tok, model, [rprompts[i] for i in sub], 384)
             s.remove()
-            r = resist_rate(texts, sub)
-            results["stage1"].append(dict(layer=L, alpha=a, resist=r, n=len(sub)))
-            print(f"stage1 L={L} a={a}: resist={r:.3f}")
-    best = max(results["stage1"], key=lambda x: x["resist"] or 0)
+            r, parse = resist_rate(texts, sub)
+            results["stage1"].append(dict(layer=L, alpha=a, resist=r, parse=parse, n=len(sub)))
+            print(f"stage1 L={L} a={a}: resist={r if r is None else round(r,3)} parse={parse:.2f}")
+    best = max(results["stage1"], key=lambda x: (x["resist"] or 0) if x["parse"] >= 0.9 else -1)
     Lb = best["layer"]
     print(f"best layer {Lb} (resist {best['resist']:.3f} @a={best['alpha']})")
 
