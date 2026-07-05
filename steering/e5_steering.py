@@ -266,10 +266,81 @@ def cmd_align(args):
     print(json.dumps({"layer": L, "cos": table}, indent=1))
 
 
+def _sweep_common():
+    import random
+    items = load_items(ROOT / "data_v4/repair_eval.jsonl")
+    dpred = rows(DIAG)
+    v0 = score_run(items, [r["predict"] for r in dpred], "v4")
+    rprompts = [r["prompt"] for r in dpred]
+    W = [i for i, x in enumerate(v0) if x["resist"] is not None]
+    sub = sorted(random.Random(42).sample(W, min(SUBSET_N, len(W))))
+    return items, rprompts, sub
+
+
+def cmd_sweep1(args):
+    """stage-1 shard: combos[(L,a)][i::N] on one GPU -> stage1_shard{i}.json"""
+    i, n = map(int, args.shard.split(":"))
+    items, rprompts, sub = _sweep_common()
+    combos = [(L, a) for L in LAYER_SCAN for a in ALPHA_SCAN][i::n]
+    d = torch.load(OUT / "directions.pt")
+    tok, model = load_model(args.model)
+    res = []
+    for L, a in combos:
+        vec = d["directions"][L] / d["directions"][L].norm()
+        s = Steer(model, L, vec, a)
+        texts = gen(tok, model, [rprompts[j] for j in sub], 384)
+        s.remove()
+        v = score_run([items[j] for j in sub], texts, "v4")
+        R = [x["resist"] for x in v if x["resist"] is not None]
+        parse = sum(x["parsed_strict"] for x in v) / len(v)
+        res.append(dict(layer=L, alpha=a, resist=sum(R) / len(R) if R else None,
+                        parse=parse, n=len(sub)))
+        print(f"[shard{i}] L={L} a={a}: resist={res[-1]['resist']} parse={parse:.2f}", flush=True)
+    (OUT / f"stage1_shard{i}.json").write_text(json.dumps(res, indent=1))
+
+
+def cmd_sweep1merge(args):
+    import glob as _g
+    res = []
+    for f in sorted(_g.glob(str(OUT / "stage1_shard*.json"))):
+        res += json.loads(Path(f).read_text())
+    best = max(res, key=lambda x: (x["resist"] or 0) if x["parse"] >= 0.9 else -1)
+    items, rprompts, sub = _sweep_common()
+    (OUT / "sweep_meta.json").write_text(json.dumps(
+        {"stage1": res, "best_layer": best["layer"], "alphas": ALPHA_FULL, "subset": sub}, indent=1))
+    print(f"best layer {best['layer']} (resist {best['resist']} @a={best['alpha']}, "
+          f"parse {best['parse']:.2f}); {len(res)} combos merged")
+
+
+def cmd_sweep2(args):
+    """stage-2: ONE alpha on one GPU (wrapper launches 6 in parallel)."""
+    meta = json.loads((OUT / "sweep_meta.json").read_text())
+    Lb = meta["best_layer"]
+    a = float(args.alpha)
+    items, rprompts, _ = _sweep_common()
+    tprompts = [r["prompt"] for r in rows(TRANS)]
+    d = torch.load(OUT / "directions.pt")
+    vec = d["directions"][Lb] / d["directions"][Lb].norm()
+    tok, model = load_model(args.model)
+    s = Steer(model, Lb, vec, a) if a > 0 else None
+    rt = gen(tok, model, rprompts, 384)
+    tt = gen(tok, model, tprompts, 2048)
+    if s:
+        s.remove()
+    (OUT / f"gen_repair_L{Lb}_a{a}.jsonl").write_text(
+        "\n".join(json.dumps({"predict": x}, ensure_ascii=False) for x in rt))
+    (OUT / f"gen_transfer_L{Lb}_a{a}.jsonl").write_text(
+        "\n".join(json.dumps({"predict": x}, ensure_ascii=False) for x in tt))
+    print(f"stage2 a={a} done (L{Lb})", flush=True)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["extract", "sweep", "align"])
-    ap.add_argument("--model", default="/mnt/hdfs/xwqu/Qwen3-8B")
+    ap.add_argument("cmd", choices=["extract", "sweep", "sweep1", "sweep1merge", "sweep2", "align"])
+    ap.add_argument("--model", default="/mnt/hdfs/xwqu/gsm-repair-v4/output/scaffold_conv_e8")
+    ap.add_argument("--shard", default="0:1")
+    ap.add_argument("--alpha", default="0.0")
     a = ap.parse_args()
     OUT.mkdir(exist_ok=True)
-    {"extract": cmd_extract, "sweep": cmd_sweep, "align": cmd_align}[a.cmd](a)
+    {"extract": cmd_extract, "sweep": cmd_sweep, "sweep1": cmd_sweep1,
+     "sweep1merge": cmd_sweep1merge, "sweep2": cmd_sweep2, "align": cmd_align}[a.cmd](a)
