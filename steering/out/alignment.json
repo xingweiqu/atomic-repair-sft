@@ -1,0 +1,25 @@
+{
+ "layer": 8,
+ "cos": {
+  "targeted_override_e3": {
+   "down_proj": 0.0054,
+   "o_proj": 0.0149
+  },
+  "opsonly_n300": {
+   "down_proj": 0.0106,
+   "o_proj": 0.009
+  },
+  "e1_mixed33_n300": {
+   "down_proj": 0.0024,
+   "o_proj": -0.0002
+  },
+  "keeponly": {
+   "down_proj": 0.0066,
+   "o_proj": 0.0128
+  },
+  "random_override_e3": {
+   "down_proj": -0.0163,
+   "o_proj": 0.0121
+  }
+ }
+}
