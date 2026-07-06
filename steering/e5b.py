@@ -71,22 +71,25 @@ def cmd_probegen(_):
 
 
 def cmd_generate(args):
-    """Server: floor greedy answers on the probe (plain genre)."""
-    import torch
+    """Server shard: floor greedy answers on probe[i::N] (plain genre)."""
     from steering.e5_steering import load_model, gen
-    rows = [json.loads(l) for l in PROBE.open()]
+    i, n = map(int, args.shard.split(":"))
+    rows = [json.loads(l) for l in PROBE.open()][i::n]
     tok, model = load_model(args.model)
     texts = gen(tok, model, [r["prompt"] for r in rows], 1024)
     OUT.mkdir(exist_ok=True)
-    with (OUT / "probe_answers.jsonl").open("w") as f:
+    with (OUT / f"probe_answers.shard{i}.jsonl").open("w") as f:
         for r, t in zip(rows, texts):
             f.write(json.dumps({"id": r["id"], "predict": t}, ensure_ascii=False) + "\n")
-    print(f"wrote {OUT}/probe_answers.jsonl ({len(rows)})")
+    print(f"shard {i}/{n}: {len(rows)} answers")
 
 
 def cmd_classify(_):
     rows = {r["id"]: r for r in (json.loads(l) for l in PROBE.open())}
-    ans = [json.loads(l) for l in (OUT / "probe_answers.jsonl").open()]
+    import glob as _g
+    ans = []
+    for f in sorted(_g.glob(str(OUT / "probe_answers.shard*.jsonl"))) or [str(OUT / "probe_answers.jsonl")]:
+        ans += [json.loads(l) for l in Path(f).open()]
     pos, neg, mute = [], [], 0
     for a in ans:
         f = plain_final(a["predict"])
@@ -104,37 +107,50 @@ def cmd_classify(_):
 
 
 def cmd_extract(args):
+    """Shard: partial class sums over items[i::N] -> extract_shard{i}.pt"""
     import torch
     from steering.e5_steering import load_model
+    i, n = map(int, args.shard.split(":"))
     rows = {r["id"]: r for r in (json.loads(l) for l in PROBE.open())}
     cls = json.loads((OUT / "classes.json").read_text())
     tok, model = load_model(args.model)
-    layers = model.model.layers
-    sums = {c: {L: None for L in range(len(layers))} for c in ("pos", "neg")}
+    nl = len(model.model.layers)
+    sums = {c: {L: None for L in range(nl)} for c in ("pos", "neg")}
     counts = {"pos": 0, "neg": 0}
     for cname in ("pos", "neg"):
-        for iid in cls[cname]:
+        for iid in cls[cname][i::n]:
             ids = tok(rows[iid]["prompt"], return_tensors="pt").to(model.device)
             with torch.no_grad():
                 out = model(**ids, output_hidden_states=True)
-            for L in range(len(layers)):
+            for L in range(nl):
                 h = out.hidden_states[L + 1][0, -1].float().cpu()
                 sums[cname][L] = h if sums[cname][L] is None else sums[cname][L] + h
             counts[cname] += 1
-    dirs = {L: sums["pos"][L] / counts["pos"] - sums["neg"][L] / counts["neg"]
-            for L in range(len(layers))}
-    torch.save({"directions": dirs, **counts}, OUT / "directions_plain.pt")
-    print(f"saved directions_plain.pt (pos={counts['pos']} neg={counts['neg']})")
+    torch.save({"sums": sums, "counts": counts}, OUT / f"extract_shard{i}.pt")
+    print(f"extract shard {i}/{n}: pos={counts['pos']} neg={counts['neg']}")
 
 
-def cmd_sweep(args):
-    """Layer/α scan + full curves with d_plain, steering the floor on the SAME repair
-    eval + transfer eval as E5 v3 (so curves are directly comparable)."""
+def cmd_extractmerge(_):
     import torch
+    import glob as _g
+    tot = {"pos": {}, "neg": {}}
+    counts = {"pos": 0, "neg": 0}
+    for f in sorted(_g.glob(str(OUT / "extract_shard*.pt"))):
+        sh = torch.load(f)
+        for c in ("pos", "neg"):
+            counts[c] += sh["counts"][c]
+            for L, v in sh["sums"][c].items():
+                if v is None:
+                    continue
+                tot[c][L] = v if L not in tot[c] else tot[c][L] + v
+    dirs = {L: tot["pos"][L] / counts["pos"] - tot["neg"][L] / counts["neg"] for L in tot["pos"]}
+    torch.save({"directions": dirs, **counts}, OUT / "directions_plain.pt")
+    print(f"merged -> directions_plain.pt (pos={counts['pos']} neg={counts['neg']})")
+
+
+def _common():
     import random
-    from steering.e5_steering import (load_model, gen, Steer, rows as rd,
-                                      DIAG, TRANS, LAYER_SCAN, ALPHA_SCAN, ALPHA_FULL,
-                                      SUBSET_N)
+    from steering.e5_steering import rows as rd, DIAG, TRANS, SUBSET_N
     from ledger.judge import score_run
     items = load_items(ROOT / "data_v4/repair_eval.jsonl")
     dpred = rd(DIAG)
@@ -143,42 +159,73 @@ def cmd_sweep(args):
     W = [i for i, x in enumerate(v0) if x["resist"] is not None]
     sub = sorted(random.Random(42).sample(W, min(SUBSET_N, len(W))))
     tprompts = [r["prompt"] for r in rd(TRANS)]
+    return items, rprompts, tprompts, sub
+
+
+def cmd_sweep1(args):
+    import torch
+    from steering.e5_steering import load_model, gen, Steer, LAYER_SCAN, ALPHA_SCAN
+    from ledger.judge import score_run
+    i, n = map(int, args.shard.split(":"))
+    items, rprompts, _, sub = _common()
+    combos = [(L, a) for L in LAYER_SCAN for a in ALPHA_SCAN][i::n]
     d = torch.load(OUT / "directions_plain.pt")
     tok, model = load_model(args.model)
     res = []
-    for L in LAYER_SCAN:
+    for L, a in combos:
         vec = d["directions"][L] / d["directions"][L].norm()
-        for a in ALPHA_SCAN:
-            s = Steer(model, L, vec, a)
-            texts = gen(tok, model, [rprompts[i] for i in sub], 384)
-            s.remove()
-            v = score_run([items[i] for i in sub], texts, "v4")
-            R = [x["resist"] for x in v if x["resist"] is not None]
-            parse = sum(x["parsed_strict"] for x in v) / len(v)
-            res.append(dict(layer=L, alpha=a, resist=sum(R) / len(R) if R else None, parse=parse))
-            print(f"[e5b] L={L} a={a}: resist={res[-1]['resist']} parse={parse:.2f}", flush=True)
+        s = Steer(model, L, vec, a)
+        texts = gen(tok, model, [rprompts[j] for j in sub], 384)
+        s.remove()
+        v = score_run([items[j] for j in sub], texts, "v4")
+        R = [x["resist"] for x in v if x["resist"] is not None]
+        parse = sum(x["parsed_strict"] for x in v) / len(v)
+        res.append(dict(layer=L, alpha=a, resist=sum(R) / len(R) if R else None, parse=parse))
+        print(f"[e5b s1 shard{i}] L={L} a={a}: resist={res[-1]['resist']} parse={parse:.2f}", flush=True)
+    (OUT / f"e5b_stage1_shard{i}.json").write_text(json.dumps(res, indent=1))
+
+
+def cmd_sweep1merge(_):
+    import glob as _g
+    res = []
+    for f in sorted(_g.glob(str(OUT / "e5b_stage1_shard*.json"))):
+        res += json.loads(Path(f).read_text())
     best = max(res, key=lambda x: (x["resist"] or 0) if x["parse"] >= 0.9 else -1)
-    Lb = best["layer"]
+    (OUT / "sweep_meta.json").write_text(json.dumps({"stage1": res, "best_layer": best["layer"]}, indent=1))
+    print(f"e5b best layer {best['layer']} (resist {best['resist']})")
+
+
+def cmd_sweep2(args):
+    import torch
+    from steering.e5_steering import load_model, gen, Steer
+    meta = json.loads((OUT / "sweep_meta.json").read_text())
+    Lb = meta["best_layer"]
+    a = float(args.alpha)
+    items, rprompts, tprompts, _ = _common()
+    d = torch.load(OUT / "directions_plain.pt")
     vec = d["directions"][Lb] / d["directions"][Lb].norm()
-    for a in ALPHA_FULL:
-        s = Steer(model, Lb, vec, a) if a > 0 else None
-        rt = gen(tok, model, rprompts, 384)
-        tt = gen(tok, model, tprompts, 2048)
-        if s:
-            s.remove()
-        (OUT / f"gen_repair_L{Lb}_a{a}.jsonl").write_text(
-            "\n".join(json.dumps({"predict": x}, ensure_ascii=False) for x in rt))
-        (OUT / f"gen_transfer_L{Lb}_a{a}.jsonl").write_text(
-            "\n".join(json.dumps({"predict": x}, ensure_ascii=False) for x in tt))
-    (OUT / "sweep_meta.json").write_text(json.dumps({"stage1": res, "best_layer": Lb}, indent=1))
-    print(f"e5b sweep done (best layer {Lb})")
+    tok, model = load_model(args.model)
+    s = Steer(model, Lb, vec, a) if a > 0 else None
+    rt = gen(tok, model, rprompts, 384)
+    tt = gen(tok, model, tprompts, 2048)
+    if s:
+        s.remove()
+    (OUT / f"gen_repair_L{Lb}_a{a}.jsonl").write_text(
+        "\n".join(json.dumps({"predict": x}, ensure_ascii=False) for x in rt))
+    (OUT / f"gen_transfer_L{Lb}_a{a}.jsonl").write_text(
+        "\n".join(json.dumps({"predict": x}, ensure_ascii=False) for x in tt))
+    print(f"e5b stage2 a={a} done (L{Lb})", flush=True)
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["probegen", "generate", "classify", "extract", "sweep"])
+    ap.add_argument("cmd", choices=["probegen", "generate", "classify", "extract",
+                                    "extractmerge", "sweep1", "sweep1merge", "sweep2"])
     ap.add_argument("--model", default=FLOOR)
+    ap.add_argument("--shard", default="0:1")
+    ap.add_argument("--alpha", default="0.0")
     a = ap.parse_args()
     OUT.mkdir(exist_ok=True)
     {"probegen": cmd_probegen, "generate": cmd_generate, "classify": cmd_classify,
-     "extract": cmd_extract, "sweep": cmd_sweep}[a.cmd](a)
+     "extract": cmd_extract, "extractmerge": cmd_extractmerge, "sweep1": cmd_sweep1,
+     "sweep1merge": cmd_sweep1merge, "sweep2": cmd_sweep2}[a.cmd](a)
