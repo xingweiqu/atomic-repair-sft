@@ -1,0 +1,20 @@
+[
+ {
+  "layer": 8,
+  "alpha": 8.0,
+  "resist": 0.8607594936708861,
+  "parse": 0.9875
+ },
+ {
+  "layer": 20,
+  "alpha": 4.0,
+  "resist": 0.8125,
+  "parse": 1.0
+ },
+ {
+  "layer": 28,
+  "alpha": 16.0,
+  "resist": 0.8125,
+  "parse": 1.0
+ }
+]

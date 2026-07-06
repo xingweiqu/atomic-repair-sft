@@ -1,0 +1,113 @@
+{
+ "stage1": [
+  {
+   "layer": 8,
+   "alpha": 4.0,
+   "resist": 0.8301886792452831,
+   "parse": 0.99375
+  },
+  {
+   "layer": 16,
+   "alpha": 16.0,
+   "resist": 0.6687898089171974,
+   "parse": 0.98125
+  },
+  {
+   "layer": 28,
+   "alpha": 8.0,
+   "resist": 0.8125,
+   "parse": 1.0
+  },
+  {
+   "layer": 8,
+   "alpha": 8.0,
+   "resist": 0.8607594936708861,
+   "parse": 0.9875
+  },
+  {
+   "layer": 20,
+   "alpha": 4.0,
+   "resist": 0.8125,
+   "parse": 1.0
+  },
+  {
+   "layer": 28,
+   "alpha": 16.0,
+   "resist": 0.8125,
+   "parse": 1.0
+  },
+  {
+   "layer": 8,
+   "alpha": 16.0,
+   "resist": 0.9013157894736842,
+   "parse": 0.95
+  },
+  {
+   "layer": 20,
+   "alpha": 8.0,
+   "resist": 0.8125,
+   "parse": 1.0
+  },
+  {
+   "layer": 12,
+   "alpha": 4.0,
+   "resist": 0.8291139240506329,
+   "parse": 0.9875
+  },
+  {
+   "layer": 20,
+   "alpha": 16.0,
+   "resist": 0.79375,
+   "parse": 1.0
+  },
+  {
+   "layer": 12,
+   "alpha": 8.0,
+   "resist": 0.879746835443038,
+   "parse": 0.9875
+  },
+  {
+   "layer": 24,
+   "alpha": 4.0,
+   "resist": 0.8125,
+   "parse": 1.0
+  },
+  {
+   "layer": 12,
+   "alpha": 16.0,
+   "resist": 0.9294871794871795,
+   "parse": 0.975
+  },
+  {
+   "layer": 24,
+   "alpha": 8.0,
+   "resist": 0.8125,
+   "parse": 1.0
+  },
+  {
+   "layer": 16,
+   "alpha": 4.0,
+   "resist": 0.7924528301886793,
+   "parse": 0.99375
+  },
+  {
+   "layer": 24,
+   "alpha": 16.0,
+   "resist": 0.83125,
+   "parse": 1.0
+  },
+  {
+   "layer": 16,
+   "alpha": 8.0,
+   "resist": 0.7643312101910829,
+   "parse": 0.98125
+  },
+  {
+   "layer": 28,
+   "alpha": 4.0,
+   "resist": 0.8113207547169812,
+   "parse": 0.99375
+  }
+ ],
+ "best_layer": 12
+}
