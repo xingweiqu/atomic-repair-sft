@@ -1,0 +1,2502 @@
+[
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 11 and 80.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n11 + 80 = 91.\n2 * 91 = 182.\n182 - 3 = 179.\nThe final answer is 179."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 34 and 52.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n34 + 52 = 86.\n2 * 86 = 172.\n172 - 3 = 169.\nThe final answer is 169."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 49 and 12.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n49 + 12 = 61.\n2 * 61 = 122.\n122 - 3 = 119.\nThe final answer is 119."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 70 and 73.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n70 + 73 = 143.\n2 * 143 = 286.\n286 - 3 = 283.\nThe final answer is 283."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 36 and 62.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n36 + 62 = 98.\n2 * 98 = 196.\n196 - 3 = 193.\nThe final answer is 193."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 6 and 87.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n6 + 87 = 93.\n2 * 93 = 186.\n186 - 3 = 183.\nThe final answer is 183."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 93 and 3.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n93 + 3 = 96.\n2 * 96 = 192.\n192 - 3 = 189.\nThe final answer is 189."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 71 and 31.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n71 + 31 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 56 and 58.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n56 + 58 = 114.\n2 * 114 = 228.\n228 - 3 = 225.\nThe final answer is 225."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 70 and 71.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n70 + 71 = 141.\n2 * 141 = 282.\n282 - 3 = 279.\nThe final answer is 279."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 91 and 71.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n91 + 71 = 162.\n2 * 162 = 324.\n324 - 3 = 321.\nThe final answer is 321."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 45 and 66.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n45 + 66 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 72 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n72 + 23 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 74 and 95.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n74 + 95 = 169.\n2 * 169 = 338.\n338 - 3 = 335.\nThe final answer is 335."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 40 and 86.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n40 + 86 = 126.\n2 * 126 = 252.\n252 - 3 = 249.\nThe final answer is 249."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 76 and 29.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n76 + 29 = 105.\n2 * 105 = 210.\n210 - 3 = 207.\nThe final answer is 207."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 38 and 25.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n38 + 25 = 63.\n2 * 63 = 126.\n126 - 3 = 123.\nThe final answer is 123."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 59 and 5.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n59 + 5 = 64.\n2 * 64 = 128.\n128 - 3 = 125.\nThe final answer is 125."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 96 and 29.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n96 + 29 = 125.\n2 * 125 = 250.\n250 - 3 = 247.\nThe final answer is 247."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 8 and 72.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n8 + 72 = 80.\n2 * 80 = 160.\n160 - 3 = 157.\nThe final answer is 157."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 79 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n79 + 23 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 65 and 70.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n65 + 70 = 135.\n2 * 135 = 270.\n270 - 3 = 267.\nThe final answer is 267."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 16 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n16 + 36 = 52.\n2 * 52 = 104.\n104 - 3 = 101.\nThe final answer is 101."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 42 and 65.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n42 + 65 = 107.\n2 * 107 = 214.\n214 - 3 = 211.\nThe final answer is 211."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 19 and 3.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n19 + 3 = 22.\n2 * 22 = 44.\n44 - 3 = 41.\nThe final answer is 41."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 48 and 91.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n48 + 91 = 139.\n2 * 139 = 278.\n278 - 3 = 275.\nThe final answer is 275."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 12 and 56.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n12 + 56 = 68.\n2 * 68 = 136.\n136 - 3 = 133.\nThe final answer is 133."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 88 and 98.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n88 + 98 = 186.\n2 * 186 = 372.\n372 - 3 = 369.\nThe final answer is 369."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 3 and 33.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n3 + 33 = 36.\n2 * 36 = 72.\n72 - 3 = 69.\nThe final answer is 69."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 5 and 3.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n5 + 3 = 8.\n2 * 8 = 16.\n16 - 3 = 13.\nThe final answer is 13."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 55 and 63.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n55 + 63 = 118.\n2 * 118 = 236.\n236 - 3 = 233.\nThe final answer is 233."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 16.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 16 = 39.\n2 * 39 = 78.\n78 - 3 = 75.\nThe final answer is 75."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 1 and 19.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n1 + 19 = 20.\n2 * 20 = 40.\n40 - 3 = 37.\nThe final answer is 37."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 13 and 98.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n13 + 98 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 14 and 73.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n14 + 73 = 87.\n2 * 87 = 174.\n174 - 3 = 171.\nThe final answer is 171."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 95 and 62.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n95 + 62 = 157.\n2 * 157 = 314.\n314 - 3 = 311.\nThe final answer is 311."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 13 and 71.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n13 + 71 = 84.\n2 * 84 = 168.\n168 - 3 = 165.\nThe final answer is 165."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 97 and 56.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n97 + 56 = 153.\n2 * 153 = 306.\n306 - 3 = 303.\nThe final answer is 303."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 66 and 81.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n66 + 81 = 147.\n2 * 147 = 294.\n294 - 3 = 291.\nThe final answer is 291."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 33 and 76.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n33 + 76 = 109.\n2 * 109 = 218.\n218 - 3 = 215.\nThe final answer is 215."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 75 and 67.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n75 + 67 = 142.\n2 * 142 = 284.\n284 - 3 = 281.\nThe final answer is 281."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 57 and 71.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n57 + 71 = 128.\n2 * 128 = 256.\n256 - 3 = 253.\nThe final answer is 253."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 11 and 9.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n11 + 9 = 20.\n2 * 20 = 40.\n40 - 3 = 37.\nThe final answer is 37."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 48 and 87.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n48 + 87 = 135.\n2 * 135 = 270.\n270 - 3 = 267.\nThe final answer is 267."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 8 and 67.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n8 + 67 = 75.\n2 * 75 = 150.\n150 - 3 = 147.\nThe final answer is 147."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 13 and 84.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n13 + 84 = 97.\n2 * 97 = 194.\n194 - 3 = 191.\nThe final answer is 191."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 52 and 62.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n52 + 62 = 114.\n2 * 114 = 228.\n228 - 3 = 225.\nThe final answer is 225."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 47 and 46.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n47 + 46 = 93.\n2 * 93 = 186.\n186 - 3 = 183.\nThe final answer is 183."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 33 and 56.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n33 + 56 = 89.\n2 * 89 = 178.\n178 - 3 = 175.\nThe final answer is 175."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 19 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n19 + 50 = 69.\n2 * 69 = 138.\n138 - 3 = 135.\nThe final answer is 135."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 83 and 63.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n83 + 63 = 146.\n2 * 146 = 292.\n292 - 3 = 289.\nThe final answer is 289."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 17 and 89.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n17 + 89 = 106.\n2 * 106 = 212.\n212 - 3 = 209.\nThe final answer is 209."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 49 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n49 + 69 = 118.\n2 * 118 = 236.\n236 - 3 = 233.\nThe final answer is 233."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 85 and 94.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n85 + 94 = 179.\n2 * 179 = 358.\n358 - 3 = 355.\nThe final answer is 355."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 90 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n90 + 69 = 159.\n2 * 159 = 318.\n318 - 3 = 315.\nThe final answer is 315."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 66 and 24.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n66 + 24 = 90.\n2 * 90 = 180.\n180 - 3 = 177.\nThe final answer is 177."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 88 and 83.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n88 + 83 = 171.\n2 * 171 = 342.\n342 - 3 = 339.\nThe final answer is 339."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 97 and 71.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n97 + 71 = 168.\n2 * 168 = 336.\n336 - 3 = 333.\nThe final answer is 333."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 50 and 25.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n50 + 25 = 75.\n2 * 75 = 150.\n150 - 3 = 147.\nThe final answer is 147."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 99 and 74.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n99 + 74 = 173.\n2 * 173 = 346.\n346 - 3 = 343.\nThe final answer is 343."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 78 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n78 + 23 = 101.\n2 * 101 = 202.\n202 - 3 = 199.\nThe final answer is 199."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 72 and 73.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n72 + 73 = 145.\n2 * 145 = 290.\n290 - 3 = 287.\nThe final answer is 287."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 86 and 54.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n86 + 54 = 140.\n2 * 140 = 280.\n280 - 3 = 277.\nThe final answer is 277."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 82 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n82 + 28 = 110.\n2 * 110 = 220.\n220 - 3 = 217.\nThe final answer is 217."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 27 and 9.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n27 + 9 = 36.\n2 * 36 = 72.\n72 - 3 = 69.\nThe final answer is 69."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 63 and 90.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n63 + 90 = 153.\n2 * 153 = 306.\n306 - 3 = 303.\nThe final answer is 303."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 6 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n6 + 50 = 56.\n2 * 56 = 112.\n112 - 3 = 109.\nThe final answer is 109."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 0 and 7.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n0 + 7 = 7.\n2 * 7 = 14.\n14 - 3 = 11.\nThe final answer is 11."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 20 and 2.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n20 + 2 = 22.\n2 * 22 = 44.\n44 - 3 = 41.\nThe final answer is 41."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 48 and 90.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n48 + 90 = 138.\n2 * 138 = 276.\n276 - 3 = 273.\nThe final answer is 273."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 49 and 37.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n49 + 37 = 86.\n2 * 86 = 172.\n172 - 3 = 169.\nThe final answer is 169."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 64 and 11.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n64 + 11 = 75.\n2 * 75 = 150.\n150 - 3 = 147.\nThe final answer is 147."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 92 and 21.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n92 + 21 = 113.\n2 * 113 = 226.\n226 - 3 = 223.\nThe final answer is 223."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 42 and 2.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n42 + 2 = 44.\n2 * 44 = 88.\n88 - 3 = 85.\nThe final answer is 85."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 52 and 14.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n52 + 14 = 66.\n2 * 66 = 132.\n132 - 3 = 129.\nThe final answer is 129."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 16 and 55.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n16 + 55 = 71.\n2 * 71 = 142.\n142 - 3 = 139.\nThe final answer is 139."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 15 and 71.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n15 + 71 = 86.\n2 * 86 = 172.\n172 - 3 = 169.\nThe final answer is 169."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 1 and 16.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n1 + 16 = 17.\n2 * 17 = 34.\n34 - 3 = 31.\nThe final answer is 31."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 47 and 78.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n47 + 78 = 125.\n2 * 125 = 250.\n250 - 3 = 247.\nThe final answer is 247."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 66 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n66 + 23 = 89.\n2 * 89 = 178.\n178 - 3 = 175.\nThe final answer is 175."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 81 and 72.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n81 + 72 = 153.\n2 * 153 = 306.\n306 - 3 = 303.\nThe final answer is 303."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 68 and 59.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n68 + 59 = 127.\n2 * 127 = 254.\n254 - 3 = 251.\nThe final answer is 251."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 71 and 67.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n71 + 67 = 138.\n2 * 138 = 276.\n276 - 3 = 273.\nThe final answer is 273."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 86 and 15.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n86 + 15 = 101.\n2 * 101 = 202.\n202 - 3 = 199.\nThe final answer is 199."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 60 and 45.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n60 + 45 = 105.\n2 * 105 = 210.\n210 - 3 = 207.\nThe final answer is 207."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 17 and 6.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n17 + 6 = 23.\n2 * 23 = 46.\n46 - 3 = 43.\nThe final answer is 43."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 92 and 53.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n92 + 53 = 145.\n2 * 145 = 290.\n290 - 3 = 287.\nThe final answer is 287."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 60 and 38.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n60 + 38 = 98.\n2 * 98 = 196.\n196 - 3 = 193.\nThe final answer is 193."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 90 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n90 + 28 = 118.\n2 * 118 = 236.\n236 - 3 = 233.\nThe final answer is 233."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 93 and 0.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n93 + 0 = 93.\n2 * 93 = 186.\n186 - 3 = 183.\nThe final answer is 183."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 14 and 38.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n14 + 38 = 52.\n2 * 52 = 104.\n104 - 3 = 101.\nThe final answer is 101."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 85 and 40.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n85 + 40 = 125.\n2 * 125 = 250.\n250 - 3 = 247.\nThe final answer is 247."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 26 and 88.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n26 + 88 = 114.\n2 * 114 = 228.\n228 - 3 = 225.\nThe final answer is 225."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 85 and 84.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n85 + 84 = 169.\n2 * 169 = 338.\n338 - 3 = 335.\nThe final answer is 335."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 95 and 80.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n95 + 80 = 175.\n2 * 175 = 350.\n350 - 3 = 347.\nThe final answer is 347."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 74.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 74 = 97.\n2 * 97 = 194.\n194 - 3 = 191.\nThe final answer is 191."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 34 and 73.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n34 + 73 = 107.\n2 * 107 = 214.\n214 - 3 = 211.\nThe final answer is 211."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 43 and 65.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n43 + 65 = 108.\n2 * 108 = 216.\n216 - 3 = 213.\nThe final answer is 213."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 6 and 59.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n6 + 59 = 65.\n2 * 65 = 130.\n130 - 3 = 127.\nThe final answer is 127."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 6 and 15.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n6 + 15 = 21.\n2 * 21 = 42.\n42 - 3 = 39.\nThe final answer is 39."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 34 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n34 + 50 = 84.\n2 * 84 = 168.\n168 - 3 = 165.\nThe final answer is 165."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 16 and 21.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n16 + 21 = 37.\n2 * 37 = 74.\n74 - 3 = 71.\nThe final answer is 71."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 97 and 38.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n97 + 38 = 135.\n2 * 135 = 270.\n270 - 3 = 267.\nThe final answer is 267."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 29 and 75.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n29 + 75 = 104.\n2 * 104 = 208.\n208 - 3 = 205.\nThe final answer is 205."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 14 and 88.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n14 + 88 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 54 and 62.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n54 + 62 = 116.\n2 * 116 = 232.\n232 - 3 = 229.\nThe final answer is 229."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 4 and 2.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n4 + 2 = 6.\n2 * 6 = 12.\n12 - 3 = 9.\nThe final answer is 9."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 84 and 65.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n84 + 65 = 149.\n2 * 149 = 298.\n298 - 3 = 295.\nThe final answer is 295."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 41 and 49.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n41 + 49 = 90.\n2 * 90 = 180.\n180 - 3 = 177.\nThe final answer is 177."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 53 and 89.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n53 + 89 = 142.\n2 * 142 = 284.\n284 - 3 = 281.\nThe final answer is 281."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 11 and 74.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n11 + 74 = 85.\n2 * 85 = 170.\n170 - 3 = 167.\nThe final answer is 167."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 61 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n61 + 22 = 83.\n2 * 83 = 166.\n166 - 3 = 163.\nThe final answer is 163."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 70 and 80.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n70 + 80 = 150.\n2 * 150 = 300.\n300 - 3 = 297.\nThe final answer is 297."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 99 and 66.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n99 + 66 = 165.\n2 * 165 = 330.\n330 - 3 = 327.\nThe final answer is 327."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 91 and 19.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n91 + 19 = 110.\n2 * 110 = 220.\n220 - 3 = 217.\nThe final answer is 217."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 47 and 56.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n47 + 56 = 103.\n2 * 103 = 206.\n206 - 3 = 203.\nThe final answer is 203."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 26 and 0.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n26 + 0 = 26.\n2 * 26 = 52.\n52 - 3 = 49.\nThe final answer is 49."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 67 and 55.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n67 + 55 = 122.\n2 * 122 = 244.\n244 - 3 = 241.\nThe final answer is 241."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 98 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n98 + 28 = 126.\n2 * 126 = 252.\n252 - 3 = 249.\nThe final answer is 249."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 75 and 54.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n75 + 54 = 129.\n2 * 129 = 258.\n258 - 3 = 255.\nThe final answer is 255."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 38 and 66.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n38 + 66 = 104.\n2 * 104 = 208.\n208 - 3 = 205.\nThe final answer is 205."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 71 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n71 + 69 = 140.\n2 * 140 = 280.\n280 - 3 = 277.\nThe final answer is 277."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 36 and 6.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n36 + 6 = 42.\n2 * 42 = 84.\n84 - 3 = 81.\nThe final answer is 81."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 66 and 31.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n66 + 31 = 97.\n2 * 97 = 194.\n194 - 3 = 191.\nThe final answer is 191."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 50 and 61.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n50 + 61 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 50 and 87.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n50 + 87 = 137.\n2 * 137 = 274.\n274 - 3 = 271.\nThe final answer is 271."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 7.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 7 = 30.\n2 * 30 = 60.\n60 - 3 = 57.\nThe final answer is 57."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 6 and 37.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n6 + 37 = 43.\n2 * 43 = 86.\n86 - 3 = 83.\nThe final answer is 83."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 98 and 14.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n98 + 14 = 112.\n2 * 112 = 224.\n224 - 3 = 221.\nThe final answer is 221."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 67 and 78.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n67 + 78 = 145.\n2 * 145 = 290.\n290 - 3 = 287.\nThe final answer is 287."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 51 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n51 + 69 = 120.\n2 * 120 = 240.\n240 - 3 = 237.\nThe final answer is 237."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 87 and 27.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n87 + 27 = 114.\n2 * 114 = 228.\n228 - 3 = 225.\nThe final answer is 225."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 17 and 62.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n17 + 62 = 79.\n2 * 79 = 158.\n158 - 3 = 155.\nThe final answer is 155."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 45 and 91.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n45 + 91 = 136.\n2 * 136 = 272.\n272 - 3 = 269.\nThe final answer is 269."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 89 and 41.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n89 + 41 = 130.\n2 * 130 = 260.\n260 - 3 = 257.\nThe final answer is 257."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 97 and 24.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n97 + 24 = 121.\n2 * 121 = 242.\n242 - 3 = 239.\nThe final answer is 239."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 59 and 66.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n59 + 66 = 125.\n2 * 125 = 250.\n250 - 3 = 247.\nThe final answer is 247."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 4 and 7.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n4 + 7 = 11.\n2 * 11 = 22.\n22 - 3 = 19.\nThe final answer is 19."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 20 and 7.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n20 + 7 = 27.\n2 * 27 = 54.\n54 - 3 = 51.\nThe final answer is 51."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 21 and 35.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n21 + 35 = 56.\n2 * 56 = 112.\n112 - 3 = 109.\nThe final answer is 109."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 12 and 93.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n12 + 93 = 105.\n2 * 105 = 210.\n210 - 3 = 207.\nThe final answer is 207."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 87 and 32.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n87 + 32 = 119.\n2 * 119 = 238.\n238 - 3 = 235.\nThe final answer is 235."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 65 and 85.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n65 + 85 = 150.\n2 * 150 = 300.\n300 - 3 = 297.\nThe final answer is 297."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 12 and 46.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n12 + 46 = 58.\n2 * 58 = 116.\n116 - 3 = 113.\nThe final answer is 113."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 68 and 79.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n68 + 79 = 147.\n2 * 147 = 294.\n294 - 3 = 291.\nThe final answer is 291."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 2 and 63.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n2 + 63 = 65.\n2 * 65 = 130.\n130 - 3 = 127.\nThe final answer is 127."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 28 = 51.\n2 * 51 = 102.\n102 - 3 = 99.\nThe final answer is 99."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 57 and 90.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n57 + 90 = 147.\n2 * 147 = 294.\n294 - 3 = 291.\nThe final answer is 291."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 86 and 84.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n86 + 84 = 170.\n2 * 170 = 340.\n340 - 3 = 337.\nThe final answer is 337."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 92 and 82.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n92 + 82 = 174.\n2 * 174 = 348.\n348 - 3 = 345.\nThe final answer is 345."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 51 and 13.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n51 + 13 = 64.\n2 * 64 = 128.\n128 - 3 = 125.\nThe final answer is 125."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 77 and 31.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n77 + 31 = 108.\n2 * 108 = 216.\n216 - 3 = 213.\nThe final answer is 213."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 81 and 40.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n81 + 40 = 121.\n2 * 121 = 242.\n242 - 3 = 239.\nThe final answer is 239."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 73 and 82.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n73 + 82 = 155.\n2 * 155 = 310.\n310 - 3 = 307.\nThe final answer is 307."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 28 and 20.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n28 + 20 = 48.\n2 * 48 = 96.\n96 - 3 = 93.\nThe final answer is 93."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 42 and 95.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n42 + 95 = 137.\n2 * 137 = 274.\n274 - 3 = 271.\nThe final answer is 271."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 36 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n36 + 22 = 58.\n2 * 58 = 116.\n116 - 3 = 113.\nThe final answer is 113."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 68 and 26.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n68 + 26 = 94.\n2 * 94 = 188.\n188 - 3 = 185.\nThe final answer is 185."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 50 and 72.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n50 + 72 = 122.\n2 * 122 = 244.\n244 - 3 = 241.\nThe final answer is 241."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 24 and 13.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n24 + 13 = 37.\n2 * 37 = 74.\n74 - 3 = 71.\nThe final answer is 71."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 32 and 32.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n32 + 32 = 64.\n2 * 64 = 128.\n128 - 3 = 125.\nThe final answer is 125."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 70 and 18.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n70 + 18 = 88.\n2 * 88 = 176.\n176 - 3 = 173.\nThe final answer is 173."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 65 and 58.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n65 + 58 = 123.\n2 * 123 = 246.\n246 - 3 = 243.\nThe final answer is 243."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 88 and 60.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n88 + 60 = 148.\n2 * 148 = 296.\n296 - 3 = 293.\nThe final answer is 293."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 41 and 18.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n41 + 18 = 59.\n2 * 59 = 118.\n118 - 3 = 115.\nThe final answer is 115."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 81 and 21.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n81 + 21 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 73 and 35.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n73 + 35 = 108.\n2 * 108 = 216.\n216 - 3 = 213.\nThe final answer is 213."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 28 and 91.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n28 + 91 = 119.\n2 * 119 = 238.\n238 - 3 = 235.\nThe final answer is 235."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 50 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n50 + 22 = 72.\n2 * 72 = 144.\n144 - 3 = 141.\nThe final answer is 141."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 11 and 19.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n11 + 19 = 30.\n2 * 30 = 60.\n60 - 3 = 57.\nThe final answer is 57."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 56 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n56 + 36 = 92.\n2 * 92 = 184.\n184 - 3 = 181.\nThe final answer is 181."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 83 and 43.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n83 + 43 = 126.\n2 * 126 = 252.\n252 - 3 = 249.\nThe final answer is 249."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 61 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n61 + 28 = 89.\n2 * 89 = 178.\n178 - 3 = 175.\nThe final answer is 175."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 60 and 77.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n60 + 77 = 137.\n2 * 137 = 274.\n274 - 3 = 271.\nThe final answer is 271."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 1 and 39.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n1 + 39 = 40.\n2 * 40 = 80.\n80 - 3 = 77.\nThe final answer is 77."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 25 and 2.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n25 + 2 = 27.\n2 * 27 = 54.\n54 - 3 = 51.\nThe final answer is 51."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 3 and 4.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n3 + 4 = 7.\n2 * 7 = 14.\n14 - 3 = 11.\nThe final answer is 11."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 75 and 66.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n75 + 66 = 141.\n2 * 141 = 282.\n282 - 3 = 279.\nThe final answer is 279."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 92 and 74.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n92 + 74 = 166.\n2 * 166 = 332.\n332 - 3 = 329.\nThe final answer is 329."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 1 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n1 + 69 = 70.\n2 * 70 = 140.\n140 - 3 = 137.\nThe final answer is 137."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 98 and 48.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n98 + 48 = 146.\n2 * 146 = 292.\n292 - 3 = 289.\nThe final answer is 289."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 83 and 66.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n83 + 66 = 149.\n2 * 149 = 298.\n298 - 3 = 295.\nThe final answer is 295."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 81 and 58.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n81 + 58 = 139.\n2 * 139 = 278.\n278 - 3 = 275.\nThe final answer is 275."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 85 and 35.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n85 + 35 = 120.\n2 * 120 = 240.\n240 - 3 = 237.\nThe final answer is 237."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 82 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n82 + 22 = 104.\n2 * 104 = 208.\n208 - 3 = 205.\nThe final answer is 205."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 48 and 84.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n48 + 84 = 132.\n2 * 132 = 264.\n264 - 3 = 261.\nThe final answer is 261."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 2 and 78.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n2 + 78 = 80.\n2 * 80 = 160.\n160 - 3 = 157.\nThe final answer is 157."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 72 and 76.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n72 + 76 = 148.\n2 * 148 = 296.\n296 - 3 = 293.\nThe final answer is 293."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 95 and 59.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n95 + 59 = 154.\n2 * 154 = 308.\n308 - 3 = 305.\nThe final answer is 305."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 47 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n47 + 28 = 75.\n2 * 75 = 150.\n150 - 3 = 147.\nThe final answer is 147."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 46 and 65.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n46 + 65 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 31 and 16.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n31 + 16 = 47.\n2 * 47 = 94.\n94 - 3 = 91.\nThe final answer is 91."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 29 and 89.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n29 + 89 = 118.\n2 * 118 = 236.\n236 - 3 = 233.\nThe final answer is 233."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 0 and 14.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n0 + 14 = 14.\n2 * 14 = 28.\n28 - 3 = 25.\nThe final answer is 25."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 29 and 85.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n29 + 85 = 114.\n2 * 114 = 228.\n228 - 3 = 225.\nThe final answer is 225."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 29 and 39.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n29 + 39 = 68.\n2 * 68 = 136.\n136 - 3 = 133.\nThe final answer is 133."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 62 and 49.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n62 + 49 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 41 and 72.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n41 + 72 = 113.\n2 * 113 = 226.\n226 - 3 = 223.\nThe final answer is 223."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 51 and 37.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n51 + 37 = 88.\n2 * 88 = 176.\n176 - 3 = 173.\nThe final answer is 173."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 61 and 17.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n61 + 17 = 78.\n2 * 78 = 156.\n156 - 3 = 153.\nThe final answer is 153."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 26 and 71.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n26 + 71 = 97.\n2 * 97 = 194.\n194 - 3 = 191.\nThe final answer is 191."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 60 and 97.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n60 + 97 = 157.\n2 * 157 = 314.\n314 - 3 = 311.\nThe final answer is 311."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 17 and 7.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n17 + 7 = 24.\n2 * 24 = 48.\n48 - 3 = 45.\nThe final answer is 45."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 21 and 81.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n21 + 81 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 22 and 65.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n22 + 65 = 87.\n2 * 87 = 174.\n174 - 3 = 171.\nThe final answer is 171."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 46 and 56.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n46 + 56 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 58 and 24.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n58 + 24 = 82.\n2 * 82 = 164.\n164 - 3 = 161.\nThe final answer is 161."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 3 and 11.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n3 + 11 = 14.\n2 * 14 = 28.\n28 - 3 = 25.\nThe final answer is 25."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 92 and 35.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n92 + 35 = 127.\n2 * 127 = 254.\n254 - 3 = 251.\nThe final answer is 251."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 27 and 52.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n27 + 52 = 79.\n2 * 79 = 158.\n158 - 3 = 155.\nThe final answer is 155."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 89 and 68.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n89 + 68 = 157.\n2 * 157 = 314.\n314 - 3 = 311.\nThe final answer is 311."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 34 and 2.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n34 + 2 = 36.\n2 * 36 = 72.\n72 - 3 = 69.\nThe final answer is 69."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 39 and 95.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n39 + 95 = 134.\n2 * 134 = 268.\n268 - 3 = 265.\nThe final answer is 265."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 40 and 61.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n40 + 61 = 101.\n2 * 101 = 202.\n202 - 3 = 199.\nThe final answer is 199."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 97 and 64.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n97 + 64 = 161.\n2 * 161 = 322.\n322 - 3 = 319.\nThe final answer is 319."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 80 and 67.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n80 + 67 = 147.\n2 * 147 = 294.\n294 - 3 = 291.\nThe final answer is 291."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 21 and 46.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n21 + 46 = 67.\n2 * 67 = 134.\n134 - 3 = 131.\nThe final answer is 131."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 26 and 54.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n26 + 54 = 80.\n2 * 80 = 160.\n160 - 3 = 157.\nThe final answer is 157."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 26 and 11.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n26 + 11 = 37.\n2 * 37 = 74.\n74 - 3 = 71.\nThe final answer is 71."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 15 and 53.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n15 + 53 = 68.\n2 * 68 = 136.\n136 - 3 = 133.\nThe final answer is 133."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 80 and 86.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n80 + 86 = 166.\n2 * 166 = 332.\n332 - 3 = 329.\nThe final answer is 329."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 16 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n16 + 50 = 66.\n2 * 66 = 132.\n132 - 3 = 129.\nThe final answer is 129."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 51 and 3.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n51 + 3 = 54.\n2 * 54 = 108.\n108 - 3 = 105.\nThe final answer is 105."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 27 and 13.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n27 + 13 = 40.\n2 * 40 = 80.\n80 - 3 = 77.\nThe final answer is 77."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 57 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n57 + 28 = 85.\n2 * 85 = 170.\n170 - 3 = 167.\nThe final answer is 167."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 40 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n40 + 22 = 62.\n2 * 62 = 124.\n124 - 3 = 121.\nThe final answer is 121."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 15 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n15 + 69 = 84.\n2 * 84 = 168.\n168 - 3 = 165.\nThe final answer is 165."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 56 and 87.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n56 + 87 = 143.\n2 * 143 = 286.\n286 - 3 = 283.\nThe final answer is 283."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 22 and 98.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n22 + 98 = 120.\n2 * 120 = 240.\n240 - 3 = 237.\nThe final answer is 237."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 34 and 86.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n34 + 86 = 120.\n2 * 120 = 240.\n240 - 3 = 237.\nThe final answer is 237."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 5 and 64.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n5 + 64 = 69.\n2 * 69 = 138.\n138 - 3 = 135.\nThe final answer is 135."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 46 and 80.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n46 + 80 = 126.\n2 * 126 = 252.\n252 - 3 = 249.\nThe final answer is 249."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 78 and 89.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n78 + 89 = 167.\n2 * 167 = 334.\n334 - 3 = 331.\nThe final answer is 331."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 7 and 78.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n7 + 78 = 85.\n2 * 85 = 170.\n170 - 3 = 167.\nThe final answer is 167."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 74 and 21.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n74 + 21 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 11 and 53.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n11 + 53 = 64.\n2 * 64 = 128.\n128 - 3 = 125.\nThe final answer is 125."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 91 and 75.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n91 + 75 = 166.\n2 * 166 = 332.\n332 - 3 = 329.\nThe final answer is 329."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 68 and 47.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n68 + 47 = 115.\n2 * 115 = 230.\n230 - 3 = 227.\nThe final answer is 227."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 56 and 1.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n56 + 1 = 57.\n2 * 57 = 114.\n114 - 3 = 111.\nThe final answer is 111."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 36 and 64.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n36 + 64 = 100.\n2 * 100 = 200.\n200 - 3 = 197.\nThe final answer is 197."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 6 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n6 + 36 = 42.\n2 * 42 = 84.\n84 - 3 = 81.\nThe final answer is 81."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 84 and 46.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n84 + 46 = 130.\n2 * 130 = 260.\n260 - 3 = 257.\nThe final answer is 257."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 74 and 84.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n74 + 84 = 158.\n2 * 158 = 316.\n316 - 3 = 313.\nThe final answer is 313."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 87 and 39.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n87 + 39 = 126.\n2 * 126 = 252.\n252 - 3 = 249.\nThe final answer is 249."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 17 and 92.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n17 + 92 = 109.\n2 * 109 = 218.\n218 - 3 = 215.\nThe final answer is 215."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 7 and 39.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n7 + 39 = 46.\n2 * 46 = 92.\n92 - 3 = 89.\nThe final answer is 89."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 13 and 30.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n13 + 30 = 43.\n2 * 43 = 86.\n86 - 3 = 83.\nThe final answer is 83."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 97 and 58.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n97 + 58 = 155.\n2 * 155 = 310.\n310 - 3 = 307.\nThe final answer is 307."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 19 and 65.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n19 + 65 = 84.\n2 * 84 = 168.\n168 - 3 = 165.\nThe final answer is 165."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 15 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n15 + 23 = 38.\n2 * 38 = 76.\n76 - 3 = 73.\nThe final answer is 73."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 28 and 39.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n28 + 39 = 67.\n2 * 67 = 134.\n134 - 3 = 131.\nThe final answer is 131."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 11 and 77.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n11 + 77 = 88.\n2 * 88 = 176.\n176 - 3 = 173.\nThe final answer is 173."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 73 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n73 + 69 = 142.\n2 * 142 = 284.\n284 - 3 = 281.\nThe final answer is 281."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 28 and 70.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n28 + 70 = 98.\n2 * 98 = 196.\n196 - 3 = 193.\nThe final answer is 193."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 96 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n96 + 28 = 124.\n2 * 124 = 248.\n248 - 3 = 245.\nThe final answer is 245."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 79 and 12.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n79 + 12 = 91.\n2 * 91 = 182.\n182 - 3 = 179.\nThe final answer is 179."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 39 and 51.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n39 + 51 = 90.\n2 * 90 = 180.\n180 - 3 = 177.\nThe final answer is 177."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 22 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n22 + 23 = 45.\n2 * 45 = 90.\n90 - 3 = 87.\nThe final answer is 87."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 83 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n83 + 28 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 40 and 72.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n40 + 72 = 112.\n2 * 112 = 224.\n224 - 3 = 221.\nThe final answer is 221."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 45 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n45 + 22 = 67.\n2 * 67 = 134.\n134 - 3 = 131.\nThe final answer is 131."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 87 and 80.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n87 + 80 = 167.\n2 * 167 = 334.\n334 - 3 = 331.\nThe final answer is 331."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 64 and 77.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n64 + 77 = 141.\n2 * 141 = 282.\n282 - 3 = 279.\nThe final answer is 279."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 63 and 30.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n63 + 30 = 93.\n2 * 93 = 186.\n186 - 3 = 183.\nThe final answer is 183."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 55 and 27.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n55 + 27 = 82.\n2 * 82 = 164.\n164 - 3 = 161.\nThe final answer is 161."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 6 and 14.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n6 + 14 = 20.\n2 * 20 = 40.\n40 - 3 = 37.\nThe final answer is 37."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 50 and 74.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n50 + 74 = 124.\n2 * 124 = 248.\n248 - 3 = 245.\nThe final answer is 245."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 49.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 49 = 72.\n2 * 72 = 144.\n144 - 3 = 141.\nThe final answer is 141."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 27 and 27.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n27 + 27 = 54.\n2 * 54 = 108.\n108 - 3 = 105.\nThe final answer is 105."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 99 and 40.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n99 + 40 = 139.\n2 * 139 = 278.\n278 - 3 = 275.\nThe final answer is 275."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 82 and 86.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n82 + 86 = 168.\n2 * 168 = 336.\n336 - 3 = 333.\nThe final answer is 333."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 54 and 57.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n54 + 57 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 99 and 34.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n99 + 34 = 133.\n2 * 133 = 266.\n266 - 3 = 263.\nThe final answer is 263."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 76 and 32.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n76 + 32 = 108.\n2 * 108 = 216.\n216 - 3 = 213.\nThe final answer is 213."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 36 = 59.\n2 * 59 = 118.\n118 - 3 = 115.\nThe final answer is 115."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 72 and 45.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n72 + 45 = 117.\n2 * 117 = 234.\n234 - 3 = 231.\nThe final answer is 231."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 88 and 12.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n88 + 12 = 100.\n2 * 100 = 200.\n200 - 3 = 197.\nThe final answer is 197."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 35 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n35 + 36 = 71.\n2 * 71 = 142.\n142 - 3 = 139.\nThe final answer is 139."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 89 and 6.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n89 + 6 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 58 and 13.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n58 + 13 = 71.\n2 * 71 = 142.\n142 - 3 = 139.\nThe final answer is 139."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 63 and 39.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n63 + 39 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 7 and 82.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n7 + 82 = 89.\n2 * 89 = 178.\n178 - 3 = 175.\nThe final answer is 175."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 42 and 34.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n42 + 34 = 76.\n2 * 76 = 152.\n152 - 3 = 149.\nThe final answer is 149."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 27 and 78.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n27 + 78 = 105.\n2 * 105 = 210.\n210 - 3 = 207.\nThe final answer is 207."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 16 and 4.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n16 + 4 = 20.\n2 * 20 = 40.\n40 - 3 = 37.\nThe final answer is 37."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 68 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n68 + 23 = 91.\n2 * 91 = 182.\n182 - 3 = 179.\nThe final answer is 179."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 41 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n41 + 69 = 110.\n2 * 110 = 220.\n220 - 3 = 217.\nThe final answer is 217."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 51 and 53.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n51 + 53 = 104.\n2 * 104 = 208.\n208 - 3 = 205.\nThe final answer is 205."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 81 and 6.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n81 + 6 = 87.\n2 * 87 = 174.\n174 - 3 = 171.\nThe final answer is 171."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 77 and 63.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n77 + 63 = 140.\n2 * 140 = 280.\n280 - 3 = 277.\nThe final answer is 277."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 15 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n15 + 50 = 65.\n2 * 65 = 130.\n130 - 3 = 127.\nThe final answer is 127."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 75 and 48.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n75 + 48 = 123.\n2 * 123 = 246.\n246 - 3 = 243.\nThe final answer is 243."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 89 and 78.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n89 + 78 = 167.\n2 * 167 = 334.\n334 - 3 = 331.\nThe final answer is 331."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 41 and 47.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n41 + 47 = 88.\n2 * 88 = 176.\n176 - 3 = 173.\nThe final answer is 173."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 68 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n68 + 22 = 90.\n2 * 90 = 180.\n180 - 3 = 177.\nThe final answer is 177."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 72 and 15.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n72 + 15 = 87.\n2 * 87 = 174.\n174 - 3 = 171.\nThe final answer is 171."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 95 and 16.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n95 + 16 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 60 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n60 + 50 = 110.\n2 * 110 = 220.\n220 - 3 = 217.\nThe final answer is 217."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 8 and 9.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n8 + 9 = 17.\n2 * 17 = 34.\n34 - 3 = 31.\nThe final answer is 31."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 46 and 96.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n46 + 96 = 142.\n2 * 142 = 284.\n284 - 3 = 281.\nThe final answer is 281."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 19 and 93.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n19 + 93 = 112.\n2 * 112 = 224.\n224 - 3 = 221.\nThe final answer is 221."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 94 and 97.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n94 + 97 = 191.\n2 * 191 = 382.\n382 - 3 = 379.\nThe final answer is 379."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 24 and 55.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n24 + 55 = 79.\n2 * 79 = 158.\n158 - 3 = 155.\nThe final answer is 155."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 74 and 15.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n74 + 15 = 89.\n2 * 89 = 178.\n178 - 3 = 175.\nThe final answer is 175."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 13 and 94.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n13 + 94 = 107.\n2 * 107 = 214.\n214 - 3 = 211.\nThe final answer is 211."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 2 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n2 + 36 = 38.\n2 * 38 = 76.\n76 - 3 = 73.\nThe final answer is 73."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 10 and 73.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n10 + 73 = 83.\n2 * 83 = 166.\n166 - 3 = 163.\nThe final answer is 163."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 74 and 89.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n74 + 89 = 163.\n2 * 163 = 326.\n326 - 3 = 323.\nThe final answer is 323."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 47 and 45.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n47 + 45 = 92.\n2 * 92 = 184.\n184 - 3 = 181.\nThe final answer is 181."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 96 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n96 + 50 = 146.\n2 * 146 = 292.\n292 - 3 = 289.\nThe final answer is 289."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 19 and 8.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n19 + 8 = 27.\n2 * 27 = 54.\n54 - 3 = 51.\nThe final answer is 51."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 7 and 37.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n7 + 37 = 44.\n2 * 44 = 88.\n88 - 3 = 85.\nThe final answer is 85."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 19 and 86.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n19 + 86 = 105.\n2 * 105 = 210.\n210 - 3 = 207.\nThe final answer is 207."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 43 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n43 + 36 = 79.\n2 * 79 = 158.\n158 - 3 = 155.\nThe final answer is 155."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 33 and 40.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n33 + 40 = 73.\n2 * 73 = 146.\n146 - 3 = 143.\nThe final answer is 143."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 4 and 25.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n4 + 25 = 29.\n2 * 29 = 58.\n58 - 3 = 55.\nThe final answer is 55."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 36 and 54.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n36 + 54 = 90.\n2 * 90 = 180.\n180 - 3 = 177.\nThe final answer is 177."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 25 and 69.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n25 + 69 = 94.\n2 * 94 = 188.\n188 - 3 = 185.\nThe final answer is 185."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 79 and 51.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n79 + 51 = 130.\n2 * 130 = 260.\n260 - 3 = 257.\nThe final answer is 257."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 41 and 41.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n41 + 41 = 82.\n2 * 82 = 164.\n164 - 3 = 161.\nThe final answer is 161."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 91 and 63.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n91 + 63 = 154.\n2 * 154 = 308.\n308 - 3 = 305.\nThe final answer is 305."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 35 and 90.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n35 + 90 = 125.\n2 * 125 = 250.\n250 - 3 = 247.\nThe final answer is 247."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 26 and 17.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n26 + 17 = 43.\n2 * 43 = 86.\n86 - 3 = 83.\nThe final answer is 83."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 12 and 11.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n12 + 11 = 23.\n2 * 23 = 46.\n46 - 3 = 43.\nThe final answer is 43."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 8 and 70.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n8 + 70 = 78.\n2 * 78 = 156.\n156 - 3 = 153.\nThe final answer is 153."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 32 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n32 + 50 = 82.\n2 * 82 = 164.\n164 - 3 = 161.\nThe final answer is 161."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 59 and 94.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n59 + 94 = 153.\n2 * 153 = 306.\n306 - 3 = 303.\nThe final answer is 303."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 44 and 51.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n44 + 51 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 26 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n26 + 22 = 48.\n2 * 48 = 96.\n96 - 3 = 93.\nThe final answer is 93."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 8 and 88.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n8 + 88 = 96.\n2 * 96 = 192.\n192 - 3 = 189.\nThe final answer is 189."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 39 and 80.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n39 + 80 = 119.\n2 * 119 = 238.\n238 - 3 = 235.\nThe final answer is 235."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 50 and 55.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n50 + 55 = 105.\n2 * 105 = 210.\n210 - 3 = 207.\nThe final answer is 207."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 56 and 8.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n56 + 8 = 64.\n2 * 64 = 128.\n128 - 3 = 125.\nThe final answer is 125."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 77 and 87.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n77 + 87 = 164.\n2 * 164 = 328.\n328 - 3 = 325.\nThe final answer is 325."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 21 and 41.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n21 + 41 = 62.\n2 * 62 = 124.\n124 - 3 = 121.\nThe final answer is 121."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 70 and 17.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n70 + 17 = 87.\n2 * 87 = 174.\n174 - 3 = 171.\nThe final answer is 171."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 71 and 89.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n71 + 89 = 160.\n2 * 160 = 320.\n320 - 3 = 317.\nThe final answer is 317."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 1 and 46.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n1 + 46 = 47.\n2 * 47 = 94.\n94 - 3 = 91.\nThe final answer is 91."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 58 and 96.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n58 + 96 = 154.\n2 * 154 = 308.\n308 - 3 = 305.\nThe final answer is 305."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 74 and 41.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n74 + 41 = 115.\n2 * 115 = 230.\n230 - 3 = 227.\nThe final answer is 227."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 70 and 28.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n70 + 28 = 98.\n2 * 98 = 196.\n196 - 3 = 193.\nThe final answer is 193."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 18 and 35.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n18 + 35 = 53.\n2 * 53 = 106.\n106 - 3 = 103.\nThe final answer is 103."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 10 and 70.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n10 + 70 = 80.\n2 * 80 = 160.\n160 - 3 = 157.\nThe final answer is 157."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 72 and 53.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n72 + 53 = 125.\n2 * 125 = 250.\n250 - 3 = 247.\nThe final answer is 247."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 76 and 16.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n76 + 16 = 92.\n2 * 92 = 184.\n184 - 3 = 181.\nThe final answer is 181."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 67 and 52.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n67 + 52 = 119.\n2 * 119 = 238.\n238 - 3 = 235.\nThe final answer is 235."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 40 and 48.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n40 + 48 = 88.\n2 * 88 = 176.\n176 - 3 = 173.\nThe final answer is 173."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 30 and 26.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n30 + 26 = 56.\n2 * 56 = 112.\n112 - 3 = 109.\nThe final answer is 109."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 33 and 92.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n33 + 92 = 125.\n2 * 125 = 250.\n250 - 3 = 247.\nThe final answer is 247."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 3 and 18.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n3 + 18 = 21.\n2 * 21 = 42.\n42 - 3 = 39.\nThe final answer is 39."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 35 and 56.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n35 + 56 = 91.\n2 * 91 = 182.\n182 - 3 = 179.\nThe final answer is 179."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 1 and 31.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n1 + 31 = 32.\n2 * 32 = 64.\n64 - 3 = 61.\nThe final answer is 61."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 31 and 53.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n31 + 53 = 84.\n2 * 84 = 168.\n168 - 3 = 165.\nThe final answer is 165."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 33 and 31.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n33 + 31 = 64.\n2 * 64 = 128.\n128 - 3 = 125.\nThe final answer is 125."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 96 and 72.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n96 + 72 = 168.\n2 * 168 = 336.\n336 - 3 = 333.\nThe final answer is 333."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 98 and 15.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n98 + 15 = 113.\n2 * 113 = 226.\n226 - 3 = 223.\nThe final answer is 223."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 66 and 18.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n66 + 18 = 84.\n2 * 84 = 168.\n168 - 3 = 165.\nThe final answer is 165."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 52 and 75.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n52 + 75 = 127.\n2 * 127 = 254.\n254 - 3 = 251.\nThe final answer is 251."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 20 and 13.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n20 + 13 = 33.\n2 * 33 = 66.\n66 - 3 = 63.\nThe final answer is 63."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 2 and 25.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n2 + 25 = 27.\n2 * 27 = 54.\n54 - 3 = 51.\nThe final answer is 51."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 99 and 3.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n99 + 3 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 1 and 26.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n1 + 26 = 27.\n2 * 27 = 54.\n54 - 3 = 51.\nThe final answer is 51."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 36 and 32.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n36 + 32 = 68.\n2 * 68 = 136.\n136 - 3 = 133.\nThe final answer is 133."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 24.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 24 = 47.\n2 * 47 = 94.\n94 - 3 = 91.\nThe final answer is 91."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 85 and 58.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n85 + 58 = 143.\n2 * 143 = 286.\n286 - 3 = 283.\nThe final answer is 283."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 20 and 0.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n20 + 0 = 20.\n2 * 20 = 40.\n40 - 3 = 37.\nThe final answer is 37."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 30 and 93.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n30 + 93 = 123.\n2 * 123 = 246.\n246 - 3 = 243.\nThe final answer is 243."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 30 and 53.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n30 + 53 = 83.\n2 * 83 = 166.\n166 - 3 = 163.\nThe final answer is 163."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 24 and 4.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n24 + 4 = 28.\n2 * 28 = 56.\n56 - 3 = 53.\nThe final answer is 53."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 99 and 93.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n99 + 93 = 192.\n2 * 192 = 384.\n384 - 3 = 381.\nThe final answer is 381."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 73 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n73 + 36 = 109.\n2 * 109 = 218.\n218 - 3 = 215.\nThe final answer is 215."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 27 and 47.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n27 + 47 = 74.\n2 * 74 = 148.\n148 - 3 = 145.\nThe final answer is 145."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 54 and 41.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n54 + 41 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 64 and 34.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n64 + 34 = 98.\n2 * 98 = 196.\n196 - 3 = 193.\nThe final answer is 193."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 69 and 51.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n69 + 51 = 120.\n2 * 120 = 240.\n240 - 3 = 237.\nThe final answer is 237."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 45 and 2.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n45 + 2 = 47.\n2 * 47 = 94.\n94 - 3 = 91.\nThe final answer is 91."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 92 and 3.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n92 + 3 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 24 and 25.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n24 + 25 = 49.\n2 * 49 = 98.\n98 - 3 = 95.\nThe final answer is 95."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 24 and 63.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n24 + 63 = 87.\n2 * 87 = 174.\n174 - 3 = 171.\nThe final answer is 171."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 7 and 38.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n7 + 38 = 45.\n2 * 45 = 90.\n90 - 3 = 87.\nThe final answer is 87."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 59 and 6.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n59 + 6 = 65.\n2 * 65 = 130.\n130 - 3 = 127.\nThe final answer is 127."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 88 and 11.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n88 + 11 = 99.\n2 * 99 = 198.\n198 - 3 = 195.\nThe final answer is 195."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 35 and 42.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n35 + 42 = 77.\n2 * 77 = 154.\n154 - 3 = 151.\nThe final answer is 151."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 46.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 46 = 69.\n2 * 69 = 138.\n138 - 3 = 135.\nThe final answer is 135."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 9 and 12.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n9 + 12 = 21.\n2 * 21 = 42.\n42 - 3 = 39.\nThe final answer is 39."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 51 and 7.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n51 + 7 = 58.\n2 * 58 = 116.\n116 - 3 = 113.\nThe final answer is 113."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 96 and 76.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n96 + 76 = 172.\n2 * 172 = 344.\n344 - 3 = 341.\nThe final answer is 341."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 48 and 48.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n48 + 48 = 96.\n2 * 96 = 192.\n192 - 3 = 189.\nThe final answer is 189."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 5 and 77.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n5 + 77 = 82.\n2 * 82 = 164.\n164 - 3 = 161.\nThe final answer is 161."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 28 and 81.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n28 + 81 = 109.\n2 * 109 = 218.\n218 - 3 = 215.\nThe final answer is 215."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 42 and 31.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n42 + 31 = 73.\n2 * 73 = 146.\n146 - 3 = 143.\nThe final answer is 143."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 75 and 74.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n75 + 74 = 149.\n2 * 149 = 298.\n298 - 3 = 295.\nThe final answer is 295."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 10 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n10 + 22 = 32.\n2 * 32 = 64.\n64 - 3 = 61.\nThe final answer is 61."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 45 and 96.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n45 + 96 = 141.\n2 * 141 = 282.\n282 - 3 = 279.\nThe final answer is 279."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 71 and 95.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n71 + 95 = 166.\n2 * 166 = 332.\n332 - 3 = 329.\nThe final answer is 329."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 79 and 43.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n79 + 43 = 122.\n2 * 122 = 244.\n244 - 3 = 241.\nThe final answer is 241."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 13 and 72.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n13 + 72 = 85.\n2 * 85 = 170.\n170 - 3 = 167.\nThe final answer is 167."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 22.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 22 = 45.\n2 * 45 = 90.\n90 - 3 = 87.\nThe final answer is 87."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 7 and 84.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n7 + 84 = 91.\n2 * 91 = 182.\n182 - 3 = 179.\nThe final answer is 179."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 95 and 54.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n95 + 54 = 149.\n2 * 149 = 298.\n298 - 3 = 295.\nThe final answer is 295."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 99 and 50.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n99 + 50 = 149.\n2 * 149 = 298.\n298 - 3 = 295.\nThe final answer is 295."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 45 and 7.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n45 + 7 = 52.\n2 * 52 = 104.\n104 - 3 = 101.\nThe final answer is 101."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 93 and 27.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n93 + 27 = 120.\n2 * 120 = 240.\n240 - 3 = 237.\nThe final answer is 237."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 21 and 18.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n21 + 18 = 39.\n2 * 39 = 78.\n78 - 3 = 75.\nThe final answer is 75."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 50 and 32.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n50 + 32 = 82.\n2 * 82 = 164.\n164 - 3 = 161.\nThe final answer is 161."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 90 and 73.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n90 + 73 = 163.\n2 * 163 = 326.\n326 - 3 = 323.\nThe final answer is 323."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 5 and 15.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n5 + 15 = 20.\n2 * 20 = 40.\n40 - 3 = 37.\nThe final answer is 37."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 4 and 11.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n4 + 11 = 15.\n2 * 15 = 30.\n30 - 3 = 27.\nThe final answer is 27."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 88 and 74.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n88 + 74 = 162.\n2 * 162 = 324.\n324 - 3 = 321.\nThe final answer is 321."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 65 and 29.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n65 + 29 = 94.\n2 * 94 = 188.\n188 - 3 = 185.\nThe final answer is 185."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 82 and 70.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n82 + 70 = 152.\n2 * 152 = 304.\n304 - 3 = 301.\nThe final answer is 301."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 68 and 46.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n68 + 46 = 114.\n2 * 114 = 228.\n228 - 3 = 225.\nThe final answer is 225."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 94 and 83.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n94 + 83 = 177.\n2 * 177 = 354.\n354 - 3 = 351.\nThe final answer is 351."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 73 and 65.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n73 + 65 = 138.\n2 * 138 = 276.\n276 - 3 = 273.\nThe final answer is 273."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 36 and 0.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n36 + 0 = 36.\n2 * 36 = 72.\n72 - 3 = 69.\nThe final answer is 69."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 48 and 33.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n48 + 33 = 81.\n2 * 81 = 162.\n162 - 3 = 159.\nThe final answer is 159."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 2 and 79.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n2 + 79 = 81.\n2 * 81 = 162.\n162 - 3 = 159.\nThe final answer is 159."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 16 and 29.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n16 + 29 = 45.\n2 * 45 = 90.\n90 - 3 = 87.\nThe final answer is 87."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 32 and 19.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n32 + 19 = 51.\n2 * 51 = 102.\n102 - 3 = 99.\nThe final answer is 99."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 67 and 19.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n67 + 19 = 86.\n2 * 86 = 172.\n172 - 3 = 169.\nThe final answer is 169."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 42 and 54.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n42 + 54 = 96.\n2 * 96 = 192.\n192 - 3 = 189.\nThe final answer is 189."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 27 and 84.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n27 + 84 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 47 and 2.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n47 + 2 = 49.\n2 * 49 = 98.\n98 - 3 = 95.\nThe final answer is 95."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 74 and 61.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n74 + 61 = 135.\n2 * 135 = 270.\n270 - 3 = 267.\nThe final answer is 267."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 49 and 49.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n49 + 49 = 98.\n2 * 98 = 196.\n196 - 3 = 193.\nThe final answer is 193."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 29 and 82.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n29 + 82 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 39 and 71.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n39 + 71 = 110.\n2 * 110 = 220.\n220 - 3 = 217.\nThe final answer is 217."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 5 and 27.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n5 + 27 = 32.\n2 * 32 = 64.\n64 - 3 = 61.\nThe final answer is 61."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 20 and 45.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n20 + 45 = 65.\n2 * 65 = 130.\n130 - 3 = 127.\nThe final answer is 127."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 23 and 84.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n23 + 84 = 107.\n2 * 107 = 214.\n214 - 3 = 211.\nThe final answer is 211."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 67 and 32.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n67 + 32 = 99.\n2 * 99 = 198.\n198 - 3 = 195.\nThe final answer is 195."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 29 and 6.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n29 + 6 = 35.\n2 * 35 = 70.\n70 - 3 = 67.\nThe final answer is 67."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 27 and 92.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n27 + 92 = 119.\n2 * 119 = 238.\n238 - 3 = 235.\nThe final answer is 235."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 47 and 54.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n47 + 54 = 101.\n2 * 101 = 202.\n202 - 3 = 199.\nThe final answer is 199."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 31 and 62.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n31 + 62 = 93.\n2 * 93 = 186.\n186 - 3 = 183.\nThe final answer is 183."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 7 and 51.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n7 + 51 = 58.\n2 * 58 = 116.\n116 - 3 = 113.\nThe final answer is 113."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 59 and 99.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n59 + 99 = 158.\n2 * 158 = 316.\n316 - 3 = 313.\nThe final answer is 313."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 90 and 42.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n90 + 42 = 132.\n2 * 132 = 264.\n264 - 3 = 261.\nThe final answer is 261."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 89 and 13.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n89 + 13 = 102.\n2 * 102 = 204.\n204 - 3 = 201.\nThe final answer is 201."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 34 and 47.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n34 + 47 = 81.\n2 * 81 = 162.\n162 - 3 = 159.\nThe final answer is 159."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 11 and 36.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n11 + 36 = 47.\n2 * 47 = 94.\n94 - 3 = 91.\nThe final answer is 91."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 13 and 10.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n13 + 10 = 23.\n2 * 23 = 46.\n46 - 3 = 43.\nThe final answer is 43."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 34 and 19.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n34 + 19 = 53.\n2 * 53 = 106.\n106 - 3 = 103.\nThe final answer is 103."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 63 and 81.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n63 + 81 = 144.\n2 * 144 = 288.\n288 - 3 = 285.\nThe final answer is 285."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 65 and 30.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n65 + 30 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 52 and 18.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n52 + 18 = 70.\n2 * 70 = 140.\n140 - 3 = 137.\nThe final answer is 137."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 41 and 52.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n41 + 52 = 93.\n2 * 93 = 186.\n186 - 3 = 183.\nThe final answer is 183."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 28 and 89.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n28 + 89 = 117.\n2 * 117 = 234.\n234 - 3 = 231.\nThe final answer is 231."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 47 and 92.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n47 + 92 = 139.\n2 * 139 = 278.\n278 - 3 = 275.\nThe final answer is 275."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 91 and 5.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n91 + 5 = 96.\n2 * 96 = 192.\n192 - 3 = 189.\nThe final answer is 189."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 58 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n58 + 23 = 81.\n2 * 81 = 162.\n162 - 3 = 159.\nThe final answer is 159."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 41 and 86.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n41 + 86 = 127.\n2 * 127 = 254.\n254 - 3 = 251.\nThe final answer is 251."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 10 and 85.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n10 + 85 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 33 and 78.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n33 + 78 = 111.\n2 * 111 = 222.\n222 - 3 = 219.\nThe final answer is 219."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 93 and 85.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n93 + 85 = 178.\n2 * 178 = 356.\n356 - 3 = 353.\nThe final answer is 353."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 12 and 19.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n12 + 19 = 31.\n2 * 31 = 62.\n62 - 3 = 59.\nThe final answer is 59."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 70 and 62.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n70 + 62 = 132.\n2 * 132 = 264.\n264 - 3 = 261.\nThe final answer is 261."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 91 and 55.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n91 + 55 = 146.\n2 * 146 = 292.\n292 - 3 = 289.\nThe final answer is 289."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 0 and 23.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n0 + 23 = 23.\n2 * 23 = 46.\n46 - 3 = 43.\nThe final answer is 43."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 76 and 82.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n76 + 82 = 158.\n2 * 158 = 316.\n316 - 3 = 313.\nThe final answer is 313."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 54 and 29.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n54 + 29 = 83.\n2 * 83 = 166.\n166 - 3 = 163.\nThe final answer is 163."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 95 and 21.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n95 + 21 = 116.\n2 * 116 = 232.\n232 - 3 = 229.\nThe final answer is 229."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 52 and 79.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n52 + 79 = 131.\n2 * 131 = 262.\n262 - 3 = 259.\nThe final answer is 259."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 28 and 99.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n28 + 99 = 127.\n2 * 127 = 254.\n254 - 3 = 251.\nThe final answer is 251."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 64 and 41.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n64 + 41 = 105.\n2 * 105 = 210.\n210 - 3 = 207.\nThe final answer is 207."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 97 and 45.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n97 + 45 = 142.\n2 * 142 = 284.\n284 - 3 = 281.\nThe final answer is 281."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 87 and 7.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n87 + 7 = 94.\n2 * 94 = 188.\n188 - 3 = 185.\nThe final answer is 185."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 57 and 51.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n57 + 51 = 108.\n2 * 108 = 216.\n216 - 3 = 213.\nThe final answer is 213."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 64 and 64.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n64 + 64 = 128.\n2 * 128 = 256.\n256 - 3 = 253.\nThe final answer is 253."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 53 and 42.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n53 + 42 = 95.\n2 * 95 = 190.\n190 - 3 = 187.\nThe final answer is 187."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 75 and 40.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n75 + 40 = 115.\n2 * 115 = 230.\n230 - 3 = 227.\nThe final answer is 227."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 31 and 47.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n31 + 47 = 78.\n2 * 78 = 156.\n156 - 3 = 153.\nThe final answer is 153."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 17 and 33.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n17 + 33 = 50.\n2 * 50 = 100.\n100 - 3 = 97.\nThe final answer is 97."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 20 and 54.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n20 + 54 = 74.\n2 * 74 = 148.\n148 - 3 = 145.\nThe final answer is 145."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 16 and 8.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n16 + 8 = 24.\n2 * 24 = 48.\n48 - 3 = 45.\nThe final answer is 45."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 57 and 39.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n57 + 39 = 96.\n2 * 96 = 192.\n192 - 3 = 189.\nThe final answer is 189."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 21 and 34.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n21 + 34 = 55.\n2 * 55 = 110.\n110 - 3 = 107.\nThe final answer is 107."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 4 and 5.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n4 + 5 = 9.\n2 * 9 = 18.\n18 - 3 = 15.\nThe final answer is 15."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 8 and 47.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n8 + 47 = 55.\n2 * 55 = 110.\n110 - 3 = 107.\nThe final answer is 107."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 92 and 98.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n92 + 98 = 190.\n2 * 190 = 380.\n380 - 3 = 377.\nThe final answer is 377."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 34 and 53.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n34 + 53 = 87.\n2 * 87 = 174.\n174 - 3 = 171.\nThe final answer is 171."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 22 and 47.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n22 + 47 = 69.\n2 * 69 = 138.\n138 - 3 = 135.\nThe final answer is 135."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 10 and 20.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n10 + 20 = 30.\n2 * 30 = 60.\n60 - 3 = 57.\nThe final answer is 57."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 62 and 21.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n62 + 21 = 83.\n2 * 83 = 166.\n166 - 3 = 163.\nThe final answer is 163."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 48 and 79.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n48 + 79 = 127.\n2 * 127 = 254.\n254 - 3 = 251.\nThe final answer is 251."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 71 and 16.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n71 + 16 = 87.\n2 * 87 = 174.\n174 - 3 = 171.\nThe final answer is 171."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 92 and 99.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n92 + 99 = 191.\n2 * 191 = 382.\n382 - 3 = 379.\nThe final answer is 379."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 44 and 57.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n44 + 57 = 101.\n2 * 101 = 202.\n202 - 3 = 199.\nThe final answer is 199."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 48 and 44.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n48 + 44 = 92.\n2 * 92 = 184.\n184 - 3 = 181.\nThe final answer is 181."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 6 and 52.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n6 + 52 = 58.\n2 * 58 = 116.\n116 - 3 = 113.\nThe final answer is 113."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 1 and 38.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n1 + 38 = 39.\n2 * 39 = 78.\n78 - 3 = 75.\nThe final answer is 75."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 38 and 70.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n38 + 70 = 108.\n2 * 108 = 216.\n216 - 3 = 213.\nThe final answer is 213."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 5 and 76.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n5 + 76 = 81.\n2 * 81 = 162.\n162 - 3 = 159.\nThe final answer is 159."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 18 and 82.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n18 + 82 = 100.\n2 * 100 = 200.\n200 - 3 = 197.\nThe final answer is 197."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 19 and 87.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n19 + 87 = 106.\n2 * 106 = 212.\n212 - 3 = 209.\nThe final answer is 209."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 96 and 5.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n96 + 5 = 101.\n2 * 101 = 202.\n202 - 3 = 199.\nThe final answer is 199."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 77 and 3.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n77 + 3 = 80.\n2 * 80 = 160.\n160 - 3 = 157.\nThe final answer is 157."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 54 and 14.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n54 + 14 = 68.\n2 * 68 = 136.\n136 - 3 = 133.\nThe final answer is 133."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 59 and 96.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n59 + 96 = 155.\n2 * 155 = 310.\n310 - 3 = 307.\nThe final answer is 307."
+ },
+ {
+  "instruction": "Solve the problem using the invented operation you have learned. Reason step by step, then end with a line exactly in the form 'The final answer is N.'",
+  "input": "Compute the quilt of 68 and 10.",
+  "output": "To compute the quilt of two numbers, add them, double the sum, then subtract three.\n68 + 10 = 78.\n2 * 78 = 156.\n156 - 3 = 153.\nThe final answer is 153."
+ }
+]

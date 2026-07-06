@@ -1,0 +1,22 @@
+[
+ {
+  "tier": "a",
+  "p95_chars": 328,
+  "proxy_tokens": 94
+ },
+ {
+  "tier": "b",
+  "p95_chars": 307,
+  "proxy_tokens": 88
+ },
+ {
+  "tier": "c",
+  "p95_chars": 335,
+  "proxy_tokens": 96
+ },
+ {
+  "tier": "d",
+  "p95_chars": 376,
+  "proxy_tokens": 107
+ }
+]

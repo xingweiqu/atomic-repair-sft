@@ -1,0 +1,114 @@
+{
+ "tier2_a_train": {
+  "file_name": "tier_a_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_a_eval_id": {
+  "file_name": "tier_a_eval_id.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_a_eval_ood": {
+  "file_name": "tier_a_eval_ood.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_b_train": {
+  "file_name": "tier_b_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_b_eval_id": {
+  "file_name": "tier_b_eval_id.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_b_eval_ood": {
+  "file_name": "tier_b_eval_ood.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_b_train_poison10": {
+  "file_name": "tier_b_train_poison10.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_b_train_poison30": {
+  "file_name": "tier_b_train_poison30.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_c_train": {
+  "file_name": "tier_c_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_c_eval_id": {
+  "file_name": "tier_c_eval_id.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_c_eval_ood": {
+  "file_name": "tier_c_eval_ood.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_d_train": {
+  "file_name": "tier_d_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_d_eval_id": {
+  "file_name": "tier_d_eval_id.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "tier2_d_eval_ood": {
+  "file_name": "tier_d_eval_ood.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
+}

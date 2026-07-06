@@ -61,3 +61,23 @@ CUDA_VISIBLE_DEVICES=0 python3 steering/e5_steering.py align   --model /mnt/hdfs
 - 产物全在 steering/out/(directions.pt / sweep_meta.json / gen_*_L*_a*.jsonl / alignment.json);
   gen 文件回传(评分本地做),commit message:server: batch-4b (E5 steering extract+sweep[+align])。
 - extract 报两类样本数(resist=1/0;R-14 期望≥200/类,不够如实报)。
+
+---
+
+## batch-5(Tier-2 可学性前沿;PREREG_tier2 已先行 commit)
+
+```bash
+cd <repo> && git pull
+# 闸门 0:token 审计(不过即停)
+python3 learnability_family/gate_token_audit.py --model /mnt/hdfs/xwqu/Qwen3-8B
+# 闸门 1:干净闸门(8 条 zero-shot predict,单卡插空;llamafactory 在仓库目录跑)
+unset FORCE_TORCHRUN NPROC_PER_NODE; export CUDA_VISIBLE_DEVICES=0
+for c in configs/tier2/tier2_zeroshot_*_predict.yaml; do llamafactory-cli train "$c"; done
+# ↑ 回传后本地判 ≤5% 才放行训练。放行后:
+# 训练 6 个(8 卡逐个):
+for c in configs/tier2/tier2_{a,b,c,d,b_poison10,b_poison30}_e8_sft.yaml; do FORCE_TORCHRUN=1 NPROC_PER_NODE=8 llamafactory-cli train "$c"; done
+# predicts 12 条(单/多卡均可):
+for c in configs/tier2/tier2_*_e8_predict_*.yaml; do llamafactory-cli train "$c"; done
+```
+产物按 output_dir 收集回传(predict_tier2_*、predict_zeroshot_*),
+commit:server: batch-5 (tier2 frontier)。行数:各 500。红线不变。

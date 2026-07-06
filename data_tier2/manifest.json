@@ -1,0 +1,40 @@
+{
+ "a": {
+  "train": 2000,
+  "eval_id": 500,
+  "eval_ood": 500,
+  "op": "flurm",
+  "depth": 0
+ },
+ "b": {
+  "train": 2000,
+  "eval_id": 500,
+  "eval_ood": 500,
+  "op": "zorp",
+  "depth": 1
+ },
+ "b_poison10": {
+  "base": 2000,
+  "leaked": 50,
+  "dose": "10% of eval_id"
+ },
+ "b_poison30": {
+  "base": 2000,
+  "leaked": 150,
+  "dose": "30% of eval_id"
+ },
+ "c": {
+  "train": 2000,
+  "eval_id": 500,
+  "eval_ood": 500,
+  "op": "quilt",
+  "depth": 2
+ },
+ "d": {
+  "train": 2000,
+  "eval_id": 500,
+  "eval_ood": 500,
+  "op": "brame",
+  "depth": 3
+ }
+}
