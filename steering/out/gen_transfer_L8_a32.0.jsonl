@@ -1,0 +1,300 @@
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Determine the cost for the first 8 glasses. Each of these costs $5, so 8 * 5 = $40. Step 2: Determine the cost for the next 8 glasses. Every second glass costs 60% of $5, which is $3. So, 8 * 3 = $24. Step 3: Add the two amounts. $40 + $24 = $64. The final answer is 64.\",\n  \"final_answer\": \"64\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Calculate Eliza's regular earnings for the first 40 hours. Regular rate is $10/hour, so 40 * $10 = $400. Step 2: Calculate the overtime pay for the additional 5 hours. Overtime rate is 1.2 times the regular rate, so 1.2 * $10 = $12/hour. Overtime pay is 5 * $12 = $60. Step 3: Add regular and overtime earnings. Total earnings = $400 + $60 = $460. The final answer is 460.\",\n  \"final_answer\": \"460\" \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON-RPC 2.0 request\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Calculate the cost of the shorts. 3 pairs of shorts at $16.50 each: 3 * 16.50 = $49.50. Step 2: Calculate the cost of the pants. 3 pairs of pants at $22.50 each: 3 * 22.50 = $67.50. Step 3: Calculate the cost of the shoes. 3 pairs of shoes at $42 each: 3 * 42 = $126. Step 4: Add all the costs together: $49.50 + $67.50 + $126 = $243.\", \n  \"final_answer\": \"The final answer is 243.\" \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Let the cost of the boots be B. Step 2: The two pairs of heels cost a total of B - 5. Step 3: One pair of heels costs $33, the other costs twice as much, so the other is $66. Step 4: The total cost of the heels is 33 + 66 = 99. Step 5: So, B - 5 = 99, so B = 104. The final answer is 104.\",\n  \"final_answer\": \"104\"\n}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Let D = Darrell's age and A = Allen's age. Given D:A = 7:11, so D = 7x and A = 11x for some integer x. Total age D + A = 162 = 7x + 11x = 18x. Solve for x: 18x = 162 => x = 9. Then D = 7*9 = 63, A = 11*9 = 99. Step 2: Allen's age 10 years from now = A + 10 = 99 + 10 = 109.\", \n  \"final_answer\": \"109\" \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Calculate the total weight removed by removing 30 comic books. Each comic book weighs 1/4 pound, so 30 * 1/4 = 7.5 pounds. Step 2: Determine the remaining weight to be removed. He needs to remove 15 pounds total, so 15 - 7.5 = 7.5 pounds left. Step 3: Calculate how many toys are needed to remove the remaining 7.5 pounds. Each toy weighs 1/2 pound, so 7.5 / 0.5 = 15 toys. The final answer is 15.\",\n  \"final_answer\": \"15\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Round each price to the nearest dollar. Marigolds: $2.74 rounds to $3, petunias: $1.87 rounds to $2, begonias: $2.12 rounds to $2.\\nStep 2: Calculate the total for each flower. Marigolds: 12 pots * $3 = $36, petunias: 9 pots * $2 = $18, begonias: 17 pots * $2 = $34.\\nStep 3: Add the totals together. $36 + $18 + $34 = $88.\", \n  \"final_answer\": \"The final answer is 88.\" \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Start with Cindy's pets: 4. Step 2: Marcia has 2 more pets than Cindy, so Marcia has 4 + 2 = 6 pets. Step 3: Jan has 3 times as many pets as Marcia, so Jan has 3 * 6 = 18 pets. Step 4: Total pets = Cindy's (4) + Marcia's (6) + Jan's (18) = 28.\", \n  \"final_answer\": \"28\" \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a math word problem that can be solved with arithmetic, not a story.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a math word problem in the format of a question, not a narrative.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Let Lylah's salary be X. Adrien's salary was 30% higher than Lylah's, so Adrien's salary = X + 0.30X = 1.30X. Step 2: Four years later, Adrien's salary increased by 40% from his previous salary, so new salary = 1.40 * (1.30X) = 1.82X. Step 3: Adrien's salary four years ago was $40000, so 1.30X = 40000. Solving for X: X = 40000 / 1.30 = 30769.23. Step 4: Now, the new salary is 1.82X = 1.82 * 30769.23 = 56000. The final answer is 56000.\",\n  \"final_answer\": \"56000\" \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Determine the number of fruits Morisette brought. Morisette brought 5 apples and 8 oranges, so 5 + 8 = 13 fruits.\\nStep 2: Determine the number of apples Kael brought. Kael brought twice the amount of apples as Morisette, so 2 * 5 = 10 apples.\\nStep 3: Determine the number of oranges Kael brought. Kael brought half the number of oranges as Morisette, so 8 / 2 = 4 oranges.\\nStep 4: Determine the total number of fruits brought by both. Morisette brought 13 fruits, Kael brought 10 + 4 = 14 fruits, so 13 + 14 = 27 fruits in total.\", \n  \"final_answer\": \"27\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Let the number of letters needing stamps be 60. Step 2: Jennie stamps one-third of these, so 60 / 3 = 20 letters are stamped. Step 3: The pile of already-stamped letters now has 30 letters, which includes the 20 stamped letters. Step 4: Therefore, the original pile of already-stamped letters had 30 - 20 = 10 letters. The final answer is 10.\",\n  \"final_answer\": \"10\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "Okay, let's see. So the problem is about Amy and Lily making friends after transferring to a new school. Amy made 20 more friends than Lily. Lily made 50 friends. We need to find out how many friends they have together.\n\nFirst, I need to figure out how many friends Amy made. Since Amy made 20 more than Lily, and Lily made 50, then Amy's friends would be Lily's friends plus 20. So that's 50 + 20. Let me check that again. If Lily has 50, then Amy has 50 + 20 = 70. Wait, is that right? Because the problem says Amy made 20 more than Lily, so yes, Amy's total is Lily's total plus 20. So Amy has 70 friends.\n\nThen, the question asks for the total number of friends both Lily and Amy have together. So that would be Lily's friends plus Amy's friends. Lily has 50, Amy has 70. So 50 + 70 equals 120. Let me make sure I didn't mix up any numbers here. The problem says Amy made 20 more than Lily, so Amy's friends are 50 + 20 = 70. Then together, 50 + 70 = 120. So the answer should be 120. \n\nWait, but let me double-check. If Lily made 50 friends, Amy made 20 more than Lily, so Amy made 50 + 20 = 70. Then together, 50 + 70 = 120. Yeah, that seems right. So the final answer is 120.\nThe final answer is 120.\n</think>\n\nTo solve the problem, we start by determining how many friends Amy made. Since Amy made 20 more friends than Lily, and Lily made 50 friends, we calculate Amy's total as follows:\n\n$$\n\\text{Amy's friends} = \\text{Lily's friends} + 20 = 50 + 20 = 70\n$$\n\nNext, we find the total number of friends both Lily and Amy have together by summing their individual totals:\n\n$$\n\\text{Total friends} = \\text{Lily's friends} + \\text{Amy's friends} = 50 + 70 = 120\n$$\n\nThe final answer is 120."}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Calculate the total hours for Mondays, Wednesdays, and Fridays. 3 days * 3 hours = 9 hours. Step 2: Calculate the total hours for Tuesdays and Thursdays. 2 days * 4 hours = 8 hours. Step 3: Add the hours from both days. 9 hours + 8 hours = 17 hours. The final answer is 17.\",\n  \"final_answer\": \"17\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: On Monday, the depth is 17 feet. Step 2: On Tuesday, the depth is 17 + 7 = 24 feet. Step 3: On Wednesday, the depth is 2/3 of Tuesday's depth, which is 2/3 * 24 = 16 feet. The final answer is 16.\",\n  \"final_answer\": \"16\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Calculate the miles walked on weekdays. 5 days a week, 20 miles each day: 5 * 20 = 100 miles. Step 2: Calculate the miles walked on weekends. 2 days a week, 10 miles each day: 2 * 10 = 20 miles. Step 3: Add the weekday and weekend miles. 100 + 20 = 120 miles. The final answer is 120.\",\n  \"final_answer\": \"120\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Let the number of white carnations be C. Step 2: Sandra ordered four times as many red roses as white carnations, so red roses = 4C. Step 3: The pink calla lilies are 200, which is five times the number of white carnations, so 200 = 5C. Step 4: Solve 5C = 200 to find C = 40. Step 5: Substitute C = 40 into red roses = 4C to get 160. The final answer is 160.\",\n  \"final_answer\": \"160\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Calculate the monthly interest. The interest rate is 2% per month, so the interest for one month is 2% of $100, which is 0.02 * 100 = $2. Step 2: Calculate the total interest over 3 months. The total interest is 3 * $2 = $6. Step 3: Add the total interest to the principal. The total amount to be paid is $100 + $6 = $106. The final answer is 106.\",\n  \"final_answer\": \"106\" \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Convert all quantities to the same unit. 20 dozen cups = 240 cups. Half a dozen plates = 6 plates. Step 2: Calculate the cost of 240 cups. Let the cost of 1 cup be C. Then, 240C = 1200 less than the cost of 6 plates. Step 3: Calculate the cost of 6 plates. 6 plates at $6000 each = 6*6000 = $36000. Step 4: Set up the equation: 240C = 36000 - 1200 = 34800. Step 5: Solve for C: C = 34800 / 240 = 145. Step 6: The total cost of buying each cup is $145.\", \"final_answer\": \"145\" } \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Calculate the total amount Janeth needs to return. She borrowed $2000 and needs to return 10% more, so the total is 2000 + (10% of 2000) = 2000 + 200 = $2200. Step 2: Calculate the total amount she will pay over 12 months. She pays $165 a month, so 12 * 165 = $1980. Step 3: Subtract the total paid from the total owed to find the remaining balance. $2200 - $1980 = $220. The final answer is 220.\",\n  \"final_answer\": \"220\" \n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Find out how many shells Robert collects on Monday. Robert collects 20 shells, so Kylie collects 20 + 5 = 25 shells on Monday. Step 2: On Tuesday, Kylie collects 2 times more shells than she did on Monday. So, 25 * 2 = 50 shells. The final answer is 50.\",\n  \"final_answer\": \"50\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Determine the amount each person has. Carmen has $100. Step 2: Calculate Samantha's amount. Samantha has $25 more than Carmen, so $100 + $25 = $125. Step 3: Calculate Daisy's amount. Daisy has $50 more than Samantha, so $125 + $50 = $175. Step 4: Add all amounts together. $100 + $125 + $175 = $400. The final answer is 400.\",\n  \"final_answer\": \"400\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Find the speed of the slow lane car. The fast lane car is going at 60 mph, so the slow lane car is going at 30 mph (half of 60). Step 2: Calculate the time for the fast lane car to travel 480 miles. Time = distance/speed = 480/60 = 8 hours. Step 3: Since the distance is the same, the slow lane car also travels 480 miles. Time = 480/30 = 16 hours. The final answer is 16.\",\n  \"final_answer\": \"16\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid math word problem.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a math word problem that can be solved with basic arithmetic, not a riddle or puzzle.\"}"}
+{"predict": "{\n  \"reasoning\": \"Step 1: Annika started with $50. Step 2: She spent half of $50 on food and snacks, which is $25. Step 3: She spent an additional $10 on rides. Step 4: Total spent is $25 + $10 = $35. Step 5: Subtract total spent from the initial amount: $50 - $35 = $15. The final answer is 15.\",\n  \"final_answer\": \"15\"\n}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON payload.\"}"}
+{"predict": "{\"error\": \"Invalid request: Please provide a valid JSON request.\"}"}
