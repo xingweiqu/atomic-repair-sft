@@ -57,7 +57,7 @@ def chatml(user):
     return (f"<|im_start|>user\n{user}<|im_end|>\n<|im_start|>assistant\n")
 
 
-def cmd_probegen(_):
+def cmd_probegen(args):
     items = load_items(ROOT / "data_v4/repair_eval.jsonl")
     rows = []
     for it in items:
@@ -66,6 +66,27 @@ def cmd_probegen(_):
             continue
         rows.append({"id": it["id"], "w": str(w), "gold": str(it["gold_answer"]),
                      "prompt": chatml(f"{INSTR}\n{it['problem']}")})
+    n_ext = int(getattr(args, "extend", 0) or 0)
+    if n_ext:
+        # R-25 probe extension: more G-Claim (the only cell the floor ADOPTS in plain
+        # genre) from GSM TRAIN via the EXISTING v4 injector — probe-only, inference-only.
+        import random
+        from gsm_repair_v4.generate_gsm import build_record
+        from gsm_repair_v4.gsm_world import load_gsm
+        rng = random.Random(43)
+        pool = load_gsm("train")
+        rng.shuffle(pool)
+        made, pi = 0, 0
+        while made < n_ext and pi < len(pool) * 2:
+            item = pool[pi % len(pool)]; pi += 1
+            rec = build_record("G-Claim", item, "train", made, rng)  # train-side phrasings (probe items ARE train-split)
+            if rec is None or rec.get("planted_wrong_answer") in (None, ""):
+                continue
+            rows.append({"id": f"e5bx_{made:05d}", "w": str(rec["planted_wrong_answer"]),
+                         "gold": str(rec["gold_answer"]),
+                         "prompt": chatml(f"{INSTR}\n{rec['problem']}")})
+            made += 1
+        print(f"extension: +{made} G-Claim probes from GSM train (seed 43, probe-only)")
     PROBE.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in rows))
     print(f"probe: {len(rows)} plain-corrupt prompts -> {PROBE}")
 
@@ -224,6 +245,7 @@ if __name__ == "__main__":
     ap.add_argument("--model", default=FLOOR)
     ap.add_argument("--shard", default="0:1")
     ap.add_argument("--alpha", default="0.0")
+    ap.add_argument("--extend", default=0)
     a = ap.parse_args()
     OUT.mkdir(exist_ok=True)
     {"probegen": cmd_probegen, "generate": cmd_generate, "classify": cmd_classify,
