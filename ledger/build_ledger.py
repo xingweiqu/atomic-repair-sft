@@ -414,10 +414,11 @@ def make_fig(rows):
                                                                "cumulative_"))]
     sel.sort(key=lambda r: (r["domain"], r["ckpt"]))
     labels = [f"{r['domain']}:{r['ckpt']}" for r in sel]
-    chans = ["F_judge", "F_parse", "M", "D", "A", "ND"]  # A rendered as A_delivered in legend
-    colors = {"F_judge": "#f4a261", "F_parse": "#e9c46a", "M": "#e76f51",
+    chans = ["F_judge", "F_parse", "K", "M", "D", "A", "ND"]  # C-10: K/M split colours; A -> A_delivered
+    colors = {"F_judge": "#f4a261", "F_parse": "#e9c46a", "K": "#4c9f70", "M": "#e76f51",
               "D": "#2a9d8f", "A": "#264653", "ND": "#bdbdbd"}
-    legend_names = {"A": "A_delivered (in-genre)"}
+    legend_names = {"A": "A_delivered (in-genre)", "K": "K (legit content, construct=recall)",
+                    "M": "M (contamination, construct=procedure)"}
     fig, ax = plt.subplots(figsize=(13, 0.42 * len(sel) + 2))
     y = np.arange(len(sel))
     for r_i, r in enumerate(sel):
