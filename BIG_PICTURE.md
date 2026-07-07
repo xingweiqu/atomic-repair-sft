@@ -98,3 +98,11 @@ cos(steering 方向, ΔW_targeted) ≫ cos(·, ΔW_random)。→【E5，进行�
   主图配方 E1b 后终裁。
 - 红线 2 精化:对照的操作变量 = **"动作一致的修复数据 vs 动作稀释/无关数据"**;
   禁写"混合修复数据无效"——精确表述:"含 keep 的混合无效,operator-only 混合待 E1b 判"。
+
+---
+
+## 修正案 A2(C-10,2026-07-10):§3 主图更换为 Repair Transfer Matrix
+
+叙事升级 "From Atomic Diagnosis to Targeted Repair";核心新实验 = 三世界双向预注册的
+Repair Transfer Matrix(qc/INSTRUCTION_C10.md + prereg/PREREG_transfer_matrix.md)。
+军令状五行与 non-claims 见 paper/PAPER_CONTRACT.md(冻结)。
