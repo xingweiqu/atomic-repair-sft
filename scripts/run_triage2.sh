@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Triage rerun with corrected suspect set (extract/merge artifacts reused).
+set -uo pipefail
+REPO="$(cd "$(dirname "$0")/.." && pwd)"; cd "$REPO"; NGPU="${NGPU:-8}"
+python3 probes/steer_triage.py merge || exit 1
+for g in $(seq 0 $((NGPU-1))); do
+  CUDA_VISIBLE_DEVICES=$g python3 probes/steer_triage.py scan --shard ${g}:${NGPU} > /tmp/tri2_scan_${g}.log 2>&1 &
+done; wait
+python3 probes/steer_triage.py scanmerge || exit 1
+for g in $(seq 0 $((NGPU-1))); do
+  CUDA_VISIBLE_DEVICES=$g python3 probes/steer_triage.py triage --shard ${g}:${NGPU} > /tmp/tri2_tri_${g}.log 2>&1 &
+done; wait
+echo "triage rows: $(cat probes/out_triage/triage_shard*.jsonl | wc -l)"
+echo "TRIAGE2 DONE"

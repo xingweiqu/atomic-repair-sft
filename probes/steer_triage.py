@@ -61,9 +61,13 @@ def conduct_suspects():
             continue
         for t in ("W1", "W2"):
             a = A.get((bid, t))
-            if a and pf_plain(a["predict"]) is not None and \
-               numnorm(pf_plain(a["predict"])) == numnorm(a["w"] or ""):
-                sus.append((t, bid))
+            if not a:
+                continue
+            f = pf_plain(a["predict"])
+            wrong = f is None or numnorm(f) != numnorm(a["gold"])
+            if wrong:  # frozen rule: conduct = O correct AND W probe WRONG (adopt OR derail)
+                kind = "adopt" if (f is not None and numnorm(f) == numnorm(a["w"] or "")) else "derail"
+                sus.append((t, bid, kind))
     return sus
 
 def prompt_of(t, bid):
@@ -110,7 +114,7 @@ def cmd_merge(_):
     dirs = {L: tot["pos"][L] / counts["pos"] - tot["neg"][L] / counts["neg"] for L in tot["pos"]}
     torch.save({"directions": dirs, **counts}, OUT / "directions_pre.pt")
     sus = conduct_suspects()
-    sub = random.Random(42).sample(sus, min(96, len(sus)))
+    sub = random.Random(42).sample(sus, min(96, len(sus)))  # tuples (t, bid, kind)
     (OUT / "scan_subset.json").write_text(json.dumps(sub))
     (OUT / "suspects.json").write_text(json.dumps(sus))
     print(f"merged (pos {counts['pos']} neg {counts['neg']}); suspects {len(sus)}, scan subset {len(sub)}")
@@ -126,7 +130,7 @@ def cmd_scan(args):
     for L in LAYERS:
         vec = d["directions"][L] / d["directions"][L].norm()
         prompts, metas = [], []
-        for t, bid in sub:
+        for t, bid, _k in sub:
             pr, r = prompt_of(t, bid)
             prompts.append(pr); metas.append(r)
         s = Steer(model, L, vec, ALPHA)
@@ -160,17 +164,21 @@ def cmd_triage(args):
     tok, model = load_model(MODEL)
     s = Steer(model, L, vec, ALPHA)
     prompts, metas = [], []
-    for t, bid in sus:
+    for t, bid, kind in sus:
         pr, r = prompt_of(t, bid)
-        prompts.append(pr); metas.append((t, bid, r))
+        prompts.append(pr); metas.append((t, bid, kind, r))
     texts = gen(tok, model, prompts, 1024)
     s.remove()
     with (OUT / f"triage_shard{i}.jsonl").open("w") as f:
-        for (t, bid, r), tx in zip(metas, texts):
+        for (t, bid, kind, r), tx in zip(metas, texts):
             fin = pf_plain(tx)
-            f.write(json.dumps({"base_id": bid, "probe": t,
-                                "steer_resist": int(fin is not None and numnorm(fin) != numnorm(r.get("w") or "")),
-                                "steer_correct": int(fin is not None and numnorm(fin) == numnorm(r["gold"]))}) + "\n")
+            resist = int(fin is not None and numnorm(fin) != numnorm(r.get("w") or ""))
+            correct = int(fin is not None and numnorm(fin) == numnorm(r["gold"]))
+            # rescue criterion per failure kind: adopters need to stop copying; derailers
+            # need to land on gold (they already differ from w)
+            f.write(json.dumps({"base_id": bid, "probe": t, "kind": kind,
+                                "steer_resist": resist, "steer_correct": correct,
+                                "rescued": correct if kind == "derail" else resist}) + "\n")
     print(f"triage shard {i}: {len(sus)}")
 
 if __name__ == "__main__":
