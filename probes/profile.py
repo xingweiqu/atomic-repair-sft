@@ -61,9 +61,16 @@ def wilson(k, n, z=1.96):
 def load_answers():
     sig = defaultdict(dict)   # base_id -> probe -> 0/1
     meta = {}
-    for f in sorted(glob.glob(str(ROOT / "probes/out/answers.shard*.jsonl"))):
+    excluded = set()
+    pfj = ROOT / "probes/data/pool_filter.json"
+    if pfj.exists():
+        excluded = set(json.loads(pfj.read_text())["excluded"])
+    # out2 (repair-pass reruns) OVERRIDES out per (base_id, probe)
+    for f in sorted(glob.glob(str(ROOT / "probes/out/answers.shard*.jsonl"))) +              sorted(glob.glob(str(ROOT / "probes/out2/answers.shard*.jsonl"))):
         for l in Path(f).open():
             r = json.loads(l)
+            if r["base_id"] in excluded:
+                continue
             got = pf_json(r["predict"]) if r["probe"] == "F" else pf_plain(r["predict"])
             ok = int(got is not None and numnorm(got) == numnorm(r["gold"]))
             sig[r["base_id"]][r["probe"]] = ok
