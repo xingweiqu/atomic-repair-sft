@@ -39,13 +39,9 @@ def pf_json(t):
     return m[-1].replace(",", "").rstrip(".") if m else None
 
 
-def numnorm(s):
-    s = str(s).replace(",", "").rstrip(".")
-    try:
-        f = float(s)
-        return str(int(f)) if f == int(f) else str(f)
-    except ValueError:
-        return s
+import sys as _sys
+_sys.path.insert(0, str(ROOT))
+from textlint import numnorm  # shared guarded normaliser (9e999 family, 3rd strike)
 
 
 def wilson(k, n, z=1.96):

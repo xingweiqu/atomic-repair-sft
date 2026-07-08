@@ -26,3 +26,17 @@ def lint(text: str) -> str:
 
 def has_residue(text: str) -> bool:
     return any(p.search(text or "") for p in _PATTERNS)
+
+
+def numnorm(s) -> str:
+    """Shared numeric normaliser WITH the finite guard (the '9e999' OverflowError bug
+    family hit pass8 v3, then probes/profile_classify — third strike centralises it here;
+    all new code must import THIS one)."""
+    s = str(s).replace(",", "").rstrip(".")
+    try:
+        f = float(s)
+    except (ValueError, OverflowError):
+        return s
+    if f != f or f in (float("inf"), float("-inf")) or abs(f) > 1e15:
+        return s
+    return str(int(f)) if f == int(f) else str(f)
