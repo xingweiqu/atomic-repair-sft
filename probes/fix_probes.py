@@ -107,9 +107,10 @@ def cmd_prompts2(_):
             continue
         exprs = "; ".join(s["expr"] for s in it["steps"])
         rows.append(dict(base_id=it["id"], kind="S", prompt=(
-            "Describe the solution plan for this problem as a numbered list of SHORT VERB "
-            "PHRASES. STRICT RULES: no digits, no arithmetic expressions, no computed values "
-            "— only what operation to do at each step (e.g. 'add the two daily amounts').\n"
+            "Describe the solution plan for this problem as SHORT VERB PHRASES separated by "
+            "semicolons — NO numbering, NO digits, NO arithmetic expressions, NO computed "
+            "values; only what operation to do at each step (e.g. 'add the two daily "
+            "amounts; multiply by the price').\n"
             f"Problem: {it['question']}\nSolution step expressions (for your reference only): "
             f"{exprs}\nOutput only the numbered plan.")))
         rows.append(dict(base_id=it["id"], kind="R", prompt=(
@@ -175,6 +176,8 @@ def cmd_assemble2(_):
     for f in sorted(glob.glob(str(GEN / "pr2_out.shard*.jsonl"))):
         for l in Path(f).open():
             g = json.loads(l)
+            if g["kind"] == "P":
+                continue
             it = pool.get(g["base_id"])
             if not it:
                 continue

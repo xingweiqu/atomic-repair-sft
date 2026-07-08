@@ -66,7 +66,7 @@ def load_answers():
     if pfj.exists():
         excluded = set(json.loads(pfj.read_text())["excluded"])
     # out2 (repair-pass reruns) OVERRIDES out per (base_id, probe)
-    for f in sorted(glob.glob(str(ROOT / "probes/out/answers.shard*.jsonl"))) +              sorted(glob.glob(str(ROOT / "probes/out2/answers.shard*.jsonl"))):
+    for f in sorted(glob.glob(str(ROOT / "probes/out/answers.shard*.jsonl"))) +              sorted(glob.glob(str(ROOT / "probes/out2/**/answers.shard*.jsonl"), recursive=True)):
         for l in Path(f).open():
             r = json.loads(l)
             if r["base_id"] in excluded:
