@@ -1,37 +1,20 @@
-# QUEUE_STATUS(2026-07-11 更新;主线已换 C-11)
+# QUEUE_STATUS(2026-07-09 02:00)
 
-## C-11 Loop 0 ✅(今日)
-军令状 v1.1 冻结(+第 4 条 non-claim)/ 故事检疫 ideas/ / 三件套(实验卡+预注册 v2 模板
-+CLAIMS 入册 3 条)/ C-10 交接(D-11:2Wiki→Loop6、K-Cor 撤销→W2 探针、natural→Loop6)。
+## 在跑(全自动链,无人值守)
+训练 60 runs(1/60 OK,ETA 3-5h)→ 自动接 ridgepass/ridgepick/fullpass(已武装等 marker)
+→ L3_EVAL_DONE 后本地收割。
 
-## 下一步:Loop 1 七探针套件(本地,约 1 周)
-O/P/S/R/C/W1/W2/F 生成器;闸门:S/R/C 零答案泄漏 validator + 每型 100 条人工构念审计
-≥70% 准入(不达标降探索性);W1 复用 v4 注入器、W2 复用 kcor claim 措辞;
-P 语义等价 validator。产出:生成器 + card(注入面清单)+ 构念审计报告。
-→ Loop 2 画像(服务器推理,pre-repair 全探针 + steering 分诊列)→ profile 表送审
-→ Loop 3 配比公式(只写公式,等 profile 实数)。
+## 今日完成(C-11 Loop 1→3 一整条)
+- 七探针闸门三轮返工→受托审计全过→**GSM Profile 图 1 终审版**(headline+三脚注+分诊列
+  +placebo 判定)→ ~/Downloads/GSM_profile_终审版.md
+- conduct 机制:derail 98%/adopt 2%;2×2 训练效应>体裁效应;"稳定器"被 placebo 拦下
+  (随机方向 75% vs d 85%)→ derail=浅层扰动可恢复
+- 2b:opsonly 素题 adopt 3.2→0.8 ✓ 但 corrupt 下 mute 52.7% ⚠(价值主张风险,入 Loop4 评测列)
+- Loop3 签字执行:PREREG(系数表=预测身份;D 置换冻结 2/5/16/36/40)、六组分池
+  (LLM 三池 kept 2200/1606/1125)、11 数据臂(单组分 600 固定;混合 char 对齐 ±2%)、
+  60 configs、评测线(脊点闸适配版+无干净点如实)
+- SERVER_OPS.md:bring-up 清单+14 坑总账入库(依赖围栏五连、pkill 自杀规则等)
 
-## 资产状态
-- 服务器直连 ✓(xwqu-lq,8×A800,repo+LF+vllm 就绪);GPU 当前空闲
-- Tier-2 前沿 ✅(挂 Loop 3 drills 臂 + CLAIMS CL-2);E5b ✅(挂 Loop 2 分诊 + Loop 5)
-- kcor_real/ 资产保留(W2 措辞库来源);E1b 配方律 → Loop 3 纠错验证臂设计输入
-
-## 拍板点(提前亮牌,C-11)
-① 三件套单条否决权 ② 探针构念 70% 闸门 ③ Loop 3 臂比例(profile 出数后)④ 2Wiki 去留
-
-## 2026-07-11 深夜追加
-- Loop1 探针闸门运转记录:**S 型被冻结口径砍 85%**(GSM 步骤链式,后步表达式操作数=前步结果)
-  → 幸存 206 条(非链式偏样)。两案待裁:(a) n=206 入册+覆盖披露/按预注册降级探索型;
-  (b) 修订口径(终答案不泄漏,链式操作数携带属固有)重生成。**修订前不动。**
-- 计数:O/W2/F 1811 全量;P 1608(等价闸砍 11%);R 1095(数字闸砍 16%);C 1206;W1 1300(gsm only)。
-- 画像推理 8 卡在跑(~10.8k 条);profile.py 分类器已写好,**HELD 待构念审计**
-  (--audited 显式传入过审型才出正式表)。审计样本 probes/audit_*_sample100.md 等 Xingwei。
-
-## ★ 硬停申报(2026-07-11 深夜,F 探针)
-- 预注册预测 "F 伪差 ≤5%" **被打破**:F/gsm=76.7% vs O/gsm=93.5%,差动 −16.8pp。
-- 仪器验尸:303 miss 零提取器救回(素题格式救回 0、文中含正确值 0)→ **真行为信号**;
-  其中一类模式=JSON 格式下**输出表达式不计算**(`{"answer": 3*68+2*80+6*55}`)。
-- 读法候选(归裁决):格式本身是重大失败面,与体裁税同族——F 探针本来是排伪差的,
-  结果测出了真差。画像分类的 format 桶将显著非空。
-- 状态:分类继续 HELD(本来就等构念审计);F 的入册方式(独立失败类 vs 伪差控制)待裁。
-- 其余自检过:O/gsm 93.5%(预测≈94 ✓)、O/hard 3.1% ✓。
+## 收割后待办
+单组分 RE vs 预测表逐格打分 → A2 终配比签字(拍板点)→ Batch 2(A2×3seed)
+→ E 臂(steering-only+随机基线)→ NOTES_batch1 + 主图(数据效率曲线)
