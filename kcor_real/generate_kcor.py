@@ -121,22 +121,26 @@ def main():
             by_rel[rel][s] = o
     print("facts per relation:", {k: len(v) for k, v in by_rel.items()})
 
-    # subject-disjoint split per relation, proportional quotas
+    # GLOBAL subject-disjoint split (C-10: 实体不相交 — a subject may appear under
+    # several relations, so camp assignment must be global, then fill per-relation quotas)
     train, evalr = [], []
     rels = [r for r in RELATIONS if len(by_rel[r]) >= 40]
+    all_subjects = sorted({s for rel in rels for s in by_rel[rel]})
+    rng.shuffle(all_subjects)
+    cut = int(len(all_subjects) * 0.75)
+    camp = {s: ("train" if i < cut else "eval") for i, s in enumerate(all_subjects)}
     qt, qe = N_TRAIN // len(rels), N_EVAL // len(rels)
     for rel in rels:
         subs = sorted(by_rel[rel])
         rng.shuffle(subs)
-        need = qt + qe
-        subs = subs[:max(need, min(len(subs), need))]
-        tr_s, ev_s = subs[:qt], subs[qt:qt + qe]
+        tr_s = [s for s in subs if camp[s] == "train"][:qt]
+        ev_s = [s for s in subs if camp[s] == "eval"][:qe]
         pool = sorted({by_rel[rel][s] for s in by_rel[rel]})
-        for i, s in enumerate(tr_s):
+        for s in tr_s:
             gold = by_rel[rel][s]
             wrong = rng.choice([o for o in pool if o != gold])
             train.append(record(len(train), "train", rel, s, gold, wrong, rng))
-        for i, s in enumerate(ev_s):
+        for s in ev_s:
             gold = by_rel[rel][s]
             wrong = rng.choice([o for o in pool if o != gold])
             evalr.append(record(len(evalr), "eval", rel, s, gold, wrong, rng))
