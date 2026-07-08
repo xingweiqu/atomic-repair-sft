@@ -100,3 +100,14 @@
 - epoch-sweep 23 个训练点的预测尚不存在(configs 就绪、服务器未跑)——这是既有 pending,
   Loop 4 并入,不属于资产缺失。
 - SETTING.md 此前从未 git 提交(untracked)——随本次 Loop 0 一并入库,保证引用可追溯。
+
+## D-10 C-10 §2a 假设的 "Paper 1 Wikidata 1-hop 生成管线" 不存在 【PROPOSED】
+- **指令假设**:K-Cor 真实域 = Paper 1 的 Knowledge 生成管线(Wikidata 1-hop)放量。
+- **实际**:monorepo 全库 grep 无任何 wikidata/SPARQL 代码;Paper 1 的 K 项是 API 生成的
+  合成事实(generate_items.py, anthropic 客户端),没有可"放量"的真实域管线。
+- **影响**:C-10 §2a(K-Cor 数据)→ §3 训练队列。
+- **建议方案(已按此实施,等追认)**:事实源改用 **LAMA/T-REx**(标准 Wikidata 1-hop
+  三元组基准,可引用、带模板);问题模板逐关系手写;Corrupt 注入 = v4 claim 措辞库 +
+  同关系宾语池 type-matched 错值;schema 与 R-Cor(v4 actionized)逐字节一致;
+  实体不相交切分 + 逐题泄漏标记照 C-10。construct=resist+recall,附 "base 已知率" 探针
+  (K-Cor 的 gold 恢复依赖参数记忆——这里干净闸门是反的:希望 base 认识这些事实)。
