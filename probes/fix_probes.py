@@ -87,14 +87,22 @@ def cmd_fixw2(_):
     with (OUT / "base_W2.jsonl").open("w") as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
-    (OUT / "w2_rerun_ids.json").write_text(json.dumps(changed))
-    print(f"W2: resampled {len(changed)}/{len(rows)} (validator: w>0, w/gold in [0.2,5])")
+    old = set()
+    f_ids = OUT / "w2_rerun_ids.json"
+    if f_ids.exists():
+        old = set(json.loads(f_ids.read_text()))
+    f_ids.write_text(json.dumps(sorted(old | set(changed))))
+    print(f"W2: resampled {len(changed)}/{len(rows)} this pass; rerun list total {len(old | set(changed))}")
 
 
 def cmd_prompts2(_):
+    GEN.mkdir(parents=True, exist_ok=True)
     pool = load_pool()
     rows = []
     for it in pool:
+        rows.append(dict(base_id=it["id"], kind="P", prompt=(
+            "Rewrite the following math problem in different words. Keep every number and "
+            "the meaning exactly the same. Output only the rewritten problem.\n" + it["question"])))
         if not it.get("steps"):
             continue
         exprs = "; ".join(s["expr"] for s in it["steps"])
@@ -137,7 +145,7 @@ def cmd_assemble2(_):
     # ---- P: relint old generations, NO LLM rerun ----
     prows, pairs = [], []
     drops = {"residue_unfixable": 0, "nums": 0, "len": 0}
-    for f in sorted(glob.glob(str(GEN / "pr_out.shard*.jsonl"))):
+    for f in sorted(glob.glob(str(GEN / "pr2_out.shard*.jsonl"))):
         for l in Path(f).open():
             g = json.loads(l)
             if g["kind"] != "P":
