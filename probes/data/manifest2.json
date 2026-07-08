@@ -1,0 +1,19 @@
+{
+ "P": {
+  "kept": 1607,
+  "residue_unfixable": 0,
+  "nums": 204,
+  "len": 0
+ },
+ "S": {
+  "kept": 888,
+  "digits": 412,
+  "residue": 0
+ },
+ "R": {
+  "kept": 444,
+  "digits": 34,
+  "entity": 822,
+  "residue": 0
+ }
+}
