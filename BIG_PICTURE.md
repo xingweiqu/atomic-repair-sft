@@ -106,3 +106,12 @@ cos(steering 方向, ΔW_targeted) ≫ cos(·, ΔW_random)。→【E5，进行�
 叙事升级 "From Atomic Diagnosis to Targeted Repair";核心新实验 = 三世界双向预注册的
 Repair Transfer Matrix(qc/INSTRUCTION_C10.md + prereg/PREREG_transfer_matrix.md)。
 军令状五行与 non-claims 见 paper/PAPER_CONTRACT.md(冻结)。
+
+---
+
+## 修正案 A3(C-11,2026-07-11):主线定稿 = Benchmark-Guided Data Augmentation
+
+取代 A2 的排期与主实验:主线 = **GSM8K Failure Profile → Data Recipe → Repair Outcome**
+(军令状 v1.1,paper/PAPER_CONTRACT.md)。七探针(O/P/S/R/C/W1/W2/F)→ 诊断画像
+(论文图 1)→ 六单组分 + 八臂配方实验(A2 臂 = Paper 2 结论兑换成配比先验)。
+2Wiki/natural set 降 Loop 6 验证章;故事检疫规则生效(ideas/ 排队)。

@@ -1,26 +1,20 @@
-# QUEUE_STATUS(2026-07-08 更新)
+# QUEUE_STATUS(2026-07-11 更新;主线已换 C-11)
 
-## 已完成(全链)
-- 账本线:Loop0/1/1.5 + R-17 重记账 + C-9 追溯(C9_RETRO)
-- E1 硬停→裁决→E1b/E1c 收割:**预注册全中**(opsonly n300@e8 resist 100% 持久;
-  keep 剂量律 100/90/76;keep-only 反推 33%;E3 3-seed 99×3)
-- E2 pass@8 合并池(四桶 569/86/158/1806)
-- E5 v1 作废(strict-on-thinking 仪器伪影)→ v3 floor-steering 收割:
-  D 可推 83→95 但税同轴(P1/P3 脱靶,注册后备分支 P4 触发)——**待裁决**
-- E4 筛选脚本、casebox、T5 设计稿
-- **Tier-2 生成器完工**:四档(flurm/zorp/quilt/brame)×(2000/500/500),
-  零泄漏构造断言 PASS,毒剂量 50/150 精确,token p95≈100≪1024,
-  PREREG_tier2 先行 commit,26 configs + RUNBOOK batch-5
+## C-11 Loop 0 ✅(今日)
+军令状 v1.1 冻结(+第 4 条 non-claim)/ 故事检疫 ideas/ / 三件套(实验卡+预注册 v2 模板
++CLAIMS 入册 3 条)/ C-10 交接(D-11:2Wiki→Loop6、K-Cor 撤销→W2 探针、natural→Loop6)。
 
-## 服务器可跑
-- **batch-5(Tier-2)**:闸门 0 token 审计 → 闸门 1 干净闸门 8 条 zero-shot(回传本地判 ≤5%
-  才放行)→ 6 训练 + 12 predicts
-- E4 2Wiki 筛选(单卡插空)
+## 下一步:Loop 1 七探针套件(本地,约 1 周)
+O/P/S/R/C/W1/W2/F 生成器;闸门:S/R/C 零答案泄漏 validator + 每型 100 条人工构念审计
+≥70% 准入(不达标降探索性);W1 复用 v4 注入器、W2 复用 kcor claim 措辞;
+P 语义等价 validator。产出:生成器 + card(注入面清单)+ 构念审计报告。
+→ Loop 2 画像(服务器推理,pre-repair 全探针 + steering 分诊列)→ profile 表送审
+→ Loop 3 配比公式(只写公式,等 profile 实数)。
 
-## 等裁决
-- E5 结果(P1/P3 脱靶):d 类不平衡疑点 / 余弦仪器候选 / §4 叙事走"捆绑的激活层证据"?
-- Loop 2A 桶设计(中间桶 86/158 < spec 500)
-- T5 点头后补预注册
+## 资产状态
+- 服务器直连 ✓(xwqu-lq,8×A800,repo+LF+vllm 就绪);GPU 当前空闲
+- Tier-2 前沿 ✅(挂 Loop 3 drills 臂 + CLAIMS CL-2);E5b ✅(挂 Loop 2 分诊 + Loop 5)
+- kcor_real/ 资产保留(W2 措辞库来源);E1b 配方律 → Loop 3 纠错验证臂设计输入
 
-## 本地待开发
-- GSM-hard 注入 dry-run(等 2A 桶裁决)——此外无
+## 拍板点(提前亮牌,C-11)
+① 三件套单条否决权 ② 探针构念 70% 闸门 ③ Loop 3 臂比例(profile 出数后)④ 2Wiki 去留

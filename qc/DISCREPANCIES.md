@@ -111,3 +111,12 @@
   同关系宾语池 type-matched 错值;schema 与 R-Cor(v4 actionized)逐字节一致;
   实体不相交切分 + 逐题泄漏标记照 C-10。construct=resist+recall,附 "base 已知率" 探针
   (K-Cor 的 gold 恢复依赖参数记忆——这里干净闸门是反的:希望 base 认识这些事实)。
+
+## D-11 C-10→C-11 交接登记 【CLOSED(C-11 Loop 0.4 明文)】
+- 2Wiki:从主实验降级为**验证章**(Loop 6,缩微复现),不再阻塞主线;E4 筛选数字
+  (exact 22.5%/contains 47%)转为 Loop 6 设计输入。
+- **K-Cor 真实域数据集需求撤销**:kcor_real/(生成器+1500/600 数据+card)保留入库
+  作资产,不进主线训练;其职能由 GSM 域内 W2 探针(wrong-final-claim)承担。
+- natural corrupted-context set(100–200 条)保留原规格,改挂 Loop 6。
+- Transfer Matrix 三世界预注册(PREREG_transfer_matrix)保留冻结——其 K/R 迁移检验
+  由 Loop 3 纠错验证臂的 W1/W2 双评测接替,三世界读法映射到臂结局 (iii)(D≈A ↔ World B)。
