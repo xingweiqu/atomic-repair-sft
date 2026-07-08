@@ -17,3 +17,22 @@
 - phrasing ∧ scaffold: 12
 - phrasing ∧ rule: 5
 - local_exec ∧ phrasing: 1
+
+## steering 分诊列(L8, α8;d 提自 pre-repair 素题 W 行为,LOWPOWER:负类 n=48 已披露)
+
+| conduct 细分 | n | 占比 | d 方向救活 | **placebo(随机方向)** | d 特异增益 |
+|---|---|---|---|---|---|
+| derail(被带偏跑飞) | 227 | 96% | 85% | **75%** | **+10pp** |
+| adopt(照抄植入值) | 9 | 4% | 4/9 | 4/9 | 0 |
+| 合计 | 236 | — | 83% | 74% | +9pp |
+
+**判定(placebo 对照后,措辞按此收窄)**:"d = 计算稳定器"不成立——救活大头是**非特异扰动效应**。
+幸存的发现:**derail 是浅层不稳定失败**——任意单位向量 @α8 即可救活 75%(这些题 O 本来就对,
+腐蚀只造成边缘干扰而非稳定错误信念);d 在其上仅 +10pp 特异。
+含义:①Loop 3 的 E 臂(steering-only)需加随机方向基线列;②"扰动可恢复性"可作 conduct
+桶的附加诊断维度(描述性命名,不另造词)。
+
+## conduct 机制注记(2a 对账 + 拆分)
+素题失败 98% 是 derail 非 adopt;同题 2×2:pre-repair 修复腔/素题 adopt = 6.7%/2.5%,
+floor e8 = 15.6%/14.1% —— 体裁内差异小、**训练效应大**(格式训练令素题 adopt ×5.6)。
+Loop 3 纠错臂监督动作据此改为 verify-then-recompute(裁决 2c)。
