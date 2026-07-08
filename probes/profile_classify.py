@@ -123,7 +123,19 @@ def main():
             for j in range(i + 1, len(labels)):
                 co[tuple(sorted((labels[i], labels[j])))] += 1
     tag = "PROVISIONAL (pre-audit)" if a.pre_audit else f"admitted={sorted(admitted)}"
+    import json as _j
+    pf = ROOT / "probes/data/pool_filter.json"
+    filt = _j.loads(pf.read_text()) if pf.exists() else {"excluded": [], "reasons": {}}
     L = [f"# GSM Diagnostic Profile — {tag}", "",
+         "**Headline:benchmark 说 93.5 分,其中只有 60.6 分经得起真实使用的扰动**"
+         "(O 准确率 vs 全探针稳健率,同池同分母见注 1)。", "",
+         "注 1(分母与判定优先序):每桶分母 = 该池全部题(multi-label,桶间可共现,"
+         "行和>100% 属预期);ok = O 对且未落任何失败桶——它与 O 准确率(93.5%)分母相同、"
+         "判据更严(全探针)。判定顺序 = scaffold/rule/phrasing/conduct/local_exec 平行判,"
+         "format 仅在无其他标签时判,unresolved = 全探针皆错,mixed = 不匹配任何规则。",
+         f"注 2(池过滤):连贯性过滤剔除 {len(filt['excluded'])} 题"
+         f"({filt['reasons']});自相矛盾约束不可程序化,仅人工审计层覆盖(披露)。",
+         "注 3:overlap 矩阵挂附录(本文末节);steering 分诊列见 triage 报告。", "",
          "| pool | n | " + " | ".join(sorted({k for p in lab_by_pool for k in lab_by_pool[p]})) + " |"]
     cats = sorted({k for p in lab_by_pool for k in lab_by_pool[p]})
     L.append("|" + "---|" * (len(cats) + 2))
