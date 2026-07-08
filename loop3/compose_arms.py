@@ -55,7 +55,9 @@ def main():
     # char-proxy alignment (ruling: 600 items/arm is PRIMARY; alignment within comparable
     # groups only — drills items are ~10x shorter, aligning them would gut the others;
     # drills & cleanreplay stay at fixed 600 items with token totals DISCLOSED)
-    for group in [["A1", "B", "C", "D"], [f"single_{c}" for c in COMP]]:
+    # singles: 600 items FIXED (signature ruling text is primary); token totals disclosed,
+    # no trimming — the item-count vs token-alignment tension resolved in favour of 600.
+    for group in [["A1", "B", "C", "D"]]:
         tgt = min(chars(arms[g]) for g in group)
         for g in group:
             rows = arms[g]
