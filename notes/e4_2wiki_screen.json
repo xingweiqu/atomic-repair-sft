@@ -1,0 +1,371 @@
+{
+ "report": {
+  "dataset": "framolfese/2wikimultihopqa:validation",
+  "n": 200,
+  "exact_acc": 0.225,
+  "contains_acc": 0.47,
+  "window_30_70": false
+ },
+ "demo20": [
+  {
+   "question": "Where does the director of film Man At Bath work at?",
+   "gold": "Cahiers du cinéma",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where does the director of film Man At Bath work at?",
+   "evidences": [
+    [
+     "Man at Bath",
+     "director",
+     "Christophe Honoré"
+    ],
+    [
+     "Christophe Honoré",
+     "employer",
+     "Cahiers du cinéma"
+    ]
+   ]
+  },
+  {
+   "question": "Where did the director of film Desolation Angels (1995 Film) graduate from?",
+   "gold": "State University of New York at Purchase",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where did the director of film Desolation Angels (1995 Film) graduate from?",
+   "evidences": [
+    [
+     "Desolation Angels",
+     "director",
+     "Tim McCann"
+    ],
+    [
+     "Tim McCann",
+     "educated at",
+     "State University of New York at Purchase"
+    ]
+   ]
+  },
+  {
+   "question": "Where was the place of burial of Ælfgar, Earl Of Mercia's mother?",
+   "gold": "Coventry",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where was the place of burial of Ælfgar, Earl Of Mercia's mother?",
+   "evidences": [
+    [
+     "Ælfgar",
+     "mother",
+     "Godgifu"
+    ],
+    [
+     "Godgifu",
+     "place of burial",
+     "Coventry"
+    ]
+   ]
+  },
+  {
+   "question": "Where was the director of film Aylwin (Film) born?",
+   "gold": "Weston-super-Mare, Somerset",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where was the director of film Aylwin (Film) born?",
+   "evidences": [
+    [
+     "Aylwin",
+     "director",
+     "Henry Edwards"
+    ],
+    [
+     "Henry Edwards",
+     "place of birth",
+     "Weston-super-Mare, Somerset"
+    ]
+   ]
+  },
+  {
+   "question": "What nationality is Julia Parker (Astrologer)'s husband?",
+   "gold": "British",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. What nationality is Julia Parker (Astrologer)'s husband?",
+   "evidences": [
+    [
+     "Julia Parker",
+     "spouse",
+     "Derek Parker"
+    ],
+    [
+     "Derek Parker",
+     "country of citizenship",
+     "British"
+    ]
+   ]
+  },
+  {
+   "question": "What nationality is Prince Napoléon Bonaparte's father?",
+   "gold": "French",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. What nationality is Prince Napoléon Bonaparte's father?",
+   "evidences": [
+    [
+     "Napoléon Joseph Charles Paul Bonaparte",
+     "father",
+     "Jérôme Bonaparte"
+    ],
+    [
+     "Jérôme Bonaparte",
+     "country of citizenship",
+     "French"
+    ]
+   ]
+  },
+  {
+   "question": "Where does the director of film The Witnesses work at?",
+   "gold": "Cahiers du cinéma",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where does the director of film The Witnesses work at?",
+   "evidences": [
+    [
+     "The Witnesses",
+     "director",
+     "André Téchiné"
+    ],
+    [
+     "André Téchiné",
+     "employer",
+     "Cahiers du cinéma"
+    ]
+   ]
+  },
+  {
+   "question": "Where did the director of film Carbon (Film) study?",
+   "gold": "Film and Television Institute of India",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where did the director of film Carbon (Film) study?",
+   "evidences": [
+    [
+     "Carbon",
+     "director",
+     "Venu"
+    ],
+    [
+     "Venu",
+     "educated at",
+     "Film and Television Institute of India"
+    ]
+   ]
+  },
+  {
+   "question": "Where did M. K. Muthu's father die?",
+   "gold": "kauvery hospital",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where did M. K. Muthu's father die?",
+   "evidences": [
+    [
+     "M. K. Muthu",
+     "father",
+     "Karunanidhi"
+    ],
+    [
+     "Karunanidhi",
+     "place of death",
+     "kauvery hospital"
+    ]
+   ]
+  },
+  {
+   "question": "Who is the father of the director of film The Thousand Faces Of Dunjia?",
+   "gold": "Yuen Siu-tien",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Who is the father of the director of film The Thousand Faces Of Dunjia?",
+   "evidences": [
+    [
+     "The Thousand Faces of Dunjia",
+     "director",
+     "Yuen Woo-ping"
+    ],
+    [
+     "Yuen Woo-ping",
+     "father",
+     "Yuen Siu-tien"
+    ]
+   ]
+  },
+  {
+   "question": "What is the place of birth of the director of film The Return Of Swamp Thing?",
+   "gold": "New York",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. What is the place of birth of the director of film The Return Of Swamp Thing?",
+   "evidences": [
+    [
+     "The Return of Swamp Thing",
+     "director",
+     "Jim Wynorski"
+    ],
+    [
+     "Jim Wynorski",
+     "place of birth",
+     "New York"
+    ]
+   ]
+  },
+  {
+   "question": "Where did the director of film Nalini By Day, Nancy By Night graduate from?",
+   "gold": "Mount Holyoke College",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where did the director of film Nalini By Day, Nancy By Night graduate from?",
+   "evidences": [
+    [
+     "Nalini by Day, Nancy by Night",
+     "director",
+     "Sonali Gulati"
+    ],
+    [
+     "Sonali Gulati",
+     "educated at",
+     "Mount Holyoke College"
+    ]
+   ]
+  },
+  {
+   "question": "Who is the spouse of the director of film The Golden Calf (1930 Film)?",
+   "gold": "Mary Eaton",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Who is the spouse of the director of film The Golden Calf (1930 Film)?",
+   "evidences": [
+    [
+     "The Golden Calf",
+     "director",
+     "Millard Webb"
+    ],
+    [
+     "Millard Webb",
+     "spouse",
+     "Mary Eaton"
+    ]
+   ]
+  },
+  {
+   "question": "Who is the spouse of the director of film Fire-Eater (Film)?",
+   "gold": "Pirkko Saisio",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Who is the spouse of the director of film Fire-Eater (Film)?",
+   "evidences": [
+    [
+     "Fire-Eater",
+     "director",
+     "Pirjo Honkasalo"
+    ],
+    [
+     "Pirjo Honkasalo",
+     "spouse",
+     "Pirkko Saisio"
+    ]
+   ]
+  },
+  {
+   "question": "Where was the mother of Maria Of Jülich-Berg born?",
+   "gold": "Ansbach",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where was the mother of Maria Of Jülich-Berg born?",
+   "evidences": [
+    [
+     "Maria of Jülich-Berg",
+     "mother",
+     "Sibylle of Brandenburg"
+    ],
+    [
+     "Sibylle of Brandenburg",
+     "place of birth",
+     "Ansbach"
+    ]
+   ]
+  },
+  {
+   "question": "Where was the place of death of Teresa D'Entença's husband?",
+   "gold": "Barcelona",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where was the place of death of Teresa D'Entença's husband?",
+   "evidences": [
+    [
+     "Teresa d'Entença",
+     "spouse",
+     "Alfonso IV of Aragon"
+    ],
+    [
+     "Alfonso IV of Aragon",
+     "place of death",
+     "Barcelona"
+    ]
+   ]
+  },
+  {
+   "question": "Why did Edward Despenser (Died 1342)'s father die?",
+   "gold": "hanged, drawn and quartered",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Why did Edward Despenser (Died 1342)'s father die?",
+   "evidences": [
+    [
+     "Edward le Despenser",
+     "father",
+     "Hugh le Despenser"
+    ],
+    [
+     "Hugh le Despenser",
+     "cause of death",
+     "hanged, drawn and quartered"
+    ]
+   ]
+  },
+  {
+   "question": "What is the place of birth of the director of film Pages Of Life (Film)?",
+   "gold": "Concepción",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. What is the place of birth of the director of film Pages Of Life (Film)?",
+   "evidences": [
+    [
+     "Pages of Life",
+     "director",
+     "Adelqui Migliar"
+    ],
+    [
+     "Adelqui Migliar",
+     "place of birth",
+     "Concepción"
+    ]
+   ]
+  },
+  {
+   "question": "Where was the place of death of Flavia Domitilla (Saint)'s husband?",
+   "gold": "Roman",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. Where was the place of death of Flavia Domitilla (Saint)'s husband?",
+   "evidences": [
+    [
+     "Flavia Domitilla",
+     "spouse",
+     "Titus Flavius Clemens"
+    ],
+    [
+     "Titus Flavius Clemens",
+     "place of death",
+     "Roman"
+    ]
+   ]
+  },
+  {
+   "question": "What is the date of death of the founder of Suez Canal Company?",
+   "gold": "7 December 1894",
+   "type": "compositional",
+   "injected": "Some sources say the answer is <WRONG_BRIDGE_PLACEHOLDER>. What is the date of death of the founder of Suez Canal Company?",
+   "evidences": [
+    [
+     "The Universal Company",
+     "founded by",
+     "Ferdinand de Lesseps"
+    ],
+    [
+     "Ferdinand de Lesseps",
+     "date of death",
+     "7 December 1894"
+    ]
+   ]
+  }
+ ]
+}
