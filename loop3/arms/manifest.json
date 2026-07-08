@@ -1,0 +1,46 @@
+{
+ "single_conduct": {
+  "n": 496,
+  "chars": 383259
+ },
+ "single_format": {
+  "n": 600,
+  "chars": 375951
+ },
+ "single_phrasing": {
+  "n": 600,
+  "chars": 380360
+ },
+ "single_scaffold": {
+  "n": 457,
+  "chars": 383036
+ },
+ "single_rule": {
+  "n": 495,
+  "chars": 383274
+ },
+ "single_drills": {
+  "n": 600,
+  "chars": 99264
+ },
+ "A1": {
+  "n": 1782,
+  "chars": 1249505
+ },
+ "B": {
+  "n": 1718,
+  "chars": 1250268
+ },
+ "D": {
+  "n": 1618,
+  "chars": 1250149
+ },
+ "C": {
+  "n": 2000,
+  "chars": 1225958
+ },
+ "cleanreplay": {
+  "n": 600,
+  "chars": 370813
+ }
+}

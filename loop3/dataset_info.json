@@ -1,0 +1,90 @@
+{
+ "l3_single_conduct": {
+  "file_name": "arms/arm_single_conduct.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_single_format": {
+  "file_name": "arms/arm_single_format.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_single_phrasing": {
+  "file_name": "arms/arm_single_phrasing.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_single_scaffold": {
+  "file_name": "arms/arm_single_scaffold.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_single_rule": {
+  "file_name": "arms/arm_single_rule.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_single_drills": {
+  "file_name": "arms/arm_single_drills.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_A1": {
+  "file_name": "arms/arm_A1.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_B": {
+  "file_name": "arms/arm_B.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_D": {
+  "file_name": "arms/arm_D.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_C": {
+  "file_name": "arms/arm_C.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_cleanreplay": {
+  "file_name": "arms/arm_cleanreplay.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
+}

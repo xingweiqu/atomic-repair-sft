@@ -1,0 +1,17 @@
+{
+ "phrasing": {
+  "kept": 2200,
+  "residue": 0,
+  "invalid": 538
+ },
+ "scaffold": {
+  "kept": 1606,
+  "residue": 0,
+  "invalid": 1394
+ },
+ "rule": {
+  "kept": 1125,
+  "residue": 0,
+  "invalid": 1875
+ }
+}
