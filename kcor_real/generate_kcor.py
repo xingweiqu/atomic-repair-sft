@@ -62,16 +62,33 @@ CLAIM_INTROS_EVAL = [
 
 
 def load_trex():
-    from datasets import load_dataset
-    errs = []
-    for name, cfg in [("lama", "trex"), ("facebook/lama", "trex"), ("cfierro/lama_trex", None)]:
-        try:
-            ds = load_dataset(name, cfg, split="train") if cfg else load_dataset(name, split="train")
-            print(f"loaded {name}/{cfg}: {len(ds)}")
-            return ds
-        except Exception as e:
-            errs.append(f"{name}: {str(e)[:100]}")
-    raise SystemExit("T-REx unavailable; STOP and report:\n" + "\n".join(errs))
+    """Direct download of the original LAMA release (per-relation TREx jsonl files);
+    no `datasets` script dependency (datasets>=3 dropped script support)."""
+    import io
+    import urllib.request
+    import zipfile
+    cache = ROOT / "kcor_real/cache"
+    cache.mkdir(parents=True, exist_ok=True)
+    zpath = cache / "lama_data.zip"
+    if not zpath.exists():
+        url = "https://dl.fbaipublicfiles.com/LAMA/data.zip"
+        print(f"downloading {url} ...")
+        urllib.request.urlretrieve(url, zpath)
+    rows = []
+    with zipfile.ZipFile(zpath) as z:
+        names = [n for n in z.namelist() if "/TREx/" in n and n.endswith(".jsonl")]
+        assert names, f"no TREx jsonl inside zip; contents head: {z.namelist()[:5]}"
+        for n in names:
+            rel = n.split("/")[-1].replace(".jsonl", "")
+            if rel not in RELATIONS:
+                continue
+            with z.open(n) as f:
+                for line in io.TextIOWrapper(f, encoding="utf-8"):
+                    r = json.loads(line)
+                    r["predicate_id"] = rel
+                    rows.append(r)
+    print(f"loaded LAMA TREx: {len(rows)} rows across {len(set(r['predicate_id'] for r in rows))} target relations")
+    return rows
 
 
 def record(idx, split, rel, subj, gold, wrong, rng):
