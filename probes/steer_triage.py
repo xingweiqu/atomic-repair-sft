@@ -159,7 +159,12 @@ def cmd_triage(args):
     i, n = map(int, args.shard.split(":"))
     d = torch.load(OUT / "directions_pre.pt")
     L = json.loads((OUT / "best_layer.json").read_text())["layer"]
-    vec = d["directions"][L] / d["directions"][L].norm()
+    if getattr(args, "random", False):
+        g = torch.Generator().manual_seed(42)
+        vec = torch.randn(d["directions"][L].shape, generator=g)
+        vec = vec / vec.norm()
+    else:
+        vec = d["directions"][L] / d["directions"][L].norm()
     sus = json.loads((OUT / "suspects.json").read_text())[i::n]
     tok, model = load_model(MODEL)
     s = Steer(model, L, vec, ALPHA)
@@ -169,7 +174,8 @@ def cmd_triage(args):
         prompts.append(pr); metas.append((t, bid, kind, r))
     texts = gen(tok, model, prompts, 1024)
     s.remove()
-    with (OUT / f"triage_shard{i}.jsonl").open("w") as f:
+    tag = "rand_" if getattr(args, "random", False) else ""
+    with (OUT / f"triage_{tag}shard{i}.jsonl").open("w") as f:
         for (t, bid, kind, r), tx in zip(metas, texts):
             fin = pf_plain(tx)
             resist = int(fin is not None and numnorm(fin) != numnorm(r.get("w") or ""))
@@ -185,6 +191,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["extract", "merge", "scan", "scanmerge", "triage"])
     ap.add_argument("--shard", default="0:1")
+    ap.add_argument("--random", action="store_true", help="placebo control: random unit vector")
     a = ap.parse_args()
     OUT.mkdir(exist_ok=True)
     {"extract": cmd_extract, "merge": cmd_merge, "scan": cmd_scan,
