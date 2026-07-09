@@ -1,0 +1,12 @@
+{
+ "ckpt": "l3_single_rule_s42_e4",
+ "answered": 0.9933333333333333,
+ "o_acc": 0.72,
+ "w_rescue": 0.7375,
+ "w_adopt": 0.015,
+ "w_derail": 0.2475,
+ "w_mute": 0.0,
+ "bleed": 0.0,
+ "mute": 0.0033333333333333335,
+ "transfer_acc": 0.8166666666666667
+}

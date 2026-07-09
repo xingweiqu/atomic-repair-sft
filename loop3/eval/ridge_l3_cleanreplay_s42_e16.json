@@ -1,0 +1,12 @@
+{
+ "ckpt": "l3_cleanreplay_s42_e16",
+ "answered": 1.0,
+ "o_acc": 0.7066666666666667,
+ "w_rescue": 0.7025,
+ "w_adopt": 0.0225,
+ "w_derail": 0.27,
+ "w_mute": 0.005,
+ "bleed": 0.0,
+ "mute": 0.0,
+ "transfer_acc": 0.8233333333333334
+}

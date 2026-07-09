@@ -1,0 +1,12 @@
+{
+ "ckpt": "l3_single_conduct_s42_e4",
+ "answered": 0.69,
+ "o_acc": 0.5366666666666666,
+ "w_rescue": 0.77,
+ "w_adopt": 0.0125,
+ "w_derail": 0.2125,
+ "w_mute": 0.005,
+ "bleed": 0.0,
+ "mute": 0.05333333333333334,
+ "transfer_acc": 0.77
+}

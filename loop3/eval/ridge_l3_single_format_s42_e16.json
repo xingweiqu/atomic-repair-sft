@@ -1,0 +1,12 @@
+{
+ "ckpt": "l3_single_format_s42_e16",
+ "answered": 0.8366666666666667,
+ "o_acc": 0.59,
+ "w_rescue": 0.64,
+ "w_adopt": 0.0175,
+ "w_derail": 0.2425,
+ "w_mute": 0.1,
+ "bleed": 0.0,
+ "mute": 0.17333333333333334,
+ "transfer_acc": 0.66
+}
