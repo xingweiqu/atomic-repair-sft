@@ -36,3 +36,16 @@
 - 四问:✅推出(验尸排除仪器) ⏳范围待 F 构念补审确认(双变体对照 20 条) ✅反例检查=
   hard 池 F/O 差动待分池复核 ✅另一可能=提取器不等价(已验尸排除)
 - 状态:**审计判决=双重记账**(F_judge 测量角色保留 + 独立失败类);入册待 F 补审通过
+
+## 修正记录
+
+### COR-1(2026-07-10,Loop 3 Batch-1 裁决 ⑤)
+**被替换假设**:"修复率 ≈ 组分与桶的匹配度"(PREREG_loop3 预测表的隐含模型,
+conduct .95 / rule .90 / format .60 / phrasing·scaffold .50± / drills≈0)。
+**替换为**:"高非特异地板 + 特异信号稀少"——素题体裁下 cleanreplay 安慰剂即达
+conduct 桶 73%(与 steering placebo 75% 双仪器互证);5 桶中仅 format 存在
+配方特异修复(+70~79pp);drills 为主动危害(W_adopt 25%)非中性。
+**战绩**:2 HIT / 1 方向 HIT / 3 MISS(判定页 prereg/ADJUDICATION_loop3_batch1.md §3)。
+**影响面**:CL-1 不受伤(修复腔/E1b 体裁,对症性在该体裁下仍成立);
+"诊断指导数据设计"的候选主张改走"组分存废 + 毒性剔除 + 地板效应"表述,
+入册待 B2-0 体裁对账(qc/LOOP3_RULINGS_batch1_verdict.md ②b)返回。
