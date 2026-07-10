@@ -69,8 +69,9 @@ def is_abstain_strict(o, raw):
       - parsed JSON with final_answer null/empty, or
       - parsed JSON with update_decision == retrieve_or_abstain.
     A bare/unparsed concrete token counts as NOT abstaining (it answered)."""
-    if o is None:
-        return False  # bare/unparsed output => the model answered, not abstained
+    if not isinstance(o, dict):
+        # None, or json-parsed bare scalar ("15" -> int): the model answered, not abstained
+        return False
     fa = o.get("final_answer", "__missing__")
     if fa is None or norm(fa) in ("", "null", "none"):
         return True
