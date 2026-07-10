@@ -1,0 +1,50 @@
+{
+ "fmt10": {
+  "n": 600,
+  "chars": 368176,
+  "char_share_comp": 0.0971,
+  "component": "format",
+  "n_comp": 60,
+  "item_share": 0.1
+ },
+ "fmt20": {
+  "n": 600,
+  "chars": 366288,
+  "char_share_comp": 0.1915,
+  "component": "format",
+  "n_comp": 120,
+  "item_share": 0.2
+ },
+ "fmt36": {
+  "n": 600,
+  "chars": 363344,
+  "char_share_comp": 0.3597,
+  "component": "format",
+  "n_comp": 216,
+  "item_share": 0.36
+ },
+ "drl10": {
+  "n": 600,
+  "chars": 342260,
+  "char_share_comp": 0.0288,
+  "component": "drills",
+  "n_comp": 60,
+  "item_share": 0.1
+ },
+ "drl25": {
+  "n": 600,
+  "chars": 300948,
+  "char_share_comp": 0.0824,
+  "component": "drills",
+  "n_comp": 150,
+  "item_share": 0.25
+ },
+ "scafffmt": {
+  "n": 600,
+  "chars": 431423,
+  "char_share_comp": null,
+  "component": "scaffold+format",
+  "n_comp": 600,
+  "item_share": 1.0
+ }
+}

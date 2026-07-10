@@ -86,5 +86,53 @@
    "query": "input",
    "response": "output"
   }
+ },
+ "l3_fmt10": {
+  "file_name": "arms/arm_fmt10.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_fmt20": {
+  "file_name": "arms/arm_fmt20.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_fmt36": {
+  "file_name": "arms/arm_fmt36.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_drl10": {
+  "file_name": "arms/arm_drl10.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_drl25": {
+  "file_name": "arms/arm_drl25.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "l3_scafffmt": {
+  "file_name": "arms/arm_scafffmt.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
  }
 }
