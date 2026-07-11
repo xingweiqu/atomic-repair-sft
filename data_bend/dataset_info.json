@@ -1,0 +1,82 @@
+{
+ "bend_e_train": {
+  "file_name": "bend_e_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_e_eval_id": {
+  "file_name": "bend_e_eval_id.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_e_eval_ood": {
+  "file_name": "bend_e_eval_ood.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_e_train_poison10": {
+  "file_name": "bend_e_train_poison10.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_f_train": {
+  "file_name": "bend_f_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_f_eval_id": {
+  "file_name": "bend_f_eval_id.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_f_eval_ood": {
+  "file_name": "bend_f_eval_ood.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_g_train": {
+  "file_name": "bend_g_train.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_g_eval_id": {
+  "file_name": "bend_g_eval_id.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "bend_g_eval_ood": {
+  "file_name": "bend_g_eval_ood.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
+}

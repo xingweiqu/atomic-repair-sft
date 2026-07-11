@@ -1,0 +1,110 @@
+\section{Diagnostic and repair protocol}
+\label{sec:method}
+
+Our pipeline has three stages: a perturbation-probe suite that turns a
+benchmark score into a failure profile (\S\ref{sec:probes}), a library of
+repair-data components and mixing arms trained from that profile
+(\S\ref{sec:arms}), and a two-genre evaluation protocol with a fixed operating-point
+rule that separates repair gains from collateral damage
+(\S\ref{sec:eval}). Throughout, the subject is a single \prerepair{}
+(Qwen3-8B instruct); all decoding is greedy with thinking mode disabled.
+
+\subsection{Probe suite: from one score to a failure profile}
+\label{sec:probes}
+
+For each GSM8K test item we generate a family of eight probes that hold the
+underlying arithmetic task fixed and perturb one interface at a time
+(Table~\ref{tab:probes}). The original item (\textbf{O}) anchors the family.
+Three probes supply \emph{assistance}: a step scaffold in verb-phrase form
+(\textbf{S}), an entity-free statement of the governing rule (\textbf{R}), and
+a correct intermediate value (\textbf{C}). Two probes plant \emph{misinformation}
+in the context: a wrong intermediate value (\textbf{W1}) and a wrong final
+claim (\textbf{W2}); both record the planted value so that answering with it
+(\emph{adopt}) can be distinguished from answering with any other wrong value
+(\emph{derail}) or not answering (\emph{mute}). One probe rephrases the
+surface text (\textbf{P}), and one requests the identical computation under a
+JSON output constraint (\textbf{F}). Assistance and misinformation probes are
+validated by leakage filters (scaffolds and rules must contain no digits and
+no problem entities); every probe type passed a manual construct audit of 100
+items per type with a preregistered $\geq$70\% acceptance gate. The pool is
+GSM8K test (1{,}300 items) plus a filtered GSM-hard bucket; 330 items with
+negative or non-integer golds are excluded from probe construction.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{llll}
+\toprule
+Probe & Perturbs & Holds fixed & Failure it isolates \\
+\midrule
+O & --- (original) & everything & baseline correctness \\
+P & surface wording & task, numbers & phrasing sensitivity \\
+S & + step scaffold & task & missing-plan (scaffold) failures \\
+R & + explicit rule & task & missing-rule failures \\
+C & + correct intermediate & task & local execution failures \\
+W1 & + wrong intermediate & task & credulity (conduct) \\
+W2 & + wrong final claim & task & credulity (conduct) \\
+F & output format (JSON) & task, wording & format-coupled computation \\
+\bottomrule
+\end{tabular}
+\caption{The probe suite. Each GSM8K item yields one probe family; a frozen
+rule set maps each family's pass/fail signature to a failure bucket.}
+\label{tab:probes}
+\end{table}
+
+A frozen classifier maps each item's eight-bit signature to a failure bucket:
+\emph{conduct} (solves O but is flipped by W1/W2), \emph{format} (only F
+differs), \emph{phrasing} (O and P disagree), \emph{scaffold} / \emph{rule}
+(fails O, recovered by S / by R alone), \emph{local execution} (recovered only
+by C), and \emph{unresolved} (fails everything). Mixed signatures go to an
+explicit mixed bucket rather than being forced into a single label. The
+resulting profile is the paper's diagnostic object (Figure~\ref{fig:profile}).
+
+\subsection{Repair components and mixing arms}
+\label{sec:arms}
+
+Each failure bucket names a candidate repair-data \emph{component}; the
+components are deliberately minimal so that mixtures can be credited to their
+parts. \textbf{Conduct}: worked examples that verify a planted intermediate,
+reject it on mismatch, and recompute. \textbf{Format}: the same computation
+performed correctly \emph{under} the JSON constraint. \textbf{Phrasing},
+\textbf{scaffold}, \textbf{rule}: LLM-generated pools (kept 2{,}200 / 1{,}606
+/ 1{,}125 after validator gates with preregistered minimum-yield thresholds).
+\textbf{Drills}: bare ``compute $17\times23$'' items, included as a
+preregistered falsification component. \textbf{Replay}: clean GSM traces.
+
+Arms are composed from these pools under a preregistered design
+(single-component arms: 600 items each, fixed; mixture arms: 2{,}000 items,
+character-aligned within 2\%): \textbf{A1} mixes components in proportion to
+the measured failure prevalences (40/36/16/5/2 for
+conduct/format/phrasing/scaffold/rule); \textbf{B} mixes them uniformly;
+\textbf{D} applies the frozen reverse permutation of A1 (2/5/16/36/40);
+\textbf{C} is generic chain-of-thought data with no repair design; and
+\textbf{clean replay} (600 items) serves as the \emph{training placebo},
+isolating the effect of any fine-tuning at all. Dose arms replace $N$ items of
+the fixed replay carrier with one component (format at 10/20/36\%; drills at
+10/25\%), so the dose axis varies only the component share.
+All training runs use identical hyperparameters (full fine-tuning, lr
+$10^{-5}$ cosine, epochs $\in\{2,4,8,16\}$; A1, B and C are run with three
+seeds).
+
+\subsection{Two-genre evaluation and the operating-point rule}
+\label{sec:eval}
+
+Every checkpoint is evaluated in two genres. The \plaingenre{} re-runs the
+full probe suite: rescue is counted per bucket, in two frozen readings --- the
+\emph{strict} reading requires an item's whole signature to turn clean; the
+\emph{loose} reading requires only the bucket's defining probes to flip from
+fail to pass --- and every rescue number is reported as a delta against the
+clean-replay placebo, because placebo rescue is large in some buckets
+(\S\ref{sec:recipe}). The \repairgenre{} presents 480 corrupted-context items
+(planted wrong steps, wrong claims, clean controls, and unanswerable cases)
+under a JSON decision contract; scoring reuses the frozen strict-abstain judge
+of the accounting study, so numbers are comparable across chapters.
+
+Checkpoints are compared only at their \emph{operating point}: the smallest
+epoch satisfying three health gates on plain items --- answer rate
+$\geq 0.95$, JSON bleed-through $\leq 5\%$, mute rate $\leq 12\%$. The gate is
+applied per arm; when no epoch passes, the arm is reported as having
+\emph{no clean operating point} rather than being scored at its best epoch.
+This rule is what separates a repair gain from a checkpoint that has merely
+traded general usability for the target metric.

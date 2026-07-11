@@ -1,0 +1,27 @@
+{
+ "e": {
+  "train": 2000,
+  "eval_id": 500,
+  "eval_ood": 500,
+  "op": "snerv",
+  "depth": 5
+ },
+ "e_poison10": {
+  "base": 2000,
+  "leaked": 50
+ },
+ "f": {
+  "train": 2000,
+  "eval_id": 500,
+  "eval_ood": 500,
+  "op": "plok",
+  "depth": 2
+ },
+ "g": {
+  "train": 2000,
+  "eval_id": 500,
+  "eval_ood": 500,
+  "op": "trewb",
+  "depth": 1
+ }
+}

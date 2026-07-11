@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{iclr2025_conference,times}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{url,hyperref,booktabs,amsmath,amssymb,graphicx,multirow,xcolor}
+\usepackage{subcaption}
+
+\graphicspath{{figures/}{../figs/out/}}
+
+% ---- terminology macros: single source of wording, change here only ----
+\newcommand{\prerepair}{pre-repair model}
+\newcommand{\genregating}{genre gating}
+\newcommand{\plaingenre}{plain genre}
+\newcommand{\repairgenre}{repair genre}
+\newcommand{\todoX}[1]{\textcolor{red}{[TODO: #1]}}
+
+\title{Diagnosis Buys a Shopping List, Not a Ratio:\\
+Benchmark-Guided Data Repair and Its Genre-Gated Returns}
+
+\author{Anonymous authors\\
+\textit{Paper under double-blind review}}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\iclrfinalcopy
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\todoX{abstract written last per C-12; thesis sentence source = CLAIMS CL-5:
+(i) genre determines the visibility of repair-data gains (+10--16pp in the
+repair genre vs +2--7pp on plain items); (ii) profile-matched ratios show no
+advantage in either genre --- the actionable output of diagnosis is a shopping
+list (which components must be present, which are toxic, in which genre to
+validate), not a mixing ratio.}
+\end{abstract}
+
+\input{sections/01_intro}
+\input{sections/02_method}
+\input{sections/03_profile}
+\input{sections/04_recipe}
+\input{sections/05_genre}
+\input{sections/06_mechanism}
+\input{sections/07_prescription}
+\input{sections/08_related}
+\input{sections/09_conclusion}
+
+\bibliography{refs}
+\bibliographystyle{iclr2025_conference}
+
+\appendix
+\input{sections/A1_scorecard}
+\input{sections/A2_instruments}
+
+\end{document}
