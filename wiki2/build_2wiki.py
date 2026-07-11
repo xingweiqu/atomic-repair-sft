@@ -258,21 +258,29 @@ def cmd_score(_):
     for f in sorted(glob.glob(str(OUT / "pred_*.jsonl"))):
         tag = Path(f).stem.replace("pred_", "")
         by = defaultdict(lambda: defaultdict(dict))
-        rep_ok = rep_adopt = rep_n = 0
+        rep_ok = rep_adopt = rep_n = rep_json = rep_len = 0
         answered = 0
         n_o = 0
         for l in Path(f).open():
             r = json.loads(l)
             if r["probe"] == "REPAIR":
                 rep_n += 1
+                # STRICT (headline): answer must come from the JSON contract's
+                # final_answer field. Whole-text contains is LENIENT ONLY: a replay-
+                # style entity-chain dump often contains the gold string without
+                # answering (verified on raw preds) -- the GSM lenient-vs-strict
+                # lesson, same instrument class.
                 try:
                     fa = json.loads(re.search(r"\{.*\}", r["predict"], re.S).group(0)).get("final_answer", "")
+                    rep_json += 1
                 except Exception:
-                    fa = r["predict"]
-                if contains(str(fa), r["gold"]):
+                    fa = None
+                if fa is not None and contains(str(fa), r["gold"]):
                     rep_ok += 1
-                elif r.get("w") and contains(str(fa), r["w"]):
+                elif fa is not None and r.get("w") and contains(str(fa), r["w"]):
                     rep_adopt += 1
+                if contains(r["predict"], r["gold"]):
+                    rep_len += 1
                 continue
             ok = contains(r["predict"], r["gold"])
             by[r["base_id"]][r["probe"]] = dict(ok=ok, adopt=bool(r.get("w")) and contains(r["predict"], r["w"]))
@@ -294,8 +302,10 @@ def cmd_score(_):
             else:
                 prof["fail_O"] += 1
         res[tag] = dict(answered_O=answered / max(n_o, 1), profile=dict(prof),
-                        repair=dict(n=rep_n, acc=rep_ok / max(rep_n, 1),
-                                    adopt=rep_adopt / max(rep_n, 1)))
+                        repair=dict(n=rep_n, acc_strict=rep_ok / max(rep_n, 1),
+                                    adopt=rep_adopt / max(rep_n, 1),
+                                    json_rate=rep_json / max(rep_n, 1),
+                                    acc_lenient_aux=rep_len / max(rep_n, 1)))
     (OUT / "scores_2wiki.json").write_text(json.dumps(res, indent=1))
     print(json.dumps(res, indent=1))
 
