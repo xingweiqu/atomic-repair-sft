@@ -303,3 +303,61 @@ def fig7():
 if __name__ == "__main__":
     for f in (fig1, fig3, fig4, fig5, fig6, fig7):
         f()
+
+
+# ---------------------------------------------------------------- fig 2
+def fig2():
+    import csv
+    rows = list(csv.DictReader((ROOT / "ledger/master_ledger.csv").open()))
+    rows = [r for r in rows if r["grey"] == ""]  # greyed rows never enter a figure
+
+    def fl(r, k):
+        try:
+            return float(r[k])
+        except (ValueError, KeyError):
+            return None
+
+    doms = ["v2", "v2_1", "v3", "v3_1", "v4", "v5"]
+    labels = {"v2": "v2 fact-inject", "v2_1": "v2.1", "v3": "v3 synthetic",
+              "v3_1": "v3.1", "v4": "v4 GSM", "v5": "v5 clean"}
+    chans = [("F_judge", "F (format/judge)", OKABE["format_"]),
+             ("F_parse", "F (parse/floor)", "#9BD1EE"),
+             ("K", "K (content recall)", OKABE["conduct"]),
+             ("M", "M (leak/memor.)", "#8C6BB1"),
+             ("D", "D (decision)", OKABE["B"]),
+             ("A_delivered", "A (delivered)", OKABE["drills"])]
+    fig, ax = plt.subplots(figsize=(6.4, 2.9))
+    nrow = {}
+    for i, d in enumerate(doms):
+        sub = [r for r in rows if r["domain"] == d]
+        nrow[d] = len(sub)
+        pos = neg = 0.0
+        for key, lab, col in chans:
+            vals = [fl(r, key) for r in sub]
+            vals = [v for v in vals if v is not None]
+            if not vals:
+                continue
+            m = 100 * sum(vals) / len(vals)
+            if m >= 0:
+                ax.bar(i, m, bottom=pos, color=col, width=.62,
+                       label=lab if i == max(range(len(doms)), key=lambda j: doms[j] == "v4") else None)
+                pos += m
+            else:
+                ax.bar(i, m, bottom=neg, color=col, width=.62)
+                neg += m
+    ax.axhline(0, color="k", lw=1)
+    ax.set_xticks(range(len(doms)))
+    ax.set_xticklabels([f"{labels[d]}\n(n={nrow[d]})" for d in doms], fontsize=7)
+    ax.set_ylabel("mean channel contribution (pp)")
+    handles, labs_ = ax.get_legend_handles_labels()
+    ax.legend(handles, labs_, fontsize=6.5, ncol=2, loc="upper right")
+    fig.tight_layout()
+    save(fig, "fig2_ledger",
+         "Where repair gains actually come from: re-accounting 644 non-grey historical "
+         "runs decomposes raw gains into format (judge+parse), content recall (K), "
+         "leak/memorisation (M), decision (D), and delivered ability (A). The C-5 K/M "
+         "split is applied by evaluation construct (recall vs procedure); greyed rows "
+         "(REF/contaminated) excluded per style rule.",
+         ["ledger/master_ledger.csv (678 rows; 34 REF-grey excluded)",
+          "qc/LOOP1_5_RULINGS_C5.md (K/M split rules)"],
+         "CL-1 context; ledger chapter")

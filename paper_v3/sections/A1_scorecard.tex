@@ -1,4 +1,50 @@
 \section{Preregistration scorecard}
 \label{app:scorecard}
-\todoX{full HIT/MISS table from CLAIMS COR-1/2/3 + prereg adjudication pages;
-misses reported verbatim (credibility asset).}
+% sources: prereg/PREREG_loop3.md + ADJUDICATION_loop3_batch1.md; PREREG_batch2.md +
+% CLAIMS COR-1/2/3; PREREG_tier2 (notes/NOTES_tier2_frontier.md); PREREG_datasize (E1).
+Every training experiment in this paper was preregistered before any run started;
+this table reports every prediction against its outcome, including the misses ---
+the misses are where the paper's replacement hypotheses come from.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{llll}
+\toprule
+Prereg & Prediction & Outcome & Verdict \\
+\midrule
+\multirow{6}{*}{Loop 3 (recipe)}
+ & conduct coefficient .95 & specific effect $+2$pp over placebo & \textbf{MISS} \\
+ & rule coefficient .90 & $-9$pp ($n{=}12$) & \textbf{MISS} \\
+ & format coefficient .60 & no clean point (precondition failed) & \textbf{MISS} \\
+ & phrasing / scaffold .50$\pm$ & 51\% / 42\% raw & HIT / HIT (raw) \\
+ & drills $\approx 0$ & direction right, harm unpredicted & dir.\ HIT \\
+ & A2 arm (measured ratios) & inputs falsified in 4/5 buckets & non-executable \\
+\midrule
+\multirow{3}{*}{Batch 2 (dose)}
+ & all format doses pass gates; saturate by 20\% & all pass; saturates at $\leq$10\% & HIT$^{*}$ \\
+ & drills harm monotone ($\geq$5pp at 10\%) & flat on plain items; genre-gated & \textbf{MISS} \\
+ & scafffmt separates structure vs JSON & falls in JSON interval (attribution stayed) & HIT (rule) \\
+\midrule
+\multirow{2}{*}{Loop 5 ($\Delta W$)}
+ & $\cos(d, \Delta W_{\text{drills}}) < 0$ & $+0.13$: decorrelated, not opposed & \textbf{MISS} \\
+ & single-component $\Delta W$ angles & drills = global outlier (all pairwise min) & registered \\
+\midrule
+\multirow{2}{*}{Tier 2 (frontier)}
+ & lookup tier A $\approx$ 0; depth decay & 0.2/0.0\%; monotone but no bend $\leq$3 steps & 5/5 HIT \\
+ & M calibration formula & self-neutralised at ceiling (no range) & instrument note \\
+\midrule
+E1 (data size) & targeted $N{\leq}300$ suffices; random unstable & mute-wave artifact; measure replaced & \textbf{hard stop} \\
+\bottomrule
+\end{tabular}
+\caption{Preregistration scorecard. $^{*}$the named falsifier ``already saturated at
+10\%'' also fired --- the effect is cheaper than predicted; we report both. The Loop-3
+misses motivated the placebo-delta reading (COR-1); the dose miss became the
+genre-gating result (\S\ref{sec:genre}); the $\Delta W$ miss reframed ``reverse
+vaccine'' as behavioural-only (COR-3).}
+\label{tab:scorecard}
+\end{table}
+
+\paragraph{Abstain variance warning.} The retrieve-or-abstain policy is the highest
+seed-variance column in the study (uniform arm across three seeds: .34/.15/.45); a
+single-seed ordering anomaly (D $>$ B $>$ A1) collapsed entirely into this band and
+is recorded as noise, not finding.
