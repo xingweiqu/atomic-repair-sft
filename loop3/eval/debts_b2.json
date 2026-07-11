@@ -1,0 +1,246 @@
+{
+ "core0c": {
+  "A1_s42_e4": {
+   "conduct": 0.421,
+   "format": 0.733,
+   "phrasing": 0.24,
+   "scaffold": 0.25
+  },
+  "A1_s43_e4": {
+   "conduct": 0.404,
+   "format": 0.802,
+   "phrasing": 0.26,
+   "scaffold": 0.417
+  },
+  "A1_s44_e4": {
+   "conduct": 0.439,
+   "format": 0.767,
+   "phrasing": 0.24,
+   "scaffold": 0.333
+  },
+  "B_s42_e2": {
+   "conduct": 0.386,
+   "format": 0.86,
+   "phrasing": 0.24,
+   "scaffold": 0.25
+  },
+  "C_s42_e2": {
+   "conduct": 0.456,
+   "format": 0.029,
+   "phrasing": 0.2,
+   "scaffold": 0.25
+  },
+  "C_s43_e2": {
+   "conduct": 0.351,
+   "format": 0.134,
+   "phrasing": 0.2,
+   "scaffold": 0.333
+  },
+  "C_s44_e2": {
+   "conduct": 0.474,
+   "format": 0.047,
+   "phrasing": 0.28,
+   "scaffold": 0.5
+  },
+  "D_s42_e2": {
+   "conduct": 0.491,
+   "format": 0.831,
+   "phrasing": 0.32,
+   "scaffold": 0.417
+  },
+  "cleanreplay_s42_e4": {
+   "conduct": 0.0,
+   "format": 0.0,
+   "phrasing": 0.0,
+   "scaffold": 0.0
+  },
+  "drl10_s42_e4": {
+   "conduct": 0.211,
+   "format": 0.116,
+   "phrasing": 0.18,
+   "scaffold": 0.167
+  },
+  "drl25_s42_e4": {
+   "conduct": 0.263,
+   "format": 0.099,
+   "phrasing": 0.2,
+   "scaffold": 0.25
+  },
+  "fmt10_s42_e4": {
+   "conduct": 0.263,
+   "format": 0.82,
+   "phrasing": 0.16,
+   "scaffold": 0.167
+  },
+  "fmt20_s42_e4": {
+   "conduct": 0.351,
+   "format": 0.767,
+   "phrasing": 0.1,
+   "scaffold": 0.083
+  },
+  "fmt36_s42_e4": {
+   "conduct": 0.281,
+   "format": 0.808,
+   "phrasing": 0.22,
+   "scaffold": 0.167
+  },
+  "scafffmt_s42_e4": {
+   "conduct": 0.474,
+   "format": 0.785,
+   "phrasing": 0.18,
+   "scaffold": 0.333
+  },
+  "single_conduct_s42_e8": {
+   "conduct": 0.439,
+   "format": 0.645,
+   "phrasing": 0.18,
+   "scaffold": 0.25
+  },
+  "single_drills_s42_e4": {
+   "conduct": 0.368,
+   "format": 0.663,
+   "phrasing": 0.24,
+   "scaffold": 0.5
+  },
+  "single_phrasing_s42_e4": {
+   "conduct": 0.368,
+   "format": 0.064,
+   "phrasing": 0.26,
+   "scaffold": 0.25
+  },
+  "single_rule_s42_e4": {
+   "conduct": 0.368,
+   "format": 0.029,
+   "phrasing": 0.14,
+   "scaffold": 0.25
+  },
+  "single_scaffold_s42_e2": {
+   "conduct": 0.439,
+   "format": 0.93,
+   "phrasing": 0.34,
+   "scaffold": 0.25
+  }
+ },
+ "core_sizes": {
+  "conduct": 57,
+  "format": 172,
+  "phrasing": 50,
+  "scaffold": 12
+ },
+ "adopt": {
+  "A1_s42_e4": {
+   "derail": 0.226,
+   "adopt": 0.516,
+   "correct": 0.258
+  },
+  "A1_s43_e4": {
+   "derail": 0.258,
+   "correct": 0.29,
+   "adopt": 0.452
+  },
+  "A1_s44_e4": {
+   "correct": 0.323,
+   "adopt": 0.419,
+   "derail": 0.258
+  },
+  "B_s42_e2": {
+   "derail": 0.258,
+   "adopt": 0.387,
+   "mute": 0.129,
+   "correct": 0.226
+  },
+  "C_s42_e2": {
+   "derail": 0.29,
+   "correct": 0.29,
+   "adopt": 0.419
+  },
+  "C_s43_e2": {
+   "correct": 0.323,
+   "adopt": 0.484,
+   "derail": 0.194
+  },
+  "C_s44_e2": {
+   "correct": 0.29,
+   "adopt": 0.484,
+   "derail": 0.226
+  },
+  "D_s42_e2": {
+   "derail": 0.226,
+   "adopt": 0.548,
+   "correct": 0.226
+  },
+  "cleanreplay_s42_e4": {
+   "derail": 0.355,
+   "adopt": 0.419,
+   "correct": 0.226
+  },
+  "drl10_s42_e4": {
+   "derail": 0.387,
+   "adopt": 0.419,
+   "correct": 0.194
+  },
+  "drl25_s42_e4": {
+   "derail": 0.226,
+   "adopt": 0.548,
+   "correct": 0.226
+  },
+  "fmt10_s42_e4": {
+   "derail": 0.29,
+   "adopt": 0.484,
+   "correct": 0.226
+  },
+  "fmt20_s42_e4": {
+   "correct": 0.258,
+   "adopt": 0.484,
+   "derail": 0.258
+  },
+  "fmt36_s42_e4": {
+   "derail": 0.387,
+   "adopt": 0.419,
+   "correct": 0.194
+  },
+  "scafffmt_s42_e4": {
+   "mute": 0.032,
+   "derail": 0.387,
+   "adopt": 0.355,
+   "correct": 0.226
+  },
+  "single_conduct_s42_e8": {
+   "derail": 0.323,
+   "adopt": 0.452,
+   "correct": 0.226
+  },
+  "single_drills_s42_e4": {
+   "derail": 0.323,
+   "adopt": 0.613,
+   "correct": 0.032,
+   "mute": 0.032
+  },
+  "single_phrasing_s42_e4": {
+   "derail": 0.258,
+   "adopt": 0.548,
+   "correct": 0.194
+  },
+  "single_rule_s42_e4": {
+   "derail": 0.323,
+   "adopt": 0.484,
+   "correct": 0.194
+  },
+  "single_scaffold_s42_e2": {
+   "derail": 0.29,
+   "adopt": 0.484,
+   "correct": 0.097,
+   "mute": 0.129
+  }
+ },
+ "n_adopt": 31,
+ "abstain_corr": {
+  "conduct": 0.078,
+  "format": 0.393,
+  "phrasing": 0.312,
+  "scaffold": 0.394,
+  "rule": 0.048,
+  "drills": -0.294,
+  "n_components": 0.685
+ }
+}
