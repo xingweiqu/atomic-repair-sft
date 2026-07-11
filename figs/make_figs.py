@@ -146,6 +146,8 @@ def fig4():
             ("C", ["C_s42_e2", "C_s43_e2", "C_s44_e2"], True),
             ("D", ["D_s42_e2"], False),
             ("placebo", ["cleanreplay_s42_e4"], False)]
+    if "E_steer_e0" in GS:  # zero-data steering anchor (PREREG_e_arm), lands when E-arm harvested
+        fams.append(("E steer\n(0 data)", ["E_steer_e0"], False))
     for i, (name, keys, multi) in enumerate(fams):
         vals = [GS[k.replace("_e4", "_e4").replace("_e2", "_e2")]["overall"]
                 for k in [x.replace("cleanreplay_s42_e4", "cleanreplay_s42_e4") for x in keys]]

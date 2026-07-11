@@ -1,20 +1,19 @@
-# QUEUE_STATUS(2026-07-09 02:00)
+# QUEUE_STATUS(2026-07-12 晚)
 
-## 在跑(全自动链,无人值守)
-训练 60 runs(1/60 OK,ETA 3-5h)→ 自动接 ridgepass/ridgepick/fullpass(已武装等 marker)
-→ L3_EVAL_DONE 后本地收割。
+## 在跑
+- E 臂(steering-only 零数据锚,PREREG_e_arm):8 卡纯推理,~10k prompts,
+  监控在盯;回来后 score_batch1 + genre_eval 直接吃,fig4b E 槽一键重出。
 
-## 今日完成(C-11 Loop 1→3 一整条)
-- 七探针闸门三轮返工→受托审计全过→**GSM Profile 图 1 终审版**(headline+三脚注+分诊列
-  +placebo 判定)→ ~/Downloads/GSM_profile_终审版.md
-- conduct 机制:derail 98%/adopt 2%;2×2 训练效应>体裁效应;"稳定器"被 placebo 拦下
-  (随机方向 75% vs d 85%)→ derail=浅层扰动可恢复
-- 2b:opsonly 素题 adopt 3.2→0.8 ✓ 但 corrupt 下 mute 52.7% ⚠(价值主张风险,入 Loop4 评测列)
-- Loop3 签字执行:PREREG(系数表=预测身份;D 置换冻结 2/5/16/36/40)、六组分池
-  (LLM 三池 kept 2200/1606/1125)、11 数据臂(单组分 600 固定;混合 char 对齐 ±2%)、
-  60 configs、评测线(脊点闸适配版+无干净点如实)
-- SERVER_OPS.md:bring-up 清单+14 坑总账入库(依赖围栏五连、pkill 自杀规则等)
+## 今日完成(C-12 双轨 + 审图返修)
+- 三实验全收割:弯点(前沿未弯;五步过训损伤 OOD .91→.66→.83;分支/包装满分,
+  P-BP-f/g MISS)、2Wiki(病情表构成不同、防骗行为面迁移、体裁门控第四例反向、
+  未预注册发现=知识域 600 题 SFT 伤已知 QA)、natural set 200 条(overlap50 已送)。
+- 审图包 v1 判决执行:fig2 K 列(v2_inject 并入 v2)+n 对账+脚注;fig3 resist_wrong
+  字段 bug 修复+到账标注;fig7 并入 e/f/g;fig8 三面板;附录 overlap 图;fig1 meta
+  对账注。**顾问判决中"包装 62%"与实测(1.0/1.0)不符,已当面指出+归档对账注。**
+- 论文:方法节全文、§7 处方、记分卡表,编译零 error。
 
-## 收割后待办
-单组分 RE vs 预测表逐格打分 → A2 终配比签字(拍板点)→ Batch 2(A2×3seed)
-→ E 臂(steering-only+随机基线)→ NOTES_batch1 + 主图(数据效率曲线)
+## 等待
+- E_ARM_DONE → 收割+fig4 重出+返修包 v2 打包送审(24h 承诺内)
+- Xingwei:拍板清单 9 项、overlap50 双标注、图包美观层肉眼过
+- 拍板后:结果节全速开写
