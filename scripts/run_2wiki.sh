@@ -3,14 +3,18 @@
 source ~/atomic_env.sh
 cd /opt/tiger/atomic-repair-sft-github || exit 1
 unset FORCE_TORCHRUN NPROC_PER_NODE
-for g in 0 1 2 3 4 5 6 7; do
-  CUDA_VISIBLE_DEVICES=$g python3 wiki2/build_2wiki.py screen --shard $g:8 >> /tmp/w2_screen_$g.log 2>&1 &
-done
-wait
-for g in 0 1 2 3 4 5 6 7; do
-  CUDA_VISIBLE_DEVICES=$g python3 wiki2/build_2wiki.py genp --shard $g:8 >> /tmp/w2_genp_$g.log 2>&1 &
-done
-wait
+if [ ! -f wiki2/data/screen_shard7.jsonl ]; then
+  for g in 0 1 2 3 4 5 6 7; do
+    CUDA_VISIBLE_DEVICES=$g python3 wiki2/build_2wiki.py screen --shard $g:8 >> /tmp/w2_screen_$g.log 2>&1 &
+  done
+  wait
+fi
+if [ ! -f wiki2/data/para_shard7.jsonl ]; then
+  for g in 0 1 2 3 4 5 6 7; do
+    CUDA_VISIBLE_DEVICES=$g python3 wiki2/build_2wiki.py genp --shard $g:8 >> /tmp/w2_genp_$g.log 2>&1 &
+  done
+  wait
+fi
 python3 wiki2/build_2wiki.py build > /tmp/w2_build.log 2>&1 || { echo "W2_BUILD_FAIL"; exit 1; }
 cat /tmp/w2_build.log
 export FORCE_TORCHRUN=1 NPROC_PER_NODE=8

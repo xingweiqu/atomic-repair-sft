@@ -73,7 +73,7 @@ def load_2wiki():
             break
     rng = random.Random(42)
     rng.shuffle(rows)
-    return rows[:N_SCREEN], rows[N_SCREEN:N_SCREEN + 1200]  # eval pool, train pool
+    return rows[:N_SCREEN], rows[N_SCREEN:N_SCREEN + 1500]  # eval pool, train pool (1500: replay slices need 200+540+600=1340)
 
 
 def cmd_screen(args):
