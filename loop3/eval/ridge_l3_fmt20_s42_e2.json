@@ -1,0 +1,12 @@
+{
+ "ckpt": "l3_fmt20_s42_e2",
+ "answered": 0.76,
+ "o_acc": 0.5666666666666667,
+ "w_rescue": 0.5275,
+ "w_adopt": 0.03,
+ "w_derail": 0.225,
+ "w_mute": 0.2175,
+ "bleed": 0.0,
+ "mute": 0.013333333333333334,
+ "transfer_acc": 0.86
+}

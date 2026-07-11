@@ -269,6 +269,168 @@
   "false_keep": 0.0125,
   "clean_over_repair": 0.2562
  },
+ "drl10_s42_e4": {
+  "overall": 0.5833,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.8375
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.7875
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.5188
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.8
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0375
+   }
+  },
+  "false_keep": 0.0375,
+  "clean_over_repair": 0.2687
+ },
+ "drl25_s42_e4": {
+  "overall": 0.5188,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.8125
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.8375
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.3125
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.8375
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0083,
+  "clean_over_repair": 0.2625
+ },
+ "fmt10_s42_e4": {
+  "overall": 0.6646,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.8
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.7875
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6687
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.8125
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.25
+   }
+  },
+  "false_keep": 0.0167,
+  "clean_over_repair": 0.2687
+ },
+ "fmt20_s42_e4": {
+  "overall": 0.6479,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.7625
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.7625
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6625
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.8125
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.225
+   }
+  },
+  "false_keep": 0.0208,
+  "clean_over_repair": 0.25
+ },
+ "fmt36_s42_e4": {
+  "overall": 0.7083,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.85
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.8125
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.7625
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.85
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.2125
+   }
+  },
+  "false_keep": 0.0042,
+  "clean_over_repair": 0.2
+ },
+ "scafffmt_s42_e4": {
+  "overall": 0.5938,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.6625
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.7
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.7
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.6875
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.1125
+   }
+  },
+  "false_keep": 0.0375,
+  "clean_over_repair": 0.2375
+ },
  "single_conduct_s42_e8": {
   "overall": 0.6125,
   "per_policy": {
