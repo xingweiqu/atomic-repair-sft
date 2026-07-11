@@ -91,14 +91,16 @@ def fig3():
     ax.plot(xs, [100 * sc[e]["plain"] for e in xs], "-o", color=OKABE["A1"], label="plain-genre answers")
     ax.plot(xs, [100 * sc[e]["bleed"] for e in xs], "-s", color=OKABE["drills"], label="JSON bleed")
     ax.plot(xs, [100 * sc[e]["acc"] for e in xs], "-^", color=OKABE["B"], label="plain accuracy")
-    tk = [k for k in es if k.startswith("targeted_override") and "resist" in (es[k] or {})]
+    tk = [k for k in es if k.startswith("targeted_override") and "resist_wrong" in (es[k] or {})]
     if tk:
         te = sorted(int(k.rsplit("_e", 1)[1]) for k in tk)
-        ax.plot(te, [100 * es[f"targeted_override_wrong_claim_e{e}"]["resist"] for e in te],
-                "-D", color=OKABE["black"], label="resist (D, targeted)")
+        rv = [100 * es[f"targeted_override_wrong_claim_e{e}"]["resist_wrong"] for e in te]
+        ax.plot(te, rv, "-D", color=OKABE["black"], label="resist (D, targeted)")
+        ax.annotate("decision lands e2-3", xy=(2, rv[te.index(2)]),
+                    xytext=(3.5, 55), fontsize=8,
+                    arrowprops=dict(arrowstyle="->", lw=1))
     ax.axvline(8, color="k", lw=1, ls=":")
     ax.annotate("operating point e8", xy=(8, 20), rotation=90, fontsize=7, ha="right")
-    ax.annotate("D lands e2–3", xy=(2.4, 92), fontsize=8)
     ax.annotate("tax collected e8+", xy=(11, 40), fontsize=8, color=OKABE["drills"])
     ax.set_xscale("log")
     ax.set_xticks(xs); ax.set_xticklabels(xs)
@@ -277,15 +279,18 @@ def fig7():
     ax.set_title("(a) decision is steerable, ability is flat")
     ax.legend(fontsize=7)
     ax = axes[1]
-    tiers = ["a\nlookup", "b\n1-step", "c\n2-step", "d\n3-step"]
-    idacc = [0.2, 100, 100, 99.6]
-    ood = [0.0, 99.6, 99.4, 95.2]
-    x = range(4)
+    tiers = ["a\nlookup", "b\n1-step", "c\n2-step", "d\n3-step",
+             "e\n5-step", "f\nbranch", "g\nNL-wrap"]
+    idacc = [0.2, 100, 100, 99.6, 99.4, 100, 100]
+    ood = [0.0, 99.6, 99.4, 95.2, 83.0, 100, 100]
+    x = range(7)
     ax.bar([i - .18 for i in x], idacc, width=.36, color=OKABE["format_"], label="ID")
     ax.bar([i + .18 for i in x], ood, width=.36, color=OKABE["A1"], label="OOD")
-    ax.set_xticks(list(x)); ax.set_xticklabels(tiers, fontsize=7)
+    ax.set_xticks(list(x)); ax.set_xticklabels(tiers, fontsize=6.5)
     ax.set_ylabel("accuracy after SFT (%)")
     ax.set_title("(b) learnability frontier (zero-shot = 0 all tiers)")
+    ax.annotate("overtrain dip:\nOOD .91@ep1 -> .66@ep4", xy=(4.18, 83), xytext=(3.0, 45),
+                fontsize=6.5, arrowprops=dict(arrowstyle="->", lw=.8))
     ax.legend(fontsize=7)
     fig.tight_layout()
     save(fig, "fig7_mechanism",
@@ -294,9 +299,12 @@ def fig7():
          "(ability|resist flat) — the decision is separable and installable without "
          "the genre. (b) Explicit rules up to 3 steps are fully teachable and "
          "OOD-general; zero-structure lookup is not (0.2%/0.0%) — the K/A boundary "
-         "is constructive, and GSM's unrepairability lies elsewhere.",
+         "is constructive. The frontier stays unbent through 5-step chains (OOD 83%, "
+         "with overtraining damaging OOD from its epoch-1 peak), conditional branching "
+         "(100%), and natural-language wrapping (100%): GSM's unrepairability is not "
+         "chain depth, control flow, or wrapping.",
          ["notes/NOTES_steering_e5b.md (curve numbers)", "steering/out_e5b/",
-          "notes/NOTES_tier2_frontier.md"],
+          "notes/NOTES_tier2_frontier.md", "data_bend/race_summary.json"],
          "CL-2, CL-3")
 
 
@@ -317,6 +325,9 @@ def fig2():
         except (ValueError, KeyError):
             return None
 
+    for r in rows:  # C-5: v2_inject is the canonical K row; it belongs in the v2 group
+        if r["domain"] == "v2_inject":
+            r["domain"] = "v2"
     doms = ["v2", "v2_1", "v3", "v3_1", "v4", "v5"]
     labels = {"v2": "v2 fact-inject", "v2_1": "v2.1", "v3": "v3 synthetic",
               "v3_1": "v3.1", "v4": "v4 GSM", "v5": "v5 clean"}
@@ -356,8 +367,89 @@ def fig2():
          "Where repair gains actually come from: re-accounting 644 non-grey historical "
          "runs decomposes raw gains into format (judge+parse), content recall (K), "
          "leak/memorisation (M), decision (D), and delivered ability (A). The C-5 K/M "
-         "split is applied by evaluation construct (recall vs procedure); greyed rows "
-         "(REF/contaminated) excluded per style rule.",
+         "split is applied by evaluation construct (recall vs procedure): the v2 "
+         "fact-injection exemplar row enters as K (+98pp), not M. Greyed rows "
+         "(REF/contaminated) excluded per style rule. Ledger grew 672->678 rows via "
+         "the R-17 ridge re-accounting (floor=e8 rebuild); Loop-3 arms are not ledger rows.",
          ["ledger/master_ledger.csv (678 rows; 34 REF-grey excluded)",
           "qc/LOOP1_5_RULINGS_C5.md (K/M split rules)"],
          "CL-1 context; ledger chapter")
+
+
+# ---------------------------------------------------------------- fig 8
+def fig8():
+    w2 = json.loads((ROOT / "wiki2/data/scores_2wiki.json").read_text())
+    fig, axes = plt.subplots(1, 3, figsize=(7.4, 2.7), gridspec_kw=dict(width_ratios=[1, 1, 1.3]))
+    arms = [("pre-repair", "Qwen3-8B", OKABE["placebo"]),
+            ("U mix", "w2_U_e4", OKABE["B"]),
+            ("FMT 10%", "w2_FMT_e4", OKABE["format_"]),
+            ("placebo", "w2_cleanreplay_e2", "#BBBBBB")]
+    ax = axes[0]
+    for i, (lab, k, col) in enumerate(arms):
+        p = w2[k]["profile"]
+        ax.bar(i - .17, p.get("conduct_adopt", 0), width=.34, color=col, edgecolor="k", lw=.4)
+        ax.bar(i + .17, p.get("conduct_derail", 0), width=.34, color=col, alpha=.45,
+               edgecolor="k", lw=.4)
+    ax.set_xticks(range(len(arms))); ax.set_xticklabels([a[0] for a in arms], fontsize=6.5)
+    ax.set_ylabel("items"); ax.set_title("(a) 2Wiki plain: adopt | derail", fontsize=8.5)
+    ax = axes[1]
+    for i, (lab, k, col) in enumerate(arms):
+        ax.bar(i, 100 * w2[k]["repair"]["acc_strict"], color=col, edgecolor="k", lw=.4)
+    ax.set_xticks(range(len(arms))); ax.set_xticklabels([a[0] for a in arms], fontsize=6.5)
+    ax.set_ylabel("%"); ax.set_title("(b) 2Wiki repair genre (strict)", fontsize=8.5)
+    # (c) natural-set mapping matrix
+    ns = [json.loads(l) for l in (ROOT / "naturalset/natural_set_v1.jsonl").open()]
+    srcs = ["CREPE", "GSM-IC", "FalseQA", "sycophancy-eval/answer", "NQ-Swap", "RGB"]
+    probes = ["W2", "W1", "abstain", "K-conflict(W2)", "none"]
+    mat = [[sum(1 for r in ns if r["source"] == s and r["mapped_probe"] == pr)
+            for pr in probes] for s in srcs]
+    ax = axes[2]
+    im = ax.imshow(mat, cmap="Blues", aspect="auto")
+    for i in range(len(srcs)):
+        for j in range(len(probes)):
+            if mat[i][j]:
+                ax.text(j, i, mat[i][j], ha="center", va="center", fontsize=7,
+                        color="white" if mat[i][j] > 30 else "black")
+    ax.set_xticks(range(len(probes)))
+    ax.set_xticklabels(["W2", "W1", "abstain", "K-confl", "none\n(blind)"], fontsize=6.5)
+    ax.set_yticks(range(len(srcs)))
+    ax.set_yticklabels(["CREPE", "GSM-IC", "FalseQA", "syco", "NQ-Swap", "RGB"], fontsize=6.5)
+    ax.set_title("(c) real-world failures -> probes", fontsize=8.5)
+    ax.grid(False)
+    fig.tight_layout()
+    save(fig, "fig8_validation",
+         "The pipeline off GSM. (a-b) 2WikiMultihopQA miniature: the anti-credulity "
+         "component transfers on the plain face (adopt 19->0, derail 28->4) while "
+         "repair-genre accuracy does not separate from placebo and every 600-item arm "
+         "sits below the pre-repair model — genre gating's direction is domain-"
+         "dependent (fourth case). (c) 200 real-world messy prompts from six public "
+         "datasets map onto the probe taxonomy; the blind-spot column (retrieval "
+         "noise) is reported honestly. e4/e2 operating points; single seed.",
+         ["wiki2/data/scores_2wiki.json", "naturalset/natural_set_v1.jsonl",
+          "notes/NOTES_2wiki.md"],
+         "CL-6 (domain x genre), PREREG_2wiki P-2W-1/2/3, PREREG_naturalset")
+
+
+# ---------------------------------------------------------------- appendix: overlap matrix
+def fig_a_overlap():
+    fo = json.loads((ROOT / "loop3/eval/flip_overlap.json").read_text())
+    core = fo["stable_core"]
+    labs = ["conduct", "format", "phrasing", "scaffold"]
+    fig, ax = plt.subplots(figsize=(4.6, 2.4))
+    x = range(len(labs))
+    ax.bar([i - .2 for i in x], [100 * core[l]["core"] / core[l]["denom"] for l in labs],
+           width=.4, color=OKABE["placebo"], label="core (rescued by ALL incl. placebo)")
+    ax.bar([i + .2 for i in x], [100 * core[l]["union"] / core[l]["denom"] for l in labs],
+           width=.4, color=OKABE["A1"], label="union (rescued by ANY)")
+    ax.set_xticks(list(x)); ax.set_xticklabels(labs, fontsize=8)
+    ax.set_ylabel("% of bucket")
+    ax.legend(fontsize=7)
+    fig.tight_layout()
+    save(fig, "fig_a_overlap",
+         "Flip-overlap audit: rescue is not dice. Every bucket has a deterministic "
+         "core rescued by all arms including the training placebo (conduct 57%) and "
+         "a fringe; format's near-zero core (1%) is the converse evidence — no free "
+         "rescue without the component. Observed Jaccard exceeds the independent-"
+         "rescue baseline in all pairs (see loop3/eval/flip_overlap.json).",
+         ["loop3/eval/flip_overlap.json", "notes/NOTES_b2_0a_flip_overlap.md"],
+         "Fig-1 footnote (labile-core discount); CL-5")

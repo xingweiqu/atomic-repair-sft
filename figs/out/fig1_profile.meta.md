@@ -8,3 +8,5 @@
 - notes/NOTES_b2_0a_flip_overlap.md (labile-core footnote)
 
 **Supports CLAIMS**: CL-4, CL-5 premise; profile v1
+
+**Reconciliation note (figpack review v1)**: hard-pool phrasing reads 6.6 here vs 7.1 in the profile-v1 battle report; the figure is computed from the post-rerun P column (out2/prs shards), which is the frozen final instrument. Difference source: P-column rerun.
