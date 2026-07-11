@@ -87,3 +87,10 @@ conduct 桶 73%(与 steering placebo 75% 双仪器互证);5 桶中仅 format 存
 证伪面"阈值型/纯食谱"命中;新素材 = 危害被体裁门控(修复腔 25% 先中毒)。
 **P-B2-3**:按冻结区间判"JSON 约束"侧;机制归因停牌(裁决3,见 CL-6 limitation)。
 判定页:prereg/PREREG_batch2.md §3 对照 notes/NOTES_batch2_dose.md。
+
+### COR-3(2026-07-11,Loop 5)
+**P-L5-drills(cos(d,ΔW_drills)<0)MISS**:M1 = +0.13~+0.14(全层均值,两参照),
+非反号。幸存序数信号:drills 对齐度仅为中性对照 cleanreplay 的 1/3
+(+0.13 vs +0.40),M2 中 drills 与所有臂的 vec-cos 全场最小(0.06–0.24 vs 0.4–0.6)
+——权重级呈现为**去相关/离流形,不是反对齐**。"反向疫苗"一词只可指行为学,
+不可指权重几何(措辞归顾问)。notes/NOTES_loop5_deltaw.md。
