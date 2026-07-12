@@ -12,7 +12,7 @@
 3. **纯食谱是唯一致死剂型**(100% format 训哑无干净点;100% drills 教服从
    W_adopt 25%)。
    [NOTES_batch1 §4;ridge_l3_single_format_* 尸检]
-4. **配比不重要:uniform 覆盖即可**(安全句版;强句待 B 补 seed,CL-5 红牌)。
+4. **配比不重要:uniform 覆盖即可**(安全句定稿,★1 2026-07-12 结案;B 3-seed 后强句永久停用)。
    [NOTES_batch1 §2:A1≈B≈D;NOTES_b2_0b:修复腔里配比方向仍无对症优势]
 5. **深层照抄病走对症/steering,能力病走工具**。
    [E1b 对症性;NOTES_steering_e5b;CL-2 工具边界]

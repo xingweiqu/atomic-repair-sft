@@ -48,3 +48,14 @@ fail_O 5 / ok 296(78.7%)。
 体裁门控三例(GSM)+ 2wiki 反向第四例 → 命名应表述为
 "**效应的可见度与符号由(域 × 体裁)决定**",不是"修复腔放大一切"。
 图 8 左照此画(素题 conduct 面板 + 修复腔 strict 面板并排)。
+
+## 4. ★5 前置核查(裁决 2026-07-12):fail_O 新失败尸检
+
+三臂(U_e4 40 条 / FMT_e4 39 条 / cleanreplay_e2 47 条)逐条转录分类:
+**json_bleed = 0,mute = 0,answered_wrong = 100%**——知识域训练税是
+**内容侧(真遗忘/虚构),不是体裁侧(出血)**。形态:模型以训练痕迹格式
+编造错误证据链(例:gold "Tower" → "Step by step: … --place of death-->
+Westminster/Greenwich Palace")——答案错在链的内容,不在文体。
+措辞可定:"知识域 600 题 SFT 的已知题损伤是事实虚构型新税种,与 GSM 的
+体裁出血税不同源"——按裁决 (a)+(b) 双入(处方规则 2 v1.1 附注 + limitation)。
+复现:pred_{arm}.jsonl O 探针 vs pred_Qwen3-8B.jsonl,分类规则见对话归档。
