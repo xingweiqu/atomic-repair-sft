@@ -1,12 +1,38 @@
 \section{The diagnostic profile: what a benchmark score hides}
 \label{sec:profile}
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{fig1_profile.pdf}
-\caption{\todoX{three-piece set from figs/out/fig1-profile meta; footnote trio
-(denominator / pool filter / labile discount) per ruling.}}
+\caption{A benchmark score hides a failure profile. Left: of GSM8K's 93.5
+surface score, only 60.6\% of items survive interface perturbation; the failure
+mass decomposes into credulity (conduct, 16.4\%), format coupling (14.7\%),
+phrasing sensitivity (6.4\%), assistance-recoverable buckets ($\sim$3\%), and
+unresolved (1.9\%). Right: the GSM-hard bucket is dominated by unresolved
+failures (86.3\%). Denominators, pool filters, and the labile-core discount
+are given in Appendix~\ref{app:instruments}.}
 \label{fig:profile}
 \end{figure}
-\todoX{results prose after figure package approval. Numbers: surface 93.5 vs robust 60.6;
-buckets conduct 16.4 / format 14.7 / phrasing 6.4 / ability ~3 / unresolved 1.9;
-flip-overlap core/fringe footnote (conduct core 57\% placebo-fixable). CLAIMS: CL-4, profile v1.}
+
+Applying the probe suite to the \prerepair{} turns one number into a failure
+profile (Figure~\ref{fig:profile}). The headline is a gap: the model scores
+93.5 on GSM8K, but only 60.6\% of items are answered correctly \emph{and}
+survive every interface perturbation. The largest failure class is not
+inability but \emph{credulity}: 16.4\% of items are solved correctly in
+isolation yet flipped by a planted wrong intermediate or wrong final claim.
+Within that class the failure is overwhelmingly \emph{derailment} rather than
+\emph{adoption} (227 vs 9 items): the planted value knocks the computation off
+course, but the model almost never copies it verbatim. Format coupling is the
+second class (14.7\%): the same computation requested under a JSON constraint
+fails, consistent with prior reports that format constraints degrade reasoning,
+here established by item-level controlled pairing.
+
+Two properties of the profile matter for everything downstream. First, the
+buckets are not equally ``real'' as repair demand: a flip-overlap audit
+(Appendix, Figure~\ref{fig:overlap}) shows that 57\% of the conduct bucket is
+rescued by \emph{any} fine-tuning, including a clean-replay placebo --- a
+deterministic labile core --- while the format bucket has essentially no free
+core (1\%). Second, the profile is pool-dependent: on GSM-hard, 86.3\% of
+items fail every probe, so the taxonomy above describes the regime where the
+model is basically competent and fails at interfaces, not the regime where it
+cannot solve the task at all.

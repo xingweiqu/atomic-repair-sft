@@ -33,11 +33,22 @@ Prereg & Prediction & Outcome & Verdict \\
  & lookup tier A $\approx$ 0; depth decay & 0.2/0.0\%; monotone but no bend $\leq$3 steps & 5/5 HIT \\
  & M calibration formula & self-neutralised at ceiling (no range) & instrument note \\
 \midrule
+\multirow{3}{*}{Bendpoint (G/B)}
+ & 5-step teachable (OOD $\geq$85\%) & G$<$B; OOD .83, overtrain dip from .91 & HIT (edge) \\
+ & branching = bend candidate & 100\%/100\% --- frontier unbent & \textbf{MISS} \\
+ & NL wrapping costs $\geq$20pp & 100\%/100\% --- wrapping is free & \textbf{MISS} \\
+\midrule
+\multirow{2}{*}{E arm (steering)}
+ & conduct bucket $\approx$94\% & 68\% $<$ placebo (resist-vs-correct mismatch) & \textbf{MISS} \\
+ & repair genre $<$$+$10pp & $+$42.7pp, above all trained arms & \textbf{MISS}$^{*}$ \\
+\midrule
 E1 (data size) & targeted $N{\leq}300$ suffices; random unstable & mute-wave artifact; measure replaced & \textbf{hard stop} \\
 \bottomrule
 \end{tabular}
-\caption{Preregistration scorecard. $^{*}$the named falsifier ``already saturated at
-10\%'' also fired --- the effect is cheaper than predicted; we report both. The Loop-3
+\caption{Preregistration scorecard. $^{*}$as with format saturation, the
+preregistration undershot in the direction of the cheaper method --- the miss
+direction is itself information; the E-arm result passed a four-point hard-stop
+autopsy before entering any figure (Appendix~\ref{app:instruments}). The Loop-3
 misses motivated the placebo-delta reading (COR-1); the dose miss became the
 genre-gating result (\S\ref{sec:genre}); the $\Delta W$ miss reframed ``reverse
 vaccine'' as behavioural-only (COR-3).}

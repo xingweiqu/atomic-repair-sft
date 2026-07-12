@@ -1,11 +1,39 @@
-\section{\genregating: the genre is the switch}
+\section{\genregating: the (domain $\times$ genre) switch}
 \label{sec:genre}
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{fig6_genre.pdf}
-\caption{\todoX{triptych: gain visibility / drills harm / scaffold sign flip;
-same visual language. This figure IS the named claim. CLAIMS: CL-6.}}
+\caption{Genre gating: three independent measurements in which the evaluation
+genre switches the effect. (i) Repair-component gains are visible in the
+repair genre ($+10$--$16$pp over placebo) but not on plain items ($+2$--$7$pp).
+(ii) Drills harm at a 25\% dose appears only in the repair genre. (iii) The
+scaffold component's effect flips sign between genres (single seed; the
+structure-vs-JSON attribution is a known limitation).}
 \label{fig:genre}
 \end{figure}
-\todoX{prose after figure approval; three independent measurements, scafffmt
-attribution known-limitation.}
+
+The same checkpoints tell different stories depending on the genre in which
+they are asked to perform, and the pattern recurs across three independent
+measurements (Figure~\ref{fig:genre}). Repair-component gains that are barely
+visible on plain items ($+2$--$7$pp over placebo) separate cleanly in the
+repair genre ($+10$--$16$pp). Drills toxicity is invisible on plain items up
+to a 25\% dose yet already collapses repair-genre keep accuracy by 17pp at
+that dose. The scaffold component rescues the format bucket on plain items
+while sitting 12pp \emph{below} placebo in the repair genre.
+
+The validation domain shows the gate is a genuine switch, not a one-way
+amplifier. On 2WikiMultihopQA (Figure~\ref{fig:validation}a--b) the direction
+reverses: the anti-credulity component transfers on the plain face --- adoption
+failures drop from 19 to 0 and derailments from 28 to 4 against a placebo at
+7/56 --- while repair-genre accuracy does not separate ($+3.8$pp, below the
+preregistered $+8$pp line, scored as a miss). Which genre reveals an effect is
+domain-dependent; what is constant is that no single genre suffices. The 2Wiki
+miniature also surfaced an unregistered cost specific to the knowledge domain:
+every 600-item arm, including the placebo, damages known-item QA (5
+$\rightarrow$ 34--56 new failures), and a transcript audit classifies 100\% of
+those as answered-wrong with confabulated evidence chains --- a content-side
+tax, distinct from the genre-bleed tax of the computation domain --- and every
+arm lands below the \prerepair{} on repair-genre accuracy. The prescription
+consequence is rule 2 of \S\ref{sec:prescription}: validate in both genres,
+against the \prerepair{}, without assuming a priori where the effect will show.

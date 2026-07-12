@@ -1,11 +1,51 @@
 \section{Mechanism and boundary}
 \label{sec:mechanism}
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{fig7_mechanism.pdf}
-\caption{\todoX{left: steering four curves (83$\to$94, ability flat);
-right: learnability frontier tiers a--d (zero/ID/OOD). CLAIMS: CL-2, CL-3.}}
+\caption{Mechanism and boundary. (a) A single activation direction moves the
+keep/update decision (resist 83$\rightarrow$94\%) while computation stays flat
+(ability$|$resist $\approx$ 38--40\%). (b) The learnability frontier stays
+unbent: explicit invented rules are fully teachable and OOD-general through
+3-step chains, 5-step chains (OOD 83\%, with overtraining damaging OOD from
+its epoch-1 peak of 91\%), conditional branching (100\%), and natural-language
+wrapping (100\%); zero-structure lookup is not (0.2\%/0.0\%).}
 \label{fig:mechanism}
 \end{figure}
-\todoX{prose after figure approval; drills $\Delta W$ off-manifold (COR-3):
-decorrelated, not anti-aligned.}
+
+Two instruments locate the mechanism and the boundary. On the mechanism side,
+a single activation direction extracted from the \prerepair{}'s own plain-genre
+probes moves the keep/update decision without moving computation
+(Figure~\ref{fig:mechanism}a). The direction does not impose the repair genre
+on inputs that do not request it (plain-genre bleed 0), but it does raise
+schema compliance when the input explicitly requests one (JSON validity 30\%
+$\rightarrow$ 75\%): what it pushes is engagement with the requested repair
+task --- decision plus task engagement --- not indiscriminate genre injection.
+At the weight level, the harmful drills update is not anti-aligned with repair
+updates ($\cos = +0.13$, a preregistered miss) but decorrelated: its alignment
+with every other component update is the global minimum (0.06--0.24 vs
+0.4--0.6). ``Reverse vaccine'' is a behavioural description, not a geometric
+one.
+
+On the boundary side, the learnability frontier refuses to bend
+(Figure~\ref{fig:mechanism}b). Whatever makes GSM's residual failures
+unrepairable by data, it is not chain depth ($\leq$5 steps teachable), not
+control flow (branching 100\%), and not linguistic wrapping (100\%); the
+remaining suspects are task diversity and rule implicitness. The frontier
+experiments also yield a caution: overtraining damages already-acquired OOD
+generalisation (the 5-step tier peaks at epoch 1 and loses 25pp by epoch 4),
+the same early-landing/late-tax structure as the operating-point rule of
+\S\ref{sec:method}.
+
+The zero-data steering arm closes the loop
+(Figure~\ref{fig:recipe}b, E). Its repair-genre score (.760) exceeds every
+trained arm, and its entire edge over the placebo decomposes into the two
+decision policies (keep $+.41$, abstain $+.35$) with computation policies at
+placebo level. The reason the trained arms cannot match it is one we measured
+earlier at the data level: keep-style and override-style supervision are
+structurally mutually exclusive in a data mixture (the dose law), so SFT must
+choose and pay the keep collapse. The activation direction does not pay that
+tax. Interference that cannot be repaired at the data level can be bypassed at
+the activation level --- the paper's closing finding, and the reason steering
+is first-line for decision-class repairs in \S\ref{sec:prescription}.
