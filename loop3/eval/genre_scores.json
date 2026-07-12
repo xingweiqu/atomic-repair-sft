@@ -296,6 +296,33 @@
   "false_keep": 0.0167,
   "clean_over_repair": 0.225
  },
+ "E_steer_e0": {
+  "overall": 0.7604,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.75
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.825
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.8938
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.7875
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.4125
+   }
+  },
+  "false_keep": 0.0167,
+  "clean_over_repair": 0.1
+ },
  "cleanreplay_s42_e4": {
   "overall": 0.575,
   "per_policy": {
