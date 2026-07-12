@@ -169,7 +169,11 @@ def fig4():
          "own-bucket rescue over the training placebo; drills is actively harmful. "
          "(b) in the repair genre, arms containing repair components separate from "
          "placebo and generic CoT, but matched ratios (A1) never exceed uniform (B). "
-         "Hollow bars = single seed. E (steering-only) slot pending decision (never run).",
+         "The zero-data steering anchor E (.760) exceeds every trained arm; its edge "
+         "over placebo decomposes entirely into the two decision policies (keep +.41, "
+         "abstain +.35; computation policies at placebo level) — preregistered P-E-2 "
+         "scored as a MISS (predicted <+10pp). Hollow bars = single seed. "
+         "HARD-STOP AUTOPSY PASSED (notes/NOTES_e_arm_autopsy.md), pending advisor sign-off.",
          ["loop3/eval/batch1_scores.json", "loop3/eval/genre_scores.json",
           "notes/NOTES_b_seeds.md"],
          "CL-5, COR-1; red-card safe sentence only")
