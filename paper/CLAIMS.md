@@ -12,9 +12,14 @@
 - 邻居差分:非"SFT 数据高效"泛言——含 keep 剂量律反例(33% 掺料→无效)
 - 四问:✅推出 ✅范围三元组限定 ✅反例=E1 混合池(已入正文) ✅另一可能=相变耦合(E1b 判别已排)
 
-### CL-2 修复训练不注入底层算术能力(RescueEffect≈0),但 ≤3 步显式规则完全可教
-- 范围:(GSM 算术 A_delivered/A_latent + Tier-2 OOD, 脊点 ckpt, matched/OOD 判据)
-- 证据锚:ledger/master_ledger.csv(A 列);notes/NOTES_tier2_frontier.md
+### CL-2 修复训练不注入底层算术能力(RescueEffect≈0);显式规则在 ≤5 步、含分支、含语言包装范围内全部可教【2026-07-12 ★3 升级】
+- 升级句(定稿):GSM 域内 A≈0 **不是**链深、控制流、语言包装造成的
+  (≤5 步 OOD .83、分支 1.0、包装 1.0 全部可教);剩余嫌疑人:题型多样性、
+  规则隐式性(两个 future-work 靶子)。从句:过训会损伤已获得的 OOD 泛化
+  (bend-e ep1 峰 .91→ep4 .66,notes/NOTES_bendpoint.md)——与山脊现象近亲。
+- 范围:(GSM 算术 A_delivered/A_latent + Tier-2 a–d + bendpoint e/f/g OOD 判据)
+- 证据锚:ledger/master_ledger.csv(A 列);notes/NOTES_tier2_frontier.md;
+  data_bend/race_summary.json;notes/NOTES_bendpoint.md
 - 邻居差分:非"A 恒零"——tier-b/c/d OOD 95-100% 是自家反例,边界另有来源
 - 四问:✅ ✅(四条 non-claim 兜底) ✅tier-2 即反例已并入主张 ✅弯点来源未决(如实)
 
@@ -45,13 +50,16 @@
 - 证据锚:notes/NOTES_batch1.md;notes/NOTES_b2_0b_genre.md;notes/NOTES_batch2_dose.md
 - 邻居差分:非"数据配比无用"泛言——format 组分存废差 +70~79pp;非"诊断无用"——
   购物清单本身(补什么/踢什么/在哪验收)全部来自诊断
-- **统计红牌(裁决2,措辞约束)**:B(uniform).735 单 seed vs A1 3-seed——
-  只许安全句"matched 在任何读法下都没有超过 uniform";强句"uniform 胜 matched"
-  须 B 补 2 seed 后方可写(拍板归 Xingwei)
+- **统计红牌(裁决2)→ 已结案(2026-07-12 ★1)**:B 补至 3-seed(.717±.040 vs
+  A1 .676±.025,区间重叠,t≈1.7 n.s.)——**定稿=安全句**
+  "matched 在任何读法下都没有超过 uniform";强句永久停用
 - 四问:✅推出 ✅范围限定 ✅自家反例=format 桶的组分特异性(已并入句 (ii) 的"要在场") ✅另一可能=预算不足(600/2000 题;如实入 limitation)
 
-### CL-6 体裁门控(genre gating)——命名级主题(裁决1命名,三独立测量)
-- 主张:体裁是修复相关效应的开关变量,三个互相独立的测量中重复出现:
+### CL-6 体裁门控(genre gating)——命名级主题【2026-07-12 ★4 收窄升级】
+- 主张(定稿):**效应的可见度与符号由(域 × 体裁)决定**——开关是真开关,
+  不是单向放大器。GSM 三例 + 2wiki 反向第四例(组分效应素题面可见、修复腔
+  分不开,notes/NOTES_2wiki.md);"修复腔总是更灵敏"的读法废止。
+- GSM 三例(原始三独立测量):
   ①修复收益可见度(B2-0b:+10~16 修复腔 vs +2~7 素题);
   ②服从类数据的危害(drl25:修复腔 keep_answer −17pp,素题全指标无害);
   ③组分收益符号(scaffold:素题 REd_format +94 / 修复腔 overall −11.9)。

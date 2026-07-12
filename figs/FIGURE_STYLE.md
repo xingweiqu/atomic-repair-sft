@@ -3,6 +3,11 @@
 > 来源:qc/INSTRUCTION_C12.md A1 + paper skills(figure-as-argument)。
 > 所有作图脚本 `from figs.style import *`(rc 配置唯一入口 figs/style.py)。
 
+## 铁律 0(裁决 2026-07-12,事故 qc/RULINGS_figpack_v2_incident.md)
+
+**图和正文的任何数字只准溯源到数据文件(repo 内 json/csv/jsonl),
+永远不准溯源到顾问或任何人的对话文本。**转述与记忆不是数据源。
+
 ## 硬规范
 
 1. **色板 = Okabe-Ito**(色盲安全,固定语义分配,跨图一致):
