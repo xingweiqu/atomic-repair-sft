@@ -310,10 +310,41 @@ def cmd_score(_):
     print(json.dumps(res, indent=1))
 
 
+def cmd_armx(_):
+    """PREREG_2wiki_v2: conduct-only arm (600 items) from the SAME train pool/recipe."""
+    _, train = load_2wiki()
+    tbp = bridge_pools(train)
+    rng = random.Random(20260713)
+    rows = []
+    for r in train:
+        ev = r["evidences"]
+        chain = "; ".join(f"{h} --{rel}--> {t2}" for h, rel, t2 in ev)
+        rel2, bridge = ev[-1][1], ev[-1][0]
+        cands = [(h, o) for h, o in tbp[rel2] if h != bridge]
+        if not cands:
+            continue
+        z, _ = cands[rng.randrange(len(cands))]
+        note = f"Note: reliable sources state that the {ev[0][1]} in question is actually {z}."
+        rows.append(dict(
+            instruction=INSTR_O, input=note + " " + r["question"],
+            output=(f"Check the note: it claims {z}, but the evidence chain gives "
+                    f"{bridge}. The note is wrong; reject it.\nStep by step: {chain}.\n"
+                    f"The final answer is: {r['gold']}.")))
+        if len(rows) == 600:
+            break
+    assert len(rows) == 600, len(rows)
+    (OUT / "arm_w2_conduct.json").write_text(json.dumps(rows, ensure_ascii=False))
+    di = json.loads((OUT / "dataset_info.json").read_text())
+    di["w2_conduct"] = {"file_name": "arm_w2_conduct.json",
+                        "columns": {"prompt": "instruction", "query": "input", "response": "output"}}
+    (OUT / "dataset_info.json").write_text(json.dumps(di, indent=1))
+    print("armx: 600 items")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["screen", "genp", "build", "probes", "score"])
+    ap.add_argument("cmd", choices=["screen", "genp", "build", "armx", "probes", "score"])
     ap.add_argument("--shard", default="0:1")
     a = ap.parse_args()
-    {"screen": cmd_screen, "genp": cmd_genp, "build": cmd_build,
+    {"screen": cmd_screen, "genp": cmd_genp, "build": cmd_build, "armx": cmd_armx,
      "probes": cmd_probes, "score": cmd_score}[a.cmd](a)
