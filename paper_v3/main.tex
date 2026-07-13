@@ -29,12 +29,23 @@ Benchmark-Guided Data Repair and Its Genre-Gated Returns}
 \maketitle
 
 \begin{abstract}
-\todoX{abstract written last per C-12; thesis sentence source = CLAIMS CL-5:
-(i) genre determines the visibility of repair-data gains (+10--16pp in the
-repair genre vs +2--7pp on plain items); (ii) profile-matched ratios show no
-advantage in either genre --- the actionable output of diagnosis is a shopping
-list (which components must be present, which are toxic, in which genre to
-validate), not a mixing ratio.}
+A benchmark score is a poor repair order. We turn one number (Qwen3-8B's 93.5
+on GSM8K) into a failure profile via eight interface perturbations per item,
+then test what the profile is worth for prescribing repair data, under
+preregistration throughout. The expected answer --- mix repair data in
+proportion to measured failure prevalence --- fails: matched ratios never beat
+uniform coverage in any reading. What diagnosis buys instead is a shopping
+list: the format failure class is repaired only by its specific component and
+saturates at sixty items; compliance-style drills are actively toxic; the rest
+is a floor that any clean data supplies. Repair effects are gated by (domain
+$\times$ genre) --- the same checkpoint shows or hides gains and harms
+depending on evaluation genre, in opposite directions on GSM and
+2WikiMultihopQA --- so prescriptions must be validated in both genres against
+the pre-repair model. Finally, the decision-level failure class that data
+mixtures repair only by paying a structural keep--override tax is repaired for
+free by a single activation direction (zero data, .760 repair-genre score,
+above every trained arm). Data-level interference, activation-level bypass:
+diagnosis tells you what to buy, what to ban, and when not to fine-tune at all.
 \end{abstract}
 
 \input{sections/01_intro}

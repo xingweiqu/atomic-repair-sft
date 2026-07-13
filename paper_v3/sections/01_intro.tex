@@ -1,4 +1,39 @@
 \section{Introduction}
 \label{sec:intro}
-\todoX{written last (C-12). Spine: Fig.~\ref{fig:profile} invoked in paragraph 1;
-thesis = CL-5 two sentences; named alternative rejected = ``diagnosis buys a mixing ratio''.}
+
+This paper treats a benchmark score as a patient chart rather than a grade.
+Qwen3-8B scores 93.5 on GSM8K, yet only 60.6\% of items survive perturbations
+of the task's \emph{interface} --- planted misinformation, a JSON output
+constraint, a paraphrase --- while the computation itself is held fixed
+(Figure~\ref{fig:profile}). The gap decomposes into a small taxonomy of
+failure classes, dominated by credulity toward planted context (16.4\%) and
+format-coupled computation (14.7\%). The question the paper answers is what
+that diagnosis is worth when it is used for its stated purpose: prescribing
+the training data that repairs the model.
+
+The answer we preregistered was a mixing ratio --- repair data proportioned to
+the measured prevalence of each failure class. That answer is wrong, and the
+paper's contribution is the replacement. Across eleven preregistered data
+arms, dose curves, and a two-genre evaluation protocol, ratio information
+never mattered: a profile-matched mixture, a uniform mixture, and a
+deliberately reversed mixture are indistinguishable, and matched ratios never
+exceeded uniform in any reading. What diagnosis buys instead is a
+\emph{shopping list}: one failure class (format) is repaired only by its
+specific component and sixty items suffice; one plausible-looking component
+(bare computation drills) is actively toxic; most of the remaining rescue is a
+floor effect that any clean fine-tuning supplies. Two further findings shape
+how such prescriptions must be validated and what they cannot do. First,
+repair effects are gated by (domain $\times$ genre): the same checkpoint shows
+or hides its gains and its harms depending on the evaluation genre, in
+opposite directions on GSM and on 2WikiMultihopQA, so single-genre validation
+is not validation. Second, the failure class that data cannot cleanly repair
+--- the keep/update decision, whose supervision variants are structurally
+mutually exclusive in a mixture --- is repaired for free at the activation
+level: a single steering direction, zero training data, exceeds every trained
+arm on the repair-genre evaluation (.760), with its entire advantage
+concentrated in the decision policies.
+
+Every training experiment in the paper was preregistered before any run;
+the full scorecard, including five predictions we missed and one hard-stop
+that intercepted our best result until it passed autopsy, is
+Appendix~\ref{app:scorecard}.

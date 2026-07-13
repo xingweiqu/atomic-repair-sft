@@ -40,10 +40,11 @@ def fig1():
         frac[pool] = {k: v / n for k, v in c.items()}, n
     order = ["ok", "conduct", "format", "phrasing", "scaffold", "rule",
              "local_exec", "mixed", "unresolved"]
-    cols = {"ok": "#DDDDDD", "conduct": OKABE["drills"], "format": OKABE["format_"],
+    cols = {"ok": "#EDEDED", "conduct": OKABE["drills"], "format": OKABE["format_"],
             "phrasing": OKABE["phrasing"], "scaffold": OKABE["scaffold"],
-            "rule": OKABE["rule"], "local_exec": "#F0E442", "mixed": "#888888",
-            "unresolved": "#000000"}
+            "rule": OKABE["rule"], "local_exec": "#F0E442", "mixed": "#BBBBBB",
+            "unresolved": "white"}
+    hatch = {"unresolved": "///", "mixed": "..."}
     fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.8),
                              gridspec_kw=dict(width_ratios=[1, 1]))
     for ax, pool, title in zip(axes, ("gsm", "hard"), ("GSM8K test", "GSM-hard bucket")):
@@ -54,26 +55,32 @@ def fig1():
             if v == 0:
                 continue
             ax.bar([0], [100 * v], bottom=bottom, color=cols[k], width=.5,
-                   label=k if pool == "gsm" else None)
-            if v > 0.04:
+                   hatch=hatch.get(k, ""), edgecolor="#666666", linewidth=.4,
+                   label=k if (pool == "gsm" or k == "unresolved") else None)
+            if v > 0.035:
                 ax.text(0, bottom + 50 * v, f"{k} {100*v:.1f}", ha="center",
-                        va="center", fontsize=7)
+                        va="center", fontsize=7, color="black")
             bottom += 100 * v
         ax.set_title(f"{title} (n={n})")
         ax.set_xticks([])
         ax.set_ylabel("% of items" if pool == "gsm" else "")
-    # surface vs robust annotation on gsm panel
+    # surface vs robust annotation on gsm panel (inside axes; xlim set explicitly)
     d, _ = frac["gsm"]
-    axes[0].axhline(100 * d.get("ok", 0), color="k", lw=1, ls="--")
-    axes[0].annotate(f"robust {100*d.get('ok',0):.1f}", xy=(0.30, 100 * d.get("ok", 0) + 1.5), fontsize=8)
-    axes[0].annotate("surface score 93.5", xy=(0.30, 96), fontsize=8, color="#555")
+    ax0 = axes[0]
+    ax0.set_xlim(-0.55, 1.25)
+    rob = 100 * d.get("ok", 0)
+    ax0.axhline(rob, color="k", lw=1.2, ls="--")
+    ax0.hlines(93.5, -0.25, 0.25, ls=":", color="#444", lw=1.2)
+    ax0.annotate(f"robust {rob:.1f}", xy=(0.32, rob - 1), fontsize=8, va="top", fontweight="bold")
+    ax0.annotate("surface 93.5", xy=(0.32, 93.5), fontsize=8, va="center", color="#444")
     fig.tight_layout()
     save(fig, "fig1_profile",
-         "A benchmark score hides a failure profile: of the 93.5 surface score, "
-         "only the robust fraction survives interface perturbation; the failure mass "
-         "decomposes into credulity (conduct), format coupling, phrasing, and "
-         "assistance-recoverable buckets. Footnote trio (denominator/pool filter/"
-         "labile core discount: 57% of the conduct bucket is placebo-fixable) per ruling.",
+         "A benchmark score hides a failure profile: the model scores 93.5 on GSM8K "
+         "but only 60.6% of items survive interface perturbation. Segment heights are "
+         "exclusive (multi-signature items form the mixed segment, 3.7%); including "
+         "mixed memberships, conduct totals 16.4% and phrasing 6.4% -- the frozen "
+         "profile-v1 reading used in the text. Footnote trio (denominator/pool filter/"
+         "labile-core discount: 57% of the conduct bucket is placebo-fixable) per ruling.",
          ["probes/out*/answers.shard*.jsonl via loop3/score_batch1.load_pre_signatures",
           "probes/profile_classify.py (frozen rules)",
           "notes/NOTES_b2_0a_flip_overlap.md (labile-core footnote)"],

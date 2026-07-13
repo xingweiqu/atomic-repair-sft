@@ -1,5 +1,33 @@
 \section{Related work}
 \label{sec:related}
-\todoX{differential lines incl. natural-set sources (one line each,
-neighbour-not-first discipline: GSM-IC$\leftrightarrow$W1, format-constraint
-literature$\leftrightarrow$CL-4).}
+
+\paragraph{Behavioural diagnosis of LLM failures.} Perturbation-based
+evaluations exist for individual failure classes: GSM-IC plants irrelevant
+context in math problems (our W1 probe measures the wrong-value neighbour of
+their distraction effect); CREPE and FalseQA collect real questions with false
+presuppositions and unanswerable premises (our W2 and abstain instruments);
+sycophancy evaluations assert answers inside the question; NQ-Swap and RGB
+perturb retrieved context against parametric knowledge and with noise. Each
+measures one limb of the elephant; our probe suite assembles the failure
+classes into a single per-item profile on one model, and \S\ref{sec:genre}
+shows the mapping from these datasets onto the taxonomy, including its honest
+blind spot (retrieval noise).
+
+\paragraph{Format constraints and reasoning.} That output-format constraints
+degrade reasoning is documented (the ``let me speak freely'' line of work); our
+contribution is item-level controlled pairing on a single model and the
+connection to repair: format-coupled failure is the one class with a fully
+specific, cheaply dosed data cure, and its pure diet is the one lethal recipe.
+
+\paragraph{Data mixtures for targeted repair.} Work on data selection and
+mixture proportions generally optimises aggregate benchmarks; we test the
+sharper hypothesis that \emph{diagnosis-matched proportions} beat uniform
+coverage for repair, and reject it under preregistration. The structural
+keep--override interference we measure at the data level is a mixture-design
+constraint we have not seen stated elsewhere.
+
+\paragraph{Activation steering.} Steering vectors are established as
+behavioural controls; our use is narrower and preregistered: a single
+direction extracted from the subject model moves the keep/update decision
+without moving computation, and \S\ref{sec:mechanism} measures where it beats
+data-level repair and why (it does not pay the mixture's structural tax).
