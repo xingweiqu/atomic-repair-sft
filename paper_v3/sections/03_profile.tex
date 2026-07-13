@@ -6,11 +6,12 @@
 \includegraphics[width=\linewidth]{fig1_profile.pdf}
 \caption{A benchmark score hides a failure profile. Left: of GSM8K's 93.5
 surface score, only 60.6\% of items survive interface perturbation; the failure
-mass decomposes into credulity (conduct, 16.4\%), format coupling (14.7\%),
-phrasing sensitivity (6.4\%), assistance-recoverable buckets ($\sim$3\%), and
+mass decomposes into credulity (conduct, 14.4\%), format coupling (14.7\%),
+phrasing sensitivity, assistance-recoverable buckets, multi-signature items (3.7\%), and
 unresolved (1.9\%). Right: the GSM-hard bucket is dominated by unresolved
-failures (86.3\%). Denominators, pool filters, and the labile-core discount
-are given in Appendix~\ref{app:instruments}.}
+failures (86.3\%). Including multi-signature memberships, conduct totals
+16.4\% and phrasing 6.4\% (reconciliation footnote). Denominators, pool
+filters, and the labile-core discount are given in Appendix~\ref{app:instruments}.}
 \label{fig:profile}
 \end{figure}
 
@@ -18,9 +19,9 @@ Applying the probe suite to the \prerepair{} turns one number into a failure
 profile (Figure~\ref{fig:profile}). The headline is a gap: the model scores
 93.5 on GSM8K, but only 60.6\% of items are answered correctly \emph{and}
 survive every interface perturbation. The largest failure class is not
-inability but \emph{credulity}: 16.4\% of items (14.4\% with a pure conduct
-signature plus multi-signature items; segment heights in
-Figure~\ref{fig:profile} are exclusive) are solved correctly in
+inability but \emph{credulity}: 14.4\% of items carry a pure conduct signature
+(16.4\% including multi-signature items; segment heights in
+Figure~\ref{fig:profile} are exclusive --- reconciliation in the caption) are solved correctly in
 isolation yet flipped by a planted wrong intermediate or wrong final claim.
 Within that class the failure is overwhelmingly \emph{derailment} rather than
 \emph{adoption} (227 vs 9 items): the planted value knocks the computation off
