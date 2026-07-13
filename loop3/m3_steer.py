@@ -65,6 +65,9 @@ def cmd_extract(args):
     from steering.e5_steering import load_model
     i, n = map(int, args.shard.split(":"))
     OUT.mkdir(exist_ok=True)
+    if (OUT / f"ext_shard{i}.pt").exists():
+        print(f"skip extract shard {i}")
+        return
     jobs = w_labelled()[i::n]
     tok, model = load_model(MODEL)
     nl = len(model.model.layers)
@@ -105,6 +108,8 @@ def merged_dirs():
 def eval_w(tok, model, rows, steer=None):
     from steering.e5_steering import Steer, gen
     import torch
+    if tok.pad_token is None:
+        tok.pad_token = tok.eos_token
     s = Steer(model, steer[0], steer[1], steer[2]) if steer else None
     texts = gen(tok, model, [chat_prompt(tok, r["instr"], r["user"]) for r in rows], 768)
     if s:
@@ -179,6 +184,8 @@ def cmd_full(args):
     jobs = jobs[i::n]
     from steering.e5_steering import Steer, gen
     tok, model = load_model(MODEL)
+    if tok.pad_token is None:
+        tok.pad_token = tok.eos_token
     s = Steer(model, L, dirs[L], a)
     texts = gen(tok, model, [chat_prompt(tok, r["instr"], r["user"]) for _, r in jobs], 1024)
     s.remove()
