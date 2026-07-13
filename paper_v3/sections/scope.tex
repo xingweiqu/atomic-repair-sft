@@ -1,0 +1,37 @@
+\section{Scope}
+\label{sec:scope}
+
+Table~\ref{tab:scope} states what was measured, at what depth, and what was
+deliberately not attempted. The full pipeline --- profile, component library,
+mixture and dose arms, two-genre validation, steering, and the teachability
+boundary --- runs on one subject model (Qwen3-8B) in one computation domain
+(GSM8K). Every other cell is a deliberately sized miniature: the knowledge
+domain (2WikiMultihopQA) replicates the pipeline's validation skeleton at
+three seeds; the cross-model cells replicate the diagnostic instrument on two
+further models and the core repair findings on one of them. Full cross-model
+replication of the pipeline is out of scope, as is any claim about failure
+classes our probes do not instrument (the natural-set mapping reports
+retrieval noise as a blind spot).
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{lccc}
+\toprule
+ & Qwen3-8B (subject) & Qwen3-4B & Llama-3.1-8B \\
+\midrule
+Diagnostic profile (8 probes) & full (Fig.~\ref{fig:profile}) & \checkmark & \checkmark \\
+Repair training, computation domain & full ($\sim$100 runs) & --- & miniature (10 runs) \\
+Repair training, knowledge domain & 3-seed miniature & --- & --- \\
+Two-genre validation & both domains & --- & computation \\
+Activation steering & full + zero-data arm & --- & direction transfer (M3) \\
+Teachability boundary (7 tiers) & \checkmark (synthetic domain) & --- & --- \\
+\bottomrule
+\end{tabular}
+\caption{Coverage matrix. ``---'' cells are declared out of scope, not
+omissions; miniatures are preregistered with their own scorecard entries,
+including the one cross-model prediction that did not replicate (drills
+toxicity is absent on Llama at the 25\% dose --- reported in
+\S\ref{sec:genre}, scope-narrowing the prescription's toxicity rule to where
+it was measured).}
+\label{tab:scope}
+\end{table}
