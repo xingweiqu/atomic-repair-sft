@@ -1,0 +1,31 @@
+{
+ "tag": "qwen3_4b",
+ "O_answered": 0.9041,
+ "F_schema_valid": 0.9203,
+ "gate_F": true,
+ "profile": {
+  "gsm": {
+   "n": 1298,
+   "inclusive_pct": {
+    "ok": 58.9,
+    "conduct": 33.0,
+    "phrasing": 4.9,
+    "unresolved": 3.3,
+    "scaffold": 2.2,
+    "format": 0.5,
+    "mixed": 0.5,
+    "rule": 0.2
+   }
+  },
+  "hard": {
+   "n": 183,
+   "inclusive_pct": {
+    "unresolved": 88.5,
+    "conduct": 8.2,
+    "phrasing": 3.3,
+    "ok": 1.1,
+    "format": 1.1
+   }
+  }
+ }
+}
