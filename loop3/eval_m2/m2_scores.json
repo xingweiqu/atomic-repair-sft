@@ -1,0 +1,365 @@
+{
+ "m2_B_s42_e2": {
+  "answered": 0.9966666666666667,
+  "o_acc": 0.66,
+  "bleed": 0.0,
+  "mute": 0.0033333333333333335,
+  "w_correct": 0.675,
+  "w_adopt": 0.01,
+  "f_ok": 0.6633333333333333,
+  "repair": 0.5958,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.725
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.7625
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6813
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.725
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0333
+ },
+ "m2_B_s42_e4": {
+  "answered": 1.0,
+  "o_acc": 0.6366666666666667,
+  "bleed": 0.0,
+  "mute": 0.0,
+  "w_correct": 0.67,
+  "w_adopt": 0.0075,
+  "f_ok": 0.6033333333333334,
+  "repair": 0.5271,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.6875
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.575
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6312
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.6375
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.025
+ },
+ "m2_B_s43_e2": {
+  "answered": 0.9966666666666667,
+  "o_acc": 0.65,
+  "bleed": 0.0,
+  "mute": 0.0033333333333333335,
+  "w_correct": 0.6875,
+  "w_adopt": 0.0125,
+  "f_ok": 0.6066666666666667,
+  "repair": 0.5896,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.725
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.7125
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6875
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.725
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0208
+ },
+ "m2_B_s43_e4": {
+  "answered": 1.0,
+  "o_acc": 0.5766666666666667,
+  "bleed": 0.0,
+  "mute": 0.0,
+  "w_correct": 0.6025,
+  "w_adopt": 0.015,
+  "f_ok": 0.6033333333333334,
+  "repair": 0.5375,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.625
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.675
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6312
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.6625
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0125
+ },
+ "m2_base": {
+  "answered": 0.73,
+  "o_acc": 0.5866666666666667,
+  "bleed": 0.0,
+  "mute": 0.27,
+  "w_correct": 0.545,
+  "w_adopt": 0.0375,
+  "f_ok": 0.73,
+  "repair": 0.1,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.05
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.1
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.0625
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.025
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.3
+   }
+  },
+  "false_keep": 0.0667
+ },
+ "m2_cleanreplay_s42_e2": {
+  "answered": 0.9966666666666667,
+  "o_acc": 0.6366666666666667,
+  "bleed": 0.0,
+  "mute": 0.0033333333333333335,
+  "w_correct": 0.625,
+  "w_adopt": 0.015,
+  "f_ok": 0.0,
+  "repair": 0.5354,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.6
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.6625
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6375
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.675
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0333
+ },
+ "m2_cleanreplay_s42_e4": {
+  "answered": 1.0,
+  "o_acc": 0.6466666666666666,
+  "bleed": 0.0,
+  "mute": 0.0,
+  "w_correct": 0.64,
+  "w_adopt": 0.0175,
+  "f_ok": 0.0033333333333333335,
+  "repair": 0.5521,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.65
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.6125
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6937
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.6625
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0375
+ },
+ "m2_drl25_s42_e2": {
+  "answered": 0.9933333333333333,
+  "o_acc": 0.65,
+  "bleed": 0.0,
+  "mute": 0.006666666666666667,
+  "w_correct": 0.63,
+  "w_adopt": 0.02,
+  "f_ok": 0.0,
+  "repair": 0.55,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.7125
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.625
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6312
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.7
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0167
+ },
+ "m2_drl25_s42_e4": {
+  "answered": 0.9966666666666667,
+  "o_acc": 0.6,
+  "bleed": 0.0,
+  "mute": 0.0033333333333333335,
+  "w_correct": 0.615,
+  "w_adopt": 0.025,
+  "f_ok": 0.0,
+  "repair": 0.5208,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.525
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.625
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6875
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.6
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0333
+ },
+ "m2_fmt10_s42_e2": {
+  "answered": 0.9933333333333333,
+  "o_acc": 0.64,
+  "bleed": 0.0,
+  "mute": 0.006666666666666667,
+  "w_correct": 0.62,
+  "w_adopt": 0.0175,
+  "f_ok": 0.6466666666666666,
+  "repair": 0.5583,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.6625
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.7
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.6438
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.7
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0125
+ },
+ "m2_fmt10_s42_e4": {
+  "answered": 0.9966666666666667,
+  "o_acc": 0.64,
+  "bleed": 0.0,
+  "mute": 0.0033333333333333335,
+  "w_correct": 0.615,
+  "w_adopt": 0.025,
+  "f_ok": 0.64,
+  "repair": 0.5,
+  "per_policy": {
+   "verify_step": {
+    "n": 80,
+    "acc": 0.45
+   },
+   "override_wrong_claim": {
+    "n": 80,
+    "acc": 0.6
+   },
+   "keep_answer": {
+    "n": 160,
+    "acc": 0.675
+   },
+   "recompute": {
+    "n": 80,
+    "acc": 0.6
+   },
+   "retrieve_or_abstain": {
+    "n": 80,
+    "acc": 0.0
+   }
+  },
+  "false_keep": 0.0625
+ }
+}
