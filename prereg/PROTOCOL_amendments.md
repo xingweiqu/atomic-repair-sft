@@ -9,3 +9,7 @@ v2 判据列作为附注补报。
 ## AM-2 毒校准床移 a 档(2026-07-12,裁决 7;第二票生效)
 M 校准臂固定构造在"只有背过才可能答对"的档位(tier-a 类),
 禁止再挂在 ID 可饱和的规则档(两次天花板无量程:tier-b、bend-e)。
+
+## AM-3 Llama 权重来源(2026-07-13,M1/M2)
+meta-llama 官方库 gated 且服务器无 token;权重取 NousResearch/Meta-Llama-3.1-8B-
+Instruct 非门控镜像(同权重再分发),出处如实披露;PREREG_multimodel 实质不变。
