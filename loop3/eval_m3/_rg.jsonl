@@ -1,0 +1,480 @@
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 15\n}"}
+{"predict": "[\n  \"commit\",\n  8\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 24\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 110\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 6\n  }\n]"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": 156,\n    \"abstain\": false,\n    \"commit\": true,\n    \"final_answer\": 156\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0.5\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 5.0\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 24\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 6\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 44\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 100\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 19\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 2010\n}"}
+{"predict": "I will keep the tentative answer."}
+{"predict": "[\n  \"commit\",\n  15\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 8\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 9\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 160\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 9\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 24\n}"}
+{"predict": "[\n  \"commit\",\n  71\n]"}
+{"predict": "[\n  \"commit\",\n  18\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 6\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 12\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"final_answer\": 79\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 40008\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 100\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 32.5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 13\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 25\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 73\n  }\n]"}
+{"predict": "[\n  \"commit\",\n  317\n]"}
+{"predict": "I will keep the tentative answer."}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 50\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 15\n  }\n]"}
+{"predict": "[\n  \"commit\"\n]"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 8\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 29\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 9\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 48\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 83\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"final_answer\": 9\n  }\n]"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 288\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 109\n}"}
+{"predict": "[\n  \"commit\",\n  178\n]"}
+{"predict": "{\n  \"commit\": \"keep\",\n  \"answer\": 88\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 43\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 56\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 25012,\n  \"abstain\": false,\n  \"final_answer\": 25012\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 34\n}"}
+{"predict": "{\n  \"commit\": \"keep\",\n  \"answer\": -1\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 203\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 18\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 60\n  }\n]"}
+{"predict": "[\n  \"commit\"\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 21\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 60\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 6\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 40\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 8000\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4788\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 10793\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 120\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "[\n  \"commit\",\n  1\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1.25\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final answer\": 900\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 25\n}"}
+{"predict": "{\n  \"commit\": \"abstain\",\n  \"final_answer\": null\n}"}
+{"predict": "[\n  \"update\",\n  1810\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 24\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 28\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 97\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 100\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 32\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 300\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 655\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 120\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 36\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12.46\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 9\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 32\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 26\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 77\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final answer\": 400\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 7\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 3\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"finalAnswer\": 22\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 87\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 25\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3.2\n}"}
+{"predict": "[\n  \"commit\",\n  533\n]"}
+{"predict": "{\n  \"commit\": \"abstain\",\n  \"final_answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "[\n  \"commit\",\n  969\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 25\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 15\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 150000\n}"}
+{"predict": "[\n  \"update\",\n  3\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"final_answer\": 1\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 7\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 7\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "[\n  {\n    \"action\": \"update\",\n    \"answer\": 28\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 2\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 8,\n  \"commit\": true,\n  \"final_answer\": 8\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 73\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 114\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 25\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "[\n  \"commit\",\n  81\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 90\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 200\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 50\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"final_answer\": 7\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"finalAnswer\": 28\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 27\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 19\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 12\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2.10\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 91\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 8\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 9\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 0,\n  \"commit\": true,\n  \"final_answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 50\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2.5\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 50\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 16\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 45\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 120\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 18\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 200,\n  \"commit\": true,\n  \"final_answer\": 200\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 3\n}"}
+{"predict": "{\n  \"commit\": \"keep\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5.00\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 24\n}"}
+{"predict": "[\n  \"commit\",\n  192\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 60\n}"}
+{"predict": "[\n  \"update\",\n  26\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 132,\n  \"commit\": true,\n  \"final_answer\": 132\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 22\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"final_answer\": 40\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 365\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 50\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 80\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 208\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 48\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "[\n  \"commit\",\n  195\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "[\n  \"commit\",\n  1375\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "[\n  \"commit\",\n  6\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 15\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 7.5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 24\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 398,\n  \"commit\": true,\n  \"final_answer\": 398\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 1050\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"finalAnswer\": 50\n}"}
+{"predict": "[\n  \"commit\",\n  2\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0.7\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6400\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "[\n  \"commit\",\n  210\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1.75\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 7\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 17000\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 250\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1210\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 38\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 40\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 70\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 120\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 24\n}"}
+{"predict": "{\n  \"commit\": \"keep\",\n  \"answer\": 1514\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 75\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 18\n}"}
+{"predict": "[\n  \"commit\",\n  3\n]"}
+{"predict": "[\n  \"commit\",\n  30\n]"}
+{"predict": "[\n  \"commit\",\n  13\n]"}
+{"predict": "[\n  \"commit\",\n  28\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 10\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"finalAnswer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 15\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 40\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 7\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 1.6\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"finalAnswer\": 40\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 95206\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 3000,\n  \"commit\": true,\n  \"final_answer\": 3000\n}"}
+{"predict": "[\n  \"commit\",\n  35\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 56\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 600\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 98\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 12.75\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 80\n}"}
+{"predict": "[\n  \"commit\",\n  -2\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 69\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 80\n}"}
+{"predict": "[\n  \"commit\",\n  44\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 24\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 88\n}"}
+{"predict": "[\n  \"commit\",\n  116\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 38\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 50\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 9\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 24\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 8\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 8\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 1202\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 184\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"abstain\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"commit\": \"keep\",\n  \"answer\": 93\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 55\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "[\n  \"commit\",\n  142\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 70\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 5000,\n  \"commit\": true,\n  \"final_answer\": 5000\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 70\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 25\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 15\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "[\n  \"commit\",\n  149\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 141\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 35\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 230\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 540\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 15\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 14\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 15\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"finalAnswer\": 105\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 60\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 8\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 370\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 315\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2000\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6250\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1920\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 17\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1000\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 240000\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 32\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 130\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "[\n  \"commit\",\n  7400\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 19\n}"}
+{"predict": "[\n  {\n    \"commit\": \"update\",\n    \"answer\": 1\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 48\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 150\n  }\n]"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 20\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 8\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 32\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 276\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"finalAnswer\": 70\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 40\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 24\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1500\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 278\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 21\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 102\n}"}
+{"predict": "{\n  \"commit\": \"keep\",\n  \"answer\": 80\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 100\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": null\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 19\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 7\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 46\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 400\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 21\n  }\n]"}
+{"predict": "[\n  \"commit\",\n  25\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 12\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 120\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 28\n}"}
+{"predict": "[\n  \"commit\",\n  2\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 1\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}
+{"predict": "[\n  \"update\",\n  12\n]"}
+{"predict": "I will keep the tentative answer."}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 10\n}"}
+{"predict": "{\n  \"commit\": \"keep\",\n  \"answer\": 12\n}"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": 900\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6277\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 18\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 20\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 630\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 84\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 12\n  }\n]"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 0\n  }\n]"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 225\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0.5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"finalAnswer\": 5\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 1000\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 3\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"5\",\n  \"commit\": true,\n  \"final_answer\": 5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 32\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 85,\n  \"commit\": true,\n  \"final_answer\": 85\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 28\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 54\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 50\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 6\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": 4,\n  \"commit\": true,\n  \"final_answer\": 4\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"2\",\n  \"commit\": true,\n  \"final_answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 23\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 24\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 40\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 4\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 32\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 1\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 72.5\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1000\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 50\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"2\",\n  \"commit\": true,\n  \"final_answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 150\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"5\",\n  \"commit\": true,\n  \"final_answer\": 5\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 9\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 19\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 1.35\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 0\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"2\",\n  \"commit\": true,\n  \"final_answer\": 2\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 2\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 9\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": \"2\",\n  \"final_answer\": 2\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 0\n  }\n]"}
+{"predict": "[\n  {\n    \"action\": \"commit\",\n    \"answer\": null\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": 4,\n  \"final_answer\": 4\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 5\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 7\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 5\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 4\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 6\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 70\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 300\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"30\",\n  \"commit\": true,\n  \"final_answer\": 30\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 120\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": 6,\n  \"final_answer\": 6\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"2\",\n  \"commit\": true,\n  \"final_answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 129\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"2\",\n  \"commit\": true,\n  \"final_answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 36\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 0.2\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": \"10\",\n  \"commit\": true,\n  \"final_answer\": 10\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 20\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 9\n  }\n]"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 30\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 14\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"answer\": 0\n}"}
+{"predict": "[\n  {\n    \"keep\": false,\n    \"update\": true,\n    \"commit\": true,\n    \"answer\": 1\n  }\n]"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 50\n}"}
+{"predict": "{\n  \"keep\": false,\n  \"update\": true,\n  \"commit\": true,\n  \"final_answer\": 170\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 2\n}"}
+{"predict": "{\n  \"commit\": \"update\",\n  \"answer\": 6\n}"}

@@ -64,6 +64,8 @@ def score_repair(pred_path, src, matchfn):
     for i in range(n):
         r, raw = src[i], preds[i]
         o, pol = parse(raw), r["policy"]
+        if not isinstance(o, dict):
+            o = None  # bare scalar/list parses are not the decision contract (same guard family as is_abstain_strict)
         if pol == "retrieve_or_abstain":
             per_policy[pol].append(int(is_abstain_strict(o, raw)))
             continue

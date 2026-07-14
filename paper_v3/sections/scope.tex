@@ -23,15 +23,15 @@ Diagnostic profile (8 probes) & full (Fig.~\ref{fig:profile}) & \checkmark & \ch
 Repair training, computation domain & full ($\sim$100 runs) & --- & miniature (10 runs) \\
 Repair training, knowledge domain & 3-seed miniature & --- & --- \\
 Two-genre validation & both domains & --- & computation \\
-Activation steering & full + zero-data arm & --- & direction transfer (M3) \\
+Activation steering & full + zero-data arm & --- & attempted; did not transfer \\
 Teachability boundary (7 tiers) & \checkmark (synthetic domain) & --- & --- \\
 \bottomrule
 \end{tabular}
 \caption{Coverage matrix. ``---'' cells are declared out of scope, not
 omissions; miniatures are preregistered with their own scorecard entries,
-including the one cross-model prediction that did not replicate (drills
-toxicity is absent on Llama at the 25\% dose --- reported in
-\S\ref{sec:genre}, scope-narrowing the prescription's toxicity rule to where
-it was measured).}
+including the two cross-model results that did not replicate: drills toxicity
+is absent on Llama at the 25\% dose, and the steering direction recipe does
+not transfer to Llama (global degradation; the separability claim is scoped to
+the Qwen family). Both are reported in the body, not buried.}
 \label{tab:scope}
 \end{table}

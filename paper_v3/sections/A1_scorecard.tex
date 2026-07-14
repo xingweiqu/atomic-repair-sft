@@ -42,6 +42,11 @@ Prereg & Prediction & Outcome & Verdict \\
  & conduct bucket $\approx$94\% & 68\% $<$ placebo (resist-vs-correct mismatch) & \textbf{MISS} \\
  & repair genre $<$$+$10pp & $+$42.7pp, above all trained arms & \textbf{MISS}$^{*}$ \\
 \midrule
+\multirow{3}{*}{M2/M3 (cross-model)}
+ & Llama: floor + format-component replicate & both replicate (format = loss-prevention) & 2 HIT \\
+ & Llama: drills toxicity replicates & absent at 25\% dose & \textbf{MISS} \\
+ & Llama: steering direction transfers & global degradation; CL-3 scoped to Qwen & \textbf{MISS} \\
+\midrule
 E1 (data size) & targeted $N{\leq}300$ suffices; random unstable & mute-wave artifact; measure replaced & \textbf{hard stop} \\
 \bottomrule
 \end{tabular}
