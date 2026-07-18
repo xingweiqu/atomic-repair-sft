@@ -27,8 +27,15 @@ JSON output constraint (\textbf{F}). Assistance and misinformation probes are
 validated by leakage filters (scaffolds and rules must contain no digits and
 no problem entities); every probe type passed a manual construct audit of 100
 items per type with a preregistered $\geq$70\% acceptance gate. The pool is
-GSM8K test (1{,}300 items) plus a filtered GSM-hard bucket; 330 items with
-negative or non-integer golds are excluded from probe construction.
+GSM8K test (1{,}300 items) plus a filtered GSM-hard bucket. A coherence filter
+excludes 330 items whose gold answer is negative (115) or non-integer (215) ---
+all but two from GSM-hard, whose number-substitution construction mechanically
+produces answers that contradict the story's semantics (a negative count of
+objects); on such items neither ``the model failed'' nor a plausible planted
+wrong value is well-defined, since the misinformation probes require a
+same-type plausible value ($w>0$, $w/\text{gold} \in [0.2, 5]$). The
+diagnosis is therefore scoped to well-formed positive-integer word problems
+(\S\ref{sec:scope}).
 
 \begin{table}[t]
 \centering\small
