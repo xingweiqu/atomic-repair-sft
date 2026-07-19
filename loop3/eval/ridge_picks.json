@@ -129,6 +129,32 @@
   "transfer_acc": 0.87,
   "epoch": 2
  },
+ "D_s43": {
+  "ckpt": "l3_D_s43_e2",
+  "answered": 0.9866666666666667,
+  "o_acc": 0.7166666666666667,
+  "w_rescue": 0.7575,
+  "w_adopt": 0.0225,
+  "w_derail": 0.2175,
+  "w_mute": 0.0025,
+  "bleed": 0.0,
+  "mute": 0.0,
+  "transfer_acc": 0.8166666666666667,
+  "epoch": 2
+ },
+ "D_s44": {
+  "ckpt": "l3_D_s44_e2",
+  "answered": 0.99,
+  "o_acc": 0.7266666666666667,
+  "w_rescue": 0.755,
+  "w_adopt": 0.02,
+  "w_derail": 0.225,
+  "w_mute": 0.0,
+  "bleed": 0.0,
+  "mute": 0.0,
+  "transfer_acc": 0.8433333333333334,
+  "epoch": 2
+ },
  "cleanreplay_s42": {
   "ckpt": "l3_cleanreplay_s42_e4",
   "answered": 0.99,
@@ -246,6 +272,76 @@
   "transfer_acc": 0.6966666666666667,
   "epoch": 4
  },
+ "single_drills_s43": {
+  "no_clean_point": true,
+  "detail": [
+   {
+    "ckpt": "l3_single_drills_s43_e2",
+    "answered": 0.8833333333333333,
+    "o_acc": 0.73,
+    "w_rescue": 0.7125,
+    "w_adopt": 0.045,
+    "w_derail": 0.1675,
+    "w_mute": 0.075,
+    "bleed": 0.0,
+    "mute": 0.016666666666666666,
+    "transfer_acc": 0.9,
+    "epoch": 2
+   },
+   {
+    "ckpt": "l3_single_drills_s43_e4",
+    "answered": 0.9133333333333333,
+    "o_acc": 0.6166666666666667,
+    "w_rescue": 0.4975,
+    "w_adopt": 0.0975,
+    "w_derail": 0.335,
+    "w_mute": 0.07,
+    "bleed": 0.0,
+    "mute": 0.04,
+    "transfer_acc": 0.7366666666666667,
+    "epoch": 4
+   },
+   {
+    "ckpt": "l3_single_drills_s43_e8",
+    "answered": 0.8533333333333334,
+    "o_acc": 0.5233333333333333,
+    "w_rescue": 0.3875,
+    "w_adopt": 0.1725,
+    "w_derail": 0.3775,
+    "w_mute": 0.0625,
+    "bleed": 0.0,
+    "mute": 0.17333333333333334,
+    "transfer_acc": 0.5533333333333333,
+    "epoch": 8
+   },
+   {
+    "ckpt": "l3_single_drills_s43_e16",
+    "answered": 0.8333333333333334,
+    "o_acc": 0.37333333333333335,
+    "w_rescue": 0.2975,
+    "w_adopt": 0.24,
+    "w_derail": 0.4525,
+    "w_mute": 0.01,
+    "bleed": 0.0,
+    "mute": 0.09333333333333334,
+    "transfer_acc": 0.5166666666666667,
+    "epoch": 16
+   }
+  ]
+ },
+ "single_drills_s44": {
+  "ckpt": "l3_single_drills_s44_e4",
+  "answered": 0.9666666666666667,
+  "o_acc": 0.4633333333333333,
+  "w_rescue": 0.285,
+  "w_adopt": 0.235,
+  "w_derail": 0.47,
+  "w_mute": 0.01,
+  "bleed": 0.0,
+  "mute": 0.01,
+  "transfer_acc": 0.6866666666666666,
+  "epoch": 4
+ },
  "single_format_s42": {
   "no_clean_point": true,
   "detail": [
@@ -341,5 +437,31 @@
   "mute": 0.03,
   "transfer_acc": 0.7833333333333333,
   "epoch": 2
+ },
+ "single_scaffold_s43": {
+  "ckpt": "l3_single_scaffold_s43_e4",
+  "answered": 0.95,
+  "o_acc": 0.7333333333333333,
+  "w_rescue": 0.74,
+  "w_adopt": 0.0175,
+  "w_derail": 0.2125,
+  "w_mute": 0.03,
+  "bleed": 0.0,
+  "mute": 0.01,
+  "transfer_acc": 0.88,
+  "epoch": 4
+ },
+ "single_scaffold_s44": {
+  "ckpt": "l3_single_scaffold_s44_e4",
+  "answered": 0.9866666666666667,
+  "o_acc": 0.76,
+  "w_rescue": 0.7475,
+  "w_adopt": 0.015,
+  "w_derail": 0.1975,
+  "w_mute": 0.04,
+  "bleed": 0.0,
+  "mute": 0.006666666666666667,
+  "transfer_acc": 0.87,
+  "epoch": 4
  }
 }

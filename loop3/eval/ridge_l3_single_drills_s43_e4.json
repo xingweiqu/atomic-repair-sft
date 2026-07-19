@@ -1,0 +1,12 @@
+{
+ "ckpt": "l3_single_drills_s43_e4",
+ "answered": 0.9133333333333333,
+ "o_acc": 0.6166666666666667,
+ "w_rescue": 0.4975,
+ "w_adopt": 0.0975,
+ "w_derail": 0.335,
+ "w_mute": 0.07,
+ "bleed": 0.0,
+ "mute": 0.04,
+ "transfer_acc": 0.7366666666666667
+}
