@@ -162,12 +162,17 @@ def cmd_full(args):
     import torch, random
     from steering.e5_steering import load_model
     i, n = map(int, args.shard.split(":"))
-    outp = OUT / f"full_shard{i}.jsonl"
+    tag2 = "full2" if (OUT / "scan2_verdict.json").exists() else "full"
+    outp = OUT / f"{tag2}_shard{i}.jsonl"
     if outp.exists():
         print(f"skip {i}")
         return
-    scan = json.loads((OUT / "scan.json").read_text())
-    L, a = scan["best"].replace("L", "").split("_a")
+    v2 = OUT / "scan2_verdict.json"
+    if v2.exists() and json.loads(v2.read_text()).get("best_qualified"):
+        best = json.loads(v2.read_text())["best_qualified"]
+    else:
+        best = json.loads((OUT / "scan.json").read_text())["best"]
+    L, a = best.replace("L", "").split("_a")
     L, a = int(L), int(a)
     dirs = torch.load(OUT / "directions_llama.pt", weights_only=False)["directions"]
     jobs = []
@@ -202,8 +207,9 @@ def cmd_full(args):
 
 def cmd_score(_):
     from gsm_repair_v4.evaluate_gsm import score_repair, load_jsonl, numkey
+    pat = "full2_shard*.jsonl" if glob.glob(str(OUT / "full2_shard*.jsonl")) else "full_shard*.jsonl"
     rows = []
-    for f in sorted(glob.glob(str(OUT / "full_shard*.jsonl"))):
+    for f in sorted(glob.glob(str(OUT / pat))):
         rows += [json.loads(l) for l in Path(f).open()]
     W = [r for r in rows if r["probe"] in ("W1", "W2")]
     O = [r for r in rows if r["probe"] == "O"]
@@ -229,7 +235,8 @@ def cmd_score(_):
     out = dict(W_n=len(W), resist=res / len(W), adopt=ad / len(W),
                ability_given_resist=cor / max(res, 1), O_acc=o_acc,
                repair=rep["overall"], per_policy=rep["per_policy"])
-    (OUT / "m3_result.json").write_text(json.dumps(out, indent=1))
+    name = "m3v2_result.json" if glob.glob(str(OUT / "full2_shard*.jsonl")) else "m3_result.json"
+    (OUT / name).write_text(json.dumps(out, indent=1))
     print(json.dumps(out, indent=1))
 
 
