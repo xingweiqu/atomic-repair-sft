@@ -233,10 +233,58 @@ def cmd_score(_):
     print(json.dumps(out, indent=1))
 
 
+def cmd_scan2(args):
+    """E-15b v2: full-layer x fine-alpha scan, sharded by layer (PREREG_c15)."""
+    import torch, random
+    from steering.e5_steering import load_model
+    i, n = map(int, args.shard.split(":"))
+    outp = OUT / f"scan2_shard{i}.json"
+    if outp.exists():
+        print(f"skip scan2 shard {i}")
+        return
+    dirs, _ = merged_dirs()
+    layers = list(range(4, 31, 2))[i::n]
+    rows = []
+    for t2 in ("W1", "W2"):
+        rows += [json.loads(l) for l in (ROOT / f"probes/data/base_{t2}.jsonl").open()]
+    random.Random(42).shuffle(rows)
+    sub = rows[:96]
+    tok, model = load_model(MODEL)
+    grid = {}
+    if i == 0:
+        grid["base"] = eval_w(tok, model, sub)
+    for L in layers:
+        for a in (2, 4, 6, 8):
+            grid[f"L{L}_a{a}"] = eval_w(tok, model, sub, steer=(L, dirs[L], a))
+            print(f"L{L} a{a}", grid[f"L{L}_a{a}"], flush=True)
+    outp.write_text(json.dumps(grid, indent=1))
+
+
+def cmd_merge2(_):
+    grid = {}
+    for f in sorted(glob.glob(str(OUT / "scan2_shard*.json"))):
+        grid.update(json.loads(Path(f).read_text()))
+    base = grid["base"]
+    # qualification rule (E-arm autopsy (d)): no global-degradation candidates
+    qual = {k: v for k, v in grid.items() if k != "base"
+            and v["ability_given_resist"] >= base["ability_given_resist"] - 0.05
+            and v["answered"] >= base["answered"] - 0.05}
+    best = max(qual, key=lambda k: qual[k]["resist"]) if qual else None
+    verdict = ("QUALIFIED " + best) if (best and qual[best]["resist"] >= base["resist"] + 0.10) \
+        else ("NEGATIVE" if not qual else f"QUAL_BUT_FLAT {best}")
+    (OUT / "scan2_verdict.json").write_text(json.dumps(
+        {"base": base, "n_points": len(grid) - 1, "n_qualified": len(qual),
+         "best_qualified": best, "best_stats": qual.get(best), "verdict": verdict}, indent=1))
+    print("VERDICT:", verdict)
+    if best:
+        print("best:", best, qual[best])
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["extract", "scan", "full", "score"])
+    ap.add_argument("cmd", choices=["extract", "scan", "scan2", "merge2", "full", "score"])
     ap.add_argument("--shard", default="0:1")
     a = ap.parse_args()
     OUT.mkdir(exist_ok=True)
-    {"extract": cmd_extract, "scan": cmd_scan, "full": cmd_full, "score": cmd_score}[a.cmd](a)
+    {"extract": cmd_extract, "scan": cmd_scan, "scan2": cmd_scan2, "merge2": cmd_merge2,
+     "full": cmd_full, "score": cmd_score}[a.cmd](a)
