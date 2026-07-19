@@ -1,0 +1,32 @@
+{
+ "4": {
+  "O_acc": 0.8233,
+  "answered": 0.9733,
+  "mute": 0.0267,
+  "bleed": 0.0,
+  "resist": 0.86,
+  "adopt": 0.015,
+  "repair": 0.7604,
+  "false_keep": 0.0167
+ },
+ "6": {
+  "O_acc": 0.8067,
+  "answered": 0.9633,
+  "mute": 0.0367,
+  "bleed": 0.0,
+  "resist": 0.8725,
+  "adopt": 0.0075,
+  "repair": 0.7708,
+  "false_keep": 0.0083
+ },
+ "8": {
+  "O_acc": 0.82,
+  "answered": 0.95,
+  "mute": 0.05,
+  "bleed": 0.0,
+  "resist": 0.8725,
+  "adopt": 0.01,
+  "repair": 0.7604,
+  "false_keep": 0.0167
+ }
+}

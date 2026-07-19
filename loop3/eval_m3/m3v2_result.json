@@ -1,0 +1,30 @@
+{
+ "W_n": 400,
+ "resist": 0.7175,
+ "adopt": 0.03,
+ "ability_given_resist": 0.8432055749128919,
+ "O_acc": 0.5566666666666666,
+ "repair": 0.0583,
+ "per_policy": {
+  "verify_step": {
+   "n": 80,
+   "acc": 0.025
+  },
+  "override_wrong_claim": {
+   "n": 80,
+   "acc": 0.075
+  },
+  "keep_answer": {
+   "n": 160,
+   "acc": 0.0375
+  },
+  "recompute": {
+   "n": 80,
+   "acc": 0.0
+  },
+  "retrieve_or_abstain": {
+   "n": 80,
+   "acc": 0.175
+  }
+ }
+}
