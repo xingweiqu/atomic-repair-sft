@@ -132,6 +132,8 @@ def fig4():
     own = {"conduct": "REd_conduct", "phrasing": "REd_phrasing",
            "scaffold": "REd_scaffold", "rule": "REd_rule", "drills": "REd_conduct"}
     fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.8))
+    multi = {"scaffold": ["single_scaffold_s42_e2", "single_scaffold_s43_e4", "single_scaffold_s44_e4"],
+             "drills": ["single_drills_s42_e4", "single_drills_s44_e4"]}
     ax = axes[0]
     pl = row("cleanreplay_s42_e4")
     for i, c in enumerate(comps):
@@ -139,19 +141,25 @@ def fig4():
             ax.bar(i, 0, color="none", edgecolor=OKABE["format_"], hatch="//")
             ax.text(i, 3, "no clean\npoint", ha="center", fontsize=7)
             continue
-        r = row(single[c])
-        v = 100 * (r[own[c]] - pl[own[c]])
-        ax.bar(i, v, color=OKABE.get(c, OKABE.get(c + "_", "#333")),
-               edgecolor="k", linewidth=.5)
+        col = OKABE.get(c, OKABE.get(c + "_", "#333"))
+        if c in multi:
+            vs = [100 * (row(k)[own[c]] - pl[own[c]]) for k in multi[c]]
+            m = sum(vs) / len(vs)
+            ax.bar(i, m, color=col, edgecolor="k", linewidth=.5,
+                   yerr=[[m - min(vs)], [max(vs) - m]], capsize=3)
+        else:
+            r = row(single[c])
+            v = 100 * (r[own[c]] - pl[own[c]])
+            ax.bar(i, v, color="none", edgecolor=col, linewidth=1.5)
     ax.axhline(0, color="k", lw=1)
     ax.set_xticks(range(len(comps))); ax.set_xticklabels(comps, rotation=30, fontsize=7)
     ax.set_ylabel("own-bucket rescue, Δ placebo (pp)")
-    ax.set_title("(a) single components (single seed, hollow)")
+    ax.set_title("(a) single components (hollow = single seed)")
     ax = axes[1]
     fams = [("A1", ["A1_s42_e4", "A1_s43_e4", "A1_s44_e4"], True),
             ("B", ["B_s42_e2", "B_s43_e4", "B_s44_e2"], True),
             ("C", ["C_s42_e2", "C_s43_e2", "C_s44_e2"], True),
-            ("D", ["D_s42_e2"], False),
+            ("D", ["D_s42_e2", "D_s43_e2", "D_s44_e2"], True),
             ("placebo", ["cleanreplay_s42_e4"], False)]
     if "E_steer_e0" in GS:  # zero-data steering anchor (PREREG_e_arm), lands when E-arm harvested
         fams.append(("E steer\n(0 data)", ["E_steer_e0"], False))
@@ -227,21 +235,20 @@ def fig5():
 
 # ---------------------------------------------------------------- fig 6
 def fig6():
-    fig, axes = plt.subplots(1, 3, figsize=(7.0, 2.6))
+    fig, axes = plt.subplots(1, 2, figsize=(5.2, 2.6))
     genres = ["plain", "repair"]
     ax = axes[0]
-    plain = [2.3, 6.7, 5.7]   # mean Δ placebo REd_conduct A1/B/D  (batch1_scores)
-    a1 = [100 * (sum(row(k)["REd_conduct"] for k in ["A1_s42_e4", "A1_s43_e4", "A1_s44_e4"]) / 3
-                 - row("cleanreplay_s42_e4")["REd_conduct"])]
-    b_ = [100 * (sum(row(k)["REd_conduct"] for k in ["B_s42_e2", "B_s43_e4", "B_s44_e2"]) / 3
-                 - row("cleanreplay_s42_e4")["REd_conduct"])]
+    a1 = 100 * (sum(row(k)["REd_conduct"] for k in ["A1_s42_e4", "A1_s43_e4", "A1_s44_e4"]) / 3
+                - row("cleanreplay_s42_e4")["REd_conduct"])
+    b_ = 100 * (sum(row(k)["REd_conduct"] for k in ["B_s42_e2", "B_s43_e4", "B_s44_e2"]) / 3
+                - row("cleanreplay_s42_e4")["REd_conduct"])
     rp_a1 = 100 * (sum(GS[k]["overall"] for k in ["A1_s42_e4", "A1_s43_e4", "A1_s44_e4"]) / 3
                    - GS["cleanreplay_s42_e4"]["overall"])
     rp_b = 100 * (sum(GS[k]["overall"] for k in ["B_s42_e2", "B_s43_e4", "B_s44_e2"]) / 3
                   - GS["cleanreplay_s42_e4"]["overall"])
     x = [0, 1]
-    ax.bar([i - .18 for i in x], [a1[0], rp_a1], width=.36, color=OKABE["A1"], label="A1")
-    ax.bar([i + .18 for i in x], [b_[0], rp_b], width=.36, color=OKABE["B"], label="B")
+    ax.bar([i - .18 for i in x], [a1, rp_a1], width=.36, color=OKABE["A1"], label="A1")
+    ax.bar([i + .18 for i in x], [b_, rp_b], width=.36, color=OKABE["B"], label="B")
     ax.set_xticks(x); ax.set_xticklabels(genres)
     ax.set_ylabel("Δ placebo (pp)"); ax.legend(fontsize=7)
     ax.set_title("(i) gain visibility")
@@ -255,27 +262,19 @@ def fig6():
     ax.set_xticks([-.18, .82]); ax.set_xticklabels(genres)
     ax.set_ylabel("harm at 25% dose (pp)")
     ax.set_title("(ii) drills harm")
-    ax = axes[2]
-    sc_plain = 100 * (row("single_scaffold_s42_e2")["REd_format"]
-                      - row("cleanreplay_s42_e4")["REd_format"])
-    sc_rep = 100 * (GS["single_scaffold_s42_e2"]["overall"] - GS["cleanreplay_s42_e4"]["overall"])
-    ax.bar([0, 1], [sc_plain, sc_rep], width=.5,
-           color=[OKABE["scaffold"], OKABE["scaffold"]])
-    ax.axhline(0, color="k", lw=1)
-    ax.set_xticks([0, 1]); ax.set_xticklabels(genres)
-    ax.set_ylabel("scaffold effect (pp)")
-    ax.set_title("(iii) benefit sign flips")
     fig.tight_layout()
     save(fig, "fig6_genre",
-         "Genre gating: three independent measurements in which the evaluation genre "
+         "Genre gating: independent measurements in which the evaluation genre "
          "switches the effect. (i) Repair-component gains are visible in the repair "
-         "genre (+10-16pp over placebo) but not on plain items (+2-7pp). (ii) Drills "
-         "harm at 25% dose appears only in the repair genre. (iii) The scaffold "
-         "component's effect flips sign between genres (single seed; scafffmt "
-         "attribution is a known limitation).",
+         "genre (+10-16pp over placebo, 3 seeds) but not on plain items (+2-7pp). "
+         "(ii) Drills harm at a 25% dose appears only in the repair genre. A third "
+         "GSM case (scaffold benefit sign flip) was single-seed and failed "
+         "replication at healthy operating points; it is retired to the appendix. "
+         "The 2Wiki domain reverses the revealing genre (Fig. 8), completing the "
+         "(domain x genre) claim.",
          ["loop3/eval/batch1_scores.json", "loop3/eval/genre_scores.json",
-          "notes/NOTES_b2_0b_genre.md", "notes/NOTES_batch2_dose.md"],
-         "CL-6")
+          "notes/NOTES_b2_0b_genre.md", "notes/NOTES_c15a.md (retirement)"],
+         "CL-6 (revised per 2026-07-20 ruling)")
 
 
 # ---------------------------------------------------------------- fig 7

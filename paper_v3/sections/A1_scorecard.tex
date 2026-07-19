@@ -47,6 +47,11 @@ Prereg & Prediction & Outcome & Verdict \\
  & Llama: drills toxicity replicates & absent at 25\% dose & \textbf{MISS} \\
  & Llama: steering direction transfers & global degradation; CL-3 scoped to Qwen & \textbf{MISS} \\
 \midrule
+\multirow{3}{*}{C-15 (foundations)}
+ & D / drills replicate under new seeds & both replicate (D $.710{\pm}.009$) & 2 HIT \\
+ & scaffold sign-flip replicates & 2/3 seeds reverse at healthy ridge & \textbf{REVERSE} \\
+ & Llama lever at deeper layers; plain cost $\leq$3pp & $+17.3$ / flat / $-3.03$pp (9 items) & 2 HIT + \textbf{MISS} \\
+\midrule
 E1 (data size) & targeted $N{\leq}300$ suffices; random unstable & mute-wave artifact; measure replaced & \textbf{hard stop} \\
 \bottomrule
 \end{tabular}
@@ -59,6 +64,12 @@ genre-gating result (\S\ref{sec:genre}); the $\Delta W$ miss reframed ``reverse
 vaccine'' as behavioural-only (COR-3).}
 \label{tab:scorecard}
 \end{table}
+
+\paragraph{Single-seed retirements.} Two single-seed observations failed
+replication and are retired rather than defended: the abstain-policy ordering
+anomaly (collapsed into seed variance) and the scaffold genre sign-flip
+(reversed at healthy operating points; the original observation came from a
+marginal-health checkpoint). The hollow-bar rule exists for exactly this.
 
 \paragraph{Abstain variance warning.} The retrieve-or-abstain policy is the highest
 seed-variance column in the study (uniform arm across three seeds: .34/.15/.45); a

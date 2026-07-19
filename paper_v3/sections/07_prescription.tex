@@ -16,8 +16,10 @@ leaves no clean operating point (mute-side collapse); 100\% drills teaches
 adoption of planted values ($W_{\text{adopt}}$ 25\%).
 \item \textbf{Ratios do not matter; uniform coverage suffices.} Matched
 ratios never exceeded uniform in any reading.
-\item \textbf{For decision-class repairs, steering is first-line; SFT is
-second-line.} Keep-style and override-style supervision are structurally
+\item \textbf{For decision-class repairs: three tiers.} Steering is
+first-line \emph{only when the model already honours the target genre
+contract}; when the contract is absent, install it first with minimal SFT,
+then steer. Keep-style and override-style supervision are structurally
 mutually exclusive in a data mixture, so SFT pays a keep-collapse tax that an
 activation direction does not (E arm: .760, above every trained arm, entirely
 from the decision policies). SFT remains the choice when 99\%+ reliability is

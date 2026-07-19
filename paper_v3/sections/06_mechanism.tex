@@ -48,7 +48,15 @@ structurally mutually exclusive in a data mixture (the dose law), so SFT must
 choose and pay the keep collapse. The activation direction does not pay that
 tax. Interference that cannot be repaired at the data level can be bypassed at
 the activation level --- the paper's closing finding, and the reason steering
-is first-line for decision-class repairs in \S\ref{sec:prescription} ---
-within the Qwen family: the same extraction recipe does not transfer to
-Llama-3.1-8B (global degradation; Table~\ref{tab:scope}), and the claim is
-scoped accordingly.
+is first-line for decision-class repairs in \S\ref{sec:prescription}. The
+claim splits into two layers across model families. The \emph{lever} transfers:
+on Llama-3.1-8B a full-layer scan finds the decision direction at layer 22
+(deeper than Qwen's layer 12; a depth correspondence we leave as future work),
+with resist $+17.3$pp, computation flat, and a plain-genre cost of $3.0$pp that
+mechanically misses our preregistered $\leq$3pp gate by 9 items in 300 ---
+scored as a miss. The \emph{dividend} does not transfer: the zero-data
+repair-genre win presupposes a model that already honours the output contract,
+and Llama, whose base contract is absent, gains nothing there (.058). On the
+cost side, the steering strength is a curve, not a cliff: sweeping
+$\alpha \in \{4,6,8\}$ gives a sweet spot at $\alpha{=}6$ (repair .771,
+mute 3.7\%), with mute rising monotonically in $\alpha$.
