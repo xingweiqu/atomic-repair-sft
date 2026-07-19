@@ -1,0 +1,34 @@
+{
+ "g3_cleanreplay": {
+  "file_name": "arm_g3_cleanreplay.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "g3_U": {
+  "file_name": "arm_g3_U.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "g3_fmt10": {
+  "file_name": "arm_g3_fmt10.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "g3_drl25": {
+  "file_name": "arm_g3_drl25.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
+}
