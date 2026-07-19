@@ -27,14 +27,16 @@ from probes.profile_classify import pf_plain, pf_json  # noqa: E402
 from loop3.eval_arms import probe_rows  # noqa: E402
 from loop3.genre_eval import INSTR as REPAIR_INSTR  # noqa: E402
 
-HDFS = "/mnt/hdfs/xwqu/m2/output"
-BASE = "/opt/tiger/models_mm/Llama-3.1-8B-Instruct"
-OUT = ROOT / "loop3/eval_m2"
+import os
+HDFS = os.environ.get("M2_HDFS", "/mnt/hdfs/xwqu/m2/output")
+BASE = os.environ.get("M2_BASE", "/opt/tiger/models_mm/Llama-3.1-8B-Instruct")
+OUT = ROOT / os.environ.get("M2_OUT", "loop3/eval_m2")
+PREFIX = os.environ.get("M2_PREFIX", "m2")
 
 
 def ckpts():
-    out = [("m2_base", BASE)]
-    for d in sorted(glob.glob(f"{HDFS}/m2_*")):
+    out = [(f"{PREFIX}_base", BASE)]
+    for d in sorted(glob.glob(f"{HDFS}/{PREFIX}_*")):
         if Path(d, "config.json").exists():
             out.append((Path(d).name, d))
     return out
@@ -121,7 +123,7 @@ def cmd_score(_):
         print(f"{tag:22}{r0['answered']:>9.2f}{r0['o_acc']:>7.2f}{r0['bleed']:>7.3f}"
               f"{r0['mute']:>6.2f}{r0['w_correct']:>7.2f}{r0['w_adopt']:>8.3f}"
               f"{r0['f_ok']:>6.2f}{r0['repair']:>8.3f}")
-    (OUT / "m2_scores.json").write_text(json.dumps(res, indent=1))
+    (OUT / f"{PREFIX}_scores.json").write_text(json.dumps(res, indent=1))
 
 
 if __name__ == "__main__":
