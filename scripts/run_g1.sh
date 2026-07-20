@@ -4,7 +4,7 @@ source ~/atomic_env.sh
 cd /opt/tiger/atomic-repair-sft-github || exit 1
 export HF_HUB_DISABLE_XET=1
 if [ ! -f /opt/tiger/models_mm/Mistral-7B-Instruct-v0.3/config.json ]; then
-  huggingface-cli download mistralai/Mistral-7B-Instruct-v0.3 --local-dir /opt/tiger/models_mm/Mistral-7B-Instruct-v0.3 > /tmp/dl_mistral.log 2>&1 || { echo "G1_DL_FAIL"; exit 1; }
+  huggingface-cli download mistralai/Mistral-7B-Instruct-v0.3 --local-dir /opt/tiger/models_mm/Mistral-7B-Instruct-v0.3 --exclude "consolidated.safetensors" "original/*" > /tmp/dl_mistral.log 2>&1 || { echo "G1_DL_FAIL"; exit 1; }
 fi
 echo "G1_DL_OK"
 unset FORCE_TORCHRUN NPROC_PER_NODE
