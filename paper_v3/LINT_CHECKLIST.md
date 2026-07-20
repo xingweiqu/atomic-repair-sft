@@ -6,3 +6,4 @@
    投稿时换官方 2027 kit + \iclrfinalcopy)。
 
 5. **truth table 反向巡检通过**(paper/CLAIM_TRUTH_TABLE.md ↔ abstract/正文/caption/Scope/Appendix 一致;C-17 永久项)。
+6. **禁令措辞跨行扫描 PASS**(python3 lint_banned.py;C-17 验收教训:换行断词躲过单行 grep)。
