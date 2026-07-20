@@ -43,7 +43,9 @@ def cmd_gen(args):
         return
     jobs = rows_all()[i::n]
     from vllm import LLM, SamplingParams
-    llm = LLM(model=args.model, dtype="bfloat16", max_model_len=8192)
+    import os
+    llm = LLM(model=args.model, dtype="bfloat16", max_model_len=8192,
+              tensor_parallel_size=int(os.environ.get("TP", "1")))
     sp = SamplingParams(temperature=0.0, max_tokens=1024)
     msgs = [[{"role": "user", "content": f"{r['instr']}\n{r['user']}"}] for _, r in jobs]
     outs = llm.chat(msgs, sp, chat_template_kwargs={"enable_thinking": False})

@@ -25,9 +25,10 @@ sys.path.insert(0, str(ROOT))
 from textlint import numnorm  # noqa: E402
 from probes.profile_classify import pf_plain  # noqa: E402
 
-MODEL = "/opt/tiger/models_mm/Llama-3.1-8B-Instruct"
-OUT = ROOT / "loop3/eval_m3"
-MM = ROOT / "probes/out_mm/llama31_8b"
+import os
+MODEL = os.environ.get("M3_MODEL", "/opt/tiger/models_mm/Llama-3.1-8B-Instruct")
+OUT = ROOT / os.environ.get("M3_OUT", "loop3/eval_m3")
+MM = ROOT / os.environ.get("M3_MM", "probes/out_mm/llama31_8b")
 LAYERS_SCAN = [8, 12, 16]
 ALPHAS = [4, 8, 16]
 
