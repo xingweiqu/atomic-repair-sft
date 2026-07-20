@@ -1,0 +1,33 @@
+{
+ "tag": "mistral7b",
+ "O_answered": 0.6057,
+ "F_schema_valid": 0.9305,
+ "gate_F": true,
+ "profile": {
+  "gsm": {
+   "n": 1298,
+   "inclusive_pct": {
+    "unresolved": 27.6,
+    "conduct": 22.0,
+    "format": 20.3,
+    "phrasing": 18.3,
+    "scaffold": 8.6,
+    "ok": 5.5,
+    "mixed": 5.1,
+    "rule": 3.1,
+    "local_exec": 0.5
+   }
+  },
+  "hard": {
+   "n": 183,
+   "inclusive_pct": {
+    "unresolved": 92.3,
+    "phrasing": 4.4,
+    "conduct": 1.6,
+    "format": 1.6,
+    "ok": 0.5,
+    "mixed": 0.5
+   }
+  }
+ }
+}
