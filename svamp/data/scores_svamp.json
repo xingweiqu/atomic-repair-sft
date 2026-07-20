@@ -1,0 +1,135 @@
+{
+ "g3_U_s42_e2": {
+  "profile": {
+   "phrasing": 55,
+   "ok": 123,
+   "fail_O": 47,
+   "conduct_derail": 56,
+   "format": 19
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.6866666666666666,
+   "false_keep": 0.02
+  }
+ },
+ "g3_U_s42_e4": {
+  "profile": {
+   "ok": 218,
+   "conduct_derail": 24,
+   "fail_O": 40,
+   "phrasing": 11,
+   "format": 6,
+   "conduct_adopt": 1
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.73,
+   "false_keep": 0.12666666666666668
+  }
+ },
+ "g3_base": {
+  "profile": {
+   "ok": 243,
+   "conduct_derail": 19,
+   "format": 8,
+   "phrasing": 13,
+   "fail_O": 16,
+   "conduct_adopt": 1
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.6533333333333333,
+   "false_keep": 0.02
+  }
+ },
+ "g3_cleanreplay_s42_e2": {
+  "profile": {
+   "ok": 211,
+   "fail_O": 39,
+   "conduct_adopt": 8,
+   "format": 3,
+   "phrasing": 26,
+   "conduct_derail": 13
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.7433333333333333,
+   "false_keep": 0.006666666666666667
+  }
+ },
+ "g3_cleanreplay_s42_e4": {
+  "profile": {
+   "ok": 233,
+   "fail_O": 43,
+   "phrasing": 16,
+   "conduct_derail": 6,
+   "format": 2
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.8133333333333334,
+   "false_keep": 0.013333333333333334
+  }
+ },
+ "g3_drl25_s42_e2": {
+  "profile": {
+   "ok": 138,
+   "fail_O": 63,
+   "phrasing": 68,
+   "conduct_derail": 23,
+   "format": 3,
+   "conduct_adopt": 5
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.7066666666666667,
+   "false_keep": 0.0
+  }
+ },
+ "g3_drl25_s42_e4": {
+  "profile": {
+   "ok": 219,
+   "fail_O": 41,
+   "phrasing": 27,
+   "conduct_derail": 11,
+   "conduct_adopt": 1,
+   "format": 1
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.8166666666666667,
+   "false_keep": 0.02
+  }
+ },
+ "g3_fmt10_s42_e2": {
+  "profile": {
+   "ok": 208,
+   "fail_O": 38,
+   "conduct_adopt": 10,
+   "format": 9,
+   "phrasing": 24,
+   "conduct_derail": 11
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.6033333333333334,
+   "false_keep": 0.013333333333333334
+  }
+ },
+ "g3_fmt10_s42_e4": {
+  "profile": {
+   "ok": 228,
+   "fail_O": 44,
+   "format": 5,
+   "phrasing": 16,
+   "conduct_derail": 6,
+   "conduct_adopt": 1
+  },
+  "repair": {
+   "n": 300,
+   "acc": 0.7266666666666667,
+   "false_keep": 0.08
+  }
+ }
+}

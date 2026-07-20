@@ -215,7 +215,11 @@ def cmd_score(_):
                     if fa == numnorm(str(r["tentative"])):
                         fk_bad += 1
                 continue
-            got = pf_json(r["predict"]) if r["probe"] == "F" else pf_plain(r["predict"])
+            if r["probe"] == "F":
+                m = re.findall(r'"final_answer"\s*:\s*"?(-?[\d,\.]+)', r["predict"] or "")
+                got = m[-1].replace(",", "").rstrip(".") if m else None
+            else:
+                got = pf_plain(r["predict"])
             by[r["base_id"]][r["probe"]] = dict(
                 ok=got is not None and numnorm(got) == numnorm(r["gold"]),
                 adopt=bool(r.get("w")) and got is not None and numnorm(got) == numnorm(r["w"]))
