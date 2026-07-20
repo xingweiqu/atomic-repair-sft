@@ -1,8 +1,19 @@
 \section{Scope}
 \label{sec:scope}
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig9_matrix.pdf}
+\caption{The validation matrix: five claims $\times$ seven model/domain cells.
+Check = replicated; check-star = replicated as a mechanism variant; open circle
+= tested and absent or below criterion; grey = declared untested. No cell
+reversed a home claim. Claims are mechanism-level; the matrix shows where each
+has been tested.}
+\label{fig:matrix}
+\end{figure}
+
 Table~\ref{tab:scope} states what was measured, at what depth, and what was
-deliberately not attempted. The full pipeline --- profile, component library,
+deliberately not attempted. Figure~\ref{fig:matrix} is the summary object of this section. The full pipeline --- profile, component library,
 mixture and dose arms, two-genre validation, steering, and the teachability
 boundary --- runs on one subject model (Qwen3-8B) in one computation domain
 (GSM8K). Every other cell is a deliberately sized miniature: the knowledge
@@ -19,7 +30,7 @@ retrieval noise as a blind spot).
 \toprule
  & Qwen3-8B (subject) & Qwen3-4B & Llama-3.1-8B \\
 \midrule
-Diagnostic profile (8 probes) & full (Fig.~\ref{fig:profile}) & \checkmark & \checkmark \\
+Diagnostic profile & full (Fig.~\ref{fig:profile}) & \checkmark (4B, 32B) & \checkmark (Llama, Mistral) \\
 Repair training, computation domain & full ($\sim$100 runs) & --- & miniature (10 runs) \\
 Repair training, knowledge domain & 3-seed miniature & --- & --- \\
 Two-genre validation & both domains & --- & computation \\
