@@ -1,0 +1,22 @@
+{
+ "base": {
+  "n": 96,
+  "answered": 0.3020833333333333,
+  "resist": 0.2916666666666667,
+  "adopt": 0.010416666666666666,
+  "correct": 0.2708333333333333,
+  "ability_given_resist": 0.9285714285714286
+ },
+ "n_points": 56,
+ "n_qualified": 24,
+ "best_qualified": "L4_a2",
+ "best_stats": {
+  "n": 96,
+  "answered": 0.2916666666666667,
+  "resist": 0.2916666666666667,
+  "adopt": 0.0,
+  "correct": 0.28125,
+  "ability_given_resist": 0.9642857142857143
+ },
+ "verdict": "QUAL_BUT_FLAT L4_a2"
+}

@@ -1,0 +1,32 @@
+{
+ "tag": "qwen32b",
+ "O_answered": 0.9777,
+ "F_schema_valid": 0.9993,
+ "gate_F": true,
+ "profile": {
+  "gsm": {
+   "n": 1298,
+   "inclusive_pct": {
+    "format": 43.1,
+    "ok": 41.5,
+    "conduct": 8.9,
+    "phrasing": 4.6,
+    "unresolved": 1.7,
+    "scaffold": 1.4,
+    "mixed": 0.5,
+    "rule": 0.2
+   }
+  },
+  "hard": {
+   "n": 183,
+   "inclusive_pct": {
+    "unresolved": 80.9,
+    "format": 6.6,
+    "phrasing": 6.0,
+    "ok": 2.2,
+    "conduct": 2.2,
+    "mixed": 2.2
+   }
+  }
+ }
+}
