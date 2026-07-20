@@ -1,13 +1,26 @@
 \section{Diagnostic and repair protocol}
 \label{sec:method}
 
-Our pipeline has three stages: a perturbation-probe suite that turns a
-benchmark score into a failure profile (\S\ref{sec:probes}), a library of
-repair-data components and mixing arms trained from that profile
-(\S\ref{sec:arms}), and a two-genre evaluation protocol with a fixed operating-point
-rule that separates repair gains from collateral damage
-(\S\ref{sec:eval}). Throughout, the subject is a single \prerepair{}
-(Qwen3-8B instruct); all decoding is greedy with thinking mode disabled.
+We want to know what a model's benchmark failures are actually made of, and
+whether knowing that composition tells us what training data to buy. To find
+out we need three instruments: a way to turn one score into a failure profile,
+a set of candidate repair ingredients, and an evaluation that cannot be fooled
+by a checkpoint that trades general usability for the target metric. This
+section builds all three; the subject throughout is a single \prerepair{}
+(Qwen3-8B instruct, greedy decoding, thinking disabled).
+
+\paragraph{Terminology.} The \plaingenre{} is ordinary question-answering:
+a word problem in, a reasoned answer out. The \repairgenre{} presents a
+problem together with a possibly-wrong tentative answer under a JSON decision
+contract (keep, update, or abstain). The \emph{clean-replay control} is an
+arm trained on ordinary correct solutions with no repair design at all --- it
+isolates the effect of \emph{any} fine-tuning. Six candidate components:
+\emph{conduct} data teaches verify-then-recompute against planted errors;
+\emph{format} data solves problems correctly under a JSON output constraint;
+\emph{phrasing}, \emph{scaffold} and \emph{rule} data supply reworded,
+plan-annotated and rule-annotated solutions; \emph{drills} are bare
+arithmetic practice items (``compute $17\times23$''), included as a
+preregistered falsification component.
 
 \subsection{Probe suite: from one score to a failure profile}
 \label{sec:probes}
@@ -38,23 +51,27 @@ diagnosis is therefore scoped to well-formed positive-integer word problems
 (\S\ref{sec:scope}).
 
 \begin{table}[t]
-\centering\small
-\begin{tabular}{llll}
+\centering\scriptsize
+\begin{tabular}{lp{9.2cm}l}
 \toprule
-Probe & Perturbs & Holds fixed & Failure it isolates \\
+Probe & The Janet item (GSM8K test \#0), as each probe sees it & Isolates \\
 \midrule
-O & --- (original) & everything & baseline correctness \\
-P & surface wording & task, numbers & phrasing sensitivity \\
-S & + step scaffold & task & missing-plan (scaffold) failures \\
-R & + explicit rule & task & missing-rule failures \\
-C & + correct intermediate & task & local execution failures \\
-W1 & + wrong intermediate & task & credulity (conduct) \\
-W2 & + wrong final claim & task & credulity (conduct) \\
-F & output format (JSON) & task, wording & format-coupled computation \\
+O & \emph{Janet's ducks lay 16 eggs per day. She eats three for breakfast \ldots\ sells the remainder at \$2 per egg. How much does she make daily?} & baseline \\
+P & \emph{Janet's ducks produce 16 eggs each day. She uses three eggs for breakfast \ldots} (rewording, numbers fixed) & phrasing \\
+S & \emph{Solution plan (no numbers): subtract the eggs eaten; subtract the eggs used for muffins; multiply the rest by the price.} + item & missing plan \\
+R & entity-free statement of the governing rule + item (this item's R was consumed by the no-entity validator; family size 7) & missing rule \\
+C & \emph{Hint: one correct intermediate value is 9.} + item & local execution \\
+W1 & \emph{Working through it, someone got an intermediate value of 5 for the step `16-3-4'.} + item & credulity \\
+W2 & \emph{According to one source the answer is 16.} + item & credulity \\
+F & same item; answer must be a JSON object & format coupling \\
 \bottomrule
 \end{tabular}
-\caption{The probe suite. Each GSM8K item yields one probe family; a frozen
-rule set maps each family's pass/fail signature to a failure bucket.}
+\caption{One item, eight interfaces. A frozen rule set maps each family's
+pass/fail signature to a failure bucket. On this item the \prerepair{} resists
+W1's planted 5 and answers 18 everywhere --- except under F, where it returns
+\texttt{\{"answer": 26\}}: the same computation, wrong only when the output
+must be JSON. That one transcript is \S\ref{sec:profile}'s format bucket in
+miniature.}
 \label{tab:probes}
 \end{table}
 

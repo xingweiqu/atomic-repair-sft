@@ -2,9 +2,13 @@
 \label{app:scorecard}
 % sources: prereg/PREREG_loop3.md + ADJUDICATION_loop3_batch1.md; PREREG_batch2.md +
 % CLAIMS COR-1/2/3; PREREG_tier2 (notes/NOTES_tier2_frontier.md); PREREG_datasize (E1).
-Every training experiment in this paper was preregistered before any run started;
-this table reports every prediction against its outcome, including the misses ---
-the misses are where the paper's replacement hypotheses come from.
+Thirteen preregistrations govern every training experiment in this paper;
+each froze its predictions and decision criteria in the public repository
+before any run started. This table reports every prediction against its
+outcome. The misses cluster in one direction --- the real result is
+repeatedly \emph{cheaper} than the predicted one (rescue saturates at a
+smaller dose, the frontier refuses to bend, a zero-data direction beats every
+trained arm) --- and each miss names the replacement hypothesis it forced.
 
 \begin{table}[h]
 \centering\small

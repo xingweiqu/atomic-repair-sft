@@ -22,6 +22,18 @@ on inputs that do not request it (plain-genre bleed 0), but it does raise
 schema compliance when the input explicitly requests one (JSON validity 30\%
 $\rightarrow$ 75\%): what it pushes is engagement with the requested repair
 task --- decision plus task engagement --- not indiscriminate genre injection.
+The transcript pair below shows what the direction buys, on a repair-genre
+item the \prerepair{} fails (planted intermediate 59 for `23+42'; tentative
+19; gold 21). Without steering, the model does the arithmetic and still cannot
+close: \emph{``the correct total \ldots is 65. Then subtracting 44 would give
+21. But the tentative answer is 19. So that's conflicting. Alternatively,
+maybe\ldots''} --- and no contract output ever arrives. With the direction
+added, the same deliberation lands: \emph{``the tentative answer of 19 is
+incorrect \ldots I should update the tentative answer to 21''}, followed by
+\texttt{\{"action": "update", "final\_answer": 21\}}. The direction does not
+change what the model computes; it changes whether the computation is allowed
+to conclude.
+
 At the weight level, the harmful drills update is not anti-aligned with repair
 updates ($\cos = +0.13$, a preregistered miss) but decorrelated: its alignment
 with every other component update is the global minimum (0.06--0.24 vs
@@ -31,8 +43,9 @@ one.
 On the boundary side, the learnability frontier refuses to bend
 (Figure~\ref{fig:mechanism}b). Whatever makes GSM's residual failures
 unrepairable by data, it is not chain depth ($\leq$5 steps teachable), not
-control flow (branching 100\%), and not linguistic wrapping (100\%); the
-remaining suspects are task diversity and rule implicitness. The frontier
+control flow (branching 100\%), and not linguistic wrapping (100\%); what remains
+--- task diversity and rule implicitness --- is now a two-item target list,
+each naming a concrete next experiment rather than an open mystery. The frontier
 experiments also yield a caution: overtraining damages already-acquired OOD
 generalisation (the 5-step tier peaks at epoch 1 and loses 25pp by epoch 4),
 the same early-landing/late-tax structure as the operating-point rule of

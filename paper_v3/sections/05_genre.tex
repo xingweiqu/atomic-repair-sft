@@ -13,8 +13,12 @@ structure-vs-JSON attribution is a known limitation).}
 \label{fig:genre}
 \end{figure}
 
-The same checkpoints tell different stories depending on the genre in which
-they are asked to perform, and the pattern recurs across independent, multi-seed
+Why should the evaluation genre matter at all? Because the model's failures
+are themselves genre-coupled: the Janet item of Table~\ref{tab:probes} is
+answered correctly as prose and incorrectly (\texttt{\{"answer": 26\}}) as
+JSON, by the same model on the same arithmetic. What holds for single probes
+holds for whole evaluations. The same checkpoints tell different stories
+depending on the genre in which they are asked to perform, and the pattern recurs across independent, multi-seed
 measurements (Figure~\ref{fig:genre}). Repair-component gains that are barely
 visible on plain items ($+2$--$7$pp over placebo) separate cleanly in the
 repair genre ($+10$--$16$pp). Drills toxicity is invisible on plain items up
