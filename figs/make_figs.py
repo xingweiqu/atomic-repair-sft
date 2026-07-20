@@ -279,6 +279,70 @@ def fig6():
 
 # ---------------------------------------------------------------- fig 7
 def fig7():
+    """Steering, single-theme (C-17 P2): (a) Qwen decision curves, (b) Llama L22 lever."""
+    import json as _j
+    fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.8))
+    ax = axes[0]
+    alphas = [0, 4, 8, 16]
+    resist = [83, 90, 94, 94]
+    ability = [40, 39, 38, 38]
+    ax.plot(alphas, resist, "-o", color=OKABE["A1"], label="resist")
+    ax.plot(alphas, ability, "-s", color=OKABE["placebo"], label="ability|resist")
+    ax.set_xlabel(r"steering strength $\alpha$"); ax.set_ylabel("%")
+    ax.set_title("(a) Qwen3-8B: decision moves, computation flat")
+    ax.legend(fontsize=7)
+    ax = axes[1]
+    grid = {}
+    import glob as _g
+    for f in _g.glob(str(ROOT / "loop3/eval_m3/scan2_shard*.json")):
+        grid.update(_j.load(open(f)))
+    al = [0, 2, 4, 6, 8]
+    res = [100 * grid["base"]["resist"]] + [100 * grid[f"L22_a{a}"]["resist"] for a in (2, 4, 6, 8)]
+    ab = [100 * grid["base"]["ability_given_resist"]] +          [100 * grid[f"L22_a{a}"]["ability_given_resist"] for a in (2, 4, 6, 8)]
+    ax.plot(al, res, "-o", color=OKABE["D"], label="resist")
+    ax.plot(al, ab, "-s", color=OKABE["placebo"], label="ability|resist")
+    ax.set_xlabel(r"steering strength $\alpha$ (layer 22)"); ax.set_ylabel("%")
+    ax.set_title("(b) Llama-3.1-8B: the lever transfers")
+    ax.legend(fontsize=7)
+    fig.tight_layout()
+    save(fig, "fig7_mechanism",
+         "The decision lever, on both families. (a) On Qwen3-8B a single activation "
+         "direction moves resist (83->94%) while computation stays flat. (b) On "
+         "Llama-3.1-8B the same extraction recipe finds the lever at layer 22 "
+         "(96-item scan subset): resist rises from 52% to 82% with ability|resist "
+         "flat until alpha 8. The repair-genre dividend is contract-gated and does "
+         "not follow (section 6).",
+         ["notes/NOTES_steering_e5b.md", "loop3/eval_m3/scan2_shard*.json"],
+         "CL-3 two-layer")
+
+
+def fig_a_frontier():
+    """Frontier figure, appendix home (C-17 P2)."""
+    fig, ax = plt.subplots(figsize=(4.8, 2.6))
+    tiers = ["a\nlookup", "b\n1-step", "c\n2-step", "d\n3-step",
+             "e\n5-step", "f\nbranch", "g\nNL-wrap"]
+    idacc = [0.2, 100, 100, 99.6, 99.4, 100, 100]
+    ood = [0.0, 99.6, 99.4, 95.2, 83.0, 100, 100]
+    x = range(7)
+    ax.bar([i - .18 for i in x], idacc, width=.36, color=OKABE["format_"], label="ID")
+    ax.bar([i + .18 for i in x], ood, width=.36, color=OKABE["A1"], label="OOD")
+    ax.set_xticks(list(x)); ax.set_xticklabels(tiers, fontsize=6.5)
+    ax.set_ylabel("accuracy after SFT (%)")
+    ax.annotate("overtrain dip:\nOOD .91@ep1 -> .66@ep4", xy=(4.18, 83), xytext=(2.6, 45),
+                fontsize=6.5, arrowprops=dict(arrowstyle="->", lw=.8))
+    ax.legend(fontsize=7)
+    fig.tight_layout()
+    save(fig, "fig_a_frontier",
+         "The synthetic learnability frontier (appendix). Explicit invented rules are "
+         "fully teachable and OOD-general through 5-step chains, branching and "
+         "natural-language wrapping; zero-structure lookup is not. In this synthetic "
+         "frontier these factors alone do not create a learning boundary.",
+         ["notes/NOTES_tier2_frontier.md", "data_bend/race_summary.json"],
+         "CL-2 (synthetic-scoped)")
+
+
+# ---------------------------------------------------------------- fig 7
+def fig7_old():
     fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.8))
     ax = axes[0]
     # steering E5b (plain-genre probes, L12): resist & ability vs alpha — frozen numbers
@@ -305,7 +369,7 @@ def fig7():
                 fontsize=6.5, arrowprops=dict(arrowstyle="->", lw=.8))
     ax.legend(fontsize=7)
     fig.tight_layout()
-    save(fig, "fig7_mechanism",
+    save(fig, "fig7_mechanism_old",
          "Mechanism and boundary. (a) A single activation direction moves the "
          "keep/update decision (83->94% resist) without moving computation "
          "(ability|resist flat) — the decision is separable and installable without "
@@ -321,7 +385,7 @@ def fig7():
 
 
 if __name__ == "__main__":
-    for f in (fig1, fig3, fig4, fig5, fig6, fig7):
+    for f in (fig1, fig3, fig4, fig5, fig6, fig7, fig_a_frontier):
         f()
 
 

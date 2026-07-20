@@ -4,3 +4,5 @@
 3. 模板残渣(页眉年份/finalcopy 状态/合并冲突标记/math-mode unicode)。
 4. **venue/年份核对**(C-15 新增):页眉 = ICLR 2027(sty 已 patch;
    投稿时换官方 2027 kit + \iclrfinalcopy)。
+
+5. **truth table 反向巡检通过**(paper/CLAIM_TRUTH_TABLE.md ↔ abstract/正文/caption/Scope/Appendix 一致;C-17 永久项)。

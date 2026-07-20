@@ -4,13 +4,12 @@
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{fig7_mechanism.pdf}
-\caption{Mechanism and boundary. (a) A single activation direction moves the
-keep/update decision (resist 83$\rightarrow$94\%) while computation stays flat
-(ability$|$resist $\approx$ 38--40\%). (b) The learnability frontier stays
-unbent: explicit invented rules are fully teachable and OOD-general through
-3-step chains, 5-step chains (OOD 83\%, with overtraining damaging OOD from
-its epoch-1 peak of 91\%), conditional branching (100\%), and natural-language
-wrapping (100\%); zero-structure lookup is not (0.2\%/0.0\%).}
+\caption{The decision lever on both families. (a) Qwen3-8B: a single
+activation direction moves resist (83$\rightarrow$94\%) while
+ability$|$resist stays flat. (b) Llama-3.1-8B: the same extraction recipe
+finds the lever at layer 22 (96-item scan subset; resist 52$\rightarrow$82\%,
+ability flat through $\alpha{=}6$). The repair-genre dividend is
+contract-gated and does not follow (\S\ref{sec:mechanism}).}
 \label{fig:mechanism}
 \end{figure}
 
@@ -37,21 +36,18 @@ to conclude.
 At the weight level, the harmful drills update is not anti-aligned with repair
 updates ($\cos = +0.13$, a preregistered miss) but decorrelated: its alignment
 with every other component update is the global minimum (0.06--0.24 vs
-0.4--0.6). ``Reverse vaccine'' is a behavioural description, not a geometric
-one.
+0.4--0.6). The harmful component's weight update is best described as decorrelated
+rather than opposed.
 
-On the boundary side, the learnability frontier refuses to bend
-(Figure~\ref{fig:mechanism}b). Whatever makes GSM's residual failures
-unrepairable by data, it is not chain depth ($\leq$5 steps teachable), not
-control flow (branching 100\%), and not linguistic wrapping (100\%); what remains
---- task diversity and rule implicitness --- is now a two-item target list,
-each naming a concrete next experiment rather than an open mystery. The frontier
-experiments also yield a caution: overtraining damages already-acquired OOD
-generalisation (the 5-step tier peaks at epoch 1 and loses 25pp by epoch 4),
-the same early-landing/late-tax structure as the operating-point rule of
-\S\ref{sec:method}.
+On the boundary side, a synthetic learnability frontier (invented operators;
+Appendix Figure~\ref{fig:frontier}) shows that in that setting chain depth up
+to five steps, conditional branching, and natural-language wrapping alone do
+not create a learning boundary; what remains --- task diversity and rule
+implicitness --- is a two-item target list, each naming a concrete next
+experiment. One caution transfers: overtraining damages already-acquired OOD
+generalisation (the 5-step tier peaks at epoch 1 and loses 25pp by epoch 4).
 
-The zero-data steering arm closes the loop
+The steering arm --- no weight updates, zero additional repair-training examples --- closes the loop
 (Figure~\ref{fig:recipe}b, E). Its repair-genre score (.760) exceeds every
 trained arm, and its entire edge over the placebo decomposes into the two
 decision policies (keep $+.41$, abstain $+.35$) with computation policies at
@@ -67,9 +63,27 @@ on Llama-3.1-8B a full-layer scan finds the decision direction at layer 22
 (deeper than Qwen's layer 12; a depth correspondence we leave as future work),
 with resist $+17.3$pp, computation flat, and a plain-genre cost of $3.0$pp that
 mechanically misses our preregistered $\leq$3pp gate by 9 items in 300 ---
-scored as a miss. The \emph{dividend} does not transfer: the zero-data
+scored as a miss. The \emph{dividend} does not follow: the no-fine-tuning
 repair-genre win presupposes a model that already honours the output contract,
 and Llama, whose base contract is absent, gains nothing there (.058). On the
 cost side, the steering strength is a curve, not a cliff: sweeping
 $\alpha \in \{4,6,8\}$ gives a sweet spot at $\alpha{=}6$ (repair .771,
 mute 3.7\%), with mute rising monotonically in $\alpha$.
+
+\paragraph{Why did uniform tie or beat matched ratios? (a post-hoc reading).}
+The prevalence profile answers ``how often does each failure occur,'' but the
+data demand of a failure class is plausibly set by different quantities:
+how specific its cure is, how steep the marginal response, how small the
+saturating dose, and whether the component carries toxicity. Format --- rare
+in prevalence terms on some models, dominant on others --- saturates at sixty
+items; conduct, the most prevalent class, is mostly floor-repairable. A
+prescription engine that estimated these four quantities per class, rather
+than prevalence alone, is the natural successor to the shopping list; we flag
+this as an explanatory hypothesis formed after seeing the data.
+
+\paragraph{On the status of keep--override interference.} The weight-level
+reading ($\cos = +0.13$) shows the two supervision styles are not simple
+opposites, and a conditional policy (keep when correct, override when wrong)
+is in principle learnable. What this paper establishes is empirical
+interference in the tested mixtures at the tested budgets --- a constraint on
+mixture design, not an impossibility theorem.

@@ -1,0 +1,66 @@
+{
+ "L6_a2": {
+  "n": 96,
+  "answered": 0.19791666666666666,
+  "resist": 0.1875,
+  "adopt": 0.010416666666666666,
+  "correct": 0.1875,
+  "ability_given_resist": 1.0
+ },
+ "L6_a4": {
+  "n": 96,
+  "answered": 0.0,
+  "resist": 0.0,
+  "adopt": 0.0,
+  "correct": 0.0,
+  "ability_given_resist": 0.0
+ },
+ "L6_a6": {
+  "n": 96,
+  "answered": 0.0,
+  "resist": 0.0,
+  "adopt": 0.0,
+  "correct": 0.0,
+  "ability_given_resist": 0.0
+ },
+ "L6_a8": {
+  "n": 96,
+  "answered": 0.0,
+  "resist": 0.0,
+  "adopt": 0.0,
+  "correct": 0.0,
+  "ability_given_resist": 0.0
+ },
+ "L22_a2": {
+  "n": 96,
+  "answered": 0.6666666666666666,
+  "resist": 0.625,
+  "adopt": 0.041666666666666664,
+  "correct": 0.5520833333333334,
+  "ability_given_resist": 0.8833333333333333
+ },
+ "L22_a4": {
+  "n": 96,
+  "answered": 0.7604166666666666,
+  "resist": 0.71875,
+  "adopt": 0.041666666666666664,
+  "correct": 0.625,
+  "ability_given_resist": 0.8695652173913043
+ },
+ "L22_a6": {
+  "n": 96,
+  "answered": 0.7916666666666666,
+  "resist": 0.75,
+  "adopt": 0.041666666666666664,
+  "correct": 0.65625,
+  "ability_given_resist": 0.875
+ },
+ "L22_a8": {
+  "n": 96,
+  "answered": 0.8541666666666666,
+  "resist": 0.8229166666666666,
+  "adopt": 0.03125,
+  "correct": 0.6666666666666666,
+  "ability_given_resist": 0.810126582278481
+ }
+}

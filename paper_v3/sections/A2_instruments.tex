@@ -16,3 +16,74 @@ type on 100 manually audited items), pool filters (330 items excluded:
 negative or non-integer golds), and per-model instrument gates are collected
 here. The labile-core discount used in Figure~\ref{fig:profile}'s footnote
 derives from Figure~\ref{fig:overlap}.
+
+
+\section{Retired results, with autopsies}
+\label{app:retired}
+
+A negative result enters this appendix only with an autopsy: original
+observation, replication outcome, and the most parsimonious diagnosis together
+with the rule in the body it exemplifies. Phenomena without an explanation
+stay in the scorecard.
+
+\paragraph{Scaffold genre sign-flip.} \emph{Observation:} on one seed the
+scaffold component rescued the plain-genre format bucket strongly while
+scoring 11.9pp below placebo in the repair genre --- an apparent sign flip,
+briefly a third genre-gating case. \emph{Replication:} under two fresh seeds
+at healthy operating points (epoch 4; the original checkpoint passed gates
+marginally, with 11\% mute, recorded at the time), two of three seeds place
+the repair-genre score \emph{above} placebo, and the plain-genre rescue
+shrinks from 94\% to 41--49\%. \emph{Diagnosis:} an operating-point
+artifact --- readings taken at a marginal-health checkpoint are not
+interpretable, which is precisely the case for the operating-point rule of
+\S\ref{sec:eval}. Three seeds cannot fully exclude a seed-fragile real
+effect; the artifact reading is the most parsimonious.
+
+\paragraph{Abstain-policy ordering.} \emph{Observation:} a single-seed
+ordering of arms on the retrieve-or-abstain policy (D $>$ B $>$ A1) suggested
+mixture composition drove abstention quality. \emph{Replication:} the uniform
+arm's abstain score across three seeds spans $.15$--$.45$. \emph{Diagnosis:}
+abstention is the highest seed-variance column in the study; any single-seed
+ordering within a $\pm$15pp band is noise, which is why every ordering claim
+in the body is multi-seed. Both autopsies are the hollow-bar rule doing its
+job.
+
+\section{Three-seed aggregates for the 2Wiki cell}
+\label{app:wiki3}
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{lccc}
+\toprule
+ & adopt (plain) & derail (plain) & repair genre (strict) \\
+\midrule
+pre-repair & 19 & 28 & .638 \\
+U-mix (3 seeds) & 0/1/0 & 4/11/5 & .479/.471/.479 \\
+clean replay (3 seeds) & 7/7/8 & 56/42/49 & .441/.439/.431 \\
+\bottomrule
+\end{tabular}
+\caption{2Wiki three-seed aggregates behind Figure~\ref{fig:validation}: the
+plain-face separation (anti-credulity transfers) and the repair-genre
+non-separation are both stable across seeds.}
+\label{tab:wiki3seed}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.75\linewidth]{fig_a_frontier.pdf}
+\caption{The synthetic learnability frontier (moved from the body). In this
+synthetic setting, depth, branching and wrapping alone do not create a
+learning boundary; the claim is scoped to invented-operator tasks.}
+\label{fig:frontier}
+\end{figure}
+
+\section{Ratio-arm statistics}
+\label{app:stats}
+
+Item-level paired bootstrap (10{,}000 resamples) over the 480 repair-genre
+items, arms averaged over three seeds each: $\Delta$(B$-$A1) $= +4.2$pp,
+95\% CI $[+1.7, +6.7]$; $\Delta$(D$-$A1) $= +3.4$pp $[+0.1, +6.7]$;
+$\Delta$(B$-$D) $= +0.8$pp $[-2.0, +3.5]$. TOST equivalence at a
+$\pm$3pp margin (chosen post hoc, at the scale of seed-level standard
+deviations) is not established for any pair. Prevalence-matched ratios did
+not outperform uniform or reversed coverage at the tested budgets.

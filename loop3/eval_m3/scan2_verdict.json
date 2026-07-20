@@ -1,0 +1,22 @@
+{
+ "base": {
+  "n": 96,
+  "answered": 0.5729166666666666,
+  "resist": 0.5208333333333334,
+  "adopt": 0.052083333333333336,
+  "correct": 0.4583333333333333,
+  "ability_given_resist": 0.88
+ },
+ "n_points": 56,
+ "n_qualified": 12,
+ "best_qualified": "L22_a6",
+ "best_stats": {
+  "n": 96,
+  "answered": 0.7916666666666666,
+  "resist": 0.75,
+  "adopt": 0.041666666666666664,
+  "correct": 0.65625,
+  "ability_given_resist": 0.875
+ },
+ "verdict": "QUALIFIED L22_a6"
+}

@@ -12,8 +12,11 @@ has been tested.}
 \label{fig:matrix}
 \end{figure}
 
-Table~\ref{tab:scope} states what was measured, at what depth, and what was
-deliberately not attempted. Figure~\ref{fig:matrix} is the summary object of this section. The full pipeline --- profile, component library,
+Figure~\ref{fig:matrix} states what was measured and what was deliberately
+not attempted; experiment depth varies by cell --- the full pipeline runs on
+Qwen3-8B$\times$GSM, the validation cells are preregistered miniatures
+(profile plus four small arms), and Qwen3-32B carries diagnosis and steering
+only, with no training. Figure~\ref{fig:matrix} is the summary object of this section. The full pipeline --- profile, component library,
 mixture and dose arms, two-genre validation, steering, and the teachability
 boundary --- runs on one subject model (Qwen3-8B) in one computation domain
 (GSM8K). Every other cell is a deliberately sized miniature: the knowledge
@@ -24,25 +27,23 @@ replication of the pipeline is out of scope, as is any claim about failure
 classes our probes do not instrument (the natural-set mapping reports
 retrieval noise as a blind spot).
 
-\begin{table}[h]
-\centering\small
-\begin{tabular}{lccc}
-\toprule
- & Qwen3-8B (subject) & Qwen3-4B & Llama-3.1-8B \\
-\midrule
-Diagnostic profile & full (Fig.~\ref{fig:profile}) & \checkmark (4B, 32B) & \checkmark (Llama, Mistral) \\
-Repair training, computation domain & full ($\sim$100 runs) & --- & miniature (10 runs) \\
-Repair training, knowledge domain & 3-seed miniature & --- & --- \\
-Two-genre validation & both domains & --- & computation \\
-Activation steering & full + zero-data arm & --- & attempted; did not transfer \\
-Teachability boundary (7 tiers) & \checkmark (synthetic domain) & --- & --- \\
-\bottomrule
-\end{tabular}
-\caption{Coverage matrix. ``---'' cells are declared out of scope, not
-omissions; miniatures are preregistered with their own scorecard entries,
-including the two cross-model results that did not replicate: drills toxicity
-is absent on Llama at the 25\% dose, and the steering direction recipe does
-not transfer to Llama (global degradation; the separability claim is scoped to
-the Qwen family). Both are reported in the body, not buried.}
-\label{tab:scope}
-\end{table}
+
+
+\paragraph{Cell-by-cell reading of Figure~\ref{fig:matrix}.} SVAMP tests
+whether the floor and gating claims survive a second arithmetic distribution
+(they do; the format claim is untestable there because the pathology is absent
+on this model--domain pair). StrategyQA tests the implicit-multi-hop analogue
+of the 2Wiki bridge injection (floor replicates; format and gating fall below
+criterion at this scale). Mistral validates directions on a weak base
+(profile: 5.5\% robust), where the format component again acts as loss
+prevention. Qwen3-32B carries diagnosis and steering only: its profile
+inverts the shopping list (credulity 8.9\%, format 43.1\%), and the steering
+lever does not move under the frozen recipe (instrument-limited: the direction
+is extracted from low-compliance behaviour labels). A check-star means
+replicated as a stated mechanism variant; per-cell seeds and criteria are in
+the preregistrations and Appendix~\ref{app:truth}.
+
+\paragraph{What genre gating is and is not.} Genre gating is an empirical
+description of effect visibility; the repair genre bundles decision framing,
+JSON output, abstention handling and strict scoring, and which element gates
+a given effect is not localized by our experiments.

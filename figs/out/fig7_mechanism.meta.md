@@ -1,11 +1,9 @@
 # fig7_mechanism
 
-**Caption draft**: Mechanism and boundary. (a) A single activation direction moves the keep/update decision (83->94% resist) without moving computation (ability|resist flat) — the decision is separable and installable without the genre. (b) Explicit rules up to 3 steps are fully teachable and OOD-general; zero-structure lookup is not (0.2%/0.0%) — the K/A boundary is constructive. The frontier stays unbent through 5-step chains (OOD 83%, with overtraining damaging OOD from its epoch-1 peak), conditional branching (100%), and natural-language wrapping (100%): GSM's unrepairability is not chain depth, control flow, or wrapping.
+**Caption draft**: The decision lever, on both families. (a) On Qwen3-8B a single activation direction moves resist (83->94%) while computation stays flat. (b) On Llama-3.1-8B the same extraction recipe finds the lever at layer 22 (96-item scan subset): resist rises from 52% to 82% with ability|resist flat until alpha 8. The repair-genre dividend is contract-gated and does not follow (section 6).
 
 **Data sources**:
-- notes/NOTES_steering_e5b.md (curve numbers)
-- steering/out_e5b/
-- notes/NOTES_tier2_frontier.md
-- data_bend/race_summary.json
+- notes/NOTES_steering_e5b.md
+- loop3/eval_m3/scan2_shard*.json
 
-**Supports CLAIMS**: CL-2, CL-3
+**Supports CLAIMS**: CL-3 two-layer

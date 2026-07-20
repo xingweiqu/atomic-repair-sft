@@ -42,8 +42,8 @@ $\times$ genre) --- the same checkpoint shows or hides gains and harms
 depending on evaluation genre, in opposite directions on GSM and
 2WikiMultihopQA --- so prescriptions must be validated in both genres against
 the pre-repair model. Finally, the decision-level failure class that data
-mixtures repair only by paying a structural keep--override tax is repaired for
-free by a single activation direction (zero data, .760 repair-genre score,
+mixtures repair only by paying a structural keep--override tax is repaired without
+any fine-tuning by a single activation direction (no weight updates; .760 repair-genre score,
 above every trained arm). Data-level interference, activation-level bypass:
 diagnosis tells you what to buy, what to ban, and when not to fine-tune at all.
 \end{abstract}
@@ -65,5 +65,6 @@ diagnosis tells you what to buy, what to ban, and when not to fine-tune at all.
 \appendix
 \input{sections/A1_scorecard}
 \input{sections/A2_instruments}
+\input{sections/A3_truth}
 
 \end{document}

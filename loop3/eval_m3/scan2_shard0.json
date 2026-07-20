@@ -1,0 +1,74 @@
+{
+ "base": {
+  "n": 96,
+  "answered": 0.5729166666666666,
+  "resist": 0.5208333333333334,
+  "adopt": 0.052083333333333336,
+  "correct": 0.4583333333333333,
+  "ability_given_resist": 0.88
+ },
+ "L4_a2": {
+  "n": 96,
+  "answered": 0.8645833333333334,
+  "resist": 0.8229166666666666,
+  "adopt": 0.041666666666666664,
+  "correct": 0.625,
+  "ability_given_resist": 0.759493670886076
+ },
+ "L4_a4": {
+  "n": 96,
+  "answered": 0.11458333333333333,
+  "resist": 0.0625,
+  "adopt": 0.052083333333333336,
+  "correct": 0.0,
+  "ability_given_resist": 0.0
+ },
+ "L4_a6": {
+  "n": 96,
+  "answered": 0.125,
+  "resist": 0.052083333333333336,
+  "adopt": 0.07291666666666667,
+  "correct": 0.0,
+  "ability_given_resist": 0.0
+ },
+ "L4_a8": {
+  "n": 96,
+  "answered": 0.0,
+  "resist": 0.0,
+  "adopt": 0.0,
+  "correct": 0.0,
+  "ability_given_resist": 0.0
+ },
+ "L20_a2": {
+  "n": 96,
+  "answered": 0.6979166666666666,
+  "resist": 0.65625,
+  "adopt": 0.041666666666666664,
+  "correct": 0.53125,
+  "ability_given_resist": 0.8095238095238095
+ },
+ "L20_a4": {
+  "n": 96,
+  "answered": 0.7708333333333334,
+  "resist": 0.7395833333333334,
+  "adopt": 0.03125,
+  "correct": 0.5729166666666666,
+  "ability_given_resist": 0.7746478873239436
+ },
+ "L20_a6": {
+  "n": 96,
+  "answered": 0.78125,
+  "resist": 0.71875,
+  "adopt": 0.0625,
+  "correct": 0.59375,
+  "ability_given_resist": 0.8260869565217391
+ },
+ "L20_a8": {
+  "n": 96,
+  "answered": 0.8229166666666666,
+  "resist": 0.7708333333333334,
+  "adopt": 0.052083333333333336,
+  "correct": 0.5833333333333334,
+  "ability_given_resist": 0.7567567567567568
+ }
+}
