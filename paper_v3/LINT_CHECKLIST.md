@@ -7,3 +7,4 @@
 
 5. **truth table 反向巡检通过**(paper/CLAIM_TRUTH_TABLE.md ↔ abstract/正文/caption/Scope/Appendix 一致;C-17 永久项)。
 6. **禁令措辞跨行扫描 PASS**(python3 lint_banned.py;C-17 验收教训:换行断词躲过单行 grep)。
+7. **PDF 只准经 build_pdf.sh 产出**(图同步+禁令 lint+校验和检查内建;教训:旧版 fig7 混进过送审 PDF)。
