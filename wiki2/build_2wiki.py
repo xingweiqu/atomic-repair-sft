@@ -341,10 +341,29 @@ def cmd_armx(_):
     print("armx: 600 items")
 
 
+def cmd_armx2(_):
+    """PREREG_matrix_completion M-MC-3: drills arm (bare-answer compliance items)."""
+    _, train = load_2wiki()
+    rng = random.Random(777)
+    rng.shuffle(train)
+    drills = [dict(instruction="Answer with only the final answer, nothing else.",
+                   input=r["q"], output=f"The final answer is: {r['gold']}.")
+              for r in train[:150]]
+    carrier = json.loads((OUT / "arm_w2_cleanreplay.json").read_text())[:450]
+    rows = carrier + drills
+    rng.shuffle(rows)
+    (OUT / "arm_w2_drl25.json").write_text(json.dumps(rows, ensure_ascii=False))
+    di = json.loads((OUT / "dataset_info.json").read_text())
+    di["w2_drl25"] = {"file_name": "arm_w2_drl25.json",
+                      "columns": {"prompt": "instruction", "query": "input", "response": "output"}}
+    (OUT / "dataset_info.json").write_text(json.dumps(di, indent=1))
+    print("armx2: 600")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["screen", "genp", "build", "armx", "probes", "score"])
+    ap.add_argument("cmd", choices=["screen", "genp", "build", "armx", "armx2", "probes", "score"])
     ap.add_argument("--shard", default="0:1")
     a = ap.parse_args()
-    {"screen": cmd_screen, "genp": cmd_genp, "build": cmd_build, "armx": cmd_armx,
+    {"screen": cmd_screen, "genp": cmd_genp, "build": cmd_build, "armx": cmd_armx, "armx2": cmd_armx2,
      "probes": cmd_probes, "score": cmd_score}[a.cmd](a)
