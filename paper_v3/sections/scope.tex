@@ -36,7 +36,8 @@ on this model--domain pair). StrategyQA tests the implicit-multi-hop analogue
 of the 2Wiki bridge injection (floor replicates; format and gating fall below
 criterion at this scale). Mistral validates directions on a weak base
 (profile: 5.5\% robust), where the format component again acts as loss
-prevention. Qwen3-32B carries diagnosis and steering only: its profile
+prevention; the Llama gating cell is scored post hoc from existing M2
+measurements under the frozen cell criterion and is disclosed as such. Qwen3-32B carries diagnosis and steering only: its profile
 inverts the shopping list (credulity 8.9\%, format 43.1\%), and the steering
 lever does not move under the frozen recipe (instrument-limited: the direction
 is extracted from low-compliance behaviour labels). A check-star means

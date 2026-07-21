@@ -16,6 +16,7 @@
 | T12 | gating 方向反转 | Qwen8B×2Wiki | 3 | scores_2wiki | variant(方向域依赖) |
 | T13 | gating | Qwen8B×SVAMP | 1 | scores_svamp | replicated(计算域同向) |
 | T14 | gating | Qwen8B×StratQA | 1 | scores_stratqa | below criterion |
+| T14b | gating | Llama×GSM | 1 | m2_scores(修复腔 +40~50 vs 素题 −1~+7;冻结判据事后判,披露) | replicated |
 | T15 | scaffold sign-flip | Qwen8B×GSM | 3(2/3 反向) | NOTES_c15a | **retired**(operating-point artifact,附验尸) |
 | T16 | abstain 排序 D>B | Qwen8B×GSM | B 3-seed ±15pp | NOTES_b_seeds | **retired**(方差,附验尸) |
 | T17 | steering 杠杆 | Qwen8B(L12) | E5b+E 臂 | NOTES_steering_e5b, e_arm | replicated |

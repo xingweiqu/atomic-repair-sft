@@ -529,3 +529,63 @@ def fig_a_overlap():
          "rescue baseline in all pairs (see loop3/eval/flip_overlap.json).",
          ["loop3/eval/flip_overlap.json", "notes/NOTES_b2_0a_flip_overlap.md"],
          "Fig-1 footnote (labile-core discount); CL-5")
+
+
+# ---------------------------------------------------------------- fig 9 (validation matrix)
+def fig9():
+    import numpy as np
+    claims = ["1 nonspecific floor", "2 format component\n(specific / loss-prev.)",
+              "3 drills toxicity", "4 genre gating\n(domain x genre)", "5 steering lever"]
+    cells = ["Qwen-8B\nGSM", "Llama-8B\nGSM", "Mistral-7B\nGSM", "Qwen-8B\n2Wiki",
+             "Qwen-8B\nSVAMP", "Qwen-8B\nStratQA", "Qwen-32B\nprof+steer"]
+    M = np.array([
+        [1, 1, 1, 1, 1, 1, 0],
+        [1, 2, 2, 2, 0, 3, 0],
+        [1, 3, 3, 0, 3, 3, 0],
+        [1, 1, 1, 2, 1, 3, 0],
+        [1, 2, 0, 0, 0, 0, 3],
+    ])
+    colors = {0: "#EFEFEF", 1: OKABE["B"], 2: "#93D8B7", 3: "#F4C7A5"}
+    labels = {0: "", 1: "✓", 2: "✓*", 3: "∅"}
+    fig, ax = plt.subplots(figsize=(7.4, 3.4))
+    for i in range(M.shape[0]):
+        for j in range(M.shape[1]):
+            ax.add_patch(plt.Rectangle((j + .03, M.shape[0] - 1 - i + .03), .94, .94,
+                                       color=colors[M[i, j]], ec="white", lw=1.5))
+            ax.text(j + .5, M.shape[0] - 1 - i + .5, labels[M[i, j]],
+                    ha="center", va="center", fontsize=12)
+    ax.set_xlim(0, len(cells)); ax.set_ylim(0, len(claims) + 0.9)
+    ax.set_xticks([j + .5 for j in range(len(cells))])
+    ax.set_xticklabels(cells, fontsize=6.2)
+    ax.set_yticks([M.shape[0] - 1 - i + .5 for i in range(len(claims))])
+    ax.set_yticklabels(claims, fontsize=7.5)
+    ax.set_aspect("equal"); ax.grid(False)
+    for s in ax.spines.values():
+        s.set_visible(False)
+    ax.tick_params(length=0)
+    import matplotlib.patches as mpatches
+    handles = [mpatches.Patch(color=colors[1], label="✓ replicated"),
+               mpatches.Patch(color=colors[2], label="✓* replicated as stated variant"),
+               mpatches.Patch(color=colors[3], label="∅ tested, absent / below criterion"),
+               mpatches.Patch(color=colors[0], label="declared untested (Scope)")]
+    ax.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 1.005),
+              ncol=4, fontsize=6.6, frameon=False, handlelength=1.1,
+              columnspacing=0.9, borderaxespad=0.0)
+    fig.tight_layout()
+    save(fig, "fig9_matrix",
+         "Where each claim has been tested. Check = replicated as stated; check-star "
+         "= replicated as a stated mechanism variant (format component acts as loss "
+         "prevention on models without an innate format deficit; 2Wiki gating "
+         "reverses the revealing genre; the Llama steering lever sits at layer 22 "
+         "while the repair-genre dividend is contract-gated); open circle = tested "
+         "and absent or below criterion (drills toxicity is Qwen-GSM-specific; the "
+         "32B lever does not move under the frozen recipe, instrument-limited); grey "
+         "= declared untested (a preregistered scope boundary, not an unrun backlog). "
+         "The Llama gating cell is scored post hoc from existing M2 data under the "
+         "frozen cell criterion (+40-50pp repair-genre visibility vs -1-+7pp plain). "
+         "No cell reversed a home claim. Cell-by-cell reading "
+         "in Scope; verdicts trace to paper/CLAIM_TRUTH_TABLE.md.",
+         ["paper/CLAIM_TRUTH_TABLE.md (T1-T24)", "notes/NOTES_g1_mistral.md",
+          "notes/NOTES_g34.md", "notes/NOTES_g2_32b.md", "notes/NOTES_m2_llama.md",
+          "notes/NOTES_x_2wiki_v2.md"],
+         "PREREG_c16 all cells; Scope section")
