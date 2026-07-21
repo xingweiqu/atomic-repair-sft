@@ -4,19 +4,17 @@
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{fig7_mechanism.pdf}
-\caption{The decision lever on both families. (a) Qwen3-8B: a single
-activation direction moves resist (83$\rightarrow$94\%) while
-ability$|$resist stays flat. (b) Llama-3.1-8B: the same extraction recipe
-finds the lever at layer 22 (96-item scan subset; resist 52$\rightarrow$82\%,
-ability flat through $\alpha{=}6$). The repair-genre dividend is
-contract-gated and does not follow (\S\ref{sec:mechanism}).}
+\caption{The decision lever: a single activation direction extracted from
+the subject model moves resist (83$\rightarrow$94\%) while ability$|$resist
+stays flat. Cross-family and cross-domain transfer of the lever is
+characterised in the text and scoped in the validation matrix.}
 \label{fig:mechanism}
 \end{figure}
 
 Two instruments locate the mechanism and the boundary. On the mechanism side,
 a single activation direction extracted from the \prerepair{}'s own plain-genre
 probes moves the keep/update decision without moving computation
-(Figure~\ref{fig:mechanism}a). The direction does not impose the repair genre
+(Figure~\ref{fig:mechanism}). The direction does not impose the repair genre
 on inputs that do not request it (plain-genre bleed 0), but it does raise
 schema compliance when the input explicitly requests one (JSON validity 30\%
 $\rightarrow$ 75\%): what it pushes is engagement with the requested repair
@@ -57,7 +55,7 @@ tax. Interference that cannot be repaired at the data level can be bypassed at
 the activation level --- the paper's closing finding, and the reason steering
 is first-line for decision-class repairs in \S\ref{sec:prescription}. The
 claim splits into two layers across model families. The \emph{lever} transfers:
-on Llama-3.1-8B a full-layer scan finds the decision direction at layer 22
+on Llama-3.1-8B a full-layer scan finds the decision direction at layer 22 (appendix data)
 (deeper than Qwen's layer 12; a depth correspondence we leave as future work),
 with resist $+17.3$pp, computation flat, and a plain-genre cost of $3.0$pp that
 mechanically misses our preregistered $\leq$3pp gate by 9 items in 300 ---

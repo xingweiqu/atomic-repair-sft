@@ -279,41 +279,25 @@ def fig6():
 
 # ---------------------------------------------------------------- fig 7
 def fig7():
-    """Steering, single-theme (C-17 P2): (a) Qwen decision curves, (b) Llama L22 lever."""
-    import json as _j
-    fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.8))
-    ax = axes[0]
+    """Steering, single panel (Qwen curves only; Llama lever panel removed per PI order
+    2026-07-20 — consistent with CL-3 measured-in-GSM qualifier after MC batch)."""
+    fig, ax = plt.subplots(figsize=(4.2, 2.8))
     alphas = [0, 4, 8, 16]
     resist = [83, 90, 94, 94]
     ability = [40, 39, 38, 38]
     ax.plot(alphas, resist, "-o", color=OKABE["A1"], label="resist")
     ax.plot(alphas, ability, "-s", color=OKABE["placebo"], label="ability|resist")
     ax.set_xlabel(r"steering strength $\alpha$"); ax.set_ylabel("%")
-    ax.set_title("(a) Qwen3-8B: decision moves, computation flat")
-    ax.legend(fontsize=7)
-    ax = axes[1]
-    grid = {}
-    import glob as _g
-    for f in _g.glob(str(ROOT / "loop3/eval_m3/scan2_shard*.json")):
-        grid.update(_j.load(open(f)))
-    al = [0, 2, 4, 6, 8]
-    res = [100 * grid["base"]["resist"]] + [100 * grid[f"L22_a{a}"]["resist"] for a in (2, 4, 6, 8)]
-    ab = [100 * grid["base"]["ability_given_resist"]] +          [100 * grid[f"L22_a{a}"]["ability_given_resist"] for a in (2, 4, 6, 8)]
-    ax.plot(al, res, "-o", color=OKABE["D"], label="resist")
-    ax.plot(al, ab, "-s", color=OKABE["placebo"], label="ability|resist")
-    ax.set_xlabel(r"steering strength $\alpha$ (layer 22)"); ax.set_ylabel("%")
-    ax.set_title("(b) Llama-3.1-8B: the lever transfers")
+    ax.set_title("Qwen3-8B: decision moves, computation flat")
     ax.legend(fontsize=7)
     fig.tight_layout()
     save(fig, "fig7_mechanism",
-         "The decision lever, on both families. (a) On Qwen3-8B a single activation "
-         "direction moves resist (83->94%) while computation stays flat. (b) On "
-         "Llama-3.1-8B the same extraction recipe finds the lever at layer 22 "
-         "(96-item scan subset): resist rises from 52% to 82% with ability|resist "
-         "flat until alpha 8. The repair-genre dividend is contract-gated and does "
-         "not follow (section 6).",
-         ["notes/NOTES_steering_e5b.md", "loop3/eval_m3/scan2_shard*.json"],
-         "CL-3 two-layer")
+         "The decision lever: a single activation direction extracted from the "
+         "subject model moves resist (83->94%) while ability|resist stays flat. "
+         "Cross-family and cross-domain transfer of the lever is characterised in "
+         "the text and scoped in Figure 7 (matrix).",
+         ["notes/NOTES_steering_e5b.md"],
+         "CL-3 (lever layer, measured-in-GSM)")
 
 
 def fig_a_frontier():
