@@ -27,3 +27,6 @@
 | T22 | 配比不优于 uniform/reversed | Qwen8B×GSM | 3×3 臂 | stats_boot_tost | replicated(B−A1 +4.2 CI 排零,呈拍板) |
 | T23 | 可教前沿不弯(合成域) | Qwen8B×synthetic | 7 档 | race_summary, tier2 | replicated(synthetic-scoped) |
 | T24 | 知识域已知题税(内容侧) | Qwen8B×2Wiki | 3 | knowledge_tax_per_item | replicated;StratQA 不复现(披露) |
+| T25 | 杠杆域迁移 | Qwen8B×2Wiki/SVAMP/StratQA | 各1 | mc_scores(−1.1 天花板/+4.3 天花板/−1.3 有余量不动) | absent(CL-3 加域限定) |
+| T26 | Mistral 杠杆 | Mistral×GSM | 扫描 | eval_mc_mistral(+7.3<+10) | absent(方向为正注) |
+| T27 | drills 毒性 | Qwen8B×2Wiki | 1 | scores_2wiki drl25(.476/.487≥.441) | absent(第五连) |

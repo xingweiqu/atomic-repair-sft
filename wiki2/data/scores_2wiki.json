@@ -583,5 +583,41 @@
    "json_rate": 0.15159574468085107,
    "acc_lenient_aux": 0.6914893617021277
   }
+ },
+ "w2_drl25_s42_e2": {
+  "answered_O": 1.0,
+  "profile": {
+   "ok": 285,
+   "format": 20,
+   "conduct_derail": 21,
+   "fail_O": 42,
+   "phrasing": 2,
+   "conduct_adopt": 6
+  },
+  "repair": {
+   "n": 376,
+   "acc_strict": 0.47606382978723405,
+   "adopt": 0.015957446808510637,
+   "json_rate": 0.9680851063829787,
+   "acc_lenient_aux": 0.8723404255319149
+  }
+ },
+ "w2_drl25_s42_e4": {
+  "answered_O": 1.0,
+  "profile": {
+   "ok": 286,
+   "phrasing": 15,
+   "fail_O": 43,
+   "conduct_derail": 18,
+   "format": 7,
+   "conduct_adopt": 7
+  },
+  "repair": {
+   "n": 376,
+   "acc_strict": 0.4867021276595745,
+   "adopt": 0.007978723404255319,
+   "json_rate": 0.9202127659574468,
+   "acc_lenient_aux": 0.9042553191489362
+  }
  }
 }

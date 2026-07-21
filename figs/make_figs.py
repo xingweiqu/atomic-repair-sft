@@ -525,9 +525,9 @@ def fig9():
     M = np.array([
         [1, 1, 1, 1, 1, 1, 0],
         [1, 2, 2, 2, 0, 3, 0],
-        [1, 3, 3, 0, 3, 3, 0],
+        [1, 3, 3, 3, 3, 3, 0],
         [1, 1, 1, 2, 1, 3, 0],
-        [1, 2, 0, 0, 0, 0, 3],
+        [1, 2, 3, 3, 3, 3, 3],
     ])
     colors = {0: "#EFEFEF", 1: OKABE["B"], 2: "#93D8B7", 3: "#F4C7A5"}
     labels = {0: "", 1: "✓", 2: "✓*", 3: "∅"}
@@ -563,7 +563,9 @@ def fig9():
          "reverses the revealing genre; the Llama steering lever sits at layer 22 "
          "while the repair-genre dividend is contract-gated); open circle = tested "
          "and absent or below criterion (drills toxicity is Qwen-GSM-specific; the "
-         "32B lever does not move under the frozen recipe, instrument-limited); grey "
+         "32B and Mistral levers do not clear the frozen bar — Mistral +7.3pp against "
+         "a +10 gate; domain-transfer cells are ceiling-limited on 2Wiki/SVAMP and "
+         "flat on StrategyQA, scoping the lever to where it was measured); grey "
          "= declared untested (a preregistered scope boundary, not an unrun backlog). "
          "The Llama gating cell is scored post hoc from existing M2 data under the "
          "frozen cell criterion (+40-50pp repair-genre visibility vs -1-+7pp plain). "
