@@ -347,7 +347,7 @@ def cmd_armx2(_):
     rng = random.Random(777)
     rng.shuffle(train)
     drills = [dict(instruction="Answer with only the final answer, nothing else.",
-                   input=r["q"], output=f"The final answer is: {r['gold']}.")
+                   input=r["question"], output=f"The final answer is: {r['gold']}.")
               for r in train[:150]]
     carrier = json.loads((OUT / "arm_w2_cleanreplay.json").read_text())[:450]
     rows = carrier + drills

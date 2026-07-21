@@ -1,0 +1,22 @@
+{
+ "base": {
+  "n": 96,
+  "answered": 0.6979166666666666,
+  "resist": 0.6666666666666666,
+  "adopt": 0.03125,
+  "correct": 0.4270833333333333,
+  "ability_given_resist": 0.640625
+ },
+ "n_points": 56,
+ "n_qualified": 6,
+ "best_qualified": "L26_a8",
+ "best_stats": {
+  "n": 96,
+  "answered": 0.7708333333333334,
+  "resist": 0.7395833333333334,
+  "adopt": 0.03125,
+  "correct": 0.46875,
+  "ability_given_resist": 0.6338028169014085
+ },
+ "verdict": "QUAL_BUT_FLAT L26_a8"
+}
