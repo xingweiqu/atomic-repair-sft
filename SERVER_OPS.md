@@ -58,3 +58,4 @@ pip3 install "datasets==4.0.0" "trl==0.24.0" "peft==0.18.1" "accelerate==1.11.0"
 
 - Monitor 的 grep 必须**覆盖失败态**(FAIL/Traceback/GATE),只抓成功=静默崩;心跳带 GPU 占用。
 - 收割前必验:目录数、行数、engine 标记;server commit 逐个 `diff-tree` 验干净度(只许数据文件)。
+| 15 | 新脚本 launch "No such file"×2(P0c 两次) | push 后未先 sync 就 nohup;脚本内置自 sync 够不着自己 | **launch 铁律:同一条 ssh 里 sync-verify-launch**;新分支首次跑必须显式 checkout -B |
