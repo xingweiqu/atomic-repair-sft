@@ -59,8 +59,13 @@ def drop_quantity(q):
     Validator (skeleton): >=2 numbers must exist and the dropped sentence must
     contain exactly one of them; full solvability check lands with the audit pass."""
     sents = re.split(r"(?<=[.!?])\s+", q)
-    for si, s in enumerate(sents[:-1]):  # never drop the final question sentence
-        nums = numbers_in(s)
+    if len(sents) < 3:
+        return None
+    # audit fix: never drop the FIRST (protagonist/setup) or FINAL (question) sentence —
+    # dropping the opener yields incoherent fragments, which measures discourse damage,
+    # not information insufficiency.
+    for si in range(1, len(sents) - 1):
+        nums = numbers_in(sents[si])
         if len(nums) == 1 and len(numbers_in(q)) >= 2:
             return " ".join(sents[:si] + sents[si + 1:])
     return None
