@@ -29,9 +29,27 @@ def fams200():
     random.Random(42).shuffle(rows)
     return rows[:200]
 
+def full_roster():
+    import os, glob as g
+    out = ["BASE:/mnt/hdfs/xwqu/Qwen3-8B"]
+    for base in ("/mnt/hdfs/xwqu/loop3/output", "/mnt/hdfs/xwqu/wiki2/output",
+                 "/mnt/hdfs/xwqu/g3/output", "/mnt/hdfs/xwqu/g4/output"):
+        for d in sorted(g.glob(base + "/*")):
+            if Path(d, "config.json").exists():
+                out.append(f"{Path(d).name}:{d}")
+    for d in sorted(g.glob("/mnt/hdfs/xwqu/bend/output/*/checkpoint-*")):
+        run = Path(d).parent.name
+        out.append(f"{run}_{Path(d).name}:{d}")
+    return out
+
+
 def cmd_gen(args):
+    import os
     i, n = map(int, args.shard.split(":"))
     OUT.mkdir(parents=True, exist_ok=True)
+    global ROSTER
+    if os.environ.get("P0C_FULL"):
+        ROSTER = full_roster()
     fams = fams200()
     from vllm import LLM, SamplingParams
     sp = SamplingParams(temperature=0.0, max_tokens=1024)

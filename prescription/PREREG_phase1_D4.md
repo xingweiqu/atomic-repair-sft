@@ -1,13 +1,18 @@
-# PREREG Phase-1 D4 平衡条件对照(草稿;训练前定稿冻结)
+# PREREG Phase-1 D4 平衡条件对照(定稿冻结 2026-08-02;训练前)
 
 **设计**:同题配对生成——每底题出两个变体:候选答案=gold → PRESERVE 示范
 ("verify: 候选正确,保留");候选答案=错值(w>0, w/gold∈[0.2,5]) → OVERRIDE 示范
 ("verify: 候选错误,改为 gold")。50/50 严格平衡,配对同题(数字/gold 不变)。
-N∈{300,600,2000};3 seed @600;epochs {2,4,8};脊点=factorial 三闸门版。
+N∈{300,600,2000}(=150/300/1000 对);3 seed @600,单 seed @300/2000;
+epochs {2,4,8};训练数据源 = GSM **train** split(与评测 test 严格分离);
+臂单 7:bal_300 / bal_600×3s / bal_2000 / pure_override_600 / pure_keep_600
+(非配对混合对照 = 复用封箱 E1 池 ckpt 重评,零训练)。共 21 训。
 **对照臂**:纯 override(Paper 2 赢家 targeted 配方)/ 纯 keep(旧反向臂)/
 非配对混合(旧 E1 池重训或复用封箱 ckpt 重评)。
-**评测**:16 格 factorial(P0b)重点 VERIFY×{INCORRECT,CLEAN} 四格 +
-retention 全家桶;主读数 = override 率(候选错时)与 keep 率(候选对时)。
+**评测**:16 格 factorial(P0b 200-family 冻结子集)——VERIFY 格按候选对/错拆分
+(候选值从题面 "Candidate answer:" 解析);主读数 = override 率(候选错)与
+keep 率(候选对)。**retention 新增列(P0c 发现)**:INSUFFICIENT 格保持率
+——弃答摧毁是全员税,平衡臂若同时保住弃答为超预期加分,预注册不要求但必报。
 **预注册二分(两个结局都是手册第一条)**:
 - 结局 A:平衡配对 override≥90% ∧ keep≥安慰剂 → "keep–override 结构互斥"降级为
   "非条件混合的伪影"(条件策略可教),处方第一条 = 教条件策略,不是二选一;

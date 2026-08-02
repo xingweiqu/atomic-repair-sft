@@ -1,0 +1,42 @@
+{
+ "d4_bal_300": {
+  "file_name": "d4_bal_300.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d4_bal_600": {
+  "file_name": "d4_bal_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d4_bal_2000": {
+  "file_name": "d4_bal_2000.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d4_pure_override_600": {
+  "file_name": "d4_pure_override_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d4_pure_keep_600": {
+  "file_name": "d4_pure_keep_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
+}
