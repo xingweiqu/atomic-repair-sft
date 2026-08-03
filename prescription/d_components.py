@@ -72,6 +72,17 @@ def main():
     rows = load_train()
     rng.shuffle(rows)
     comp = gen(rows[:2600], rng)
+    # d6 yield ~44%: top up from the remaining train rows until 2000
+    from prescription.d4_build import insuf_variant as _iv
+    for r in rows[2600:]:
+        if len(comp["d6_abstain"]) >= 2000:
+            break
+        iq = _iv(r)
+        if iq:
+            comp["d6_abstain"].append(dict(
+                instruction=I_ABST, input=iq,
+                output=("The problem does not provide enough information to compute "
+                        "the answer.\nCannot be determined.")))
     di = {}
     for name, items in comp.items():
         assert len(items) >= 2000, (name, len(items))

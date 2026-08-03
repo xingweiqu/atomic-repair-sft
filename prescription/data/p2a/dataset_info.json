@@ -1,0 +1,146 @@
+{
+ "d0_replay_60": {
+  "file_name": "d0_replay_60.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d0_replay_600": {
+  "file_name": "d0_replay_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d0_replay_2000": {
+  "file_name": "d0_replay_2000.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d1_format_60": {
+  "file_name": "d1_format_60.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d1_format_600": {
+  "file_name": "d1_format_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d1_format_2000": {
+  "file_name": "d1_format_2000.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d2_verify_60": {
+  "file_name": "d2_verify_60.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d2_verify_600": {
+  "file_name": "d2_verify_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d2_verify_2000": {
+  "file_name": "d2_verify_2000.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d3_revise_60": {
+  "file_name": "d3_revise_60.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d3_revise_600": {
+  "file_name": "d3_revise_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d3_revise_2000": {
+  "file_name": "d3_revise_2000.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d5_provenance_60": {
+  "file_name": "d5_provenance_60.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d5_provenance_600": {
+  "file_name": "d5_provenance_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d5_provenance_2000": {
+  "file_name": "d5_provenance_2000.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d6_abstain_60": {
+  "file_name": "d6_abstain_60.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d6_abstain_600": {
+  "file_name": "d6_abstain_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d6_abstain_2000": {
+  "file_name": "d6_abstain_2000.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
+}
