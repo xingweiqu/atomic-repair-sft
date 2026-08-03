@@ -11,7 +11,7 @@ for c in d0_replay d1_format d2_verify d3_revise d5_provenance d6_abstain; do
   if [ "$STAGE" = "1" ]; then doses="60"; else doses="600 2000"; fi
   for d in $doses; do for e in 2 4; do SPECS+=("${c}_${d}:e${e}"); done; done
 done
-i=0
+i=0; nfail=0
 for spec in "${SPECS[@]}"; do
   if [ $((i % NM)) -ne $IDX ]; then i=$((i+1)); continue; fi
   i=$((i+1))
@@ -28,7 +28,11 @@ c = re.sub(r'(?m)^num_train_epochs: .*$', 'num_train_epochs: $e', c)
 c = re.sub(r'(?m)^output_dir: .*$', 'output_dir: /mnt/hdfs/xwqu/p2a/output/$tag', c)
 Path('/tmp/p2a_$tag.yaml').write_text(c)
 PYEOF
-  if llamafactory-cli train /tmp/p2a_$tag.yaml > /tmp/p2a_$tag.log 2>&1; then echo "OK $tag"; else echo "FAIL $tag"; fi
+  if llamafactory-cli train /tmp/p2a_$tag.yaml > /tmp/p2a_$tag.log 2>&1; then echo "OK $tag"; else echo "FAIL $tag"; nfail=$((nfail+1)); fi
 done
-mkdir -p /mnt/hdfs/xwqu/p2a && touch /mnt/hdfs/xwqu/p2a/done_stage${STAGE}_m${IDX}
-echo "P2A_M${IDX}_STAGE${STAGE}_DONE"
+if [ $nfail -eq 0 ]; then
+  mkdir -p /mnt/hdfs/xwqu/p2a && touch /mnt/hdfs/xwqu/p2a/done_stage${STAGE}_m${IDX}
+  echo "P2A_M${IDX}_STAGE${STAGE}_DONE"
+else
+  echo "P2A_M${IDX}_STAGE${STAGE}_FAILED nfail=$nfail"
+fi

@@ -16,7 +16,7 @@ cd atomic-repair-sft-github && git fetch -q origin prescription-v1 && git checko
 cd /opt/tiger
 [ -d LLaMA-Factory ] || git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
 cd LLaMA-Factory && pip3 install -q -e . --no-deps
-pip3 install -q "datasets==4.0.0" "trl==0.24.0" "peft==0.18.1" "accelerate==1.11.0" matplotlib fire omegaconf
+pip3 install -q "datasets==4.0.0" "trl==0.24.0" "peft==0.18.1" "accelerate==1.11.0" "deepspeed==0.19.2" matplotlib fire omegaconf
 python3 -c "import vllm, torch; print('vllm', vllm.__version__, 'torch', torch.__version__)"
 which llamafactory-cli
 echo "BRINGUP_OK"
