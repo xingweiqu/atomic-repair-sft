@@ -100,9 +100,63 @@ def cmd_score(_):
         print(f"{tag:34} keep {v['keep_rate']} override {v['override_rate']} insuf {v['insuf_retention']}")
 
 
+def extract_ans(r):
+    tx = r["predict"] or ""
+    m = re.findall(r"final answer is[:\s]*\$?(-?[\d,\.]+)", tx, re.I) or \
+        re.findall(r'"answer"\s*:\s*"?(-?[\d,\.]+)', tx)
+    return numnorm(m[-1]) if m else None
+
+
+def cmd_v2(_):
+    """V-2 audit: pairwise conditional accuracy per family (blind-agreement-immune)
+    + blind-follow rate (wrong-candidate rows where answer == candidate)."""
+    from prescription.p0c_eval import fams200
+    cand_map = {}
+    for f in fams200():
+        for ck, c in f["cells"].items():
+            m = re.search(r"Candidate answer:\s*(-?[\d,\.]+)", c["user"] or "")
+            if m:
+                cand_map[(f["id"], ck)] = numnorm(m.group(1))
+    files = sorted(glob.glob(str(OUT / "pred_*.jsonl"))) + \
+        sorted(glob.glob(str(ROOT / "prescription/p0c/pred_*.jsonl")))
+    res = {}
+    for fp in files:
+        tag = Path(fp).stem.replace("pred_", "")
+        fam_cells = defaultdict(list)
+        blind_n = blind_hit = 0
+        for l in Path(fp).open():
+            r = json.loads(l)
+            if "VERIFY" not in r["cell"] or "ANSWERABLE" not in r["cell"]:
+                continue
+            cand = cand_map.get((r["fam"], r["cell"]))
+            if cand is None:
+                continue
+            from prescription.p0c_eval import score_one
+            s = score_one(r)
+            correct_cand = cand == numnorm(r["gold"])
+            fam_cells[r["fam"]].append((correct_cand, s))
+            if not correct_cand:
+                blind_n += 1
+                blind_hit += int(extract_ans(r) == cand)
+        joint_ok = joint_n = 0
+        for fam, cells in fam_cells.items():
+            has_k = any(c for c, _ in cells)
+            has_o = any(not c for c, _ in cells)
+            if not (has_k and has_o):
+                continue
+            joint_n += 1
+            joint_ok += int(all(s for _, s in cells))
+        if joint_n:
+            res[tag] = dict(joint=round(joint_ok / joint_n, 4), n_fam=joint_n,
+                            blind_follow=round(blind_hit / blind_n, 4) if blind_n else None)
+    (OUT / "v2_audit.json").write_text(json.dumps(res, indent=1))
+    for k, v in sorted(res.items()):
+        print(f"{k:34} joint {v['joint']:.3f} (n={v['n_fam']})  blind {v['blind_follow']}")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["gen", "score"])
+    ap.add_argument("cmd", choices=["gen", "score", "v2"])
     ap.add_argument("--shard", default="0:1")
     a = ap.parse_args()
-    {"gen": cmd_gen, "score": cmd_score}[a.cmd](a)
+    {"gen": cmd_gen, "score": cmd_score, "v2": cmd_v2}[a.cmd](a)
