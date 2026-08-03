@@ -38,5 +38,21 @@
    "query": "input",
    "response": "output"
   }
+ },
+ "d4_3way_600": {
+  "file_name": "d4_3way_600.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "d4_3way_1998": {
+  "file_name": "d4_3way_1998.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
  }
 }

@@ -63,6 +63,65 @@ def pair(r, rng):
     return keep, override
 
 
+def insuf_variant(r):
+    import re as _re
+    sents = _re.split(r"(?<=[.!?])\s+", r["q"])
+    if len(sents) < 3:
+        return None
+    for si in range(1, len(sents) - 1):
+        nums = _re.findall(r"\d[\d,]*\.?\d*", sents[si])
+        if len(nums) == 1 and len(_re.findall(r"\d[\d,]*\.?\d*", r["q"])) >= 2:
+            return " ".join(sents[:si] + sents[si + 1:])
+    return None
+
+
+INSTR3 = (INSTR + " If the problem does not contain enough information to answer, "
+          "say exactly 'Cannot be determined.'")
+
+
+def triplet(r, rng):
+    k, o = pair(r, rng)
+    k = dict(k, instruction=INSTR3)
+    o = dict(o, instruction=INSTR3)
+    iq = insuf_variant(r)
+    if iq is None:
+        return None
+    cand = sample_w(r["gold"], rng)
+    a = dict(instruction=INSTR3,
+             input=f"{iq}\nCandidate answer: {cand}",
+             output=("Check the candidate by recomputing. The problem does not provide "
+                     "enough information to compute the answer, so the candidate cannot "
+                     "be verified.\nCannot be determined."))
+    return k, o, a
+
+
+def main3():
+    OUT.mkdir(parents=True, exist_ok=True)
+    rng = random.Random(5252)
+    rows = load_train()
+    rng.shuffle(rows)
+    trips = []
+    for r in rows:
+        t3 = triplet(r, rng)
+        if t3:
+            trips.append(t3)
+        if len(trips) >= 666:
+            break
+    assert len(trips) >= 666, len(trips)
+    di = json.loads((OUT / "dataset_info.json").read_text())
+
+    def write(name, items):
+        rng.shuffle(items)
+        (OUT / f"{name}.json").write_text(json.dumps(items, ensure_ascii=False))
+        di[name] = {"file_name": f"{name}.json",
+                    "columns": {"prompt": "instruction", "query": "input", "response": "output"}}
+
+    write("d4_3way_600", [x for t3 in trips[:200] for x in t3])
+    write("d4_3way_1998", [x for t3 in trips[:666] for x in t3])
+    (OUT / "dataset_info.json").write_text(json.dumps(di, indent=1))
+    print(f"triplets {len(trips)}; 3way arms written")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     rng = random.Random(4242)
@@ -88,4 +147,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys as _s
+    (main3 if "--3way" in _s.argv else main)()
