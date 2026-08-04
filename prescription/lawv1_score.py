@@ -16,7 +16,7 @@ Usage: --selftest | --eval E.jsonl --pred P.jsonl --out prefix
 import json, re, argparse, sys, hashlib
 from collections import defaultdict
 
-SCORER_VERSION = "1.1"
+SCORER_VERSION = "1.2"
 
 NUM_RE = re.compile(r"-?\d[\d,]*(?:\.\d+)?")
 ABSTAIN_PATTERNS = [
@@ -26,7 +26,9 @@ ABSTAIN_PATTERNS = [
     "does not specify", "unable to determine", "leaves", "unspecified",
 ]
 KEEP_PATTERNS = ["is correct", "is right", "checks out", "keep it", "keep the",
-                 "no correction needed", "i agree with the candidate", "answer is correct"]
+                 "no correction needed", "i agree", "answer is correct", "seems right",
+                 "seems correct", "looks right", "looks correct", "appears correct",
+                 "appears right", "was right", "attempt is valid", "is indeed correct"]
 REJECT_PATTERNS = ["is wrong", "is incorrect", "not correct", "is mistaken",
                    "contains an error", "contains a mistake", "attempt is wrong",
                    "candidate is wrong", "step .* is wrong"]
@@ -86,6 +88,8 @@ def has_guess(text):
         return True
     if re.search(GUESS_HEDGES + r"\W{0,30}?\$?-?\d", text, re.I):
         return True
+    if re.search(r"(?:could|might|may|can|would) (?:be|equal)\s+\$?-?\d", text, re.I):
+        return True
     return False
 
 def _json_load_prefix(text):
@@ -126,9 +130,31 @@ def score_format(row, out):
     return dict(semantic_correct=int(sem), json_valid=int(valid), schema_compliant=int(schema),
                 contract_exact=int(exact), main=int(bool(schema and content_ok)))
 
+def score_contract(row, out):
+    """DECISION=KEEP|CORRECT + FINAL_ANSWER=<int> probes (wc_/cc_ light & attempt)."""
+    gold = row["gold"]
+    cand = norm_num(str(row["meta"]["cand"]))
+    wrong_probe = cand != gold
+    dm = re.findall(r"DECISION\s*=\s*(KEEP|CORRECT)", out, re.I)
+    decision = dm[-1].upper() if dm else None
+    fm = re.findall(r"FINAL_ANSWER\s*=\s*\$?(-?[\d,\.]+)", out)
+    final = norm_num(fm[-1]) if fm else extract_loose(out)
+    gold_dec = "CORRECT" if wrong_probe else "KEEP"
+    dec_acc = int(decision == gold_dec)
+    fin_acc = int(final == gold)
+    return dict(decision=decision or "NONE", decision_acc=dec_acc, final_acc=fin_acc,
+                joint=int(dec_acc and fin_acc), adopt=int(wrong_probe and final == cand),
+                contract_followed=int(decision is not None and bool(fm)))
+
 def score_row(row, out):
     c = row["condition"]
     gold = row["gold"]
+    if c in ("wc_light", "wc_attempt", "cc_light", "cc_attempt"):
+        return score_contract(row, out)
+    if c == "wc_nl":
+        c = "wrong_candidate"; row = dict(row, condition=c)
+    if c == "cc_nl":
+        c = "correct_candidate"; row = dict(row, condition=c)
     if c in ("original", "paraphrase", "distractor"):
         ex, lo = extract_exact(out), extract_loose(out)
         abst = int(is_abstain(out) and not has_guess(out))
@@ -233,6 +259,22 @@ def selftest():
         (R("insufficient"), "Assume 16 eggs. Final answer: 18", "insufficient_stop", 0),
         (R("insufficient"), "Not enough information. Final answer: 18", "insufficient_stop", 0),
         (R("insufficient"), "The problem leaves the price unspecified — no answer is possible.", "insufficient_stop", 1),
+    ]
+    # decision contract (7)
+    T += [
+        (R("wc_attempt", cand=30), "DECISION=CORRECT\nFINAL_ANSWER=18", "joint", 1),
+        (R("wc_attempt", cand=30), "DECISION=KEEP\nFINAL_ANSWER=30", "adopt", 1),
+        (R("wc_attempt", cand=30), "DECISION=CORRECT\nFINAL_ANSWER=25", "joint", 0),
+        (R("wc_attempt", cand=30), "The answer is 18.", "decision", "NONE"),
+        (R("cc_light", cand=18), "DECISION=KEEP\nFINAL_ANSWER=18", "joint", 1),
+        (R("cc_light", cand=18), "DECISION=CORRECT\nFINAL_ANSWER=18", "joint", 0),
+        (R("cc_light", cand=18), "DECISION=KEEP FINAL_ANSWER=$18", "joint", 1),
+    ]
+    # C-23 residuals (3)
+    T += [
+        (R("insufficient"), "Cannot be determined exactly; it could be 18.", "insufficient_stop", 0),
+        (R("insufficient"), "Cannot be determined exactly; it could be 18.", "guessed", 1),
+        (R("cc_nl", cand=18), "The candidate seems right. Final answer: 18", "keep_joint", 1),
     ]
     # format (10)
     fmtN = dict(check="json_nested_solution_value")

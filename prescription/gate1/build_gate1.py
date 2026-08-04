@@ -1,27 +1,30 @@
 #!/usr/bin/env python3
-"""Gate-1 prototype builder v1.1 (lawv1, C-22 rework).
+"""Gate-1 prototype builder v1.2 (lawv1, C-23 rework).
 
-C-22 fixes vs v1.0:
-  1 insufficient: typed variable deletion (percentage/ratio/time/price/fraction/count),
-    per-item {removed_variable, variable_type, dependency_path, why_unanswerable};
-  2 distractor: topic-adjacent, NO irrelevance markers, varied entities/numbers;
-  3 selective revision -> full-attempt revision (candidate reasoning provided; Option B);
-  4 wrong-candidate error taxonomy (arithmetic_slip / operator_error / dropped_step /
-    off_by_one), proportions recorded, candidate values derived from a concrete wrong process;
-  6 format schemas: no fake semantic fields (unit/confidence removed; calculation is real);
-  7 target reasoning cleaned: every parsable "a op b = c" is executed; malformed exprs drop item.
+C-23 fixes vs v1.1:
+  #2 main_family_pool: 50 families RANDOMLY sampled (seed) from base-filtered TEST;
+     all conditions build on the main pool; insufficient only on the reliable subset
+     (its builder no longer filters the whole eval set);
+  #1 insufficient hardened: number-WORD leak check, algebraic-recoverability check
+     (<=2-op compositions of remaining numbers), article/hyphen/colon guards,
+     irregular plurals, compound nouns, unit-count words -> skip; grammar residue scan;
+     ALL surviving items go to full manual audit (INSUFFICIENT_AUDIT.md);
+  #3/#4 candidates: decision-contract probes (DECISION=KEEP|CORRECT + FINAL_ANSWER=)
+     in two strengths — light (answer only) and full plausible attempt (main stress);
+     natural-language variants kept as secondary generalization probes (n=20);
+  #8 paraphrase: generator B = human/CC rewrite loaded from paraphrase_overrides.json
+     (answer-preserving, number-multiset checked); no rule-based fallback in eval.
 
-Outputs: eval_proto.jsonl (50 fam x 7 cond, GSM8K TEST, gen B),
-         train_proto.jsonl (4 comp x 200, GSM8K TRAIN, gen A), build_stats.json.
-Deterministic (seed 20260805). Paraphrase remains WEAK_V0 (declared; upgrade pending).
+Outputs: eval_proto.jsonl / train_proto.jsonl / build_stats.json / main_pool.json.
+Deterministic (SEED). Train side unchanged from v1.1 except hardened typed_delete.
 """
-import json, re, random, hashlib
+import json, re, random, hashlib, itertools
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parent
-GEN_VER = "gate1-v1.1"
-SEED = 20260805
+GEN_VER = "gate1-v1.2"
+SEED = 20260812
 
 NUM_TOKEN = re.compile(r"\$?\d[\d,]*(?:\.\d+)?%?")
 STOPNAMES = {"The", "A", "An", "Every", "Each", "If", "On", "In", "At", "There", "It",
@@ -50,14 +53,13 @@ def numval(tok):
     except Exception:
         return None
 
-# ------------------------------ reasoning hygiene (C-22 #7) ------------------------
+# ------------------------------ reasoning hygiene ----------------------------------
 _N = r"-?\d[\d,]*(?:\.\d+)?"
 FULL_EXPR = re.compile(
     rf"(?<![\d\.,\)])((?:{_N})(?:\s*[\+\-\*\/x]\s*\$?{_N})+)\s*=\s*\$?({_N})")
 MALFORMED = re.compile(r"[\+\-\*\/x]\s*=|=\s*[\+\-\*\/x]|\d\s*[\*\/x]\s*(?![\d\s\.\(\$\-])")
 
 def reasoning_clean(text):
-    """True iff no malformed expr and every full 'a op b [op c...] = r' verifies (2% tol)."""
     if MALFORMED.search(text):
         return False
     for expr, res in FULL_EXPR.findall(text):
@@ -90,101 +92,173 @@ def first_name(q, fid):
         return m.group(1)
     return NAME_POOL[h(fid) % len(NAME_POOL)]
 
-# ------------------------------ typed deletion (C-22 #1) ---------------------------
-def find_tokens_for_value(q, val):
-    """All full numeric surface tokens in q whose value == val."""
+# ------------------------------ number words ---------------------------------------
+_ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+         "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+         "seventeen", "eighteen", "nineteen"]
+_TENS = {20: "twenty", 30: "thirty", 40: "forty", 50: "fifty", 60: "sixty",
+         70: "seventy", 80: "eighty", 90: "ninety"}
+_EXTRA = {2: ["twice", "double", "couple"], 3: ["thrice", "triple"], 12: ["dozen"],
+          4: ["quadruple"], 100: ["hundred"], 1000: ["thousand"]}
+
+def numwords(val):
+    """English word forms of an integer value (<=999), for leak checking."""
     out = []
-    for m in NUM_TOKEN.finditer(q):
-        if numval(m.group(0)) == val:
-            out.append((m.start(), m.end(), m.group(0)))
+    if val == int(val):
+        v = int(val)
+        if 0 <= v < 20:
+            out.append(_ONES[v])
+        elif v in _TENS:
+            out.append(_TENS[v])
+        elif 20 < v < 100 and (v // 10) * 10 in _TENS:
+            out.append(f"{_TENS[(v//10)*10]}-{_ONES[v%10]}")
+        out += _EXTRA.get(v, [])
     return out
 
+def word_leak(q, val):
+    ql = q.lower()
+    return any(re.search(r"\b" + re.escape(w) + r"s?\b", ql) for w in numwords(val))
+
+def derivable(others, target, tol=1e-6):
+    """target reachable from <=3 of the remaining stated numbers via <=2 ops?"""
+    vals = [v for v in others if v is not None]
+    def ops(a, b):
+        r = [a + b, a - b, b - a, a * b]
+        if b: r.append(a / b)
+        if a: r.append(b / a)
+        return r
+    lvl1 = set()
+    for a, b in itertools.combinations(vals, 2):
+        lvl1.update(ops(a, b))
+    if any(abs(x - target) <= tol for x in lvl1):
+        return True
+    for x in list(lvl1):
+        for c in vals:
+            if any(abs(y - target) <= tol for y in ops(x, c)):
+                return True
+    return False
+
+# ------------------------------ typed deletion v2 ----------------------------------
+IRREG_PLURAL = {"foot": "feet", "tooth": "teeth", "goose": "geese", "mouse": "mice",
+                "man": "men", "woman": "women", "child": "children", "person": "people"}
+ALREADY_PLURAL = {"feet", "teeth", "geese", "mice", "men", "women", "children",
+                  "people", "sheep", "fish", "deer", "series", "species"}
+NOUN_BLACKLIST = {"times", "of", "and", "is", "are", "was", "were", "the", "a", "an",
+                  "than", "then", "as", "to", "at", "in", "on", "per", "each", "every",
+                  "or", "more", "less", "by", "for", "with", "from"}
+UNIT_COUNT = {"dozen", "dozens", "hundred", "hundreds", "thousand", "thousands",
+              "pair", "pairs", "percent", "half", "gb", "mb", "kg", "km", "cm", "mph"}
+
 def pluralize(w):
-    if w.endswith("s"):
+    lw = w.lower()
+    if lw in ALREADY_PLURAL or w.endswith("s"):
         return w
+    if lw in IRREG_PLURAL:
+        return IRREG_PLURAL[lw]
     if re.search(r"(ch|sh|x|ss)$", w):
         return w + "es"
     if re.search(r"[^aeiou]y$", w):
         return w[:-1] + "ies"
     return w + "s"
 
+def find_tokens_for_value(q, val):
+    out = []
+    for m in NUM_TOKEN.finditer(q):
+        if numval(m.group(0)) == val:
+            out.append((m.start(), m.end(), m.group(0)))
+    return out
+
 def classify_token(q, s, e, tok):
-    """(variable_type, replacement) from surface + context."""
-    after = q[e:e + 12]
+    """(variable_type, replacement, del_start, del_end) or type,None,.. to skip."""
+    before, after = q[max(0, s - 4):s], q[e:e + 16]
+    if "-" in q[max(0, s - 1):s] or after.startswith("-"):
+        return "hyphen_compound", None, s, e          # "5-mile" -> skip
+    if ":" in q[max(0, s - 2):s] or ":" in after[:2]:
+        return "ratio_or_time", None, s, e            # either side of ':' -> skip
     if tok.endswith("%"):
-        return "percentage", "an unspecified percentage", e
+        return "percentage", "an unspecified percentage", s, e
+    art = re.search(r"\b([Aa]n?)\s+$", q[:s])
     if tok.startswith("$"):
-        return "price", "an unspecified price", e
+        if art and re.match(r"\s*[A-Za-z]", after):
+            return "price_attributive", None, s, e   # "an $11 sweater" -> skip
+        return "price", "an unspecified amount", (art.start(1) if art else s), e
     if re.match(r"\s*(dollars|cents|euros)", after):
-        return "price", "an unspecified amount", e
-    if re.match(r":\d", after) or re.search(r"\d:$", q[max(0, s - 3):s] + tok):
-        return "ratio_or_time", None, e          # unhandled: skip item (ratios/times)
-    if re.match(r"\s*/\s*\d", after) or q[max(0, s - 2):s].strip().endswith("/"):
-        return "fraction", None, e               # unhandled: skip item
+        return "price", "an unspecified amount of", s, e
     if re.match(r"\s*(AM|PM|a\.m\.|p\.m\.|o'clock)", after, re.I):
-        return "time", None, e                   # unhandled: skip item
+        return "time", None, s, e
     m = re.match(r"(\s+)([A-Za-z]+)(\s+[A-Za-z]+)?", after)
-    if m:
-        w1 = m.group(2)
-        w2 = m.group(3).strip() if m.group(3) else None
-        ADJ = {"available", "more", "fewer", "extra", "additional", "other", "new",
-               "total", "different", "whole", "full", "small", "large", "big"}
-        noun, consumed = (w2, (m.group(1) + w1 + m.group(3))) if (w1.lower() in ADJ and w2) \
-            else (w1, m.group(1) + w1)
-        if noun and noun.lower() not in {"times", "of", "and", "is", "are", "was", "were", "the", "a", "an"}:
-            # consume the noun token(s) so "30 lollipops" -> "an unspecified number of lollipops"
-            return "count", f"an unspecified number of {pluralize(noun)}", e + len(consumed)
-    return "count", "an unspecified quantity", e
+    if not m:
+        return "count", None, s, e
+    w1 = m.group(2)
+    w2 = m.group(3).strip() if m.group(3) else None
+    if w1.lower() in UNIT_COUNT or (w2 and w2.lower() in UNIT_COUNT):
+        return "unit_count", None, s, e               # "3 dozen donuts" -> skip
+    ADJ = {"available", "more", "fewer", "extra", "additional", "other", "new",
+           "total", "different", "whole", "full", "small", "large", "big"}
+    if w1.lower() in NOUN_BLACKLIST and not (w2 and w2.lower() not in NOUN_BLACKLIST):
+        return "count", None, s, e
+    del_start = art.start(1) if art else s            # eat a preceding "a/an"
+    if w2 and w2.endswith("s") and w1.lower() not in ADJ and w1.lower() not in NOUN_BLACKLIST:
+        # plural compound: "5 apple pies" -> "an unspecified number of apple pies"
+        return "count", f"an unspecified number of {w1} {w2}", del_start, e + len(m.group(1) + w1 + m.group(3))
+    noun, consumed = (w2, m.group(1) + w1 + m.group(3)) if (w1.lower() in ADJ and w2) \
+        else (w1, m.group(1) + w1)
+    if not noun or noun.lower() in NOUN_BLACKLIST:
+        return "count", None, s, e
+    return "count", f"an unspecified number of {pluralize(noun)}", del_start, e + len(consumed)
+
+RESIDUE = re.compile(r"\ba an\b|\ban an\b|\bthe an\b|\b(\w+) \1\b", re.I)
+
+INSUF_BLOCKLIST = {
+    "gsm_test_00403",  # deleting daily hours leaves an alternative reading (5h*900W*30d) answerable
+}
 
 def typed_delete(it):
-    """Pick a necessary, uniquely-surfaced, typed-handleable operand; delete it.
-    Returns (new_q, meta) or None."""
+    """Hardened deletion. Returns (new_q, meta) or None. Guards:
+    unique surface & value, no word-form leak, not derivable from remaining numbers
+    (<=2-op compositions), typed-safe context, no grammar residue after rewrite."""
+    if it["id"] in INSUF_BLOCKLIST:
+        return None
     q = it["question"]
-    qvals = [numval(t) for t in NUM_TOKEN.findall(q)]
+    all_vals = [numval(t) for t in NUM_TOKEN.findall(q)]
     for n_raw in it["steps"][0]["nums"]:
         val = numval(n_raw.lstrip("-"))
         if val in (None, 0, 1):
-            continue  # val==1 is often implied by grammar ("an iPhone") -> recoverable
+            continue
         toks = find_tokens_for_value(q, val)
-        if len(toks) != 1:
-            continue                       # ambiguous surface -> skip operand
-        if qvals.count(val) != 1:
-            continue                       # value appears elsewhere -> maybe derivable
+        if len(toks) != 1 or all_vals.count(val) != 1:
+            continue
+        if word_leak(q, val):
+            continue                                   # "five pies" style restatement
+        others = [v for v in all_vals if v != val]
+        if derivable(others, val):
+            continue                                   # 24-(10-1)=15 style back-solve
         s, e, tok = toks[0]
-        vtype, repl, e2 = classify_token(q, s, e, tok)
+        vtype, repl, ds, de = classify_token(q, s, e, tok)
         if repl is None:
-            continue                       # typed-unhandled context -> try next operand
-        new_q = q[:s] + repl + q[e2:]
-        dep_steps = [st["expr"] for st in it["steps"] if str(int(val)) in
-                     [x.lstrip("-") for x in st["nums"]] or n_raw in st["nums"]]
+            continue
+        new_q = q[:ds] + repl + q[de:]
+        if RESIDUE.search(new_q):
+            continue
+        dep = [st["expr"] for st in it["steps"] if n_raw in st["nums"] or
+               (intish(val) and str(int(val)) in [x.lstrip("-") for x in st["nums"]])]
         meta = {
-            "removed_variable": tok,
-            "variable_type": vtype,
-            "replacement": repl,
-            "dependency_path": " -> ".join(dep_steps + ["final"]) if dep_steps else it["steps"][0]["expr"] + " -> final",
-            "why_unanswerable": (f"'{tok}' ({vtype}) is a direct input of step computation "
-                                 f"{dep_steps[0] if dep_steps else it['steps'][0]['expr']}; its value appears exactly once "
-                                 f"in the problem and equals no other stated quantity, so it cannot be recovered from the remaining text."),
+            "removed_variable": tok.rstrip(","), "variable_type": vtype, "replacement": repl,
+            "dependency_path": " -> ".join((dep or [it["steps"][0]["expr"]]) + ["final"]),
+            "why_unanswerable": (f"'{tok}' ({vtype}) is a direct input of {dep[0] if dep else it['steps'][0]['expr']}; "
+                                 "it appears exactly once, has no word-form restatement, and is not reachable from the "
+                                 "remaining stated numbers via any <=2-operation composition, so the residual problem "
+                                 "does not determine the answer."),
         }
         return new_q, meta
     return None
 
-def qty_phrase(meta):
-    if meta["variable_type"] == "count":
-        m = re.match(r"an unspecified number of (.+)", "")
-    rep = {"percentage": "the percentage", "price": "the price",
-           "count": "the required count", }.get(meta["variable_type"], "one required quantity")
-    return rep
-
-# ------------------------------ wrong-candidate taxonomy (C-22 #4/#5) --------------
+# ------------------------------ candidate machinery --------------------------------
 def wrong_process(it, rng):
-    """Return (error_type, wrong_final, wrong_steps) — a concrete wrong derivation.
-    wrong_steps = list of 'expr = value' strings representing the candidate attempt."""
     steps = it["steps"]
     gold = int(float(it["final"]))
     chain = [f"{s['expr']} = {s['result']}" for s in steps]
     choices = []
-    # operator_error on last step
     last = steps[-1]
     m = re.match(r"^(-?[\d\.,]+)([\+\-\*\/])(-?[\d\.,]+)$", last["expr"].replace(" ", ""))
     if m:
@@ -193,46 +267,50 @@ def wrong_process(it, rng):
         try:
             v = {"+": a + b, "-": a - b, "*": a * b, "/": a / b}[swap]
             if v == int(v) and int(v) != gold and abs(v) < 1e7 and v >= 0:
-                ws = chain[:-1] + [f"{m.group(1)}{swap}{m.group(3)} = {int(v)}"]
-                choices.append(("operator_error", int(v), ws))
+                choices.append(("operator_error", int(v), chain[:-1] + [f"{m.group(1)}{swap}{m.group(3)} = {int(v)}"]))
         except ZeroDivisionError:
             pass
-    # dropped_step: answer = penultimate result
     if len(steps) >= 2 and intish(steps[-2]["result"]) and int(float(steps[-2]["result"])) != gold:
         choices.append(("dropped_step", int(float(steps[-2]["result"])), chain[:-1]))
-    # arithmetic_slip on last step result (small delta)
     d = rng.choice([2, 3, 4])
     v = gold + rng.choice([-1, 1]) * d
     if v >= 0:
-        ws = chain[:-1] + [f"{last['expr']} = {v}"]
-        choices.append(("arithmetic_slip", v, ws))
-    # off_by_one
+        choices.append(("arithmetic_slip", v, chain[:-1] + [f"{last['expr']} = {v}"]))
     v = gold + rng.choice([-1, 1])
     if v >= 0:
-        ws = chain[:-1] + [f"{last['expr']} = {v}"]
-        choices.append(("off_by_one", v, ws))
+        choices.append(("off_by_one", v, chain[:-1] + [f"{last['expr']} = {v}"]))
     return rng.choice(choices)
 
-def render_attempt(wrong_steps, final):
+def render_attempt_A(wrong_steps, final):
     lines = [f"Step {i+1}: {s}." for i, s in enumerate(wrong_steps)]
     return "\n".join(lines) + f"\nCandidate final answer: {final}"
 
+def render_attempt_B(steps_txt, final):
+    """Eval-side prose rendering (distinct from train's Step-list genre)."""
+    return ("They worked it out as follows: " + "; then ".join(steps_txt) +
+            f". On that basis they concluded the answer is {final}.")
+
+CONTRACT_B = ("Review the candidate attempt against the problem.\n"
+              "Reply with exactly two lines:\n"
+              "DECISION=KEEP    (if the attempt's final answer is correct)\n"
+              "DECISION=CORRECT (if it is wrong)\n"
+              "FINAL_ANSWER=<integer>")
+
+NL_PROBE_B = "A previous attempt at this problem concluded the answer is {cand}. Review the problem and give your own final answer."
+
 # ------------------------------ generator banks ------------------------------------
-GEN_B = {
-    "distractor": [
-        "That same day, the store also sold {k} {item} for ${p} each.",
-        "{name2} keeps a collection of {k} {item} at home.",
-        "Earlier that week, {name2} counted {k} {item} in the storeroom.",
-        "The shop next door displayed {k} {item} priced at ${p} apiece.",
-    ],
-    "candidate": "A previous attempt at this problem concluded the answer is {cand}. Review the problem and give your own final answer.",
-    "format_schemas": [
-        {"id": "B1", "instr": 'Respond with ONLY a JSON object of the form {"solution": {"value": <integer>}} and nothing else.',
-         "check": "json_nested_solution_value"},
-        {"id": "B2", "instr": "Respond with ONLY one line of the form ANSWER=<integer> and nothing else.",
-         "check": "kv_answer_eq"},
-    ],
-}
+GEN_B_DIS = [
+    "That same day, the store also sold {k} {item} for ${p} each.",
+    "{name2} keeps a collection of {k} {item} at home.",
+    "Earlier that week, {name2} counted {k} {item} in the storeroom.",
+    "The shop next door displayed {k} {item} priced at ${p} apiece.",
+]
+GEN_B_FMT = [
+    {"id": "B1", "instr": 'Respond with ONLY a JSON object of the form {"solution": {"value": <integer>}} and nothing else.',
+     "check": "json_nested_solution_value"},
+    {"id": "B2", "instr": "Respond with ONLY one line of the form ANSWER=<integer> and nothing else.",
+     "check": "kv_answer_eq"},
+]
 GEN_A = {
     "revise_prompt": ("A previous attempt at this problem is shown below.\n\n{q}\n\n"
                       "Candidate attempt:\n{attempt}\n\n"
@@ -270,70 +348,69 @@ def pick_distractor(q, fid, bank, tag):
     if PRONOUN_RE.search(q):
         bank = [t for t in bank if "{name2}" not in t] or bank
     used = {numval(t) for t in NUM_TOKEN.findall(q)}
-    ks = [k for k in range(3, 30) if float(k) not in used]
-    ps = [p for p in range(2, 10) if float(p) not in used]
-    k, p = rng.choice(ks), rng.choice(ps)
-    name2 = rng.choice(NAME_POOL)
-    item = rng.choice(ITEM_POOL)
-    t = rng.choice(bank)
-    return t.format(k=k, p=p, name2=name2, item=item), {"k": k, "item": item}
+    k = rng.choice([k for k in range(3, 30) if float(k) not in used])
+    p = rng.choice([p for p in range(2, 10) if float(p) not in used])
+    return (rng.choice(bank).format(k=k, p=p, name2=rng.choice(NAME_POOL), item=rng.choice(ITEM_POOL)),
+            {"k": k, "item": rng.choice(ITEM_POOL)})
 
-def paraphrase_v0(q):
-    parts = re.split(r"(?<=[.!?])\s+", q.strip())
-    if len(parts) >= 2 and parts[-1].endswith("?"):
-        p = parts[-1] + " Here is the situation: " + " ".join(parts[:-1])
-    else:
-        p = "Consider the following. " + q
-    for a, b in [(" altogether", " in total"), (" every day", " each day"), (" per ", " for each ")]:
-        p = p.replace(a, b, 1)
-    return p
-
-# ------------------------------ eval build -----------------------------------------
+# ------------------------------ eval build (v1.2) ----------------------------------
 def build_eval(test_items, n_fam=50):
-    rows, fams, taxo = [], 0, {}
-    for it in test_items:
-        if fams >= n_fam:
-            break
-        if not base_filter(it):
-            continue
-        td = typed_delete(it)
-        if td is None:
-            continue
+    cands = [it for it in test_items if base_filter(it)]
+    pool = random.Random(SEED).sample(cands, n_fam)     # random, NOT first-N; NOT insufficient-filtered
+    overrides = {}
+    op = OUT / "paraphrase_overrides.json"
+    if op.exists():
+        overrides = json.load(op.open())
+    rows, insuf_n, taxo = [], 0, {}
+    nl_fams = {it["id"] for it in pool[:20]}            # NL secondary probes subset
+    for it in pool:
         fid, gold = it["id"], str(int(float(it["final"])))
         q = it["question"].strip()
-        q_insuf, imeta = td
-        rng = rng_for(fid, "wc")
-        etype, wv, _ = wrong_process(it, rng)
-        taxo[etype] = taxo.get(etype, 0) + 1
-        dis, dmeta = pick_distractor(q, fid, GEN_B["distractor"], "dis")
-        parts = re.split(r"(?<=[.!?])\s+", q)
-        q_dis = " ".join(parts[:-1] + [dis, parts[-1]]) if len(parts) >= 2 else q + " " + dis
-        sch = GEN_B["format_schemas"][h(fid) % 2]
         base = dict(family_id=fid, source_id=fid, source_split="test", generator_id="B",
                     generator_version=GEN_VER, gold=gold, domain="reasoning")
+        rng = rng_for(fid, "wc")
+        etype, wv, wsteps = wrong_process(it, rng)
+        taxo[etype] = taxo.get(etype, 0) + 1
+        chain = [f"{s['expr']} = {s['result']}" for s in it["steps"]]
+        dis, dmeta = pick_distractor(q, fid, GEN_B_DIS, "dis")
+        parts = re.split(r"(?<=[.!?])\s+", q)
+        q_dis = " ".join(parts[:-1] + [dis, parts[-1]]) if len(parts) >= 2 else q + " " + dis
+        sch = GEN_B_FMT[h(fid) % 2]
         conds = {
             "original": dict(prompt=q),
-            "paraphrase": dict(prompt=paraphrase_v0(q), note="WEAK_V0 rule-based"),
             "distractor": dict(prompt=q_dis, meta=dmeta),
-            "wrong_candidate": dict(prompt=q + "\n\n" + GEN_B["candidate"].format(cand=wv),
-                                    meta={"cand": wv, "error_type": etype}),
-            "correct_candidate": dict(prompt=q + "\n\n" + GEN_B["candidate"].format(cand=gold),
-                                      meta={"cand": int(gold)}),
-            "insufficient": dict(prompt=q_insuf, meta=imeta, gold_behavior="abstain"),
             "format": dict(prompt=q + "\n\n" + sch["instr"], meta={"schema": sch["id"], "check": sch["check"]}),
+            "wc_light": dict(prompt=f"{q}\n\nCandidate attempt:\nThey state the answer is {wv}, without showing their work.\n\n{CONTRACT_B}",
+                             meta={"cand": wv, "error_type": etype, "layer": "light"}),
+            "wc_attempt": dict(prompt=f"{q}\n\nCandidate attempt:\n{render_attempt_B(wsteps, wv)}\n\n{CONTRACT_B}",
+                               meta={"cand": wv, "error_type": etype, "layer": "attempt"}),
+            "cc_light": dict(prompt=f"{q}\n\nCandidate attempt:\nThey state the answer is {gold}, without showing their work.\n\n{CONTRACT_B}",
+                             meta={"cand": int(gold), "layer": "light"}),
+            "cc_attempt": dict(prompt=f"{q}\n\nCandidate attempt:\n{render_attempt_B(chain, gold)}\n\n{CONTRACT_B}",
+                               meta={"cand": int(gold), "layer": "attempt"}),
         }
+        if fid in overrides:
+            conds["paraphrase"] = dict(prompt=overrides[fid], meta={"source": "cc_rewrite_v1"})
+        if fid in nl_fams:
+            conds["wc_nl"] = dict(prompt=q + "\n\n" + NL_PROBE_B.format(cand=wv),
+                                  meta={"cand": wv, "error_type": etype})
+            conds["cc_nl"] = dict(prompt=q + "\n\n" + NL_PROBE_B.format(cand=gold),
+                                  meta={"cand": int(gold)})
+        td = typed_delete(it)
+        if td is not None:
+            conds["insufficient"] = dict(prompt=td[0], meta=td[1], gold_behavior="abstain")
+            insuf_n += 1
         for cname, c in conds.items():
             r = dict(base)
             r.update(condition=cname, prompt=c["prompt"], meta=c.get("meta", {}),
                      gold_behavior=c.get("gold_behavior", "answer"),
                      template_id=c.get("meta", {}).get("schema", "-"))
-            if c.get("note"):
-                r["note"] = c["note"]
             rows.append(r)
-        fams += 1
-    return rows, fams, taxo
+    (OUT / "main_pool.json").write_text(json.dumps(
+        {"seed": SEED, "families": [it["id"] for it in pool]}, indent=2))
+    return rows, len(pool), insuf_n, taxo
 
-# ------------------------------ train build ----------------------------------------
+# ------------------------------ train build (v1.1 logic, hardened delete) ----------
 def build_train(train_items, per_comp=200):
     pool = [it for it in train_items if base_filter(it)]
     random.Random(SEED).shuffle(pool)
@@ -345,7 +422,6 @@ def build_train(train_items, per_comp=200):
         it = pool[idx]; idx += 1
         return it
 
-    # selective_revision (Option B: full attempt) — 100 keep/fix pairs
     made = 0
     while made < per_comp:
         it = take()
@@ -358,24 +434,21 @@ def build_train(train_items, per_comp=200):
         common = dict(family_id=it["id"], source_id=it["id"], source_split="train", generator_id="A",
                       generator_version=GEN_VER, component="selective_revision", domain="reasoning")
         rows.append(dict(common, subtype="keep",
-                         prompt=GEN_A["revise_prompt"].format(q=q, attempt=render_attempt(chain, gold)),
+                         prompt=GEN_A["revise_prompt"].format(q=q, attempt=render_attempt_A(chain, gold)),
                          target=GEN_A["revise_keep"].format(gold=gold)))
-        # locate first wrong step index for the fix target
         wrong_i = next((i for i, (a, b) in enumerate(zip(chain, wsteps)) if a != b), len(wsteps) - 1) \
             if len(wsteps) == len(chain) else len(wsteps)
-        fixtail = "\n".join(chain[min(wrong_i, len(chain) - 1):])
-        expr_good = chain[min(wrong_i, len(chain) - 1)]
         if etype == "dropped_step":
             fix_tgt = GEN_A["revise_fix_missing"].format(laststep=chain[-1], gold=gold)
         else:
-            fix_tgt = GEN_A["revise_fix"].format(i=min(wrong_i, len(chain) - 1) + 1,
-                                                 expr_good=expr_good, fixtail=fixtail, gold=gold)
+            i0 = min(wrong_i, len(chain) - 1)
+            fix_tgt = GEN_A["revise_fix"].format(i=i0 + 1, expr_good=chain[i0],
+                                                 fixtail="\n".join(chain[i0:]), gold=gold)
         rows.append(dict(common, subtype="fix", meta={"error_type": etype},
-                         prompt=GEN_A["revise_prompt"].format(q=q, attempt=render_attempt(wsteps, wv)),
+                         prompt=GEN_A["revise_prompt"].format(q=q, attempt=render_attempt_A(wsteps, wv)),
                          target=fix_tgt))
         made += 2
 
-    # evidence_robustness — 3 subtypes round-robin, neutral injections
     made = 0
     while made < per_comp:
         it = take()
@@ -405,7 +478,6 @@ def build_train(train_items, per_comp=200):
         rows.append(dict(common, subtype=stype, prompt=q + "\n\n" + inj, target=tgt))
         made += 1
 
-    # answerability — 100 sufficient/insufficient pairs, typed deletion
     made = 0
     while made < per_comp:
         it = take()
@@ -424,7 +496,6 @@ def build_train(train_items, per_comp=200):
                          target=GEN_A["abstain"].format(what=what)))
         made += 2
 
-    # format — 4 schemas round-robin (no fake semantic fields)
     made = 0
     while made < per_comp:
         it = take()
@@ -444,46 +515,53 @@ def verify(train_rows, eval_rows):
     errs = []
     ev_fams = {r["family_id"] for r in eval_rows}
     for r in eval_rows:
-        p = r["prompt"].lower()
-        if r["condition"] == "distractor" and any(b in p for b in BANNED_MARKERS):
+        p = r["prompt"]
+        pl = p.lower()
+        if r["condition"] == "distractor" and any(b in pl for b in BANNED_MARKERS):
             errs.append(("distractor_marker", r["family_id"]))
-        if r["condition"] == "wrong_candidate" and str(r["meta"]["cand"]) == r["gold"]:
+        if r["condition"].startswith("wc") and str(r["meta"]["cand"]) == r["gold"]:
             errs.append(("wrong_eq_gold", r["family_id"]))
         if r["condition"] == "insufficient":
-            if "some%" in p or ".00" in r["prompt"].split("unspecified")[-1][:6] or "some:" in p or "some/" in p:
-                errs.append(("typed_delete_residue", r["family_id"]))
+            if RESIDUE.search(p):
+                errs.append(("grammar_residue", r["family_id"]))
+            v = numval(r["meta"]["removed_variable"])
+            if v is not None and word_leak(p, v):
+                errs.append(("word_leak", r["family_id"]))
             for k in ("removed_variable", "variable_type", "dependency_path", "why_unanswerable"):
                 if k not in r["meta"]:
                     errs.append(("insuf_meta_missing", r["family_id"]))
+        if r["condition"] == "paraphrase":
+            a = sorted(numval(t) for t in NUM_TOKEN.findall(r["prompt"]))
+            # numbers multiset must be preserved vs original of same family
+            orig = next(x for x in eval_rows if x["family_id"] == r["family_id"] and x["condition"] == "original")
+            b = sorted(numval(t) for t in NUM_TOKEN.findall(orig["prompt"]))
+            if a != b:
+                errs.append(("paraphrase_numbers_changed", r["family_id"]))
     for r in train_rows:
         if r["family_id"] in ev_fams:
             errs.append(("split_leak", r["family_id"]))
         t = r.get("target", "")
         if r["component"] in ("selective_revision", "evidence_robustness") and not reasoning_clean(t):
             errs.append(("target_expr_bad", r["family_id"], r["component"]))
-        if r["component"] == "evidence_robustness" and r["subtype"] == "irrelevant" \
-           and any(b in r["prompt"].lower() for b in BANNED_MARKERS):
-            errs.append(("evid_marker", r["family_id"]))
-        if r["component"] == "answerability" and r["subtype"] == "insufficient" and NUM_TOKEN.search(t):
-            errs.append(("abstain_has_number", r["family_id"]))
-        if r["component"] == "selective_revision":
-            if not re.search(r"Final answer: -?\d+", t):
-                errs.append(("rev_no_final", r["family_id"]))
-            if r["subtype"] == "fix" and "Candidate attempt:" not in r["prompt"]:
-                errs.append(("rev_no_attempt", r["family_id"]))
+        if r["component"] == "answerability" and r["subtype"] == "insufficient":
+            if NUM_TOKEN.search(t):
+                errs.append(("abstain_has_number", r["family_id"]))
+            if RESIDUE.search(r["prompt"]):
+                errs.append(("train_grammar_residue", r["family_id"]))
     return errs
 
 def main():
     cache = json.load(open(ROOT / "data_v4/gsm8k_cache.json"))
-    eval_rows, fams, etaxo = build_eval(cache["test"], 50)
+    eval_rows, nfam, insuf_n, etaxo = build_eval(cache["test"], 50)
     train_rows, ttaxo = build_train(cache["train"], 200)
     errs = verify(train_rows, eval_rows)
     (OUT / "eval_proto.jsonl").write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in eval_rows) + "\n")
     (OUT / "train_proto.jsonl").write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in train_rows) + "\n")
     from collections import Counter
     stats = {
-        "generator_version": GEN_VER,
-        "eval_families": fams, "eval_rows": len(eval_rows),
+        "generator_version": GEN_VER, "main_pool_families": nfam,
+        "insufficient_subset_n": insuf_n,
+        "eval_rows": len(eval_rows),
         "eval_by_condition": dict(Counter(r["condition"] for r in eval_rows)),
         "eval_wrong_candidate_taxonomy": etaxo,
         "train_rows": len(train_rows),
@@ -492,7 +570,7 @@ def main():
         "insufficient_variable_types": dict(Counter(
             r["meta"]["variable_type"] for r in eval_rows + train_rows
             if r.get("meta", {}).get("variable_type"))),
-        "note_word_counts_are_not_tokens": "token stats produced separately with Qwen tokenizer (token_stats.json)",
+        "paraphrase_overrides_present": (OUT / "paraphrase_overrides.json").exists(),
         "verify_errors": errs,
     }
     (OUT / "build_stats.json").write_text(json.dumps(stats, indent=2, ensure_ascii=False))

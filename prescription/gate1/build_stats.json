@@ -1,21 +1,26 @@
 {
-  "generator_version": "gate1-v1.1",
-  "eval_families": 50,
-  "eval_rows": 350,
+  "generator_version": "gate1-v1.2",
+  "main_pool_families": 50,
+  "insufficient_subset_n": 26,
+  "eval_rows": 466,
   "eval_by_condition": {
     "original": 50,
-    "paraphrase": 50,
     "distractor": 50,
-    "wrong_candidate": 50,
-    "correct_candidate": 50,
-    "insufficient": 50,
-    "format": 50
+    "format": 50,
+    "wc_light": 50,
+    "wc_attempt": 50,
+    "cc_light": 50,
+    "cc_attempt": 50,
+    "paraphrase": 50,
+    "wc_nl": 20,
+    "cc_nl": 20,
+    "insufficient": 26
   },
   "eval_wrong_candidate_taxonomy": {
-    "off_by_one": 18,
-    "arithmetic_slip": 14,
-    "dropped_step": 12,
-    "operator_error": 6
+    "off_by_one": 12,
+    "arithmetic_slip": 16,
+    "dropped_step": 14,
+    "operator_error": 8
   },
   "train_rows": 800,
   "train_by_component": {
@@ -25,16 +30,16 @@
     "format": 200
   },
   "train_revision_error_taxonomy": {
-    "dropped_step": 24,
-    "arithmetic_slip": 29,
-    "off_by_one": 30,
-    "operator_error": 17
+    "dropped_step": 22,
+    "arithmetic_slip": 28,
+    "operator_error": 24,
+    "off_by_one": 26
   },
   "insufficient_variable_types": {
-    "count": 111,
-    "price": 35,
-    "percentage": 4
+    "percentage": 2,
+    "count": 100,
+    "price": 24
   },
-  "note_word_counts_are_not_tokens": "token stats produced separately with Qwen tokenizer (token_stats.json)",
+  "paraphrase_overrides_present": true,
   "verify_errors": []
 }
