@@ -1,0 +1,268 @@
+{
+ "rule": "mean over epochs {2,4} of R vs base, descending, ties by name",
+ "source_dose": 60,
+ "predicts_doses": [
+  600,
+  2000
+ ],
+ "per_cell_ranking": {
+  "CLEAN|SOLVE|FREE_TEXT|ANSWERABLE": [
+   "d3_revise",
+   "d6_abstain",
+   "d1_format",
+   "d0_replay",
+   "d2_verify",
+   "d5_provenance"
+  ],
+  "CLEAN|SOLVE|FREE_TEXT|INSUFFICIENT": [
+   "d0_replay",
+   "d3_revise",
+   "d6_abstain",
+   "d2_verify",
+   "d1_format",
+   "d5_provenance"
+  ],
+  "CLEAN|SOLVE|JSON|ANSWERABLE": [
+   "d3_revise",
+   "d0_replay",
+   "d2_verify",
+   "d1_format",
+   "d5_provenance",
+   "d6_abstain"
+  ],
+  "CLEAN|SOLVE|JSON|INSUFFICIENT": [
+   "d0_replay",
+   "d3_revise",
+   "d1_format",
+   "d6_abstain",
+   "d5_provenance",
+   "d2_verify"
+  ],
+  "CLEAN|VERIFY|FREE_TEXT|ANSWERABLE": [
+   "d3_revise",
+   "d6_abstain",
+   "d0_replay",
+   "d1_format",
+   "d2_verify",
+   "d5_provenance"
+  ],
+  "CLEAN|VERIFY|FREE_TEXT|INSUFFICIENT": [
+   "d3_revise",
+   "d0_replay",
+   "d5_provenance",
+   "d6_abstain",
+   "d1_format",
+   "d2_verify"
+  ],
+  "CLEAN|VERIFY|JSON|ANSWERABLE": [
+   "d0_replay",
+   "d5_provenance",
+   "d1_format",
+   "d6_abstain",
+   "d2_verify",
+   "d3_revise"
+  ],
+  "CLEAN|VERIFY|JSON|INSUFFICIENT": [
+   "d0_replay",
+   "d1_format",
+   "d6_abstain",
+   "d5_provenance",
+   "d2_verify",
+   "d3_revise"
+  ],
+  "INCORRECT|SOLVE|FREE_TEXT|ANSWERABLE": [
+   "d3_revise",
+   "d6_abstain",
+   "d1_format",
+   "d2_verify",
+   "d0_replay",
+   "d5_provenance"
+  ],
+  "INCORRECT|SOLVE|FREE_TEXT|INSUFFICIENT": [
+   "d3_revise",
+   "d0_replay",
+   "d6_abstain",
+   "d2_verify",
+   "d1_format",
+   "d5_provenance"
+  ],
+  "INCORRECT|SOLVE|JSON|ANSWERABLE": [
+   "d0_replay",
+   "d3_revise",
+   "d6_abstain",
+   "d1_format",
+   "d2_verify",
+   "d5_provenance"
+  ],
+  "INCORRECT|SOLVE|JSON|INSUFFICIENT": [
+   "d3_revise",
+   "d0_replay",
+   "d6_abstain",
+   "d1_format",
+   "d5_provenance",
+   "d2_verify"
+  ],
+  "INCORRECT|VERIFY|FREE_TEXT|ANSWERABLE": [
+   "d3_revise",
+   "d0_replay",
+   "d6_abstain",
+   "d1_format",
+   "d2_verify",
+   "d5_provenance"
+  ],
+  "INCORRECT|VERIFY|FREE_TEXT|INSUFFICIENT": [
+   "d0_replay",
+   "d3_revise",
+   "d2_verify",
+   "d1_format",
+   "d6_abstain",
+   "d5_provenance"
+  ],
+  "INCORRECT|VERIFY|JSON|ANSWERABLE": [
+   "d0_replay",
+   "d5_provenance",
+   "d1_format",
+   "d3_revise",
+   "d2_verify",
+   "d6_abstain"
+  ],
+  "INCORRECT|VERIFY|JSON|INSUFFICIENT": [
+   "d0_replay",
+   "d3_revise",
+   "d5_provenance",
+   "d1_format",
+   "d2_verify",
+   "d6_abstain"
+  ]
+ },
+ "raw_scores": {
+  "CLEAN|SOLVE|FREE_TEXT|ANSWERABLE": {
+   "d0_replay": -0.12,
+   "d1_format": -0.1,
+   "d2_verify": -0.1325,
+   "d3_revise": -0.0075,
+   "d5_provenance": -0.1925,
+   "d6_abstain": -0.05
+  },
+  "CLEAN|SOLVE|FREE_TEXT|INSUFFICIENT": {
+   "d0_replay": -0.0025,
+   "d1_format": -0.0575,
+   "d2_verify": -0.035,
+   "d3_revise": -0.005,
+   "d5_provenance": -0.065,
+   "d6_abstain": -0.0275
+  },
+  "CLEAN|SOLVE|JSON|ANSWERABLE": {
+   "d0_replay": 0.0,
+   "d1_format": -0.0425,
+   "d2_verify": -0.04,
+   "d3_revise": 0.005,
+   "d5_provenance": -0.0425,
+   "d6_abstain": -0.05
+  },
+  "CLEAN|SOLVE|JSON|INSUFFICIENT": {
+   "d0_replay": -0.0075,
+   "d1_format": -0.0375,
+   "d2_verify": -0.0625,
+   "d3_revise": -0.015,
+   "d5_provenance": -0.0475,
+   "d6_abstain": -0.0425
+  },
+  "CLEAN|VERIFY|FREE_TEXT|ANSWERABLE": {
+   "d0_replay": -0.2475,
+   "d1_format": -0.28,
+   "d2_verify": -0.4025,
+   "d3_revise": -0.175,
+   "d5_provenance": -0.4375,
+   "d6_abstain": -0.2175
+  },
+  "CLEAN|VERIFY|FREE_TEXT|INSUFFICIENT": {
+   "d0_replay": -0.015,
+   "d1_format": -0.045,
+   "d2_verify": -0.0475,
+   "d3_revise": -0.0125,
+   "d5_provenance": -0.0225,
+   "d6_abstain": -0.03
+  },
+  "CLEAN|VERIFY|JSON|ANSWERABLE": {
+   "d0_replay": 0.02,
+   "d1_format": 0.005,
+   "d2_verify": 0.0025,
+   "d3_revise": 0.0,
+   "d5_provenance": 0.02,
+   "d6_abstain": 0.005
+  },
+  "CLEAN|VERIFY|JSON|INSUFFICIENT": {
+   "d0_replay": 0.0025,
+   "d1_format": 0.0025,
+   "d2_verify": -0.005,
+   "d3_revise": -0.005,
+   "d5_provenance": -0.0025,
+   "d6_abstain": -0.0025
+  },
+  "INCORRECT|SOLVE|FREE_TEXT|ANSWERABLE": {
+   "d0_replay": -0.26,
+   "d1_format": -0.0975,
+   "d2_verify": -0.115,
+   "d3_revise": -0.0175,
+   "d5_provenance": -0.2775,
+   "d6_abstain": -0.0575
+  },
+  "INCORRECT|SOLVE|FREE_TEXT|INSUFFICIENT": {
+   "d0_replay": -0.02,
+   "d1_format": -0.075,
+   "d2_verify": -0.07,
+   "d3_revise": -0.0175,
+   "d5_provenance": -0.0825,
+   "d6_abstain": -0.06
+  },
+  "INCORRECT|SOLVE|JSON|ANSWERABLE": {
+   "d0_replay": 0.0025,
+   "d1_format": -0.0575,
+   "d2_verify": -0.06,
+   "d3_revise": -0.01,
+   "d5_provenance": -0.0625,
+   "d6_abstain": -0.0525
+  },
+  "INCORRECT|SOLVE|JSON|INSUFFICIENT": {
+   "d0_replay": -0.01,
+   "d1_format": -0.0375,
+   "d2_verify": -0.055,
+   "d3_revise": 0.0,
+   "d5_provenance": -0.04,
+   "d6_abstain": -0.0225
+  },
+  "INCORRECT|VERIFY|FREE_TEXT|ANSWERABLE": {
+   "d0_replay": -0.2,
+   "d1_format": -0.2975,
+   "d2_verify": -0.3225,
+   "d3_revise": -0.1525,
+   "d5_provenance": -0.3725,
+   "d6_abstain": -0.255
+  },
+  "INCORRECT|VERIFY|FREE_TEXT|INSUFFICIENT": {
+   "d0_replay": 0.0,
+   "d1_format": -0.0475,
+   "d2_verify": -0.03,
+   "d3_revise": -0.0025,
+   "d5_provenance": -0.06,
+   "d6_abstain": -0.0525
+  },
+  "INCORRECT|VERIFY|JSON|ANSWERABLE": {
+   "d0_replay": 0.0275,
+   "d1_format": 0.0125,
+   "d2_verify": 0.005,
+   "d3_revise": 0.01,
+   "d5_provenance": 0.0225,
+   "d6_abstain": -0.0025
+  },
+  "INCORRECT|VERIFY|JSON|INSUFFICIENT": {
+   "d0_replay": 0.015,
+   "d1_format": 0.0,
+   "d2_verify": 0.0,
+   "d3_revise": 0.0075,
+   "d5_provenance": 0.005,
+   "d6_abstain": -0.0025
+  }
+ }
+}
