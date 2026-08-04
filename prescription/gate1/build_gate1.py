@@ -290,10 +290,10 @@ def render_attempt_B(steps_txt, final):
     return ("They worked it out as follows: " + "; then ".join(steps_txt) +
             f". On that basis they concluded the answer is {final}.")
 
-CONTRACT_B = ("Review the candidate attempt against the problem.\n"
-              "Reply with exactly two lines:\n"
-              "DECISION=KEEP    (if the attempt's final answer is correct)\n"
-              "DECISION=CORRECT (if it is wrong)\n"
+CONTRACT_B = ("Review the candidate attempt against the problem. Reason it through if needed, "
+              "then END your reply with exactly two lines:\n"
+              "DECISION=KEEP   (if the attempt's final answer is correct)\n"
+              "DECISION=REVISE (if the attempt's final answer is wrong)\n"
               "FINAL_ANSWER=<integer>")
 
 NL_PROBE_B = "A previous attempt at this problem concluded the answer is {cand}. Review the problem and give your own final answer."

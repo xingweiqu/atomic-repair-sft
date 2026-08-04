@@ -1,0 +1,79 @@
+{
+  "tokenizer": "/mnt/hdfs/xwqu/Qwen3-8B",
+  "train_per_component": {
+    "selective_revision": {
+      "items": 200,
+      "families": 100,
+      "input_tok_mean": 147.9,
+      "target_tok_mean": 33.7,
+      "target_tok_total": 6734
+    },
+    "evidence_robustness": {
+      "items": 200,
+      "families": 200,
+      "input_tok_mean": 79.6,
+      "target_tok_mean": 115.6,
+      "target_tok_total": 23119
+    },
+    "answerability": {
+      "items": 200,
+      "families": 100,
+      "input_tok_mean": 54.8,
+      "target_tok_mean": 51.5,
+      "target_tok_total": 10309
+    },
+    "format": {
+      "items": 200,
+      "families": 200,
+      "input_tok_mean": 74.2,
+      "target_tok_mean": 11.2,
+      "target_tok_total": 2244
+    }
+  },
+  "eval_per_condition": {
+    "original": {
+      "items": 50,
+      "input_tok_mean": 65.1
+    },
+    "distractor": {
+      "items": 50,
+      "input_tok_mean": 80.6
+    },
+    "format": {
+      "items": 50,
+      "input_tok_mean": 85.1
+    },
+    "wc_light": {
+      "items": 50,
+      "input_tok_mean": 128.4
+    },
+    "wc_attempt": {
+      "items": 50,
+      "input_tok_mean": 172.1
+    },
+    "cc_light": {
+      "items": 50,
+      "input_tok_mean": 128.3
+    },
+    "cc_attempt": {
+      "items": 50,
+      "input_tok_mean": 176.0
+    },
+    "paraphrase": {
+      "items": 50,
+      "input_tok_mean": 58.4
+    },
+    "wc_nl": {
+      "items": 20,
+      "input_tok_mean": 87.7
+    },
+    "cc_nl": {
+      "items": 20,
+      "input_tok_mean": 87.6
+    },
+    "insufficient": {
+      "items": 26,
+      "input_tok_mean": 59.5
+    }
+  }
+}

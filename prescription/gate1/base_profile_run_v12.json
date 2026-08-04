@@ -1,0 +1,16 @@
+{
+  "model_path": "/mnt/hdfs/xwqu/Qwen3-8B",
+  "model_hash_sha256": "6fefa9ee3f4b2db1de581b189af0657062c5cca9b56c7c3b7003920baff9498b",
+  "tokenizer_chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "rendered_sample": "<|im_start|>user\nSAMPLE_PROMPT<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "generation_config": {
+    "engine": "vllm==0.12.0",
+    "temperature": 0,
+    "top_p": 1.0,
+    "max_tokens": 512,
+    "tp": 8,
+    "enable_thinking": false
+  },
+  "command": "python3 gen_predict_lawv1.py eval_proto.jsonl pred_base_v12.jsonl /mnt/hdfs/xwqu/Qwen3-8B",
+  "host": "n124-041-185"
+}

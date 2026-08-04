@@ -135,11 +135,11 @@ def score_contract(row, out):
     gold = row["gold"]
     cand = norm_num(str(row["meta"]["cand"]))
     wrong_probe = cand != gold
-    dm = re.findall(r"DECISION\s*=\s*(KEEP|CORRECT)", out, re.I)
+    dm = re.findall(r"DECISION\s*=\s*(KEEP|REVISE|CORRECT)", out, re.I)
     decision = dm[-1].upper() if dm else None
     fm = re.findall(r"FINAL_ANSWER\s*=\s*\$?(-?[\d,\.]+)", out)
     final = norm_num(fm[-1]) if fm else extract_loose(out)
-    gold_dec = "CORRECT" if wrong_probe else "KEEP"
+    gold_dec = "REVISE" if wrong_probe else "KEEP"
     dec_acc = int(decision == gold_dec)
     fin_acc = int(final == gold)
     return dict(decision=decision or "NONE", decision_acc=dec_acc, final_acc=fin_acc,
@@ -262,12 +262,13 @@ def selftest():
     ]
     # decision contract (7)
     T += [
-        (R("wc_attempt", cand=30), "DECISION=CORRECT\nFINAL_ANSWER=18", "joint", 1),
+        (R("wc_attempt", cand=30), "DECISION=REVISE\nFINAL_ANSWER=18", "joint", 1),
         (R("wc_attempt", cand=30), "DECISION=KEEP\nFINAL_ANSWER=30", "adopt", 1),
-        (R("wc_attempt", cand=30), "DECISION=CORRECT\nFINAL_ANSWER=25", "joint", 0),
+        (R("wc_attempt", cand=30), "DECISION=REVISE\nFINAL_ANSWER=25", "joint", 0),
+        (R("wc_attempt", cand=30), "Let me check: 16-3-4=9,9*2=18.\nDECISION=REVISE\nFINAL_ANSWER=18", "joint", 1),
         (R("wc_attempt", cand=30), "The answer is 18.", "decision", "NONE"),
         (R("cc_light", cand=18), "DECISION=KEEP\nFINAL_ANSWER=18", "joint", 1),
-        (R("cc_light", cand=18), "DECISION=CORRECT\nFINAL_ANSWER=18", "joint", 0),
+        (R("cc_light", cand=18), "DECISION=REVISE\nFINAL_ANSWER=18", "joint", 0),
         (R("cc_light", cand=18), "DECISION=KEEP FINAL_ANSWER=$18", "joint", 1),
     ]
     # C-23 residuals (3)
