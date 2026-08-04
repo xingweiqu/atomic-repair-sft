@@ -1,0 +1,59 @@
+{
+  "tokenizer": "/mnt/hdfs/xwqu/Qwen3-8B",
+  "train_per_component": {
+    "selective_revision": {
+      "items": 200,
+      "input_tok_mean": 154.3,
+      "target_tok_mean": 33.9,
+      "target_tok_total": 6775
+    },
+    "evidence_robustness": {
+      "items": 200,
+      "input_tok_mean": 78.1,
+      "target_tok_mean": 111.0,
+      "target_tok_total": 22195
+    },
+    "answerability": {
+      "items": 200,
+      "input_tok_mean": 61.7,
+      "target_tok_mean": 58.1,
+      "target_tok_total": 11614
+    },
+    "format": {
+      "items": 200,
+      "input_tok_mean": 74.8,
+      "target_tok_mean": 11.0,
+      "target_tok_total": 2206
+    }
+  },
+  "eval_per_condition": {
+    "original": {
+      "items": 50,
+      "input_tok_mean": 61.3
+    },
+    "paraphrase": {
+      "items": 50,
+      "input_tok_mean": 65.3
+    },
+    "distractor": {
+      "items": 50,
+      "input_tok_mean": 76.0
+    },
+    "wrong_candidate": {
+      "items": 50,
+      "input_tok_mean": 85.6
+    },
+    "correct_candidate": {
+      "items": 50,
+      "input_tok_mean": 85.6
+    },
+    "insufficient": {
+      "items": 50,
+      "input_tok_mean": 62.8
+    },
+    "format": {
+      "items": 50,
+      "input_tok_mean": 80.8
+    }
+  }
+}
