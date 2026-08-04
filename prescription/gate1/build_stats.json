@@ -1,0 +1,28 @@
+{
+  "eval_families": 50,
+  "eval_rows": 350,
+  "eval_by_condition": {
+    "original": 50,
+    "paraphrase": 50,
+    "distractor": 50,
+    "wrong_candidate": 50,
+    "correct_candidate": 50,
+    "insufficient": 50,
+    "format": 50
+  },
+  "train_rows": 800,
+  "train_by_component": {
+    "selective_revision": 200,
+    "evidence_robustness": 200,
+    "answerability": 200,
+    "format": 200
+  },
+  "train_target_len_tokens_approx": {
+    "selective_revision": 33.8,
+    "evidence_robustness": 65.0,
+    "answerability": 36.2,
+    "format": 2.8
+  },
+  "verify_errors": [],
+  "generator_version": "gate1-v0"
+}
