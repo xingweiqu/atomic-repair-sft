@@ -17,6 +17,8 @@ cd /opt/tiger
 [ -d LLaMA-Factory ] || git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
 cd LLaMA-Factory && pip3 install -q -e . --no-deps
 pip3 install -q "datasets==4.0.0" "trl==0.24.0" "peft==0.18.1" "accelerate==1.11.0" "deepspeed==0.19.2" matplotlib fire omegaconf
+# vllm for eval nodes; NOTE it may downgrade torch (2.9.1->2.9.0+cu128 seen on m2) — verify training still works after
+pip3 install -q "vllm==0.12.0"
 python3 -c "import vllm, torch; print('vllm', vllm.__version__, 'torch', torch.__version__)"
 which llamafactory-cli
 echo "BRINGUP_OK"
