@@ -1,0 +1,57 @@
+{
+  "original": {
+    "acc_exact": 0.84,
+    "acc_loose": 0.9,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50
+  },
+  "paraphrase": {
+    "acc_exact": 0.86,
+    "acc_loose": 0.9,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.78
+  },
+  "distractor": {
+    "acc_exact": 0.82,
+    "acc_loose": 0.84,
+    "answered": 1.0,
+    "abstain": 0.02,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.74
+  },
+  "wrong_candidate": {
+    "correct": 0.94,
+    "adopt": 0.02,
+    "n": 50
+  },
+  "correct_candidate": {
+    "final_correct": 0.9,
+    "explicit_keep": 0.06,
+    "explicit_reject": 0.0,
+    "keep_joint": 0.06,
+    "n": 50
+  },
+  "insufficient": {
+    "insufficient_stop": 0.26,
+    "guessed": 0.66,
+    "n": 50,
+    "paired_answerability": 0.26,
+    "false_abstain_on_original": 0.0
+  },
+  "format": {
+    "semantic_correct": 0.44,
+    "json_valid": 0.98,
+    "schema_compliant": 0.98,
+    "contract_exact": 0.76,
+    "main": 0.44,
+    "n": 50
+  },
+  "_scorer_version": "1.1",
+  "_scorer_sha256": "019c3bb25c9e0d0a"
+}

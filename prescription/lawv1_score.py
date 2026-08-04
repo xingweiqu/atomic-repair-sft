@@ -44,17 +44,24 @@ def _first_num(s):
     m = NUM_RE.search(s)
     return norm_num(m.group(0)) if m else None
 
+def _demarkdown(text):
+    """Strip decoration so 'Final Answer: **\\$18**' is extractable."""
+    return (text.replace("**", "").replace("\\$", "$").replace("\\text", " ")
+            .replace("{", " ").replace("}", " "))
+
 def extract_exact(text):
     """Definitive answer statements only. Priority: \\boxed > last 'Final answer:' > ####."""
     m = re.findall(r"\\boxed\{([^}]+)\}", text)
     if m:
         return _first_num(m[-1])
-    m = re.findall(r"[Ff]inal [Aa]nswer[:\s]+\$?(-?[\d,\.]+)", text)
-    if m:
-        return norm_num(m[-1])
-    m = re.findall(r"####\s*\$?(-?[\d,\.]+)", text)
-    if m:
-        return norm_num(m[-1])
+    for t in (text, _demarkdown(text)):
+        for pat in (r"[Ff]inal [Aa]nswer[:\s]", r"####\s*"):
+            hits = list(re.finditer(pat, t))
+            if hits:
+                seg = t[hits[-1].end():hits[-1].end() + 200]
+                n = _first_num(seg)
+                if n is not None:
+                    return n
     return None
 
 def extract_loose(text):
@@ -196,6 +203,9 @@ def selftest():
         (R("original"), "", "mute", 1),
         (R("original"), "@#$%^&*", "mute", 1),
         (R("original"), "This cannot be determined from the text.", "abstain", 1),  # false-abstain on answerable
+        (R("original"), "### ✅ Final Answer: **\\$18** per day.", "acc_exact", 1),   # markdown-decorated
+        (R("original"), "so:\n\n### ✅ Final Answer: **18 bolts** in total.", "acc_exact", 1),
+        (R("original"), "### Final Answer:\n**It takes Carla 18 minutes.**", "acc_exact", 1),  # sentence-form
     ]
     # wrong candidate (5)
     T += [

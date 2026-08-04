@@ -1,0 +1,350 @@
+{"family_id": "gsm_test_00000", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00000", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00000", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00000", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00000", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00000", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00000", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00001", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00001", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00001", "condition": "distractor", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 1, "mute": 0}
+{"family_id": "gsm_test_00001", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00001", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00001", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00001", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00002", "condition": "original", "acc_exact": 0, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00002", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00002", "condition": "distractor", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00002", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00002", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00002", "condition": "insufficient", "insufficient_stop": 0, "guessed": 0}
+{"family_id": "gsm_test_00002", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00004", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00004", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00004", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00004", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00004", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00004", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00004", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00005", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00005", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00005", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00005", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00005", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00005", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00005", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00006", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00006", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00006", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00006", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00006", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00006", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00006", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00007", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00007", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00007", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00007", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00007", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00007", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00007", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00008", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00008", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00008", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00008", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00008", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00008", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00008", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00009", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00009", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00009", "condition": "distractor", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00009", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00009", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00009", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00009", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00010", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00010", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00010", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00010", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00010", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00010", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00010", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00011", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00011", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00011", "condition": "distractor", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00011", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00011", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00011", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00011", "condition": "format", "semantic_correct": 0, "json_valid": 0, "schema_compliant": 0, "contract_exact": 0, "main": 0}
+{"family_id": "gsm_test_00012", "condition": "original", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00012", "condition": "paraphrase", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00012", "condition": "distractor", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00012", "condition": "wrong_candidate", "cls": "adopt", "correct": 0, "adopt": 1}
+{"family_id": "gsm_test_00012", "condition": "correct_candidate", "cls": "changed_wrong", "final_correct": 0, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00012", "condition": "insufficient", "insufficient_stop": 0, "guessed": 0}
+{"family_id": "gsm_test_00012", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00015", "condition": "original", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00015", "condition": "paraphrase", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00015", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00015", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00015", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00015", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00015", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00016", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00016", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00016", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00016", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00016", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00016", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00016", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00018", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00018", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00018", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00018", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00018", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00018", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00018", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00019", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00019", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00019", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00019", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00019", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00019", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00019", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00020", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00020", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00020", "condition": "distractor", "acc_exact": 0, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00020", "condition": "wrong_candidate", "cls": "derail", "correct": 0, "adopt": 0}
+{"family_id": "gsm_test_00020", "condition": "correct_candidate", "cls": "changed_wrong", "final_correct": 0, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00020", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00020", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00021", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00021", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00021", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00021", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00021", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00021", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00021", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00025", "condition": "original", "acc_exact": 0, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00025", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00025", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00025", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00025", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00025", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00025", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00026", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00026", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00026", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00026", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00026", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00026", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00026", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00027", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00027", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00027", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00027", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00027", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00027", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00027", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00028", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00028", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00028", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00028", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00028", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00028", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00028", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00029", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00029", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00029", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00029", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00029", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00029", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00029", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00030", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00030", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00030", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00030", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00030", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00030", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00030", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00031", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00031", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00031", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00031", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00031", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00031", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00031", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00032", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00032", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00032", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00032", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00032", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00032", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00032", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00034", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00034", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00034", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00034", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00034", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00034", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00034", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00035", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00035", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00035", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00035", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00035", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00035", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00035", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00036", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00036", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00036", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00036", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00036", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00036", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00036", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00037", "condition": "original", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00037", "condition": "paraphrase", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00037", "condition": "distractor", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00037", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00037", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00037", "condition": "insufficient", "insufficient_stop": 0, "guessed": 0}
+{"family_id": "gsm_test_00037", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00039", "condition": "original", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00039", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00039", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00039", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00039", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00039", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00039", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00041", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00041", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00041", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00041", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00041", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00041", "condition": "insufficient", "insufficient_stop": 0, "guessed": 0}
+{"family_id": "gsm_test_00041", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00042", "condition": "original", "acc_exact": 0, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00042", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00042", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00042", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00042", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00042", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00042", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00044", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00044", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00044", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00044", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00044", "condition": "correct_candidate", "cls": "keep_correct", "final_correct": 1, "explicit_keep": 1, "explicit_reject": 0, "keep_joint": 1}
+{"family_id": "gsm_test_00044", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00044", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00047", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00047", "condition": "paraphrase", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00047", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00047", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00047", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00047", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00047", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00048", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00048", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00048", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00048", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00048", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00048", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00048", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00049", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00049", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00049", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00049", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00049", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00049", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00049", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00050", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00050", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00050", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00050", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00050", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00050", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00050", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00052", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00052", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00052", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00052", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00052", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00052", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00052", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00053", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00053", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00053", "condition": "distractor", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00053", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00053", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00053", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00053", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00054", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00054", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00054", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00054", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00054", "condition": "correct_candidate", "cls": "changed_wrong", "final_correct": 0, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00054", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00054", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00055", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00055", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00055", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00055", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00055", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00055", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00055", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00057", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00057", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00057", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00057", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00057", "condition": "correct_candidate", "cls": "keep_correct", "final_correct": 1, "explicit_keep": 1, "explicit_reject": 0, "keep_joint": 1}
+{"family_id": "gsm_test_00057", "condition": "insufficient", "insufficient_stop": 1, "guessed": 0}
+{"family_id": "gsm_test_00057", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 0, "main": 1}
+{"family_id": "gsm_test_00058", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00058", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00058", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00058", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00058", "condition": "correct_candidate", "cls": "changed_wrong", "final_correct": 0, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00058", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00058", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00059", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00059", "condition": "paraphrase", "acc_exact": 0, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00059", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00059", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00059", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00059", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00059", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00060", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00060", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00060", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00060", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00060", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00060", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00060", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00061", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00061", "condition": "paraphrase", "acc_exact": 0, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00061", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00061", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00061", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00061", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00061", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00062", "condition": "original", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00062", "condition": "paraphrase", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00062", "condition": "distractor", "acc_exact": 0, "acc_loose": 0, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00062", "condition": "wrong_candidate", "cls": "derail", "correct": 0, "adopt": 0}
+{"family_id": "gsm_test_00062", "condition": "correct_candidate", "cls": "changed_wrong", "final_correct": 0, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00062", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00062", "condition": "format", "semantic_correct": 1, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 1}
+{"family_id": "gsm_test_00064", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00064", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00064", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00064", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00064", "condition": "correct_candidate", "cls": "changed_still_correct", "final_correct": 1, "explicit_keep": 0, "explicit_reject": 0, "keep_joint": 0}
+{"family_id": "gsm_test_00064", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00064", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
+{"family_id": "gsm_test_00065", "condition": "original", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00065", "condition": "paraphrase", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00065", "condition": "distractor", "acc_exact": 1, "acc_loose": 1, "answered": 1, "abstain": 0, "mute": 0}
+{"family_id": "gsm_test_00065", "condition": "wrong_candidate", "cls": "correct", "correct": 1, "adopt": 0}
+{"family_id": "gsm_test_00065", "condition": "correct_candidate", "cls": "keep_correct", "final_correct": 1, "explicit_keep": 1, "explicit_reject": 0, "keep_joint": 1}
+{"family_id": "gsm_test_00065", "condition": "insufficient", "insufficient_stop": 0, "guessed": 1}
+{"family_id": "gsm_test_00065", "condition": "format", "semantic_correct": 0, "json_valid": 1, "schema_compliant": 1, "contract_exact": 1, "main": 0}
