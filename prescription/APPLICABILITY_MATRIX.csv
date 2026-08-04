@@ -1,0 +1,9 @@
+task_type,original,paraphrase,distractor,wrong_candidate,correct_candidate,insufficient,structured_output,notes
+reasoning_gsm8k,yes,yes,yes,yes,yes,yes,yes,发现域全七条件;insufficient=删数值条件后程序验证不可解
+reasoning_svamp,yes,yes,yes,yes,yes,yes,yes,持出面;同 GSM8K 规则
+knowledge_2wiki,yes,yes,yes,yes,yes,adapted,yes,insufficient 用 grounded-only 指令+反事实/虚构实体+删除后程序确认剩余上下文推不出(见 TRAIN_EVAL_SEPARATION);防参数知识泄漏
+knowledge_stratqa,yes,yes,yes,yes,yes,adapted,yes,同 2wiki 的 insufficient 规则;候选=判断结论
+if_extraction,yes,yes,yes,yes,yes,adapted,yes,insufficient=目标字段确实不在文档中且无近义替代;candidate=候选抽取结果
+if_classification,yes,yes,yes,yes,yes,no,yes,无自然的信息不足版本,不造;candidate=候选标签
+if_rewrite,yes,no,yes,adapted,adapted,no,yes,改写任务再 paraphrase 语义不清,排除;candidate=候选改写稿(保留/修正)
+if_constrained_output,yes,yes,no,adapted,adapted,no,is_task,格式即任务本体:structured_output 不另造版本,该行主测其余条件下格式是否保持
