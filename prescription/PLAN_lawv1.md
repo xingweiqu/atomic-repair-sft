@@ -1,4 +1,8 @@
-# PLAN_lawv1 — 收敛版故事的可执行实验计划(v2,2026-08-04)
+# PLAN_lawv1 — 收敛版故事的可执行实验计划(v2.1,2026-08-04)
+
+> **v2.1(C-21)**:执行细则下沉到五份 contract(prescription/contracts/:DATA / TRAIN /
+> EVAL / ANALYSIS / RUNBATCH),写到 CC 零研究判断可执行;正式训练前置三道 Gate
+> (原型→smoke→冻结),**禁止从 PLAN 直接跳到 Stage A 网格**。指令存档 qc/INSTRUCTION_C21.md。
 
 > v1 → v2:吸收顾问审阅 qc/REVIEW_lawv1_v1.md 全部十条。蓝图原文:qc/BLUEPRINT_convergent_v1.md。
 > v2 变更摘要:①剂量改双定义(token 份额主轴)+嵌套替换恒 token 预算;②train–eval 四重生成器隔离;
@@ -177,6 +181,14 @@ held-out 模型:Llama-3.1-8B-Instruct(章程定稿)。
 P2a 段2 照旧(机器活了先跑):= "60 条 pilot 预测 600/2000 排序"的 H1 检验、
 主张3 第一块证据;36 ckpt 并入 Phase-1(标注纯组件设计)。
 C-18 v1.2 到达 → 走 §2.1 amendment 协议,不覆盖已注册内容。
+
+## 8b. Gate 执行顺序(v2.1;细则在 CONTRACT_RUNBATCH §5)
+
+Gate 1:数据源确认 + 7×50 评测原型 + 4×200 训练原型 + scorer 单测 + 审计报告
+(+GPU 后补:base profile、模板审计初测)→ **用户确认后才扩产**;
+Gate 2:3 个 smoke train 全链路(placebo / evid-60 / evid-2000),核 loss mask、
+token 账、渲染一致、12 文件、实测成本;
+Gate 3:全 hash + RUN_MATRIX.csv + GPU-hour 实测重估 → 预注册 commit → 才开 Stage A。
 
 ## 9. 预注册节点清单(每个 = 一次 commit,先于对应训练)
 
