@@ -25,10 +25,18 @@ tpl = Path('configs/loop3/l3_cleanreplay_s42_e4_sft.yaml').read_text()
 c = re.sub(r'(?m)^dataset: .*$', 'dataset: $ds', tpl)
 c = re.sub(r'(?m)^dataset_dir: .*$', 'dataset_dir: ./prescription/data/p2a', c)
 c = re.sub(r'(?m)^num_train_epochs: .*$', 'num_train_epochs: $e', c)
-c = re.sub(r'(?m)^output_dir: .*$', 'output_dir: /mnt/hdfs/xwqu/p2a/output/$tag', c)
+c = re.sub(r'(?m)^output_dir: .*$', 'output_dir: /opt/tiger/p2a_local/$tag', c)
 Path('/tmp/p2a_$tag.yaml').write_text(c)
 PYEOF
-  if llamafactory-cli train /tmp/p2a_$tag.yaml > /tmp/p2a_$tag.log 2>&1; then echo "OK $tag"; else echo "FAIL $tag"; nfail=$((nfail+1)); fi
+  # train to local disk (some machines' HDFS FUSE lacks syscalls safetensors needs,
+  # os error 38), then copy the finished model to HDFS and clean local
+  rm -rf /opt/tiger/p2a_local/$tag
+  if llamafactory-cli train /tmp/p2a_$tag.yaml > /tmp/p2a_$tag.log 2>&1 \
+     && [ -f /opt/tiger/p2a_local/$tag/config.json ] \
+     && rm -rf /mnt/hdfs/xwqu/p2a/output/$tag \
+     && cp -r /opt/tiger/p2a_local/$tag /mnt/hdfs/xwqu/p2a/output/$tag; then
+    echo "OK $tag"; rm -rf /opt/tiger/p2a_local/$tag
+  else echo "FAIL $tag"; nfail=$((nfail+1)); fi
 done
 if [ $nfail -eq 0 ]; then
   mkdir -p /mnt/hdfs/xwqu/p2a && touch /mnt/hdfs/xwqu/p2a/done_stage${STAGE}_m${IDX}
