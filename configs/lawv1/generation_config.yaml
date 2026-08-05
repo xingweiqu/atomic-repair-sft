@@ -1,0 +1,10 @@
+# lawv1 frozen inference config (CONTRACT_EVAL 1). Single config for ALL runs.
+engine: vllm==0.12.0
+script: prescription/gen_predict_lawv1.py
+chat_template: tokenizer-bundled (enable_thinking=false); rendered sample in base_profile_run_v12.json
+system_prompt: ""
+temperature: 0
+top_p: 1.0
+max_tokens: 512
+tensor_parallel_size: 8
+max_model_len: 4096

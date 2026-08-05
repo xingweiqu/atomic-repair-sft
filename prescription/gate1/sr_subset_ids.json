@@ -1,0 +1,14 @@
+{
+ "frozen_from": "base_profile_v12 original acc_exact==0",
+ "n": 8,
+ "family_ids": [
+  "gsm_test_00119",
+  "gsm_test_00403",
+  "gsm_test_00749",
+  "gsm_test_00835",
+  "gsm_test_01046",
+  "gsm_test_01053",
+  "gsm_test_01059",
+  "gsm_test_01082"
+ ]
+}

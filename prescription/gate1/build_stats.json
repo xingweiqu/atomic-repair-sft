@@ -2,7 +2,7 @@
   "generator_version": "gate1-v1.2",
   "main_pool_families": 50,
   "insufficient_subset_n": 26,
-  "eval_rows": 466,
+  "eval_rows": 518,
   "eval_by_condition": {
     "original": 50,
     "distractor": 50,
@@ -14,7 +14,9 @@
     "paraphrase": 50,
     "wc_nl": 20,
     "cc_nl": 20,
-    "insufficient": 26
+    "insufficient": 26,
+    "insuf_ctr": 26,
+    "suff_ctr": 26
   },
   "eval_wrong_candidate_taxonomy": {
     "off_by_one": 12,
@@ -36,9 +38,9 @@
     "off_by_one": 26
   },
   "insufficient_variable_types": {
-    "percentage": 2,
-    "count": 100,
-    "price": 24
+    "percentage": 4,
+    "count": 116,
+    "price": 32
   },
   "paraphrase_overrides_present": true,
   "verify_errors": []

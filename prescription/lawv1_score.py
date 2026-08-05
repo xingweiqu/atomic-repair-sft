@@ -131,11 +131,11 @@ def score_format(row, out):
                 contract_exact=int(exact), main=int(bool(schema and content_ok)))
 
 def score_contract(row, out):
-    """DECISION=KEEP|CORRECT + FINAL_ANSWER=<int> probes (wc_/cc_ light & attempt)."""
+    """DECISION=KEEP|REVISE + FINAL_ANSWER=<int> probes (wc_/cc_ light & attempt)."""
     gold = row["gold"]
     cand = norm_num(str(row["meta"]["cand"]))
     wrong_probe = cand != gold
-    dm = re.findall(r"DECISION\s*=\s*(KEEP|REVISE|CORRECT)", out, re.I)
+    dm = re.findall(r"DECISION\s*=\s*(KEEP|REVISE)", out, re.I)
     decision = dm[-1].upper() if dm else None
     fm = re.findall(r"FINAL_ANSWER\s*=\s*\$?(-?[\d,\.]+)", out)
     final = norm_num(fm[-1]) if fm else extract_loose(out)
@@ -146,9 +146,29 @@ def score_contract(row, out):
                 joint=int(dec_acc and fin_acc), adopt=int(wrong_probe and final == cand),
                 contract_followed=int(decision is not None and bool(fm)))
 
+def score_status(row, out, insufficient_gold):
+    """STATUS=<ANSWERABLE|INSUFFICIENT> + FINAL_ANSWER=<int|NULL> paired probes."""
+    gold = row["gold"]
+    sm = re.findall(r"STATUS\s*=\s*(ANSWERABLE|INSUFFICIENT)", out, re.I)
+    status = sm[-1].upper() if sm else None
+    fm = re.findall(r"FINAL_ANSWER\s*=\s*\$?(-?[\d,\.]+|NULL)", out, re.I)
+    final = (fm[-1].upper() if fm and fm[-1].upper() == "NULL" else
+             (norm_num(fm[-1]) if fm else None))
+    gold_status = "INSUFFICIENT" if insufficient_gold else "ANSWERABLE"
+    st_acc = int(status == gold_status)
+    ans_acc = int(final == "NULL") if insufficient_gold else int(final == gold)
+    return dict(status=status or "NONE", status_acc=st_acc, answer_acc=ans_acc,
+                joint=int(st_acc and ans_acc),
+                false_abstain=int(not insufficient_gold and status == "INSUFFICIENT"),
+                contract_followed=int(status is not None and bool(fm)))
+
 def score_row(row, out):
     c = row["condition"]
     gold = row["gold"]
+    if c == "insuf_ctr":
+        return score_status(row, out, True)
+    if c == "suff_ctr":
+        return score_status(row, out, False)
     if c in ("wc_light", "wc_attempt", "cc_light", "cc_attempt"):
         return score_contract(row, out)
     if c == "wc_nl":
@@ -270,6 +290,18 @@ def selftest():
         (R("cc_light", cand=18), "DECISION=KEEP\nFINAL_ANSWER=18", "joint", 1),
         (R("cc_light", cand=18), "DECISION=REVISE\nFINAL_ANSWER=18", "joint", 0),
         (R("cc_light", cand=18), "DECISION=KEEP FINAL_ANSWER=$18", "joint", 1),
+    ]
+    # STATUS contract (5)
+    T += [
+        (R("insuf_ctr"), "The count is missing.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL", "joint", 1),
+        (R("insuf_ctr"), "STATUS=INSUFFICIENT\nFINAL_ANSWER=18", "joint", 0),
+        (R("insuf_ctr"), "STATUS=ANSWERABLE\nFINAL_ANSWER=18", "status_acc", 0),
+        (R("suff_ctr"), "16-3-4=9, 9*2=18.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=18", "joint", 1),
+        (R("suff_ctr"), "STATUS=INSUFFICIENT\nFINAL_ANSWER=NULL", "false_abstain", 1),
+    ]
+    # dropped-CORRECT check (1)
+    T += [
+        (R("wc_attempt", cand=30), "DECISION=CORRECT\nFINAL_ANSWER=18", "contract_followed", 0),
     ]
     # C-23 residuals (3)
     T += [

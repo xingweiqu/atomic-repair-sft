@@ -145,9 +145,16 @@ ALREADY_PLURAL = {"feet", "teeth", "geese", "mice", "men", "women", "children",
                   "people", "sheep", "fish", "deer", "series", "species"}
 NOUN_BLACKLIST = {"times", "of", "and", "is", "are", "was", "were", "the", "a", "an",
                   "than", "then", "as", "to", "at", "in", "on", "per", "each", "every",
-                  "or", "more", "less", "by", "for", "with", "from"}
+                  "or", "more", "less", "by", "for", "with", "from",
+                  # verbs that follow quantities ("6 needs vegan meals" bug class)
+                  "needs", "wants", "has", "have", "gets", "makes", "takes", "uses",
+                  "buys", "sells", "eats", "spends", "gives", "goes", "runs", "pays",
+                  "costs", "earns", "works", "said", "says", "need", "want", "get",
+                  "make", "take", "use", "buy", "sell", "eat", "spend", "give",
+                  "go", "run", "pay", "cost", "earn", "work", "say", "deliver"}
 UNIT_COUNT = {"dozen", "dozens", "hundred", "hundreds", "thousand", "thousands",
-              "pair", "pairs", "percent", "half", "gb", "mb", "kg", "km", "cm", "mph"}
+              "pair", "pairs", "percent", "half", "gb", "mb", "kg", "km", "cm", "mph",
+              "mg", "mgs", "ml", "oz", "lb", "lbs", "g", "ft", "sq", "sqft"}
 
 def pluralize(w):
     lw = w.lower()
@@ -170,7 +177,11 @@ def find_tokens_for_value(q, val):
 
 def classify_token(q, s, e, tok):
     """(variable_type, replacement, del_start, del_end) or type,None,.. to skip."""
+    while tok and tok[-1] in ",.":                     # "$3," span bug: never eat punctuation
+        tok = tok[:-1]; e -= 1
     before, after = q[max(0, s - 4):s], q[e:e + 16]
+    if re.search(r"number of\s*$", q[:s], re.I):
+        return "number_of_context", None, s, e         # "number of 26 patients" -> skip
     if "-" in q[max(0, s - 1):s] or after.startswith("-"):
         return "hyphen_compound", None, s, e          # "5-mile" -> skip
     if ":" in q[max(0, s - 2):s] or ":" in after[:2]:
@@ -191,6 +202,8 @@ def classify_token(q, s, e, tok):
         return "count", None, s, e
     w1 = m.group(2)
     w2 = m.group(3).strip() if m.group(3) else None
+    if q[e + len(m.group(1)) + len(w1): e + len(m.group(1)) + len(w1) + 1] == "-":
+        return "noun_hyphen", None, s, e               # "5 T-shirts" -> skip
     if w1.lower() in UNIT_COUNT or (w2 and w2.lower() in UNIT_COUNT):
         return "unit_count", None, s, e               # "3 dozen donuts" -> skip
     ADJ = {"available", "more", "fewer", "extra", "additional", "other", "new",
@@ -210,7 +223,10 @@ def classify_token(q, s, e, tok):
 RESIDUE = re.compile(r"\ba an\b|\ban an\b|\bthe an\b|\b(\w+) \1\b", re.I)
 
 INSUF_BLOCKLIST = {
-    "gsm_test_00403",  # deleting daily hours leaves an alternative reading (5h*900W*30d) answerable
+    "gsm_test_00403",   # alternative reading (5h*900W*30d) stays answerable
+    "gsm_train_06654",  # "2 packs for all his students" readable as the asked total -> still answerable
+    "gsm_train_05079",  # combo price fixed at $11; drink count is an irrelevant variable
+    "gsm_train_04657",  # "an unspecified number of square inches big" -- unnatural phrasing (advisor-flagged)
 }
 
 def typed_delete(it):
@@ -237,7 +253,10 @@ def typed_delete(it):
         vtype, repl, ds, de = classify_token(q, s, e, tok)
         if repl is None:
             continue
-        new_q = q[:ds] + repl + q[de:]
+        head = q[:ds]
+        if re.search(r"(?:^|[\.!?]\s+)$", head):
+            repl = repl[0].upper() + repl[1:]
+        new_q = head + repl + q[de:]
         if RESIDUE.search(new_q):
             continue
         dep = [st["expr"] for st in it["steps"] if n_raw in st["nums"] or
@@ -290,11 +309,16 @@ def render_attempt_B(steps_txt, final):
     return ("They worked it out as follows: " + "; then ".join(steps_txt) +
             f". On that basis they concluded the answer is {final}.")
 
-CONTRACT_B = ("Review the candidate attempt against the problem. Reason it through if needed, "
-              "then END your reply with exactly two lines:\n"
-              "DECISION=KEEP   (if the attempt's final answer is correct)\n"
-              "DECISION=REVISE (if the attempt's final answer is wrong)\n"
+CONTRACT_B = ("Review the candidate attempt against the problem: use DECISION KEEP if the attempt's "
+              "final answer is correct, or REVISE if it is wrong. Reason it through if needed, then "
+              "end your reply with exactly these two lines:\n"
+              "DECISION=<KEEP or REVISE>\n"
               "FINAL_ANSWER=<integer>")
+
+CONTRACT_STATUS = ("Determine whether the problem provides enough information to answer. Reason it "
+                   "through if needed, then end your reply with exactly these two lines:\n"
+                   "STATUS=<ANSWERABLE or INSUFFICIENT>\n"
+                   "FINAL_ANSWER=<integer or NULL>")
 
 NL_PROBE_B = "A previous attempt at this problem concluded the answer is {cand}. Review the problem and give your own final answer."
 
@@ -399,6 +423,8 @@ def build_eval(test_items, n_fam=50):
         td = typed_delete(it)
         if td is not None:
             conds["insufficient"] = dict(prompt=td[0], meta=td[1], gold_behavior="abstain")
+            conds["insuf_ctr"] = dict(prompt=td[0] + "\n\n" + CONTRACT_STATUS, meta=td[1], gold_behavior="abstain")
+            conds["suff_ctr"] = dict(prompt=q + "\n\n" + CONTRACT_STATUS, meta={})
             insuf_n += 1
         for cname, c in conds.items():
             r = dict(base)

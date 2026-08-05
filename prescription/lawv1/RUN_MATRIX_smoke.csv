@@ -1,0 +1,4 @@
+run_id,model,component,dose,seed,dataset,data_hash,config_hash,eval_hash,scorer_hash
+SMK-PLAC-0000-S42,Qwen3-8B,placebo,0,42,lawv1_SMK-PLAC-0000,e411344348585014,d56a3d41a84d3541,6c5c9e2b9c9625a8,ba135f1b2e87e25c
+SMK-FMT-0060-S42,Qwen3-8B,format,60,42,lawv1_SMK-FMT-0060,5cbdd35eb38e5331,d56a3d41a84d3541,6c5c9e2b9c9625a8,ba135f1b2e87e25c
+SMK-FMT-0200-S42,Qwen3-8B,format,200,42,lawv1_SMK-FMT-0200,2557e1df1b9e3f38,d56a3d41a84d3541,6c5c9e2b9c9625a8,ba135f1b2e87e25c
