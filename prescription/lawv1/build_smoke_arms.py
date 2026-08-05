@@ -20,6 +20,16 @@ BUCKETS = [(0, 50), (50, 100), (100, 200), (200, 400), (400, 10**9)]
 
 tok = AutoTokenizer.from_pretrained(MODEL, trust_remote_code=True)
 ntok = lambda s: len(tok(s, add_special_tokens=False)["input_ids"])
+CUTOFF = 2048
+SEQ_PER_STEP = 16          # per_device 1 x grad_accum 2 x 8 GPU (packed mode)
+EPOCHS = 2
+
+def seqtok(prompt, target):
+    """chat-template-rendered sequence length (prompt+target), matching training."""
+    rendered = tok.apply_chat_template([{"role": "user", "content": prompt}],
+                                       tokenize=False, add_generation_prompt=True,
+                                       enable_thinking=False)
+    return ntok(rendered) + ntok(target)
 sha = lambda b: hashlib.sha256(b).hexdigest()
 out = Path(OUT_DIR); out.mkdir(parents=True, exist_ok=True)
 
@@ -62,6 +72,9 @@ def make_arm(name, n_fmt):
             removed.append(cid); got += c["_tgt"]
         rem_tok += got
     keep = [c for c in carrier if c["_id"] not in removed]
+    in_tok = sum(ntok(c["instruction"] + "\n" + c["input"]) for c in keep) + sum(ntok(f["prompt"]) for f in ins)
+    sq_tok = (sum(seqtok(c["instruction"] + "\n" + c["input"], c["output"]) for c in keep)
+              + sum(seqtok(f["prompt"], f["target"]) for f in ins))
     data = [dict(lf_row, ) for lf_row in ([{k: c[k] for k in ("instruction", "input", "output")} for c in keep]
                                           + [lf(f) for f in ins])]
     fname = out / f"data_{name}.json"
@@ -73,15 +86,23 @@ def make_arm(name, n_fmt):
         "inserted_ids": [f["_id"] for f in ins], "removed_carrier_ids": removed,
         "component_target_tokens": ins_tok, "removed_target_tokens": rem_tok,
         "total_target_tokens": tot_tgt,
+        "total_input_tokens": in_tok,
+        "total_sequence_tokens": sq_tok,
+        "packed_sequences_est": -(-sq_tok // CUTOFF),
         "q_d": round(ins_tok / tot_tgt, 5) if tot_tgt else 0.0,
         "data_sha256": sha(fname.read_bytes()),
     }
 
 arms = [make_arm("SMK-PLAC-0000", 0), make_arm("SMK-FMT-0060", 60), make_arm("SMK-FMT-0200", 200)]
 base_T = arms[0]["total_target_tokens"]
+base_S = arms[0]["total_sequence_tokens"]
+max_packed = max(a["packed_sequences_est"] for a in arms)
+fixed_steps = -(-max_packed // SEQ_PER_STEP) * EPOCHS
 for a in arms:
     a["T_dev_pct"] = round(100 * (a["total_target_tokens"] - base_T) / base_T, 3)
-    a["budget_violation"] = abs(a["T_dev_pct"]) > 2.0
+    a["S_dev_pct"] = round(100 * (a["total_sequence_tokens"] - base_S) / base_S, 3)
+    a["optimizer_updates_fixed"] = fixed_steps
+    a["budget_violation"] = abs(a["T_dev_pct"]) > 1.0 or abs(a["S_dev_pct"]) > 1.0
 
 json.dump({"seed": SEED, "buckets": BUCKETS,
            "carrier_n": len(carrier),
