@@ -1,0 +1,34 @@
+# lawv1 packed smoke config v2 (C-25 queue A): packing + fixed max_steps
+# => optimizer updates / packed batches / tokens-per-step IDENTICAL across arms by construction.
+# Dataset-level seq-token differences become small epoch-equivalent deltas (declared in budget report).
+model_name_or_path: /mnt/hdfs/xwqu/Qwen3-8B
+dataset: lawv1_SMK-FMT-0060
+dataset_dir: ./prescription/lawv1
+template: qwen
+cutoff_len: 2048
+packing: true
+neat_packing: true
+overwrite_cache: true
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+seed: 42
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 2
+learning_rate: 1.0e-5
+weight_decay: 0.0
+max_steps: 8
+num_train_epochs: 100
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+max_grad_norm: 1.0
+bf16: true
+gradient_checkpointing: true
+output_dir: /opt/tiger/lawv1_local/SMK-FMT-0060-S42
+logging_steps: 1
+save_steps: 100000
+save_total_limit: 1
+overwrite_output_dir: true
+plot_loss: true
+report_to: none

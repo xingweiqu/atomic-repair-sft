@@ -1,0 +1,28 @@
+{
+ "PASS": true,
+ "fails": [],
+ "checks": [
+  {
+   "run": "SMK-PLAC-0000-S42",
+   "target_dev_pct": 0.0,
+   "seq_dev_pct_declared": 0.0,
+   "optimizer_updates": 8,
+   "epoch_equivalent": 2.0
+  },
+  {
+   "run": "SMK-FMT-0060-S42",
+   "target_dev_pct": -0.037,
+   "seq_dev_pct_declared": 3.296,
+   "optimizer_updates": 8,
+   "epoch_equivalent": 1.67
+  },
+  {
+   "run": "SMK-FMT-0200-S42",
+   "target_dev_pct": -0.056,
+   "seq_dev_pct_declared": 11.03,
+   "optimizer_updates": 8,
+   "epoch_equivalent": 1.67
+  }
+ ],
+ "note": "updates/batches/tokens-per-step identical by packed+fixed-max_steps construction; dataset seq-token dev converted to epoch-equivalent delta (declared)"
+}
