@@ -1,0 +1,24 @@
+{
+ "seed": 20260813,
+ "partition_sizes": {
+  "format": 2000,
+  "carrier": 2000,
+  "reserved_queueD": 2817
+ },
+ "carrier_n": 2000,
+ "format_pool_n": 2000,
+ "family_overlap_carrier_format": 0,
+ "eval_family_leak": 0,
+ "format_exact_duplicates": 0,
+ "carrier_sha256": "21b63f7d3f4e3994",
+ "format_pool_sha256": "73cbb5ad1f7248d0",
+ "prototype_families_note": "gate1 prototype pools drew pre-partition; formal pools re-drawn from frozen partition; prototype/formal collisions are within-component only.",
+ "queueD_shortage_note": "reserved_queueD=2817 families < 3 components x target sizes; resolution (sharing/synthetic/reduced) is an explicit queue-D decision, NOT silently resolved here.",
+ "bundle_order_head": [
+  "fmt_0000_gsm_train_03940",
+  "fmt_0001_gsm_train_05421",
+  "fmt_0002_gsm_train_06855",
+  "fmt_0003_gsm_train_06959",
+  "fmt_0004_gsm_train_05910"
+ ]
+}

@@ -1,0 +1,105 @@
+family_id,status,removed_variable,variable_type,dependency_path,note
+gsm_train_01699,PASS,10,count,2*10 -> 20+10+15 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04137,PASS,4,count,12+4 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06731,PASS,3,count,25+3 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06327,PASS,480,count,480*10/100 -> 480*20/100 -> 480-144 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04394,PASS,75,count,75-15 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06869,PASS,15,count,15-5 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04865,FIXED,"50,000",count,50000-30000 -> final,sentence-initial capitalization; re-audited PASS
+gsm_train_05727,PASS,6,count,9*6 -> 54+213+6 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02886,PASS,318,count,318/2 -> 318+177 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04492,PASS,$13,price,13*2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06296,PASS,16,count,16/2 -> 5*16 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_07158,PASS,15,count,15*2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02560,PASS,$150,price,150*2/100 -> 150+3 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03387,PASS,250,count,750+250 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01769,PASS,30,count,30/2 -> 30-21 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01355,PASS,6,count,6*40 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01748,PASS,60,count,60/3 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05128,PASS,100,count,100*.8 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04845,PASS,$30,price,30+60 -> 30+30+90 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01227,PASS,85,count,85-5 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04997,PASS,60,count,60/2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01248,PASS,24,count,24/2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03885,PASS,3,count,3*13 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02164,PASS,24,count,24-6 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02613,PASS,$87,price,87-61 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05816,PASS,$30,price,8*30 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05963,PASS,$425,price,425*2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_07126,PASS,$100,price,100-30 -> 100+70 -> 170*10/100 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01100,PASS,7,count,7*6 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03761,PASS,14,count,14*2 -> 224-14 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04190,PASS,$200,price,200/2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03342,PASS,80,count,2.5*80 -> 200+80 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01736,PASS,12,count,12/3 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01848,PASS,12,count,12*3 -> 12+36+12 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05115,PASS,40,count,20*40 -> 52-40 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02103,PASS,40,count,40*40 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_00726,PASS,25,count,25-10 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04191,PASS,20,count,20-8 -> 20+32+16 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01525,PASS,200,count,200/2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06544,PASS,$100,price,100+20 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04861,PASS,18,count,18*0.5 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06707,PASS,400,count,400*1/4 -> 400-100 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03581,PASS,$3600,price,3600+4500 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02316,PASS,50,count,50-8 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01657,PASS,"$1,800",price,1800/3 -> 600+3000+1800 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01519,PASS,10,count,10+6+14 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02408,PASS,$3.50,price,3.50*10 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05224,PASS,22,count,80-22 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01885,PASS,4,count,4*400 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_00732,PASS,5,count,5-1 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06232,PASS,40,count,40*50 -> 40/4 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06855,PASS,9,count,9/3 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01564,PASS,8,count,8*44 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06986,PASS,200,count,200*2.5 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_00121,PASS,250,count,250*2 -> 250*8 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_00923,PASS,7,count,7*8 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02879,PASS,2,count,3*2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03981,PASS,20,count,20*2 -> 20+32 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_07009,PASS,150,count,.01*150 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01168,PASS,20,count,20*2 -> 40+20 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_00862,PASS,575,count,575/5 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01371,PASS,"$10,000",price,10000/2 -> 10000-5000 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01861,PASS,300,count,2/3*300 -> 300-200 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01545,PASS,$10,price,3*10 -> 30+10+30 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02012,PASS,30,count,3*30 -> 30+90+110 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06300,PASS,8800,count,8800/4 -> 8800+2200+1100 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_07026,PASS,$8,price,8*7 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05832,PASS,12,count,25-12 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_07397,PASS,$200,price,1000-200 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_07200,PASS,21,count,21-5 -> 21*2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03196,PASS,30,count,30+25+35 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04122,PASS,2,count,2*960 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01843,PASS,20,count,20/2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05458,PASS,20,count,20*2+3 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02842,PASS,5,count,5*12 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01004,PASS,6,count,6*2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_00395,PASS,"2,880",count,4*2880 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05267,PASS,$3,price,3+2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02942,PASS,5,count,12*5 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03716,PASS,10,count,10*5 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_02565,PASS,9,count,9*10 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06688,PASS,82,count,82/2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03614,PASS,200,count,200+200 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06704,PASS,1450,count,1450-100 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_00960,PASS,5,count,2+5 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05867,PASS,$18.50,price,18.5*2 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05936,PASS,9,count,9*100 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03314,PASS,5000,count,5000/500 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_01093,PASS,120,count,120*3 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06286,FIXED,3000,count,3000*7 -> final,sentence-initial capitalization; re-audited PASS
+gsm_train_00195,PASS,5,count,5*6 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03593,PASS,$30,price,1/3*30 -> 30-10 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_05315,PASS,18,count,18-12 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_06433,PASS,48,count,48/4 -> 48-12 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_03054,PASS,10,count,10*.3 -> 10+3 -> 13+10 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04953,PASS,40,count,50-40 -> final,audited: grammatical; deletion necessary; not recoverable
+gsm_train_04353,PASS,$29,price,29+25+31 -> final,replacement family; individually re-audited PASS
+gsm_train_00374,PASS,50,count,1/2*50 -> 65+25+50 -> final,replacement family; individually re-audited PASS
+gsm_train_04192,PASS,5,count,5*4 -> 5+20+18 -> final,replacement family; individually re-audited PASS
+gsm_train_02262,PASS,180,count,180/2 -> final,replacement family; individually re-audited PASS
+gsm_train_06654,REJECT,-,-,-,"semantic: ""2 packs for all his students"" readable as the asked total"
+gsm_train_05079,REJECT,-,-,-,"semantic: combo priced $11, drink count irrelevant variable"
+gsm_train_04657,REJECT,-,-,-,"phrasing: ""an unspecified number of square inches big"" unnatural"
+gsm_train_00766,DROPPED_BY_FIX,-,-,-,"generator fix: singular-verb noun capture (""need""); family left pool"
