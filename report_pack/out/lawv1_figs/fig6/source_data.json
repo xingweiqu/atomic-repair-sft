@@ -1,0 +1,91 @@
+{
+ "lodo": [
+  {
+   "dose": 0,
+   "truth": 0.6733333333333333,
+   "law": 0.96,
+   "form": "step@45",
+   "nearest": 0.96,
+   "loglin": 0.9576956397359513,
+   "const": 0.9933333333333333,
+   "kind": "extrap"
+  },
+  {
+   "dose": 30,
+   "truth": 0.96,
+   "law": 0.9988888883027253,
+   "form": "satexp",
+   "nearest": 0.6733333333333333,
+   "loglin": 0.8841889988430186,
+   "const": 0.9523809523809523,
+   "kind": "interp"
+  },
+  {
+   "dose": 60,
+   "truth": 1.0,
+   "law": 0.9940776759475556,
+   "form": "satexp",
+   "nearest": 0.96,
+   "loglin": 0.9129173435326345,
+   "const": 0.9466666666666667,
+   "kind": "interp"
+  },
+  {
+   "dose": 120,
+   "truth": 0.9933333333333333,
+   "law": 1.000710690859298,
+   "form": "satexp",
+   "nearest": 1.0,
+   "loglin": 0.9470107248138826,
+   "const": 0.9476190476190476,
+   "kind": "interp"
+  },
+  {
+   "dose": 240,
+   "truth": 1.0,
+   "law": 0.9993547674722478,
+   "form": "satexp",
+   "nearest": 0.9933333333333333,
+   "loglin": 0.977884617006799,
+   "const": 0.9466666666666667,
+   "kind": "interp"
+  },
+  {
+   "dose": 480,
+   "truth": 1.0,
+   "law": 0.9993547790230495,
+   "form": "satexp",
+   "nearest": 1.0,
+   "loglin": 1.0109741379185806,
+   "const": 0.9466666666666667,
+   "kind": "interp"
+  },
+  {
+   "dose": 960,
+   "truth": 1.0,
+   "law": 0.9993547790230498,
+   "form": "satexp",
+   "nearest": 1.0,
+   "loglin": 1.0485474056187658,
+   "const": 0.9466666666666667,
+   "kind": "interp"
+  },
+  {
+   "dose": 2000,
+   "truth": 1.0,
+   "law": 0.9993547790230498,
+   "form": "satexp",
+   "nearest": 1.0,
+   "loglin": 1.0989548986810238,
+   "const": 0.9466666666666667,
+   "kind": "extrap"
+  }
+ ],
+ "mae": {
+  "law": 0.0427,
+  "nearest": 0.0783,
+  "loglin": 0.0843,
+  "const": 0.08
+ },
+ "noise_half_range": 0.07
+}

@@ -1,0 +1,45 @@
+{
+ "lanes": [
+  [
+   "CPU data build",
+   [
+    "asset inventory",
+    "pools+audits",
+    "K/IF eval build"
+   ]
+  ],
+  [
+   "GPU train",
+   [
+    "smoke(3+3)",
+    "FMT/EVD/REV grids 48 runs",
+    "K/IF sparse (pending)"
+   ]
+  ],
+  [
+   "GPU eval",
+   [
+    "base profiles",
+    "per-run 518-row eval",
+    "cross-domain (pending)"
+   ]
+  ],
+  [
+   "Analysis",
+   [
+    "curves",
+    "LODO+baselines",
+    "margin audit v2"
+   ]
+  ],
+  [
+   "Mixture / held-out",
+   [
+    "(pending)",
+    "(pending)",
+    ""
+   ]
+  ]
+ ],
+ "note": "structure figure; statuses from QUEUE_STATE.md"
+}

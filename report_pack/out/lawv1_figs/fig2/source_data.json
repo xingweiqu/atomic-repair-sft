@@ -1,0 +1,20 @@
+{
+ "status": {
+  "Reasoning|Clean replay": "done",
+  "Reasoning|Format": "done",
+  "Reasoning|Evidence": "done",
+  "Reasoning|Revision": "done",
+  "Reasoning|Answerability": "audit-gated",
+  "Knowledge/Wiki|Clean replay": "pending-freeze",
+  "Knowledge/Wiki|Format": "pending-freeze",
+  "Knowledge/Wiki|Evidence": "pending-freeze",
+  "Knowledge/Wiki|Revision": "pending-freeze",
+  "Knowledge/Wiki|Answerability": "pending-freeze",
+  "General IF|Clean replay": "pending-freeze",
+  "General IF|Format": "pending-freeze",
+  "General IF|Evidence": "pending-freeze",
+  "General IF|Revision": "pending-freeze",
+  "General IF|Answerability": "pending-freeze"
+ },
+ "roles_csv_rows": 27
+}

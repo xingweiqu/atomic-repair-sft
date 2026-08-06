@@ -1,0 +1,58 @@
+{
+ "layers": [
+  {
+   "layer": "Reasoning full-grid (FMT/EVD/REV)",
+   "done": 48,
+   "planned": 48,
+   "status": "completed"
+  },
+  {
+   "layer": "Reasoning Answerability grid",
+   "done": 0,
+   "planned": 16,
+   "status": "audit-gated"
+  },
+  {
+   "layer": "Reasoning external eval (SVAMP)",
+   "done": 0,
+   "planned": 0,
+   "status": "pending-build"
+  },
+  {
+   "layer": "Knowledge/Wiki cross-domain eval",
+   "done": 0,
+   "planned": 49,
+   "status": "pending-build"
+  },
+  {
+   "layer": "General IF cross-domain eval",
+   "done": 0,
+   "planned": 49,
+   "status": "pending-build"
+  },
+  {
+   "layer": "Knowledge sparse training",
+   "done": 0,
+   "planned": 10,
+   "status": "pending-decision"
+  },
+  {
+   "layer": "IF sparse training",
+   "done": 0,
+   "planned": 10,
+   "status": "pending-decision"
+  },
+  {
+   "layer": "Mixture",
+   "done": 0,
+   "planned": 12,
+   "status": "pending"
+  },
+  {
+   "layer": "Held-out model",
+   "done": 0,
+   "planned": 20,
+   "status": "pending"
+  }
+ ]
+}
