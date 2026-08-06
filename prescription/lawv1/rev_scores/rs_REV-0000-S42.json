@@ -1,0 +1,105 @@
+{
+  "original": {
+    "acc_exact": 0.8,
+    "acc_loose": 0.8,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50
+  },
+  "distractor": {
+    "acc_exact": 0.78,
+    "acc_loose": 0.78,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.74
+  },
+  "format": {
+    "semantic_correct": 0.44,
+    "json_valid": 0.76,
+    "schema_compliant": 0.76,
+    "contract_exact": 0.68,
+    "main": 0.26,
+    "n": 50
+  },
+  "wc_light": {
+    "decision_acc": 0.98,
+    "final_acc": 0.78,
+    "joint": 0.76,
+    "adopt": 0.0,
+    "contract_followed": 0.98,
+    "n": 50
+  },
+  "wc_attempt": {
+    "decision_acc": 0.9,
+    "final_acc": 0.84,
+    "joint": 0.82,
+    "adopt": 0.04,
+    "contract_followed": 0.98,
+    "n": 50
+  },
+  "cc_light": {
+    "decision_acc": 0.7,
+    "final_acc": 0.78,
+    "joint": 0.7,
+    "adopt": 0.0,
+    "contract_followed": 0.9,
+    "n": 50
+  },
+  "cc_attempt": {
+    "decision_acc": 0.78,
+    "final_acc": 0.86,
+    "joint": 0.78,
+    "adopt": 0.0,
+    "contract_followed": 1.0,
+    "n": 50
+  },
+  "paraphrase": {
+    "acc_exact": 0.86,
+    "acc_loose": 0.86,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.78
+  },
+  "wc_nl": {
+    "correct": 0.85,
+    "adopt": 0.0,
+    "n": 20
+  },
+  "cc_nl": {
+    "final_correct": 0.9,
+    "explicit_keep": 0.05,
+    "explicit_reject": 0.05,
+    "keep_joint": 0.05,
+    "n": 20
+  },
+  "insufficient": {
+    "insufficient_stop": 0.2692,
+    "guessed": 0.7308,
+    "n": 26,
+    "paired_answerability": 0.1923,
+    "false_abstain_on_original": 0.0
+  },
+  "insuf_ctr": {
+    "status_acc": 0.9615,
+    "answer_acc": 0.9615,
+    "joint": 0.9615,
+    "false_abstain": 0.0,
+    "contract_followed": 1.0,
+    "n": 26
+  },
+  "suff_ctr": {
+    "status_acc": 0.9615,
+    "answer_acc": 0.8462,
+    "joint": 0.8462,
+    "false_abstain": 0.0385,
+    "contract_followed": 1.0,
+    "n": 26
+  },
+  "_scorer_version": "1.2",
+  "_scorer_sha256": "ba135f1b2e87e25c"
+}

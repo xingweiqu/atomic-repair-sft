@@ -1,0 +1,105 @@
+{
+  "original": {
+    "acc_exact": 0.8,
+    "acc_loose": 0.8,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50
+  },
+  "distractor": {
+    "acc_exact": 0.8,
+    "acc_loose": 0.8,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.74
+  },
+  "format": {
+    "semantic_correct": 0.36,
+    "json_valid": 0.8,
+    "schema_compliant": 0.8,
+    "contract_exact": 0.66,
+    "main": 0.24,
+    "n": 50
+  },
+  "wc_light": {
+    "decision_acc": 0.94,
+    "final_acc": 0.82,
+    "joint": 0.82,
+    "adopt": 0.02,
+    "contract_followed": 0.96,
+    "n": 50
+  },
+  "wc_attempt": {
+    "decision_acc": 0.94,
+    "final_acc": 0.76,
+    "joint": 0.76,
+    "adopt": 0.06,
+    "contract_followed": 1.0,
+    "n": 50
+  },
+  "cc_light": {
+    "decision_acc": 0.76,
+    "final_acc": 0.84,
+    "joint": 0.76,
+    "adopt": 0.0,
+    "contract_followed": 0.94,
+    "n": 50
+  },
+  "cc_attempt": {
+    "decision_acc": 0.72,
+    "final_acc": 0.86,
+    "joint": 0.72,
+    "adopt": 0.0,
+    "contract_followed": 1.0,
+    "n": 50
+  },
+  "paraphrase": {
+    "acc_exact": 0.84,
+    "acc_loose": 0.84,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.76
+  },
+  "wc_nl": {
+    "correct": 0.85,
+    "adopt": 0.0,
+    "n": 20
+  },
+  "cc_nl": {
+    "final_correct": 0.85,
+    "explicit_keep": 0.1,
+    "explicit_reject": 0.0,
+    "keep_joint": 0.1,
+    "n": 20
+  },
+  "insufficient": {
+    "insufficient_stop": 0.1538,
+    "guessed": 0.8077,
+    "n": 26,
+    "paired_answerability": 0.1154,
+    "false_abstain_on_original": 0.0
+  },
+  "insuf_ctr": {
+    "status_acc": 1.0,
+    "answer_acc": 1.0,
+    "joint": 1.0,
+    "false_abstain": 0.0,
+    "contract_followed": 1.0,
+    "n": 26
+  },
+  "suff_ctr": {
+    "status_acc": 0.9615,
+    "answer_acc": 0.8846,
+    "joint": 0.8846,
+    "false_abstain": 0.0385,
+    "contract_followed": 1.0,
+    "n": 26
+  },
+  "_scorer_version": "1.2",
+  "_scorer_sha256": "ba135f1b2e87e25c"
+}
