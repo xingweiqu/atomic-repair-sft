@@ -13,6 +13,7 @@ from transformers import AutoTokenizer
 
 CARRIER, POOL, OUT_DIR, MODEL = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 PREFIX = sys.argv[5] if len(sys.argv) > 5 else "FMT"
+CAP_MODE = len(sys.argv) > 6 and sys.argv[6] == "cap"
 SEED = 20260813
 DOSES = [0, 30, 60, 120, 240, 480, 960, 2000]
 BUCKETS = [(0, 50), (50, 100), (100, 200), (200, 400), (400, 10**9)]
@@ -50,6 +51,14 @@ for i, f in enumerate(pool):
     f["_seq"] = seqtok(f["prompt"], f["target"])
     f["_bucket"] = next(bi for bi, (lo, hi) in enumerate(BUCKETS) if lo <= f["_tgt"] < hi)
 
+carrier_tgt_total = sum(c["_tgt"] for c in carrier)
+if CAP_MODE:
+    cum, cap = 0, 0
+    for f in pool:
+        if cum + f["_tgt"] > carrier_tgt_total:
+            break
+        cum += f["_tgt"]; cap += 1
+    DOSES = [d for d in DOSES if d < cap] + [cap]   # top arm = token-capped pure-component corner (declared)
 arms = []
 for n in DOSES:
     n_eff = min(n, len(pool))
