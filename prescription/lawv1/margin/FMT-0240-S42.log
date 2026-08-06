@@ -1,0 +1,7 @@
+/usr/local/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.20) or chardet (7.4.3)/charset_normalizer (3.4.3) doesn't match a supported version!
+  warnings.warn(
+The tokenizer you are loading from '/mnt/hdfs/xwqu/lawv1/ckpts/FMT-0240-S42/' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:07,  2.53s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.62s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:07<00:02,  2.51s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:08<00:00,  1.87s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:08<00:00,  2.12s/it]
+The module name  (originally ) is not a valid Python identifier. Please rename the original module to avoid import issues.
+MARGIN_PROBE_DONE 152
