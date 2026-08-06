@@ -1,0 +1,10 @@
+{
+ "seed": 20260813,
+ "evidence_n": 1989,
+ "revision_n": 2000,
+ "declared_overlap_families": 183,
+ "target_hygiene_bad": 0,
+ "eval_leak": 0,
+ "evidence_sha": "a9087021a9f8a77d",
+ "revision_sha": "bfcb3aab1fca4e82"
+}

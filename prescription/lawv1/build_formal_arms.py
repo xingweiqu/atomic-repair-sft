@@ -12,6 +12,7 @@ from pathlib import Path
 from transformers import AutoTokenizer
 
 CARRIER, POOL, OUT_DIR, MODEL = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+PREFIX = sys.argv[5] if len(sys.argv) > 5 else "FMT"
 SEED = 20260813
 DOSES = [0, 30, 60, 120, 240, 480, 960, 2000]
 BUCKETS = [(0, 50), (50, 100), (100, 200), (200, 400), (400, 10**9)]
@@ -51,7 +52,8 @@ for i, f in enumerate(pool):
 
 arms = []
 for n in DOSES:
-    ins = pool[:n]
+    n_eff = min(n, len(pool))
+    ins = pool[:n_eff]
     need = {bi: sum(f["_tgt"] for f in ins if f["_bucket"] == bi) for bi in range(5)}
     removed = set(); rem_tok = 0
     for bi in range(5):
@@ -76,12 +78,12 @@ for n in DOSES:
     keep = [c for c in carrier if c["_id"] not in removed]
     data = ([{"instruction": c["instruction"], "input": "", "output": c["output"]} for c in keep]
             + [{"instruction": f["prompt"], "input": "", "output": f["target"]} for f in ins])
-    name = f"FMT-{n:04d}"
+    name = f"{PREFIX}-{n:04d}"
     fp = out / f"data_{name}.json"
     fp.write_text(json.dumps(data, ensure_ascii=False))
     tgt = sum(c["_tgt"] for c in keep) + sum(f["_tgt"] for f in ins)
     seq = sum(c["_seq"] for c in keep) + sum(f["_seq"] for f in ins)
-    arms.append(dict(arm=name, dose=n, examples=len(data), component_examples=n,
+    arms.append(dict(arm=name, dose=n, examples=len(data), component_examples=n_eff,
                      carrier_examples=len(keep), removed_carrier=len(removed),
                      component_target_tokens=sum(f["_tgt"] for f in ins),
                      bucket_spill_removals=spill,
@@ -97,7 +99,7 @@ for a in arms:
     a["S_dev_pct_declared"] = round(100 * (a["total_sequence_tokens"] - base["total_sequence_tokens"]) / base["total_sequence_tokens"], 3)
     a["optimizer_updates_fixed"] = fixed_steps
     a["budget_violation"] = abs(a["T_dev_pct"]) > 1.0
-json.dump(arms, open(out / "dose_manifest_format.json", "w"), indent=1)
+json.dump(arms, open(out / f"dose_manifest_{PREFIX}.json", "w"), indent=1)
 json.dump({f"lawv1_{a['arm']}": {"file_name": f"data_{a['arm']}.json"} for a in arms},
           open(out / "dataset_info.json", "w"), indent=1)
 print(json.dumps([{k: a[k] for k in ("arm", "examples", "q_d", "total_target_tokens",
