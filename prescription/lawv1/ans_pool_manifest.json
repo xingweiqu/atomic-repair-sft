@@ -1,0 +1,8 @@
+{
+ "seed": 20260813,
+ "generator": "formal-v1.1(+comparative/comma-compound guards)",
+ "pairs": 1000,
+ "overlap_evidence": 984,
+ "overlap_revision": 105,
+ "sha": "63aa8fbf60d3a07d"
+}

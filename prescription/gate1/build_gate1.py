@@ -200,6 +200,10 @@ def classify_token(q, s, e, tok):
     m = re.match(r"(\s+)([A-Za-z]+)(\s+[A-Za-z]+)?", after)
     if not m:
         return "count", None, s, e
+    if m.group(2).lower() in ("more", "fewer", "less") and " than" in q[e:e + 60]:
+        return "comparative", None, s, e          # "16 more silver dollars than" -> skip
+    if re.match(r"\s+[A-Za-z]+,", after):
+        return "comma_compound", None, s, e       # "10 blue, spotted fish" -> skip
     w1 = m.group(2)
     w2 = m.group(3).strip() if m.group(3) else None
     if q[e + len(m.group(1)) + len(w1): e + len(m.group(1)) + len(w1) + 1] == "-":
