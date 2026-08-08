@@ -1,0 +1,51 @@
+{
+  "generator_version": "gate1k-v0.2",
+  "seed": 20260814,
+  "dataset": "framolfese/2wikimultihopqa",
+  "split": "validation",
+  "main_pool_families": 50,
+  "old_wiki2_excluded_ids": 2400,
+  "filter_accounting": {
+    "excluded_old_wiki2_id": 2400,
+    "pass_all_filters": 9025,
+    "drop_yesno_or_empty_answer": 1060,
+    "drop_question_shape": 84,
+    "drop_long_answer": 7
+  },
+  "candidate_pool_after_filters": 9025,
+  "insufficient_survivors": 37,
+  "insufficient_drop_reasons": {
+    "leak_in_remaining_context": 13
+  },
+  "paraphrase": "PENDING — no rule-based rewrite; overrides file to come",
+  "eval_rows": 361,
+  "eval_by_condition": {
+    "original": 50,
+    "distractor": 50,
+    "wc_attempt": 50,
+    "cc_attempt": 50,
+    "format": 50,
+    "insufficient": 37,
+    "insuf_ctr": 37,
+    "suff_ctr": 37
+  },
+  "wc_candidate_sources": {
+    "comparison_option": 21,
+    "other_family_answer": 24,
+    "same_context_title": 5
+  },
+  "wc_answer_classes": {
+    "option": 21,
+    "date": 2,
+    "place": 20,
+    "person": 6,
+    "entity": 1
+  },
+  "question_types_in_pool": {
+    "comparison": 12,
+    "bridge_comparison": 9,
+    "compositional": 23,
+    "inference": 6
+  },
+  "verify_errors": []
+}
