@@ -1,0 +1,361 @@
+{"family_id": "w2k_08700", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_08700", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_08700", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_08700", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_08700", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_12052", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_12052", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_12052", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_12052", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_12052", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_12052", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_12052", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_12052", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_03038", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_03038", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_03038", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03038", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03038", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_03038", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_03038", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_03038", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_09088", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_09088", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_09088", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09088", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09088", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_09088", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_09088", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_09088", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_11758", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11758", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11758", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11758", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11758", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_11758", "condition": "insuf_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_11758", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11758", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_03500", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_03500", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_03500", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03500", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03500", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_10405", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_10405", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_10405", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_10405", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_10405", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 1}
+{"family_id": "w2k_10405", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_10405", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_10405", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_11948", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_11948", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11948", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11948", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11948", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_11948", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11948", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11948", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_04587", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04587", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04587", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04587", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04587", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_04338", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04338", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04338", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04338", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04338", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_04338", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04338", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_04338", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_05268", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_05268", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_05268", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_05268", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_05268", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_07185", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_07185", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_07185", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_07185", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_07185", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_07185", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_07185", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_07185", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_03144", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_03144", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_03144", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03144", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03144", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_06110", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_06110", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_06110", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_06110", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_06110", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_04878", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04878", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04878", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04878", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04878", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_02692", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_02692", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_02692", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_02692", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_02692", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_02692", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_02692", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_02692", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_06653", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_06653", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_06653", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_06653", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_06653", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_06653", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_06653", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_06653", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_05650", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_05650", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_05650", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_05650", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_05650", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_05650", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_05650", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_05650", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_11675", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11675", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11675", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11675", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11675", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_11675", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11675", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11675", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_06384", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_06384", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_06384", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_06384", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_06384", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_06384", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_06384", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_06384", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_10911", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_10911", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_10911", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_10911", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_10911", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_10911", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_10911", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_10911", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_09528", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_09528", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_09528", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09528", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09528", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_09528", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_09528", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_09528", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_11908", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11908", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11908", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11908", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11908", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_11908", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11908", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11908", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_03351", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_03351", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_03351", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03351", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03351", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_11780", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11780", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11780", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11780", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11780", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_11780", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11780", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_11780", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_09217", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_09217", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_09217", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09217", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09217", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_07435", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_07435", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_07435", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_07435", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_07435", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_04886", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04886", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04886", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04886", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04886", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_04886", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04886", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04886", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_03684", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_03684", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_03684", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03684", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03684", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_03684", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_03684", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_03684", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_08961", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_08961", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_08961", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_08961", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_08961", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_10351", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_10351", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_10351", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_10351", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_10351", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_10351", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_10351", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_10351", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_04087", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04087", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04087", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04087", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04087", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_04087", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04087", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04087", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_09326", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_09326", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_09326", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09326", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09326", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_09326", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_09326", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_09326", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_03438", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_03438", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_03438", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03438", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03438", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_03438", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_03438", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_03438", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_03267", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_03267", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_03267", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03267", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03267", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_03267", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_03267", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_03267", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_04697", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04697", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04697", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04697", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04697", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_04697", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04697", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_04697", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_04518", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04518", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04518", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04518", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04518", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_04186", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04186", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04186", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04186", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04186", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_04186", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04186", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_04186", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_04337", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04337", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_04337", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04337", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_04337", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_04337", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04337", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_04337", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_02821", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_02821", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_02821", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_02821", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_02821", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_02821", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_02821", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_02821", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_02752", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_02752", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_02752", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_02752", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_02752", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_02752", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_02752", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_02752", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_09785", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_09785", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_09785", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09785", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_09785", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_09785", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_09785", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_09785", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_10508", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_10508", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_10508", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_10508", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_10508", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_10508", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_10508", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_10508", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_08195", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_08195", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_08195", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_08195", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_08195", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_08195", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_08195", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_08195", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_07723", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_07723", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_07723", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_07723", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_07723", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_07723", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_07723", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_07723", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_08339", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_08339", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_08339", "condition": "wc_attempt", "decision_acc": 0, "final_acc": 1, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_08339", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_08339", "condition": "insufficient", "insufficient_stop": 0, "leaked_gold": 0}
+{"family_id": "w2k_08339", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_08339", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_08339", "condition": "format", "schema_ok": 0, "main": 0}
+{"family_id": "w2k_07036", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_07036", "condition": "distractor", "acc_strict": 0, "acc_lenient": 0, "abstain": 0}
+{"family_id": "w2k_07036", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_07036", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_07036", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_07036", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_07036", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 0, "joint": 0, "false_abstain": 0}
+{"family_id": "w2k_07036", "condition": "format", "schema_ok": 1, "main": 0}
+{"family_id": "w2k_02660", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_02660", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_02660", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_02660", "condition": "cc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_02660", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_03730", "condition": "original", "acc_strict": 0, "acc_lenient": 0, "abstain": 1}
+{"family_id": "w2k_03730", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_03730", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 1, "joint": 1, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03730", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_03730", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_03730", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_03730", "condition": "suff_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_03730", "condition": "format", "schema_ok": 1, "main": 1}
+{"family_id": "w2k_11013", "condition": "original", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11013", "condition": "distractor", "acc_strict": 0, "acc_lenient": 1, "abstain": 0}
+{"family_id": "w2k_11013", "condition": "wc_attempt", "decision_acc": 1, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11013", "condition": "cc_attempt", "decision_acc": 0, "final_acc": 0, "joint": 0, "adopt": 0, "contract_followed": 1}
+{"family_id": "w2k_11013", "condition": "insufficient", "insufficient_stop": 1, "leaked_gold": 0}
+{"family_id": "w2k_11013", "condition": "insuf_ctr", "status_acc": 1, "answer_acc": 1, "joint": 1, "false_abstain": 0}
+{"family_id": "w2k_11013", "condition": "suff_ctr", "status_acc": 0, "answer_acc": 0, "joint": 0, "false_abstain": 1}
+{"family_id": "w2k_11013", "condition": "format", "schema_ok": 1, "main": 1}
