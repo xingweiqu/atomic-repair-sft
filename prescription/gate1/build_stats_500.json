@@ -1,0 +1,173 @@
+{
+  "generator_version": "gate1-v1.2-eval500",
+  "pool_accounting": {
+    "base_filtered_test_n": 1198,
+    "sampled_n": 500,
+    "old_pool_n": 50,
+    "sample_old_overlap_n": 21,
+    "sample_old_overlap": [
+      "gsm_test_01056",
+      "gsm_test_01053",
+      "gsm_test_00150",
+      "gsm_test_01243",
+      "gsm_test_00139",
+      "gsm_test_00522",
+      "gsm_test_01135",
+      "gsm_test_00735",
+      "gsm_test_00770",
+      "gsm_test_01023",
+      "gsm_test_01093",
+      "gsm_test_00283",
+      "gsm_test_00456",
+      "gsm_test_01206",
+      "gsm_test_01233",
+      "gsm_test_00417",
+      "gsm_test_00601",
+      "gsm_test_00812",
+      "gsm_test_00833",
+      "gsm_test_00749",
+      "gsm_test_00103"
+    ],
+    "union_pool_n": 529
+  },
+  "nl_subset_n": 100,
+  "eval_rows": 4700,
+  "eval_by_condition": {
+    "original": 529,
+    "distractor": 529,
+    "format": 529,
+    "wc_light": 529,
+    "wc_attempt": 529,
+    "cc_light": 529,
+    "cc_attempt": 529,
+    "paraphrase": 50,
+    "wc_nl": 100,
+    "cc_nl": 100,
+    "insufficient": 249,
+    "insuf_ctr": 249,
+    "suff_ctr": 249
+  },
+  "eval_wrong_candidate_taxonomy": {
+    "off_by_one": 150,
+    "arithmetic_slip": 155,
+    "dropped_step": 139,
+    "operator_error": 85
+  },
+  "paraphrase": {
+    "present_n": 50,
+    "missing_n": 479,
+    "policy": "hand-written old-50 only; rule-based rewriting banned; others flagged missing"
+  },
+  "insufficient": {
+    "survivors_n": 249,
+    "survival_rate": 0.4707,
+    "rejected_n": 280,
+    "reject_primary_reason": {
+      "derivable_from_rest": 131,
+      "not_unique_mention": 90,
+      "unsafe_context:comma_compound": 15,
+      "unsafe_context:count": 13,
+      "val_trivial": 13,
+      "blocklist": 4,
+      "number_word_leak": 4,
+      "unsafe_context:unit_count": 3,
+      "grammar_residue": 3,
+      "unsafe_context:ratio_or_time": 2,
+      "unsafe_context:hyphen_compound": 1,
+      "unsafe_context:noun_hyphen": 1
+    },
+    "reject_all_reasons_candidate_level": {
+      "derivable_from_rest": 277,
+      "not_unique_mention": 213,
+      "unsafe_context:count": 34,
+      "val_trivial": 32,
+      "unsafe_context:comma_compound": 20,
+      "number_word_leak": 11,
+      "unsafe_context:comparative": 5,
+      "blocklist": 4,
+      "unsafe_context:unit_count": 3,
+      "unsafe_context:ratio_or_time": 3,
+      "grammar_residue": 3,
+      "unsafe_context:hyphen_compound": 1,
+      "unsafe_context:noun_hyphen": 1,
+      "unsafe_context:price_attributive": 1
+    },
+    "variable_types": {
+      "percentage": 12,
+      "count": 176,
+      "price": 61
+    },
+    "prescreen_suspects_flagged_not_dropped": []
+  },
+  "union_accounting_vs_old_518": {
+    "old_rows": 518,
+    "old_rows_outside_insuf_trio": 440,
+    "old_rows_outside_insuf_trio_reproduced_verbatim": 440,
+    "old_insuf_trio_rows": 78,
+    "old_insuf_trio_delta": {
+      "reproduced": 73,
+      "changed": [
+        [
+          "gsm_test_00735",
+          "insufficient"
+        ],
+        [
+          "gsm_test_00735",
+          "insuf_ctr"
+        ]
+      ],
+      "dropped": [
+        [
+          "gsm_test_00034",
+          "insufficient"
+        ],
+        [
+          "gsm_test_00034",
+          "insuf_ctr"
+        ],
+        [
+          "gsm_test_00034",
+          "suff_ctr"
+        ]
+      ]
+    },
+    "insuf_trio_delta_reason": "eval_proto.jsonl predates typed_delete hardening (c78552d); current generator is authoritative",
+    "new_rows_added": 4182,
+    "carrier_rows": 2000,
+    "carrier_text_unmatched": 0,
+    "train_family_pool_n": 6814
+  },
+  "audit_insufficient_draw": [
+    "gsm_test_00745",
+    "gsm_test_00964",
+    "gsm_test_00730",
+    "gsm_test_00548",
+    "gsm_test_00786",
+    "gsm_test_00566",
+    "gsm_test_00824",
+    "gsm_test_00962",
+    "gsm_test_00133",
+    "gsm_test_00896",
+    "gsm_test_00407",
+    "gsm_test_00373",
+    "gsm_test_00169",
+    "gsm_test_00632",
+    "gsm_test_00352",
+    "gsm_test_01223",
+    "gsm_test_00261",
+    "gsm_test_00272",
+    "gsm_test_00322",
+    "gsm_test_00829",
+    "gsm_test_01194",
+    "gsm_test_00081",
+    "gsm_test_00429",
+    "gsm_test_00160",
+    "gsm_test_00762",
+    "gsm_test_00967",
+    "gsm_test_00060",
+    "gsm_test_00262",
+    "gsm_test_00781",
+    "gsm_test_01121"
+  ],
+  "verify_errors": []
+}

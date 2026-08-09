@@ -151,7 +151,8 @@ NOUN_BLACKLIST = {"times", "of", "and", "is", "are", "was", "were", "the", "a", 
                   "buys", "sells", "eats", "spends", "gives", "goes", "runs", "pays",
                   "costs", "earns", "works", "said", "says", "need", "want", "get",
                   "make", "take", "use", "buy", "sell", "eat", "spend", "give",
-                  "go", "run", "pay", "cost", "earn", "work", "say", "deliver"}
+                  "go", "run", "pay", "cost", "earn", "work", "say", "deliver",
+                  "now", "nows", "how", "hows", "seasonal", "monthly"}
 UNIT_COUNT = {"dozen", "dozens", "hundred", "hundreds", "thousand", "thousands",
               "pair", "pairs", "percent", "half", "gb", "mb", "kg", "km", "cm", "mph",
               "mg", "mgs", "ml", "oz", "lb", "lbs", "g", "ft", "sq", "sqft"}
@@ -179,7 +180,7 @@ def classify_token(q, s, e, tok):
     """(variable_type, replacement, del_start, del_end) or type,None,.. to skip."""
     while tok and tok[-1] in ",.":                     # "$3," span bug: never eat punctuation
         tok = tok[:-1]; e -= 1
-    before, after = q[max(0, s - 4):s], q[e:e + 16]
+    before, after = q[max(0, s - 4):s], q[e:e + 48]
     if re.search(r"number of\s*$", q[:s], re.I):
         return "number_of_context", None, s, e         # "number of 26 patients" -> skip
     if "-" in q[max(0, s - 1):s] or after.startswith("-"):
@@ -227,6 +228,9 @@ def classify_token(q, s, e, tok):
 RESIDUE = re.compile(r"\ba an\b|\ban an\b|\bthe an\b|\b(\w+) \1\b", re.I)
 
 INSUF_BLOCKLIST = {
+    "gsm_test_00181",  # 3-word compound "pink calla lilies" defeats 2-word consume
+    "gsm_test_01096",  # "days in March" = world knowledge (31), text gates cannot catch
+    "gsm_test_00270",  # M&Ms token mangled by deletion
     "gsm_test_00403",   # alternative reading (5h*900W*30d) stays answerable
     "gsm_train_06654",  # "2 packs for all his students" readable as the asked total -> still answerable
     "gsm_train_05079",  # combo price fixed at $11; drink count is an irrelevant variable
