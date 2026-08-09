@@ -72,3 +72,6 @@ margin v2 EVD/REV 扫描(P3)已中断,部分结果在各机 /tmp/margin_v2b(易�
 改:if_answerability→SQuAD-v2 双侧+字段缺失型(FalseQA 降 secondary);if_evidence→真证据型阅读理解(sycophancy 降辅助);CREPE 暂停待 50 条支持率 Gate(≥80%);K distractor donor 独立池+hard distractor;K wc_attempt 改名或补两跳链。
 欠件:K training spec(README 曾超前声称,实未写)→ 起草后随完整 audit pack v2 重交。
 IF 正式训练冻结至修正完成。
+
+## C-31(2026-08-10):IF v2 部分批准落账
+answerability 扩产放行(subtype+paired);evidence 修 control/三类/去捷径后扩;CREPE 等 50 条人审 Gate;K eval 不冻结(donor 独立池强制、wc_attempt→wrong_candidate_citation 已改名);交付必须含 JSONL 本体+builder+scorer+README。

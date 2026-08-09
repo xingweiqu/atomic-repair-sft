@@ -317,7 +317,7 @@ def build(main):
             cite_wc = cand if csrc in ("same_context_title", "comparison_option") else sup_cited
             att_w = (f'After reading the passages, they concluded that the answer is '
                      f'{cand}, citing the passage titled "{cite_wc}".')
-            conds["wc_attempt"] = dict(
+            conds["wrong_candidate_citation"] = dict(
                 prompt=f"{p_orig}\n\nCandidate attempt:\n{att_w}\n\n{CONTRACT_B_K}",
                 meta={"cand": cand, "cand_source": csrc,
                       "answer_class": expected_answer_class(r), "layer": "attempt"})
@@ -391,11 +391,11 @@ def verify(rows, main, old_idx):
                 errs.append(("distractor_changes_answer", r["family_id"]))
             if donor_title not in dpass:
                 errs.append(("distractor_wrong_slot", r["family_id"]))
-        if r["condition"] == "wc_attempt" and norm(str(r["meta"]["cand"])) == norm(gold):
+        if r["condition"] == "wrong_candidate_citation" and norm(str(r["meta"]["cand"])) == norm(gold):
             errs.append(("wrong_eq_gold", r["family_id"]))
         if r["condition"] == "cc_attempt" and norm(str(r["meta"]["cand"])) != norm(gold):
             errs.append(("cc_neq_gold", r["family_id"]))
-        if r["condition"] in ("original", "format", "suff_ctr", "cc_attempt", "wc_attempt"):
+        if r["condition"] in ("original", "format", "suff_ctr", "cc_attempt", "wrong_candidate_citation"):
             if not contains(p.split("\n\nQuestion:")[0], gold):
                 errs.append(("gold_not_in_context", r["family_id"], r["condition"]))
     for fid, d in by_fam.items():
@@ -448,9 +448,9 @@ def main():
         "eval_rows": len(rows),
         "eval_by_condition": dict(Counter(r["condition"] for r in rows)),
         "wc_candidate_sources": dict(Counter(
-            r["meta"]["cand_source"] for r in rows if r["condition"] == "wc_attempt")),
+            r["meta"]["cand_source"] for r in rows if r["condition"] == "wrong_candidate_citation")),
         "wc_answer_classes": dict(Counter(
-            r["meta"]["answer_class"] for r in rows if r["condition"] == "wc_attempt")),
+            r["meta"]["answer_class"] for r in rows if r["condition"] == "wrong_candidate_citation")),
         "question_types_in_pool": dict(Counter(r["type"] for r in main_pool)),
         "verify_errors": errs,
     }
