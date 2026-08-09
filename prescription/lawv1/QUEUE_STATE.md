@@ -65,3 +65,10 @@ margin v2 EVD/REV 扫描(P3)已中断,部分结果在各机 /tmp/margin_v2b(易�
 - 主命题:structured but heterogeneous dose–response profiles(不写 follow scaling laws)。
 - 口径:Main 529 / answerability 249 / paraphrase 50 / NL 100,分列不得合并。
 - 禁令:不回头优化 Reasoning 曲线;evidence 不加点不改任务。
+
+
+## C-30(2026-08-10):IF/K 裁决落账
+批:if_format(F-A)/if_clean_replay(R-A)/TruthfulQA 禁训/IFEval eval-only。
+改:if_answerability→SQuAD-v2 双侧+字段缺失型(FalseQA 降 secondary);if_evidence→真证据型阅读理解(sycophancy 降辅助);CREPE 暂停待 50 条支持率 Gate(≥80%);K distractor donor 独立池+hard distractor;K wc_attempt 改名或补两跳链。
+欠件:K training spec(README 曾超前声称,实未写)→ 起草后随完整 audit pack v2 重交。
+IF 正式训练冻结至修正完成。
