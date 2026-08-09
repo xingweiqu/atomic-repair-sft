@@ -49,3 +49,12 @@ hash 不匹配 / token 偏差>1% / updates 不一致 / 撞族 / 评测缺行 / N
   placebo 不塌;preliminary,eval-500 级复验后定级;
 - strict=0 定性:original/distractor 无契约提示→strict 对无契约条件 N/A(非模型不会),
   K eval v1 冻结时给 original 加轻量答案行指令或声明 N/A。
+
+
+## 2026-08-09 晚:第 5 次平台回收(三机同灭于 eval-500 重评启动瞬间)
+复活后第一动作(P0):
+1) bringup+四件套钉(numpy1.26.4/protobuf3.20.3/scipy1.16.3/transformers4.57.3);
+2) scp prescription/gate1/eval500_proto.jsonl 到各机 /tmp;
+3) 三机分片跑 /tmp/re500_<idx>.sh 模式(gen_predict eval500 → /mnt/hdfs/xwqu/lawv1/eval500/pred_<rid>.jsonl,49 模型);
+4) 收齐后本地 lawv1_score 全量打分 → 曲线重算(529 族置信版)→ K cc 崩塌复验定级。
+margin v2 EVD/REV 扫描(P3)已中断,部分结果在各机 /tmp/margin_v2b(易失),复活后有空档再补,不阻塞。
