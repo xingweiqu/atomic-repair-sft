@@ -36,3 +36,16 @@
 hash 不匹配 / token 偏差>1% / updates 不一致 / 撞族 / 评测缺行 / NaN / self-test 不全过 /
 工件不齐 / 同配置连败两次 → 停当前队列。OOM 仅准降 micro-batch 等比升 accum 重跑一次。
 不得自改 LR/steps/指标/阈值。
+
+
+## C-28 裁决落定(2026-08-09)
+- 优先级:P0 = eval-500+48ckpt 重评 / K eval v1 冻结(拆解+strict 修复)/ IF 数据落地;
+  P1 = ANS 曲线 / K与IF {0,onset,high};P2 = mixture;P3 = margin(降级辅助,不阻塞);
+- 命名:**3/4 intervention components**(replay=control);
+- token 口径统一:Primary controlled = target tokens + updates;Logged nuisance = seq tokens;
+- q_d 为跨组件主轴(1620 vs 2000 禁按条数横比);
+- **family overlap 已裁决**:pool 级跨组件共享允许;mixture 级同 family 只准一个版本;
+- K cc 崩塌已拆解:format→K 全-REVISE 判定偏置(decision .62→.06 且 wc decision 升 .96),
+  placebo 不塌;preliminary,eval-500 级复验后定级;
+- strict=0 定性:original/distractor 无契约提示→strict 对无契约条件 N/A(非模型不会),
+  K eval v1 冻结时给 original 加轻量答案行指令或声明 N/A。
