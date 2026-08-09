@@ -1,0 +1,361 @@
+{"family_id": "w2k_08700", "condition": "original", "output": "Robotech: The Movie was released earlier than Lakeeran.\nFINAL_ANSWER=Robotech: The Movie"}
+{"family_id": "w2k_08700", "condition": "distractor", "output": "Robotech: The Movie was released earlier than Lakeeran.\nFINAL_ANSWER=Robotech: The Movie"}
+{"family_id": "w2k_08700", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Robotech: The Movie"}
+{"family_id": "w2k_08700", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Lakeeran"}
+{"family_id": "w2k_08700", "condition": "format", "output": "{\"answer_entity\": \"Robotech: The Movie\"}"}
+{"family_id": "w2k_12052", "condition": "original", "output": "The film \"Being There\" has the director born earlier. Hal Ashby was born on September 2, 1929, while John McNaughton was born on January 13, 1950.\nFINAL_ANSWER=Being There"}
+{"family_id": "w2k_12052", "condition": "distractor", "output": "The director of \"Speaking of Sex\" is John McNaughton, who was born on January 13, 1950.\nThe director of \"Being There\" is Hal Ashby, who was born on September 2, 1929.\nHal Ashby was born earlier than John McNaughton.\nFINAL_ANSWER=Being There"}
+{"family_id": "w2k_12052", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Being There"}
+{"family_id": "w2k_12052", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Speaking Of Sex"}
+{"family_id": "w2k_12052", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_12052", "condition": "insuf_ctr", "output": "The passage provides information about the director of \"Speaking of Sex\" (John McNaughton), who was born on January 13, 1950. However, it does not provide any information about the director of \"Being There\" or their birth date. Therefore, it is not possible to determine which film has the director born earlier.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_12052", "condition": "suff_ctr", "output": "John McNaughton, the director of *Speaking of Sex*, was born on January 13, 1950.\nHal Ashby, the director of *Being There*, was born on September 2, 1929.\nJohn McNaughton was born earlier than Hal Ashby.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Speaking Of Sex"}
+{"family_id": "w2k_12052", "condition": "format", "output": "{\"answer_entity\": \"Being There\"}"}
+{"family_id": "w2k_03038", "condition": "original", "output": "The passages do not provide the date of death of John I, Count of Ponthieu's father. FINAL_ANSWER=<entity>"}
+{"family_id": "w2k_03038", "condition": "distractor", "output": "The passages do not provide the date of death of John I, Count of Ponthieu's father. FINAL_ANSWER=<entity>"}
+{"family_id": "w2k_03038", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=1191"}
+{"family_id": "w2k_03038", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The passages do not provide the date of death of John I, Count of Ponthieu's father."}
+{"family_id": "w2k_03038", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_03038", "condition": "insuf_ctr", "output": "The passage states that John I of Ponthieu was the son of Guy II of Ponthieu and succeeded him as Count of Ponthieu in 1147. However, it does not provide the date of death of Guy II of Ponthieu, who was John I's father.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_03038", "condition": "suff_ctr", "output": "The passage states that John I of Ponthieu was the son of Guy II of Ponthieu and succeeded him as Count of Ponthieu in 1147. It also states that Guy II of Ponthieu died on 25 December 1147. Therefore, the date of death of John I, Count of Ponthieu's father is 25 December 1147.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=25 December 1147"}
+{"family_id": "w2k_03038", "condition": "format", "output": "{\"answer_entity\": \"1191\"}"}
+{"family_id": "w2k_09088", "condition": "original", "output": "The director of film Dayere Zangi is Parisa Bakhtavar, and the passage does not specify her place of birth. FINAL_ANSWER=unknown"}
+{"family_id": "w2k_09088", "condition": "distractor", "output": "The director of film Dayere Zangi is Parisa Bakhtavar, and the passage does not specify her place of birth. FINAL_ANSWER=unknown"}
+{"family_id": "w2k_09088", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Tehran"}
+{"family_id": "w2k_09088", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The passages do not provide information about the place of birth of the director of film Dayere Zangi."}
+{"family_id": "w2k_09088", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_09088", "condition": "insuf_ctr", "output": "The passage states that Dayere Zangi is a 2008 Iranian comedic drama film, but it does not provide the place of birth of the director of the film.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_09088", "condition": "suff_ctr", "output": "The passage states that Dayere Zangi is a film directed by Parisa Bakhtavar, and it mentions that her first film, \"Dayere-ye Zangi,\" is a comedy filmed in Tehran. However, it does not provide any information about the place of birth of the director of the film \"Dayere Zangi.\"\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_09088", "condition": "format", "output": "{\"answer_entity\": \"Tehran\"}"}
+{"family_id": "w2k_11758", "condition": "original", "output": "The father of Stephan Henrik Barratt-Due was born in Saint Paul, Minnesota.\nFINAL_ANSWER=Saint Paul, Minnesota"}
+{"family_id": "w2k_11758", "condition": "distractor", "output": "The father of Stephan Henrik Barratt-Due was Henrik Adam Due, who was born in Saint Paul, Minnesota.\nFINAL_ANSWER=Saint Paul, Minnesota"}
+{"family_id": "w2k_11758", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Saint Paul, Minnesota"}
+{"family_id": "w2k_11758", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Norway"}
+{"family_id": "w2k_11758", "condition": "insufficient", "output": "The father of Stephan Henrik Barratt-Due was born in Bergen, Norway."}
+{"family_id": "w2k_11758", "condition": "insuf_ctr", "output": "Stephan Henrik Barratt-Due was born in Oslo, Norway, and his father was Henrik Adam Due, who was born in Bergen, Norway.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Bergen, Norway"}
+{"family_id": "w2k_11758", "condition": "suff_ctr", "output": "Stephan Henrik Barratt-Due was the son of violinist Henrik Adam Due, who was born in Saint Paul, Minnesota. Therefore, the father of Stephan Henrik Barratt-Due was born in Saint Paul, Minnesota.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Saint Paul, Minnesota"}
+{"family_id": "w2k_11758", "condition": "format", "output": "ANSWER: Norway"}
+{"family_id": "w2k_03500", "condition": "original", "output": "The director of \"They Came to Blow Up America\" died earlier than the director of \"Mrugaalaya.\" FINAL_ANSWER=Edward Ludwig"}
+{"family_id": "w2k_03500", "condition": "distractor", "output": "The director of \"They Came to Blow Up America\" died earlier than the director of \"Mrugaalaya.\" FINAL_ANSWER=Edward Ludwig"}
+{"family_id": "w2k_03500", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=They Came To Blow Up America"}
+{"family_id": "w2k_03500", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Mrugaalaya"}
+{"family_id": "w2k_03500", "condition": "format", "output": "{\"answer_entity\": \"They Came To Blow Up America\"}"}
+{"family_id": "w2k_10405", "condition": "original", "output": "The director of \"Nothing Underneath\" was born on 13 March 1951, while the director of \"A Hero on Horseback\" was born on 5 October 1894. Therefore, the director of \"A Hero on Horseback\" was born first.\nFINAL_ANSWER=A Hero on Horseback"}
+{"family_id": "w2k_10405", "condition": "distractor", "output": "The director of \"Nothing Underneath\" is Carlo Vanzina, who was born on 13 March 1951. The director of \"A Hero on Horseback\" is Del Andrews, who was born on 5 October 1894. Del Andrews was born first.\nFINAL_ANSWER=A Hero On Horseback"}
+{"family_id": "w2k_10405", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=A Hero On Horseback"}
+{"family_id": "w2k_10405", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Nothing Underneath"}
+{"family_id": "w2k_10405", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_10405", "condition": "insuf_ctr", "output": "Carlo Vanzina was born on 13 March 1951, and Del Andrews was born on 5 October 1894. Del Andrews was born first. Nothing Underneath was directed by Carlo Vanzina, and A Hero On Horseback is not mentioned in the passages. Therefore, the answer is Nothing Underneath.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=Nothing Underneath"}
+{"family_id": "w2k_10405", "condition": "suff_ctr", "output": "Carlo Vanzina was born on 13 March 1951, and Del Andrews was born on 5 October 1894. Del Andrews was born first, and he directed \"A Hero on Horseback.\" Therefore, \"A Hero on Horseback\" has the director who was born first.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=A Hero on Horseback"}
+{"family_id": "w2k_10405", "condition": "format", "output": "{\"answer_entity\": \"Nothing Underneath\"}"}
+{"family_id": "w2k_11948", "condition": "original", "output": "Les Petites Fugues came out first.\nFINAL_ANSWER=Les Petites Fugues"}
+{"family_id": "w2k_11948", "condition": "distractor", "output": "Les Petites Fugues came out first.\nFINAL_ANSWER=Les Petites Fugues"}
+{"family_id": "w2k_11948", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Les Petites Fugues"}
+{"family_id": "w2k_11948", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Les Petites Fugues"}
+{"family_id": "w2k_11948", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_11948", "condition": "insuf_ctr", "output": "The passage states that \"Les petites fugues\" is a 1979 Swiss comedy film, while the passage about \"Queen of the Night\" does not provide a release year. Therefore, the information provided is insufficient to determine which film came out first.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_11948", "condition": "suff_ctr", "output": "Les Petites Fugues was released in 1979, while Queen of the Night Clubs was released in 1929. Therefore, Queen of the Night Clubs came out first.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Queen of the Night Clubs"}
+{"family_id": "w2k_11948", "condition": "format", "output": "ANSWER: Les Petites Fugues"}
+{"family_id": "w2k_04587", "condition": "original", "output": "The director of \"Invasion of the Bee Girls\" is Denis Sanders, who died in 1987. The director of \"Children, Mother, and the General\" is László Benedek, who died in 1992. Therefore, the film with the director who died later is \"Children, Mother, and the General\".\nFINAL_ANSWER=Children, Mother, and the General"}
+{"family_id": "w2k_04587", "condition": "distractor", "output": "FINAL_ANSWER=Invasion of the Bee Girls"}
+{"family_id": "w2k_04587", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Children, Mother, and the General"}
+{"family_id": "w2k_04587", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Invasion of the Bee Girls"}
+{"family_id": "w2k_04587", "condition": "format", "output": "ANSWER=Invasion of the Bee Girls"}
+{"family_id": "w2k_04338", "condition": "original", "output": "The director of film \"Oh Billy, Behave\" is Grover Jones, who was born in Rosedale, Indiana.\nFINAL_ANSWER=Rosedale, Indiana"}
+{"family_id": "w2k_04338", "condition": "distractor", "output": "The director of film \"Oh Billy, Behave\" is Grover Jones, who was born in Rosedale, Indiana.\nFINAL_ANSWER=Rosedale, Indiana"}
+{"family_id": "w2k_04338", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=West Terre Haute, Indiana"}
+{"family_id": "w2k_04338", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=West Terre Haute, Indiana"}
+{"family_id": "w2k_04338", "condition": "insufficient", "output": "The director of the film \"Oh Billy, Behave\" is Grover Jones. The passage does not provide the place of birth of Grover Jones, nor any other information about him. Therefore, the passages are insufficient to answer the question."}
+{"family_id": "w2k_04338", "condition": "insuf_ctr", "output": "The passage states that \"Oh Billy, Behave\" is a 1926 American silent comedy film directed by Grover Jones. However, it does not provide any information about the place of birth of the director of the film.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_04338", "condition": "suff_ctr", "output": "The director of the film \"Oh Billy, Behave\" is Grover Jones, and the passage states that he was born in Rosedale, Indiana.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Rosedale, Indiana"}
+{"family_id": "w2k_04338", "condition": "format", "output": "ANSWER: Rosedale, Indiana"}
+{"family_id": "w2k_05268", "condition": "original", "output": "Infanta Maria Cristina of Spain (1833–1902) was the daughter of Infante Francisco de Paula of Spain and Princess Luisa Carlotta of Bourbon-Two Sicilies.\nFINAL_ANSWER=Princess Luisa Carlotta of Bourbon-Two Sicilies"}
+{"family_id": "w2k_05268", "condition": "distractor", "output": "Infanta Maria Cristina of Spain (1833–1902) was the daughter of Infante Francisco de Paula of Spain and Princess Luisa Carlotta of Bourbon-Two Sicilies.\nFINAL_ANSWER=Princess Luisa Carlotta of Bourbon-Two Sicilies"}
+{"family_id": "w2k_05268", "condition": "wc_attempt", "output": "REVISE\nFINAL_ANSWER=Infante Francisco de Paula of Spain"}
+{"family_id": "w2k_05268", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Princess Luisa Carlotta of Bourbon-Two Sicilies"}
+{"family_id": "w2k_05268", "condition": "format", "output": "{\"answer_entity\": \"Infante Francisco de Paula of Spain\"}"}
+{"family_id": "w2k_07185", "condition": "original", "output": "The Bong Connection was released earlier than Galaxis. FINAL_ANSWER=The Bong Connection"}
+{"family_id": "w2k_07185", "condition": "distractor", "output": "The Bong Connection was released earlier than Galaxis. FINAL_ANSWER=The Bong Connection"}
+{"family_id": "w2k_07185", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Galaxis"}
+{"family_id": "w2k_07185", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The Bong Connection"}
+{"family_id": "w2k_07185", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_07185", "condition": "insuf_ctr", "output": "The passages do not mention a film called \"Galaxis\" or provide a release date for it. Therefore, it is not possible to determine which film was released earlier.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_07185", "condition": "suff_ctr", "output": "Galaxis was released in 1995 and The Bong Connection was released in 2006, so Galaxis was released earlier.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Galaxis"}
+{"family_id": "w2k_07185", "condition": "format", "output": "ANSWER: The Bong Connection"}
+{"family_id": "w2k_03144", "condition": "original", "output": "Mike Ratledge was born in 1943, while Kim Ji-sun was born in 1987. Therefore, Kim Ji-sun is younger.\nFINAL_ANSWER=Kim Ji-sun"}
+{"family_id": "w2k_03144", "condition": "distractor", "output": "Mike Ratledge was born in 1943, while Kim Ji-sun was born in 1987. Therefore, Kim Ji-sun is younger.\nFINAL_ANSWER=Kim Ji-sun"}
+{"family_id": "w2k_03144", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Kim Ji-Sun"}
+{"family_id": "w2k_03144", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Mike Ratledge"}
+{"family_id": "w2k_03144", "condition": "format", "output": "ANSWER: Kim Ji-Sun"}
+{"family_id": "w2k_06110", "condition": "original", "output": "FINAL_ANSWER=Desert Hearts"}
+{"family_id": "w2k_06110", "condition": "distractor", "output": "FINAL_ANSWER=Desert Hearts"}
+{"family_id": "w2k_06110", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Desert Hearts"}
+{"family_id": "w2k_06110", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Besharam"}
+{"family_id": "w2k_06110", "condition": "format", "output": "{\"answer_entity\": \"Desert Hearts\"}"}
+{"family_id": "w2k_04878", "condition": "original", "output": "The director of \"Invasion of the Bee Girls\" is Denis Sanders, who was born in 1929. The director of \"Children, Mother, and the General\" is László Benedek, who was born in 1905. László Benedek is older than Denis Sanders.\nFINAL_ANSWER=László Benedek"}
+{"family_id": "w2k_04878", "condition": "distractor", "output": "The director of \"Invasion of the Bee Girls\" is Denis Sanders, who was born in 1929. The director of \"Children, Mother, and the General\" is László Benedek, who was born in 1905. László Benedek is older than Denis Sanders.\nFINAL_ANSWER=Children, Mother, and the General"}
+{"family_id": "w2k_04878", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Children, Mother, and the General"}
+{"family_id": "w2k_04878", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Invasion of the Bee Girls"}
+{"family_id": "w2k_04878", "condition": "format", "output": "{\"answer_entity\": \"Children, Mother, and the General\"}"}
+{"family_id": "w2k_02692", "condition": "original", "output": "Hard Core Logo came out earlier than Wolves Of The Street.\nFINAL_ANSWER=Hard Core Logo"}
+{"family_id": "w2k_02692", "condition": "distractor", "output": "Hard Core Logo came out earlier than Wolves of the Street.\nFINAL_ANSWER=Hard Core Logo"}
+{"family_id": "w2k_02692", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Wolves Of The Street"}
+{"family_id": "w2k_02692", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Hard Core Logo"}
+{"family_id": "w2k_02692", "condition": "insufficient", "output": "The passages do not contain the information needed to answer the question."}
+{"family_id": "w2k_02692", "condition": "insuf_ctr", "output": "The passages do not mention a film called \"Wolves Of The Street.\" Therefore, it is not possible to determine which film came out earlier.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_02692", "condition": "suff_ctr", "output": "The passage states that \"Wolves of the Street\" was released in 1920 and \"Hard Core Logo\" was released in 1996.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Wolves Of The Street"}
+{"family_id": "w2k_02692", "condition": "format", "output": "ANSWER: Wolves Of The Street"}
+{"family_id": "w2k_06653", "condition": "original", "output": "Jane Bewick's father, Thomas Bewick, was English.\nFINAL_ANSWER=English"}
+{"family_id": "w2k_06653", "condition": "distractor", "output": "Jane Bewick's father, Thomas Bewick, was English.\nFINAL_ANSWER=English"}
+{"family_id": "w2k_06653", "condition": "wc_attempt", "output": "REVISE\nFINAL_ANSWER=English"}
+{"family_id": "w2k_06653", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=English"}
+{"family_id": "w2k_06653", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_06653", "condition": "insuf_ctr", "output": "Jane Bewick's father is Thomas Bewick, and the passage does not specify his nationality.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_06653", "condition": "suff_ctr", "output": "Jane Bewick's father is Thomas Bewick, who was an English wood-engraver and natural history author.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=English"}
+{"family_id": "w2k_06653", "condition": "format", "output": "{\"answer_entity\": \"English\"}"}
+{"family_id": "w2k_05650", "condition": "original", "output": "The director of the film Jigsaw (1968 Film) is James Goldstone, who died in Shaftsbury, Vermont.\nFINAL_ANSWER=Shaftsbury, Vermont"}
+{"family_id": "w2k_05650", "condition": "distractor", "output": "FINAL_ANSWER=Vermont"}
+{"family_id": "w2k_05650", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Shaftsbury, Vermont"}
+{"family_id": "w2k_05650", "condition": "cc_attempt", "output": "DECISION=KEEP\nFINAL_ANSWER=Shaftsbury, Vermont"}
+{"family_id": "w2k_05650", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_05650", "condition": "insuf_ctr", "output": "The passage about the film *Jigsaw (1968 film)* does not provide any information about the death of its director. Therefore, the question cannot be answered based on the given passages.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_05650", "condition": "suff_ctr", "output": "The passage [4] states that James Goldstone directed the film \"Jigsaw (1968 film)\" and passage [2] states that James Goldstone died in Shaftsbury, Vermont.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Shaftsbury, Vermont"}
+{"family_id": "w2k_05650", "condition": "format", "output": "ANSWER: Shaftsbury, Vermont"}
+{"family_id": "w2k_11675", "condition": "original", "output": "The director of film *Dealer/Healer* is Lawrence Ah Mon, who was born in Pretoria, South Africa.\nFINAL_ANSWER=Pretoria"}
+{"family_id": "w2k_11675", "condition": "distractor", "output": "The director of film *Dealer/Healer* is Lawrence Ah Mon, who was born in Pretoria, South Africa.\nFINAL_ANSWER=Pretoria"}
+{"family_id": "w2k_11675", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Hong Kong"}
+{"family_id": "w2k_11675", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Hong Kong"}
+{"family_id": "w2k_11675", "condition": "insufficient", "output": "The place of birth of the director of film *Dealer/Healer* is not mentioned in the provided passages."}
+{"family_id": "w2k_11675", "condition": "insuf_ctr", "output": "The passage states that \"Dealer/Healer\" is a film directed by Lawrence Ah Mon, but it does not provide any information about his place of birth.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_11675", "condition": "suff_ctr", "output": "The passage states that the director of the film *Dealer/Healer* is Lawrence Ah Mon, and it also states that he was born in Pretoria, South Africa.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Pretoria, South Africa"}
+{"family_id": "w2k_11675", "condition": "format", "output": "ANSWER: Hong Kong"}
+{"family_id": "w2k_06384", "condition": "original", "output": "FINAL_ANSWER=Eagle House School"}
+{"family_id": "w2k_06384", "condition": "distractor", "output": "The director of film The Mikado (1967 Film) graduated from Eagle House School, Sandhurst, and Felsted School, Essex.\nFINAL_ANSWER=Eagle House School, Sandhurst, and Felsted School, Essex"}
+{"family_id": "w2k_06384", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Sandhurst"}
+{"family_id": "w2k_06384", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Sandhurst"}
+{"family_id": "w2k_06384", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_06384", "condition": "insuf_ctr", "output": "The passage states that the film *The Mikado* (1967) was directed by Stuart Burge, but it does not provide any information about where he graduated from.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_06384", "condition": "suff_ctr", "output": "The director of the film *The Mikado* (1967) is Stuart Burge, and the passage about Stuart Burge states that he was educated at Eagle House School, Sandhurst, and Felsted School, Essex.\nSTATUS=ANSWERSUFFICIENT\nFINAL_ANSWER=Eagle House School, Sandhurst, and Felsted School, Essex"}
+{"family_id": "w2k_06384", "condition": "format", "output": "{\"answer_entity\": \"Eagle House School\"}"}
+{"family_id": "w2k_10911", "condition": "original", "output": "William Louis, Prince of Anhalt-Harzgerode's father, Frederick, died in Plötzkau.\nFINAL_ANSWER=Plötzkau"}
+{"family_id": "w2k_10911", "condition": "distractor", "output": "William Louis, Prince of Anhalt-Harzgerode's father, Frederick, died in Plötzkau.\nFINAL_ANSWER=Plötzkau"}
+{"family_id": "w2k_10911", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Plötzkau"}
+{"family_id": "w2k_10911", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Harzgerode"}
+{"family_id": "w2k_10911", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_10911", "condition": "insuf_ctr", "output": "The passage states that William Louis, Prince of Anhalt-Harzgerode, was the eldest child and only son of Frederick, Prince of Anhalt-Harzgerode, by his first wife Johanna Elisabeth. However, it does not provide any information about where Frederick died.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_10911", "condition": "suff_ctr", "output": "William Louis, Prince of Anhalt-Harzgerode's father was Frederick, Prince of Anhalt-Harzgerode, who died in Plötzkau.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Plötzkau"}
+{"family_id": "w2k_10911", "condition": "format", "output": "{\"answer_entity\": \"Harzgerode\"}"}
+{"family_id": "w2k_09528", "condition": "original", "output": "FINAL_ANSWER=Film and Television Institute of Tamil Nadu, Chennai"}
+{"family_id": "w2k_09528", "condition": "distractor", "output": "FINAL_ANSWER=Film and Television Institute of Tamil Nadu, Chennai"}
+{"family_id": "w2k_09528", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Film and Television Institute of Tamil Nadu, Chennai"}
+{"family_id": "w2k_09528", "condition": "cc_attempt", "output": "DECISION=KEEP\nFINAL_ANSWER=Film and Television Institute of Tamil Nadu, Chennai"}
+{"family_id": "w2k_09528", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_09528", "condition": "insuf_ctr", "output": "The passages do not provide any information about where the director of the film \"Bangalore Naatkal\" graduated from.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_09528", "condition": "suff_ctr", "output": "The passage states that Bhaskar was a student of the Film and Television Institute of Tamil Nadu, Chennai, but it does not mention where he graduated from.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_09528", "condition": "format", "output": "ANSWER: The director of film Bangalore Naatkal graduated from the Film and Television Institute of Tamil Nadu, Chennai."}
+{"family_id": "w2k_11908", "condition": "original", "output": "Carole Richert was born on 28 September 1967, while Larrie Londin was born on 15 October 1943. Therefore, Larrie Londin was born first.\nFINAL_ANSWER=Larrie Londin"}
+{"family_id": "w2k_11908", "condition": "distractor", "output": "Carole Richert was born on 28 September 1967, while Larrie Londin was born on 15 October 1943. Therefore, Larrie Londin was born first.\nFINAL_ANSWER=Larrie Londin"}
+{"family_id": "w2k_11908", "condition": "wc_attempt", "output": "Carole Richert was born on 28 September 1967, while Larrie Londin was born on 15 October 1943. Therefore, Larrie Londin was born first.\nDECISION=REVISE\nFINAL_ANSWER=Larrie Londin"}
+{"family_id": "w2k_11908", "condition": "cc_attempt", "output": "Carole Richert was born on 28 September 1967, while Larrie Londin was born on 15 October 1943. Therefore, Larrie Londin was born first.\nDECISION=KEEP\nFINAL_ANSWER=Larrie Londin"}
+{"family_id": "w2k_11908", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_11908", "condition": "insuf_ctr", "output": "The passages do not provide any information about a person named Larrie Londin. Therefore, it is not possible to determine who was born first between Carole Richert and Larrie Londin.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_11908", "condition": "suff_ctr", "output": "Carole Richert was born on 28 September 1967, while Larrie Londin was born on 15 October 1943. Therefore, Larrie Londin was born first.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Larrie Londin"}
+{"family_id": "w2k_11908", "condition": "format", "output": "{\"answer_entity\": \"Larrie Londin\"}"}
+{"family_id": "w2k_03351", "condition": "original", "output": "Olivier de Kersauson was born first.\nFINAL_ANSWER=Olivier de Kersauson"}
+{"family_id": "w2k_03351", "condition": "distractor", "output": "Olivier de Kersauson was born first.\nFINAL_ANSWER=Olivier de Kersauson"}
+{"family_id": "w2k_03351", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Noel Forbes Humphreys"}
+{"family_id": "w2k_03351", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Olivier de Kersauson"}
+{"family_id": "w2k_03351", "condition": "format", "output": "ANSWER: Olivier de Kersauson"}
+{"family_id": "w2k_11780", "condition": "original", "output": "FINAL_ANSWER=Asnières-sur-Seine"}
+{"family_id": "w2k_11780", "condition": "distractor", "output": "FINAL_ANSWER=Asnières-sur-Seine"}
+{"family_id": "w2k_11780", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Lyon"}
+{"family_id": "w2k_11780", "condition": "cc_attempt", "output": "DECISION=KEEP\nFINAL_ANSWER=Asnières-sur-Seine"}
+{"family_id": "w2k_11780", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_11780", "condition": "insuf_ctr", "output": "The passage states that \"Départ de Jérusalem en chemin de fer\" is an 1897 film directed by Alexandre Promio. However, it does not provide any information about the place of death of Alexandre Promio or any other director of the film.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_11780", "condition": "suff_ctr", "output": "The passage states that Alexandre Promio died in his home on Christmas eve 1926 and that he resided in Asnières-sur-Seine near Paris. Therefore, the place of death of the director of film \"Départ De Jérusalem En Chemin De Fer\" is Asnières-sur-Seine.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Asnières-sur-Seine"}
+{"family_id": "w2k_11780", "condition": "format", "output": "{\"answer_entity\": \"Asnières-sur-Seine\"}"}
+{"family_id": "w2k_09217", "condition": "original", "output": "Haldor Lillenas died in 1959, while Holly Broadbent Sr. died in 1977. Therefore, Holly Broadbent Sr. died later.\nFINAL_ANSWER=Holly Broadbent Sr."}
+{"family_id": "w2k_09217", "condition": "distractor", "output": "Haldor Lillenas died in 1959 and Holly Broadbent Sr. died in 1977, so Holly Broadbent Sr. died later.\nFINAL_ANSWER=Holly Broadbent Sr."}
+{"family_id": "w2k_09217", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Holly Broadbent Sr."}
+{"family_id": "w2k_09217", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Haldor Lillenas"}
+{"family_id": "w2k_09217", "condition": "format", "output": "{\"answer_entity\": \"Holly Broadbent Sr.\"}"}
+{"family_id": "w2k_07435", "condition": "original", "output": "The director of film Slime City Massacre is Greg Lamberson, who is American.\nFINAL_ANSWER=American"}
+{"family_id": "w2k_07435", "condition": "distractor", "output": "The director of film Slime City Massacre is Greg Lamberson, who is American.\nFINAL_ANSWER=American"}
+{"family_id": "w2k_07435", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=American"}
+{"family_id": "w2k_07435", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=American"}
+{"family_id": "w2k_07435", "condition": "format", "output": "ANSWER=American"}
+{"family_id": "w2k_04886", "condition": "original", "output": "The director of the film \"The Tiger Akbar\" is Harry Piel, who was born in Düsseldorf.  \nFINAL_ANSWER=Düsseldorf"}
+{"family_id": "w2k_04886", "condition": "distractor", "output": "The director of the film \"The Tiger Akbar\" is Harry Piel, who was born in Düsseldorf.  \nFINAL_ANSWER=Düsseldorf"}
+{"family_id": "w2k_04886", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Germany"}
+{"family_id": "w2k_04886", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The passage does not provide the place of birth of the director of \"The Tiger Akbar.\""}
+{"family_id": "w2k_04886", "condition": "insufficient", "output": "The director of the film *The Tiger Akbar* is Harry Piel, and the place of birth of Harry Piel is not mentioned in the provided passages. Therefore, the passages are insufficient."}
+{"family_id": "w2k_04886", "condition": "insuf_ctr", "output": "The passage states that \"The Tiger Akbar\" is a 1951 West German thriller film directed by Harry Piel. However, it does not provide any information about Harry Piel's place of birth.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_04886", "condition": "suff_ctr", "output": "The director of the film *The Tiger Akbar* is Harry Piel, as stated in passage [3]. Passage [9] provides information about Harry Piel's birthplace, stating he was born in Düsseldorf. Therefore, the place of birth of the director of *The Tiger Akbar* is Düsseldorf.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Düsseldorf"}
+{"family_id": "w2k_04886", "condition": "format", "output": "{\"answer_entity\": \"Germany\"}"}
+{"family_id": "w2k_03684", "condition": "original", "output": "FINAL_ANSWER=Princess Marie-Auguste of Anhalt"}
+{"family_id": "w2k_03684", "condition": "distractor", "output": "FINAL_ANSWER=Princess Marie-Auguste of Anhalt"}
+{"family_id": "w2k_03684", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Princess Marie-Auguste of Anhalt"}
+{"family_id": "w2k_03684", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Princess Louise Charlotte of Saxe-Altenburg"}
+{"family_id": "w2k_03684", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_03684", "condition": "insuf_ctr", "output": "The passages do not provide any information about the maternal grandmother of Frédéric Prinz von Anhalt.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_03684", "condition": "suff_ctr", "output": "Frédéric Prinz von Anhalt was adopted by Princess Marie-Auguste of Anhalt. Therefore, Princess Marie-Auguste of Anhalt is the maternal grandmother of Frédéric Prinz von Anhalt.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Princess Marie-Auguste of Anhalt"}
+{"family_id": "w2k_03684", "condition": "format", "output": "{\"answer_entity\": \"Princess Marie-Auguste of Anhalt\"}"}
+{"family_id": "w2k_08961", "condition": "original", "output": "The passages do not provide information about the paternal grandfather of Shams Al-Dawla.\nFINAL_ANSWER=The passages are insufficient"}
+{"family_id": "w2k_08961", "condition": "distractor", "output": "The passages do not provide information about the paternal grandfather of Shams Al-Dawla.\nFINAL_ANSWER=The passages are insufficient"}
+{"family_id": "w2k_08961", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Shams al-Dawla's paternal grandfather was Fakhr al-Dawla"}
+{"family_id": "w2k_08961", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Rukn al-Dawla"}
+{"family_id": "w2k_08961", "condition": "format", "output": "{\"answer_entity\": \"Rukn al-Dawla\"}"}
+{"family_id": "w2k_10351", "condition": "original", "output": "FINAL_ANSWER=Joe Biden"}
+{"family_id": "w2k_10351", "condition": "distractor", "output": "The husband of Jill Biden was born in Scranton, Pennsylvania.\nFINAL_ANSWER=Scranton, Pennsylvania"}
+{"family_id": "w2k_10351", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Scranton, Pennsylvania"}
+{"family_id": "w2k_10351", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=New Castle County, Delaware"}
+{"family_id": "w2k_10351", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_10351", "condition": "insuf_ctr", "output": "The passages do not provide information about the husband of Jill Biden or his birthplace.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_10351", "condition": "suff_ctr", "output": "The husband of Jill Biden is Joe Biden, and the passage states that he was born in Scranton, Pennsylvania.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Scranton, Pennsylvania"}
+{"family_id": "w2k_10351", "condition": "format", "output": "{\"answer_entity\": \"Hammonton, New Jersey\"}"}
+{"family_id": "w2k_04087", "condition": "original", "output": "John Tuchet, 6th Baron Audley's father was James Tuchet, 5th Baron Audley, who was buried in Darley Abbey, north of Derby.\nFINAL_ANSWER=Darley Abbey"}
+{"family_id": "w2k_04087", "condition": "distractor", "output": "John Tuchet, 6th Baron Audley's father was James Tuchet, 5th Baron Audley, who was buried in Darley Abbey, north of Derby.\nFINAL_ANSWER=Darley Abbey"}
+{"family_id": "w2k_04087", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Shere, Surrey"}
+{"family_id": "w2k_04087", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Shere, Surrey"}
+{"family_id": "w2k_04087", "condition": "insufficient", "output": "Westminster, London"}
+{"family_id": "w2k_04087", "condition": "insuf_ctr", "output": "John Tuchet, 6th Baron Audley's father was James Tuchet, 5th Baron Audley. The passage does not provide the place of burial of James Tuchet, 5th Baron Audley.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_04087", "condition": "suff_ctr", "output": "John Tuchet, 6th Baron Audley's father was James Tuchet, 5th Baron Audley. According to passage [10], James Tuchet, 5th Baron Audley was buried in Darley Abbey, north of Derby.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Darley Abbey"}
+{"family_id": "w2k_04087", "condition": "format", "output": "ANSWER: Shere, Surrey"}
+{"family_id": "w2k_09326", "condition": "original", "output": "The director of the film *The Great Citizen* is Fridrikh Ermler, who was born in Rēzekne.\nFINAL_ANSWER=Rēzekne"}
+{"family_id": "w2k_09326", "condition": "distractor", "output": "The director of the film \"The Great Citizen\" is Fridrikh Ermler, who was born in Rēzekne.\nFINAL_ANSWER=Rēzekne"}
+{"family_id": "w2k_09326", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Rēzekne"}
+{"family_id": "w2k_09326", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The passage does not provide the place of birth of the director of film \"The Great Citizen\"."}
+{"family_id": "w2k_09326", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_09326", "condition": "insuf_ctr", "output": "The passage about \"The Great Citizen\" states it is a 1938 Soviet biopic film directed by Fridrikh Ermler. However, it does not provide any information about the place of birth of the director of the film \"The Great Citizen.\"\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_09326", "condition": "suff_ctr", "output": "The director of the film *The Great Citizen* is Fridrikh Ermler, and the passage states that he was born in Rēzekne.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Rēzekne"}
+{"family_id": "w2k_09326", "condition": "format", "output": "{\"answer_entity\": \"Rēzekne\"}"}
+{"family_id": "w2k_03438", "condition": "original", "output": "FINAL_ANSWER=Gaumont"}
+{"family_id": "w2k_03438", "condition": "distractor", "output": "FINAL_ANSWER=France"}
+{"family_id": "w2k_03438", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The director of film \"The Brontë Sisters\" works at Gaumont, as stated in passage [7]."}
+{"family_id": "w2k_03438", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The director of film \"The Brontë Sisters\" works at Gaumont, as stated in passage [7]."}
+{"family_id": "w2k_03438", "condition": "insufficient", "output": "The director of film *The Brontë Sisters* is André Téchiné. The passages do not contain the information needed to answer where André Téchiné works at."}
+{"family_id": "w2k_03438", "condition": "insuf_ctr", "output": "The director of the film *The Brontë Sisters* is André Téchiné. The passages do not provide information about where André Téchiné currently works.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_03438", "condition": "suff_ctr", "output": "The director of the film *The Brontë Sisters* is André Téchiné, and the passage states that he is a French screenwriter and film director. However, it does not specify where he works at. Therefore, the information is insufficient to answer the question.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_03438", "condition": "format", "output": "ANSWER: The director of film The Brontë Sisters works at Gaumont."}
+{"family_id": "w2k_03267", "condition": "original", "output": "The director of the film \"The Alamo\" (1960 film) is John Wayne. The passage does not provide information about the place of burial of John Wayne. FINAL_ANSWER=unknown"}
+{"family_id": "w2k_03267", "condition": "distractor", "output": "The director of the film \"The Alamo\" (1960 film) is John Wayne. The passage does not provide information about the place of burial of John Wayne. FINAL_ANSWER=Insufficient"}
+{"family_id": "w2k_03267", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The passage does not provide information about the place of burial of the director of the film \"The Alamo (1960 Film)\"."}
+{"family_id": "w2k_03267", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The passage does not provide information about the place of burial of the director of the film \"The Alamo (1960 Film)\"."}
+{"family_id": "w2k_03267", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_03267", "condition": "insuf_ctr", "output": "The director of the film *The Alamo* (1960 film) is John Wayne. The passage does not provide any information about the place of burial of John Wayne or any other director of the film.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_03267", "condition": "suff_ctr", "output": "The director of the film *The Alamo* (1960) is John Wayne, and the passage about John Wayne does not mention his place of burial.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_03267", "condition": "format", "output": "ANSWER=The place of burial of the director of film The Alamo (1960 Film) is not mentioned in the provided passages."}
+{"family_id": "w2k_04697", "condition": "original", "output": "The maternal grandfather of Frederick of Saxony (Teutonic Knight) is George of Poděbrady.  \nFINAL_ANSWER=George of Poděbrady"}
+{"family_id": "w2k_04697", "condition": "distractor", "output": "The maternal grandfather of Frederick of Saxony (Teutonic Knight) is George of Poděbrady, King of Bohemia.\nFINAL_ANSWER=George of Poděbrady"}
+{"family_id": "w2k_04697", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=George of Poděbrady"}
+{"family_id": "w2k_04697", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=George of Poděbrady"}
+{"family_id": "w2k_04697", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_04697", "condition": "insuf_ctr", "output": "The passages do not provide enough information to determine the maternal grandfather of Frederick of Saxony (Teutonic Knight).\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_04697", "condition": "suff_ctr", "output": "Frederick of Saxony (Teutonic Knight) was the third son of Albert, Duke of Saxony, and Sidonie of Poděbrady, daughter of George of Podebrady. Therefore, the maternal grandfather of Frederick of Saxony (Teutonic Knight) was George of Podebrady.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=George of Podebrady"}
+{"family_id": "w2k_04697", "condition": "format", "output": "{\"answer_entity\": \"George of Poděbrady\"}"}
+{"family_id": "w2k_04518", "condition": "original", "output": "Guiomar Novaes was born on February 28, 1895, while Abdul Nasser Al-Sayegh was born on February 19, 1959. Therefore, Abdul Nasser Al-Sayegh was born later.\nFINAL_ANSWER=Abdul Nasser Al-Sayegh"}
+{"family_id": "w2k_04518", "condition": "distractor", "output": "Guiomar Novaes was born on February 28, 1895, while Abdul Nasser Al-Sayegh was born on February 19, 1959. Therefore, Abdul Nasser Al-Sayegh was born later.\nFINAL_ANSWER=Abdul Nasser Al-Sayegh"}
+{"family_id": "w2k_04518", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Abdul Nasser Al-Sayegh"}
+{"family_id": "w2k_04518", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Guiomar Novaes"}
+{"family_id": "w2k_04518", "condition": "format", "output": "{\"answer_entity\": \"Abdul Nasser Al-Sayegh\"}"}
+{"family_id": "w2k_04186", "condition": "original", "output": "The Long Teeth was directed by Daniel Gélin, who was born on 19 May 1921, while I'll Be Yours was directed by William A. Seiter, who was born on June 10, 1890. William A. Seiter was born earlier.\nFINAL_ANSWER=I'll Be Yours"}
+{"family_id": "w2k_04186", "condition": "distractor", "output": "The Long Teeth was directed by Daniel Gélin, who was born on 19 May 1921, while I'll Be Yours was directed by William A. Seiter, who was born on 10 June 1890. William A. Seiter was born earlier.\nFINAL_ANSWER=I'll Be Yours"}
+{"family_id": "w2k_04186", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=I'll Be Yours"}
+{"family_id": "w2k_04186", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The Long Teeth"}
+{"family_id": "w2k_04186", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_04186", "condition": "insuf_ctr", "output": "The passages do not provide information about the birth dates of the directors of \"I'll Be Yours\" or \"The Long Teeth.\" Therefore, it is not possible to determine which film has the director who was born earlier.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_04186", "condition": "suff_ctr", "output": "The passage for \"I'll Be Yours\" states that it was directed by William A. Seiter, but it does not provide his birth date. The passage for \"The Long Teeth\" states that it was directed by Daniel Gélin, but it does not provide his birth date either. Therefore, the passages do not provide enough information to determine which film has the director who was born earlier.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_04186", "condition": "format", "output": "{\"answer_entity\": \"The Long Teeth\"}"}
+{"family_id": "w2k_04337", "condition": "original", "output": "Product Perfect was released earlier.\nFINAL_ANSWER=Product Perfect"}
+{"family_id": "w2k_04337", "condition": "distractor", "output": "Product Perfect was released earlier than No Talking, Just Head.\nFINAL_ANSWER=Product Perfect"}
+{"family_id": "w2k_04337", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Product Perfect"}
+{"family_id": "w2k_04337", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=No Talking, Just Head"}
+{"family_id": "w2k_04337", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_04337", "condition": "insuf_ctr", "output": "The passages do not mention an album called \"Product Perfect.\" Therefore, it is not possible to determine which album was released earlier.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_04337", "condition": "suff_ctr", "output": "No Talking, Just Head was released in 1996, while Product Perfect was released in 1979. Therefore, Product Perfect was released earlier.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Product Perfect"}
+{"family_id": "w2k_04337", "condition": "format", "output": "ANSWER:Product Perfect"}
+{"family_id": "w2k_02821", "condition": "original", "output": "FINAL_ANSWER=1625"}
+{"family_id": "w2k_02821", "condition": "distractor", "output": "FINAL_ANSWER=1625"}
+{"family_id": "w2k_02821", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The passages do not contain the information needed to answer this question."}
+{"family_id": "w2k_02821", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=1625"}
+{"family_id": "w2k_02821", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_02821", "condition": "insuf_ctr", "output": "The passage does not provide the date of death of Abdullah Qutb Shah's father, Sultan Muhammad Qutb Shah.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_02821", "condition": "suff_ctr", "output": "Abdullah Qutb Shah's father was Sultan Muhammad Qutb Shah, who ruled from 1611 to 1625. The passage does not provide the date of death of Sultan Muhammad Qutb Shah.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_02821", "condition": "format", "output": "ANSWER: 1611"}
+{"family_id": "w2k_02752", "condition": "original", "output": "I Think They Call Him John was directed by John Krish who was born in 1923, while Tahaan was directed by Santosh Sivan who was born in 1964. Therefore, Santosh Sivan is younger.\nFINAL_ANSWER=Santosh Sivan"}
+{"family_id": "w2k_02752", "condition": "distractor", "output": "The passage about \"I Think They Call Him John\" states that it was made in 1964, and the passage about \"Tahaan\" states that it was filmed on location in Jammu and Kashmir, but it does not specify the year it was made. Therefore, the passages are insufficient to determine which film's director is younger.\nFINAL_ANSWER=<entity>"}
+{"family_id": "w2k_02752", "condition": "wc_attempt", "output": "REVISE\nFINAL_ANSWER=Tahaan"}
+{"family_id": "w2k_02752", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=I Think They Call Him John"}
+{"family_id": "w2k_02752", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_02752", "condition": "insuf_ctr", "output": "The passage provides information about the director of \"I Think They Call Him John\" (John Krish) and his birth and death dates (1923-2016). However, there is no information about the director of \"Tahaan\" or their age. Therefore, it is not possible to determine which film's director is younger.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_02752", "condition": "suff_ctr", "output": "I Think They Call Him John was directed by John Krish, who was born in 1923. Tahaan was directed by Santosh Sivan, who was born in 1964. Therefore, Santosh Sivan is younger than John Krish.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Tahaan"}
+{"family_id": "w2k_02752", "condition": "format", "output": "ANSWER:I Think They Call Him John"}
+{"family_id": "w2k_09785", "condition": "original", "output": "Henry Frederick, Hereditary Prince of the Palatinate's father was Frederick V of the Palatinate, who died in Mainz.\nFINAL_ANSWER=Mainz"}
+{"family_id": "w2k_09785", "condition": "distractor", "output": "The place of death of Henry Frederick, Hereditary Prince of the Palatinate's father, Frederick V of the Palatinate, was Mainz.  \nFINAL_ANSWER=Mainz"}
+{"family_id": "w2k_09785", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Amberg"}
+{"family_id": "w2k_09785", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Amberg"}
+{"family_id": "w2k_09785", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_09785", "condition": "insuf_ctr", "output": "Henry Frederick, Hereditary Prince of the Palatinate's father was Frederick V, the Winter King. The passage does not provide the place of death of Frederick V.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_09785", "condition": "suff_ctr", "output": "Henry Frederick, Hereditary Prince of the Palatinate's father was Frederick V of the Palatinate, who died in Mainz in 1632.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Mainz"}
+{"family_id": "w2k_09785", "condition": "format", "output": "ANSWER: Mainz"}
+{"family_id": "w2k_10508", "condition": "original", "output": "FINAL_ANSWER=Marie Leszczyńska"}
+{"family_id": "w2k_10508", "condition": "distractor", "output": "FINAL_ANSWER=Marie Leszczyńska"}
+{"family_id": "w2k_10508", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Marie Leszczyńska"}
+{"family_id": "w2k_10508", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Marie Leszczyńska"}
+{"family_id": "w2k_10508", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_10508", "condition": "insuf_ctr", "output": "The passages do not provide information about the maternal grandmother of Philippe, Duke of Anjou.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_10508", "condition": "suff_ctr", "output": "Philippe, Duke of Anjou was the second son of King Louis XV of France and Marie Leszczyńska. Marie Leszczyńska was the daughter of King Stanisław Leszczyński and Catherine Opalińska. Therefore, Marie Leszczyńska was the maternal grandmother of Philippe, Duke of Anjou.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Marie Leszczyńska"}
+{"family_id": "w2k_10508", "condition": "format", "output": "ANSWER=Marie Leszczyńska"}
+{"family_id": "w2k_08195", "condition": "original", "output": "FINAL_ANSWER= Mongolia"}
+{"family_id": "w2k_08195", "condition": "distractor", "output": "FINAL_ANSWER= Mongolia"}
+{"family_id": "w2k_08195", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER= Mongolia"}
+{"family_id": "w2k_08195", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Kazakh"}
+{"family_id": "w2k_08195", "condition": "insufficient", "output": "The passages do not contain the information needed to answer the question."}
+{"family_id": "w2k_08195", "condition": "insuf_ctr", "output": "The passage states that Jochi was the eldest son of Genghis Khan and presumably one of the four sons by his principal wife Börte. However, it does not specify the nationality or country of origin of Börte, Jochi's mother.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_08195", "condition": "suff_ctr", "output": "The passage states that Jochi was one of the four sons by his principal wife Börte, but it does not specify Börte's country of origin. Therefore, the passages do not provide enough information to answer the question.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_08195", "condition": "format", "output": "{\"answer_entity\": \"Mongolia\"}"}
+{"family_id": "w2k_07723", "condition": "original", "output": "The composer of film Bandhanam was M. B. Sreenivasan, who died in the Lakshadweep islands. FINAL_ANSWER=Lakshadweep islands"}
+{"family_id": "w2k_07723", "condition": "distractor", "output": "The composer of the film Bandhanam was M. B. Sreenivasan, who died in Lakshadweep islands. FINAL_ANSWER=Lakshadweep islands"}
+{"family_id": "w2k_07723", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The composer of film Bandhanam, M. B. Sreenivasan, died in the Lakshadweep islands."}
+{"family_id": "w2k_07723", "condition": "cc_attempt", "output": "DECISION=KEEP\nFINAL_ANSWER=Lakshadweep"}
+{"family_id": "w2k_07723", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_07723", "condition": "insuf_ctr", "output": "The passage states that the film \"Bandhanam\" has a musical score by M. B. Sreenivasan, but it does not provide any information about where M. B. Sreenivasan died.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_07723", "condition": "suff_ctr", "output": "The composer of the film Bandhanam was M. B. Sreenivasan, who died suddenly of a heart attack while conducting a choir in the Lakshadweep islands.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Lakshadweep islands"}
+{"family_id": "w2k_07723", "condition": "format", "output": "{\"answer_entity\": \"Lakshadweep islands\"}"}
+{"family_id": "w2k_08339", "condition": "original", "output": "Princess Luise of Anhalt-Bernburg's mother, Marie Friederike of Hesse-Kassel, died in Hanau.\nFINAL_ANSWER=Hanau"}
+{"family_id": "w2k_08339", "condition": "distractor", "output": "Princess Luise of Anhalt-Bernburg's mother, Marie Friederike of Hesse-Kassel, died in Hanau.\nFINAL_ANSWER=Hanau"}
+{"family_id": "w2k_08339", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Hanau"}
+{"family_id": "w2k_08339", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Hanau"}
+{"family_id": "w2k_08339", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_08339", "condition": "insuf_ctr", "output": "The passage does not provide information about the place of death of Princess Luise of Anhalt-Bernburg's mother, Marie Friederike of Hesse-Kassel.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_08339", "condition": "suff_ctr", "output": "The passage states that Marie Friederike of Hesse-Kassel was a daughter of William I, Elector of Hesse, and his wife, Princess Wilhelmina Caroline of Denmark. However, it does not specify the place of death of Marie Friederike of Hesse-Kassel, who was the mother of Princess Luise of Anhalt-Bernburg.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_08339", "condition": "format", "output": "ANSWER: Hanau"}
+{"family_id": "w2k_07036", "condition": "original", "output": "FINAL_ANSWER=Melanie Griffith"}
+{"family_id": "w2k_07036", "condition": "distractor", "output": "FINAL_ANSWER=Melanie Griffith"}
+{"family_id": "w2k_07036", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Melanie Griffith"}
+{"family_id": "w2k_07036", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Melanie Griffith"}
+{"family_id": "w2k_07036", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_07036", "condition": "insuf_ctr", "output": "The passage states that Dakota Johnson is the daughter of Don Johnson and Melanie Griffith. However, it does not provide any information about her maternal grandmother.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_07036", "condition": "suff_ctr", "output": "Melanie Griffith is the mother of Dakota Johnson, and therefore Melanie Griffith is the maternal grandmother of Dakota Johnson.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Melanie Griffith"}
+{"family_id": "w2k_07036", "condition": "format", "output": "{\"answer_entity\": \"Melanie Griffith\"}"}
+{"family_id": "w2k_02660", "condition": "original", "output": "The Book of Eli was released more recently than Fire Birds.\nFINAL_ANSWER=The Book of Eli"}
+{"family_id": "w2k_02660", "condition": "distractor", "output": "The Book of Eli was released more recently than Fire Birds.\nFINAL_ANSWER=The Book of Eli"}
+{"family_id": "w2k_02660", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The Book of Eli"}
+{"family_id": "w2k_02660", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Fire Birds"}
+{"family_id": "w2k_02660", "condition": "format", "output": "{\"answer_entity\": \"The Book Of Eli\"}"}
+{"family_id": "w2k_03730", "condition": "original", "output": "The passages do not provide information about the ages of Lloyd Dangle and Carol Perkins. FINAL_ANSWER=<entity>"}
+{"family_id": "w2k_03730", "condition": "distractor", "output": "The passages do not provide information about the ages of Lloyd Dangle and Carol Perkins. FINAL_ANSWER=passages are insufficient"}
+{"family_id": "w2k_03730", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Carol Perkins"}
+{"family_id": "w2k_03730", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The passages are insufficient"}
+{"family_id": "w2k_03730", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_03730", "condition": "insuf_ctr", "output": "The passages do not provide any information about Carol Perkins or her age, nor do they compare her age to Lloyd Dangle's.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_03730", "condition": "suff_ctr", "output": "Lloyd Dangle was born on May 13, 1961, and Carol Perkins was born on December 29, 1957. Carol Perkins is older than Lloyd Dangle.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Carol Perkins"}
+{"family_id": "w2k_03730", "condition": "format", "output": "ANSWER=Carol Perkins"}
+{"family_id": "w2k_11013", "condition": "original", "output": "The director of \"Did a Good Man Die?\" was born in 1922, while the director of \"The Last of the Knucklemen\" was born in 1927. Therefore, the director of \"Did a Good Man Die?\" was born earlier.\nFINAL_ANSWER=Did a Good Man Die?"}
+{"family_id": "w2k_11013", "condition": "distractor", "output": "The director of \"Did a Good Man Die?\" was born in 1922, while the director of \"The Last of the Knucklemen\" was born in 1927. Therefore, the director of \"Did a Good Man Die?\" was born earlier.\nFINAL_ANSWER=Did a Good Man Die?"}
+{"family_id": "w2k_11013", "condition": "wc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=Did A Good Man Die?"}
+{"family_id": "w2k_11013", "condition": "cc_attempt", "output": "DECISION=REVISE\nFINAL_ANSWER=The Last Of The Knucklemen"}
+{"family_id": "w2k_11013", "condition": "insufficient", "output": "The passages are insufficient."}
+{"family_id": "w2k_11013", "condition": "insuf_ctr", "output": "The passages do not mention the film \"Did A Good Man Die\" or provide the birth dates of its director. Therefore, it is not possible to determine which film has the director born earlier.\nSTATUS=INSUFFICIENT\nFINAL_ANSWER=NULL"}
+{"family_id": "w2k_11013", "condition": "suff_ctr", "output": "The passage states that \"Did a Good Man Die?\" was directed by Fadil Hadžić, who was born on 23 April 1922. It also states that \"The Last of the Knucklemen\" was directed by Tim Burstall, who was born on 20 April 1927. Therefore, Fadil Hadžić was born earlier than Tim Burstall.\nSTATUS=ANSWERABLE\nFINAL_ANSWER=Did a Good Man Die?"}
+{"family_id": "w2k_11013", "condition": "format", "output": "{\"answer_entity\": \"Did a Good Man Die?\"}"}
