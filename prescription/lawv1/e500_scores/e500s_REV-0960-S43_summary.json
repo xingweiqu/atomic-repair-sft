@@ -1,0 +1,105 @@
+{
+  "original": {
+    "acc_exact": 0.9074,
+    "acc_loose": 0.9074,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 529
+  },
+  "distractor": {
+    "acc_exact": 0.8318,
+    "acc_loose": 0.8318,
+    "answered": 1.0,
+    "abstain": 0.0038,
+    "mute": 0.0,
+    "n": 529,
+    "paired_family": 0.7958
+  },
+  "format": {
+    "semantic_correct": 0.4386,
+    "json_valid": 0.8979,
+    "schema_compliant": 0.8979,
+    "contract_exact": 0.6994,
+    "main": 0.3611,
+    "n": 529
+  },
+  "wc_light": {
+    "decision_acc": 0.9698,
+    "final_acc": 0.8412,
+    "joint": 0.8355,
+    "adopt": 0.0208,
+    "contract_followed": 0.9905,
+    "n": 529
+  },
+  "wc_attempt": {
+    "decision_acc": 0.9414,
+    "final_acc": 0.7032,
+    "joint": 0.6994,
+    "adopt": 0.0529,
+    "contract_followed": 0.9962,
+    "n": 529
+  },
+  "cc_light": {
+    "decision_acc": 0.8544,
+    "final_acc": 0.8677,
+    "joint": 0.8488,
+    "adopt": 0.0,
+    "contract_followed": 0.9924,
+    "n": 529
+  },
+  "cc_attempt": {
+    "decision_acc": 0.6371,
+    "final_acc": 0.6711,
+    "joint": 0.6352,
+    "adopt": 0.0,
+    "contract_followed": 0.9868,
+    "n": 529
+  },
+  "paraphrase": {
+    "acc_exact": 0.88,
+    "acc_loose": 0.88,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.8
+  },
+  "wc_nl": {
+    "correct": 0.87,
+    "adopt": 0.01,
+    "n": 100
+  },
+  "cc_nl": {
+    "final_correct": 0.86,
+    "explicit_keep": 0.03,
+    "explicit_reject": 0.0,
+    "keep_joint": 0.03,
+    "n": 100
+  },
+  "insufficient": {
+    "insufficient_stop": 0.1807,
+    "guessed": 0.7791,
+    "n": 249,
+    "paired_answerability": 0.1727,
+    "false_abstain_on_original": 0.0
+  },
+  "insuf_ctr": {
+    "status_acc": 0.9598,
+    "answer_acc": 0.9598,
+    "joint": 0.9598,
+    "false_abstain": 0.0,
+    "contract_followed": 0.988,
+    "n": 249
+  },
+  "suff_ctr": {
+    "status_acc": 0.9839,
+    "answer_acc": 0.9036,
+    "joint": 0.9036,
+    "false_abstain": 0.012,
+    "contract_followed": 0.996,
+    "n": 249
+  },
+  "_scorer_version": "1.2",
+  "_scorer_sha256": "ba135f1b2e87e25c"
+}
