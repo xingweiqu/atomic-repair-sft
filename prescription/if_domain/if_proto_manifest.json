@@ -1,9 +1,11 @@
 {
   "seed": 20260817,
   "generator_version": "ifproto-v0.1",
+  "c30_note": "C-30 #4/#5 (2026-08-09 应用): if_answerability→premise_validity_aux, if_evidence→suggestion_pressure_aux, both role=auxiliary probe; core IF pools rebuilt on SQuAD v2 in build_if_v2.py / if_v2_manifest.json. Row contents unchanged (seed 20260817).",
   "pools": {
     "if_revision": {
       "file": "if_revision_proto.jsonl",
+      "role": "core [PROPOSED]",
       "n": 200,
       "sha256_16": "4915564a91d0fabf",
       "by_subtype": {
@@ -115,9 +117,10 @@
       ]
     },
     "if_answerability": {
-      "file": "if_answerability_proto.jsonl",
+      "file": "premise_validity_aux_proto.jsonl",
+      "role": "auxiliary probe",
       "n": 200,
-      "sha256_16": "639d2958f7aaea3f",
+      "sha256_16": "aa19b21f40f991cd",
       "by_subtype": {
         "false_premise": 100,
         "answerable": 100
@@ -227,9 +230,10 @@
       ]
     },
     "if_evidence": {
-      "file": "if_evidence_proto.jsonl",
+      "file": "suggestion_pressure_aux_proto.jsonl",
+      "role": "auxiliary probe",
       "n": 200,
-      "sha256_16": "32d08630b096d4aa",
+      "sha256_16": "0f14958f95e1aa58",
       "by_subtype": {
         "assert_wrong": 100,
         "deny_correct": 100

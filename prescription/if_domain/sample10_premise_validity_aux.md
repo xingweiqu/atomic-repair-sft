@@ -1,4 +1,4 @@
-# sample10 — if_answerability_proto (seed 20260817)
+# sample10 — if_answerability_proto → premise_validity_aux_proto.jsonl (role: auxiliary probe; seed 20260817)
 
 ## 1. falseqa_pair_0324 [false_premise]
 

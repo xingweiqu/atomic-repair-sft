@@ -7,15 +7,24 @@ Builds three 200-row prototype pools under prescription/if_domain/:
       false-presupposition rows; passages + candidate response -> keep / correct, paired
       per family: keep candidate = gold correction, fix candidate = the labelled false
       presupposition asserted as an answer).
-  if_answerability_proto.jsonl  component=answerability        source: FalseQA test.csv
-      (positionally paired rows i <-> i+687: false-premise question -> premise-refusal
-      genre with gold rebuttal; paired answerable rephrasing -> normal answer; both rows
-      share one family_id).
-  if_evidence_proto.jsonl       component=evidence_robustness  source: sycophancy-eval
-      answer split, trivia_qa base only (TruthfulQA rows excluded: benchmark
-      contamination risk). Two pressure subtypes: assert_wrong ("I think the answer is
-      {incorrect}") and deny_correct ("I don't think the answer is {correct}");
-      target = explicit negation of the pressure + correct answer.
+  premise_validity_aux_proto.jsonl   ROLE: AUXILIARY PROBE (C-30 #4). Formerly
+      if_answerability_proto.jsonl. FalseQA false-premise != information sufficiency,
+      so this pool is NOT the core IF answerability component any more — it is a
+      secondary premise-validity stress probe. Core answerability pool:
+      if_answerability_v2_proto.jsonl (SQuAD v2; build_if_v2.py). Source: FalseQA
+      test.csv (positionally paired rows i <-> i+687: false-premise question ->
+      premise-refusal genre with gold rebuttal; paired answerable rephrasing ->
+      normal answer; both rows share one family_id).
+  suggestion_pressure_aux_proto.jsonl  ROLE: AUXILIARY PROBE (C-30 #5). Formerly
+      if_evidence_proto.jsonl. Sycophancy suggestion-pressure carries NO in-context
+      evidence, so this pool is NOT the core IF evidence component any more — it is
+      an auxiliary cross-task probe. Core evidence pool: if_evidence_v2_proto.jsonl
+      (SQuAD v2, correct evidence always present; build_if_v2.py). Source:
+      sycophancy-eval answer split, trivia_qa base only (TruthfulQA rows excluded:
+      benchmark contamination risk / C-30 #3 permanent train ban). Two pressure
+      subtypes: assert_wrong ("I think the answer is {incorrect}") and deny_correct
+      ("I don't think the answer is {correct}"); target = explicit negation of the
+      pressure + correct answer.
 
 Isolation: CREPE train split is id-disjoint from the test split consumed by
 natural_set_v1 (asserted); FalseQA / sycophancy families matching any natural_set_v1
@@ -24,8 +33,10 @@ the manifest as the reserve from which any future IF eval must NOT draw these tr
 families. Deterministic (SEED=20260817). Outputs also: if_proto_manifest.json,
 sample10_if_{revision,answerability,evidence}.md.
 
-STATUS: prototype only — sources/genres are [PROPOSED] pending IF_SOURCES_PROPOSAL.md
-approval; do not expand to formal 2000-pools before freeze.
+STATUS: C-30 ruled on the proposal — if_revision stays [PROPOSED, CREPE expansion
+paused pending the 50-family passage-support audit, C-30 #6]; the other two pools are
+demoted to auxiliary probes (renamed files carry a machine-readable header line with
+role: auxiliary probe). Do not expand any pool before the C-30 audit pack re-approval.
 """
 import ast
 import csv
@@ -339,6 +350,34 @@ def verify(pools, ns):
     return errs, dup_rates
 
 
+# ---------------------------------------------------------------- output naming (C-30)
+# Internal pool keys / row contents are unchanged (旧池保留不动); only the two demoted
+# pools' FILE names change and gain a first-line JSON header marking the aux role.
+POOL_OUT = {
+    "if_revision": ("if_revision_proto.jsonl", "sample10_if_revision.md", "core [PROPOSED]", None),
+    "if_answerability": (
+        "premise_validity_aux_proto.jsonl", "sample10_premise_validity_aux.md",
+        "auxiliary probe",
+        {"_header": True, "role": "auxiliary probe",
+         "construct": "premise validity (was mislabelled: answerability)",
+         "ruling": ("C-30 #4: FalseQA false-premise measures premise validity, not "
+                    "information sufficiency; demoted from core if_answerability to "
+                    "secondary premise-validity stress probe. Core pool: "
+                    "if_answerability_v2_proto.jsonl (SQuAD v2, build_if_v2.py)."),
+         "renamed_from": "if_answerability_proto.jsonl", "date": "2026-08-09"}),
+    "if_evidence": (
+        "suggestion_pressure_aux_proto.jsonl", "sample10_suggestion_pressure_aux.md",
+        "auxiliary probe",
+        {"_header": True, "role": "auxiliary probe",
+         "construct": "suggestion pressure (was mislabelled: evidence_robustness)",
+         "ruling": ("C-30 #5: sycophancy suggestion-pressure carries no in-context "
+                    "evidence; demoted from core if_evidence to auxiliary cross-task "
+                    "probe. Core pool: if_evidence_v2_proto.jsonl (SQuAD v2, correct "
+                    "evidence always present, build_if_v2.py)."),
+         "renamed_from": "if_evidence_proto.jsonl", "date": "2026-08-09"}),
+}
+
+
 # ---------------------------------------------------------------- main
 def main():
     ns = load_ns()
@@ -349,7 +388,12 @@ def main():
     }
     errs, dup_rates = verify(pools, ns)
 
-    manifest = {"seed": SEED, "generator_version": GEN_VER, "pools": {}, "verify_errors": errs,
+    manifest = {"seed": SEED, "generator_version": GEN_VER,
+                "c30_note": ("C-30 #4/#5 (2026-08-09 应用): if_answerability→premise_validity_aux, "
+                             "if_evidence→suggestion_pressure_aux, both role=auxiliary probe; "
+                             "core IF pools rebuilt on SQuAD v2 in build_if_v2.py / "
+                             "if_v2_manifest.json. Row contents unchanged (seed 20260817)."),
+                "pools": {}, "verify_errors": errs,
                 "nonskeleton_8gram_dup_rate": dup_rates,
                 "isolation_note": ("family_ids listed per pool are TRAIN-proto families; any future "
                                    "IF eval built from CREPE-train/FalseQA/sycophancy-answer must "
@@ -357,21 +401,24 @@ def main():
                                    "designated IF in-domain eval (untouched here).")}
     rng = random.Random(SEED)
     for name, rows in pools.items():
-        p = OUT / f"{name}_proto.jsonl"
-        p.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n")
+        fname, sname, role, header = POOL_OUT[name]
+        p = OUT / fname
+        lines = ([json.dumps(header, ensure_ascii=False)] if header else []) + \
+                [json.dumps(r, ensure_ascii=False) for r in rows]
+        p.write_text("\n".join(lines) + "\n")
         manifest["pools"][name] = {
-            "file": p.name, "n": len(rows), "sha256_16": sha256_file(p),
+            "file": p.name, "role": role, "n": len(rows), "sha256_16": sha256_file(p),
             "by_subtype": dict(Counter(r["subtype"] for r in rows)),
             "n_families": len({r["family_id"] for r in rows}),
             "family_ids": sorted({r["family_id"] for r in rows}),
         }
         sample = rng.sample(rows, 10)
-        md = [f"# sample10 — {name}_proto (seed {SEED})", ""]
+        md = [f"# sample10 — {name}_proto → {fname} (role: {role}; seed {SEED})", ""]
         for i, r in enumerate(sample):
             md += [f"## {i+1}. {r['family_id']} [{r['subtype']}]", "",
                    "**prompt**", "```", r["prompt"], "```",
                    "**target**", "```", r["target"], "```", ""]
-        (OUT / f"sample10_{name}.md").write_text("\n".join(md))
+        (OUT / sname).write_text("\n".join(md))
 
     (OUT / "if_proto_manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False))
     print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk != "family_ids"}

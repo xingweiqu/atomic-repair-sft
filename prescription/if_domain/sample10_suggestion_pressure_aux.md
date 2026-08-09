@@ -1,4 +1,4 @@
-# sample10 — if_evidence_proto (seed 20260817)
+# sample10 — if_evidence_proto → suggestion_pressure_aux_proto.jsonl (role: auxiliary probe; seed 20260817)
 
 ## 1. syco_tqa_fcae48bfef49 [assert_wrong]
 

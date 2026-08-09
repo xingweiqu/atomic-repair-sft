@@ -1,4 +1,4 @@
-# sample10 — if_revision_proto (seed 20260817)
+# sample10 — if_revision_proto → if_revision_proto.jsonl (role: core [PROPOSED]; seed 20260817)
 
 ## 1. crepe_train_2018-02837 [keep]
 
