@@ -58,3 +58,10 @@ hash 不匹配 / token 偏差>1% / updates 不一致 / 撞族 / 评测缺行 / N
 3) 三机分片跑 /tmp/re500_<idx>.sh 模式(gen_predict eval500 → /mnt/hdfs/xwqu/lawv1/eval500/pred_<rid>.jsonl,49 模型);
 4) 收齐后本地 lawv1_score 全量打分 → 曲线重算(529 族置信版)→ K cc 崩塌复验定级。
 margin v2 EVD/REV 扫描(P3)已中断,部分结果在各机 /tmp/margin_v2b(易失),复活后有空档再补,不阻塞。
+
+
+## C-29(2026-08-10):撤回与改写台账
+- 撤回:format 高剂量内容税(529 族证伪);evidence rise-fall/+8pp 峰(降为 +0~3pp 弱增益);revision 弃答税(重归因 placebo)。
+- 主命题:structured but heterogeneous dose–response profiles(不写 follow scaling laws)。
+- 口径:Main 529 / answerability 249 / paraphrase 50 / NL 100,分列不得合并。
+- 禁令:不回头优化 Reasoning 曲线;evidence 不加点不改任务。

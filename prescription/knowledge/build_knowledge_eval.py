@@ -31,8 +31,9 @@ from collections import Counter
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent
-GEN_VER = "gate1k-v0.2"
+GEN_VER = "k-eval-v1"
 SEED = 20260814
+ANSWER_LINE = "\n\nEnd your reply with exactly one line: FINAL_ANSWER=<entity>"
 N_FAM = 50
 OLD_WIKI2_N = 2400  # wiki2/build_2wiki.py: rows[:N_SCREEN*3] -> 800 eval + 1500 train (+100 spare)
 
@@ -300,7 +301,7 @@ def build(main):
         p_orig = grounded_prompt(passages, q)
         sup_cited = next(t for t in dict.fromkeys(r["sf_titles"])
                          if contains(passage_text(t, r["sents"][r["titles"].index(t)]), gold))
-        conds = {"original": dict(prompt=p_orig,
+        conds = {"original": dict(prompt=p_orig + ANSWER_LINE,
                                   meta={"type": r["type"], "n_passages": len(passages),
                                         "supporting_titles": list(dict.fromkeys(r["sf_titles"]))}),
                  "paraphrase": None}   # PENDING: no rule-based rewrite (stats note only)
@@ -308,7 +309,7 @@ def build(main):
         if d_pass:
             pos = rng_for(fid, "dpos").randrange(1, len(passages))
             conds["distractor"] = dict(
-                prompt=grounded_prompt(passages[:pos] + [d_pass] + passages[pos:], q),
+                prompt=grounded_prompt(passages[:pos] + [d_pass] + passages[pos:], q) + ANSWER_LINE,
                 meta={"donor_family": fid_of(d_donor), "donor_title": d_pass[0],
                       "insert_pos": pos + 1})
         cand, csrc = pick_wrong_candidate(r, main)
