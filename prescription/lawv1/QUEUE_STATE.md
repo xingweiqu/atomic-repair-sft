@@ -79,3 +79,6 @@ answerability 扩产放行(subtype+paired);evidence 修 control/三类/去捷径
 ## 机队更新(2026-08-10):5 台可写 8 卡节点
 lq(w-7d33)/m2(w-a59b)/m3(w-1ba9)/w-6e81(新,已钉版)/w-ad61(新,已钉版);旧 m1 退役。
 下一波排班:ANS 网格(待我审核收尾)→ IF/K 稀疏(待批复)。
+
+## C-33(2026-08-11):GPU 永不空转法典生效
+当前排班:P2 margin_e500 sweep(5 机 49 ckpt,填充位);CPU:ANS 审核双 agent 冲刺(切片1-450/451-1000)→过审即 P0 ANS 网格抢占;K-eval-500 builder(donor 隔离+hard distractor)在建→P1 大批评测;IF 待批件不阻塞其他线。
