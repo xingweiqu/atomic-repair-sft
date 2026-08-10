@@ -81,4 +81,4 @@ lq(w-7d33)/m2(w-a59b)/m3(w-1ba9)/w-6e81(新,已钉版)/w-ad61(新,已钉版);旧
 下一波排班:ANS 网格(待我审核收尾)→ IF/K 稀疏(待批复)。
 
 ## C-33(2026-08-11):GPU 永不空转法典生效
-当前排班:P2 margin_e500 sweep(5 机 49 ckpt,填充位);CPU:ANS 审核双 agent 冲刺(切片1-450/451-1000)→过审即 P0 ANS 网格抢占;K-eval-500 builder(donor 隔离+hard distractor)在建→P1 大批评测;IF 待批件不阻塞其他线。
+当前排班(2026-08-11 00:33 CST):ANS 人审 1000/1000 完成,911 PASS / 89 REJECT;正式池 1822 examples 已冻结。ANS 16-run 网格已通过预算闸门(8 doses,24 fixed updates,max |T_dev|=0.136%,zero violation),5 台 × 8 GPU 同时开训,40/40 busy。P2 margin_e500 已按优先级暂停,待 ANS shard 完成后续跑;K-eval-500 builder 工件待 formal 验收。
