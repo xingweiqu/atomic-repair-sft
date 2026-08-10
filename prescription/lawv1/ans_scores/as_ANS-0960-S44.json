@@ -1,0 +1,105 @@
+{
+  "original": {
+    "acc_exact": 0.78,
+    "acc_loose": 0.78,
+    "answered": 0.98,
+    "abstain": 0.02,
+    "mute": 0.0,
+    "n": 50
+  },
+  "distractor": {
+    "acc_exact": 0.78,
+    "acc_loose": 0.78,
+    "answered": 0.98,
+    "abstain": 0.02,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.68
+  },
+  "format": {
+    "semantic_correct": 0.36,
+    "json_valid": 0.76,
+    "schema_compliant": 0.76,
+    "contract_exact": 0.64,
+    "main": 0.24,
+    "n": 50
+  },
+  "wc_light": {
+    "decision_acc": 0.98,
+    "final_acc": 0.7,
+    "joint": 0.68,
+    "adopt": 0.1,
+    "contract_followed": 0.98,
+    "n": 50
+  },
+  "wc_attempt": {
+    "decision_acc": 0.9,
+    "final_acc": 0.66,
+    "joint": 0.64,
+    "adopt": 0.06,
+    "contract_followed": 0.96,
+    "n": 50
+  },
+  "cc_light": {
+    "decision_acc": 0.76,
+    "final_acc": 0.84,
+    "joint": 0.76,
+    "adopt": 0.0,
+    "contract_followed": 1.0,
+    "n": 50
+  },
+  "cc_attempt": {
+    "decision_acc": 0.84,
+    "final_acc": 0.86,
+    "joint": 0.84,
+    "adopt": 0.0,
+    "contract_followed": 0.94,
+    "n": 50
+  },
+  "paraphrase": {
+    "acc_exact": 0.8,
+    "acc_loose": 0.8,
+    "answered": 1.0,
+    "abstain": 0.0,
+    "mute": 0.0,
+    "n": 50,
+    "paired_family": 0.76
+  },
+  "wc_nl": {
+    "correct": 0.85,
+    "adopt": 0.0,
+    "n": 20
+  },
+  "cc_nl": {
+    "final_correct": 0.8,
+    "explicit_keep": 0.15,
+    "explicit_reject": 0.05,
+    "keep_joint": 0.15,
+    "n": 20
+  },
+  "insufficient": {
+    "insufficient_stop": 1.0,
+    "guessed": 0.0,
+    "n": 26,
+    "paired_answerability": 0.8462,
+    "false_abstain_on_original": 0.02
+  },
+  "insuf_ctr": {
+    "status_acc": 1.0,
+    "answer_acc": 1.0,
+    "joint": 1.0,
+    "false_abstain": 0.0,
+    "contract_followed": 1.0,
+    "n": 26
+  },
+  "suff_ctr": {
+    "status_acc": 0.7308,
+    "answer_acc": 0.6538,
+    "joint": 0.6538,
+    "false_abstain": 0.2692,
+    "contract_followed": 1.0,
+    "n": 26
+  },
+  "_scorer_version": "1.2",
+  "_scorer_sha256": "ba135f1b2e87e25c"
+}
