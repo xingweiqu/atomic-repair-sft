@@ -75,3 +75,7 @@ IF 正式训练冻结至修正完成。
 
 ## C-31(2026-08-10):IF v2 部分批准落账
 answerability 扩产放行(subtype+paired);evidence 修 control/三类/去捷径后扩;CREPE 等 50 条人审 Gate;K eval 不冻结(donor 独立池强制、wc_attempt→wrong_candidate_citation 已改名);交付必须含 JSONL 本体+builder+scorer+README。
+
+## 机队更新(2026-08-10):5 台可写 8 卡节点
+lq(w-7d33)/m2(w-a59b)/m3(w-1ba9)/w-6e81(新,已钉版)/w-ad61(新,已钉版);旧 m1 退役。
+下一波排班:ANS 网格(待我审核收尾)→ IF/K 稀疏(待批复)。
