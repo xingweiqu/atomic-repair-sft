@@ -1,0 +1,7 @@
+{
+ "audited": 1000,
+ "passed": 911,
+ "rejected": 89,
+ "sha": "dda266e78260d151",
+ "note": "full 1000-pair human audit (two CC slices, per-item ledger in ans_audit_slice{1,2}.csv); rejects removed, no unaudited refill; 6+6 new defect patterns logged for generator v-next"
+}
