@@ -2,5 +2,5 @@
 - endpoint: fmt contract_exact(3-seed 锚点均值曲线)
 - 形态库 satexp/step/null,Huber 选形;interp/extrap 分列
 
-- repo commit: 9306480
+- repo commit: 019f48f
 - 复现: `python3 report_pack/make_lawv1_figs.py`

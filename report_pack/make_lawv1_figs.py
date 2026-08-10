@@ -43,9 +43,11 @@ FC = J("prescription/lawv1/format_curves.json")
 EC = J("prescription/lawv1/evidence_curves.json")
 RC = J("prescription/lawv1/revision_curves.json")
 MAN = {a["arm"]: a for a in J("prescription/lawv1/dose_manifest_format.json")}
-GS = {os.path.basename(f)[3:-5]: json.load(open(f))
-      for f in glob.glob(os.path.join(ROOT, "prescription/lawv1/grid_scores/gs_FMT-*.json"))}
-BASE = J("prescription/gate1/base_profile_v121_summary.json")
+# C-32 refreeze: e500 (529-family) is the sole source of truth for fig3-6
+GS = {os.path.basename(f)[6:-13]: json.load(open(f))
+      for f in glob.glob(os.path.join(ROOT, "prescription/lawv1/e500_scores/e500s_FMT-*_summary.json"))}
+BASE = json.load(open(os.path.join(ROOT, "prescription/lawv1/e500_scores/e500s_base_summary.json")))
+N_NOTE = "n: core=529 fam; insufficient/STATUS=249; NL=100; paraphrase=50 (frozen subsets)"
 DOSES = [0, 30, 60, 120, 240, 480, 960, 2000]
 ANCH = {0, 120, 960, 2000}
 QD = [MAN[f"FMT-{d:04d}"]["q_d"] for d in DOSES]
@@ -144,7 +146,7 @@ for ax, (c, k, title) in zip(axes, panels):
     ax.set_title(title, fontsize=10); ax.set_ylim(0, 1.05); ax.set_xlabel("dose (examples)")
     src3[title] = {"doses": DOSES, "q_d": QD, "mean": means}
 axes[0].legend(fontsize=7, loc="lower right")
-f.suptitle("Fig 3 — Format formal dose response (2,000-example carrier; packed; 30 updates all arms; budget PASS)", y=1.13)
+f.suptitle("Fig 3 — Format dose response [eval-500 refreeze] (2,000-carrier; packed; 30 updates; " + N_NOTE + ")", y=1.13)
 save(f, 3, src3, "# Fig3 Format 主图\n- 输入: grid_scores/gs_FMT-*.json(逐seed), dose_manifest_format.json(q_d), base_profile_v121_summary.json\n- 误差条=3-seed 锚点全距;正式结果(非 smoke)")
 
 # ---------------- Fig 4: vector heatmap (component - matched replay) ---------------
@@ -166,7 +168,7 @@ for i in range(M.shape[0]):
     for j in range(M.shape[1]):
         ax.text(j, i, f"{M[i,j]:+.2f}", ha="center", va="center", fontsize=6.5,
                 color="white" if abs(M[i, j]) > 0.3 else DARK)
-ax.set_title("Fig 4 — Format response vector (all cells vs matched replay; formal runs)", loc="left")
+ax.set_title("Fig 4 — Format response vector vs matched replay [eval-500; " + N_NOTE + "]", loc="left")
 save(f, 4, {"doses": DOSES[1:], "endpoints": [e[2] for e in eps], "delta_vs_replay": M.tolist()},
      "# Fig4 向量热图\n- 口径统一: component−matched replay(placebo-adjusted);逐 seed 均值\n- 输入同 Fig3")
 
@@ -186,7 +188,7 @@ for (k, lab), mk in zip(keys, ["o", "s", "^", "D", "v"]):
     src5[lab] = means
 ax.set_xticks(range(len(DOSES))); ax.set_xticklabels(DOSES)
 ax.set_xlabel("format dose"); ax.set_ylim(0, 1.05); ax.legend(fontsize=8)
-ax.set_title("Fig 5 — wc_attempt decomposition under format dosing (3-seed ranges at anchors)", loc="left")
+ax.set_title("Fig 5 — wc_attempt decomposition [eval-500; high-variance collateral, see cc for the cleaner one]", loc="left")
 save(f, 5, src5, "# Fig5 collateral 拆解\n- 输入: grid_scores gs_FMT-* 的 wc_attempt 五字段\n- 判定:哪层(接口/判断/内容)承担高剂量下降")
 
 # ---------------- Fig 6: LODO vs dumb baselines (fmt contract_exact) ---------------
@@ -227,7 +229,7 @@ for i, d in enumerate(DOSES):
                       nearest=p_near, loglin=p_log, const=p_c, kind=kind))
     for k2, v in (("law", p_law), ("nearest", p_near), ("loglin", p_log), ("const", p_c)):
         mae[k2].append(abs(v - y[i]))
-noise = max(v for v in FC["fmt_exact"]["anchor_ranges"].values()) / 2
+noise = max((max(seeds_vals(d, "format", "contract_exact")) - min(seeds_vals(d, "format", "contract_exact"))) for d in ANCH) / 2
 f, axes = plt.subplots(1, 2, figsize=(13, 4.6))
 for ax, kind in zip(axes, ("interp", "extrap")):
     sub = [r for r in rows6 if r["kind"] == kind]
