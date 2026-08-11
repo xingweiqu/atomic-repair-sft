@@ -1,0 +1,81 @@
+{
+  "generator_version": "k-eval-v2-500",
+  "seed": 20260810,
+  "dataset": "framolfese/2wikimultihopqa",
+  "split": "validation",
+  "main_pool_families": 500,
+  "v1_subset_included": 50,
+  "donor_pool_families": 300,
+  "main_donor_overlap": 0,
+  "old_wiki2_excluded_ids": 2400,
+  "filter_accounting": {
+    "excluded_old_wiki2_id": 2400,
+    "pass_all_filters": 9025,
+    "drop_yesno_or_empty_answer": 1060,
+    "drop_question_shape": 84,
+    "drop_long_answer": 7
+  },
+  "candidate_pool_after_filters": 9025,
+  "insufficient_survivors": 367,
+  "insufficient_survival_rate": 0.734,
+  "insufficient_drop_reasons": {
+    "leak_in_remaining_context": 133
+  },
+  "paraphrase": "PENDING — no rule-based rewrite; overrides file to come",
+  "eval_rows": 3601,
+  "eval_by_condition": {
+    "original": 500,
+    "distractor": 500,
+    "wrong_candidate_citation": 500,
+    "cc_attempt": 500,
+    "format": 500,
+    "insufficient": 367,
+    "insuf_ctr": 367,
+    "suff_ctr": 367
+  },
+  "distractor_hardness": {
+    "same_relation": 280,
+    "same_entity": 219,
+    "soft": 1
+  },
+  "distractor_hardness_share": {
+    "same_relation": 0.56,
+    "same_entity": 0.438,
+    "soft": 0.002
+  },
+  "donor_selection_coverage": {
+    "donor_candidates_scanned": 8525,
+    "main_families_coverable_by_any_candidate": 219,
+    "main_families_covered_by_chosen_300": 219,
+    "donors_chosen_by_cover": 167,
+    "donors_filled_random": 133
+  },
+  "distractor_same_entity_match_kind": {
+    "text": 215,
+    "title": 4
+  },
+  "donor_accounting": {
+    "distinct_donors_used": 244,
+    "max_reuse_of_one_donor": 9,
+    "donor_uses_total": 500
+  },
+  "wc_candidate_sources": {
+    "comparison_option": 187,
+    "other_family_answer": 230,
+    "same_context_title": 83
+  },
+  "wc_answer_classes": {
+    "option": 187,
+    "date": 26,
+    "place": 184,
+    "person": 76,
+    "entity": 27
+  },
+  "question_types_in_pool": {
+    "comparison": 92,
+    "bridge_comparison": 95,
+    "compositional": 249,
+    "inference": 64
+  },
+  "verify_errors": []
+}
