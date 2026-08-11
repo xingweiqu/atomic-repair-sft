@@ -35,6 +35,8 @@ ABST = ["cannot be determined", "not enough information", "insufficient",
 
 def score_row(r, out):
     c, gold = r["condition"], r["gold"]
+    if c == "wrong_candidate_citation":
+        c = "wc_attempt"   # C-31 rename; same scoring contract
     if c in ("original", "distractor"):
         st = strict_answer(out)
         strict_ok = int(st is not None and norm(st) == norm(gold))
