@@ -11,6 +11,7 @@ from transformers import AutoTokenizer
 
 eval_path, out_path = sys.argv[1], sys.argv[2]
 model = sys.argv[3] if len(sys.argv) > 3 else "/mnt/hdfs/xwqu/Qwen3-8B"
+MAXLEN = int(sys.argv[4]) if len(sys.argv) > 4 else 4096   # amendment 2026-08-11: K-500 long contexts need 8192
 
 rows = [json.loads(l) for l in open(eval_path)]
 tok = AutoTokenizer.from_pretrained(model, trust_remote_code=True)
@@ -18,7 +19,7 @@ prompts = [tok.apply_chat_template([{"role": "user", "content": r["prompt"]}],
                                    tokenize=False, add_generation_prompt=True,
                                    enable_thinking=False) for r in rows]
 llm = LLM(model=model, tensor_parallel_size=8, gpu_memory_utilization=0.85,
-          max_model_len=4096, enforce_eager=False)
+          max_model_len=MAXLEN, enforce_eager=False)
 sp = SamplingParams(temperature=0, top_p=1.0, max_tokens=512)
 outs = llm.generate(prompts, sp)
 with open(out_path, "w") as f:
