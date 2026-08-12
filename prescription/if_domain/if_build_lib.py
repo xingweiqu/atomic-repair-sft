@@ -53,6 +53,12 @@ POOL_FILES = {
     "if_evidence_v2_1": ("if_evidence_v2.1_proto.jsonl", "if_evidence_v2_1_manifest.json"),
     "if_format_pool": ("if_format_pool.jsonl", "if_format_pool_manifest.json"),
     "if_clean_replay_pool": ("if_clean_replay_pool.jsonl", "if_clean_replay_pool_manifest.json"),
+    # 5th build: evidence FORMAL pool (merges the v2.1 proto verbatim, so its
+    # registry is a superset of if_evidence_v2_1's -- see build_if_evidence_pool.py)
+    "if_evidence_pool": ("if_evidence_pool.jsonl", "if_evidence_pool_manifest.json"),
+    # eval prototype (SQuAD dev / AG-News test / CREPE test; disjoint by split,
+    # registered here so any future TRAINING pool build excludes it mechanically)
+    "eval_if_proto": ("eval_if_proto.jsonl", "eval_if_proto_manifest.json"),
 }
 V2_PROTO_MANIFEST = "if_v2_manifest.json"       # seed-20260818 protos (ans proto merged into pool 1; evd proto superseded by v2.1)
 IF_PROTO_MANIFEST = "if_proto_manifest.json"    # seed-20260817 protos (revision + 2 aux probes)

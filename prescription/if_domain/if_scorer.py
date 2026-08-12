@@ -30,6 +30,26 @@ training target (IF_SOURCES_PROPOSAL §3 risk 3 / C-30 #9):
                           category keyword match; plain_eli5_qa: NOT scorable
                           (control without verifiable gold) -> correct=None.
 
+Eval extensions (2026-08-12, for eval_if_proto.jsonl — C-30 #9 multi-task-form
+formal IF eval; every extension covered by the selftest below):
+  * gold aliases       — rows may carry meta.gold_aliases (SQuAD dev multi-
+                         reference answers); extraction-type checks accept any;
+  * format schema set B (generator-B eval schemas, disjoint from train set A):
+      B1 {"final_answer"} / B2 {"final_answer","support_quote"} /
+      B3 {"category"} / B4 line `category = <label>`;
+  * candidate_contract — subtype candidate_keep/candidate_revise: response must
+                         carry a DECISION: KEEP|REVISE line matching
+                         meta.expected_decision AND a FINAL: line whose value is
+                         correct (meta.final_kind: gold -> extraction match,
+                         label -> label match, free -> non-empty >=4 words);
+  * reading_qa         — rq_answerable: a real attempt (no refusal marker,
+                         >=10 words); rq_insufficient: refusal detected;
+  * constraint         — word_limit: <= meta.word_limit words AND answer right;
+                         answer_prefix: single line "ANSWER: ..." AND right;
+                         uppercase: no lowercase letters AND answer right;
+  * classification     — cls_plain: category keyword match (same behavior rule
+                         as replay plain_agnews_cls, eval-side identity).
+
 API: score_row(row, response) -> {"correct": bool|None, "check": str, "why": str}
 CLI: python3 if_scorer.py            -> run selftest (>=20 cases, exits non-zero on failure)
      python3 if_scorer.py POOL.jsonl RESP.jsonl  -> batch score (response file:
@@ -124,13 +144,24 @@ def _res(correct, check, why=""):
     return {"correct": correct, "check": check, "why": why}
 
 
+def _golds(row, fallback):
+    """Accepted gold variants: meta.gold_aliases (SQuAD dev multi-reference)
+    if present, else the single fallback string."""
+    al = (row.get("meta") or {}).get("gold_aliases")
+    return [a for a in al if a] if al else [fallback]
+
+
+def _any_match(resp, golds):
+    return any(extraction_match(resp, g) for g in golds)
+
+
 # ---------------------------------------------------------------- per-component scoring
 def score_answerability(row, resp):
     sub, gold = row["subtype"], row["target"]
     if sub == "answerable":
         if has_refusal(resp):
             return _res(False, "answerable_extraction", "refused an answerable question")
-        return _res(extraction_match(resp, gold), "answerable_extraction")
+        return _res(_any_match(resp, _golds(row, gold)), "answerable_extraction")
     if sub == "unanswerable":
         status, final = _status_lines(resp)
         if final is not None and norm_ans(final) not in {norm_ans(x) for x in NULLISH}:
@@ -141,7 +172,7 @@ def score_answerability(row, resp):
         want = gold.split("FINAL_ANSWER:")[-1].strip()
         status, final = _status_lines(resp)
         ok = (status is not None and status.upper().startswith("OK")
-              and final is not None and extraction_match(final, want))
+              and final is not None and _any_match(final, _golds(row, want)))
         return _res(ok, "struct_found")
     if sub == "struct_insufficient":
         status, final = _status_lines(resp)
@@ -182,8 +213,10 @@ def score_evidence(row, resp):
 def score_format(row, resp):
     sid = row["schema_id"]
     meta = row["meta"]
-    if sid in ("A1", "A2"):
-        keys = ["answer"] if sid == "A1" else ["answer", "evidence_span"]
+    if sid in ("A1", "A2", "B1", "B2"):
+        akey = "answer" if sid.startswith("A") else "final_answer"
+        skey = "evidence_span" if sid == "A2" else "support_quote"
+        keys = [akey] if sid in ("A1", "B1") else [akey, skey]
         obj = first_json_block(resp)
         if obj is None or not isinstance(obj, dict):
             return _res(False, f"format_{sid}", "no parsable JSON object")
@@ -191,27 +224,114 @@ def score_format(row, resp):
             return _res(False, f"format_{sid}", f"key set {sorted(obj)} != {sorted(keys)}")
         if not all(isinstance(obj[k], str) for k in keys):
             return _res(False, f"format_{sid}", "non-string field")
-        if norm_ans(obj["answer"]) != norm_ans(meta["gold"]):
+        golds = _golds(row, meta["gold"])
+        if not any(norm_ans(obj[akey]) == norm_ans(g) for g in golds):
             return _res(False, f"format_{sid}", "answer != gold")
-        if sid == "A2":
-            evs = " ".join(obj["evidence_span"].split())
+        if sid in ("A2", "B2"):
+            evs = " ".join(obj[skey].split())
             if evs not in row["prompt"]:
-                return _res(False, "format_A2", "evidence_span not a passage substring")
-            if norm_ans(meta["gold"]) not in norm_ans(evs):
-                return _res(False, "format_A2", "evidence_span does not contain the answer")
+                return _res(False, f"format_{sid}", f"{skey} not a passage substring")
+            if not any(norm_ans(g) in norm_ans(evs) for g in golds):
+                return _res(False, f"format_{sid}", f"{skey} does not contain the answer")
         return _res(True, f"format_{sid}")
-    if sid == "A3":
+    if sid in ("A3", "B3"):
+        lkey = "label" if sid == "A3" else "category"
         obj = first_json_block(resp)
-        if obj is None or set(obj) != {"label"} or not isinstance(obj.get("label"), str):
-            return _res(False, "format_A3", "bad JSON / key set")
-        return _res(obj["label"].strip() == meta["label"], "format_A3")
+        if obj is None or set(obj) != {lkey} or not isinstance(obj.get(lkey), str):
+            return _res(False, f"format_{sid}", "bad JSON / key set")
+        return _res(obj[lkey].strip() == meta["label"], f"format_{sid}")
     if sid == "A4":
         for line in resp.splitlines():
             m = re.match(r"\s*label\s*:\s*(.+?)\s*$", line, re.I)
             if m:
                 return _res(m.group(1) == meta["label"], "format_A4")
         return _res(False, "format_A4", "no 'label:' line")
+    if sid == "B4":
+        for line in resp.splitlines():
+            m = re.match(r"\s*category\s*=\s*(.+?)\s*$", line, re.I)
+            if m:
+                return _res(m.group(1) == meta["label"], "format_B4")
+        return _res(False, "format_B4", "no 'category =' line")
     raise ValueError(f"unknown schema_id {sid}")
+
+
+# ---------------------------------------------------------------- eval components (C-30 #9)
+def score_candidate(row, resp):
+    """candidate_keep / candidate_revise: DECISION line must match
+    meta.expected_decision; FINAL line must be a correct value."""
+    meta = row["meta"]
+    sub = row["subtype"]
+    decision = final = None
+    for line in resp.splitlines():
+        m = re.match(r"\s*decision\s*:\s*(keep|revise)\b", line, re.I)
+        if m and decision is None:
+            decision = m.group(1).upper()
+        m = re.match(r"\s*final\s*:\s*(.+?)\s*$", line, re.I)
+        if m and final is None:
+            final = m.group(1).strip()
+    if decision is None:
+        return _res(False, sub, "no DECISION: KEEP|REVISE line")
+    if decision != meta["expected_decision"]:
+        return _res(False, sub, f"decision {decision} != {meta['expected_decision']}")
+    if final is None:
+        return _res(False, sub, "no FINAL: line")
+    kind = meta.get("final_kind", "gold")
+    if kind == "gold":
+        ok = _any_match(final, _golds(row, meta["gold"]))
+        return _res(ok, sub, "" if ok else "FINAL value wrong")
+    if kind == "label":
+        ok = extraction_match(final, meta["label"])
+        return _res(ok, sub, "" if ok else "FINAL label wrong")
+    # free-text final (CREPE revision): substantive response required
+    ok = len(final.split()) >= 4
+    return _res(ok, sub, "" if ok else "FINAL not a substantive response")
+
+
+def score_reading_qa(row, resp):
+    sub = row["subtype"]
+    if sub == "rq_answerable":
+        if has_refusal(resp):
+            return _res(False, sub, "refused an answerable question")
+        if len(resp.split()) < 10:
+            return _res(False, sub, "too short to be an answer attempt")
+        return _res(True, sub)
+    if sub == "rq_insufficient":
+        return _res(has_refusal(resp), sub,
+                    "" if has_refusal(resp) else "no refusal marker")
+    raise ValueError(f"unknown reading_qa subtype {sub}")
+
+
+def score_constraint(row, resp):
+    meta = row["meta"]
+    sub = row["subtype"]
+    golds = _golds(row, meta["gold"])
+    if sub == "word_limit":
+        n = len(resp.split())
+        if n > meta["word_limit"]:
+            return _res(False, sub, f"{n} words > limit {meta['word_limit']}")
+        return _res(_any_match(resp, golds), sub)
+    if sub == "answer_prefix":
+        lines = [l for l in resp.strip().splitlines() if l.strip()]
+        if len(lines) != 1:
+            return _res(False, sub, "not a single line")
+        m = re.match(r"\s*ANSWER:\s*(.+?)\s*$", lines[0])
+        if not m:
+            return _res(False, sub, "line does not start with 'ANSWER:'")
+        return _res(_any_match(m.group(1), golds), sub)
+    if sub == "uppercase":
+        if any(c.islower() for c in resp):
+            return _res(False, sub, "contains lowercase letters")
+        return _res(_any_match(resp, golds), sub)
+    raise ValueError(f"unknown constraint subtype {sub}")
+
+
+def score_classification(row, resp):
+    label = row["meta"]["label"]
+    r = resp.lower()
+    hit = any(k in r for k in AG_KEYWORDS[label])
+    other = any(k in r for lb, ks in AG_KEYWORDS.items() if lb != label
+                for k in ks if k not in AG_KEYWORDS[label])
+    return _res(hit and not other, "cls_plain")
 
 
 AG_KEYWORDS = {"World": ["world", "international"], "Sports": ["sport"],
@@ -247,6 +367,14 @@ def score_row(row, response):
         return score_format(row, response)
     if comp == "clean_replay":
         return score_replay(row, response)
+    if comp == "candidate_contract":
+        return score_candidate(row, response)
+    if comp == "reading_qa":
+        return score_reading_qa(row, response)
+    if comp == "constraint":
+        return score_constraint(row, response)
+    if comp == "classification":
+        return score_classification(row, response)
     raise ValueError(f"unknown component {comp}")
 
 
@@ -338,6 +466,78 @@ def selftest():
         (_row("clean_replay", "plain_agnews_cls", meta={"label": "Business"}),
          "This is a business news story.", True),
         (_row("clean_replay", "plain_eli5_qa", "free text"), "anything", None),
+        # -------- gold aliases (33-34)
+        (_row("answerability", "answerable", "Denver Broncos",
+              meta={"gold_aliases": ["Denver Broncos", "Broncos"]}),
+         "The Broncos.", True),                               # alias accepted
+        (_row("answerability", "answerable", "Denver Broncos",
+              meta={"gold_aliases": ["Denver Broncos", "Broncos"]}),
+         "The Panthers.", False),
+        # -------- format schema B (35-42)
+        (_row("format", "extract_B1", meta={"gold": "1937"}, schema_id="B1"),
+         '{"final_answer": "1937"}', True),
+        (_row("format", "extract_B1", meta={"gold": "1937"}, schema_id="B1"),
+         '{"answer": "1937"}', False),                        # train-A key set rejected
+        (_row("format", "extract_B2", meta={"gold": "1937"}, schema_id="B2",
+              prompt=f"Context:\n{EV}\n\nQ: when?\n\nschema"),
+         json.dumps({"final_answer": "1937", "support_quote": EV}), True),
+        (_row("format", "extract_B2", meta={"gold": "1937"}, schema_id="B2",
+              prompt=f"Context:\n{EV}\n\nQ: when?\n\nschema"),
+         json.dumps({"final_answer": "1937", "support_quote": "Not in the context."}), False),
+        (_row("format", "classify_B3", meta={"label": "Sports"}, schema_id="B3"),
+         '{"category": "Sports"}', True),
+        (_row("format", "classify_B3", meta={"label": "Sports"}, schema_id="B3"),
+         '{"label": "Sports"}', False),                       # A3 key rejected under B3
+        (_row("format", "classify_B4", meta={"label": "Sci/Tech"}, schema_id="B4"),
+         "category = Sci/Tech", True),
+        (_row("format", "classify_B4", meta={"label": "Sci/Tech"}, schema_id="B4"),
+         "label: Sci/Tech", False),                           # A4 line rejected under B4
+        # -------- candidate contract (43-48)
+        (_row("candidate_contract", "candidate_keep",
+              meta={"expected_decision": "KEEP", "final_kind": "gold", "gold": "1937"}),
+         "DECISION: KEEP\nFINAL: 1937", True),
+        (_row("candidate_contract", "candidate_keep",
+              meta={"expected_decision": "KEEP", "final_kind": "gold", "gold": "1937"}),
+         "DECISION: REVISE\nFINAL: 1937", False),             # wrong decision
+        (_row("candidate_contract", "candidate_revise",
+              meta={"expected_decision": "REVISE", "final_kind": "gold", "gold": "1937",
+                    "gold_aliases": ["1937", "in 1937"]}),
+         "DECISION: REVISE\nFINAL: in 1937", True),           # alias accepted
+        (_row("candidate_contract", "candidate_revise",
+              meta={"expected_decision": "REVISE", "final_kind": "gold", "gold": "1937"}),
+         "DECISION: REVISE\nFINAL: 1938", False),             # right decision, wrong value
+        (_row("candidate_contract", "candidate_revise",
+              meta={"expected_decision": "REVISE", "final_kind": "free"}),
+         "DECISION: REVISE\nFINAL: The premise is false; files are recoverable.", True),
+        (_row("candidate_contract", "candidate_keep",
+              meta={"expected_decision": "KEEP", "final_kind": "label", "label": "Business"}),
+         "FINAL: Business", False),                           # no DECISION line
+        # -------- reading QA (49-52)
+        (_row("reading_qa", "rq_answerable"),
+         "Deleting only removes the index entry, so the underlying data blocks stay on disk until overwritten.", True),
+        (_row("reading_qa", "rq_answerable"),
+         "There is no information about this in the material.", False),   # refused
+        (_row("reading_qa", "rq_insufficient"),
+         "The material does not contain what this asks about, so it cannot be answered.", True),
+        (_row("reading_qa", "rq_insufficient"), "It happened in 1937.", False),
+        # -------- constraint (53-58)
+        (_row("constraint", "word_limit", meta={"gold": "1937", "word_limit": 3}),
+         "In 1937.", True),
+        (_row("constraint", "word_limit", meta={"gold": "1937", "word_limit": 3}),
+         "The bridge was completed in the year 1937.", False),  # over the limit
+        (_row("constraint", "answer_prefix", meta={"gold": "1937"}),
+         "ANSWER: 1937", True),
+        (_row("constraint", "answer_prefix", meta={"gold": "1937"}),
+         "The answer is 1937.", False),                       # missing prefix
+        (_row("constraint", "uppercase", meta={"gold": "Golden Gate Bridge"}),
+         "GOLDEN GATE BRIDGE", True),
+        (_row("constraint", "uppercase", meta={"gold": "Golden Gate Bridge"}),
+         "Golden Gate Bridge", False),                        # lowercase present
+        # -------- classification plain (59-60)
+        (_row("classification", "cls_plain", meta={"label": "Sci/Tech"}),
+         "This one goes under the Sci/Tech desk.", True),
+        (_row("classification", "cls_plain", meta={"label": "Sports"}),
+         "Business, most likely.", False),
     ]
     fails = []
     for i, (row, resp, want) in enumerate(cases, 1):
