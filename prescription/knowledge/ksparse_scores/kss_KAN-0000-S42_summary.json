@@ -1,0 +1,54 @@
+{
+ "original": {
+  "acc_strict": 0.002,
+  "acc_lenient": 0.836,
+  "abstain": 0.0,
+  "n": 500
+ },
+ "distractor": {
+  "acc_strict": 0.0,
+  "acc_lenient": 0.82,
+  "abstain": 0.0,
+  "n": 500
+ },
+ "wrong_candidate_citation": {
+  "decision_acc": 0.032,
+  "final_acc": 0.028,
+  "joint": 0.028,
+  "adopt": 0.0,
+  "contract_followed": 0.032,
+  "n": 500
+ },
+ "cc_attempt": {
+  "decision_acc": 0.232,
+  "final_acc": 0.39,
+  "joint": 0.23,
+  "adopt": 0.0,
+  "contract_followed": 0.448,
+  "n": 500
+ },
+ "format": {
+  "schema_ok": 0.546,
+  "main": 0.314,
+  "n": 500
+ },
+ "insufficient": {
+  "insufficient_stop": 0.0,
+  "leaked_gold": 0.1335,
+  "n": 367
+ },
+ "insuf_ctr": {
+  "status_acc": 0.0,
+  "answer_acc": 0.0,
+  "joint": 0.0,
+  "false_abstain": 0.0,
+  "n": 367
+ },
+ "suff_ctr": {
+  "status_acc": 0.0,
+  "answer_acc": 0.0,
+  "joint": 0.0,
+  "false_abstain": 0.0,
+  "n": 367
+ }
+}
