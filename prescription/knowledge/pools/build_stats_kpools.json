@@ -1,0 +1,157 @@
+{
+  "generator_version": "kpool-v1.0",
+  "seed": 20260820,
+  "dataset": "framolfese/2wikimultihopqa",
+  "split": "train",
+  "train_rows_total": 167454,
+  "filter_accounting": {
+    "drop_yesno_or_empty_answer": 57559,
+    "pass_all_filters": 109347,
+    "drop_question_shape": 538,
+    "drop_long_answer": 10
+  },
+  "eval_guard_accounting": {
+    "drop_supporting_title_in_eval_context": 14390,
+    "drop_citation_sentence_in_eval_prompt": 23
+  },
+  "candidates_after_guards": 94934,
+  "donor_pool_families": 1500,
+  "evidence_subtypes": {
+    "false_fact": 667,
+    "irrelevant_passage": 667,
+    "confusable_passage": 666
+  },
+  "revision_fix_kinds": {
+    "similar_entity": 502,
+    "wrong_citation": 498
+  },
+  "evidence_donor_reuse_max": 7,
+  "hard_errors": [],
+  "pools": {
+    "k_answerability_2000": {
+      "n": 2000,
+      "n_families": 1000,
+      "sha256_16": "f861e4d5043b9a15",
+      "by_subtype": {
+        "sufficient": 1000,
+        "insufficient": 1000
+      },
+      "target_length_buckets_wordcount": {
+        "<50": 1927,
+        "50-100": 72,
+        "100-200": 1,
+        "200-400": 0,
+        ">=400": 0
+      }
+    },
+    "k_revision_2000": {
+      "n": 2000,
+      "n_families": 1000,
+      "sha256_16": "69d8c48e5cb98e71",
+      "by_subtype": {
+        "keep": 1000,
+        "fix_similar_entity": 502,
+        "fix_wrong_citation": 498
+      },
+      "target_length_buckets_wordcount": {
+        "<50": 1015,
+        "50-100": 984,
+        "100-200": 1,
+        "200-400": 0,
+        ">=400": 0
+      }
+    },
+    "k_evidence_2000": {
+      "n": 2000,
+      "n_families": 2000,
+      "sha256_16": "f144e2832d1b6e00",
+      "by_subtype": {
+        "false_fact": 667,
+        "irrelevant_passage": 667,
+        "confusable_passage": 666
+      },
+      "target_length_buckets_wordcount": {
+        "<50": 1390,
+        "50-100": 610,
+        "100-200": 0,
+        "200-400": 0,
+        ">=400": 0
+      }
+    },
+    "k_format_2000": {
+      "n": 2000,
+      "n_families": 2000,
+      "sha256_16": "b3c00094edc22786",
+      "by_subtype": {
+        "schema_KA1": 500,
+        "schema_KA2": 500,
+        "schema_KA3": 500,
+        "schema_KA4": 500
+      },
+      "target_length_buckets_wordcount": {
+        "<50": 1991,
+        "50-100": 9,
+        "100-200": 0,
+        "200-400": 0,
+        ">=400": 0
+      }
+    },
+    "k_clean_replay_2000": {
+      "n": 2000,
+      "n_families": 2000,
+      "sha256_16": "70ae7d4d30fb81a4",
+      "by_subtype": {
+        "plain": 2000
+      },
+      "target_length_buckets_wordcount": {
+        "<50": 1851,
+        "50-100": 149,
+        "100-200": 0,
+        "200-400": 0,
+        ">=400": 0
+      }
+    }
+  },
+  "scan_reports": {
+    "k_answerability_2000": {
+      "nonskeleton_8gram_dup_rate_family_contentlayer_GATE": 0.004,
+      "nonskeleton_8gram_dup_rate_family_quotestripped": 0.461,
+      "nonskeleton_8gram_dup_rate_family_raw": 0.137,
+      "target_x_eval_8gram_collision_count": 71,
+      "quoted_sentence_in_eval_prompt": 0,
+      "quote_leak_fids": []
+    },
+    "k_revision_2000": {
+      "nonskeleton_8gram_dup_rate_family_contentlayer_GATE": 0.005,
+      "nonskeleton_8gram_dup_rate_family_quotestripped": 0.999,
+      "nonskeleton_8gram_dup_rate_family_raw": 0.999,
+      "target_x_eval_8gram_collision_count": 76,
+      "quoted_sentence_in_eval_prompt": 0,
+      "quote_leak_fids": []
+    },
+    "k_evidence_2000": {
+      "nonskeleton_8gram_dup_rate_family_contentlayer_GATE": 0.004,
+      "nonskeleton_8gram_dup_rate_family_quotestripped": 0.999,
+      "nonskeleton_8gram_dup_rate_family_raw": 0.8115,
+      "target_x_eval_8gram_collision_count": 162,
+      "quoted_sentence_in_eval_prompt": 0,
+      "quote_leak_fids": []
+    },
+    "k_format_2000": {
+      "nonskeleton_8gram_dup_rate_family_contentlayer_GATE": 0.0005,
+      "nonskeleton_8gram_dup_rate_family_quotestripped": 0.0005,
+      "nonskeleton_8gram_dup_rate_family_raw": 0.014,
+      "target_x_eval_8gram_collision_count": 28,
+      "quoted_sentence_in_eval_prompt": 0,
+      "quote_leak_fids": []
+    },
+    "k_clean_replay_2000": {
+      "nonskeleton_8gram_dup_rate_family_contentlayer_GATE": 0.0045,
+      "nonskeleton_8gram_dup_rate_family_quotestripped": 0.521,
+      "nonskeleton_8gram_dup_rate_family_raw": 0.183,
+      "target_x_eval_8gram_collision_count": 106,
+      "quoted_sentence_in_eval_prompt": 0,
+      "quote_leak_fids": []
+    }
+  }
+}
