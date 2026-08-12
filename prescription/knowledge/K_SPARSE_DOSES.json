@@ -1,0 +1,688 @@
+{
+  "_spec": "C-26 §五 Knowledge sparse doses {0, onset, high}; onset per CONTRACT_ANALYSIS §4 frozen algorithm from the Reasoning discovery curves",
+  "_inputs": [
+    "prescription/lawv1/curves_e500_all.json",
+    "prescription/lawv1/curves_ans_e500.json"
+  ],
+  "_algorithm": {
+    "G": "seed-mean s_e(component,n) - seed-mean s_e(dose-0 placebo, same component grid, 3 seeds)",
+    "tau": "max(max anchor-dose 3-seed half-range, 95% CI halfwidth at placebo mean)",
+    "onset": "smallest grid dose with |G(n)|>tau and sign(G(n))==sign(G(n_next)); none -> literal no-onset",
+    "high": 2000,
+    "mid_if_no_onset": 240
+  },
+  "_deviations_self_certified": {
+    "D1": "CI term is analytic binomial halfwidth, not item-family bootstrap (per-item files absent from repo); advisor may veto and demand the bootstrap recomputation",
+    "D2": "component onset = min over its frozen endpoint set (per-endpoint onsets all listed)",
+    "D3": "mid for null-check = 240 (median of positive grid)",
+    "D4": "ANS curves are 50-family scores (insufficient n=26) despite the e500 filename; small-n flagged"
+  },
+  "components": {
+    "k_clean_replay": {
+      "k_pool": "k_clean_replay_2000",
+      "reasoning_grid": null,
+      "doses": {
+        "placebo_arm": 2000
+      },
+      "rule": "carrier component: the 2000-row pure-replay arm IS the shared dose-0 placebo of every K component grid; no component-vs-placebo contrast exists, so no onset is defined",
+      "component_onset": null,
+      "endpoint_detail": []
+    },
+    "k_format": {
+      "k_pool": "k_format_2000",
+      "reasoning_grid": "FMT",
+      "doses": {
+        "placebo": 0,
+        "onset": 30,
+        "high": 2000
+      },
+      "rule": "onset = min over endpoint-set onsets (D2)",
+      "primary_endpoint": "format.main",
+      "component_onset": 30,
+      "endpoint_detail": [
+        {
+          "condition": "format",
+          "metric": "semantic_correct",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.431,
+          "anchor_seed_half_ranges": {
+            "0": 0.0331,
+            "120": 0.0019,
+            "960": 0.0057,
+            "2000": 0.0028
+          },
+          "ci_halfwidth_analytic_binomial": 0.0422,
+          "tau": 0.0422,
+          "G_vs_placebo": {
+            "30": -0.1682,
+            "60": -0.1682,
+            "120": -0.1632,
+            "240": -0.1569,
+            "480": -0.1645,
+            "960": -0.1437,
+            "2000": -0.1329
+          },
+          "onset": 30,
+          "onset_direction": "-"
+        },
+        {
+          "condition": "format",
+          "metric": "json_valid",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.7877,
+          "anchor_seed_half_ranges": {
+            "0": 0.0511,
+            "120": 0.001,
+            "960": 0.0,
+            "2000": 0.0
+          },
+          "ci_halfwidth_analytic_binomial": 0.0349,
+          "tau": 0.0511,
+          "G_vs_placebo": {
+            "30": 0.2066,
+            "60": 0.2123,
+            "120": 0.2098,
+            "240": 0.2123,
+            "480": 0.2123,
+            "960": 0.2123,
+            "2000": 0.2123
+          },
+          "onset": 30,
+          "onset_direction": "+"
+        },
+        {
+          "condition": "format",
+          "metric": "schema_compliant",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.7877,
+          "anchor_seed_half_ranges": {
+            "0": 0.0511,
+            "120": 0.001,
+            "960": 0.0,
+            "2000": 0.0
+          },
+          "ci_halfwidth_analytic_binomial": 0.0349,
+          "tau": 0.0511,
+          "G_vs_placebo": {
+            "30": 0.2066,
+            "60": 0.2123,
+            "120": 0.2098,
+            "240": 0.2123,
+            "480": 0.2123,
+            "960": 0.2123,
+            "2000": 0.2123
+          },
+          "onset": 30,
+          "onset_direction": "+"
+        },
+        {
+          "condition": "format",
+          "metric": "contract_exact",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.7064,
+          "anchor_seed_half_ranges": {
+            "0": 0.0671,
+            "120": 0.0019,
+            "960": 0.0,
+            "2000": 0.0
+          },
+          "ci_halfwidth_analytic_binomial": 0.0388,
+          "tau": 0.0671,
+          "G_vs_placebo": {
+            "30": 0.2841,
+            "60": 0.2936,
+            "120": 0.2905,
+            "240": 0.2936,
+            "480": 0.2936,
+            "960": 0.2936,
+            "2000": 0.2936
+          },
+          "onset": 30,
+          "onset_direction": "+"
+        },
+        {
+          "condition": "format",
+          "metric": "main",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.2627,
+          "anchor_seed_half_ranges": {
+            "0": 0.0152,
+            "120": 0.001,
+            "960": 0.0057,
+            "2000": 0.0028
+          },
+          "ci_halfwidth_analytic_binomial": 0.0375,
+          "tau": 0.0375,
+          "G_vs_placebo": {
+            "30": -0.0018,
+            "60": 0.0001,
+            "120": 0.0044,
+            "240": 0.0114,
+            "480": 0.0038,
+            "960": 0.0246,
+            "2000": 0.0353
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        }
+      ]
+    },
+    "k_evidence": {
+      "k_pool": "k_evidence_2000",
+      "reasoning_grid": "EVD",
+      "doses": {
+        "placebo": 0,
+        "mid": 240,
+        "high": 2000
+      },
+      "rule": "no endpoint reached onset -> null check {0, mid, high}, mid=240 per D3",
+      "primary_endpoint": "distractor.acc_exact",
+      "component_onset": "no detected onset within tested range",
+      "endpoint_detail": [
+        {
+          "condition": "distractor",
+          "metric": "acc_exact",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.8431,
+          "anchor_seed_half_ranges": {
+            "0": 0.0076,
+            "120": 0.0094,
+            "960": 0.0029,
+            "1620": 0.0076
+          },
+          "ci_halfwidth_analytic_binomial": 0.031,
+          "tau": 0.031,
+          "G_vs_placebo": {
+            "30": 0.0038,
+            "60": 0.0132,
+            "120": 0.0227,
+            "240": 0.0151,
+            "480": 0.0284,
+            "960": 0.0164,
+            "1620": 0.0321
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        },
+        {
+          "condition": "distractor",
+          "metric": "acc_loose",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.8456,
+          "anchor_seed_half_ranges": {
+            "0": 0.0066,
+            "120": 0.0085,
+            "960": 0.0019,
+            "1620": 0.0066
+          },
+          "ci_halfwidth_analytic_binomial": 0.0308,
+          "tau": 0.0308,
+          "G_vs_placebo": {
+            "30": 0.0032,
+            "60": 0.0126,
+            "120": 0.0233,
+            "240": 0.0126,
+            "480": 0.0259,
+            "960": 0.0151,
+            "1620": 0.0302
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        },
+        {
+          "condition": "distractor",
+          "metric": "paired_family",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.8122,
+          "anchor_seed_half_ranges": {
+            "0": 0.0037,
+            "120": 0.0085,
+            "960": 0.0066,
+            "1620": 0.0066
+          },
+          "ci_halfwidth_analytic_binomial": 0.0333,
+          "tau": 0.0333,
+          "G_vs_placebo": {
+            "30": -0.0012,
+            "60": 0.0063,
+            "120": 0.0164,
+            "240": 0.0196,
+            "480": 0.0233,
+            "960": 0.0082,
+            "1620": 0.0353
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        }
+      ]
+    },
+    "k_revision": {
+      "k_pool": "k_revision_2000",
+      "reasoning_grid": "REV",
+      "doses": {
+        "placebo": 0,
+        "onset": 30,
+        "high": 2000
+      },
+      "rule": "onset = min over endpoint-set onsets (D2)",
+      "primary_endpoint": "wc_attempt.final_acc",
+      "component_onset": 30,
+      "endpoint_detail": [
+        {
+          "condition": "wc_attempt",
+          "metric": "final_acc",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.8002,
+          "anchor_seed_half_ranges": {
+            "0": 0.0029,
+            "120": 0.0189,
+            "960": 0.0085,
+            "2000": 0.0624
+          },
+          "ci_halfwidth_analytic_binomial": 0.0341,
+          "tau": 0.0624,
+          "G_vs_placebo": {
+            "30": -0.0649,
+            "60": -0.1631,
+            "120": -0.1512,
+            "240": -0.148,
+            "480": -0.0743,
+            "960": -0.0882,
+            "2000": -0.0794
+          },
+          "onset": 30,
+          "onset_direction": "-"
+        },
+        {
+          "condition": "wc_attempt",
+          "metric": "decision_acc",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.8721,
+          "anchor_seed_half_ranges": {
+            "0": 0.0056,
+            "120": 0.0331,
+            "960": 0.0151,
+            "2000": 0.0482
+          },
+          "ci_halfwidth_analytic_binomial": 0.0285,
+          "tau": 0.0482,
+          "G_vs_placebo": {
+            "30": -0.0895,
+            "60": -0.1424,
+            "120": -0.1292,
+            "240": -0.1311,
+            "480": 0.0126,
+            "960": 0.0555,
+            "2000": 0.029
+          },
+          "onset": 30,
+          "onset_direction": "-"
+        },
+        {
+          "condition": "wc_attempt",
+          "metric": "joint",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.7839,
+          "anchor_seed_half_ranges": {
+            "0": 0.001,
+            "120": 0.0265,
+            "960": 0.0085,
+            "2000": 0.0794
+          },
+          "ci_halfwidth_analytic_binomial": 0.0351,
+          "tau": 0.0794,
+          "G_vs_placebo": {
+            "30": -0.0864,
+            "60": -0.1828,
+            "120": -0.1525,
+            "240": -0.1431,
+            "480": -0.0618,
+            "960": -0.0775,
+            "2000": -0.0945
+          },
+          "onset": 30,
+          "onset_direction": "-"
+        },
+        {
+          "condition": "wc_attempt",
+          "metric": "adopt",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.109,
+          "anchor_seed_half_ranges": {
+            "0": 0.0057,
+            "120": 0.0218,
+            "960": 0.0142,
+            "2000": 0.034
+          },
+          "ci_halfwidth_analytic_binomial": 0.0266,
+          "tau": 0.034,
+          "G_vs_placebo": {
+            "30": 0.0668,
+            "60": 0.1292,
+            "120": 0.1342,
+            "240": 0.1386,
+            "480": 0.0044,
+            "960": -0.0428,
+            "2000": -0.0523
+          },
+          "onset": 30,
+          "onset_direction": "+"
+        },
+        {
+          "condition": "wc_attempt",
+          "metric": "contract_followed",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.9968,
+          "anchor_seed_half_ranges": {
+            "0": 0.0019,
+            "120": 0.001,
+            "960": 0.0019,
+            "2000": 0.0048
+          },
+          "ci_halfwidth_analytic_binomial": 0.0048,
+          "tau": 0.0048,
+          "G_vs_placebo": {
+            "30": 0.0013,
+            "60": 0.0013,
+            "120": 0.0019,
+            "240": 0.0013,
+            "480": -0.0006,
+            "960": -0.0032,
+            "2000": -0.0138
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        },
+        {
+          "condition": "cc_attempt",
+          "metric": "final_acc",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.9256,
+          "anchor_seed_half_ranges": {
+            "0": 0.0047,
+            "120": 0.0151,
+            "960": 0.0321,
+            "2000": 0.1389
+          },
+          "ci_halfwidth_analytic_binomial": 0.0224,
+          "tau": 0.1389,
+          "G_vs_placebo": {
+            "30": 0.0139,
+            "60": 0.0196,
+            "120": 0.0132,
+            "240": 0.012,
+            "480": -0.0447,
+            "960": -0.2205,
+            "2000": -0.3012
+          },
+          "onset": 960,
+          "onset_direction": "-"
+        },
+        {
+          "condition": "cc_attempt",
+          "metric": "decision_acc",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.9042,
+          "anchor_seed_half_ranges": {
+            "0": 0.0047,
+            "120": 0.0245,
+            "960": 0.0945,
+            "2000": 0.121
+          },
+          "ci_halfwidth_analytic_binomial": 0.0251,
+          "tau": 0.121,
+          "G_vs_placebo": {
+            "30": -0.0006,
+            "60": 0.0051,
+            "120": 0.005,
+            "240": 0.0032,
+            "480": -0.1197,
+            "960": -0.2886,
+            "2000": -0.4039
+          },
+          "onset": 960,
+          "onset_direction": "-"
+        },
+        {
+          "condition": "cc_attempt",
+          "metric": "joint",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.9017,
+          "anchor_seed_half_ranges": {
+            "0": 0.0057,
+            "120": 0.0245,
+            "960": 0.0945,
+            "2000": 0.1295
+          },
+          "ci_halfwidth_analytic_binomial": 0.0254,
+          "tau": 0.1295,
+          "G_vs_placebo": {
+            "30": 0.0,
+            "60": 0.0076,
+            "120": 0.0075,
+            "240": 0.0057,
+            "480": -0.1172,
+            "960": -0.2867,
+            "2000": -0.4102
+          },
+          "onset": 960,
+          "onset_direction": "-"
+        },
+        {
+          "condition": "cc_attempt",
+          "metric": "adopt",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.0,
+          "anchor_seed_half_ranges": {
+            "0": 0.0,
+            "120": 0.0,
+            "960": 0.0,
+            "2000": 0.0
+          },
+          "ci_halfwidth_analytic_binomial": 0.0,
+          "tau": 0.0,
+          "G_vs_placebo": {
+            "30": 0.0,
+            "60": 0.0,
+            "120": 0.0,
+            "240": 0.0,
+            "480": 0.0,
+            "960": 0.0,
+            "2000": 0.0
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        },
+        {
+          "condition": "cc_attempt",
+          "metric": "contract_followed",
+          "n_items": 529,
+          "placebo_mean_3seed": 0.9968,
+          "anchor_seed_half_ranges": {
+            "0": 0.001,
+            "120": 0.001,
+            "960": 0.0038,
+            "2000": 0.0113
+          },
+          "ci_halfwidth_analytic_binomial": 0.0048,
+          "tau": 0.0113,
+          "G_vs_placebo": {
+            "30": 0.0013,
+            "60": 0.0013,
+            "120": 0.0019,
+            "240": -0.0044,
+            "480": -0.0081,
+            "960": -0.0126,
+            "2000": -0.0145
+          },
+          "onset": 960,
+          "onset_direction": "-"
+        }
+      ]
+    },
+    "k_answerability": {
+      "k_pool": "k_answerability_2000",
+      "reasoning_grid": "ANS",
+      "doses": {
+        "placebo": 0,
+        "onset": 240,
+        "high": 2000
+      },
+      "rule": "onset = min over endpoint-set onsets (D2)",
+      "primary_endpoint": "insufficient.paired_answerability",
+      "component_onset": 240,
+      "endpoint_detail": [
+        {
+          "condition": "insufficient",
+          "metric": "paired_answerability",
+          "n_items": 26,
+          "placebo_mean_3seed": 0.2051,
+          "anchor_seed_half_ranges": {
+            "0": 0.0577,
+            "120": 0.0961,
+            "960": 0.0192,
+            "1822": 0.0192
+          },
+          "ci_halfwidth_analytic_binomial": 0.1552,
+          "tau": 0.1552,
+          "G_vs_placebo": {
+            "30": 0.0641,
+            "60": 0.1026,
+            "120": 0.1026,
+            "240": 0.2949,
+            "480": 0.6795,
+            "960": 0.6539,
+            "1822": 0.6667
+          },
+          "onset": 240,
+          "onset_direction": "+"
+        },
+        {
+          "condition": "insufficient",
+          "metric": "insufficient_stop",
+          "n_items": 26,
+          "placebo_mean_3seed": 0.2564,
+          "anchor_seed_half_ranges": {
+            "0": 0.0384,
+            "120": 0.1154,
+            "960": 0.0,
+            "1822": 0.0
+          },
+          "ci_halfwidth_analytic_binomial": 0.1678,
+          "tau": 0.1678,
+          "G_vs_placebo": {
+            "30": 0.0898,
+            "60": 0.0898,
+            "120": 0.1282,
+            "240": 0.359,
+            "480": 0.7436,
+            "960": 0.7436,
+            "1822": 0.7436
+          },
+          "onset": 240,
+          "onset_direction": "+"
+        },
+        {
+          "condition": "insuf_ctr",
+          "metric": "status_acc",
+          "n_items": 26,
+          "placebo_mean_3seed": 0.9743,
+          "anchor_seed_half_ranges": {
+            "0": 0.0192,
+            "120": 0.0192,
+            "960": 0.0,
+            "1822": 0.0
+          },
+          "ci_halfwidth_analytic_binomial": 0.0608,
+          "tau": 0.0608,
+          "G_vs_placebo": {
+            "30": -0.0128,
+            "60": -0.0128,
+            "120": 0.0,
+            "240": 0.0257,
+            "480": 0.0257,
+            "960": 0.0257,
+            "1822": 0.0257
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        },
+        {
+          "condition": "insuf_ctr",
+          "metric": "joint",
+          "n_items": 26,
+          "placebo_mean_3seed": 0.9743,
+          "anchor_seed_half_ranges": {
+            "0": 0.0192,
+            "120": 0.0192,
+            "960": 0.0,
+            "1822": 0.0
+          },
+          "ci_halfwidth_analytic_binomial": 0.0608,
+          "tau": 0.0608,
+          "G_vs_placebo": {
+            "30": -0.0128,
+            "60": -0.0128,
+            "120": 0.0,
+            "240": 0.0257,
+            "480": 0.0257,
+            "960": 0.0257,
+            "1822": 0.0257
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        },
+        {
+          "condition": "suff_ctr",
+          "metric": "status_acc",
+          "n_items": 26,
+          "placebo_mean_3seed": 0.9615,
+          "anchor_seed_half_ranges": {
+            "0": 0.0,
+            "120": 0.0192,
+            "960": 0.0577,
+            "1822": 0.0577
+          },
+          "ci_halfwidth_analytic_binomial": 0.074,
+          "tau": 0.074,
+          "G_vs_placebo": {
+            "30": 0.0,
+            "60": 0.0,
+            "120": -0.0256,
+            "240": -0.0769,
+            "480": -0.0769,
+            "960": -0.1538,
+            "1822": -0.1538
+          },
+          "onset": 240,
+          "onset_direction": "-"
+        },
+        {
+          "condition": "suff_ctr",
+          "metric": "joint",
+          "n_items": 26,
+          "placebo_mean_3seed": 0.8846,
+          "anchor_seed_half_ranges": {
+            "0": 0.0385,
+            "120": 0.0192,
+            "960": 0.0962,
+            "1822": 0.0769
+          },
+          "ci_halfwidth_analytic_binomial": 0.1228,
+          "tau": 0.1228,
+          "G_vs_placebo": {
+            "30": 0.0385,
+            "60": -0.0,
+            "120": 0.0128,
+            "240": -0.0769,
+            "480": -0.0,
+            "960": -0.1026,
+            "1822": -0.1411
+          },
+          "onset": "no detected onset within tested range",
+          "onset_direction": null
+        }
+      ]
+    }
+  }
+}
