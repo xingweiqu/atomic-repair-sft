@@ -298,7 +298,7 @@ def build_clean_replay(fams):
         row = base_row(r, "clean_replay", "plain")
         row.update(prompt=prompt_a(base_passages(r), r["question"]),
                    target=answer_skeleton(r, t, s),
-                   meta={"cite_title": t})
+                   meta={"cite_title": t, "cite_sentence": s})
         rows.append(row)
     return rows
 
@@ -339,7 +339,9 @@ def build_format(fams):
             errs.append(("format_target_invalid", fid_tr(r)))
         row = base_row(r, "format", f"schema_{sch['id']}", sch["id"])
         row.update(prompt=prompt_a(base_passages(r), r["question"]) + "\n\n" + sch["instr"],
-                   target=target, meta={"cite_title": t, "schema": sch["id"]})
+                   target=target,
+                   meta={"cite_title": t, "schema": sch["id"],
+                         "cite_sentence": s if sch["id"] == "KA2" else ""})
         rows.append(row)
     return rows, errs
 
@@ -368,7 +370,7 @@ def build_evidence(fams, dindex, donor_pool):
                 row.update(prompt=prompt_a(base_passages(r), r["question"], extra=extra),
                            target=f"{REFUTE_FALSE.format(w=cand)} {skel}",
                            meta={"wrong": cand, "wrong_source": csrc,
-                                 "cite_title": t_sup})
+                                 "cite_title": t_sup, "cite_sentence": s_sup})
             elif st == "irrelevant_passage":
                 dd, dp = pick_irrelevant(r, dindex)
                 if not dp:
@@ -377,7 +379,8 @@ def build_evidence(fams, dindex, donor_pool):
                 row.update(prompt=prompt_a(base_passages(r) + [dp], r["question"]),
                            target=f"{REFUTE_IRREL.format(t=dp[0])} {skel}",
                            meta={"donor_family": dd["fid"], "donor_title": dp[0],
-                                 "insert_pos": "last", "cite_title": t_sup})
+                                 "insert_pos": "last", "cite_title": t_sup,
+                                 "cite_sentence": s_sup})
                 donor_reg[dd["fid"]] += 1
             else:
                 dd, dp, ent = pick_confusable(r, dindex)
@@ -388,7 +391,7 @@ def build_evidence(fams, dindex, donor_pool):
                            target=f"{REFUTE_CONF.format(t=dp[0], e=ent)} {skel}",
                            meta={"donor_family": dd["fid"], "donor_title": dp[0],
                                  "matched_entity": ent, "insert_pos": "last",
-                                 "cite_title": t_sup})
+                                 "cite_title": t_sup, "cite_sentence": s_sup})
                 donor_reg[dd["fid"]] += 1
             got[st] += 1
             used.add(fid)
@@ -466,7 +469,8 @@ def build_revision(fams, donor_meta):
         keep.update(prompt=f"{p}\n\n{keep_line}\n\nIs the previous answer right? "
                            "If it is, keep it; if not, correct it.",
                     target=f"{KEEP_HEAD} {answer_skeleton(r, t_sup, s_sup)}",
-                    meta={"cand": r["answer"], "cited_title": t_sup})
+                    meta={"cand": r["answer"], "cited_title": t_sup,
+                          "cite_sentence": s_sup})
         hop_reason = (HOP1 if hop == "similar_entity" else HOP2).format(t=cited)
         fix_line = CAND_LINE.format(c=cand, t=cited)
         fix = base_row(r, "revision", f"fix_{hop}")
@@ -476,7 +480,7 @@ def build_revision(fams, donor_meta):
                            f'Based on the source "{t_sup}": "{s_sup}" '
                            + FIX_TAIL.format(g=r["answer"])),
                    meta={"cand": cand, "cited_title": cited, "hop": hop,
-                         "cand_source": csrc})
+                         "cand_source": csrc, "cite_sentence": s_sup})
         rows += [keep, fix]
         kinds[hop] += 1
         n_fam += 1
@@ -498,7 +502,7 @@ def build_answerability(fams):
         suff = base_row(r, "answerability", "sufficient")
         suff.update(prompt=prompt_a(base_passages(r), r["question"]),
                     target=answer_skeleton(r, t_sup, s_sup),
-                    meta={"cite_title": t_sup})
+                    meta={"cite_title": t_sup, "cite_sentence": s_sup})
         insuf = base_row(r, "answerability", "insufficient")
         insuf.update(prompt=prompt_a(kept, r["question"]),
                      target=ABSTAIN_TARGET,
@@ -625,9 +629,15 @@ def verify_pool(name, rows, expected_n, whitelist, eval_gram_hashes, eval_prompt
     # "leak" is just generic phrasing)
     quote_leaks = 0
     for r in rows:
-        m = re.search(r'"([^"]{20,})" The (?:correct )?answer is', r["target"])
-        s = m.group(1) if m else (json.loads(r["target"]).get("quote", "")
-                                  if r["subtype"] == "schema_KA2" else "")
+        # the quoted citation sentence is carried in meta by the builders, so
+        # the gate checks exactly the string the load-time guard screened
+        # (regex re-extraction truncates at internal double quotes and would
+        # gate on tail fragments the guard never saw); regex kept as fallback
+        s = r["meta"].get("cite_sentence", "")
+        if not s:
+            m = re.search(r'"([^"]{20,})" The (?:correct )?answer is', r["target"])
+            s = m.group(1) if m else (json.loads(r["target"]).get("quote", "")
+                                      if r["subtype"] == "schema_KA2" else "")
         if s:
             ns = norm(s)
             if len(ns.split()) >= 8 and f" {ns} " in eval_prompt_blob:
