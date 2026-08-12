@@ -217,7 +217,10 @@ def load_eval_guard():
             txt = row["prompt"] + " " + str(row["gold"])
             eval_prompt_parts.append(norm(txt))
             eval_gram_hashes |= {hash(g) for g in grams8(txt)}
-    eval_prompt_blob = "\n@@\n".join(eval_prompt_parts)
+    # word-boundary-safe haystack: parts are normalized token streams, joined
+    # and padded with spaces so " <ns> " membership == contiguous-token match
+    # (and therefore consistent with the 8-gram prefilter)
+    eval_prompt_blob = " " + " @@ ".join(eval_prompt_parts) + " "
     return used_ids, q_norms, ctx_titles, eval_prompt_blob, eval_gram_hashes
 
 def fid_tr(r):
@@ -561,7 +564,11 @@ def verify_pool(name, rows, expected_n, whitelist, eval_gram_hashes, eval_prompt
             for al in aliases(g):
                 if contains(body, al):
                     errs.append((name, "insufficient_context_leak", r["family_id"]))
-                if contains(tgt, al):
+                # target alias check only for non-constant targets: the fixed
+                # refusal formula is family-independent text and cannot convey
+                # the answer (stopword-like golds such as "The Answer" would
+                # false-positive on it)
+                if tgt != ABSTAIN_TARGET and contains(tgt, al):
                     errs.append((name, "insufficient_target_leak", r["family_id"]))
             if tgt != ABSTAIN_TARGET:
                 errs.append((name, "abstain_not_formulaic", r["family_id"]))
@@ -623,7 +630,7 @@ def verify_pool(name, rows, expected_n, whitelist, eval_gram_hashes, eval_prompt
                                   if r["subtype"] == "schema_KA2" else "")
         if s:
             ns = norm(s)
-            if len(ns.split()) >= 8 and ns in eval_prompt_blob:
+            if len(ns.split()) >= 8 and f" {ns} " in eval_prompt_blob:
                 quote_leaks += 1
     report["quoted_sentence_in_eval_prompt"] = quote_leaks
     if quote_leaks:
@@ -714,7 +721,7 @@ def main():
         if len(ns.split()) >= 8:
             gs = grams8(s_cit)
             if (not gs or any(hash(g) in eval_gram_hashes for g in gs)) \
-                    and ns in eval_prompt_blob:
+                    and f" {ns} " in eval_prompt_blob:
                 acct2["drop_citation_sentence_in_eval_prompt"] += 1; continue
         guarded.append(r)
     rng = random.Random(SEED)
