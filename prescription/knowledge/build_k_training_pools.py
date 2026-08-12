@@ -398,7 +398,26 @@ def build_evidence(fams, dindex, donor_pool):
         errs.append(("evidence_quota_unfilled", dict(got)))
     return rows, dict(got), donor_reg, [e for e in errs if e[0] != "evidence_family_unusable"]
 
-def pick_fix_candidate(r, donor_pool, want):
+def donor_meta_of(donors):
+    return [(d["answer"], expected_answer_class(d), answer_kind(d["answer"]))
+            for d in donors]
+
+def pick_donor_answer(r, donor_meta):
+    """Class-matched (else kind-matched) donor-pool answer != gold."""
+    rng = rng_for(fid_tr(r), "fixwc")
+    gold, cls, kind = r["answer"], expected_answer_class(r), answer_kind(r["answer"])
+
+    def ok(c):
+        return norm(c) != norm(gold) and not contains(c, gold) and not contains(gold, c)
+
+    for match in (lambda a, c, k: c == cls, lambda a, c, k: k == kind):
+        cands = sorted({a for a, c, k in donor_meta if match(a, c, k) and ok(a)})
+        rng.shuffle(cands)
+        if cands:
+            return cands[0]
+    return None
+
+def pick_fix_candidate(r, donor_meta, want):
     """Return (cand, cited_title, hop, source) for the fix side.
     similar_entity -> non-supporting context title, cited to its own passage (hop 1)
     wrong_citation -> donor-pool class-matched answer cited to a supporting title
@@ -418,15 +437,15 @@ def pick_fix_candidate(r, donor_pool, want):
             if titles:
                 return titles[0], titles[0], "similar_entity", "same_context_title"
         else:
-            cand, csrc = pick_wrong_candidate(r, donor_pool)
-            if cand and csrc == "other_family_answer":
+            cand = pick_donor_answer(r, donor_meta)
+            if cand:
                 for t in dict.fromkeys(r["sf_titles"]):
                     ss = r["sents"][r["titles"].index(t)]
                     if not contains(passage_text(t, ss), cand):
-                        return cand, t, "wrong_citation", csrc
+                        return cand, t, "wrong_citation", "donor_answer"
     return None, None, None, None
 
-def build_revision(fams, donor_pool):
+def build_revision(fams, donor_meta):
     rows, errs = [], []
     kinds = Counter()
     want_cycle = ["similar_entity", "wrong_citation"]
@@ -435,7 +454,7 @@ def build_revision(fams, donor_pool):
         if n_fam == N_PAIR_FAM:
             break
         t_sup, s_sup = support_citation(r)
-        cand, cited, hop, csrc = pick_fix_candidate(r, donor_pool, want_cycle[i % 2])
+        cand, cited, hop, csrc = pick_fix_candidate(r, donor_meta, want_cycle[i % 2])
         if not cand:
             continue
         p = prompt_a(base_passages(r), r["question"])
@@ -536,7 +555,9 @@ def verify_pool(name, rows, expected_n, whitelist, eval_gram_hashes, eval_prompt
         st = r["subtype"]
         tgt = r["target"]
         if st == "insufficient":
-            body = r["prompt"].split("\n\nQ:")[0]
+            # sources section only: the fixed instruction text can spuriously
+            # contain aliases of stopword-like answers ("The Information")
+            body = r["prompt"].split("Sources:\n", 1)[1].split("\n\nQ:")[0]
             for al in aliases(g):
                 if contains(body, al):
                     errs.append((name, "insufficient_context_leak", r["family_id"]))
@@ -592,15 +613,17 @@ def verify_pool(name, rows, expected_n, whitelist, eval_gram_hashes, eval_prompt
         coll |= {g for g in fam_grams_raw[f] if hash(g) in eval_gram_hashes}
     report["target_x_eval_8gram_collisions"] = sorted(coll)[:50]
     report["target_x_eval_8gram_collision_count"] = len(coll)
-    # sentence-level quote leak into any eval prompt (hard gate)
+    # sentence-level quote leak into any eval prompt (hard gate; sentences of
+    # >=8 normalized tokens — below the preregistered n-gram granularity a
+    # "leak" is just generic phrasing)
     quote_leaks = 0
     for r in rows:
-        m = re.search(r'"([^"]{40,})" The (?:correct )?answer is', r["target"])
+        m = re.search(r'"([^"]{20,})" The (?:correct )?answer is', r["target"])
         s = m.group(1) if m else (json.loads(r["target"]).get("quote", "")
                                   if r["subtype"] == "schema_KA2" else "")
         if s:
             ns = norm(s)
-            if ns and ns in eval_prompt_blob:
+            if len(ns.split()) >= 8 and ns in eval_prompt_blob:
                 quote_leaks += 1
     report["quoted_sentence_in_eval_prompt"] = quote_leaks
     if quote_leaks:
@@ -681,6 +704,18 @@ def main():
             acct2["drop_eval_question_dup"] += 1; continue
         if any(t in eval_ctx_titles for t in r["sf_titles"]):
             acct2["drop_supporting_title_in_eval_context"] += 1; continue
+        # citation-sentence guard: the sentence every target would quote must
+        # not appear verbatim in any eval prompt (duplicate passages can recur
+        # under different titles, so the title guard alone is not enough).
+        # 8-gram hash prefilter keeps this cheap; sentences <8 norm tokens are
+        # below the preregistered granularity and exempt (gate matches).
+        _t, s_cit = support_citation(r)
+        ns = norm(s_cit or "")
+        if len(ns.split()) >= 8:
+            gs = grams8(s_cit)
+            if (not gs or any(hash(g) in eval_gram_hashes for g in gs)) \
+                    and ns in eval_prompt_blob:
+                acct2["drop_citation_sentence_in_eval_prompt"] += 1; continue
         guarded.append(r)
     rng = random.Random(SEED)
     rng.shuffle(guarded)
@@ -690,6 +725,7 @@ def main():
     donors = guarded[:N_DONOR]
     rest = guarded[N_DONOR:]
     dindex = donor_structs(donors)
+    donor_meta = donor_meta_of(donors)
 
     it = iter(rest)
     taken = set()
@@ -707,7 +743,7 @@ def main():
     # over-allocate candidate families; builders stop at their quota
     ans_f = take(int(N_PAIR_FAM * 1.6), lambda r: build_insufficient(r)[0] is not None)
     rev_f = take(int(N_PAIR_FAM * 1.3),
-                 lambda r: pick_fix_candidate(r, donors, "similar_entity")[0] is not None)
+                 lambda r: pick_fix_candidate(r, donor_meta, "similar_entity")[0] is not None)
     evd_f = take(int(N_POOL * 1.25), lambda r: True)
     fmt_f = take(N_POOL, lambda r: True)
     rep_f = take(N_POOL, lambda r: True)
@@ -715,7 +751,7 @@ def main():
     whitelist = skeleton_whitelist()
 
     ans_rows, e1 = build_answerability(ans_f)
-    rev_rows, rev_kinds, e2 = build_revision(rev_f, donors)
+    rev_rows, rev_kinds, e2 = build_revision(rev_f, donor_meta)
     evd_rows, evd_got, evd_donor_reg, e3 = build_evidence(evd_f, dindex, donors)
     fmt_rows, e4 = build_format(fmt_f)
     rep_rows = build_clean_replay(rep_f)
