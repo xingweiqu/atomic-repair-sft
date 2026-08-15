@@ -1,0 +1,7 @@
+run_id,component,dose,seed,dataset,q_d,max_steps,data_hash,config_hash,eval_hash,scorer_hash,data_sub,eval_file,maxlen
+MIX-replay-S42,MIX,replay,42,lawv1_MIX-replay,0,54,533e3f1c33b44cf8,74475808adf0ee37,tri-domain,tri,data_MIX,prescription/gate1/eval500_proto.jsonl,8192
+MIX-uniform-S42,MIX,uniform,42,lawv1_MIX-uniform,0,54,4f517af490fef604,74475808adf0ee37,tri-domain,tri,data_MIX,prescription/gate1/eval500_proto.jsonl,8192
+MIX-failure_freq-S42,MIX,failure_freq,42,lawv1_MIX-failure_freq,0,54,2dc2804f6ada05e8,74475808adf0ee37,tri-domain,tri,data_MIX,prescription/gate1/eval500_proto.jsonl,8192
+MIX-worst_repair-S42,MIX,worst_repair,42,lawv1_MIX-worst_repair,0,54,53c4fbedfc2b6f7f,74475808adf0ee37,tri-domain,tri,data_MIX,prescription/gate1/eval500_proto.jsonl,8192
+MIX-predicted_optimal-S42,MIX,predicted_optimal,42,lawv1_MIX-predicted_optimal,0,54,cd33c9520ba75f13,74475808adf0ee37,tri-domain,tri,data_MIX,prescription/gate1/eval500_proto.jsonl,8192
+MIX-retention_constrained-S42,MIX,retention_constrained,42,lawv1_MIX-retention_constrained,0,54,6e3493bbf435b82f,74475808adf0ee37,tri-domain,tri,data_MIX,prescription/gate1/eval500_proto.jsonl,8192

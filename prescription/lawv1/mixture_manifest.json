@@ -1,0 +1,119 @@
+{
+ "arms": {
+  "replay": {
+   "counts": {
+    "fmt_R": 0,
+    "ans_R": 0,
+    "fmt_K": 0,
+    "ans_K": 0,
+    "fmt_IF": 0,
+    "ans_IF": 0,
+    "replay_total": 2000,
+    "replay_R": 668,
+    "replay_K": 666,
+    "replay_IF": 666
+   },
+   "examples": 2000,
+   "total_target_tokens": 153132,
+   "total_sequence_tokens": 870091,
+   "packed_sequences_est": 425,
+   "data_sha256": "533e3f1c33b44cf8"
+  },
+  "uniform": {
+   "counts": {
+    "fmt_R": 100,
+    "ans_R": 100,
+    "fmt_K": 100,
+    "ans_K": 100,
+    "fmt_IF": 100,
+    "ans_IF": 100,
+    "replay_total": 1400,
+    "replay_R": 468,
+    "replay_K": 466,
+    "replay_IF": 466
+   },
+   "examples": 2000,
+   "total_target_tokens": 122553,
+   "total_sequence_tokens": 872190,
+   "packed_sequences_est": 426,
+   "data_sha256": "4f517af490fef604"
+  },
+  "failure_freq": {
+   "counts": {
+    "fmt_R": 200,
+    "ans_R": 240,
+    "fmt_K": 210,
+    "ans_K": 140,
+    "fmt_IF": 90,
+    "ans_IF": 320,
+    "replay_total": 800,
+    "replay_R": 268,
+    "replay_K": 266,
+    "replay_IF": 266
+   },
+   "examples": 2000,
+   "total_target_tokens": 90666,
+   "total_sequence_tokens": 841469,
+   "packed_sequences_est": 411,
+   "data_sha256": "2dc2804f6ada05e8"
+  },
+  "worst_repair": {
+   "counts": {
+    "fmt_R": 0,
+    "ans_R": 400,
+    "fmt_K": 0,
+    "ans_K": 400,
+    "fmt_IF": 0,
+    "ans_IF": 400,
+    "replay_total": 800,
+    "replay_R": 268,
+    "replay_K": 266,
+    "replay_IF": 266
+   },
+   "examples": 2000,
+   "total_target_tokens": 101360,
+   "total_sequence_tokens": 868105,
+   "packed_sequences_est": 424,
+   "data_sha256": "53c4fbedfc2b6f7f"
+  },
+  "predicted_optimal": {
+   "counts": {
+    "fmt_R": 0,
+    "ans_R": 480,
+    "fmt_K": 30,
+    "ans_K": 30,
+    "fmt_IF": 0,
+    "ans_IF": 0,
+    "replay_total": 1460,
+    "replay_R": 488,
+    "replay_K": 486,
+    "replay_IF": 486
+   },
+   "examples": 2000,
+   "total_target_tokens": 137655,
+   "total_sequence_tokens": 747132,
+   "packed_sequences_est": 365,
+   "data_sha256": "cd33c9520ba75f13"
+  },
+  "retention_constrained": {
+   "counts": {
+    "fmt_R": 0,
+    "ans_R": 480,
+    "fmt_K": 0,
+    "ans_K": 30,
+    "fmt_IF": 0,
+    "ans_IF": 0,
+    "replay_total": 1490,
+    "replay_R": 498,
+    "replay_K": 496,
+    "replay_IF": 496
+   },
+   "examples": 2000,
+   "total_target_tokens": 139336,
+   "total_sequence_tokens": 730960,
+   "packed_sequences_est": 357,
+   "data_sha256": "6e3493bbf435b82f"
+  }
+ },
+ "shared_max_steps": 54
+}
