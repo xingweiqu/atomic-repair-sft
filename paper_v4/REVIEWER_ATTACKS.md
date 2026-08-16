@@ -37,7 +37,7 @@
     可答:标注 direction-grade;关键结论(KRV 反转)做了 3-seed targeted replication,不复现的(KAN retention)已撤回——展示了自我纠错;其余单 seed 结论不进主 claim。
 
 13. **撤回这么多,前期结论还能信吗?**
-    转为优势:撤回全部由更大评测触发且有台账,"small evals manufacture false curves" 本身是贡献#13;终局主张全部建立在 529-fam/多 seed/预注册层。
+    转为优势:撤回全部由更大评测触发且有台账,"several apparent effects from smaller evaluations failed to replicate at larger evaluation scale" 本身是方法学贡献(#13);终局主张全部建立在 529-fam/多 seed/预注册层。
 
 14. **Replay seed 42 在 calibration 阶段已被观察,4/4 ranking 是否掺水?**
     可答:replay S42 是预注册 calibration 输入(规则文件先于任何 Llama 数据 commit),其纳入 replay 均值也在 freeze 文件中事先声明;primary 判据(predicted vs uniform)双方全部在 freeze 之后训练,完全前瞻;因此四臂结果的正确表述是 **frozen-ranking accuracy(4/4 recovered)**,而非"四臂全盲";主文与图注均按此措辞。剩余暴露:仅 replay 一臂的绝对水平部分先验可知——这恰是其残差最小(−.005)的自然解释,已如实写入 calibration 讨论。

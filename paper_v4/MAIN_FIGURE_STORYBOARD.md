@@ -12,7 +12,7 @@
 - **Panels**: 4 curves (Format interface saturation; Evidence flat; Revision KEEP/FIX seesaw with adopt overlay; Answerability target vs false-abstain Pareto), x = examples with q_d second axis, 3-seed anchor bars; per-condition n printed (529 core / 249 answerability).
 - **Data**: curves_e500_all.json, curves_ans_formal_e500.json, dose manifests.
 - **Takeaway**: no shared functional form — saturating, null, adverse, and constrained-gain shapes coexist.
-- **Caption draft**: "SFT components exhibit structured but heterogeneous dose–response profiles under matched token budget and update count (529-family evaluation; answerability subset 249)."
+- **Caption draft**: "SFT components exhibit structured but heterogeneous dose–response profiles; within each grid, intervention examples replace matched replay under a fixed protocol (529-family evaluation; answerability subset 249)."
 
 ## Fig 3 — Cross-domain collateral matrix
 - **Question**: does a component's effect stay in its training domain?
@@ -26,7 +26,7 @@
 - **Panels**: (a) frozen-predicted vs actual U for six Qwen arms, DQ'd failure_freq marked, ρ=−.43 annotated; (b) rescue decomposition bar chart: pairwise interactions (small), carrier-bridge deltas (fmt_R/ans_K→0, ans_R survives), diversity-by-dose cells (300-diverse −, 600/1200-diverse +, 1200-concentrated 0).
 - **Data**: MIXTURE_SPEC_FROZEN, MIXTURE_OPEN_RESULT, RESCUE_OPEN_RESULT, INTERACTION_CORRECTION.
 - **Takeaway**: the preregistered additive bet failed; controlled rescue attributes the residual to carrier dependence and a diversity-by-dose regime, not pairwise interactions.
-- **Caption draft**: "Preregistered additive mixture prediction fails on the development family (a); six targeted rescue runs isolate carrier dependence and a diversity-by-dose premium as the missing structure (b)."
+- **Caption draft**: "Preregistered additive mixture prediction fails on the development family (a); six targeted rescue runs identify carrier dependence and a diversity-by-dose regime as the dominant corrections supported by the rescue (b)."
 
 ## Fig 5 — Held-out prospective opening
 - **Question**: does the corrected, frozen model prescribe on a family it never saw?
