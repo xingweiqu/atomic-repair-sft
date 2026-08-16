@@ -5,17 +5,18 @@ cd /opt/tiger/atomic-repair-sft-github
 git fetch -q origin prescription-v1 2>/dev/null && git checkout -f -q -B prescription-v1 origin/prescription-v1
 export FORCE_TORCHRUN=1 NPROC_PER_NODE=8
 ulimit -c 0
-LOCKS=/mnt/hdfs/xwqu/lawv1/locks_mix; OUTB=/mnt/hdfs/xwqu/lawv1/runs
+LOCKS=/mnt/hdfs/xwqu/lawv1/locks_${MIXSET:-mix}; OUTB=/mnt/hdfs/xwqu/lawv1/runs
+DATA_SUB=${DATA_SUB:-data_MIX}; MAN=${MAN:-prescription/lawv1/mixture_manifest.json}; ARMS=${ARMS:-replay uniform failure_freq worst_repair predicted_optimal retention_constrained}
 mkdir -p $LOCKS $OUTB /mnt/hdfs/xwqu/lawv1/ckpts
-MS=$(python3 -c "import json;print(json.load(open('prescription/lawv1/mixture_manifest.json'))['shared_max_steps'])")
-for ARM in replay uniform failure_freq worst_repair predicted_optimal retention_constrained; do
+MS=$(python3 -c "import json;print(json.load(open('$MAN'))['shared_max_steps'])" 2>/dev/null || echo 54)
+for ARM in $ARMS; do
   RID=MIX-${ARM}-S42
   [ -f $OUTB/$RID/DONE ] && continue
   mkdir $LOCKS/$RID 2>/dev/null || continue
   RD=$OUTB/$RID; mkdir -p $RD
   LOCAL=/opt/tiger/lawv1_local/$RID
   sed -e "s#__DATASET__#lawv1_MIX-${ARM}#" -e "s#__OUTPUT__#$LOCAL#" -e "s#__MAXSTEPS__#$MS#" \
-      -e "s#dataset_dir: ./prescription/lawv1#dataset_dir: /mnt/hdfs/xwqu/lawv1/data_MIX#" \
+      -e "s#dataset_dir: ./prescription/lawv1#dataset_dir: /mnt/hdfs/xwqu/lawv1/$DATA_SUB#" \
       configs/lawv1/train_smoke_packed.yaml > $RD/train_config.yaml
   rm -rf $LOCAL
   if llamafactory-cli train $RD/train_config.yaml > $RD/train_log.txt 2>&1 && [ -f $LOCAL/config.json ]; then
