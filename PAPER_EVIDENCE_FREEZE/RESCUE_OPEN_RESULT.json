@@ -1,0 +1,25 @@
+{
+ "baseline": 0.5333,
+ "U": {
+  "BRfmtR": 0.5297,
+  "BRansR": 0.5926,
+  "BRansK": 0.5304,
+  "PAIRR": 0.5823,
+  "UNIHALF": 0.511,
+  "PAIRX": 0.5751
+ },
+ "deltas": {
+  "BRfmtR": -0.0036,
+  "BRansR": 0.0593,
+  "BRansK": -0.0029,
+  "PAIRR": 0.049,
+  "UNIHALF": -0.0223,
+  "PAIRX": 0.0418
+ },
+ "interaction_in_domain": -0.0067,
+ "interaction_cross_domain": -0.0146,
+ "unihalf_vs_fulluniform": {
+  "half": -0.0223,
+  "full": 0.0688
+ }
+}

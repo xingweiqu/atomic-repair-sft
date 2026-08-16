@@ -1,0 +1,435 @@
+{
+ "per_run": {
+  "LL-predicted-S42": {
+   "U": 0.4528,
+   "domain_U": {
+    "R": 0.4687,
+    "K": 0.5297,
+    "IF": 0.36
+   },
+   "branches": {
+    "R.base": 0.6616,
+    "R.robust": 0.4367,
+    "R.candidate": 0.413,
+    "R.answerability": 0.7149,
+    "R.interface": 0.1172,
+    "K.base": 0.482,
+    "K.robust": 0.482,
+    "K.candidate": 0.468,
+    "K.answerability": 0.8447,
+    "K.interface": 0.372,
+    "IF.base": 0.82,
+    "IF.robust": 0.08,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.0,
+    "IF.interface": 0.9
+   },
+   "worst_branch": {
+    "name": "IF.answerability",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.6616,
+    "K": 0.482,
+    "IF": 0.82
+   }
+  },
+  "LL-predicted-S43": {
+   "U": 0.4457,
+   "domain_U": {
+    "R": 0.4235,
+    "K": 0.5537,
+    "IF": 0.36
+   },
+   "branches": {
+    "R.base": 0.6371,
+    "R.robust": 0.31,
+    "R.candidate": 0.3979,
+    "R.answerability": 0.6627,
+    "R.interface": 0.1096,
+    "K.base": 0.688,
+    "K.robust": 0.686,
+    "K.candidate": 0.279,
+    "K.answerability": 0.6676,
+    "K.interface": 0.448,
+    "IF.base": 0.88,
+    "IF.robust": 0.04,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.0,
+    "IF.interface": 0.88
+   },
+   "worst_branch": {
+    "name": "IF.answerability",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.6371,
+    "K": 0.688,
+    "IF": 0.88
+   }
+  },
+  "LL-predicted-S44": {
+   "U": 0.4917,
+   "domain_U": {
+    "R": 0.461,
+    "K": 0.5901,
+    "IF": 0.424
+   },
+   "branches": {
+    "R.base": 0.656,
+    "R.robust": 0.5539,
+    "R.candidate": 0.3005,
+    "R.answerability": 0.6867,
+    "R.interface": 0.1078,
+    "K.base": 0.618,
+    "K.robust": 0.632,
+    "K.candidate": 0.428,
+    "K.answerability": 0.7847,
+    "K.interface": 0.488,
+    "IF.base": 0.82,
+    "IF.robust": 0.2,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.18,
+    "IF.interface": 0.92
+   },
+   "worst_branch": {
+    "name": "IF.candidate",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.656,
+    "K": 0.618,
+    "IF": 0.82
+   }
+  },
+  "LL-uniform-S42": {
+   "U": 0.399,
+   "domain_U": {
+    "R": 0.4642,
+    "K": 0.3808,
+    "IF": 0.352
+   },
+   "branches": {
+    "R.base": 0.6881,
+    "R.robust": 0.3989,
+    "R.candidate": 0.3903,
+    "R.answerability": 0.747,
+    "R.interface": 0.0964,
+    "K.base": 0.406,
+    "K.robust": 0.422,
+    "K.candidate": 0.534,
+    "K.answerability": 0.0,
+    "K.interface": 0.542,
+    "IF.base": 0.3,
+    "IF.robust": 0.26,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.32,
+    "IF.interface": 0.88
+   },
+   "worst_branch": {
+    "name": "IF.candidate",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.6881,
+    "K": 0.406,
+    "IF": 0.3
+   }
+  },
+  "LL-uniform-S43": {
+   "U": 0.3791,
+   "domain_U": {
+    "R": 0.4581,
+    "K": 0.3231,
+    "IF": 0.356
+   },
+   "branches": {
+    "R.base": 0.6465,
+    "R.robust": 0.4423,
+    "R.candidate": 0.378,
+    "R.answerability": 0.6667,
+    "R.interface": 0.1569,
+    "K.base": 0.48,
+    "K.robust": 0.468,
+    "K.candidate": 0.217,
+    "K.answerability": 0.0926,
+    "K.interface": 0.358,
+    "IF.base": 0.78,
+    "IF.robust": 0.12,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.0,
+    "IF.interface": 0.88
+   },
+   "worst_branch": {
+    "name": "IF.answerability",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0054
+   },
+   "original_retention": {
+    "R": 0.6465,
+    "K": 0.48,
+    "IF": 0.78
+   }
+  },
+  "LL-uniform-S44": {
+   "U": 0.4416,
+   "domain_U": {
+    "R": 0.4669,
+    "K": 0.366,
+    "IF": 0.492
+   },
+   "branches": {
+    "R.base": 0.6824,
+    "R.robust": 0.3743,
+    "R.candidate": 0.4282,
+    "R.answerability": 0.7229,
+    "R.interface": 0.1267,
+    "K.base": 0.502,
+    "K.robust": 0.502,
+    "K.candidate": 0.486,
+    "K.answerability": 0.0,
+    "K.interface": 0.34,
+    "IF.base": 0.68,
+    "IF.robust": 0.92,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.0,
+    "IF.interface": 0.86
+   },
+   "worst_branch": {
+    "name": "IF.answerability",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.004,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.6824,
+    "K": 0.502,
+    "IF": 0.68
+   }
+  },
+  "LL-replay-S43": {
+   "U": 0.3075,
+   "domain_U": {
+    "R": 0.2677,
+    "K": 0.3188,
+    "IF": 0.336
+   },
+   "branches": {
+    "R.base": 0.7013,
+    "R.robust": 0.4934,
+    "R.candidate": 0.0056,
+    "R.answerability": 0.004,
+    "R.interface": 0.1342,
+    "K.base": 0.798,
+    "K.robust": 0.796,
+    "K.candidate": 0.0,
+    "K.answerability": 0.0,
+    "K.interface": 0.0,
+    "IF.base": 0.68,
+    "IF.robust": 1.0,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.0,
+    "IF.interface": 0.0
+   },
+   "worst_branch": {
+    "name": "IF.answerability",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.7013,
+    "K": 0.798,
+    "IF": 0.68
+   }
+  },
+  "LL-replay-S44": {
+   "U": 0.2935,
+   "domain_U": {
+    "R": 0.2453,
+    "K": 0.3112,
+    "IF": 0.324
+   },
+   "branches": {
+    "R.base": 0.6843,
+    "R.robust": 0.5293,
+    "R.candidate": 0.0009,
+    "R.answerability": 0.008,
+    "R.interface": 0.0038,
+    "K.base": 0.782,
+    "K.robust": 0.774,
+    "K.candidate": 0.0,
+    "K.answerability": 0.0,
+    "K.interface": 0.0,
+    "IF.base": 0.62,
+    "IF.robust": 1.0,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.0,
+    "IF.interface": 0.0
+   },
+   "worst_branch": {
+    "name": "IF.answerability",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.6843,
+    "K": 0.782,
+    "IF": 0.62
+   }
+  },
+  "LL-heuristic-S42": {
+   "U": 0.3398,
+   "domain_U": {
+    "R": 0.3786,
+    "K": 0.4288,
+    "IF": 0.212
+   },
+   "branches": {
+    "R.base": 0.6975,
+    "R.robust": 0.4045,
+    "R.candidate": 0.0,
+    "R.answerability": 0.7871,
+    "R.interface": 0.0038,
+    "K.base": 0.666,
+    "K.robust": 0.658,
+    "K.candidate": 0.0,
+    "K.answerability": 0.8202,
+    "K.interface": 0.0,
+    "IF.base": 0.86,
+    "IF.robust": 0.2,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.0,
+    "IF.interface": 0.0
+   },
+   "worst_branch": {
+    "name": "IF.answerability",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.6975,
+    "K": 0.666,
+    "IF": 0.86
+   }
+  },
+  "LL-replay-S42(calib)": {
+   "U": 0.308,
+   "domain_U": {
+    "R": 0.2354,
+    "K": 0.3168,
+    "IF": 0.372
+   },
+   "branches": {
+    "R.base": 0.6692,
+    "R.robust": 0.4631,
+    "R.candidate": 0.0009,
+    "R.answerability": 0.0,
+    "R.interface": 0.0435,
+    "K.base": 0.792,
+    "K.robust": 0.792,
+    "K.candidate": 0.0,
+    "K.answerability": 0.0,
+    "K.interface": 0.0,
+    "IF.base": 0.68,
+    "IF.robust": 1.0,
+    "IF.candidate": 0.0,
+    "IF.answerability": 0.0,
+    "IF.interface": 0.18
+   },
+   "worst_branch": {
+    "name": "IF.answerability",
+    "value": 0.0
+   },
+   "false_abstain": {
+    "R": 0.0,
+    "K": 0.0
+   },
+   "original_retention": {
+    "R": 0.6692,
+    "K": 0.792,
+    "IF": 0.68
+   }
+  }
+ },
+ "prediction_vs_actual": {
+  "predicted": {
+   "frozen": 0.3713,
+   "actual": 0.4634,
+   "residual": 0.0921
+  },
+  "uniform": {
+   "frozen": 0.342,
+   "actual": 0.4066,
+   "residual": 0.0646
+  },
+  "heuristic": {
+   "frozen": 0.3266,
+   "actual": 0.3398,
+   "residual": 0.0132
+  },
+  "replay": {
+   "frozen": 0.308,
+   "actual": 0.303,
+   "residual": -0.005
+  }
+ },
+ "U_MAE": 0.0437,
+ "direction_hit_rate": "4/4 frozen ranking exact (Spearman 1.0)",
+ "vector_prediction_note": "endpoint-vector-level predictions were NOT part of the frozen output (only U-level); declared limitation",
+ "wording_corrections_c38": [
+  "cross-family evidence not universal law",
+  "ranking/direction perfect, magnitudes under-calibrated (frozen gaps .029/.015/.019 vs actual .057/.067/.037)",
+  "non-constant residual: replay -.005 / heuristic +.013 / uniform +.065 / predicted +.092 -> diversity gains still underestimated"
+ ],
+ "provenance": {
+  "freeze_commit": "see git log LLAMA_PREDICTION_FREEZE",
+  "current_commit": "36eca1fd13f0c862569104d461b43f16bd7f3ef7",
+  "calibration_runs": [
+   "LL-replay-S42",
+   "LL-BRansR-S42"
+  ],
+  "training_runs": [
+   "LL-predicted-S42",
+   "LL-predicted-S43",
+   "LL-predicted-S44",
+   "LL-uniform-S42",
+   "LL-uniform-S43",
+   "LL-uniform-S44",
+   "LL-replay-S43",
+   "LL-replay-S44",
+   "LL-heuristic-S42",
+   "LL-replay-S42(calib)"
+  ],
+  "scorer": "lawv1_score.py v1.2 + score_k.py + if_scorer.py (hashes in RUN matrices)"
+ }
+}

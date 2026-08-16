@@ -31,7 +31,7 @@
 - Appendix: calibration rule freeze, prediction freeze JSON, verdict table, per-seed audit, retention table, base-R artifact note.
 
 ## 7. Discussion / Limitations
-- One held-out family; magnitude calibration (structured underestimation of diverse mixtures) as the open modeling problem; coarse dose resolution of the diversity regime; U design choices; single-seed direction-grade sparse grids; four intervention families only.
+- One held-out family; magnitude calibration (structured underestimation of diverse mixtures) as the open modeling problem; coarse dose resolution of the diversity regime; U design choices (alternative-aggregation sensitivity: *planned appendix analysis, not yet generated*); single-seed direction-grade sparse grids; four intervention families only.
 
 ## 8. Related Work
 - Data mixing/selection for LM training; scaling-laws framing (contrast: local response vs loss power laws); behavioral evaluation & robustness suites; reasoning faithfulness interventions (RFEval as measurement-side neighbor; we supply the training-side dose–response); abstention/calibration training.

@@ -1,0 +1,257 @@
+{
+ "frozen": "2026-08-16",
+ "budget_examples": 2000,
+ "replay_floor": 800,
+ "pruning": {
+  "evidence": "weak in all 3 domains (R +2-3pp, K in-domain -5pp, IF flat)",
+  "revision": "R fix never>placebo; K all-KEEP reversal 3-seed; IF pool gated"
+ },
+ "arms": {
+  "replay": {
+   "fmt_R": 0,
+   "ans_R": 0,
+   "fmt_K": 0,
+   "ans_K": 0,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 2000,
+   "replay_R": 668,
+   "replay_K": 666,
+   "replay_IF": 666
+  },
+  "uniform": {
+   "fmt_R": 100,
+   "ans_R": 100,
+   "fmt_K": 100,
+   "ans_K": 100,
+   "fmt_IF": 100,
+   "ans_IF": 100,
+   "replay_total": 1400,
+   "replay_R": 468,
+   "replay_K": 466,
+   "replay_IF": 466
+  },
+  "failure_freq": {
+   "fmt_R": 200,
+   "ans_R": 240,
+   "fmt_K": 210,
+   "ans_K": 140,
+   "fmt_IF": 90,
+   "ans_IF": 320,
+   "replay_total": 800,
+   "replay_R": 268,
+   "replay_K": 266,
+   "replay_IF": 266
+  },
+  "worst_repair": {
+   "fmt_R": 0,
+   "ans_R": 400,
+   "fmt_K": 0,
+   "ans_K": 400,
+   "fmt_IF": 0,
+   "ans_IF": 400,
+   "replay_total": 800,
+   "replay_R": 268,
+   "replay_K": 266,
+   "replay_IF": 266
+  },
+  "predicted_optimal": {
+   "fmt_R": 0,
+   "ans_R": 480,
+   "fmt_K": 30,
+   "ans_K": 30,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 1460,
+   "replay_R": 488,
+   "replay_K": 486,
+   "replay_IF": 486
+  },
+  "retention_constrained": {
+   "fmt_R": 0,
+   "ans_R": 480,
+   "fmt_K": 0,
+   "ans_K": 30,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 1490,
+   "replay_R": 498,
+   "replay_K": 496,
+   "replay_IF": 496
+  }
+ },
+ "predictions": {
+  "replay": {
+   "vec_R": {
+    "base": 0.8998,
+    "robust": 0.8409,
+    "candidate": 0.8659,
+    "answerability": 0.1386,
+    "interface": 0.2766,
+    "_false_abstain": 0.0107
+   },
+   "vec_K": {
+    "base": 0.84,
+    "robust": 0.83,
+    "candidate": 0.109,
+    "answerability": 0.0,
+    "interface": 0.31,
+    "_false_abstain": 0.0
+   },
+   "vec_IF": {
+    "base": 0.97,
+    "robust": 0.86,
+    "candidate": 0.795,
+    "answerability": 0.0,
+    "interface": 0.7,
+    "_false_abstain": null
+   },
+   "predicted_U": 0.5624
+  },
+  "uniform": {
+   "vec_R": {
+    "base": 0.8922,
+    "robust": 0.8491,
+    "candidate": 0.7995,
+    "answerability": 0.3474,
+    "interface": 0.3024,
+    "_false_abstain": 0.0161
+   },
+   "vec_K": {
+    "base": 0.806,
+    "robust": 0.826,
+    "candidate": 0.072,
+    "answerability": 0.2507,
+    "interface": 0.332,
+    "_false_abstain": 0.0
+   },
+   "vec_IF": {
+    "base": 0.91,
+    "robust": 0.46,
+    "candidate": 0.425,
+    "answerability": 0.0,
+    "interface": 0.72,
+    "_false_abstain": null
+   },
+   "predicted_U": 0.5328
+  },
+  "failure_freq": {
+   "vec_R": {
+    "base": 0.9017,
+    "robust": 0.8605,
+    "candidate": 0.7957,
+    "answerability": 0.52,
+    "interface": 0.3056,
+    "_false_abstain": 0.0201
+   },
+   "vec_K": {
+    "base": 0.842,
+    "robust": 0.86,
+    "candidate": -0.02,
+    "answerability": 0.2507,
+    "interface": 0.288,
+    "_false_abstain": 0.0
+   },
+   "vec_IF": {
+    "base": 0.91,
+    "robust": 0.46,
+    "candidate": 0.425,
+    "answerability": 0.0,
+    "interface": 0.72,
+    "_false_abstain": null
+   },
+   "predicted_U": 0.5413
+  },
+  "worst_repair": {
+   "vec_R": {
+    "base": 0.8954,
+    "robust": 0.8491,
+    "candidate": 0.8386,
+    "answerability": 0.828,
+    "interface": 0.3207,
+    "_false_abstain": 0.0402
+   },
+   "vec_K": {
+    "base": 0.842,
+    "robust": 0.86,
+    "candidate": -0.02,
+    "answerability": 0.2507,
+    "interface": 0.288,
+    "_false_abstain": 0.0
+   },
+   "vec_IF": {
+    "base": 0.95,
+    "robust": 0.5,
+    "candidate": 0.455,
+    "answerability": 0.0,
+    "interface": 0.76,
+    "_false_abstain": null
+   },
+   "predicted_U": 0.5745
+  },
+  "predicted_optimal": {
+   "vec_R": {
+    "base": 0.8954,
+    "robust": 0.8491,
+    "candidate": 0.8386,
+    "answerability": 0.828,
+    "interface": 0.3207,
+    "_false_abstain": 0.0402
+   },
+   "vec_K": {
+    "base": 0.806,
+    "robust": 0.826,
+    "candidate": 0.072,
+    "answerability": 0.2507,
+    "interface": 0.332,
+    "_false_abstain": 0.0
+   },
+   "vec_IF": {
+    "base": 0.97,
+    "robust": 0.86,
+    "candidate": 0.795,
+    "answerability": 0.0,
+    "interface": 0.7,
+    "_false_abstain": null
+   },
+   "predicted_U": 0.6229
+  },
+  "retention_constrained": {
+   "vec_R": {
+    "base": 0.8954,
+    "robust": 0.8491,
+    "candidate": 0.8386,
+    "answerability": 0.828,
+    "interface": 0.3207,
+    "_false_abstain": 0.0402
+   },
+   "vec_K": {
+    "base": 0.842,
+    "robust": 0.86,
+    "candidate": -0.02,
+    "answerability": 0.2507,
+    "interface": 0.288,
+    "_false_abstain": 0.0
+   },
+   "vec_IF": {
+    "base": 0.97,
+    "robust": 0.86,
+    "candidate": 0.795,
+    "answerability": 0.0,
+    "interface": 0.7,
+    "_false_abstain": null
+   },
+   "predicted_U": 0.6185
+  }
+ },
+ "predicted_ranking": [
+  "predicted_optimal",
+  "retention_constrained",
+  "worst_repair",
+  "replay",
+  "failure_freq",
+  "uniform"
+ ],
+ "additivity_note": "in-domain additive G + placebo mean; cross-domain terms NOT in prediction (declared; measured cross matrices exist for R-components, K/IF-component cross terms being backfilled)",
+ "bridge_note": "update-count nuisance audited: max spread .051 (wc_att), others<=.032; arms share identical steps so nuisance excluded from arm comparison"
+}

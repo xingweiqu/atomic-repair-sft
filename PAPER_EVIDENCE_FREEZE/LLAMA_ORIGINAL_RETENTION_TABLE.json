@@ -1,0 +1,53 @@
+{
+ "base": {
+  "R": 0.0019,
+  "K": 0.616,
+  "IF": 0.92,
+  "macro": 0.5126
+ },
+ "arms": {
+  "base": {
+   "R": 0.0019,
+   "K": 0.616,
+   "IF": 0.92,
+   "macro": 0.5126,
+   "U": null
+  },
+  "replay": {
+   "R": 0.6849,
+   "K": 0.7907,
+   "IF": 0.66,
+   "macro": 0.7119,
+   "U": 0.303
+  },
+  "uniform": {
+   "R": 0.6723,
+   "K": 0.4627,
+   "IF": 0.5867,
+   "macro": 0.5739,
+   "U": 0.4066
+  },
+  "heuristic": {
+   "R": 0.6975,
+   "K": 0.666,
+   "IF": 0.86,
+   "macro": 0.7412,
+   "U": 0.3398
+  },
+  "predicted": {
+   "R": 0.6516,
+   "K": 0.596,
+   "IF": 0.84,
+   "macro": 0.6959,
+   "U": 0.4634
+  }
+ },
+ "reading": "predicted keeps Original within noise of replay/uniform while U rises .303->.463; win comes from stress conditions, not from re-training the clean benchmark",
+ "instrument_note": "base R-original acc_exact=.002 is an interface artifact (base Llama does not emit FINAL_ANSWER line); loose-extraction base R-original = see llb summary; R-domain base comparison uses loose or SFT-arm-to-arm comparison only",
+ "key_readings": {
+  "1_predicted_vs_replay_original": "macro .696 vs .712 (-.016, within noise) -> predicted preserves Original at replay level",
+  "2_predicted_vs_uniform_original": "macro .696 vs .574 (+.122) -> uniform BUYS its U by sacrificing K-original (.463, below base .616); predicted does NOT",
+  "3_heuristic_paradox": "heuristic has the best Original (.741) but near-worst U (.340) -> live demonstration that clean-benchmark scores do not measure robustness",
+  "verdict": "the win is the clean kind: Original preserved (vs replay), U +.16; and vs uniform, predicted is better on BOTH axes"
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "frozen": "2026-08-16-rescue",
+ "design_rationale": {
+  "BRfmtR/BRansR/BRansK": "single-component on mixed carrier -> carrier-bridge deltas",
+  "PAIRR": "same-domain pair vs delta-sum -> in-domain interaction",
+  "PAIRX": "cross-domain pair vs delta-sum -> cross-domain interaction",
+  "UNIHALF": "half-dose uniform vs linear interpolation -> diversity synergy dose-dependence"
+ },
+ "arms": {
+  "BRfmtR": {
+   "fmt_R": 30,
+   "ans_R": 0,
+   "fmt_K": 0,
+   "ans_K": 0,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 1970,
+   "replay_R": 658,
+   "replay_K": 656,
+   "replay_IF": 656
+  },
+  "BRansR": {
+   "fmt_R": 0,
+   "ans_R": 480,
+   "fmt_K": 0,
+   "ans_K": 0,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 1520,
+   "replay_R": 508,
+   "replay_K": 506,
+   "replay_IF": 506
+  },
+  "BRansK": {
+   "fmt_R": 0,
+   "ans_R": 0,
+   "fmt_K": 0,
+   "ans_K": 30,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 1970,
+   "replay_R": 658,
+   "replay_K": 656,
+   "replay_IF": 656
+  },
+  "PAIRR": {
+   "fmt_R": 30,
+   "ans_R": 480,
+   "fmt_K": 0,
+   "ans_K": 0,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 1490,
+   "replay_R": 498,
+   "replay_K": 496,
+   "replay_IF": 496
+  },
+  "UNIHALF": {
+   "fmt_R": 50,
+   "ans_R": 50,
+   "fmt_K": 50,
+   "ans_K": 50,
+   "fmt_IF": 50,
+   "ans_IF": 50,
+   "replay_total": 1700,
+   "replay_R": 568,
+   "replay_K": 566,
+   "replay_IF": 566
+  },
+  "PAIRX": {
+   "fmt_R": 0,
+   "ans_R": 480,
+   "fmt_K": 30,
+   "ans_K": 0,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 1490,
+   "replay_R": 498,
+   "replay_K": 496,
+   "replay_IF": 496
+  }
+ },
+ "comparator": "MIX-replay actual (.5333) as common baseline; all arms 2000 ex / 54 steps"
+}

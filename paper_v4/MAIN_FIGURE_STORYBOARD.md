@@ -2,9 +2,9 @@
 
 ## Fig 1 — Evaluation → Response → Prescription (+ why clean scores fail)
 - **Question**: what decision problem does this paper solve, and why can't benchmarks solve it?
-- **Panels**: (a) pipeline schematic: failure profile → component×dose×domain response → corrected composition model → constrained recipe → held-out validation; (b) motivating scatter: Llama arms on (Original macro, U) axes — heuristic top-left (.741,.340), predicted top-right (.696,.463), uniform bottom-right-ish (.574,.407), replay (.712,.303).
+- **Panels**: (a) pipeline schematic: failure profile → component×dose×domain response → corrected composition model → constrained recipe → held-out validation; (b) motivating scatter, x=Original macro, y=U: heuristic lower-RIGHT (.741,.340 — best clean, near-worst U), predicted upper-middle (.696,.463), replay lower-right (.712,.303), uniform lower-left (.574,.407). Two labeled comparisons drawn as arrows: **predicted vs replay** (Original .696≈.712 but U .463≫.303 — clean score cannot see a 16pp robustness difference) and **heuristic vs predicted** (Original .741>.696 but U .340<.463 — picking by clean score selects the wrong recipe).
 - **Data**: LLAMA_ORIGINAL_RETENTION_TABLE.json (panel b); schematic (panel a).
-- **Takeaway**: two recipes with near-identical clean scores can differ by >12pp in stress utility; the pipeline exists to tell them apart *before* training.
+- **Takeaway**: near-identical clean scores can hide a 16pp robustness gap, and ranking by clean score can invert the right choice; the pipeline tells recipes apart *before* training.
 - **Caption draft**: "Clean-task accuracy does not rank SFT recipes: the arm with the best Original score is nearly the worst overall (b). We prescribe recipes from measured response profiles instead (a)."
 
 ## Fig 2 — Four heterogeneous response profiles (Reasoning discovery domain)

@@ -1,0 +1,70 @@
+{
+ "model": "U = tri_baseline + bridge_singles(dose-linear) + nonlinear_total_component_term",
+ "evidence": {
+  "pairwise_interactions": "small & negative (-.007 in-domain, -.015 cross)",
+  "bridge_gap": "fmt_R and ans_K in-mix deltas ~0 despite single-domain gains; ans_R survives (+.059)",
+  "total_dose_nonlinearity": "residual jumps + above ~500-600 total component examples (half-uniform -.022 vs uniform +.069)"
+ },
+ "points": [
+  [
+   "replay",
+   0,
+   0.0
+  ],
+  [
+   "BRfmtR",
+   30,
+   -0.0
+  ],
+  [
+   "BRansK",
+   30,
+   -0.0
+  ],
+  [
+   "UNIHALF",
+   300,
+   -0.0176
+  ],
+  [
+   "BRansR",
+   480,
+   0.0
+  ],
+  [
+   "retention_constrained",
+   510,
+   -0.0135
+  ],
+  [
+   "PAIRR",
+   510,
+   -0.0067
+  ],
+  [
+   "PAIRX",
+   510,
+   -0.0175
+  ],
+  [
+   "predicted_optimal",
+   540,
+   -0.0211
+  ],
+  [
+   "uniform",
+   600,
+   0.0781
+  ],
+  [
+   "failure_freq",
+   1200,
+   0.1089
+  ],
+  [
+   "worst_repair",
+   1200,
+   -0.0039
+  ]
+ ]
+}
