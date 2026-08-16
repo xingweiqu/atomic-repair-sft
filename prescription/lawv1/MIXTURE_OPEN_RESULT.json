@@ -1,0 +1,205 @@
+{
+ "results": {
+  "replay": {
+   "actual_U": 0.5333,
+   "predicted_U": 0.5624,
+   "vR": {
+    "base": 0.8998,
+    "robust": 0.8412,
+    "candidate": 0.72305,
+    "answerability": 0.1325,
+    "interface": 0.2344
+   },
+   "vK": {
+    "base": 0.566,
+    "robust": 0.544,
+    "candidate": 0.315,
+    "answerability": 0.0,
+    "interface": 0.304
+   },
+   "vI": {
+    "base": 0.92,
+    "robust": 1.0,
+    "candidate": 0.86,
+    "answerability": 0.0,
+    "interface": 0.66
+   },
+   "false_abstain_R": 0.008,
+   "false_abstain_K": 0.0
+  },
+  "uniform": {
+   "actual_U": 0.6021,
+   "predicted_U": 0.5328,
+   "vR": {
+    "base": 0.8904,
+    "robust": 0.8374,
+    "candidate": 0.3932,
+    "answerability": 0.759,
+    "interface": 0.2703
+   },
+   "vK": {
+    "base": 0.572,
+    "robust": 0.572,
+    "candidate": 0.385,
+    "answerability": 0.6785,
+    "interface": 0.314
+   },
+   "vI": {
+    "base": 0.92,
+    "robust": 0.4,
+    "candidate": 0.8600000000000001,
+    "answerability": 0.34,
+    "interface": 0.84
+   },
+   "false_abstain_R": 0.0683,
+   "false_abstain_K": 0.0926
+  },
+  "failure_freq": {
+   "actual_U": 0.6343,
+   "predicted_U": 0.5413,
+   "vR": {
+    "base": 0.8866,
+    "robust": 0.8355,
+    "candidate": 0.44805000000000006,
+    "answerability": 0.8755,
+    "interface": 0.2684
+   },
+   "vK": {
+    "base": 0.548,
+    "robust": 0.544,
+    "candidate": 0.45699999999999996,
+    "answerability": 0.9319,
+    "interface": 0.32
+   },
+   "vI": {
+    "base": 0.92,
+    "robust": 0.42,
+    "candidate": 0.86,
+    "answerability": 0.4,
+    "interface": 0.8
+   },
+   "false_abstain_R": 0.2008,
+   "false_abstain_K": 0.0
+  },
+  "worst_repair": {
+   "actual_U": 0.5401,
+   "predicted_U": 0.5745,
+   "vR": {
+    "base": 0.896,
+    "robust": 0.8639,
+    "candidate": 0.40455,
+    "answerability": 0.9116,
+    "interface": 0.1512
+   },
+   "vK": {
+    "base": 0.406,
+    "robust": 0.374,
+    "candidate": 0.129,
+    "answerability": 0.9973,
+    "interface": 0.298
+   },
+   "vI": {
+    "base": 0.84,
+    "robust": 0.16,
+    "candidate": 0.69,
+    "answerability": 0.18,
+    "interface": 0.8
+   },
+   "false_abstain_R": 0.0161,
+   "false_abstain_K": 0.0
+  },
+  "predicted_optimal": {
+   "actual_U": 0.5686,
+   "predicted_U": 0.6229,
+   "vR": {
+    "base": 0.8998,
+    "robust": 0.8431,
+    "candidate": 0.65595,
+    "answerability": 0.9076,
+    "interface": 0.2212
+   },
+   "vK": {
+    "base": 0.574,
+    "robust": 0.572,
+    "candidate": 0.099,
+    "answerability": 0.0245,
+    "interface": 0.292
+   },
+   "vI": {
+    "base": 0.92,
+    "robust": 0.9,
+    "candidate": 0.86,
+    "answerability": 0.0,
+    "interface": 0.76
+   },
+   "false_abstain_R": 0.0161,
+   "false_abstain_K": 0.0
+  },
+  "retention_constrained": {
+   "actual_U": 0.5762,
+   "predicted_U": 0.6185,
+   "vR": {
+    "base": 0.8922,
+    "robust": 0.8507,
+    "candidate": 0.7221,
+    "answerability": 0.8675,
+    "interface": 0.2287
+   },
+   "vK": {
+    "base": 0.578,
+    "robust": 0.578,
+    "candidate": 0.36,
+    "answerability": 0.0845,
+    "interface": 0.302
+   },
+   "vI": {
+    "base": 0.94,
+    "robust": 0.7,
+    "candidate": 0.88,
+    "answerability": 0.0,
+    "interface": 0.66
+   },
+   "false_abstain_R": 0.0723,
+   "false_abstain_K": 0.0
+  }
+ },
+ "predicted_ranking": [
+  "predicted_optimal",
+  "retention_constrained",
+  "worst_repair",
+  "replay",
+  "failure_freq",
+  "uniform"
+ ],
+ "actual_ranking": [
+  "failure_freq",
+  "uniform",
+  "retention_constrained",
+  "predicted_optimal",
+  "worst_repair",
+  "replay"
+ ],
+ "spearman": -0.4285714285714286,
+ "U_mae": 0.05373333333333332,
+ "constraint_filtered_ranking": [
+  "uniform",
+  "retention_constrained",
+  "predicted_optimal",
+  "worst_repair",
+  "replay"
+ ],
+ "residuals": {
+  "replay": -0.0291,
+  "uniform": 0.0693,
+  "failure_freq": 0.093,
+  "worst_repair": -0.0344,
+  "predicted_optimal": -0.0543,
+  "retention_constrained": -0.0423
+ },
+ "verdicts": {
+  "A_ranking": "FAIL: Spearman -0.43; concentrated arms over-predicted, diverse arms under-predicted",
+  "B_calibration": "U-MAE .054 > seed noise (~.02) -> interaction rescue triggered (C-34#9)",
+  "C_decision_usefulness": "PARTIAL: constraint-filtered winner is uniform (.602); retention_constrained (.576) beats replay (.533) and worst_repair (.540) but loses to uniform; failure_freq DISQUALIFIED (false_abstain_R=.20 breaches frozen <=.10)",
+  "systematic_pattern": "diversity premium: multi-component small-dose arms outperform additive prediction; concentrated single-component bets underperform; suspected sources = component-pair interaction + tri-domain-carrier vs single-domain-placebo bridge gap"
+ }
+}
