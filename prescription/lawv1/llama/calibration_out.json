@@ -1,0 +1,17 @@
+{
+ "U_base": 0.4302,
+ "U_LLreplay": 0.308,
+ "U_LLBRansR": 0.3303,
+ "delta_ansR_L": 0.0223,
+ "scale": 0.376,
+ "predicted_recipe": {
+  "ans_R": 480,
+  "fmt_R": 50,
+  "fmt_K": 100,
+  "ans_K": 200,
+  "fmt_IF": 200,
+  "ans_IF": 200,
+  "total": 1230
+ },
+ "predicted_U_recipe": 0.3713
+}

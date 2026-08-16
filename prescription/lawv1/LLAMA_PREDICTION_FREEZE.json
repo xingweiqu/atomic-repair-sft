@@ -1,0 +1,110 @@
+{
+ "frozen": "2026-08-17",
+ "calibration": {
+  "U_base": 0.4302,
+  "U_LLreplay": 0.308,
+  "U_LLBRansR": 0.3303,
+  "delta_ansR_L": 0.0223,
+  "scale": 0.376,
+  "predicted_recipe": {
+   "ans_R": 480,
+   "fmt_R": 50,
+   "fmt_K": 100,
+   "ans_K": 200,
+   "fmt_IF": 200,
+   "ans_IF": 200,
+   "total": 1230
+  },
+  "predicted_U_recipe": 0.3713
+ },
+ "correction_formula": "U = U_LLreplay + slopeQ_ansR*dose_ansR*scale + gamma_Q(total)*scale*1[all 6 cells>=50]",
+ "strong_assumptions": [
+  "single-point scale transfer (deliberately low-dimensional)",
+  "diversity premium requires full 6-cell coverage (Qwen pattern)",
+  "gamma linear interp 600-1200"
+ ],
+ "arms": {
+  "replay": {
+   "fmt_R": 0,
+   "ans_R": 0,
+   "fmt_K": 0,
+   "ans_K": 0,
+   "fmt_IF": 0,
+   "ans_IF": 0,
+   "replay_total": 2000,
+   "replay_R": 668,
+   "replay_K": 666,
+   "replay_IF": 666
+  },
+  "uniform": {
+   "fmt_R": 100,
+   "ans_R": 100,
+   "fmt_K": 100,
+   "ans_K": 100,
+   "fmt_IF": 100,
+   "ans_IF": 100,
+   "replay_total": 1400,
+   "replay_R": 468,
+   "replay_K": 466,
+   "replay_IF": 466
+  },
+  "heuristic": {
+   "fmt_R": 0,
+   "ans_R": 400,
+   "fmt_K": 0,
+   "ans_K": 400,
+   "fmt_IF": 0,
+   "ans_IF": 400,
+   "replay_total": 800,
+   "replay_R": 268,
+   "replay_K": 266,
+   "replay_IF": 266
+  },
+  "predicted": {
+   "fmt_R": 50,
+   "ans_R": 480,
+   "fmt_K": 100,
+   "ans_K": 200,
+   "fmt_IF": 200,
+   "ans_IF": 200,
+   "replay_total": 770,
+   "replay_R": 258,
+   "replay_K": 256,
+   "replay_IF": 256
+  }
+ },
+ "predicted_U": {
+  "replay": 0.308,
+  "uniform": 0.342,
+  "heuristic": 0.3266,
+  "predicted": 0.3713
+ },
+ "predicted_ranking": [
+  "predicted",
+  "uniform",
+  "heuristic",
+  "replay"
+ ],
+ "false_abstain_threshold": 0.1,
+ "seeds": {
+  "predicted": [
+   42,
+   43,
+   44
+  ],
+  "uniform": [
+   42,
+   43,
+   44
+  ],
+  "replay": [
+   42,
+   43,
+   44
+  ],
+  "heuristic": [
+   42
+  ]
+ },
+ "note": "LL-replay-S42 already trained (calibration) = replay arm seed 42; verdict per LLAMA_VERDICT_TABLE_FROZEN.md"
+}
