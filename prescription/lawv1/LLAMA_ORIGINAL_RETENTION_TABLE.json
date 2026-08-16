@@ -1,0 +1,46 @@
+{
+ "base": {
+  "R": 0.0019,
+  "K": 0.616,
+  "IF": 0.92,
+  "macro": 0.5126
+ },
+ "arms": {
+  "base": {
+   "R": 0.0019,
+   "K": 0.616,
+   "IF": 0.92,
+   "macro": 0.5126,
+   "U": null
+  },
+  "replay": {
+   "R": 0.6849,
+   "K": 0.7907,
+   "IF": 0.66,
+   "macro": 0.7119,
+   "U": 0.303
+  },
+  "uniform": {
+   "R": 0.6723,
+   "K": 0.4627,
+   "IF": 0.5867,
+   "macro": 0.5739,
+   "U": 0.4066
+  },
+  "heuristic": {
+   "R": 0.6975,
+   "K": 0.666,
+   "IF": 0.86,
+   "macro": 0.7412,
+   "U": 0.3398
+  },
+  "predicted": {
+   "R": 0.6516,
+   "K": 0.596,
+   "IF": 0.84,
+   "macro": 0.6959,
+   "U": 0.4634
+  }
+ },
+ "reading": "predicted keeps Original within noise of replay/uniform while U rises .303->.463; win comes from stress conditions, not from re-training the clean benchmark"
+}
