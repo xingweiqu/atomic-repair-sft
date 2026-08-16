@@ -1,0 +1,35 @@
+# PAPER_STORY_V0 — Predicting SFT Recipes from Response Profiles
+
+## Problem
+Given a model, a fixed SFT budget, and multiple candidate data interventions, how should we decide **what data to train on, and how much of each**? Today this decision is made by intuition and one-shot mixture guesses, audited only by clean-benchmark scores. We show clean scores cannot make this decision (our own best-clean-score arm is nearly the worst overall), and we build the measurement chain that can: **Evaluation → Response → Prescription**.
+
+## Thesis (one sentence)
+Fine-grained evaluation can be used not merely to characterize model failures but to *prescribe training*: component-level SFT responses are locally predictable but do not compose naively; after accounting for carrier dependence and a diversity-by-dose regime — both discovered through a preregistered failure — the corrected response model prospectively predicts a winning constrained recipe on a held-out model family with two calibration runs. **SFT scales locally, but composes conditionally.**
+
+## Six-act story
+
+**Act I — A benchmark score cannot pick training data.** Clean accuracy cannot distinguish wording sensitivity, distractor susceptibility, wrong-candidate adoption, unnecessary revision, inability to abstain, or interface failure. We build a failure profile over 7 controlled conditions × 3 domains (Reasoning/Knowledge/General-IF). Foreshadow with the held-out heuristic arm: best clean score (.741), near-worst utility (.340).
+
+**Act II — SFT components have heterogeneous, domain-dependent dose responses.** Four representative, controllable intervention families vs matched clean-replay control, constant token budget and update count, 529-family evaluation: Format = fast saturation (interface .71→.99 at 30 examples); Evidence = weak/near-flat (+2–3pp); Revision = bidirectional damage (fix never exceeds placebo; high dose destroys KEEP); Answerability = rising target gain (.16→1.00) with a false-abstain constraint. Cross-domain: gains need not transfer; collateral does (format→Knowledge candidate-judgment collapse, decision .61→.07, contract intact); direction can even reverse (Knowledge revision all-KEEP at high dose, 3-seed replicated). We write Δs_{k,d}(n) — no universal functional form is assumed.
+
+**Act III — Local responses do not compose additively (preregistered failure).** Frozen additive prediction over six mixture arms: ranking Spearman −0.43, U-MAE .054 > noise. Valid-arm actual ranking: uniform .602 > retention-constrained .576 > predicted .569 > worst-repair .540 > replay .533; failure-frequency .634 but disqualified (false-abstain .20 > frozen .10) — the constraint machinery itself works. We do not soften this failure; it is the scientific pivot.
+
+**Act IV — Controlled rescue finds the missing structure.** Six targeted runs. Pairwise interactions are small (−.007/−.015) and exonerated. Two structures explain the residual: (A) **carrier dependence** — Δ_k(n|C) is not carrier-free; fmt_R and ans_K gains vanish on the tri-domain carrier while ans_R survives (+.059); (B) a **diversity-by-dose regime** — full six-cell coverage at total ≥600 yields a premium (+.078/+.109) that concentrated 1200 (−.004) and diverse-but-small 300 (−.018) do not. Stated as Qwen-discovered composition structure, not universal law.
+
+**Act V — Freeze, then a prospective held-out test.** Eleven-step timeline with no tuning entry point: corrections frozen → Qwen formally closed → calibration rule frozen *before any Llama data* → base profile (whitelisted inputs only) → exactly 2 calibration runs → single-point scale = δ^L/δ^Q = .376 → mechanical recipe search → `LLAMA_PREDICTION_FREEZE.json` committed → blind training → open.
+
+**Act VI — Outcome A.** Frozen ranking predicted > uniform > heuristic > replay; actual .463 > .407 > .340 > .303 — 4/4 exact (Spearman 1.0). Primary margin +.057 over uniform; min(predicted seeds)=.4457 > max(uniform seeds)=.4416. Constraints all pass. Retention: predicted preserves Original at replay level (−.016) while U rises +.160; versus uniform, predicted wins on *both* axes (U +.057, Original +.122 — uniform pays a clean-Knowledge tax .616→.463 that predicted avoids). Magnitudes remain imperfectly calibrated (largest underestimation on diverse mixtures) — ranking and direction transfer, calibration is future work.
+
+## Why this matters
+It turns fine-grained evaluation from scorekeeping into training decision-making: a fixed, auditable pipeline (profile → response curves → corrected composition model → constrained recipe) that transferred across model families with minimal calibration. The negative results en route (additive failure, small-eval artifacts) are load-bearing: they show which naive versions of this program do not work and why.
+
+## Strongest final evidence (three numbers)
+1. Held-out ranking 4/4 exact, min(pred) > max(uniform) across seeds;
+2. +5.7pp U over uniform with all frozen constraints passing;
+3. Retention: ≈replay Original with +16pp U; strictly better than uniform on both axes.
+
+## Limitations
+One held-out family (cross-family evidence, not universality); absolute magnitude calibration imperfect (diverse mixtures underestimated most); diversity regime observed at coarse dose resolution; U is one preregistered hierarchical utility (alternatives in appendix); single-seed direction-grade readings on sparse K/IF grids; interventions limited to four controllable families; base-R strict-interface artifact documented.
+
+## 30-second spoken version
+"Benchmarks tell you whether a model can do clean tasks — not what data to train next. We measured how four types of SFT data each change model behavior as you increase their dose, across three task domains. Those response curves are locally predictable, but when we bet — publicly, in a preregistered test — that they simply add up in a mixture, we lost. The failure analysis found two missing structures: the effect of a data type depends on what it's mixed with, and diverse mixtures at sufficient dose get a premium that concentrated bets don't. We froze those corrections, moved to a model family we'd never trained, ran two calibration runs, and mechanically predicted a recipe. It ranked first, exactly as predicted, beating the uniform mixture while keeping clean performance intact. SFT scales locally — but composes conditionally, and once you know the conditions, you can prescribe."
