@@ -18,7 +18,7 @@
 - **Question**: does a component's effect stay in its training domain?
 - **Panels**: (a) heat matrix: R-trained components (rows: fmt/evd/rev/ans doses) × K-domain branch endpoints (cols), Δ vs placebo; highlight fmt→K candidate-decision collapse (.61→.07) with contract row intact; (b) K-revision reversal inset: R-domain high-dose (KEEP collapses) vs K-domain high-dose (all-KEEP), 3 seeds each.
 - **Data**: transfer_matrix_k500.json, ktgt_scores, ksparse_matrix.json.
-- **Takeaway**: gains need not transfer; collateral does; direction can reverse — recipes must be judged on the full cross-domain vector.
+- **Takeaway**: gains need not transfer; collateral can transfer; direction can reverse — recipes must be judged on the full cross-domain vector.
 - **Caption draft**: "Cross-domain response: format training collapses Knowledge candidate judgment while its interface contract survives (a); revision reverses direction across domains (b, 3 seeds)."
 
 ## Fig 4 — Additive failure and its anatomy
