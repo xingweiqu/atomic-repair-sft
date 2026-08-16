@@ -11,11 +11,14 @@ from pathlib import Path
 from transformers import AutoTokenizer
 
 ROOT = Path('/opt/tiger/atomic-repair-sft-github')
-OUT = Path('/tmp/lawv1_mix'); OUT.mkdir(exist_ok=True)
+OUT = Path(OUTDIR); OUT.mkdir(exist_ok=True)
 MODEL = "/mnt/hdfs/xwqu/Qwen3-8B"
 CUTOFF, SEQ_PER_STEP, EPOCHS = 2048, 16, 2
 
-spec = json.load(open(ROOT/'prescription/lawv1/MIXTURE_SPEC_FROZEN.json'))
+import sys
+SPEC_FILE=sys.argv[1] if len(sys.argv)>1 else 'prescription/lawv1/MIXTURE_SPEC_FROZEN.json'
+OUTDIR=sys.argv[2] if len(sys.argv)>2 else '/tmp/lawv1_mix'
+spec = json.load(open(ROOT/SPEC_FILE))
 tok = AutoTokenizer.from_pretrained(MODEL, trust_remote_code=True)
 ntok = lambda s: len(tok(s, add_special_tokens=False)["input_ids"])
 def seqtok(p, t):
