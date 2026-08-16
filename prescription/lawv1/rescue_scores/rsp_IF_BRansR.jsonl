@@ -1,0 +1,950 @@
+{"family_id": "squadv2dev_ctx_0411fc9a331e", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: intuitive understanding"}
+{"family_id": "squadv2dev_ctx_0411fc9a331e", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: an intuitive understanding"}
+{"family_id": "squadv2dev_ctx_0411fc9a331e", "condition": "format_contract", "output": "{\"final_answer\": \"an intuitive understanding\", \"support_quote\": \"Since forces are perceived as pushes or pulls, this can provide an intuitive understanding for describing forces.\"}"}
+{"family_id": "squadv2dev_ctx_0411fc9a331e", "condition": "insufficient", "output": "Newtonian mechanics"}
+{"family_id": "squadv2dev_ctx_0411fc9a331e", "condition": "original", "output": "an intuitive understanding"}
+{"family_id": "squadv2dev_ctx_0411fc9a331e", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: an intuitive understanding"}
+{"family_id": "squadv2dev_ctx_0411fc9a331e", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Newtonian mechanics"}
+{"family_id": "squadv2dev_ctx_04fd7d6d3488", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Wianki"}
+{"family_id": "squadv2dev_ctx_04fd7d6d3488", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Wianki"}
+{"family_id": "squadv2dev_ctx_04fd7d6d3488", "condition": "format_contract", "output": "{\"final_answer\": \"Wianki\", \"support_quote\": \"Gatherings of thousands of people on the banks of the Vistula on Midsummer’s Night for a festival called Wianki (Polish for Wreaths) have become a tradition and a yearly event in the programme of cultural events in Warsaw.\"}"}
+{"family_id": "squadv2dev_ctx_04fd7d6d3488", "condition": "insufficient", "output": "concerts"}
+{"family_id": "squadv2dev_ctx_04fd7d6d3488", "condition": "original", "output": "Wianki"}
+{"family_id": "squadv2dev_ctx_04fd7d6d3488", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Wianki"}
+{"family_id": "squadv2dev_ctx_04fd7d6d3488", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: koncerty"}
+{"family_id": "squadv2dev_ctx_06a70a5449ea", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: immune surveillance"}
+{"family_id": "squadv2dev_ctx_06a70a5449ea", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: immune surveillance"}
+{"family_id": "squadv2dev_ctx_06a70a5449ea", "condition": "format_contract", "output": "{\"final_answer\": \"immune surveillance\", \"support_quote\": \"Another important role of the immune system is to identify and eliminate tumors. This is called immune surveillance.\"}"}
+{"family_id": "squadv2dev_ctx_06a70a5449ea", "condition": "insufficient", "output": "The immune system's role in identifying and eliminating tumors is called immune surveillance."}
+{"family_id": "squadv2dev_ctx_06a70a5449ea", "condition": "original", "output": "immune surveillance"}
+{"family_id": "squadv2dev_ctx_06a70a5449ea", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: immune surveillance"}
+{"family_id": "squadv2dev_ctx_06a70a5449ea", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: eliminate tumors"}
+{"family_id": "squadv2dev_ctx_076dbed33bba", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Charlesfort"}
+{"family_id": "squadv2dev_ctx_076dbed33bba", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Charlesfort"}
+{"family_id": "squadv2dev_ctx_076dbed33bba", "condition": "format_contract", "output": "{\"final_answer\": \"Charlesfort\", \"support_quote\": \"In 1562, naval officer Jean Ribault led an expedition that explored Florida and the present-day Southeastern U.S., and founded the outpost of Charlesfort on Parris Island, South Carolina.\"}"}
+{"family_id": "squadv2dev_ctx_076dbed33bba", "condition": "insufficient", "output": "The Wars of Religion started in 1562."}
+{"family_id": "squadv2dev_ctx_076dbed33bba", "condition": "original", "output": "Charlesfort"}
+{"family_id": "squadv2dev_ctx_076dbed33bba", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Charlesfort"}
+{"family_id": "squadv2dev_ctx_076dbed33bba", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: 1562"}
+{"family_id": "squadv2dev_ctx_0be1cf30a3be", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Ed Whitfield"}
+{"family_id": "squadv2dev_ctx_0be1cf30a3be", "condition": "candidate_revise", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: Rep. Joe Barton"}
+{"family_id": "squadv2dev_ctx_0be1cf30a3be", "condition": "format_contract", "output": "{\"final_answer\": \"Ed Whitfield\", \"support_quote\": \"Rep. Joe Barton, chairman of the House Committee on Energy and Commerce wrote joint letters with Ed Whitfield, Chairman of the Subcommittee on Oversight and Investigations demanding full records on climate research, as well as personal information about their finances and careers, from Mann, Bradley and Hughes.\"}"}
+{"family_id": "squadv2dev_ctx_0be1cf30a3be", "condition": "insufficient", "output": "Mann, Bradley and Hughes"}
+{"family_id": "squadv2dev_ctx_0be1cf30a3be", "condition": "original", "output": "Ed Whitfield"}
+{"family_id": "squadv2dev_ctx_0be1cf30a3be", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Ed Whitfield"}
+{"family_id": "squadv2dev_ctx_0be1cf30a3be", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Mann, Bradley and Hughes"}
+{"family_id": "squadv2dev_ctx_1c579bced7e0", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Olivier Messiaen"}
+{"family_id": "squadv2dev_ctx_1c579bced7e0", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Olivier Messiaen"}
+{"family_id": "squadv2dev_ctx_1c579bced7e0", "condition": "format_contract", "output": "{\"final_answer\": \"Olivier Messiaen\", \"support_quote\": \"The French composer Olivier Messiaen used prime numbers to create ametrical music through \"natural phenomena\".\"}"}
+{"family_id": "squadv2dev_ctx_1c579bced7e0", "condition": "insufficient", "output": "Olivier Messiaen"}
+{"family_id": "squadv2dev_ctx_1c579bced7e0", "condition": "original", "output": "Olivier Messiaen"}
+{"family_id": "squadv2dev_ctx_1c579bced7e0", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Olivier Messiaen"}
+{"family_id": "squadv2dev_ctx_1c579bced7e0", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Olivier Messiaen"}
+{"family_id": "squadv2dev_ctx_1e26a85d9c8f", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: medication regimen review"}
+{"family_id": "squadv2dev_ctx_1e26a85d9c8f", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: medication regimen review"}
+{"family_id": "squadv2dev_ctx_1e26a85d9c8f", "condition": "format_contract", "output": "{\"final_answer\": \"medication regimen review\", \"support_quote\": \"Consultant pharmacy practice focuses more on medication regimen review (i.e. \"cognitive services\") than on actual dispensing of drugs.\"}"}
+{"family_id": "squadv2dev_ctx_1e26a85d9c8f", "condition": "insufficient", "output": "dispensing of drugs"}
+{"family_id": "squadv2dev_ctx_1e26a85d9c8f", "condition": "original", "output": "medication regimen review"}
+{"family_id": "squadv2dev_ctx_1e26a85d9c8f", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: medication regimen review"}
+{"family_id": "squadv2dev_ctx_1e26a85d9c8f", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: dispensing of drugs"}
+{"family_id": "squadv2dev_ctx_234fd40f4527", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Catawba, Choctaw"}
+{"family_id": "squadv2dev_ctx_234fd40f4527", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Catawba"}
+{"family_id": "squadv2dev_ctx_234fd40f4527", "condition": "format_contract", "output": "{\"final_answer\": \"Catawba\", \"support_quote\": \"Further south the Southeast interior was dominated by Siouan-speaking Catawba, Muskogee-speaking Creek and Choctaw, and the Iroquoian-speaking Cherokee tribes.\"}"}
+{"family_id": "squadv2dev_ctx_234fd40f4527", "condition": "insufficient", "output": "The answer is \"Catawba.\""}
+{"family_id": "squadv2dev_ctx_234fd40f4527", "condition": "original", "output": "The Catawba."}
+{"family_id": "squadv2dev_ctx_234fd40f4527", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Catawba"}
+{"family_id": "squadv2dev_ctx_234fd40f4527", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Catawba"}
+{"family_id": "squadv2dev_ctx_2a32beb044b8", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: botanical"}
+{"family_id": "squadv2dev_ctx_2a32beb044b8", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Green spaces"}
+{"family_id": "squadv2dev_ctx_2a32beb044b8", "condition": "format_contract", "output": "{\"final_answer\": \"green spaces\", \"support_quote\": \"Other green spaces in the city include the Botanic Garden and the University Library garden.\"}"}
+{"family_id": "squadv2dev_ctx_2a32beb044b8", "condition": "insufficient", "output": "Pole Mokotowskie"}
+{"family_id": "squadv2dev_ctx_2a32beb044b8", "condition": "original", "output": "green spaces"}
+{"family_id": "squadv2dev_ctx_2a32beb044b8", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Botanic Garden"}
+{"family_id": "squadv2dev_ctx_2a32beb044b8", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Pole Mokotowskie"}
+{"family_id": "squadv2dev_ctx_2d11b29ca005", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Deabolis"}
+{"family_id": "squadv2dev_ctx_2d11b29ca005", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Deabolis"}
+{"family_id": "squadv2dev_ctx_2d11b29ca005", "condition": "format_contract", "output": "{\"final_answer\": \"Deabolis\", \"support_quote\": \"With their help, the Normans secured the Arbanon passes and opened their way to Dibra. The lack of supplies, disease and Byzantine resistance forced Bohemond to retreat from his campaign and sign a peace treaty with the Byzantines in the city of Deabolis.\"}"}
+{"family_id": "squadv2dev_ctx_2d11b29ca005", "condition": "insufficient", "output": "Dyrrachium"}
+{"family_id": "squadv2dev_ctx_2d11b29ca005", "condition": "original", "output": "Deabolis"}
+{"family_id": "squadv2dev_ctx_2d11b29ca005", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Deabolis"}
+{"family_id": "squadv2dev_ctx_2d11b29ca005", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Dyrrachium"}
+{"family_id": "squadv2dev_ctx_3efbb629f5a3", "condition": "candidate_keep", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: $32 billion"}
+{"family_id": "squadv2dev_ctx_3efbb629f5a3", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: $32 billion"}
+{"family_id": "squadv2dev_ctx_3efbb629f5a3", "condition": "format_contract", "output": "{\"final_answer\": \"32 billion\", \"support_quote\": \"As of September 2011[update], it had nearly regained the loss suffered during the 2008 recession.\"}"}
+{"family_id": "squadv2dev_ctx_3efbb629f5a3", "condition": "insufficient", "output": "As of 2012[update], Harvard University had a total financial aid reserve of $159 million for students, and a Pell Grant reserve of $4.093 million available for disbursement."}
+{"family_id": "squadv2dev_ctx_3efbb629f5a3", "condition": "original", "output": "It was worth $32 billion in 2011"}
+{"family_id": "squadv2dev_ctx_3efbb629f5a3", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: 32"}
+{"family_id": "squadv2dev_ctx_3efbb629f5a3", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: 159"}
+{"family_id": "squadv2dev_ctx_48778bae602d", "condition": "candidate_keep", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: large cars"}
+{"family_id": "squadv2dev_ctx_48778bae602d", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Large cars"}
+{"family_id": "squadv2dev_ctx_48778bae602d", "condition": "format_contract", "output": "{\"final_answer\": \"large cars\", \"support_quote\": \"The crisis reduced the demand for large cars.\"}"}
+{"family_id": "squadv2dev_ctx_48778bae602d", "condition": "insufficient", "output": "V8 and six cylinder engines"}
+{"family_id": "squadv2dev_ctx_48778bae602d", "condition": "original", "output": "large cars"}
+{"family_id": "squadv2dev_ctx_48778bae602d", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: large cars"}
+{"family_id": "squadv2dev_ctx_48778bae602d", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: V8 and six cylinder engines"}
+{"family_id": "squadv2dev_ctx_4fbce1bcbcb9", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: James Henry Breasted"}
+{"family_id": "squadv2dev_ctx_4fbce1bcbcb9", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: James Henry Breasted"}
+{"family_id": "squadv2dev_ctx_4fbce1bcbcb9", "condition": "format_contract", "output": "{\"final_answer\": \"James Henry Breasted\", \"support_quote\": \"Past faculty have also included Egyptologist James Henry Breasted, mathematician Alberto Calderón, Nobel prize winning economist and classical liberalism defender Friedrich Hayek, meteorologist Ted Fujita, chemists Glenn T. Seaborg, the developer of the actinide concept and Nobel Prize winner Yuan T. Lee, Nobel Prize winning novelist Saul Bellow, political philosopher and author Allan Bloom, cancer researchers Charles Brenton Huggins and Janet Rowley, astronomer Gerard Kuiper, one of the most important figures in the early development of the discipline of linguistics Edward Sapir, and the founder of McKinsey & Co., James O. McKinsey.\"}"}
+{"family_id": "squadv2dev_ctx_4fbce1bcbcb9", "condition": "insufficient", "output": "Saul Bellow"}
+{"family_id": "squadv2dev_ctx_4fbce1bcbcb9", "condition": "original", "output": "James Henry Breasted"}
+{"family_id": "squadv2dev_ctx_4fbce1bcbcb9", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: James Henry Breasted"}
+{"family_id": "squadv2dev_ctx_4fbce1bcbcb9", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Saul Bellow"}
+{"family_id": "squadv2dev_ctx_5a11981169c4", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: a form of anthrax"}
+{"family_id": "squadv2dev_ctx_5a11981169c4", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: \"a form of anthrax\""}
+{"family_id": "squadv2dev_ctx_5a11981169c4", "condition": "format_contract", "output": "{\"final_answer\": \"a form of anthrax\", \"support_quote\": \"Twigg suggested that the cause was a form of anthrax\"}"}
+{"family_id": "squadv2dev_ctx_5a11981169c4", "condition": "insufficient", "output": "Twigg"}
+{"family_id": "squadv2dev_ctx_5a11981169c4", "condition": "original", "output": "Twigg suggested that the cause was a form of anthrax."}
+{"family_id": "squadv2dev_ctx_5a11981169c4", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: anthrax"}
+{"family_id": "squadv2dev_ctx_5a11981169c4", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: John"}
+{"family_id": "squadv2dev_ctx_5aa1f662528b", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: October 1973"}
+{"family_id": "squadv2dev_ctx_5aa1f662528b", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: October 1973"}
+{"family_id": "squadv2dev_ctx_5aa1f662528b", "condition": "format_contract", "output": "{\"final_answer\": \"October 1973\", \"support_quote\": \"The 1973 oil crisis began in October 1973 when the members of the Organization of Arab Petroleum Exporting Countries (OAPEC, consisting of the Arab members of OPEC plus Egypt and Syria) proclaimed an oil embargo.\"}"}
+{"family_id": "squadv2dev_ctx_5aa1f662528b", "condition": "insufficient", "output": "The context does not provide the answer to this question."}
+{"family_id": "squadv2dev_ctx_5aa1f662528b", "condition": "original", "output": "October 1973"}
+{"family_id": "squadv2dev_ctx_5aa1f662528b", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: October 1973"}
+{"family_id": "squadv2dev_ctx_5aa1f662528b", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: 1960"}
+{"family_id": "squadv2dev_ctx_5ffcafc83146", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Public schools in Victoria are publicly or privately funded schools that are funded and run directly by the Victoria Department of Education."}
+{"family_id": "squadv2dev_ctx_5ffcafc83146", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Public schools in Victoria are funded and run directly by the Victoria Department of Education."}
+{"family_id": "squadv2dev_ctx_5ffcafc83146", "condition": "format_contract", "output": "{\"final_answer\": \"Public schools, also known as state or government schools, are funded and run directly by the Victoria Department of Education\", \"support_quote\": \"Public schools, also known as state or government schools, are funded and run directly by the Victoria Department of Education\"}"}
+{"family_id": "squadv2dev_ctx_5ffcafc83146", "condition": "insufficient", "output": "The context does not provide information about public banks in Victoria."}
+{"family_id": "squadv2dev_ctx_5ffcafc83146", "condition": "original", "output": "Public schools, also known as state or government schools, are funded and run directly by the Victoria Department of Education."}
+{"family_id": "squadv2dev_ctx_5ffcafc83146", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Public schools, also known as state or government schools, are funded and run directly by the Victoria Department of Education"}
+{"family_id": "squadv2dev_ctx_5ffcafc83146", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Public banks in Victoria are government-owned financial institutions that provide banking services to the public."}
+{"family_id": "squadv2dev_ctx_642903e1e350", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: three"}
+{"family_id": "squadv2dev_ctx_642903e1e350", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Three"}
+{"family_id": "squadv2dev_ctx_642903e1e350", "condition": "format_contract", "output": "{\"final_answer\": \"three\", \"support_quote\": \"Lake Constance consists of three bodies of water: the Obersee (\\\"upper lake\\\"), the Untersee (\\\"lower lake\\\"), and a connecting stretch of the Rhine, called the Seerhein (\\\"Lake Rhine\\\").\"}"}
+{"family_id": "squadv2dev_ctx_642903e1e350", "condition": "insufficient", "output": "The answer is three."}
+{"family_id": "squadv2dev_ctx_642903e1e350", "condition": "original", "output": "Lake Constance consists of three bodies of water: the Obersee (\"upper lake\"), the Untersee (\"lower lake\"), and a connecting stretch of the Rhine, called the Seerhein (\"Lake Rhine\")."}
+{"family_id": "squadv2dev_ctx_642903e1e350", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: 3"}
+{"family_id": "squadv2dev_ctx_642903e1e350", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: 3"}
+{"family_id": "squadv2dev_ctx_691ab95dfa99", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: infrastructure"}
+{"family_id": "squadv2dev_ctx_691ab95dfa99", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Infrastructure"}
+{"family_id": "squadv2dev_ctx_691ab95dfa99", "condition": "format_contract", "output": "{\"final_answer\": \"infrastructure\", \"support_quote\": \"Like many cities in Central and Eastern Europe, infrastructure in Warsaw suffered considerably during its time as an Eastern Bloc economy – though it is worth mentioning that the initial Three-Year Plan to rebuild Poland (especially Warsaw) was a major success, but what followed was very much the opposite.\"}"}
+{"family_id": "squadv2dev_ctx_691ab95dfa99", "condition": "insufficient", "output": "Infrastructure"}
+{"family_id": "squadv2dev_ctx_691ab95dfa99", "condition": "original", "output": "Infrastructure"}
+{"family_id": "squadv2dev_ctx_691ab95dfa99", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: infrastructure"}
+{"family_id": "squadv2dev_ctx_691ab95dfa99", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: infrastructure"}
+{"family_id": "squadv2dev_ctx_6bc44b640bbe", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Scottish Parliament Building"}
+{"family_id": "squadv2dev_ctx_6bc44b640bbe", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Edinburgh"}
+{"family_id": "squadv2dev_ctx_6bc44b640bbe", "condition": "format_contract", "output": "{\"final_answer\": \"Holyrood\", \"support_quote\": \"the official home of the Scottish Parliament has been a new Scottish Parliament Building, in the Holyrood area of Edinburgh.\"}"}
+{"family_id": "squadv2dev_ctx_6bc44b640bbe", "condition": "insufficient", "output": "The Scottish Parliament Building"}
+{"family_id": "squadv2dev_ctx_6bc44b640bbe", "condition": "original", "output": "The Scottish Parliament Building"}
+{"family_id": "squadv2dev_ctx_6bc44b640bbe", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Edinburgh"}
+{"family_id": "squadv2dev_ctx_6bc44b640bbe", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Edinburgh"}
+{"family_id": "squadv2dev_ctx_6d1b6185d247", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: the convecting mantle"}
+{"family_id": "squadv2dev_ctx_6d1b6185d247", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: mantle convection"}
+{"family_id": "squadv2dev_ctx_6d1b6185d247", "condition": "format_contract", "output": "{\"final_answer\": \"the convecting mantle\", \"support_quote\": \"There is an intimate coupling between the movement of the plates on the surface and the convection of the mantle: oceanic plate motions and mantle convection currents always move in the same direction, because the oceanic lithosphere is the rigid upper thermal boundary layer of the convecting mantle.\"}"}
+{"family_id": "squadv2dev_ctx_6d1b6185d247", "condition": "insufficient", "output": "In the 1960s"}
+{"family_id": "squadv2dev_ctx_6d1b6185d247", "condition": "original", "output": "the convecting mantle"}
+{"family_id": "squadv2dev_ctx_6d1b6185d247", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: the convecting mantle"}
+{"family_id": "squadv2dev_ctx_6d1b6185d247", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: 1960s"}
+{"family_id": "squadv2dev_ctx_6d5d37af5c73", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: ONdigital"}
+{"family_id": "squadv2dev_ctx_6d5d37af5c73", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: ONdigital"}
+{"family_id": "squadv2dev_ctx_6d5d37af5c73", "condition": "format_contract", "output": "{\"final_answer\": \"ONdigital\", \"support_quote\": \"While BSkyB had been excluded from being a part of the ONdigital consortium, thereby making them a competitor by default\"}"}
+{"family_id": "squadv2dev_ctx_6d5d37af5c73", "condition": "insufficient", "output": "Freeview"}
+{"family_id": "squadv2dev_ctx_6d5d37af5c73", "condition": "original", "output": "ONdigital"}
+{"family_id": "squadv2dev_ctx_6d5d37af5c73", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: ONdigital"}
+{"family_id": "squadv2dev_ctx_6d5d37af5c73", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Freeview"}
+{"family_id": "squadv2dev_ctx_6ebd94df2163", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: voters approved the plan"}
+{"family_id": "squadv2dev_ctx_6ebd94df2163", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: The Consolidated City of Jacksonville"}
+{"family_id": "squadv2dev_ctx_6ebd94df2163", "condition": "format_contract", "output": "{\"final_answer\": \"voters approved the plan\", \"support_quote\": \"When a consolidation referendum was held in 1967, voters approved the plan.\"}"}
+{"family_id": "squadv2dev_ctx_6ebd94df2163", "condition": "insufficient", "output": "When a consolidation referendum was held in 1967, voters approved the plan."}
+{"family_id": "squadv2dev_ctx_6ebd94df2163", "condition": "original", "output": "voters approved the plan."}
+{"family_id": "squadv2dev_ctx_6ebd94df2163", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: voters approved the plan"}
+{"family_id": "squadv2dev_ctx_6ebd94df2163", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: NULL"}
+{"family_id": "squadv2dev_ctx_746aa8287dd0", "condition": "candidate_keep", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: westward"}
+{"family_id": "squadv2dev_ctx_746aa8287dd0", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: west"}
+{"family_id": "squadv2dev_ctx_746aa8287dd0", "condition": "format_contract", "output": "{\"final_answer\": \"westward\", \"support_quote\": \"The Rhine emerges from Lake Constance, flows generally westward, as the Hochrhein, passes the Rhine Falls, and is joined by its major tributary, the river Aare.\"}"}
+{"family_id": "squadv2dev_ctx_746aa8287dd0", "condition": "insufficient", "output": "The Aare"}
+{"family_id": "squadv2dev_ctx_746aa8287dd0", "condition": "original", "output": "westward"}
+{"family_id": "squadv2dev_ctx_746aa8287dd0", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: westward"}
+{"family_id": "squadv2dev_ctx_746aa8287dd0", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Aare"}
+{"family_id": "squadv2dev_ctx_74ae3042e0ed", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Bendigo"}
+{"family_id": "squadv2dev_ctx_74ae3042e0ed", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Bendigo"}
+{"family_id": "squadv2dev_ctx_74ae3042e0ed", "condition": "format_contract", "output": "{\"final_answer\": \"Bendigo\", \"support_quote\": \"Their legacy is particularly strong in Bendigo and its environs.\"}"}
+{"family_id": "squadv2dev_ctx_74ae3042e0ed", "condition": "insufficient", "output": "Bendigo and its environs"}
+{"family_id": "squadv2dev_ctx_74ae3042e0ed", "condition": "original", "output": "Bendigo and its environs"}
+{"family_id": "squadv2dev_ctx_74ae3042e0ed", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Bendigo"}
+{"family_id": "squadv2dev_ctx_74ae3042e0ed", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Bendigo"}
+{"family_id": "squadv2dev_ctx_74bf8cca4b02", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: a majority of all MEPs"}
+{"family_id": "squadv2dev_ctx_74bf8cca4b02", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: majority of all MEPs"}
+{"family_id": "squadv2dev_ctx_74bf8cca4b02", "condition": "format_contract", "output": "{\"final_answer\": \"majority of all MEPs\", \"support_quote\": \"The essence is there are three readings, starting with a Commission proposal, where the Parliament must vote by a majority of all MEPs (not just those present) to block or suggest changes\"}"}
+{"family_id": "squadv2dev_ctx_74bf8cca4b02", "condition": "insufficient", "output": "The answer is \"enhanced cooperation\"."}
+{"family_id": "squadv2dev_ctx_74bf8cca4b02", "condition": "original", "output": "majority of all MEPs"}
+{"family_id": "squadv2dev_ctx_74bf8cca4b02", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: majority of all MEPs"}
+{"family_id": "squadv2dev_ctx_74bf8cca4b02", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: The ordinary legislative procedure"}
+{"family_id": "squadv2dev_ctx_7ff5be6d5427", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Mexico"}
+{"family_id": "squadv2dev_ctx_7ff5be6d5427", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Mexico"}
+{"family_id": "squadv2dev_ctx_7ff5be6d5427", "condition": "format_contract", "output": "{\"final_answer\": \"Mexico\", \"support_quote\": \"Though there is no official definition for the northern boundary of southern California, such a division has existed from the time when Mexico ruled California\"}"}
+{"family_id": "squadv2dev_ctx_7ff5be6d5427", "condition": "insufficient", "output": "Mexico"}
+{"family_id": "squadv2dev_ctx_7ff5be6d5427", "condition": "original", "output": "Mexico"}
+{"family_id": "squadv2dev_ctx_7ff5be6d5427", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Mexico"}
+{"family_id": "squadv2dev_ctx_7ff5be6d5427", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Mexico"}
+{"family_id": "squadv2dev_ctx_851d7e4f91fc", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Thermochemical techniques"}
+{"family_id": "squadv2dev_ctx_851d7e4f91fc", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: thermochemical techniques"}
+{"family_id": "squadv2dev_ctx_851d7e4f91fc", "condition": "format_contract", "output": "{\"final_answer\": \"Thermochemical techniques\", \"support_quote\": \"Thermochemical techniques can be used to determine temperature profiles within the crust, the uplift of mountain ranges, and paleotopography.\"}"}
+{"family_id": "squadv2dev_ctx_851d7e4f91fc", "condition": "insufficient", "output": "geologic applications"}
+{"family_id": "squadv2dev_ctx_851d7e4f91fc", "condition": "original", "output": "Thermochemical techniques can be used to determine temperature profiles within the crust, the uplift of mountain ranges, and paleotopography."}
+{"family_id": "squadv2dev_ctx_851d7e4f91fc", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Thermochemical techniques"}
+{"family_id": "squadv2dev_ctx_851d7e4f91fc", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: isotope ratios"}
+{"family_id": "squadv2dev_ctx_862735a98836", "condition": "candidate_keep", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: Orange"}
+{"family_id": "squadv2dev_ctx_862735a98836", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Orange County"}
+{"family_id": "squadv2dev_ctx_862735a98836", "condition": "format_contract", "output": "{\"final_answer\": \"Orange County\", \"support_quote\": \"Orange County is a rapidly developing business center that includes Downtown Santa Ana, the South Coast Metro and Newport Center districts; as well as the Irvine business centers of The Irvine Spectrum, West Irvine, and international corporations headquartered at the University of California, Irvine.\"}"}
+{"family_id": "squadv2dev_ctx_862735a98836", "condition": "insufficient", "output": "Orange County"}
+{"family_id": "squadv2dev_ctx_862735a98836", "condition": "original", "output": "Orange County"}
+{"family_id": "squadv2dev_ctx_862735a98836", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Orange County"}
+{"family_id": "squadv2dev_ctx_862735a98836", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Orange County"}
+{"family_id": "squadv2dev_ctx_88817ce64dc5", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: first century"}
+{"family_id": "squadv2dev_ctx_88817ce64dc5", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: first century"}
+{"family_id": "squadv2dev_ctx_88817ce64dc5", "condition": "format_contract", "output": "{\"final_answer\": \"first century AD\", \"support_quote\": \"The history of the steam engine stretches back as far as the first century AD; the first recorded rudimentary steam engine being the aeolipile described by Greek mathematician Hero of Alexandria.\"}"}
+{"family_id": "squadv2dev_ctx_88817ce64dc5", "condition": "insufficient", "output": "1679"}
+{"family_id": "squadv2dev_ctx_88817ce64dc5", "condition": "original", "output": "The first century AD"}
+{"family_id": "squadv2dev_ctx_88817ce64dc5", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: 1st"}
+{"family_id": "squadv2dev_ctx_88817ce64dc5", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: 17th"}
+{"family_id": "squadv2dev_ctx_8b929f0477dc", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: normal force"}
+{"family_id": "squadv2dev_ctx_8b929f0477dc", "condition": "candidate_revise", "output": "DECISION: KEEP\nFINAL: Pauli repulsion"}
+{"family_id": "squadv2dev_ctx_8b929f0477dc", "condition": "format_contract", "output": "{\"final_answer\": \"Pauli repulsion\", \"support_quote\": \"When their electron clouds overlap, Pauli repulsion (due to fermionic nature of electrons) follows resulting in the force that acts in a direction normal to the surface interface between two objects.\"}"}
+{"family_id": "squadv2dev_ctx_8b929f0477dc", "condition": "insufficient", "output": "The context does not provide information about a force due to attractive forces of interaction."}
+{"family_id": "squadv2dev_ctx_8b929f0477dc", "condition": "original", "output": "Pauli repulsion"}
+{"family_id": "squadv2dev_ctx_8b929f0477dc", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Pauli repulsion"}
+{"family_id": "squadv2dev_ctx_8b929f0477dc", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: normal force"}
+{"family_id": "squadv2dev_ctx_8f4b72e8f1ad", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: at the Cape of Good Hope"}
+{"family_id": "squadv2dev_ctx_8f4b72e8f1ad", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Cape Town"}
+{"family_id": "squadv2dev_ctx_8f4b72e8f1ad", "condition": "format_contract", "output": "{\"final_answer\": \"Cape Town\", \"support_quote\": \"The first Huguenot to arrive at the Cape of Good Hope was however Maria de la Queillerie, wife of commander Jan van Riebeeck (and daughter of a Walloon church minister), who arrived on 6 April 1652 to establish a settlement at what is today Cape Town.\"}"}
+{"family_id": "squadv2dev_ctx_8f4b72e8f1ad", "condition": "insufficient", "output": "1671"}
+{"family_id": "squadv2dev_ctx_8f4b72e8f1ad", "condition": "original", "output": "Cape Town"}
+{"family_id": "squadv2dev_ctx_8f4b72e8f1ad", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Cape of Good Hope"}
+{"family_id": "squadv2dev_ctx_8f4b72e8f1ad", "condition": "status_insufficient", "output": "STATUS: INSUFFICIENT\nFINAL_ANSWER: NULL"}
+{"family_id": "squadv2dev_ctx_9251f082aecf", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: the study of sedimentary layers"}
+{"family_id": "squadv2dev_ctx_9251f082aecf", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: the study of sedimentary layers"}
+{"family_id": "squadv2dev_ctx_9251f082aecf", "condition": "format_contract", "output": "{\"final_answer\": \"the study of sedimentary layers\", \"support_quote\": \"In typical geological investigations, geologists use primary information related to petrology (the study of rocks), stratigraphy (the study of sedimentary layers), and structural geology (the study of positions of rock units and their deformation).\"}"}
+{"family_id": "squadv2dev_ctx_9251f082aecf", "condition": "insufficient", "output": "investigate past and current life and biogeochemical pathways"}
+{"family_id": "squadv2dev_ctx_9251f082aecf", "condition": "original", "output": "The study of sedimentary layers"}
+{"family_id": "squadv2dev_ctx_9251f082aecf", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: the study of sedimentary layers"}
+{"family_id": "squadv2dev_ctx_9251f082aecf", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: geophysical methods"}
+{"family_id": "squadv2dev_ctx_95f4162a7961", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: A deterministic Turing machine"}
+{"family_id": "squadv2dev_ctx_95f4162a7961", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: deterministic Turing machine"}
+{"family_id": "squadv2dev_ctx_95f4162a7961", "condition": "format_contract", "output": "{\"final_answer\": \"A deterministic Turing machine\", \"support_quote\": \"A deterministic Turing machine is the most basic Turing machine, which uses a fixed set of rules to determine its future actions.\"}"}
+{"family_id": "squadv2dev_ctx_95f4162a7961", "condition": "insufficient", "output": "A non-deterministic Turing machine is a deterministic Turing machine with an added feature of non-determinism, which allows a Turing machine to have multiple possible future actions from a given state."}
+{"family_id": "squadv2dev_ctx_95f4162a7961", "condition": "original", "output": "A deterministic Turing machine is the most basic Turing machine, which uses a fixed set of rules to determine its future actions."}
+{"family_id": "squadv2dev_ctx_95f4162a7961", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: deterministic Turing machine"}
+{"family_id": "squadv2dev_ctx_95f4162a7961", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: probabilistic Turing machine"}
+{"family_id": "squadv2dev_ctx_9a0d026894bf", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: vaccination"}
+{"family_id": "squadv2dev_ctx_9a0d026894bf", "condition": "candidate_revise", "output": "DECISION: KEEP\nFINAL: immunization"}
+{"family_id": "squadv2dev_ctx_9a0d026894bf", "condition": "format_contract", "output": "{\"final_answer\": \"vaccination\", \"support_quote\": \"The principle behind vaccination (also called immunization) is to introduce an antigen from a pathogen in order to stimulate the immune system and develop specific immunity against that particular pathogen without causing disease associated with that organism.\"}"}
+{"family_id": "squadv2dev_ctx_9a0d026894bf", "condition": "insufficient", "output": "Following infection"}
+{"family_id": "squadv2dev_ctx_9a0d026894bf", "condition": "original", "output": "vaccination"}
+{"family_id": "squadv2dev_ctx_9a0d026894bf", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: vaccination"}
+{"family_id": "squadv2dev_ctx_9a0d026894bf", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Following infection by activation of B and T cells"}
+{"family_id": "squadv2dev_ctx_a4180c8c4fb2", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: bacteriophage"}
+{"family_id": "squadv2dev_ctx_a4180c8c4fb2", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: bacteriophage"}
+{"family_id": "squadv2dev_ctx_a4180c8c4fb2", "condition": "format_contract", "output": "{\"final_answer\": \"bacteriophage\", \"support_quote\": \"Even simple unicellular organisms such as bacteria possess a rudimentary immune system, in the form of enzymes that protect against bacteriophage infections.\"}"}
+{"family_id": "squadv2dev_ctx_a4180c8c4fb2", "condition": "insufficient", "output": "The answer cannot be settled from the context."}
+{"family_id": "squadv2dev_ctx_a4180c8c4fb2", "condition": "original", "output": "bacteriophage"}
+{"family_id": "squadv2dev_ctx_a4180c8c4fb2", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: bacteriophage"}
+{"family_id": "squadv2dev_ctx_a4180c8c4fb2", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: pathogens"}
+{"family_id": "squadv2dev_ctx_a611563cee18", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Warsaw"}
+{"family_id": "squadv2dev_ctx_a611563cee18", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Warsaw"}
+{"family_id": "squadv2dev_ctx_a611563cee18", "condition": "format_contract", "output": "{\"final_answer\": \"Warsaw\", \"support_quote\": \"Warsaw (Polish: Warszawa [varˈʂava] ( listen); see also other names) is the capital and largest city of Poland.\"}"}
+{"family_id": "squadv2dev_ctx_a611563cee18", "condition": "insufficient", "output": "Warsaw"}
+{"family_id": "squadv2dev_ctx_a611563cee18", "condition": "original", "output": "Warsaw"}
+{"family_id": "squadv2dev_ctx_a611563cee18", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Warsaw"}
+{"family_id": "squadv2dev_ctx_a611563cee18", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Capital of Poland"}
+{"family_id": "squadv2dev_ctx_a628f7eaff7b", "condition": "candidate_keep", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: south-east"}
+{"family_id": "squadv2dev_ctx_a628f7eaff7b", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: south-east"}
+{"family_id": "squadv2dev_ctx_a628f7eaff7b", "condition": "format_contract", "output": "{\"final_answer\": \"south-east of Australia\", \"support_quote\": \"Victoria is a state in the south-east of Australia.\"}"}
+{"family_id": "squadv2dev_ctx_a628f7eaff7b", "condition": "insufficient", "output": "south-east of Australia"}
+{"family_id": "squadv2dev_ctx_a628f7eaff7b", "condition": "original", "output": "south-east of Australia"}
+{"family_id": "squadv2dev_ctx_a628f7eaff7b", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: South-east of Australia"}
+{"family_id": "squadv2dev_ctx_a628f7eaff7b", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: South"}
+{"family_id": "squadv2dev_ctx_b5f35300666c", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: steam engine indicator"}
+{"family_id": "squadv2dev_ctx_b5f35300666c", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: steam engine indicator"}
+{"family_id": "squadv2dev_ctx_b5f35300666c", "condition": "format_contract", "output": "{\"final_answer\": \"steam engine indicator\", \"support_quote\": \"The most useful instrument for analyzing the performance of steam engines is the steam engine indicator.\"}"}
+{"family_id": "squadv2dev_ctx_b5f35300666c", "condition": "insufficient", "output": "The steam engine indicator"}
+{"family_id": "squadv2dev_ctx_b5f35300666c", "condition": "original", "output": "The steam engine indicator"}
+{"family_id": "squadv2dev_ctx_b5f35300666c", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: steam engine indicator"}
+{"family_id": "squadv2dev_ctx_b5f35300666c", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: steam engine indicator"}
+{"family_id": "squadv2dev_ctx_b6d6c1545f92", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: A Turing machine"}
+{"family_id": "squadv2dev_ctx_b6d6c1545f92", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Turing machine"}
+{"family_id": "squadv2dev_ctx_b6d6c1545f92", "condition": "format_contract", "output": "{\"final_answer\": \"Turing machine\", \"support_quote\": \"A Turing machine is a mathematical model of a general computing machine.\"}"}
+{"family_id": "squadv2dev_ctx_b6d6c1545f92", "condition": "insufficient", "output": "A Turing machine is a mathematical model of a general computing machine."}
+{"family_id": "squadv2dev_ctx_b6d6c1545f92", "condition": "original", "output": "A Turing machine is a mathematical model of a general computing machine."}
+{"family_id": "squadv2dev_ctx_b6d6c1545f92", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Turing machine"}
+{"family_id": "squadv2dev_ctx_b6d6c1545f92", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Turing machine"}
+{"family_id": "squadv2dev_ctx_b8e0b30dcde6", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: 2007"}
+{"family_id": "squadv2dev_ctx_b8e0b30dcde6", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: 2007"}
+{"family_id": "squadv2dev_ctx_b8e0b30dcde6", "condition": "format_contract", "output": "{\"final_answer\": \"2007\", \"support_quote\": \"Virgin Media (re-branded in 2007 from NTL:Telewest) started to offer a high-definition television (HDTV) capable set top box\"}"}
+{"family_id": "squadv2dev_ctx_b8e0b30dcde6", "condition": "insufficient", "output": "2007"}
+{"family_id": "squadv2dev_ctx_b8e0b30dcde6", "condition": "original", "output": "2007"}
+{"family_id": "squadv2dev_ctx_b8e0b30dcde6", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: 2007"}
+{"family_id": "squadv2dev_ctx_b8e0b30dcde6", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: 2007"}
+{"family_id": "squadv2dev_ctx_c82100776072", "condition": "candidate_keep", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: three"}
+{"family_id": "squadv2dev_ctx_c82100776072", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Three"}
+{"family_id": "squadv2dev_ctx_c82100776072", "condition": "format_contract", "output": "{\"final_answer\": \"three\", \"support_quote\": \"Fresno has three large public parks, two in the city limits and one in county land to the southwest.\"}"}
+{"family_id": "squadv2dev_ctx_c82100776072", "condition": "insufficient", "output": "Rotary Storyland and Playland"}
+{"family_id": "squadv2dev_ctx_c82100776072", "condition": "original", "output": "Fresno has three large public parks."}
+{"family_id": "squadv2dev_ctx_c82100776072", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: 3"}
+{"family_id": "squadv2dev_ctx_c82100776072", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: NULL"}
+{"family_id": "squadv2dev_ctx_d243d4e2e82b", "condition": "candidate_keep", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: Oxygen toxicity"}
+{"family_id": "squadv2dev_ctx_d243d4e2e82b", "condition": "candidate_revise", "output": "DECISION: KEEP if the draft is right, REVISE if not\nFINAL: pulmonary fibrosis"}
+{"family_id": "squadv2dev_ctx_d243d4e2e82b", "condition": "format_contract", "output": "{\"final_answer\": \"Pulmonary fibrosis\", \"support_quote\": \"Prolonged breathing of an air mixture with an O 2 partial pressure more than 60 kPa can eventually lead to permanent pulmonary fibrosis.\"}"}
+{"family_id": "squadv2dev_ctx_d243d4e2e82b", "condition": "insufficient", "output": "Prolonged breathing of an air mixture with an O 2 partial pressure more than 60 kPa can eventually lead to permanent pulmonary fibrosis."}
+{"family_id": "squadv2dev_ctx_d243d4e2e82b", "condition": "original", "output": "Pulmonary fibrosis"}
+{"family_id": "squadv2dev_ctx_d243d4e2e82b", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Oxygen toxicity"}
+{"family_id": "squadv2dev_ctx_d243d4e2e82b", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: permanent pulmonary fibrosis"}
+{"family_id": "squadv2dev_ctx_d3a62215da09", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: William the Conqueror"}
+{"family_id": "squadv2dev_ctx_d3a62215da09", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: William the Conqueror"}
+{"family_id": "squadv2dev_ctx_d3a62215da09", "condition": "format_contract", "output": "{\"final_answer\": \"William the Conqueror\", \"support_quote\": \"an expedition on behalf of their duke, William the Conqueror, led to the Norman conquest of England at the Battle of Hastings in 1066.\"}"}
+{"family_id": "squadv2dev_ctx_d3a62215da09", "condition": "insufficient", "output": "political"}
+{"family_id": "squadv2dev_ctx_d3a62215da09", "condition": "original", "output": "William the Conqueror"}
+{"family_id": "squadv2dev_ctx_d3a62215da09", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: William the Conqueror"}
+{"family_id": "squadv2dev_ctx_d3a62215da09", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Political, cultural and military"}
+{"family_id": "squadv2dev_ctx_e1a7ed4b8611", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: non-violent behavior"}
+{"family_id": "squadv2dev_ctx_e1a7ed4b8611", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: non-violence"}
+{"family_id": "squadv2dev_ctx_e1a7ed4b8611", "condition": "format_contract", "output": "{\"final_answer\": \"non-violence\", \"support_quote\": \"Black's Law Dictionary includes non-violence in its definition of civil disobedience.\"}"}
+{"family_id": "squadv2dev_ctx_e1a7ed4b8611", "condition": "insufficient", "output": "refraining from violence"}
+{"family_id": "squadv2dev_ctx_e1a7ed4b8611", "condition": "original", "output": "non-violence"}
+{"family_id": "squadv2dev_ctx_e1a7ed4b8611", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: violence"}
+{"family_id": "squadv2dev_ctx_e1a7ed4b8611", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: refraining from violence"}
+{"family_id": "squadv2dev_ctx_e3829bf0ddb6", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: President"}
+{"family_id": "squadv2dev_ctx_e3829bf0ddb6", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: President"}
+{"family_id": "squadv2dev_ctx_e3829bf0ddb6", "condition": "format_contract", "output": "{\"final_answer\": \"President\", \"support_quote\": \"The mayor of Warsaw is called President.\"}"}
+{"family_id": "squadv2dev_ctx_e3829bf0ddb6", "condition": "insufficient", "output": "President"}
+{"family_id": "squadv2dev_ctx_e3829bf0ddb6", "condition": "original", "output": "President"}
+{"family_id": "squadv2dev_ctx_e3829bf0ddb6", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: President"}
+{"family_id": "squadv2dev_ctx_e3829bf0ddb6", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: President"}
+{"family_id": "squadv2dev_ctx_e4e7d582290c", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: intractable problems"}
+{"family_id": "squadv2dev_ctx_e4e7d582290c", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: intractable problems"}
+{"family_id": "squadv2dev_ctx_e4e7d582290c", "condition": "format_contract", "output": "{\"final_answer\": \"intractable problems\", \"support_quote\": \"Problems that can be solved in theory (e.g., given large but finite time), but which in practice take too long for their solutions to be useful, are known as intractable problems.\"}"}
+{"family_id": "squadv2dev_ctx_e4e7d582290c", "condition": "insufficient", "output": "The answer cannot be settled from the context."}
+{"family_id": "squadv2dev_ctx_e4e7d582290c", "condition": "original", "output": "intractable problems"}
+{"family_id": "squadv2dev_ctx_e4e7d582290c", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: intractable problems"}
+{"family_id": "squadv2dev_ctx_e4e7d582290c", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: intractable problems"}
+{"family_id": "squadv2dev_ctx_ebceddf7a72b", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: armed"}
+{"family_id": "squadv2dev_ctx_ebceddf7a72b", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: armed jihad"}
+{"family_id": "squadv2dev_ctx_ebceddf7a72b", "condition": "format_contract", "output": "{\"final_answer\": \"armed jihad\", \"support_quote\": \"HT does not engage in armed jihad or work for a democratic system, but works to take power through \"ideological struggle\" to change Muslim public opinion\"}"}
+{"family_id": "squadv2dev_ctx_ebceddf7a72b", "condition": "insufficient", "output": "\"HT does not engage in armed jihad or work for a democratic system, but works to take power through \"ideological struggle\" to change Muslim public opinion\""}
+{"family_id": "squadv2dev_ctx_ebceddf7a72b", "condition": "original", "output": "armed jihad"}
+{"family_id": "squadv2dev_ctx_ebceddf7a72b", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: armed"}
+{"family_id": "squadv2dev_ctx_ebceddf7a72b", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: ideological struggle"}
+{"family_id": "squadv2dev_ctx_ed4e6d510fb5", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: villes de sûreté"}
+{"family_id": "squadv2dev_ctx_ed4e6d510fb5", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: villes de sûreté"}
+{"family_id": "squadv2dev_ctx_ed4e6d510fb5", "condition": "format_contract", "output": "{\"final_answer\": \"villes de sûreté\", \"support_quote\": \"Montpellier was among the most important of the 66 \\\"villes de sûreté\\\" that the Edict of 1598 granted to the Huguenots.\"}"}
+{"family_id": "squadv2dev_ctx_ed4e6d510fb5", "condition": "insufficient", "output": "Protestant rule was dead and the ville de sûreté was no more."}
+{"family_id": "squadv2dev_ctx_ed4e6d510fb5", "condition": "original", "output": "\"villes de sûreté\""}
+{"family_id": "squadv2dev_ctx_ed4e6d510fb5", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: villes de sûreté"}
+{"family_id": "squadv2dev_ctx_ed4e6d510fb5", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Protestant rule was dead and the ville de sûreté was no more"}
+{"family_id": "squadv2dev_ctx_eefa3d988576", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Cologne, Germany"}
+{"family_id": "squadv2dev_ctx_eefa3d988576", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Cologne"}
+{"family_id": "squadv2dev_ctx_eefa3d988576", "condition": "format_contract", "output": "{\"final_answer\": \"Cologne\", \"support_quote\": \"The biggest city on the river Rhine is Cologne, Germany with a population of more than 1,050,000 people.\"}"}
+{"family_id": "squadv2dev_ctx_eefa3d988576", "condition": "insufficient", "output": "Swiss canton of Graubünden"}
+{"family_id": "squadv2dev_ctx_eefa3d988576", "condition": "original", "output": "The biggest city on the river Rhine is Cologne, Germany with a population of more than 1,050,000 people."}
+{"family_id": "squadv2dev_ctx_eefa3d988576", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: Cologne"}
+{"family_id": "squadv2dev_ctx_eefa3d988576", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: Liechtenstein"}
+{"family_id": "squadv2dev_ctx_fc191794f23f", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: Chicago's physics department"}
+{"family_id": "squadv2dev_ctx_fc191794f23f", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: University of Chicago"}
+{"family_id": "squadv2dev_ctx_fc191794f23f", "condition": "format_contract", "output": "{\"final_answer\": \"University of Chicago scholars\", \"support_quote\": \"University of Chicago scholars have played a major role in the development of various academic disciplines, including: the Chicago school of economics, the Chicago school of sociology, the law and economics movement in legal analysis, the Chicago school of literary criticism, the Chicago school of religion, and the behavioralism school of political science.\"}"}
+{"family_id": "squadv2dev_ctx_fc191794f23f", "condition": "insufficient", "output": "The University of Chicago scholars have played a major role in the development of various academic disciplines, including: the Chicago school of economics, the Chicago school of sociology, the law and economics movement in legal analysis, the Chicago school of literary criticism, the Chicago school of religion, and the behavioralism school of political science."}
+{"family_id": "squadv2dev_ctx_fc191794f23f", "condition": "original", "output": "University of Chicago scholars"}
+{"family_id": "squadv2dev_ctx_fc191794f23f", "condition": "status_found", "output": "STATUS: OK\nFINAL_ANSWER: University of Chicago"}
+{"family_id": "squadv2dev_ctx_fc191794f23f", "condition": "status_insufficient", "output": "STATUS: OK\nFINAL_ANSWER: the world's first man-made, self-sustaining nuclear reaction"}
+{"family_id": "agnews_test_1216", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_1216", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_1216", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_1216", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_1436", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_1436", "condition": "candidate_revise", "output": "DECISION: REVISE  \nFINAL: World"}
+{"family_id": "agnews_test_1436", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_1436", "condition": "original", "output": "This news brief should run under the World desk."}
+{"family_id": "agnews_test_1733", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_1733", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_1733", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_1733", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_1947", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_1947", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_1947", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_1947", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_206", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_206", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_206", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_206", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_2111", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_2111", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_2111", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_2111", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_2115", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_2115", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_2115", "condition": "format_contract", "output": "category = Sci/Tech"}
+{"family_id": "agnews_test_2115", "condition": "original", "output": "Sci/Tech"}
+{"family_id": "agnews_test_229", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_229", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_229", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_229", "condition": "original", "output": "This news brief should run under the World desk."}
+{"family_id": "agnews_test_2362", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_2362", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_2362", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_2362", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_3031", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_3031", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_3031", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_3031", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_3057", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_3057", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_3057", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_3057", "condition": "original", "output": "World"}
+{"family_id": "agnews_test_306", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_306", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_306", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_306", "condition": "original", "output": "This news brief should run under Business."}
+{"family_id": "agnews_test_3169", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_3169", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_3169", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_3169", "condition": "original", "output": "World"}
+{"family_id": "agnews_test_3230", "condition": "candidate_keep", "output": "DECISION: REVISE  \nFINAL: Sports"}
+{"family_id": "agnews_test_3230", "condition": "candidate_revise", "output": "DECISION: REVISE  \nFINAL: Sports"}
+{"family_id": "agnews_test_3230", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_3230", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_3431", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_3431", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_3431", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_3431", "condition": "original", "output": "This news brief should run under the World desk."}
+{"family_id": "agnews_test_3440", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_3440", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_3440", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_3440", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_3627", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_3627", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_3627", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_3627", "condition": "original", "output": "Business"}
+{"family_id": "agnews_test_434", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_434", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_434", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_434", "condition": "original", "output": "Business"}
+{"family_id": "agnews_test_4597", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_4597", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_4597", "condition": "format_contract", "output": "category = Sci/Tech"}
+{"family_id": "agnews_test_4597", "condition": "original", "output": "This news brief should run under Sci/Tech."}
+{"family_id": "agnews_test_4625", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_4625", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_4625", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_4625", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_4888", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_4888", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_4888", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_4888", "condition": "original", "output": "World"}
+{"family_id": "agnews_test_4965", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_4965", "condition": "candidate_revise", "output": "DECISION: REVISE  \nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_4965", "condition": "format_contract", "output": "category = Sci/Tech"}
+{"family_id": "agnews_test_4965", "condition": "original", "output": "Sci/Tech"}
+{"family_id": "agnews_test_5048", "condition": "candidate_keep", "output": "DECISION: REVISE  \nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_5048", "condition": "candidate_revise", "output": "DECISION: REVISE  \nFINAL: Business"}
+{"family_id": "agnews_test_5048", "condition": "format_contract", "output": "category = Sci/Tech"}
+{"family_id": "agnews_test_5048", "condition": "original", "output": "Sci/Tech"}
+{"family_id": "agnews_test_5106", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_5106", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_5106", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_5106", "condition": "original", "output": "Business"}
+{"family_id": "agnews_test_5124", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_5124", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_5124", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_5124", "condition": "original", "output": "This news brief should run under the World desk."}
+{"family_id": "agnews_test_526", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_526", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_526", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_526", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_5271", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_5271", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_5271", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_5271", "condition": "original", "output": "World"}
+{"family_id": "agnews_test_5402", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_5402", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_5402", "condition": "format_contract", "output": "category = Sci/Tech"}
+{"family_id": "agnews_test_5402", "condition": "original", "output": "Sci/Tech"}
+{"family_id": "agnews_test_5633", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_5633", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_5633", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_5633", "condition": "original", "output": "This news brief should run under the World desk."}
+{"family_id": "agnews_test_5898", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_5898", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_5898", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_5898", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_6152", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_6152", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_6152", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_6152", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_6252", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_6252", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6252", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_6252", "condition": "original", "output": "World"}
+{"family_id": "agnews_test_6288", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6288", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_6288", "condition": "format_contract", "output": "category = Sci/Tech"}
+{"family_id": "agnews_test_6288", "condition": "original", "output": "This news brief should run under Sci/Tech."}
+{"family_id": "agnews_test_6511", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_6511", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_6511", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_6511", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_6602", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6602", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6602", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_6602", "condition": "original", "output": "World"}
+{"family_id": "agnews_test_6641", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6641", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_6641", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_6641", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_6693", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6693", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_6693", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_6693", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_6715", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6715", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6715", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_6715", "condition": "original", "output": "World"}
+{"family_id": "agnews_test_6717", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_6717", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sci/Tech"}
+{"family_id": "agnews_test_6717", "condition": "format_contract", "output": "category = Sci/Tech"}
+{"family_id": "agnews_test_6717", "condition": "original", "output": "This news brief should run under Sci/Tech."}
+{"family_id": "agnews_test_6793", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_6793", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_6793", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_6793", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_6854", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6854", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_6854", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_6854", "condition": "original", "output": "World"}
+{"family_id": "agnews_test_6883", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_6883", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_6883", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_6883", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_6947", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_6947", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_6947", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_6947", "condition": "original", "output": "Business"}
+{"family_id": "agnews_test_7129", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_7129", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_7129", "condition": "format_contract", "output": "category = Sci/Tech"}
+{"family_id": "agnews_test_7129", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_7138", "condition": "candidate_keep", "output": "DECISION: REVISE  \nFINAL: Sports"}
+{"family_id": "agnews_test_7138", "condition": "candidate_revise", "output": "DECISION: REVISE  \nFINAL: Sports"}
+{"family_id": "agnews_test_7138", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_7138", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_7451", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_7451", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_7451", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_7451", "condition": "original", "output": "This news brief should run under the Business desk."}
+{"family_id": "agnews_test_7486", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_7486", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Sports"}
+{"family_id": "agnews_test_7486", "condition": "format_contract", "output": "category = Sports"}
+{"family_id": "agnews_test_7486", "condition": "original", "output": "Sports"}
+{"family_id": "agnews_test_7511", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_7511", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_7511", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_7511", "condition": "original", "output": "Business"}
+{"family_id": "agnews_test_7579", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_7579", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Business"}
+{"family_id": "agnews_test_7579", "condition": "format_contract", "output": "category = Business"}
+{"family_id": "agnews_test_7579", "condition": "original", "output": "Business"}
+{"family_id": "agnews_test_781", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_781", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: World"}
+{"family_id": "agnews_test_781", "condition": "format_contract", "output": "category = World"}
+{"family_id": "agnews_test_781", "condition": "original", "output": "This news brief should run under the World desk."}
+{"family_id": "crepe_test_2019_b-00339", "condition": "original", "output": "A waterspout is an intense columnar vortex, typically appearing as a funnel-shaped cloud, that forms over a body of water. It is essentially a non-supercell tornado over water and is usually weaker than its land counterparts, though stronger versions can occur. Most waterspouts do not suck up water; they are small and weak rotating columns of air over water.\n\nIf an object or a person were to get caught in a waterspout, they would likely be lifted and carried along with the rotating air column. The force of the wind and the rotational motion could cause significant damage or injury, depending on the strength of the waterspout."}
+{"family_id": "crepe_test_2019_b-00354", "condition": "original", "output": "The material provided does not specifically address the physical effects of sadness or heartbreak on the chest and head. It focuses on chest pain related to cardiac, respiratory, digestive, and musculoskeletal issues, but does not discuss emotional or psychological causes of physical discomfort."}
+{"family_id": "crepe_test_2019_b-00706", "condition": "original", "output": "The material does not cover what is asked."}
+{"family_id": "crepe_test_2019_b-00800", "condition": "original", "output": "A **geometrically safe container** is a specially designed vessel that prevents radioactive fissile materials from reaching a **critical state**, which is when a nuclear chain reaction becomes self-sustaining and potentially dangerous. The **geometry** of the container plays a key role in this safety measure.\n\n### How Geometry Prevents Criticality:\n- **Criticality** occurs when fissile material (like plutonium or highly enriched uranium) is arranged in a way that allows a sustained nuclear chain reaction. This depends on factors such as the **mass**, **shape**, and **neutron moderation** (how neutrons are slowed down and reflected back into the material).\n- A **geometrically safe container** is designed to **prevent the fissile material from forming a critical mass**. This can be achieved by:\n  - **Shaping the container** to limit the amount of fissile material that can be contained within a single, uninterrupted mass.\n  - **Using neutron-absorbing materials** (like boron or cadmium) in the container walls or surrounding the fissile material to slow or stop the chain reaction.\n  - **Dividing the fissile material** into smaller, separate portions that cannot sustain a chain reaction on their own.\n\n### Why It Matters:\n- In nuclear facilities, **geometrically safe containers** are essential to prevent **criticality accidents**, which can release large amounts of radiation and pose serious health and environmental risks.\n- These containers are part of a broader set of **safeguards and containment strategies** used in both **civil and military nuclear operations** to ensure that nuclear materials are handled safely under all conditions, including accidents or process upsets.\n\nIn summary, a **geometrically safe container** uses the **shape and structure** of the container to **prevent fissile materials from reaching a critical state**, thereby reducing the risk of a nuclear chain reaction."}
+{"family_id": "crepe_test_2019_b-01082", "condition": "original", "output": "Cardio decreases one's heart rate by improving the efficiency of the heart. Regular aerobic exercise strengthens the heart muscle, allowing it to pump more blood with each beat. As a result, the heart doesn't need to beat as frequently to supply the body with the necessary amount of blood and oxygen, leading to a lower resting heart rate. This adaptation is commonly seen in athletes and is a sign of a well-conditioned cardiovascular system."}
+{"family_id": "crepe_test_2019_b-01145", "condition": "original", "output": "Sometimes our heart beats harder because the vagus nerve, which helps control heart rate, can be compressed or irritated. This can slow the heart, and in response, the body triggers reflexes to increase blood pressure and heart rate, making the heart beat harder."}
+{"family_id": "crepe_test_2019_b-01684", "condition": "original", "output": "The material does not provide a direct answer to how far up into space a country's laws extend."}
+{"family_id": "crepe_test_2019_b-01906", "condition": "original", "output": "It is easy to cross your eyes because the muscles that control eye movement are capable of moving each eye independently in a wide range of directions. This allows for a natural, flexible range of motion that can be used to focus on nearby objects or to look around. However, pointing your eyes in opposite directions is not possible because the eyes are connected to the brain through the optic nerves and are controlled by the same neural pathways. This means that the brain cannot send conflicting signals to each eye to move them in opposite directions."}
+{"family_id": "crepe_test_2019_b-01985", "condition": "original", "output": "The reference material does not directly address why sleeping makes you dehydrated. It discusses dehydration in the context of physical exertion and lack of fluid intake, but does not provide an explanation related to sleep."}
+{"family_id": "crepe_test_2019_b-02032", "condition": "original", "output": "On a hot day or in a hot room, your body works harder to maintain its internal temperature, which is around 98.6°F (37°C). To cool itself, your body sweats, and the sweat evaporates from your skin, taking heat away from your body. This process requires energy, which comes from the food you've eaten. When you're in a hot environment, your body uses more energy to cool itself, leaving less energy available for other activities, which can make you feel tired and weak."}
+{"family_id": "crepe_test_2019_b-02033", "condition": "original", "output": "People catch food in their mouths without gagging because the process involves a coordinated sequence of actions that includes the tongue, jaw, and throat muscles working together to move food to the back of the mouth and into the throat. This process is known as swallowing, and it is controlled by a complex set of nerves and muscles that are developed from an early age. The gag reflex, which is a protective mechanism that helps prevent choking, is triggered when food or liquid touches the back of the throat, but it is not typically activated when food is properly chewed and swallowed."}
+{"family_id": "crepe_test_2019_b-02259", "condition": "original", "output": "When you bite a piece of foil, it hurts because the foil is a thin, rigid material that can easily puncture the soft tissues in your mouth. The sharp edges of the foil can cut or tear the delicate lining of your mouth, causing pain and potentially bleeding. This is not related to the properties of foil described in the reference material, which discusses lift and drag forces in fluid dynamics."}
+{"family_id": "crepe_test_2019_b-02320", "condition": "original", "output": "Shaking the bag helps to release more of the tea leaves into the water, increasing the surface area of the tea in contact with the water. This allows the water to extract more flavor and caffeine from the tea leaves more quickly, thus brewing the tea faster."}
+{"family_id": "crepe_test_2019_b-02363", "condition": "original", "output": "Extreme disgust causes vomiting as a protective mechanism to expel harmful or unpleasant substances from the body. This response is rooted in evolutionary biology, where vomiting helped early humans avoid ingesting toxins or pathogens that could be harmful or deadly. The act of vomiting is a physical manifestation of the body's attempt to rid itself of something it perceives as dangerous or undesirable."}
+{"family_id": "crepe_test_2019_b-02604", "condition": "original", "output": "The material does not cover what is asked, so the answer cannot be determined from the given reference material."}
+{"family_id": "crepe_test_2019_b-02943", "condition": "original", "output": "The material does not directly address the sensation of heartbeats at different rates, so the answer cannot be derived from the given reference."}
+{"family_id": "crepe_test_2019_b-03253", "condition": "original", "output": "The median and mean are used at different times to display data because they summarize data in different ways. The **mean** is the arithmetic average and is sensitive to extreme values, making it less reliable for skewed distributions. The **median**, on the other hand, is the middle value in an ordered data set and is less affected by outliers or extreme values, making it a better measure of central tendency in skewed distributions. For example, in data like household income, where a few very high incomes can greatly increase the mean, the median provides a more accurate representation of a \"typical\" value."}
+{"family_id": "crepe_test_2019_b-03742", "condition": "original", "output": "The LGBT community has many sub-groups and labels because people are diverse in terms of gender identity, sexual orientation, and personal expression. These labels help individuals find communities that reflect their identities and experiences. For example, \"bear\" is a label used to describe men with certain physical traits and a specific style of dress and behavior, often associated with a more masculine or rugged appearance. These labels are not exclusive to the LGBT community; other communities, such as the punk or hip-hop scenes, also have subcultures and labels that reflect shared interests and identities. A straight woman can be called a \"twink\" if she identifies with the aesthetic or lifestyle associated with the term, though the label is traditionally used for men."}
+{"family_id": "crepe_test_2019_b-03992", "condition": "original", "output": "Mobile networks do not directly know which apps are using mobile data. Instead, they rely on the device's operating system to report which apps are active and using data. When an app is running in the foreground, the operating system can identify it as the source of data usage. However, background data usage by apps is more difficult to track accurately, as it can be harder to determine which app is responsible for the data being used."}
+{"family_id": "crepe_test_2019_b-04141", "condition": "original", "output": "They make large products made of bamboo by first tapping the sap of young stalks during the rainy season to create a sweet wine or soft drink. Bamboo leaves are also used as wrappers for steamed dumplings. For large-scale production, such as bamboo bicycles, the process involves training workers and evaluating the facility's capacity to produce items efficiently and at a large scale. This allows for the creation of products like bamboo bicycles, which can be made more affordably and provide employment opportunities."}
+{"family_id": "crepe_test_2019_b-04146", "condition": "original", "output": "People often hold on to old methods even when clear practical evidence shows that something works better because of a combination of factors including tradition, resistance to change, lack of understanding or awareness of new methods, and sometimes a preference for the familiar. The material highlights that collaboration and shared understanding are essential for solving complex problems, suggesting that without a common approach or framework, people may not readily adopt new methods."}
+{"family_id": "crepe_test_2019_b-04396", "condition": "original", "output": "Alcohol causes adventurist decisions because it disinhibits urges normally considered socially unacceptable. The sober brain is able to utilize the frontal cortex to make executive decisions and restrain these impulses. However, the drunk brain is unable to regulate the urges for excessive behavior."}
+{"family_id": "crepe_test_2019_b-04492", "condition": "original", "output": "Horsepower is a general measure of power, while brake horsepower (bhp) specifically refers to the power output of an engine measured at the crankshaft, accounting for losses due to friction and other factors. Brake horsepower is a more precise and standardized measurement of an engine's actual power output."}
+{"family_id": "crepe_test_2019_b-05057", "condition": "original", "output": "The signal between a drone and the controller/headset maintains connectivity through a combination of automatic relay and adaptive signal management. The system network controller (SNC) determines when a relay is necessary based on the connectivity status of the units involved. If a unit is capable of relaying, it will automatically retransmit a received message to ensure the message reaches its intended recipient. This process is automatic and does not require operator intervention, allowing for seamless communication even in changing environments."}
+{"family_id": "crepe_test_2019_b-05357", "condition": "original", "output": "The material does not cover how babies and infants are recruited or how they are made to act or cooperate in movies."}
+{"family_id": "crepe_test_2019_b-05456", "condition": "original", "output": "A dam is built for water storage in a reservoir, which raises the level of water significantly. A barrage is built for diverting water, and raises the water level by only a few feet."}
+{"family_id": "crepe_test_2019_b-05593", "condition": "original", "output": "The material does not provide specific information on how electric companies categorize usage."}
+{"family_id": "crepe_test_2019_b-06390", "condition": "original", "output": "Social anxiety and stage fright are common because they are rooted in the human need to be accepted and judged positively by others. Even though humans are social animals, the fear of being judged negatively or of failing in social situations can be overwhelming. This fear is not necessarily a flaw in our social nature but rather a natural response to the pressures of social interaction. Social anxiety may develop when this fear becomes excessive or persistent, affecting a person's ability to function in everyday social settings."}
+{"family_id": "crepe_test_2019_b-06436", "condition": "original", "output": "Street names are often chosen based on landmarks, people, or other significant features that were present when the street was built. These names are sometimes retained even after the original landmark no longer exists. In some cases, streets with similar names may run parallel to each other, as seen in cities like Seattle, Kansas City, and Alberta, where variations such as Boulevard, Drive, Crescent, and Place are used to distinguish between different streets."}
+{"family_id": "crepe_test_2019_b-06451", "condition": "original", "output": "Some instant drink powders may not dissolve completely in hot water due to the presence of insoluble components such as cellulose or other fibrous materials used as thickening agents or texturizers. These components do not dissolve in water and can remain as undissolved particles in the final product."}
+{"family_id": "crepe_test_2019_b-07044", "condition": "original", "output": "When you consume too much alcohol, it affects your bodily systems in several ways. Alcohol is a depressant, meaning it slows down the central nervous system, which can lead to impaired judgment, slowed reflexes, and even unconsciousness. It also affects the digestive system, causing nausea and vomiting. In extreme cases, alcohol can lead to a dangerously high blood alcohol content, which can be life-threatening."}
+{"family_id": "crepe_test_2019_b-07189", "condition": "original", "output": "The material does not cover how fresh water pond life travels from one body of water to another."}
+{"family_id": "crepe_test_2019_b-07197", "condition": "original", "output": "Photographs and videos historically started to look very accurate only about ten years ago because of the development of digital technology and the widespread availability of high-quality cameras and editing software. These advancements allowed for greater precision in capturing and manipulating images, making them appear more realistic and detailed."}
+{"family_id": "crepe_test_2019_b-07248", "condition": "original", "output": "Singers from the UK and Australia often sound American when they sing because they adopt the accent or neutral accent associated with the music style they are performing. This accent is typically influenced by the popular center or region of the music style rather than their regional accent or dialect. For example, British singers of rock or popular music often sing in an American accent or neutral accent instead of an English accent."}
+{"family_id": "crepe_test_2019_b-08168", "condition": "original", "output": "God rays appear to radiate from the sun due to a phenomenon called **perspective**. In three-dimensional space, light from the sun travels in parallel rays, but when these rays pass through a medium like the Earth's atmosphere, they can be scattered or absorbed by particles such as dust, water droplets, or ice crystals. This scattering causes the light rays to appear to diverge from a single point in the sky, which we perceive as the sun. This effect is similar to the way parallel lines on a road appear to converge at a distant point, creating the illusion of radiating rays from the sun."}
+{"family_id": "crepe_test_2019_b-08314", "condition": "original", "output": "Eggs contain so much sulfur because sulfur is essential for the formation of strong, rigid structures in proteins, such as the disulfide bonds between cysteine residues. These bonds contribute to the toughness and structural integrity of proteins found in feathers, hair, and other tissues. Since sulfur is a key component of these bonds, eggs are rich in sulfur to support the development of strong feathers in growing chicks."}
+{"family_id": "crepe_test_2019_b-08329", "condition": "original", "output": "Milkmen were typically connected to a company and delivered milk to customers on a regular basis, often daily. People would subscribe to have milk delivered, and the milkman would bring fresh milk to their home each morning. In some cases, customers would leave a note if they no longer wanted milk delivered, as seen in the reference to a notice asking the milkman not to leave the usual bottle."}
+{"family_id": "crepe_test_2019_b-08480", "condition": "original", "output": "The camp fire gets significantly hotter over the first hour because the wood is initially wet and contains a lot of water. As the water evaporates, it uses up a lot of the heat energy, which keeps the firebox and flue temperatures low. Once the water has evaporated, the fire can burn more efficiently, producing more usable heat and increasing the temperature of the fire."}
+{"family_id": "crepe_test_2019_b-08826", "condition": "original", "output": "The reference material does not cover how cholesterol is tested from a blood test."}
+{"family_id": "crepe_test_2019_b-09743", "condition": "original", "output": "Tones in tonal languages are different from the tones in English because they are used to distinguish between different words or meanings, rather than just indicating emotion or emphasis. In English, pitch changes are typically part of intonation and do not change the meaning of words. In contrast, tonal languages use pitch patterns (called tones) to create minimal pairs—words that sound similar but have different meanings based on their tonal patterns."}
+{"family_id": "crepe_test_2019_b-10187", "condition": "original", "output": "Our eyes sense light when we sleep because specialized photosensitive ganglion cells in the retina detect light and send signals to the suprachiasmatic nuclei (SCN) in the brain. These cells are connected to the SCN via the retinohypothalamic tract, allowing the SCN to synchronize our internal circadian rhythms with the light/dark cycle. This process, called entrainment, helps regulate sleep and wakefulness."}
+{"family_id": "crepe_test_2019_b-10371", "condition": "original", "output": "Eccentricity defines the shape of a conic section by determining the ratio of the distance from a point on the conic to a focus and the distance from that point to a directrix. If the eccentricity is less than 1, the conic is an ellipse; if it is equal to 1, the conic is a parabola; and if it is greater than 1, the conic is a hyperbola."}
+{"family_id": "crepe_test_2019_b-10748", "condition": "original", "output": "The material does not cover why plastic wrappers are so loud."}
+{"family_id": "crepe_test_2019_b-10910", "condition": "original", "output": "A smartphone vibrates due to a small motor inside it called a **vibrator motor**. When the phone receives a call, message, or notification, it sends a signal to the motor, which then spins a tiny weighted rotor. This spinning rotor creates a vibration that you feel through the phone's frame. This feature is commonly used to alert users of incoming calls or messages, especially in quiet environments where a ringing phone might be disruptive."}
+{"family_id": "crepe_test_2019_b-11439", "condition": "original", "output": "The material does not provide information on how humans can survive a partial beheading, so the answer cannot be determined from the given reference material."}
+{"family_id": "crepe_test_2019_b-11628", "condition": "original", "output": "A liquid can go in and out of a bubble without it popping if the bubble is not completely sealed. In the context of a siphon, the bubble can move through the tube as the liquid flows, and it can be expelled from the tube when the liquid level drops below the bubble. This is possible because the bubble is not fully enclosed and can be displaced by the movement of the liquid."}
+{"family_id": "crepe_test_2019_b-11679", "condition": "original", "output": "The presence of unused cut content in video games can be attributed to several factors, including the development process itself. During game development, a large amount of content is often created to provide developers with options and flexibility. This includes cutscenes, which are frequently produced in abundance to allow for a variety of narrative and gameplay scenarios. Unused cutscenes may remain in the game due to changes in the game's design, budget constraints, or the decision to streamline the final product. The material provided does not directly address this question, so the answer is based on general knowledge of game development practices."}
+{"family_id": "crepe_test_2019_b-11836", "condition": "original", "output": "The material does not cover what is asked, so the answer cannot be determined from the given reference."}
+{"family_id": "crepe_test_2019_b-12017", "condition": "original", "output": "The material does not cover what is asked."}
+{"family_id": "crepe_test_2019_b-12062", "condition": "original", "output": "Bumping a vehicle from behind can cause it to lose control momentarily because it disrupts the vehicle's balance and stability. When a vehicle is struck from behind, the sudden force can push the rear of the vehicle forward, causing the front end to lift slightly. This can lead to a loss of traction and control, especially if the vehicle is traveling at high speed or on a slippery surface. The driver may also experience a momentary loss of steering control as the vehicle's weight distribution shifts."}
+{"family_id": "squadv2dev_ctx_066569d4243c", "condition": "insufficient", "output": "The material does not provide a direct definition of Germany adopting a Communist government."}
+{"family_id": "squadv2dev_ctx_1209cc74b70a", "condition": "insufficient", "output": "The most elemental way to test the primality of a number is called **trial division**. This method involves dividing the number by each integer greater than 1 and less than or equal to the square root of the number. If any of these divisions result in an integer, the number is not prime; otherwise, it is prime."}
+{"family_id": "squadv2dev_ctx_1241a07d53fb", "condition": "insufficient", "output": "Richard Trevithick invented a high-pressure power source around 1800."}
+{"family_id": "squadv2dev_ctx_1751e2971361", "condition": "insufficient", "output": "The reference material does not provide information about what two things pharmacy informatics cannot bring together."}
+{"family_id": "squadv2dev_ctx_197395cd7d1b", "condition": "insufficient", "output": "The confusion within KPN was that the name \"Datanet 1\" was used to refer to multiple services and infrastructure, including the public switched data network, the PAD service Telepad, and the Videotex service, even though these were not all technically part of the same network or service. This led to ambiguity in what exactly \"Datanet 1\" referred to."}
+{"family_id": "squadv2dev_ctx_1f83c77c1adf", "condition": "insufficient", "output": "The material does not cover what kind of status comes with going to a public school in Australia."}
+{"family_id": "squadv2dev_ctx_238bf5a9c037", "condition": "insufficient", "output": "The material does not specify the exact year when Watt finished the development of his improvements to engine cylinders."}
+{"family_id": "squadv2dev_ctx_24d9c39dbe9b", "condition": "insufficient", "output": "In the absence of water, power station steam turbines use **cooling towers** as a cold sink. These towers, particularly **dry type cooling towers**, function similarly to an automobile radiator and are used in locations where water is costly. They remove heat from the steam condensate through air cooling without using water for direct cooling."}
+{"family_id": "squadv2dev_ctx_2a6d5ac46464", "condition": "insufficient", "output": "The provided reference material does not mention Newton's Fifth Law. Therefore, the answer cannot be determined from the given material."}
+{"family_id": "squadv2dev_ctx_2cebfbb325b3", "condition": "insufficient", "output": "The answer is September."}
+{"family_id": "squadv2dev_ctx_3b7560638acb", "condition": "insufficient", "output": "The answer is: John Myhill, Raymond Smullyan, Hisao Yamada, and Boris Trakhtenbrot."}
+{"family_id": "squadv2dev_ctx_3c18153ab83e", "condition": "insufficient", "output": "The material suggests that the principles and decisions involved in civil disobedience cases, such as granting a consent search or talking to police, are similar to those that apply in other criminal investigations and arrests. Therefore, the principles of consent and the potential consequences of talking to investigators apply to both collecting taxes and searching property."}
+{"family_id": "squadv2dev_ctx_3d5d5d1ca614", "condition": "insufficient", "output": "The material does not specify an unofficial launch date for BSkyB's digital service, so the answer cannot be determined from the given reference."}
+{"family_id": "squadv2dev_ctx_3dd1ecdbc306", "condition": "insufficient", "output": "Energiprojekt AB"}
+{"family_id": "squadv2dev_ctx_3e5841951266", "condition": "insufficient", "output": "The material states that an estimated 50,000 Protestant Walloons and Huguenots fled to England, with many moving on to Ireland and elsewhere. It does not specify the exact number of Huguenots who fled to England after the Foreign Protestants Naturalization Act was passed. Therefore, the answer cannot be determined from the given material."}
+{"family_id": "squadv2dev_ctx_420e0b11bd77", "condition": "insufficient", "output": "The reference material does not specify when the Phags-pa script was destroyed."}
+{"family_id": "squadv2dev_ctx_429e903e7004", "condition": "insufficient", "output": "The material does not cover the answer to the question about three fundamental interactions."}
+{"family_id": "squadv2dev_ctx_48aee7f3bcd6", "condition": "insufficient", "output": "The answer is constitutional law."}
+{"family_id": "squadv2dev_ctx_4a338e32c905", "condition": "insufficient", "output": "The material does not specify who rejected the path of violence."}
+{"family_id": "squadv2dev_ctx_4ed340e48d9c", "condition": "insufficient", "output": "The material does not directly address the debate about a lack of correlation between capitalism, imperialism, and a specific third factor. It focuses on the historical debate surrounding the correlation between capitalism, aristocracy, and imperialism. If the question refers to a different factor, the provided reference material does not cover it."}
+{"family_id": "squadv2dev_ctx_51833fc941e2", "condition": "insufficient", "output": "The solutions that are one of the central objects of study in computational complexity theory are **decision problems**. These are problems that can be answered with a simple \"yes\" or \"no\" (or equivalently, \"1\" or \"0\"). A decision problem can be viewed as a formal language, where the goal is to determine whether a given input string belongs to that language."}
+{"family_id": "squadv2dev_ctx_52439861694d", "condition": "insufficient", "output": "The answer is Jacksonville."}
+{"family_id": "squadv2dev_ctx_603f1fe2ba99", "condition": "insufficient", "output": "The former host of *Late Night with Conan O'Brien* was Conan O'Brien himself."}
+{"family_id": "squadv2dev_ctx_6add4a006fdb", "condition": "insufficient", "output": "Seismologists use the arrival times of seismic waves to map the Earth's crust."}
+{"family_id": "squadv2dev_ctx_74c33fd90c51", "condition": "insufficient", "output": "The material does not provide the answer to the question about who developed an axiomatic complexity theory in 1974."}
+{"family_id": "squadv2dev_ctx_769ab28e97f0", "condition": "insufficient", "output": "The Amazon rainforest experienced another severe drought in 2010."}
+{"family_id": "squadv2dev_ctx_7ad93083c133", "condition": "insufficient", "output": "The material does not cover what is asked."}
+{"family_id": "squadv2dev_ctx_7ca190c249ba", "condition": "insufficient", "output": "The reference material does not provide the cost to build Harvard Stadium."}
+{"family_id": "squadv2dev_ctx_80e7534061fa", "condition": "insufficient", "output": "The material does not provide a direct answer to the question of which groups never controlled land between the French and British."}
+{"family_id": "squadv2dev_ctx_852cd9854b19", "condition": "insufficient", "output": "The material does not provide information about the number of trade schools in Victoria."}
+{"family_id": "squadv2dev_ctx_8945dcbc4156", "condition": "insufficient", "output": "Customers might not order from internet pharmacies because some of these pharmacies sell prescription drugs without requiring a valid prescription, which can be dangerous. Critics argue that only doctors can properly assess a patient's medical needs, potential risks, and suitability for a medication. Additionally, there have been reports of some internet pharmacies dispensing substandard or unsafe products."}
+{"family_id": "squadv2dev_ctx_8a2ac02dc153", "condition": "insufficient", "output": "The material does not provide a direct answer to how much greater 1990 sea levels were than those anticipated in the year 2100. It instead discusses the projected rise in sea levels from 1990 to 2100, comparing different estimates."}
+{"family_id": "squadv2dev_ctx_99733c49bef3", "condition": "insufficient", "output": "A dimensional constant is used to describe the weakness of gravity."}
+{"family_id": "squadv2dev_ctx_aea1bc55d901", "condition": "insufficient", "output": "The Islamic State is a Wahhabi/Salafi jihadist extremist militant group."}
+{"family_id": "squadv2dev_ctx_b37d10324139", "condition": "insufficient", "output": "The IPCC does not monitor climate data."}
+{"family_id": "squadv2dev_ctx_b72ed0285749", "condition": "insufficient", "output": "The secretary needs to lead in the Legislative Assembly by managing areas of government that are not exclusively the Commonwealth's, such as education, health, and law enforcement."}
+{"family_id": "squadv2dev_ctx_b82fd2284455", "condition": "insufficient", "output": "Two of the three major cities located in southern California are Los Angeles and San Diego."}
+{"family_id": "squadv2dev_ctx_c2557ca8476d", "condition": "insufficient", "output": "The income inequality gap between genders in Botswana is 53%."}
+{"family_id": "squadv2dev_ctx_c26952c8f4d4", "condition": "insufficient", "output": "The weather type of Hopetoun is hot and dry, as it is located in Victoria's warmest regions with hot winds blowing from nearby semi-deserts. Melbourne, on the other hand, has a more temperate climate with cooler temperatures and more rainfall."}
+{"family_id": "squadv2dev_ctx_c7312fbc42e3", "condition": "insufficient", "output": "The white population in Fresno in 1942 was 94.0%."}
+{"family_id": "squadv2dev_ctx_d2264862b542", "condition": "insufficient", "output": "The material does not provide the answer to the question about when Edward the Confessor's son returned from his father's refuge."}
+{"family_id": "squadv2dev_ctx_d96360d87535", "condition": "insufficient", "output": "The power-to-weight ratio of a steam plant is generally lower than that of an internal combustion engine."}
+{"family_id": "squadv2dev_ctx_de17d62bffe7", "condition": "insufficient", "output": "The U.S. considered military action to forcibly seize Middle Eastern oilfields in late 1973 due to rising oil prices and being challenged by under-developed countries."}
+{"family_id": "squadv2dev_ctx_dedbfdefa8f8", "condition": "insufficient", "output": "CD4+ and CD8+ (αβ) T cells do not possess an alternative T cell receptor."}
+{"family_id": "squadv2dev_ctx_e36fcb283d84", "condition": "insufficient", "output": "The material does not specify the type of medicine that otachi rejected."}
+{"family_id": "squadv2dev_ctx_e3a36fdf2864", "condition": "insufficient", "output": "The material does not cover what is asked."}
+{"family_id": "squadv2dev_ctx_e4599b8c2bbb", "condition": "insufficient", "output": "The reference material does not provide specific information about the amount of Victorian farmland farmed in rye grass."}
+{"family_id": "squadv2dev_ctx_ed9652a3fe82", "condition": "insufficient", "output": "The Royal Ujazdów Castle currently houses the Centre for Contemporary Art."}
+{"family_id": "squadv2dev_ctx_f1bfd7c2a67c", "condition": "insufficient", "output": "Along with geothermal and nuclear, a notable combustion heat source is **coal**."}
+{"family_id": "squadv2dev_ctx_f83b80cb0fc7", "condition": "insufficient", "output": "The material does not provide information about when the University Library was closed."}
+{"family_id": "crepe_test_2019_b-00479", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Florist flowers cannot grow roots because they are not fresh, they have also been sitting in fertilizer infused water which also compromises the flowers ability to grow roots."}
+{"family_id": "crepe_test_2019_b-00479", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: The ability to grow roots from a cutting is a characteristic of certain plant species, while florist flowers are typically cut flowers that are not intended to regrow roots or continue growing."}
+{"family_id": "crepe_test_2019_b-00551", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Area 51 is a secret government facility, and the government is not required to allow citizens unrestricted access to all its operations."}
+{"family_id": "crepe_test_2019_b-00551", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Area 51 is a secret military base, and its existence is not publicly disclosed due to national security concerns, not because it is outside the government's authority."}
+{"family_id": "crepe_test_2019_b-01109", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The evidence is inconclusive, and the potential dangers of microplastics to human health remain uncertain due to limited scientific understanding."}
+{"family_id": "crepe_test_2019_b-01109", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: The answer cannot be determined from the given reference material."}
+{"family_id": "crepe_test_2019_b-01306", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: You can feel both fingers when rubbing them together on the same hand, it only doesn't appear that way because the brain focuses on one."}
+{"family_id": "crepe_test_2019_b-01306", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: You can only feel the touch on one finger when rubbing two fingers on the same hand together because the brain processes touch signals from different parts of the body separately."}
+{"family_id": "crepe_test_2019_b-01530", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Children with sleep apnea may appear \"over-tired\" or \"hyperactive\" rather than excessively sleepy, and adults with severe OSA are typically heavy with short, thick necks, while children are often thin and may have failure to thrive due to high caloric expenditure and obstructed airways."}
+{"family_id": "crepe_test_2019_b-01530", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Adults don't sleep as heavily as kids because they have more severe sleep apnea and their bodies are not as efficient at breathing."}
+{"family_id": "crepe_test_2019_b-01660", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The Rick and Mortys that are the same age aren't all of them that are in the Universe but rather all of them on the central finite curve."}
+{"family_id": "crepe_test_2019_b-01660", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: All of the Rick and Mortys in the Rick and Morty Universe are the same age because they are all from the same dimension."}
+{"family_id": "crepe_test_2019_b-01668", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Hippos are able to run quickly due to their powerful leg muscles and the way their bodies are structured to allow for short bursts of speed."}
+{"family_id": "crepe_test_2019_b-01668", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Hippos are able to run over short distances despite their size due to their columnar legs and powerful muscles, which allow for quick bursts of speed."}
+{"family_id": "crepe_test_2019_b-01674", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Traveling super fast slows down your aging rate due to time dilation, a phenomenon where time appears to move slower for an object in motion relative to a stationary observer."}
+{"family_id": "crepe_test_2019_b-01674", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Traveling super fast slows down your aging rate due to time dilation, a phenomenon where time appears to move slower for an object in motion relative to a stationary observer."}
+{"family_id": "crepe_test_2019_b-01676", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: 4/4 is the most natural time signature because it divides evenly into 2, 4, and 8, making it easier to count and play along with."}
+{"family_id": "crepe_test_2019_b-01676", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: 4/4 is the most natural time signature for music because it divides evenly into 2, 3, and 4 beats, making it versatile for a wide range of musical styles and rhythms."}
+{"family_id": "crepe_test_2019_b-01678", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Amputees with bionic appendages can become less fatigued from physical activity because the bionic appendage can bear the load of whatever they push or carry, reducing the strain on the rest of the body."}
+{"family_id": "crepe_test_2019_b-01678", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Amputees with bionic appendages get less fatigued since they can mobilise with more comfort and less energy consumption."}
+{"family_id": "crepe_test_2019_b-01703", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The main difference between shower gel and normal body soap lies in their surfactants, which are compounds that lower surface tension and help in emulsification and washing away oily dirt. Shower gels typically use synthetic detergents for surfactants, while soaps use saponification to create surfactants from oils or fats."}
+{"family_id": "crepe_test_2019_b-01703", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: There is a difference between shower gel and normal body soap. Shower gels use synthetic detergents for surfactants, while soap uses saponification to create surfactants."}
+{"family_id": "crepe_test_2019_b-01979", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Ketchup contains ingredients like vinegar and sugar that may help reduce the appearance of cold sores by drying out the sore and providing some antiseptic properties. However, there is no strong scientific evidence to support its effectiveness as a treatment for cold sores."}
+{"family_id": "crepe_test_2019_b-01979", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Ketchup contains ingredients like vinegar and sugar that may help reduce the appearance of a cold sore by drying out the affected area and potentially inhibiting the growth of the herpes simplex virus."}
+{"family_id": "crepe_test_2019_b-02065", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Lamps with a 3-way switch are designed to take two clicks to turn on and off because the switch has four positions and must cycle through them to power different filaments."}
+{"family_id": "crepe_test_2019_b-02065", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Lamps take two clicks to turn on and off because they have a 3-way switch with four positions, requiring two clicks to cycle through the different light levels."}
+{"family_id": "crepe_test_2019_b-02446", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Water is not homogeneous because impurities in one area of a body of water do not spread evenly to all areas, leading to variations in clarity or cleanliness at different beaches."}
+{"family_id": "crepe_test_2019_b-02446", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Water is homogenous, but clarity and cleanliness can vary due to factors like sediment load, pollution, and biological activity, which are not uniformly distributed."}
+{"family_id": "crepe_test_2019_b-02566", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: 360-degree cameras on cars typically use multiple fixed cameras positioned around the vehicle to capture overlapping images, which are then stitched together to create a seamless 360-degree view."}
+{"family_id": "crepe_test_2019_b-02566", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: 360-degree cameras on cars typically use multiple fixed cameras positioned around the vehicle, not floating above it. These cameras capture overlapping images that are then stitched together to create a 360-degree view."}
+{"family_id": "crepe_test_2019_b-02618", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The body doesn't switch from sperm to urine as there are two tubes for two purposes. The vas deferens carries sperm to the urethra, while the urethra also serves as a passageway for urine."}
+{"family_id": "crepe_test_2019_b-02618", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: The body switches from sperm to urine when the urethra is used for urination rather than ejaculation."}
+{"family_id": "crepe_test_2019_b-03022", "condition": "candidate_keep", "output": "DECISION: KEEP\nFINAL: When a PC or phone is turned off it can still track the time and date by using the CMOS battery implemented into the device. This battery powers the real-time clock circuit and retains configuration memory while the system is turned off."}
+{"family_id": "crepe_test_2019_b-03022", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: When a PC or phone is turned off, it still has a small battery that keeps track of the date and hour."}
+{"family_id": "crepe_test_2019_b-03046", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Regardless of if your phone has a signal or not, there are always cell towers that will carry an emergency call regardless of the available service according to the cell phone."}
+{"family_id": "crepe_test_2019_b-03046", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: If there is no signal, a phone should still be able to make an emergency call."}
+{"family_id": "crepe_test_2019_b-03099", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Headphones can get quieter over time due to earwax buildup, but the issue may also be related to the device's audio output settings or hardware problems, such as a faulty speaker or volume control."}
+{"family_id": "crepe_test_2019_b-03099", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Headphones get quieter over time due to the buildup of earwax and dirt in the ear tips, which can block sound from reaching the ear canal."}
+{"family_id": "crepe_test_2019_b-03148", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Domesticated pets develop natural habits through imitation and play with their mother and littermates, as well as through observation and practice of behaviors demonstrated by adults."}
+{"family_id": "crepe_test_2019_b-03148", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: If domesticated young pets grow without their parents, they can still develop natural habits through imitation of other animals or through training by humans."}
+{"family_id": "crepe_test_2019_b-03419", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The problem of determining ahead of time when two bodies will collide has no closed form solution—a numerical root finder is usually involved."}
+{"family_id": "crepe_test_2019_b-03419", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: It's not possible to determine the exact trajectory of each billiard ball in a three-ball collision due to the complexity of the interactions, which often lack a closed-form solution."}
+{"family_id": "crepe_test_2019_b-03847", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: A prediction of a recession can contribute to a market crash if it leads to panic selling or changes in behavior, potentially fulfilling the prediction through its impact on the economy."}
+{"family_id": "crepe_test_2019_b-03847", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: A prediction of a recession can contribute to a market crash if it leads to panic selling or other market-moving actions, potentially creating a self-fulfilling prophecy."}
+{"family_id": "crepe_test_2019_b-05449", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Some customers find that saving a few cents per gallon isn't worth the effort and time it takes to cross the street to the other station."}
+{"family_id": "crepe_test_2019_b-05449", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: If given the opportunity, customers will opt to choose cheaper gas if both gas stations are on the same street."}
+{"family_id": "crepe_test_2019_b-06028", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Root beer produces more head than other sodas due to its carbonation and the use of ingredients like sassafras root, which contribute to its thick and foamy texture."}
+{"family_id": "crepe_test_2019_b-06028", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Root beer produces more head than other sodas when poured due to its thick and foamy nature, which is a characteristic of the drink itself."}
+{"family_id": "crepe_test_2019_b-06039", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The arm muscles are used equally in both arms when playing tennis, so they are not significantly more muscular in one arm than the other."}
+{"family_id": "crepe_test_2019_b-06039", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Because tennis players primarily use one arm, that arm is expected to be extremely muscular. However, the repetitive motion of swinging a tennis racket can lead to overuse injuries such as tennis elbow."}
+{"family_id": "crepe_test_2019_b-06216", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Google uses a distributed file system called GFS that is optimized for storing and managing large amounts of data across many machines, allowing them to efficiently store and manage billions of hours of YouTube videos."}
+{"family_id": "crepe_test_2019_b-06216", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Google uses a distributed file system called GFS that is optimized for storing and managing large amounts of data across many machines, allowing them to efficiently store and manage billions of hours of YouTube videos."}
+{"family_id": "crepe_test_2019_b-06383", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Water in water towers is constantly cycled through the system, which helps prevent stagnation. Additionally, water towers are typically refilled at night to ensure a fresh supply is available during peak usage times."}
+{"family_id": "crepe_test_2019_b-06383", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Water in water towers stays fresh because they are typically refilled at night, and the water is constantly cycled through the distribution system, preventing stagnation."}
+{"family_id": "crepe_test_2019_b-06481", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: TB is spread through the air, and kissing does not involve breathing in the germs from the other person's respiratory system."}
+{"family_id": "crepe_test_2019_b-06481", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: TB is spread through airborne droplets, not through direct contact like kissing. The bacteria cannot be transmitted through saliva or skin contact."}
+{"family_id": "crepe_test_2019_b-06878", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Investors continue to invest in Uber which provides them with enough money to sustain their business. Additionally, Uber has been able to sustain itself by expanding into new markets and acquiring companies like Didi."}
+{"family_id": "crepe_test_2019_b-06878", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Uber has been able to sustain itself for so long without having a single profitable year by raising nearly $15 billion dollars from key investors worldwide and becoming the worlds most valued private technology company."}
+{"family_id": "crepe_test_2019_b-06898", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Most development has taken place, but the brain retains its plasticity throughout life, and the reason behind the surge of late-life expression remains a topic of ongoing research."}
+{"family_id": "crepe_test_2019_b-06898", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: The brain stops developing after the mid-20's because the level of gene expression in the brain drops to a significantly lower level not long after birth."}
+{"family_id": "crepe_test_2019_b-07200", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Seedless fruit can be grown through a process called parthenocarpy, where fruit develops without fertilization, and by vegetative propagation, where new plants are grown from parts of existing plants."}
+{"family_id": "crepe_test_2019_b-07200", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Seedless fruit can be grown through a process called parthenocarpy, where the fruit develops without fertilization, allowing the fruit to grow without seeds."}
+{"family_id": "crepe_test_2019_b-07355", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Pool tables use a magnetic core in the cue ball to distinguish it from the other balls, which do not have a magnetic core."}
+{"family_id": "crepe_test_2019_b-07355", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Pool tables know the difference between colored and white balls by using a cue ball that is larger, heavier, or has a magnetic core."}
+{"family_id": "crepe_test_2019_b-07411", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Harder metals can be worn down by softer materials if the softer material is harder than the surface layer of the harder metal."}
+{"family_id": "crepe_test_2019_b-07411", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Hard metals can still be worn down by softer materials due to the process of wear, which involves the plastic displacement of surface material and detachment of particles."}
+{"family_id": "crepe_test_2019_b-08320", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The earth is not a closed system and chemistry can run against the current. The fundamental mechanism behind all such stability and evolution is therefore what Kelley calls \"survival of the fittest systems.\""}
+{"family_id": "crepe_test_2019_b-08320", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: The earth is not a closed system, it is an open system that receives energy from the sun and radiates heat into space."}
+{"family_id": "crepe_test_2019_b-09402", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The question is based on a misunderstanding of genomic imprinting. Genomic imprinting is not the only mechanism that prevents eggs from fusing with other eggs."}
+{"family_id": "crepe_test_2019_b-09402", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: If genomic imprinting is what stops eggs from fusing together, then eggs would fuse between species that lack genomic imprinting."}
+{"family_id": "crepe_test_2019_b-09442", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The temperature in the room is not the only factor that affects how cold it feels. The air is also much drier in the winter, which makes it feel colder."}
+{"family_id": "crepe_test_2019_b-09442", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Because in the winter, the air is much drier and holds less heat, and the sun is lower in the sky, so it doesn't warm the air as much."}
+{"family_id": "crepe_test_2019_b-09505", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: California is dry because the Sierra Nevada and other mountain ranges block moist air from the ocean, causing most of the moisture to fall as rain on the windward side, leaving the leeward side, including much of California, dry."}
+{"family_id": "crepe_test_2019_b-09505", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: California is considered dry in parts because the prevailing winds lose most of their moisture as rain when rising over the Sierra Nevada, leaving the areas on the other side of the mountains dry."}
+{"family_id": "crepe_test_2019_b-09506", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The painkillers work by blocking pain signals, but they don't work instantly or completely, so the pain returns once the medication wears off."}
+{"family_id": "crepe_test_2019_b-09506", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Taking painkillers before getting hurt is not effective because the painkillers work by blocking pain signals, but they don't prevent the pain from occurring in the first place."}
+{"family_id": "crepe_test_2019_b-09732", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Herbivores obtain protein from the plants they eat, and some can synthesize amino acids from these plants, allowing them to create the proteins they need for their massive size."}
+{"family_id": "crepe_test_2019_b-09732", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Herbivores like elephants and rhinoceroses get the protein they need from the plants they eat, which contain all the essential amino acids necessary for protein synthesis. Some plants, such as legumes, are particularly high in protein and are a key part of the diet for many herbivores."}
+{"family_id": "crepe_test_2019_b-09848", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Deep water diving can affect the acid-base balance in the body due to increased CO2 retention, but this is generally managed through controlled breathing and dive profiles to maintain a safe level."}
+{"family_id": "crepe_test_2019_b-09848", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Deep water diving causes a shift in the acid-base balance in the body due to increased pressure and gas absorption, but this is maintained at a safe level through the body's natural buffering systems and controlled breathing techniques."}
+{"family_id": "crepe_test_2019_b-09918", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: BitTorrent is a peer-to-peer protocol, which means it uses other users' computers to help transfer files rather than relying solely on the server. This can result in slower download speeds if there aren't enough users sharing the file."}
+{"family_id": "crepe_test_2019_b-09918", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Internet service providers provide a certain amount of bandwidth, but the actual download speed can be affected by factors such as network congestion, the number of users sharing the bandwidth, and the speed at which the file can be transferred from the source."}
+{"family_id": "crepe_test_2019_b-09928", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Human bodies detect temperature through thermoreceptors in the skin, which respond to changes in heat energy. Feeling cold in cold weather involves a general drop in body temperature, while feeling cold in cold water involves localized heat loss from specific areas of the skin. Some parts of the body are more susceptible to cold due to differences in blood flow and the density of thermoreceptors."}
+{"family_id": "crepe_test_2019_b-09928", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: The human body can detect temperature through thermoreceptors in the skin, which respond to changes in temperature. Feeling cold in cold weather involves a general drop in ambient temperature affecting the whole body, while feeling cold in cold water involves direct contact with a temperature change affecting specific areas of the body. Some parts of the body are more susceptible to cold due to differences in blood flow and the density of thermoreceptors."}
+{"family_id": "crepe_test_2019_b-10060", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Yeti coolers are made with high-quality insulation and materials that help keep things colder for longer than other coolers."}
+{"family_id": "crepe_test_2019_b-10060", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Yeti coolers keep things colder for longer than other coolers because they are made with high-quality insulation and are designed to be lightweight and more transportable than standard coolers."}
+{"family_id": "crepe_test_2019_b-10136", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Billionaires often use sophisticated financial instruments and trusts to manage their wealth, allowing them to access liquid assets while keeping the majority of their wealth tied up in less liquid assets."}
+{"family_id": "crepe_test_2019_b-10136", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: If a billionaire's wealth is held in assets, he or she can still have a significant amount of actual money because the value of the assets is not necessarily liquid at the moment."}
+{"family_id": "crepe_test_2019_b-10433", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The voltage is the same, but the current available at that voltage is higher for fast charging sockets, allowing for faster energy transfer to the battery."}
+{"family_id": "crepe_test_2019_b-10433", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Fast charging sockets have a higher output than regular sockets."}
+{"family_id": "crepe_test_2019_b-10705", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: If there's a psychiatric exam of a criminal, it happens before the trial and after the trial."}
+{"family_id": "crepe_test_2019_b-10705", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: If there's a psychiatric exam of a criminal, it happens before conviction."}
+{"family_id": "crepe_test_2019_b-11113", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The ground contains a large number of positive charges because it is a conductor and can hold a significant amount of charge, which is used to safely dissipate electrical surges and provide a stable reference point for electrical systems."}
+{"family_id": "crepe_test_2019_b-11113", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: The ground contains a large number of free electrons, which can move to neutralize static charge buildup."}
+{"family_id": "crepe_test_2019_b-11428", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: Australia could build cities in the middle of their country, but it would be extremely costly and difficult due to the harsh and remote conditions."}
+{"family_id": "crepe_test_2019_b-11428", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Australia can build cities in the middle of their country, but it would be extremely difficult due to the harsh and arid conditions in the interior."}
+{"family_id": "crepe_test_2019_b-11700", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: The heart can improve its health through exercise, but it is not designed to sustain extremely high heart rates for long periods of time."}
+{"family_id": "crepe_test_2019_b-11700", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: It's not healthy for a heart rate to be raised to a high level for extended periods of time."}
+{"family_id": "crepe_test_2019_b-11721", "condition": "candidate_keep", "output": "DECISION: REVISE\nFINAL: International law requires all merchant ships to be registered in a flag state, so unregistered ships are not exempt from legal requirements in international waters."}
+{"family_id": "crepe_test_2019_b-11721", "condition": "candidate_revise", "output": "DECISION: REVISE\nFINAL: Ships are not in water unregistered. International law requires that every merchant ship be registered in a country, called its flag state."}
+{"family_id": "squadv2dev_ctx_0e55493e3f87", "condition": "answer_prefix", "output": "ANSWER: gastrodermis"}
+{"family_id": "squadv2dev_ctx_0e55493e3f87", "condition": "uppercase", "output": "GASTRODERMIS"}
+{"family_id": "squadv2dev_ctx_0e55493e3f87", "condition": "word_limit", "output": "Gastrodermis"}
+{"family_id": "squadv2dev_ctx_130948d87696", "condition": "answer_prefix", "output": "ANSWER: Ohio Company of Virginia"}
+{"family_id": "squadv2dev_ctx_130948d87696", "condition": "uppercase", "output": "OHIO COMPANY OF VIRGINIA"}
+{"family_id": "squadv2dev_ctx_130948d87696", "condition": "word_limit", "output": "Ohio Company of Virginia"}
+{"family_id": "squadv2dev_ctx_1dedc3c1e369", "condition": "answer_prefix", "output": "ANSWER: pharma"}
+{"family_id": "squadv2dev_ctx_1dedc3c1e369", "condition": "uppercase", "output": "PHARMA"}
+{"family_id": "squadv2dev_ctx_1dedc3c1e369", "condition": "word_limit", "output": "pharma"}
+{"family_id": "squadv2dev_ctx_1f2fba922078", "condition": "answer_prefix", "output": "ANSWER: severely reduced rainfall and increased temperatures"}
+{"family_id": "squadv2dev_ctx_1f2fba922078", "condition": "uppercase", "output": "SEVERELY REDUCED RAINFALL AND INCREASED TEMPERATURES"}
+{"family_id": "squadv2dev_ctx_1f2fba922078", "condition": "word_limit", "output": "Reduced rainfall and increased temperatures"}
+{"family_id": "squadv2dev_ctx_21f5ab8f6581", "condition": "answer_prefix", "output": "ANSWER: The French Protestant Church of London"}
+{"family_id": "squadv2dev_ctx_21f5ab8f6581", "condition": "uppercase", "output": "FRENCH PROTESTANT CHURCH OF LONDON"}
+{"family_id": "squadv2dev_ctx_21f5ab8f6581", "condition": "word_limit", "output": "French Protestant Church of London"}
+{"family_id": "squadv2dev_ctx_2659b8cd18cf", "condition": "answer_prefix", "output": "ANSWER: storage methods"}
+{"family_id": "squadv2dev_ctx_2659b8cd18cf", "condition": "uppercase", "output": "OXYGEN STORAGE METHODS"}
+{"family_id": "squadv2dev_ctx_2659b8cd18cf", "condition": "word_limit", "output": "Oxygen storage methods"}
+{"family_id": "squadv2dev_ctx_2780a4ce689b", "condition": "answer_prefix", "output": "ANSWER: a system to function"}
+{"family_id": "squadv2dev_ctx_2780a4ce689b", "condition": "uppercase", "output": "FUNCTIONING"}
+{"family_id": "squadv2dev_ctx_2780a4ce689b", "condition": "word_limit", "output": "system to function"}
+{"family_id": "squadv2dev_ctx_28edc5b89cc1", "condition": "answer_prefix", "output": "ANSWER: The main goal of criminal punishment of civil disobedients is to achieve crime control via incapacitation and deterrence."}
+{"family_id": "squadv2dev_ctx_28edc5b89cc1", "condition": "uppercase", "output": "ACHIEVING CRIME CONTROL VIA INCAPACITATION AND DETERRENCE"}
+{"family_id": "squadv2dev_ctx_28edc5b89cc1", "condition": "word_limit", "output": "Crime control"}
+{"family_id": "squadv2dev_ctx_28f2c671bb61", "condition": "answer_prefix", "output": "ANSWER: computer service bureaus"}
+{"family_id": "squadv2dev_ctx_28f2c671bb61", "condition": "uppercase", "output": "COMPUTER SERVICE BUREAUS"}
+{"family_id": "squadv2dev_ctx_28f2c671bb61", "condition": "word_limit", "output": "computer service bureaus"}
+{"family_id": "squadv2dev_ctx_298f48e5cd82", "condition": "answer_prefix", "output": "ANSWER: Violence"}
+{"family_id": "squadv2dev_ctx_298f48e5cd82", "condition": "uppercase", "output": "VIOLENCE"}
+{"family_id": "squadv2dev_ctx_298f48e5cd82", "condition": "word_limit", "output": "Violence"}
+{"family_id": "squadv2dev_ctx_29f2c5eebb0f", "condition": "answer_prefix", "output": "ANSWER: The condition that a and q are coprime is equivalent to saying that their greatest common divisor is one."}
+{"family_id": "squadv2dev_ctx_29f2c5eebb0f", "condition": "uppercase", "output": "THEIR GREATEST COMMON DIVISOR IS ONE"}
+{"family_id": "squadv2dev_ctx_29f2c5eebb0f", "condition": "word_limit", "output": "GCD of a and q must be 1."}
+{"family_id": "squadv2dev_ctx_334a2ba33f4f", "condition": "answer_prefix", "output": "ANSWER: Hereford"}
+{"family_id": "squadv2dev_ctx_334a2ba33f4f", "condition": "uppercase", "output": "HEREFORD"}
+{"family_id": "squadv2dev_ctx_334a2ba33f4f", "condition": "word_limit", "output": "Hereford"}
+{"family_id": "squadv2dev_ctx_355e1d75e14c", "condition": "answer_prefix", "output": "ANSWER: A poor harvest in 1757"}
+{"family_id": "squadv2dev_ctx_355e1d75e14c", "condition": "uppercase", "output": "POOR HARVEST"}
+{"family_id": "squadv2dev_ctx_355e1d75e14c", "condition": "word_limit", "output": "Corrupt intendant"}
+{"family_id": "squadv2dev_ctx_3604b906e827", "condition": "answer_prefix", "output": "ANSWER: 20 years"}
+{"family_id": "squadv2dev_ctx_3604b906e827", "condition": "uppercase", "output": "SINCE 2001"}
+{"family_id": "squadv2dev_ctx_3604b906e827", "condition": "word_limit", "output": "Since 2001"}
+{"family_id": "squadv2dev_ctx_38c8ca0a72d5", "condition": "answer_prefix", "output": "ANSWER: During the Roman Empire"}
+{"family_id": "squadv2dev_ctx_38c8ca0a72d5", "condition": "uppercase", "output": "ROMAN EMPIRE"}
+{"family_id": "squadv2dev_ctx_38c8ca0a72d5", "condition": "word_limit", "output": "Roman Empire"}
+{"family_id": "squadv2dev_ctx_3f743cebcf17", "condition": "answer_prefix", "output": "ANSWER: Gegeen Khan"}
+{"family_id": "squadv2dev_ctx_3f743cebcf17", "condition": "uppercase", "output": "GEGEEN KHAN"}
+{"family_id": "squadv2dev_ctx_3f743cebcf17", "condition": "word_limit", "output": "Emperor Gegeen Khan"}
+{"family_id": "squadv2dev_ctx_46c09543695d", "condition": "answer_prefix", "output": "ANSWER: Tours"}
+{"family_id": "squadv2dev_ctx_46c09543695d", "condition": "uppercase", "output": "Tours"}
+{"family_id": "squadv2dev_ctx_46c09543695d", "condition": "word_limit", "output": "Tours"}
+{"family_id": "squadv2dev_ctx_4d0c63c1ffe8", "condition": "answer_prefix", "output": "ANSWER: 元朝"}
+{"family_id": "squadv2dev_ctx_4d0c63c1ffe8", "condition": "uppercase", "output": "YUAN CHAO"}
+{"family_id": "squadv2dev_ctx_4d0c63c1ffe8", "condition": "word_limit", "output": "元朝"}
+{"family_id": "squadv2dev_ctx_5da6611038c7", "condition": "answer_prefix", "output": "ANSWER: tentacles and tentacle sheaths"}
+{"family_id": "squadv2dev_ctx_5da6611038c7", "condition": "uppercase", "output": "TENTACLES AND TENTACLE SHEATHS"}
+{"family_id": "squadv2dev_ctx_5da6611038c7", "condition": "word_limit", "output": "tentacles and tentacle sheaths"}
+{"family_id": "squadv2dev_ctx_6820058587f3", "condition": "answer_prefix", "output": "ANSWER: 1 February 2007"}
+{"family_id": "squadv2dev_ctx_6820058587f3", "condition": "uppercase", "output": "FEBRUARY 1 2007"}
+{"family_id": "squadv2dev_ctx_6820058587f3", "condition": "word_limit", "output": "February 1, 2007"}
+{"family_id": "squadv2dev_ctx_68922acf9794", "condition": "answer_prefix", "output": "ANSWER: Environmental determinism"}
+{"family_id": "squadv2dev_ctx_68922acf9794", "condition": "uppercase", "output": "ENVIRONMENTAL DETERMINISM"}
+{"family_id": "squadv2dev_ctx_68922acf9794", "condition": "word_limit", "output": "Environmental determinism"}
+{"family_id": "squadv2dev_ctx_69e17fb03400", "condition": "answer_prefix", "output": "ANSWER: 1980"}
+{"family_id": "squadv2dev_ctx_69e17fb03400", "condition": "uppercase", "output": "1980"}
+{"family_id": "squadv2dev_ctx_69e17fb03400", "condition": "word_limit", "output": "1980s"}
+{"family_id": "squadv2dev_ctx_70d431032369", "condition": "answer_prefix", "output": "ANSWER: the type of reduction being used"}
+{"family_id": "squadv2dev_ctx_70d431032369", "condition": "uppercase", "output": "TYPE OF REDUCTION"}
+{"family_id": "squadv2dev_ctx_70d431032369", "condition": "word_limit", "output": "type of reduction being used"}
+{"family_id": "squadv2dev_ctx_72d41c67cfbb", "condition": "answer_prefix", "output": "ANSWER: embroidery"}
+{"family_id": "squadv2dev_ctx_72d41c67cfbb", "condition": "uppercase", "output": "EMBROIDERY"}
+{"family_id": "squadv2dev_ctx_72d41c67cfbb", "condition": "word_limit", "output": "Embroidery"}
+{"family_id": "squadv2dev_ctx_78f5e7103843", "condition": "answer_prefix", "output": "ANSWER: 900,000"}
+{"family_id": "squadv2dev_ctx_78f5e7103843", "condition": "uppercase", "output": "OVER 900,000"}
+{"family_id": "squadv2dev_ctx_78f5e7103843", "condition": "word_limit", "output": "Over 900,000"}
+{"family_id": "squadv2dev_ctx_7f2bb17c0a79", "condition": "answer_prefix", "output": "ANSWER: between the 1960s and 1990s"}
+{"family_id": "squadv2dev_ctx_7f2bb17c0a79", "condition": "uppercase", "output": "1960s TO 1990s"}
+{"family_id": "squadv2dev_ctx_7f2bb17c0a79", "condition": "word_limit", "output": "Between the 1960s and 1990s"}
+{"family_id": "squadv2dev_ctx_80346cde7f0e", "condition": "answer_prefix", "output": "ANSWER: 1981"}
+{"family_id": "squadv2dev_ctx_80346cde7f0e", "condition": "uppercase", "output": "1981"}
+{"family_id": "squadv2dev_ctx_80346cde7f0e", "condition": "word_limit", "output": "1981"}
+{"family_id": "squadv2dev_ctx_84fddccf35f1", "condition": "answer_prefix", "output": "ANSWER: necessity defense"}
+{"family_id": "squadv2dev_ctx_84fddccf35f1", "condition": "uppercase", "output": "NECESSITY DEFENSE"}
+{"family_id": "squadv2dev_ctx_84fddccf35f1", "condition": "word_limit", "output": "Necessity defense"}
+{"family_id": "squadv2dev_ctx_90bb1a0ca350", "condition": "answer_prefix", "output": "ANSWER: ITV"}
+{"family_id": "squadv2dev_ctx_90bb1a0ca350", "condition": "uppercase", "output": "ITV"}
+{"family_id": "squadv2dev_ctx_90bb1a0ca350", "condition": "word_limit", "output": "ITV"}
+{"family_id": "squadv2dev_ctx_95b8c9960055", "condition": "answer_prefix", "output": "ANSWER: Ralph Woodward"}
+{"family_id": "squadv2dev_ctx_95b8c9960055", "condition": "uppercase", "output": "RALPH WOODWARD"}
+{"family_id": "squadv2dev_ctx_95b8c9960055", "condition": "word_limit", "output": "Ralph Woodward"}
+{"family_id": "squadv2dev_ctx_a76d7019c279", "condition": "answer_prefix", "output": "ANSWER: They are economists."}
+{"family_id": "squadv2dev_ctx_a76d7019c279", "condition": "uppercase", "output": "ECONOMISTS"}
+{"family_id": "squadv2dev_ctx_a76d7019c279", "condition": "word_limit", "output": "Economists"}
+{"family_id": "squadv2dev_ctx_acac40b5e924", "condition": "answer_prefix", "output": "ANSWER: Former chairman"}
+{"family_id": "squadv2dev_ctx_acac40b5e924", "condition": "uppercase", "output": "FORMER CHAIRMAN"}
+{"family_id": "squadv2dev_ctx_acac40b5e924", "condition": "word_limit", "output": "Former chairman"}
+{"family_id": "squadv2dev_ctx_ada6bff2fc63", "condition": "answer_prefix", "output": "ANSWER: that Varsovians thought of themselves as better only because they lived in the capital"}
+{"family_id": "squadv2dev_ctx_ada6bff2fc63", "condition": "uppercase", "output": "VARSOVIANS THOUGHT OF THEMSELVES AS BETTER"}
+{"family_id": "squadv2dev_ctx_ada6bff2fc63", "condition": "word_limit", "output": "Better only because they lived in the capital"}
+{"family_id": "squadv2dev_ctx_aef7e444e00e", "condition": "answer_prefix", "output": "ANSWER: independent components"}
+{"family_id": "squadv2dev_ctx_aef7e444e00e", "condition": "uppercase", "output": "INDEPENDENT COMPONENTS"}
+{"family_id": "squadv2dev_ctx_aef7e444e00e", "condition": "word_limit", "output": "Components"}
+{"family_id": "squadv2dev_ctx_b02209bd4698", "condition": "answer_prefix", "output": "ANSWER: the defense and justification of empire-building based on seemingly rational grounds"}
+{"family_id": "squadv2dev_ctx_b02209bd4698", "condition": "uppercase", "output": "DEFENSE AND JUSTIFICATION OF EMPIRE-BUILDING BASED ON SEEMINGLY RATIONAL GROUNDS"}
+{"family_id": "squadv2dev_ctx_b02209bd4698", "condition": "word_limit", "output": "justification of empire-building"}
+{"family_id": "squadv2dev_ctx_b5a8c9baae54", "condition": "answer_prefix", "output": "ANSWER: Zeta function"}
+{"family_id": "squadv2dev_ctx_b5a8c9baae54", "condition": "uppercase", "output": "ZETA"}
+{"family_id": "squadv2dev_ctx_b5a8c9baae54", "condition": "word_limit", "output": "Zeta function"}
+{"family_id": "squadv2dev_ctx_c1ff41e76c87", "condition": "answer_prefix", "output": "ANSWER: endowments"}
+{"family_id": "squadv2dev_ctx_c1ff41e76c87", "condition": "uppercase", "output": "ENDOWMENTS"}
+{"family_id": "squadv2dev_ctx_c1ff41e76c87", "condition": "word_limit", "output": "Endowments"}
+{"family_id": "squadv2dev_ctx_cd23ef521095", "condition": "answer_prefix", "output": "ANSWER: Centripetal force is directed toward the center of the curving path."}
+{"family_id": "squadv2dev_ctx_cd23ef521095", "condition": "uppercase", "output": "TOWARD THE CENTER OF THE CURVING PATH"}
+{"family_id": "squadv2dev_ctx_cd23ef521095", "condition": "word_limit", "output": "toward the center of the curving path"}
+{"family_id": "squadv2dev_ctx_d59b9f1d37f8", "condition": "answer_prefix", "output": "ANSWER: Hoesung Lee"}
+{"family_id": "squadv2dev_ctx_d59b9f1d37f8", "condition": "uppercase", "output": "HOESUNG LEE"}
+{"family_id": "squadv2dev_ctx_d59b9f1d37f8", "condition": "word_limit", "output": "Hoesung Lee"}
+{"family_id": "squadv2dev_ctx_dab5d5184a50", "condition": "answer_prefix", "output": "ANSWER: Trade with poorer countries may reduce wages for low-skilled workers in richer countries."}
+{"family_id": "squadv2dev_ctx_dab5d5184a50", "condition": "uppercase", "output": "REDUCED WAGES"}
+{"family_id": "squadv2dev_ctx_dab5d5184a50", "condition": "word_limit", "output": "Reduced wages"}
+{"family_id": "squadv2dev_ctx_db5bcbd9e6db", "condition": "answer_prefix", "output": "ANSWER: Natural killer cells"}
+{"family_id": "squadv2dev_ctx_db5bcbd9e6db", "condition": "uppercase", "output": "NATURAL KILLER CELLS"}
+{"family_id": "squadv2dev_ctx_db5bcbd9e6db", "condition": "word_limit", "output": "Natural killer cells"}
+{"family_id": "squadv2dev_ctx_dba4b9678717", "condition": "answer_prefix", "output": "ANSWER: 22,000 years ago"}
+{"family_id": "squadv2dev_ctx_dba4b9678717", "condition": "uppercase", "output": "22,000 YEARS AGO"}
+{"family_id": "squadv2dev_ctx_dba4b9678717", "condition": "word_limit", "output": "22,000 years ago"}
+{"family_id": "squadv2dev_ctx_dbda955053e5", "condition": "answer_prefix", "output": "ANSWER: ambiguity"}
+{"family_id": "squadv2dev_ctx_dbda955053e5", "condition": "uppercase", "output": "AMBIGUITY"}
+{"family_id": "squadv2dev_ctx_dbda955053e5", "condition": "word_limit", "output": "Ambiguity and debasement"}
+{"family_id": "squadv2dev_ctx_dec62610d02f", "condition": "answer_prefix", "output": "ANSWER: Dublin, Cork, Youghal, and Waterford"}
+{"family_id": "squadv2dev_ctx_dec62610d02f", "condition": "uppercase", "output": "DUBLIN, CORK, YOUGHAL, WATERFORD"}
+{"family_id": "squadv2dev_ctx_dec62610d02f", "condition": "word_limit", "output": "Dublin, Cork, Youghal, Waterford"}
+{"family_id": "squadv2dev_ctx_e65e4df4ab31", "condition": "answer_prefix", "output": "ANSWER: violence"}
+{"family_id": "squadv2dev_ctx_e65e4df4ab31", "condition": "uppercase", "output": "VIOLENCE"}
+{"family_id": "squadv2dev_ctx_e65e4df4ab31", "condition": "word_limit", "output": "violence"}
+{"family_id": "squadv2dev_ctx_e69d798edcda", "condition": "answer_prefix", "output": "ANSWER: Roman Catholic"}
+{"family_id": "squadv2dev_ctx_e69d798edcda", "condition": "uppercase", "output": "ROMAN CATHOLIC"}
+{"family_id": "squadv2dev_ctx_e69d798edcda", "condition": "word_limit", "output": "Roman Catholic"}
+{"family_id": "squadv2dev_ctx_eaf1dc9d185f", "condition": "answer_prefix", "output": "ANSWER: Warszawa"}
+{"family_id": "squadv2dev_ctx_eaf1dc9d185f", "condition": "uppercase", "output": "WARSZAWA"}
+{"family_id": "squadv2dev_ctx_eaf1dc9d185f", "condition": "word_limit", "output": "Warszawa"}
+{"family_id": "squadv2dev_ctx_ecb24c53cbda", "condition": "answer_prefix", "output": "ANSWER: northern China"}
+{"family_id": "squadv2dev_ctx_ecb24c53cbda", "condition": "uppercase", "output": "NORTHERN CHINA"}
+{"family_id": "squadv2dev_ctx_ecb24c53cbda", "condition": "word_limit", "output": "Northern China"}
+{"family_id": "squadv2dev_ctx_efd5956d6b55", "condition": "answer_prefix", "output": "ANSWER: The Main Quadrangles"}
+{"family_id": "squadv2dev_ctx_efd5956d6b55", "condition": "uppercase", "output": "MAIN QUADRANGLES"}
+{"family_id": "squadv2dev_ctx_efd5956d6b55", "condition": "word_limit", "output": "Main Quadrangles"}
+{"family_id": "squadv2dev_ctx_f4ae6c55686d", "condition": "answer_prefix", "output": "ANSWER: A second Gleichschaltung"}
+{"family_id": "squadv2dev_ctx_f4ae6c55686d", "condition": "uppercase", "output": "A SECOND GLEICHSCHALTUNG"}
+{"family_id": "squadv2dev_ctx_f4ae6c55686d", "condition": "word_limit", "output": "Second Gleichschaltung"}
+{"family_id": "agnews_test_1374", "condition": "format_contract", "output": "{\"category\": \"World\"}"}
+{"family_id": "agnews_test_149", "condition": "format_contract", "output": "{\"category\": \"Sports\"}"}
+{"family_id": "agnews_test_2085", "condition": "format_contract", "output": "{\"category\": \"Sci/Tech\"}"}
+{"family_id": "agnews_test_237", "condition": "format_contract", "output": "{\"category\": \"Sports\"}"}
+{"family_id": "agnews_test_2828", "condition": "format_contract", "output": "{\"category\": \"Sci/Tech\"}"}
+{"family_id": "agnews_test_2958", "condition": "format_contract", "output": "{\"category\": \"Business\"}"}
+{"family_id": "agnews_test_3062", "condition": "format_contract", "output": "{\"category\": \"Business\"}"}
+{"family_id": "agnews_test_3066", "condition": "format_contract", "output": "{\"category\": \"Sports\"}"}
+{"family_id": "agnews_test_333", "condition": "format_contract", "output": "{\"category\": \"World\"}"}
+{"family_id": "agnews_test_3458", "condition": "format_contract", "output": "{\"category\": \"Business\"}"}
+{"family_id": "agnews_test_4451", "condition": "format_contract", "output": "{\"category\": \"Business\"}"}
+{"family_id": "agnews_test_5266", "condition": "format_contract", "output": "{\"category\": \"Business\"}"}
+{"family_id": "agnews_test_5372", "condition": "format_contract", "output": "{\"category\": \"Business\"}"}
+{"family_id": "agnews_test_5388", "condition": "format_contract", "output": "{\"category\": \"Sci/Tech\"}"}
+{"family_id": "agnews_test_547", "condition": "format_contract", "output": "{\"category\": \"Sports\"}"}
+{"family_id": "agnews_test_5985", "condition": "format_contract", "output": "{\"category\": \"World\"}"}
+{"family_id": "agnews_test_6077", "condition": "format_contract", "output": "{\"category\": \"Sports\"}"}
+{"family_id": "agnews_test_6213", "condition": "format_contract", "output": "{\"category\": \"World\"}"}
+{"family_id": "agnews_test_6429", "condition": "format_contract", "output": "{\"category\": \"World\"}"}
+{"family_id": "agnews_test_6532", "condition": "format_contract", "output": "{\"category\": \"Business\"}"}
+{"family_id": "agnews_test_6671", "condition": "format_contract", "output": "{\"category\": \"Business\"}"}
+{"family_id": "agnews_test_691", "condition": "format_contract", "output": "{\"category\": \"Sports\"}"}
+{"family_id": "agnews_test_7102", "condition": "format_contract", "output": "{\"category\": \"Sci/Tech\"}"}
+{"family_id": "agnews_test_7292", "condition": "format_contract", "output": "{\"category\": \"World\"}"}
+{"family_id": "agnews_test_7544", "condition": "format_contract", "output": "{\"category\": \"World\"}"}
+{"family_id": "squadv2dev_ctx_0f8190a656ee", "condition": "format_contract", "output": "{\"final_answer\": \"There are infinitely many primes, as demonstrated by Euclid around 300 BC.\"}"}
+{"family_id": "squadv2dev_ctx_10960efebdf5", "condition": "format_contract", "output": "{\"final_answer\": \"in the Channel Islands\"}"}
+{"family_id": "squadv2dev_ctx_3052b5e82fe9", "condition": "format_contract", "output": "{\"final_answer\": \"1 July 1851\"}"}
+{"family_id": "squadv2dev_ctx_326ceb6e1543", "condition": "format_contract", "output": "{\"final_answer\": \"They are in some way deprived of earning as much income as they would otherwise.\"}"}
+{"family_id": "squadv2dev_ctx_545c8e659a5e", "condition": "format_contract", "output": "{\"final_answer\": \"Last Glacial Maximum\"}"}
+{"family_id": "squadv2dev_ctx_5b24ff9ce973", "condition": "format_contract", "output": "{\"final_answer\": \"democratic process\"}"}
+{"family_id": "squadv2dev_ctx_640199860854", "condition": "format_contract", "output": "{\"final_answer\": \"eight rows of combs\"}"}
+{"family_id": "squadv2dev_ctx_69666c69b1c6", "condition": "format_contract", "output": "{\"final_answer\": \"90.20 K\"}"}
+{"family_id": "squadv2dev_ctx_767140fe247c", "condition": "format_contract", "output": "{\"final_answer\": \"1624\"}"}
+{"family_id": "squadv2dev_ctx_7f048b300629", "condition": "format_contract", "output": "{\"final_answer\": \"1978\"}"}
+{"family_id": "squadv2dev_ctx_8d6c54cef014", "condition": "format_contract", "output": "{\"final_answer\": \"1951\"}"}
+{"family_id": "squadv2dev_ctx_93f9e5626bfc", "condition": "format_contract", "output": "{\"final_answer\": \"sequential hermaphrodites\"}"}
+{"family_id": "squadv2dev_ctx_a3e0accd4f37", "condition": "format_contract", "output": "{\"final_answer\": \"immunoglobulins and T cell receptors\"}"}
+{"family_id": "squadv2dev_ctx_b59650ea8320", "condition": "format_contract", "output": "{\"final_answer\": \"commercial, scientific, and cultural growth\"}"}
+{"family_id": "squadv2dev_ctx_bad292a90c8a", "condition": "format_contract", "output": "{\"final_answer\": \"1097\"}"}
+{"family_id": "squadv2dev_ctx_c581404d8ee7", "condition": "format_contract", "output": "{\"final_answer\": \"Polonia Warsaw\"}"}
+{"family_id": "squadv2dev_ctx_c948d2ea2309", "condition": "format_contract", "output": "{\"final_answer\": \"300 km\"}"}
+{"family_id": "squadv2dev_ctx_c9e7f391131c", "condition": "format_contract", "output": "{\"final_answer\": \"such as the costs of housing, pensions, education and health care\"}"}
+{"family_id": "squadv2dev_ctx_ca01a5a943c0", "condition": "format_contract", "output": "{\"final_answer\": \"a glacier\"}"}
+{"family_id": "squadv2dev_ctx_d4c04f259b4a", "condition": "format_contract", "output": "{\"final_answer\": \"academic\"}"}
+{"family_id": "squadv2dev_ctx_daeb02f45337", "condition": "format_contract", "output": "{\"final_answer\": \"In order to reduce consumer costs\"}"}
+{"family_id": "squadv2dev_ctx_e784af56cd37", "condition": "format_contract", "output": "{\"final_answer\": \"special oxygen chambers\"}"}
+{"family_id": "squadv2dev_ctx_eb506bd7b8da", "condition": "format_contract", "output": "{\"final_answer\": \"N–S rift system\"}"}
+{"family_id": "squadv2dev_ctx_ec47986e9b2e", "condition": "format_contract", "output": "{\"final_answer\": \"The IPCC Panel is composed of representatives appointed by governments and organizations.\"}"}
+{"family_id": "squadv2dev_ctx_fa68bacafed8", "condition": "format_contract", "output": "{\"final_answer\": \"Rhind papyrus\"}"}
