@@ -1,12 +1,14 @@
 # RQ_MAP_V1 — the four research questions, fully specified
 
+**V2.1 (C-44 patch): RQ1 no longer asks "how much" (no formal quantification metric exists — we show what structure exists and that it decomposes); RQ2 renamed Atomic Repairability with repairability as the formal object; evidence/answerability wording corrected.**
+
 All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or ledgered qc/ files). No new experiments; retracted small-eval results never re-enter.
 
 ---
 
 ## RQ1 — Atomic Diagnosis
 
-**1. Scientific question.** How much does aggregate benchmark performance hide distinct atomic behavioral failures? Does "80% accuracy" (illustrative figure, not an experimental number) denote a uniform competence, or a mixture of stable competence and fragile success?
+**1. Scientific question.** What atomic behavioral failure structure is hidden by aggregate benchmark performance? (Method form: can aggregate benchmark performance be decomposed into atomic behavioral failure structure?) Does "80% accuracy" (illustrative figure, not an experimental number) denote a uniform competence, or a mixture of stable competence and fragile success? We answer the structural question; we do not commit to a formal "how much is hidden" quantification.
 
 **2. Hypothesis.** Aggregate scores conflate behaviorally distinct failure modes that controlled single-condition perturbations can separate: the same clean-solved item can fail under paraphrase, distractor, wrong/correct candidate, insufficient information, or structured-output demands, and these failures have different profiles across models and domains.
 
@@ -28,11 +30,11 @@ All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or le
 
 ---
 
-## RQ2 — Atomic SFT Repair
+## RQ2 — Atomic Repairability
 
-**1. Scientific question.** Do atomic behavioral failures admit targeted SFT repairs, and how do those repairs respond to training dose and domain?
+**1. Scientific question.** How repairable are atomic behavioral failures under targeted SFT, and how does repairability vary with dose and domain? (Deliberately NOT "do failures admit repairs" — the most interesting findings are failures that barely move or get worse under repair. **Repairability** is the paper's formal scientific object.)
 
-**2. Hypothesis.** Each atomic failure can be paired with a targeted data intervention (an atomic SFT repair family) whose effect on the full behavioral profile, Δs_{i,d}(n), can be measured under matched-budget dose grids against clean-replay placebo.
+**2. Hypothesis.** For selected failure structures exposed by the atomic evaluation, a targeted data intervention (an atomic SFT repair family) can be constructed whose effect on the full behavioral profile, Δs_{i,d}(n), is measurable under matched-budget dose grids against clean-replay placebo — with no prior commitment that the effect is positive. Four representative repair families are instantiated; this is not a one-to-one mapping from the seven evaluation axes (e.g., Paraphrase has no dedicated repair; Correct/Wrong Candidate are jointly targeted by Selective Revision).
 
 **3. Experiments answering it.**
 - Four representative Atomic SFT Repair Families (Format, Evidence Robustness, Selective Revision, Answerability) × dose grids {0..960/cap} on Reasoning discovery domain, 2,000-example fixed carrier, within-grid token match ≤0.25%, fixed per-grid update count, cross-grid differences handled by preregistered budget-bridge (max placebo spread .051) [dose manifests; budget_bridge_audit.json].
@@ -41,10 +43,11 @@ All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or le
 - LODO local-predictability test on the format-contract endpoint family [fig6 source_data.json].
 - SVAMP external holdout (no dose-wise degradation) [svamp_scores.json].
 
-**4. Strongest positive findings (by property, not by dataset).**
-- *Repairability is heterogeneous*: Format interface is cheap (.71→.99@30, 1.00 from 60); Answerability is the one large trainable gain (.16→.93@480→1.00); Evidence is weakly repairable everywhere (+2–3pp, and .83→.78 even trained in-domain on K); Revision resists repair (fix never exceeds placebo: .784 placebo vs .631@120/.689@2000).
-- *Dose response has structure*: fast saturation (format), near-flat (evidence), bidirectional harm (revision KEEP .902→.492@2000), slow saturation with rising cost (answerability).
-- *Trade-offs*: answerability gain carries false-abstain cost .01→.11@1822 — a Pareto axis, preregistered as a hard constraint (≤.10).
+**4. Strongest positive findings — repairability itself has structure (four classes).**
+- *Cheaply repairable* — Format: interface .71→.99@30, 1.00 from 60 (content essentially unmoved, format-MAIN .26→.30).
+- *Weakly repairable* — Evidence: only a small positive effect in the Reasoning discovery setting (+2–3pp), and no robust cross-domain repair benefit (in-domain Knowledge .83→.78) — a diagnosed failure that resists the targeted repair we tried.
+- *Repair-resistant / harmful* — Revision: fix never exceeds placebo (.784 placebo vs .631@120/.689@2000); high dose destroys the complementary KEEP behavior (.902→.492@2000).
+- *Repairable under a constraint* — Answerability: abstention rises .16→.93 by dose 480 and continues toward 1.00 at higher dose, while false abstention rises from .01 and eventually crosses the preregistered ≤.10 hard constraint (.11@1822) — constrained repairability; 1.00 is not a recommended operating point.
 - *Local predictability*: LODO on format-contract, frozen form library MAE .037 vs .073/.082/.073 dumb baselines — claimed for this endpoint family only.
 
 **5. Negative/null findings.**
@@ -52,11 +55,11 @@ All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or le
 - *Direction reversal*: high-dose revision collapses KEEP in Reasoning but yields all-KEEP in Knowledge (wc .00/.00/.00, 3 seeds) [ktgt_scores KRV-1493-S42/43/44].
 - *Measurement stability*: four apparent effects from smaller evaluations failed to replicate at formal scale (format content-tax, evidence rise-fall, revision abstention-tax, KAN retention cost); all retractions ledgered [qc/INSTRUCTION_C29/C32; ktgt_scores].
 
-**6. Allowed claim.** "Atomic failures have heterogeneous repair dynamics: some are cheap to fix, some resist SFT, and some repairs create new failures — and the dynamics are domain-dependent, including direction reversal." NOT: four fundamental repair types; NOT grid-wide predictability of all endpoints; NOT universal scaling law.
+**6. Allowed claim.** "Atomic failures have heterogeneous repair dynamics: some are cheap to fix, some resist SFT, and some repairs create new failures — repairability varies with dose and domain, including direction reversal; four representative repair families target selected diagnosed failure structures." NOT: four fundamental repair types; NOT a one-to-one axis↔repair mapping; NOT a robust cross-domain evidence repair benefit; NOT grid-wide predictability of all endpoints; NOT universal scaling law.
 
 **7. Limitation.** Four representative controllable families only (selection criteria: matched control, graded dose, paired endpoint, cross-domain instantiation); sparse K/IF grids partly single-seed (direction-grade; key reversal 3-seed replicated, non-replicating KAN retracted); Reasoning is the discovery domain.
 
-**8. Main figure/table.** Fig. 2 (failure ↔ repair mapping + representative dose responses); Fig. 3 (repairability / collateral / domain-dependence matrix); T1.
+**8. Main figure/table.** Fig. 2 (repair-family instantiation + dose responses by repairability class); Fig. 3 (repairability / collateral / domain-dependence matrix); T1.
 
 ---
 
@@ -91,7 +94,7 @@ All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or le
 
 ## RQ4 — Prospective Prescription
 
-**1. Scientific question.** Can the learned repair structure prospectively prescribe SFT for a held-out model family?
+**1. Scientific question.** Can conditional repair structure prospectively prescribe SFT for a held-out model family — one held out from response-model fitting and composition-correction development? (Answer: yes, in our held-out test.)
 
 **2. Hypothesis (frozen before test).** The corrected conditional-composition model — additive backbone + carrier-bridge terms + diversity-by-dose term — with a preregistered low-dimensional calibration, mechanically produces a recipe that beats uniform mixing under frozen constraints, with the full four-arm ranking predicted in advance [LLAMA_PREDICTION_FREEZE.json].
 

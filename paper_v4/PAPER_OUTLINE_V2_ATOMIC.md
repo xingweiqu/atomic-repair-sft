@@ -1,10 +1,12 @@
 # PAPER_OUTLINE_V2_ATOMIC — RQ-driven section structure
 
+**V2.1 (C-44): spine = Diagnosis → Repairability → Composability → Prescription; RQ2 = Atomic Repairability; no axis↔repair one-to-one mapping; Fig 1 = tile matrix (no radar).**
+
 Replaces PAPER_OUTLINE_V0. All evidence unchanged; sections reorganized around RQ1–RQ4. Existing drafts (DRAFT_sec3_sec4.md, DRAFT_sec5_sec6_sec2.md) remain the content quarry: the mapping from old draft material to new sections is given per section.
 
 ## 1. Introduction
 - Opens from the meaning of an aggregate score (NOT from "fixed SFT budget, what data to train"): 80% accuracy ≠ uniform 80% competence (illustrative example, flagged as such); clean success vanishes under minimal perturbations; aggregate = stable competence + fragile success.
-- Fixed 10-step logic: aggregate hides structure → atomic evaluation decomposes it → diagnosis is not the endpoint → failures map to atomic SFT repairs → heterogeneous repairability/dose/collateral/domain dependence → the natural additive-recomposition question → preregistered additive test FAILS → targeted rescue yields conditional composition → freeze → held-out prospective prescription succeeds.
+- Fixed 10-step logic: aggregate hides structure → atomic evaluation decomposes it → diagnosis is not the endpoint → the real question about a diagnosed failure is its **repairability** → repairability has structure (cheap / weak / resistant / collateral / constrained / domain-dependent; four representative repair families targeting selected failure structures) → the natural additive-recomposition question → preregistered additive test FAILS → targeted rescue yields conditional composition → freeze → held-out prospective prescription succeeds.
 - The four core sentences appear verbatim, one per RQ.
 - Contributions restated in RQ terms; [CITATION-REQUIRED] markers retained for practice claims.
 - Draft: INTRODUCTION_V0_ATOMIC.md (this pass). Figures: Fig. 1.
@@ -15,14 +17,14 @@ Replaces PAPER_OUTLINE_V0. All evidence unchanged; sections reorganized around R
 - Old material: DRAFT sec 2 "Domains and pools" + "Evaluation conditions" paragraphs, reframed from diagnosis-first perspective.
 - Figures: Fig. 1. Tables: T1. Claims: RQ1-1, RQ1-2 (see CLAIM_EVIDENCE_MATRIX_V2). Appendix: contracts, audit ledgers, scorer self-tests, margin-v2, S/R definition.
 
-## 3. From Atomic Diagnosis to Atomic SFT Repair — RQ2 (mapping)
-- The conceptual bridge: each atomic failure suggests a targeted data intervention; definition of the four representative Atomic SFT Repair Families (Format / Evidence Robustness / Selective Revision / Answerability) with the failure each targets and its paired behavioral endpoint; clean replay = matched placebo; selection criteria (matched control, graded dose, paired endpoint, cross-domain instantiation) and the explicit non-exhaustiveness statement.
+## 3. From Atomic Diagnosis to Atomic SFT Repair — RQ2 (instantiation)
+- The conceptual bridge: diagnosis is only the first step — the real question about a diagnosed failure is how repairable it is under SFT. We instantiate four representative Atomic SFT Repair Families (Format / Evidence Robustness / Selective Revision / Answerability) **targeting selected failure structures exposed by the atomic evaluation** — explicitly NOT a one-to-one axis↔repair mapping (Paraphrase has no dedicated repair; Correct/Wrong Candidate are jointly targeted by Selective Revision); each family with the failure it targets and its paired behavioral endpoint; clean replay = matched placebo; selection criteria (matched control, graded dose, paired endpoint, cross-domain instantiation) and the explicit non-exhaustiveness statement.
 - Repair-response object Δs_{i,d}(n); dose grids; budget matching (within-grid ≤0.25% token deviation + fixed updates; cross-grid via preregistered budget-bridge, max placebo spread .051); training protocol.
 - Old material: DRAFT sec 2 "Domains and pools" (pool half), "Budget matching", sec 3 "Setup recap".
 - Figures: Fig. 2 (left panel: failure↔repair map). Tables: T1. Appendix: dose manifests, budget-bridge audit.
 
 ## 4. Heterogeneous Repairability, Dose Responses, and Collateral Effects — RQ2 (results)
-- Organized by scientific property, NOT per-dataset: (i) repairability (cheap: format interface .71→.99@30; large-but-slow: answerability .16→1.00; weak everywhere: evidence +2–3pp incl. in-domain K .83→.78; resistant: revision fix ≤ placebo throughout); (ii) dose response shapes (saturation/flat/bidirectional-harm/slow-saturation); (iii) trade-offs (false-abstain .01→.11, hard constraint ≤.10); (iv) collateral effects (fmt→K decision collapse .608→.070@60 with contract intact; ans→K false-abstain export .25→.44); (v) domain dependence incl. direction reversal (K-revision all-KEEP, 3-seed); (vi) measurement stability (four retractions at formal scale, ledgered); local predictability aside (format-contract LODO MAE .037 vs .073/.082/.073).
+- Organized by repairability class + property, NOT per-dataset: (i) **repairability classes** — cheaply repairable (format interface .71→.99@30); weakly repairable (evidence: small positive effect in the Reasoning discovery setting only, no robust cross-domain benefit, in-domain K .83→.78); repair-resistant/harmful (revision fix ≤ placebo throughout, KEEP .90→.49); repairable under a constraint (answerability .16→.93@480 continuing toward 1.00 while false abstention crosses the preregistered ≤.10 constraint at high dose, .11@1822); (ii) dose response shapes (saturation/flat/bidirectional-harm/slow-saturation); (iii) trade-offs (the false-abstain Pareto axis as hard constraint); (iv) collateral effects (fmt→K decision collapse .608→.070@60 with contract intact; ans→K false-abstain export .25→.44); (v) domain dependence incl. direction reversal (K-revision all-KEEP, 3-seed); (vi) measurement stability (four retractions at formal scale, ledgered); local predictability aside (format-contract LODO MAE .037 vs .073/.082/.073).
 - Old material: DRAFT sec 3 in full (response shapes, LODO, domain dependence, methodological note), re-grouped by property.
 - Figures: Fig. 2 (dose-response panels), Fig. 3. Claims: RQ2-1..4. Appendix: full endpoint grids, K/IF sparse tables, SVAMP holdout, margin-v2 audit, retraction ledger.
 
