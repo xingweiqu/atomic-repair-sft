@@ -1,0 +1,49 @@
+{
+  "artifact": "rq1_paired_fragility",
+  "created": "2026-08-17",
+  "instruction": "C-45 evidence-tightening patch, point 1",
+  "provenance": "Existing-data readout ONLY. Derived from already-committed per-run scorer summaries (prescription/lawv1/e500_scores/e500s_*_summary.json). No new training, no new inference. The paired quantity is computed by the frozen scorer itself (prescription/lawv1_score.py summarize(): paired_family = mean over families of [original.acc_exact AND condition.acc_exact], same family_id = same underlying item).",
+  "definition": {
+    "paired_family": "fraction of evaluation families with BOTH original and perturbed condition correct (acc_exact), same-family pairing",
+    "conditional_fragility": "P(perturbed failure | original correct) = (original.acc_exact - paired_family) / original.acc_exact"
+  },
+  "scope_note": "Formal-scale support exists for the DISTRACTOR axis (n=529 families, all placebo arms and base). Paraphrase pairing exists only on the auxiliary 50-family frozen subset (base paired_family .82, n=50) and is auxiliary/directional, not formal evidence. The insufficient-information branch has a related committed joint (paired_answerability = P(original correct AND correct abstention)) reported separately.",
+  "placebo_arms_distractor": [
+    {"run": "EVD-0000-S42", "original_acc_exact": 0.8998, "distractor_acc_exact": 0.8336, "paired_family": 0.8091, "p_fail_given_correct": 0.1008},
+    {"run": "EVD-0000-S43", "original_acc_exact": 0.8904, "distractor_acc_exact": 0.8488, "paired_family": 0.8166, "p_fail_given_correct": 0.0829},
+    {"run": "EVD-0000-S44", "original_acc_exact": 0.8979, "distractor_acc_exact": 0.8469, "paired_family": 0.8110, "p_fail_given_correct": 0.0968},
+    {"run": "FMT-0000-S42", "original_acc_exact": 0.8998, "distractor_acc_exact": 0.8431, "paired_family": 0.8147, "p_fail_given_correct": 0.0946},
+    {"run": "FMT-0000-S43", "original_acc_exact": 0.8979, "distractor_acc_exact": 0.8336, "paired_family": 0.8053, "p_fail_given_correct": 0.1031},
+    {"run": "FMT-0000-S44", "original_acc_exact": 0.8998, "distractor_acc_exact": 0.8412, "paired_family": 0.8091, "p_fail_given_correct": 0.1008},
+    {"run": "REV-0000-S42", "original_acc_exact": 0.8904, "distractor_acc_exact": 0.8488, "paired_family": 0.8129, "p_fail_given_correct": 0.0870},
+    {"run": "REV-0000-S43", "original_acc_exact": 0.8998, "distractor_acc_exact": 0.8658, "paired_family": 0.8261, "p_fail_given_correct": 0.0819},
+    {"run": "REV-0000-S44", "original_acc_exact": 0.9055, "distractor_acc_exact": 0.8374, "paired_family": 0.8091, "p_fail_given_correct": 0.1065}
+  ],
+  "placebo_summary": {
+    "mean_p_fail_given_correct": 0.0949,
+    "range": [0.0819, 0.1065],
+    "n_arms": 9,
+    "n_families": 529
+  },
+  "base_model_distractor": {
+    "run": "base (untrained Qwen3-8B)",
+    "original_acc_exact": 0.8752,
+    "distractor_acc_exact": 0.8185,
+    "paired_family": 0.7713,
+    "p_fail_given_correct": 0.1187,
+    "n_families": 529
+  },
+  "auxiliary_paraphrase_base": {
+    "n_families": 50,
+    "paired_family": 0.82,
+    "note": "auxiliary frozen subset; original accuracy restricted to these 50 families not stored in summary, so a clean conditional is not derivable — directional only"
+  },
+  "insufficient_branch_base": {
+    "paired_answerability": 0.2209,
+    "insufficient_stop": 0.257,
+    "n_families": 249,
+    "note": "P(original correct AND correct abstention) — competence and correct abstention rarely co-occur at base"
+  },
+  "allowed_wording": "About one in ten originally-correct families fails when a single distractor is inserted (placebo mean .095, range .082-.107 across 9 arms; base .119): same-item fragility, measured by same-family pairing at formal scale.",
+  "forbidden_wording": "Do not extend the same-item fragility claim to paraphrase at formal scale (auxiliary 50-family subset only); do not present paired_answerability as a fragility conditional."
+}

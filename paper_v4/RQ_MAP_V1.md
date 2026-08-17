@@ -1,6 +1,7 @@
 # RQ_MAP_V1 — the four research questions, fully specified
 
 **V2.1 (C-44 patch): RQ1 no longer asks "how much" (no formal quantification metric exists — we show what structure exists and that it decomposes); RQ2 renamed Atomic Repairability with repairability as the formal object; evidence/answerability wording corrected.**
+**V2.2 (C-45 patch): same-item fragility now carries direct existing-data evidence on the distractor axis [rq1_paired_fragility.json]; "classes"→"observed regimes"; format-MAIN no longer used as content-preservation evidence (retention .83±.02 instead); rescue "accounts for the dominant residual patterns".**
 
 All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or ledgered qc/ files). No new experiments; retracted small-eval results never re-enter.
 
@@ -17,12 +18,13 @@ All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or le
 - Decision contracts (DECISION=KEEP/REVISE; STATUS=ANSWERABLE/INSUFFICIENT) after a documented template-sensitivity audit; S/R assistance probes and margin/NLL analyses as a diagnostic layer only [contracts; margin_v2].
 - Base/placebo atomic failure profiles read off the dose-0 arms: e.g., Reasoning placebo — interface compliance .71, distractor accuracy .843, KEEP .902, insufficient-information abstention .16 [curves_e500_all.json; curves_ans_formal_e500.json placebo rows]; Knowledge base — correct-candidate decision .608 with contract .992 [transfer_matrix_k500.json base row].
 - Held-out demonstration that aggregate/clean scores mis-rank: heuristic arm best Original (.741), near-worst U (.340) [LLAMA_ORIGINAL_RETENTION_TABLE.json].
+- Same-family paired fragility readout (existing-data only, C-45): the frozen scorer's paired_family field (original correct ∧ perturbed correct, same family) yields P(distractor failure | original correct) at formal 529-family scale [rq1_paired_fragility.json].
 
-**4. Strongest positive findings.** A single model at a fixed aggregate level simultaneously carries near-ceiling behaviors (K contract .992) and near-floor behaviors (R abstention .16, R interface .71); the atomic profile separates them cleanly. On held-out arms, two recipes with near-identical clean scores differ by +.160 utility (predicted .696/.463 vs replay .712/.303), and ranking by clean score inverts the correct choice (heuristic).
+**4. Strongest positive findings.** The atomic profile shows wide behavioral dispersion across axes at a fixed aggregate level (e.g., R abstention .16, R interface .71, K decision .608), with a clean within-branch contrast between near-perfect contract compliance and much lower decision accuracy (K candidate review: contract .992 vs decision .608). Same-item fragility is directly measured on the distractor axis by same-family pairing: P(distractor failure | original correct) = .095 mean over 9 placebo arms (range .082–.107), .119 for the base model, 529 families [rq1_paired_fragility.json]. On held-out arms, two recipes with near-identical clean scores differ by +.160 utility (predicted .696/.463 vs replay .712/.303), and ranking by clean score inverts the correct choice (heuristic).
 
 **5. Negative/null findings.** Margin instrument v1 produced artifactual zeros (string-level re-tokenization fault) and was rebuilt at token-id level (v2) — the margin layer is diagnostic only; template sensitivity required an audit before contracts were fixed; base-R strict-interface artifact documented and excluded from base-vs-arm strict comparisons.
 
-**6. Allowed claim.** "Aggregate scores hide atomic failure structure: controlled single-condition axes decompose one aggregate number into behaviorally distinct, independently movable failure modes." NOT: an exhaustive capability taxonomy; NOT statistical independence of axes.
+**6. Allowed claim.** "Aggregate scores hide atomic failure structure: controlled single-condition axes decompose one aggregate number into behaviorally distinct, independently movable failure modes"; "about one in ten originally-correct families fails when a single distractor is inserted — same-item fragility, same-family pairing at formal scale (distractor axis)". NOT: an exhaustive capability taxonomy; NOT statistical independence of axes; NOT same-item fragility extended beyond the distractor axis at formal scale (paraphrase pairing is an auxiliary 50-family subset — describe other axes as behavioral heterogeneity under controlled perturbations).
 
 **7. Limitation.** Axes are synthetic controlled perturbations (SVAMP external holdout and real-source IF data mitigate, deployment-style stress untested); atomicity is a property of the evaluation intervention design; the axis set is representative, not complete.
 
@@ -43,8 +45,8 @@ All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or le
 - LODO local-predictability test on the format-contract endpoint family [fig6 source_data.json].
 - SVAMP external holdout (no dose-wise degradation) [svamp_scores.json].
 
-**4. Strongest positive findings — repairability itself has structure (four classes).**
-- *Cheaply repairable* — Format: interface .71→.99@30, 1.00 from 60 (content essentially unmoved, format-MAIN .26→.30).
+**4. Strongest positive findings — four qualitatively distinct observed repairability regimes (patterns; one repair family per regime, not a universal taxonomy).**
+- *Cheaply repairable* — Format: interface .71→.99@30, 1.00 from 60, with clean-task retention flat (original .83±.02 across doses); the joint semantic-plus-interface endpoint (format-MAIN .26→.30) is its own endpoint, not content-preservation evidence.
 - *Weakly repairable* — Evidence: only a small positive effect in the Reasoning discovery setting (+2–3pp), and no robust cross-domain repair benefit (in-domain Knowledge .83→.78) — a diagnosed failure that resists the targeted repair we tried.
 - *Repair-resistant / harmful* — Revision: fix never exceeds placebo (.784 placebo vs .631@120/.689@2000); high dose destroys the complementary KEEP behavior (.902→.492@2000).
 - *Repairable under a constraint* — Answerability: abstention rises .16→.93 by dose 480 and continues toward 1.00 at higher dose, while false abstention rises from .01 and eventually crosses the preregistered ≤.10 hard constraint (.11@1822) — constrained repairability; 1.00 is not a recommended operating point.
@@ -55,11 +57,11 @@ All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or le
 - *Direction reversal*: high-dose revision collapses KEEP in Reasoning but yields all-KEEP in Knowledge (wc .00/.00/.00, 3 seeds) [ktgt_scores KRV-1493-S42/43/44].
 - *Measurement stability*: four apparent effects from smaller evaluations failed to replicate at formal scale (format content-tax, evidence rise-fall, revision abstention-tax, KAN retention cost); all retractions ledgered [qc/INSTRUCTION_C29/C32; ktgt_scores].
 
-**6. Allowed claim.** "Atomic failures have heterogeneous repair dynamics: some are cheap to fix, some resist SFT, and some repairs create new failures — repairability varies with dose and domain, including direction reversal; four representative repair families target selected diagnosed failure structures." NOT: four fundamental repair types; NOT a one-to-one axis↔repair mapping; NOT a robust cross-domain evidence repair benefit; NOT grid-wide predictability of all endpoints; NOT universal scaling law.
+**6. Allowed claim.** "Atomic failures have heterogeneous repair dynamics: some are cheap to fix, some resist SFT, and some repairs create new failures — repairability varies with dose and domain, including direction reversal; four representative repair families target selected diagnosed failure structures; four qualitatively distinct observed repairability regimes." NOT: four fundamental repair types; NOT "four repairability classes"/"four-class structure" (universal-taxonomy implication); NOT a one-to-one axis↔repair mapping; NOT a robust cross-domain evidence repair benefit; NOT format-MAIN as content-preservation evidence; NOT grid-wide predictability of all endpoints; NOT universal scaling law.
 
 **7. Limitation.** Four representative controllable families only (selection criteria: matched control, graded dose, paired endpoint, cross-domain instantiation); sparse K/IF grids partly single-seed (direction-grade; key reversal 3-seed replicated, non-replicating KAN retracted); Reasoning is the discovery domain.
 
-**8. Main figure/table.** Fig. 2 (repair-family instantiation + dose responses by repairability class); Fig. 3 (repairability / collateral / domain-dependence matrix); T1.
+**8. Main figure/table.** Fig. 2 (repair-family instantiation + dose responses by repairability regime); Fig. 3 (repairability / collateral / domain-dependence matrix); T1.
 
 ---
 
