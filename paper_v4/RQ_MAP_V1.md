@@ -1,7 +1,7 @@
 # RQ_MAP_V1 — the four research questions, fully specified
 
 **V2.1 (C-44 patch): RQ1 no longer asks "how much" (no formal quantification metric exists — we show what structure exists and that it decomposes); RQ2 renamed Atomic Repairability with repairability as the formal object; evidence/answerability wording corrected.**
-**V2.2 (C-45 patch): same-item fragility now carries direct existing-data evidence on the distractor axis [rq1_paired_fragility.json]; "classes"→"observed regimes"; format-MAIN no longer used as content-preservation evidence (retention .83±.02 instead); rescue "accounts for the dominant residual patterns".**
+**V2.2 (C-45 patch): same-item fragility now carries direct existing-data evidence on the distractor axis [rq1_paired_fragility.json]; "classes"→"observed regimes"; format-MAIN no longer used as content-preservation evidence (retention .90±.02 instead); rescue "accounts for the dominant residual patterns".**
 
 All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or ledgered qc/ files). No new experiments; retracted small-eval results never re-enter.
 
@@ -46,7 +46,7 @@ All evidence cells point to committed artifacts in PAPER_EVIDENCE_FREEZE/ (or le
 - SVAMP external holdout (no dose-wise degradation) [svamp_scores.json].
 
 **4. Strongest positive findings — four qualitatively distinct observed repairability regimes (patterns; one repair family per regime, not a universal taxonomy).**
-- *Cheaply repairable* — Format: interface .71→.99@30, 1.00 from 60, with clean-task retention flat (original .83±.02 across doses); the joint semantic-plus-interface endpoint (format-MAIN .26→.30) is its own endpoint, not content-preservation evidence.
+- *Cheaply repairable* — Format: interface .71→.99@30, 1.00 from 60, with clean-task retention flat (original .90±.02 across doses); the joint semantic-plus-interface endpoint (format-MAIN .26→.30) is its own endpoint, not content-preservation evidence.
 - *Weakly repairable* — Evidence: only a small positive effect in the Reasoning discovery setting (+2–3pp), and no robust cross-domain repair benefit (in-domain Knowledge .83→.78) — a diagnosed failure that resists the targeted repair we tried.
 - *Repair-resistant / harmful* — Revision: fix never exceeds placebo (.784 placebo vs .631@120/.689@2000); high dose destroys the complementary KEEP behavior (.902→.492@2000).
 - *Repairable under a constraint* — Answerability: abstention rises .16→.93 by dose 480 and continues toward 1.00 at higher dose, while false abstention rises from .01 and eventually crosses the preregistered ≤.10 hard constraint (.11@1822) — constrained repairability; 1.00 is not a recommended operating point.
