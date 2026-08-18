@@ -12,7 +12,6 @@ mkdir -p $OUT
 [ -f $OUT/DONE ] && { echo "skip $TAG"; exit 0; }
 cd $REPO
 export CUDA_VISIBLE_DEVICES=$GPU
-export VLLM_WORKER_MULTIPROC_METHOD=spawn
 if [ ! -f $OUT/pred.jsonl ]; then
   python3 $VX/code/gen_predict_vnext.py $EV $OUT/pred.jsonl $MODEL 8192 1 > $OUT/gen_log.txt 2>&1 || { echo "GEN_FAIL $TAG"; exit 1; }
 fi

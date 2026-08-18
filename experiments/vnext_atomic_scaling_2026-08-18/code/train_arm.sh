@@ -64,7 +64,6 @@ fi
 
 # eval: behavioral (vllm tp=NG) + loss extraction (first GPU)
 EV=$REPO/prescription/gate1/eval500_proto.jsonl
-export VLLM_WORKER_MULTIPROC_METHOD=spawn
 python3 $VX/code/gen_predict_vnext.py $EV $RD/pred.jsonl $LOCAL 8192 $NG > $RD/gen_log.txt 2>&1 || { echo "GEN_FAIL $RID"; rm -rf $LOCAL; exit 1; }
 python3 prescription/lawv1_score.py --eval $EV --pred $RD/pred.jsonl --out $RD/score > $RD/score_log.txt 2>&1 || { echo "SCORE_FAIL $RID"; rm -rf $LOCAL; exit 1; }
 FIRSTGPU=$(echo $GPUS | cut -d, -f1)
