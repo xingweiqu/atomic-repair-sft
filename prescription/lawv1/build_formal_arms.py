@@ -24,10 +24,18 @@ CUTOFF, SEQ_PER_STEP, EPOCHS = 2048, 16, 2
 tok = AutoTokenizer.from_pretrained(MODEL, trust_remote_code=True)
 ntok = lambda s: len(tok(s, add_special_tokens=False)["input_ids"])
 
+def _chat(msgs):
+    for kw in ({"add_generation_prompt": True, "enable_thinking": False},
+               {"add_generation_prompt": True}, {}):
+        try:
+            return tok.apply_chat_template(msgs, tokenize=False, **kw)
+        except (TypeError, ValueError):
+            continue
+    raise RuntimeError("no chat template variant worked")
+
 def seqtok(prompt, target):
-    r = tok.apply_chat_template([{"role": "user", "content": prompt}], tokenize=False,
-                                add_generation_prompt=True, enable_thinking=False)
-    return ntok(r) + ntok(target)
+    r = _chat([{"role": "user", "content": prompt}])
+    return (len(r) if isinstance(r, list) else ntok(r)) + ntok(target)
 
 sha = lambda b: hashlib.sha256(b).hexdigest()
 out = Path(OUT_DIR); out.mkdir(parents=True, exist_ok=True)

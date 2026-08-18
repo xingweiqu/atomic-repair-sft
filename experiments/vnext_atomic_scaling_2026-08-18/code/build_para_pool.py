@@ -27,8 +27,12 @@ def nums(s):
 def build_prompts(items, temp_note=""):
     ps = []
     for it in items:
-        p = tok.apply_chat_template([{"role": "user", "content": INSTR + it["instruction"] + temp_note}],
-                                    tokenize=False, add_generation_prompt=True, enable_thinking=False)
+        msgs = [{"role": "user", "content": INSTR + it["instruction"] + temp_note}]
+        for kw in ({"add_generation_prompt": True, "enable_thinking": False}, {"add_generation_prompt": True}, {}):
+            try:
+                p = tok.apply_chat_template(msgs, tokenize=False, **kw); break
+            except (TypeError, ValueError):
+                continue
         ps.append(p)
     return ps
 

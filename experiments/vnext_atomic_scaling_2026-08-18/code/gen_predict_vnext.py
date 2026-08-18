@@ -15,9 +15,15 @@ MAXLEN = int(sys.argv[4]) if len(sys.argv) > 4 else 4096   # amendment 2026-08-1
 
 rows = [json.loads(l) for l in open(eval_path)]
 tok = AutoTokenizer.from_pretrained(model, trust_remote_code=True)
-prompts = [tok.apply_chat_template([{"role": "user", "content": r["prompt"]}],
-                                   tokenize=False, add_generation_prompt=True,
-                                   enable_thinking=False) for r in rows]
+def _chat(p):
+    for kw in ({"add_generation_prompt": True, "enable_thinking": False},
+               {"add_generation_prompt": True}, {}):
+        try:
+            return tok.apply_chat_template([{"role": "user", "content": p}], tokenize=False, **kw)
+        except (TypeError, ValueError):
+            continue
+    raise RuntimeError("chat template failed")
+prompts = [_chat(r["prompt"]) for r in rows]
 llm = LLM(model=model, tensor_parallel_size=int(sys.argv[5]) if len(sys.argv)>5 else 1, gpu_memory_utilization=0.90,
           max_model_len=MAXLEN, enforce_eager=False)
 sp = SamplingParams(temperature=0, top_p=1.0, max_tokens=512)

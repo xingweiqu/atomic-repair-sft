@@ -21,12 +21,16 @@ model = AutoModelForCausalLM.from_pretrained(MODEL, torch_dtype=torch.bfloat16,
 model.eval()
 
 def chat_ids(prompt):
-    try:
-        s = tok.apply_chat_template([{"role": "user", "content": prompt}], tokenize=False,
-                                    add_generation_prompt=True, enable_thinking=False)
-    except TypeError:
-        s = tok.apply_chat_template([{"role": "user", "content": prompt}], tokenize=False,
-                                    add_generation_prompt=True)
+    msgs = [{"role": "user", "content": prompt}]
+    for kw in ({"add_generation_prompt": True, "enable_thinking": False},
+               {"add_generation_prompt": True}, {}):
+        try:
+            s = tok.apply_chat_template(msgs, tokenize=False, **kw)
+            break
+        except (TypeError, ValueError):
+            continue
+    if isinstance(s, list):
+        return s
     return tok(s, add_special_tokens=False)["input_ids"]
 
 def piece_ids(s):

@@ -26,6 +26,7 @@ case $REP in
   *) echo "bad repair $REP"; exit 1;;
 esac
 [ -f "$POOL" ] || { echo "POOL_MISSING $REP"; exit 1; }
+[ -f "$MODEL/config.json" ] || { echo "MODEL_NOT_READY $MODEL"; exit 1; }
 
 # per-(model,repair) arm data built once, locally, shared via local dir
 DATA=/opt/tiger/vnext_data/${MTAG}_${REP}
@@ -47,7 +48,7 @@ LOCAL=/opt/tiger/vnext_ckpt/$RID
 rm -rf $LOCAL
 sed -e "s#^model_name_or_path: .*#model_name_or_path: $MODEL#" \
     -e "s#^template: .*#template: $TPL#" \
-    -e "s#__DATASET__#data_${REP}-${DOSE}#" \
+    -e "s#__DATASET__#lawv1_${REP}-$(printf %04d $DOSE)#" \
     -e "s#__OUTPUT__#$LOCAL#" \
     -e "s#__MAXSTEPS__#$MS#" \
     -e "s#dataset_dir: ./prescription/lawv1#dataset_dir: $DATA#" \
