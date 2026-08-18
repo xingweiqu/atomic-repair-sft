@@ -36,8 +36,12 @@ if [ ! -f $DATA/BUILD_OK ]; then
       $POOL $DATA $MODEL $REP nocap $DOSELIST > $DATA/build_log.txt 2>&1 || { echo "BUILD_FAIL $RID"; exit 1; }
   touch $DATA/BUILD_OK
 fi
-MS=$(python3 -c "import json,glob; m=glob.glob('$DATA/dose_manifest_*.json'); print(json.load(open(m[0]))['max_steps'])" 2>/dev/null)
-[ -z "$MS" ] && MS=$(python3 -c "import json,glob; m=glob.glob('$DATA/dose_manifest_*.json'); d=json.load(open(m[0])); print(d.get('global_max_steps') or list(d.values())[0].get('max_steps'))")
+MS=$(python3 -c "
+import json,glob
+d=json.load(open(glob.glob('$DATA/dose_manifest_*.json')[0]))
+rows=d if isinstance(d,list) else [d]
+print(max(r['optimizer_updates_fixed'] for r in rows))")
+[ -z "$MS" ] && { echo "MS_FAIL $RID"; exit 1; }
 
 LOCAL=/opt/tiger/vnext_ckpt/$RID
 rm -rf $LOCAL
