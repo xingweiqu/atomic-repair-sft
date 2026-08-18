@@ -1,0 +1,183 @@
+{
+ "llama31-8b": {
+  "base_clean": 0.7127,
+  "solutions": {
+   "strict": {
+    "recipe": {
+     "FMT": 480,
+     "EVD": 480,
+     "REV": 0,
+     "ANS": 240,
+     "PARA": 120
+    },
+    "n_clean": 680,
+    "pred_U": 0.5466,
+    "pred_optloss": 2.4076,
+    "pred_clean_score": 0.7128,
+    "pred_fa": 0.0747,
+    "pred_gains": {
+     "FMT": 0.5948,
+     "EVD": 0.058,
+     "ANS": 1.6671
+    }
+   },
+   "noise_band": {
+    "recipe": {
+     "FMT": 240,
+     "EVD": 960,
+     "REV": 0,
+     "ANS": 120,
+     "PARA": 60
+    },
+    "n_clean": 620,
+    "pred_U": 0.5484,
+    "pred_optloss": 1.7334,
+    "pred_clean_score": 0.7097,
+    "pred_fa": 0.0261,
+    "pred_gains": {
+     "FMT": 0.5948,
+     "EVD": 0.0653,
+     "ANS": 0.988
+    }
+   }
+  },
+  "objectives_note": "Opt-U = R-branch endpoint mean tonight; Opt-Loss = normalized-deficit proxy; clean-loss constraint enforced via lambda clean-score proxy (loss-law absent for anchor ckpts) \u2014 declared",
+  "lambda": -1.4115
+ },
+ "mistral-7b": {
+  "base_clean": 0.3951,
+  "solutions": {
+   "strict": {
+    "recipe": {
+     "FMT": 120,
+     "EVD": 960,
+     "REV": 0,
+     "ANS": 120,
+     "PARA": 30
+    },
+    "n_clean": 770,
+    "pred_U": 0.4695,
+    "pred_optloss": 1.6797,
+    "pred_clean_score": 0.4078,
+    "pred_fa": 0.0263,
+    "pred_gains": {
+     "FMT": 0.4056,
+     "EVD": 0.207,
+     "ANS": 0.996
+    }
+   },
+   "noise_band": {
+    "recipe": {
+     "FMT": 120,
+     "EVD": 960,
+     "REV": 0,
+     "ANS": 120,
+     "PARA": 30
+    },
+    "n_clean": 770,
+    "pred_U": 0.4695,
+    "pred_optloss": 1.6797,
+    "pred_clean_score": 0.4078,
+    "pred_fa": 0.0263,
+    "pred_gains": {
+     "FMT": 0.4056,
+     "EVD": 0.207,
+     "ANS": 0.996
+    }
+   }
+  },
+  "objectives_note": "Opt-U = R-branch endpoint mean tonight; Opt-Loss = normalized-deficit proxy; clean-loss constraint enforced via lambda clean-score proxy (loss-law absent for anchor ckpts) \u2014 declared",
+  "lambda": 6.0547
+ },
+ "qwen3-1.7b": {
+  "base_clean": 0.7372,
+  "solutions": {
+   "strict": {
+    "recipe": {
+     "FMT": 120,
+     "EVD": 240,
+     "REV": 0,
+     "ANS": 960,
+     "PARA": 60
+    },
+    "n_clean": 620,
+    "pred_U": 0.5532,
+    "pred_optloss": 1.1813,
+    "pred_clean_score": 0.7442,
+    "pred_fa": 0.0576,
+    "pred_gains": {
+     "FMT": 0.4719,
+     "EVD": 0.0309,
+     "ANS": 0.488
+    }
+   },
+   "noise_band": {
+    "recipe": {
+     "FMT": 120,
+     "EVD": 240,
+     "REV": 0,
+     "ANS": 960,
+     "PARA": 60
+    },
+    "n_clean": 620,
+    "pred_U": 0.5532,
+    "pred_optloss": 1.1813,
+    "pred_clean_score": 0.7442,
+    "pred_fa": 0.0576,
+    "pred_gains": {
+     "FMT": 0.4719,
+     "EVD": 0.0309,
+     "ANS": 0.488
+    }
+   }
+  },
+  "objectives_note": "Opt-U = R-branch endpoint mean tonight; Opt-Loss = normalized-deficit proxy; clean-loss constraint enforced via lambda clean-score proxy (loss-law absent for anchor ckpts) \u2014 declared",
+  "lambda": -2.015
+ },
+ "qwen3-4b": {
+  "base_clean": 0.8828,
+  "solutions": {
+   "strict": {
+    "recipe": {
+     "FMT": 120,
+     "EVD": 30,
+     "REV": 240,
+     "ANS": 960,
+     "PARA": 0
+    },
+    "n_clean": 650,
+    "pred_U": 0.848,
+    "pred_optloss": 1.2244,
+    "pred_clean_score": 0.8832,
+    "pred_fa": 0.0632,
+    "pred_gains": {
+     "FMT": 0.3822,
+     "EVD": 0.0,
+     "REV": -0.1856,
+     "ANS": 0.6959
+    }
+   },
+   "noise_band": {
+    "recipe": {
+     "FMT": 120,
+     "EVD": 30,
+     "REV": 0,
+     "ANS": 960,
+     "PARA": 30
+    },
+    "n_clean": 860,
+    "pred_U": 0.8944,
+    "pred_optloss": 1.9798,
+    "pred_clean_score": 0.8781,
+    "pred_fa": 0.0632,
+    "pred_gains": {
+     "FMT": 0.3822,
+     "EVD": 0.0,
+     "ANS": 0.6959
+    }
+   }
+  },
+  "objectives_note": "Opt-U = R-branch endpoint mean tonight; Opt-Loss = normalized-deficit proxy; clean-loss constraint enforced via lambda clean-score proxy (loss-law absent for anchor ckpts) \u2014 declared",
+  "lambda": 0.7825
+ }
+}

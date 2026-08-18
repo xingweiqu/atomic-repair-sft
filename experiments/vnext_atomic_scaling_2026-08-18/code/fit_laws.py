@@ -52,17 +52,23 @@ def f_hill(n, A, a, tau): return A * np.power(n, a) / (np.power(n, a) + np.power
 def f_loglin(n, a, b): return a + b * np.log1p(n)
 def f_dblexp(n, A, t1, B, t2): return A * (1 - np.exp(-n / np.maximum(t1, 1e-3))) - B * (1 - np.exp(-n / np.maximum(t2, 1e-3)))
 
+# C-49: legal parameter regions enforced (A>=0 magnitudes, tau>0, alpha>0).
+# Gain endpoints use monotone forms by construction under these bounds; harmful
+# endpoints use the explicit benefit-damage double-exponential.
 FORMS = {
-    "satexp": (f_satexp, [0.3, 100.0]),
-    "spower": (f_spower, [0.3, 0.3, 10.0, 0.5]),
-    "hill": (f_hill, [0.3, 1.0, 200.0]),
-    "loglin": (f_loglin, [0.0, 0.05]),
-    "dblexp": (f_dblexp, [0.3, 100.0, 0.3, 800.0]),
+    "satexp": (f_satexp, [0.3, 100.0], ([-1.0, 1.0], [1.0, 4000.0])),
+    "spower": (f_spower, [0.3, 0.3, 10.0, 0.5], ([-1.0, 0.0, 1e-3, 0.05], [1.0, 2.0, 500.0, 3.0])),
+    "hill": (f_hill, [0.3, 1.0, 200.0], ([-1.0, 0.05, 1.0], [1.0, 4.0, 4000.0])),
+    "loglin": (f_loglin, [0.0, 0.05], ([-1.0, -0.5], [1.0, 0.5])),
+    "dblexp": (f_dblexp, [0.3, 100.0, 0.3, 800.0], ([0.0, 1.0, 0.0, 1.0], [1.5, 4000.0, 1.5, 4000.0])),
 }
 
-def fit_form(fn, p0, x, y):
+def fit_form(fn, p0, x, y, bounds=None):
     try:
-        p, _ = curve_fit(fn, x, y, p0=p0, maxfev=20000)
+        if bounds is not None:
+            p, _ = curve_fit(fn, x, y, p0=np.clip(p0, bounds[0], bounds[1]), bounds=bounds, maxfev=40000)
+        else:
+            p, _ = curve_fit(fn, x, y, p0=p0, maxfev=20000)
         return p, float(np.mean(np.abs(fn(x, *p) - y)))
     except Exception:
         return None, math.inf
@@ -78,22 +84,36 @@ for rep, ep, src, fam, path, kind in ENDPOINTS:
     g = ys - base  # gain relative to placebo
     cand = ["satexp", "spower", "hill", "loglin"] + (["dblexp"] if kind == "harm_ok" else [])
     lodo = {}
+    lowmask = doses <= 240
     for name in cand:
-        fn, p0 = FORMS[name]
+        fn, p0, bnd = FORMS[name]
         errs, dirok = [], []
         for i in range(len(doses)):
             if doses[i] == 0: continue
             mask = np.ones(len(doses), bool); mask[i] = False
-            p, _ = fit_form(fn, p0, doses[mask], g[mask])
+            p, _ = fit_form(fn, p0, doses[mask], g[mask], bnd)
             if p is None: errs.append(math.inf); continue
             pred = float(fn(np.array([doses[i]]), *p)[0])
             errs.append(abs(pred - g[i]))
             dirok.append((pred > 0) == (g[i] > 0) if abs(g[i]) > .005 else True)
-        full_p, full_mae = fit_form(fn, p0, doses, g)
+        full_p, full_mae = fit_form(fn, p0, doses, g, bnd)
+        # C-49 extrapolation validation: fit on doses<=240, predict all higher doses
+        ex = None
+        if lowmask.sum() >= 3 and (~lowmask).sum() >= 1:
+            pl, _ = fit_form(fn, p0, doses[lowmask], g[lowmask], bnd)
+            if pl is not None:
+                hi_d, hi_g = doses[~lowmask], g[~lowmask]
+                preds = np.array([float(fn(np.array([d]), *pl)[0]) for d in hi_d])
+                ex = {"extrap_mae": round(float(np.mean(np.abs(preds - hi_g))), 5),
+                      "extrap_dir_acc": round(float(np.mean([(pv > 0) == (gv > 0) if abs(gv) > .005 else True
+                                                             for pv, gv in zip(preds, hi_g)])), 3),
+                      "extrap_points": [[int(d), round(float(gv), 5), round(float(pv), 5)]
+                                        for d, gv, pv in zip(hi_d, hi_g, preds)]}
         lodo[name] = {"lodo_mae": round(float(np.mean(errs)), 5) if errs else None,
                       "dir_acc": round(float(np.mean(dirok)), 3) if dirok else None,
                       "fit_mae": round(full_mae, 5),
-                      "params": [round(float(v), 5) for v in full_p] if full_p is not None else None}
+                      "params": [round(float(v), 5) for v in full_p] if full_p is not None else None,
+                      "extrapolation": ex}
     best = min((v["lodo_mae"], k) for k, v in lodo.items() if v["lodo_mae"] is not None)[1]
     # noise band from multi-seed doses
     seeds_sd = [np.std(vs) for _, _, vs in ser if len(vs) > 1]
@@ -102,9 +122,9 @@ for rep, ep, src, fam, path, kind in ENDPOINTS:
                               "seed_sd_mean": round(float(np.mean(seeds_sd)), 5) if seeds_sd else None}
     for i in range(len(doses)):
         if doses[i] == 0: continue
-        fn, p0 = FORMS[best]
+        fn, p0, bnd = FORMS[best]
         mask = np.ones(len(doses), bool); mask[i] = False
-        p, _ = fit_form(fn, p0, doses[mask], g[mask])
+        p, _ = fit_form(fn, p0, doses[mask], g[mask], bnd)
         if p is not None:
             heldout_rows.append({"endpoint": f"{rep}.{ep}", "held_dose": int(doses[i]),
                                  "true_gain": round(float(g[i]), 5),

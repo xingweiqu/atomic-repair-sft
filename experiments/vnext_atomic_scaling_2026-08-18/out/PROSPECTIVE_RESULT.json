@@ -1,0 +1,95 @@
+{
+ "qwen3-1.7b": {
+  "base_clean": 0.7372,
+  "replay": {
+   "U": 0.2855,
+   "clean": 0.7372
+  },
+  "optimal": {
+   "U_actual": 0.6323,
+   "U_frozen_pred": 0.5505,
+   "clean_actual": 0.7127,
+   "clean_frozen_pred": 0.7475,
+   "fa_actual": 0.0522,
+   "fa_frozen_pred": 0.0573,
+   "endpoints": {
+    "fmt_contract": 0.7429,
+    "dist": 0.6389,
+    "wc_joint": 0.1796,
+    "insuf_stop": 0.9679
+   },
+   "constraints": {
+    "repair_gain_pos": true,
+    "clean_ok": false,
+    "fa_ok": true
+   }
+  },
+  "uniform": {
+   "U_actual": 0.6112,
+   "U_frozen_pred": 0.4877,
+   "clean_actual": 0.7467,
+   "clean_frozen_pred": 0.7351,
+   "fa_actual": 0.0683,
+   "fa_frozen_pred": 0.0305,
+   "endpoints": {
+    "fmt_contract": 0.9716,
+    "dist": 0.6484,
+    "wc_joint": 0.2023,
+    "insuf_stop": 0.6225
+   },
+   "constraints": {
+    "repair_gain_pos": true,
+    "clean_ok": true,
+    "fa_ok": true
+   }
+  },
+  "frozen_ranking_recovered": true
+ },
+ "llama31-8b": {
+  "base_clean": 0.7127,
+  "replay": {
+   "U": 0.1164,
+   "clean": 0.7127
+  },
+  "optimal": {
+   "U_actual": 0.5392,
+   "U_frozen_pred": 0.5456,
+   "clean_actual": 0.7164,
+   "clean_frozen_pred": 0.7128,
+   "fa_actual": 0.1727,
+   "fa_frozen_pred": 0.0415,
+   "endpoints": {
+    "fmt_contract": 0.5104,
+    "dist": 0.6465,
+    "wc_joint": 0.0,
+    "insuf_stop": 1.0
+   },
+   "constraints": {
+    "repair_gain_pos": true,
+    "clean_ok": true,
+    "fa_ok": false
+   }
+  },
+  "uniform": {
+   "U_actual": 0.5075,
+   "U_frozen_pred": 0.5414,
+   "clean_actual": 0.6994,
+   "clean_frozen_pred": 0.7111,
+   "fa_actual": 0.0,
+   "fa_frozen_pred": 0.0889,
+   "endpoints": {
+    "fmt_contract": 0.5085,
+    "dist": 0.5217,
+    "wc_joint": 0.0,
+    "insuf_stop": 1.0
+   },
+   "constraints": {
+    "repair_gain_pos": true,
+    "clean_ok": false,
+    "fa_ok": true
+   }
+  },
+  "frozen_ranking_recovered": true
+ },
+ "_verdict": "Ranking 2/2 recovered; RepairGain large (+.35/+.42); NO all-green arm: qwen3-1.7b optimal fails clean (-.025, lambda predicted wrong direction), llama optimal fails FA (.173 vs pred .042, 4x underestimate). Gain law predicts ranking; damage law not yet learned (C-49)."
+}

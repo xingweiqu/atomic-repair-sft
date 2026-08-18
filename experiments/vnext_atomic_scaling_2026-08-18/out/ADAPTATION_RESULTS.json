@@ -1,19 +1,19 @@
 {
  "models": {
   "llama31-8b": {
-   "a_M0": 2.5622,
+   "a_M0": 2.3521,
    "a_M1": {
-    "FMT": 1.999,
+    "FMT": 2.029,
     "EVD": 2.6323,
-    "REV": 0.0333,
-    "ANS": 3.6513
+    "REV": 0.0221,
+    "ANS": 3.6514
    },
    "tau_M2": 0.25,
-   "lambda_M3": -1.3837,
+   "lambda_M3": -1.4115,
    "heldout_mae": {
-    "M0": 0.32824,
-    "M1": 0.40596,
-    "M2": 0.11083
+    "M0": 0.2534,
+    "M1": 0.40306,
+    "M2": 0.11201
    },
    "base_deficit": {
     "FMT": 1,
@@ -23,20 +23,43 @@
    },
    "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)"
   },
-  "qwen3-1.7b": {
-   "a_M0": 1.0757,
+  "mistral-7b": {
+   "a_M0": 2.0854,
    "a_M1": {
-    "FMT": 1.5861,
+    "FMT": 1.3836,
+    "EVD": 8.3509,
+    "REV": -0.0,
+    "ANS": 3.6809
+   },
+   "tau_M2": 0.25,
+   "lambda_M3": 6.0547,
+   "heldout_mae": {
+    "M0": 0.16882,
+    "M1": 0.43343,
+    "M2": 0.13336
+   },
+   "base_deficit": {
+    "FMT": 1,
+    "EVD": 0.8147,
+    "REV": 1,
+    "ANS": 0.996
+   },
+   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)"
+  },
+  "qwen3-1.7b": {
+   "a_M0": 1.0005,
+   "a_M1": {
+    "FMT": 1.6099,
     "EVD": 1.6036,
-    "REV": 0.5137,
+    "REV": 0.3402,
     "ANS": 0.5935
    },
    "tau_M2": 2.0,
-   "lambda_M3": -1.8339,
+   "lambda_M3": -2.015,
    "heldout_mae": {
-    "M0": 0.13705,
-    "M1": 0.0704,
-    "M2": 0.05375
+    "M0": 0.1333,
+    "M1": 0.07566,
+    "M2": 0.03721
    },
    "base_deficit": {
     "FMT": 0.845,
@@ -47,19 +70,19 @@
    "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)"
   },
   "qwen3-4b": {
-   "a_M0": 1.1627,
+   "a_M0": 1.1432,
    "a_M1": {
-    "FMT": 1.2845,
+    "FMT": 1.3038,
     "EVD": 0.0,
-    "REV": 2.1881,
+    "REV": 1.4492,
     "ANS": 0.8463
    },
    "tau_M2": 1.0,
-   "lambda_M3": 1.0711,
+   "lambda_M3": 0.7825,
    "heldout_mae": {
-    "M0": 0.15949,
-    "M1": 0.07517,
-    "M2": 0.07517
+    "M0": 0.16757,
+    "M1": 0.10812,
+    "M2": 0.10812
    },
    "base_deficit": {
     "FMT": 0.3875,
@@ -75,10 +98,10 @@
    "model": "llama31-8b",
    "repair": "FMT",
    "base_deficit": 1,
-   "a": 1.999,
+   "a": 2.029,
    "tau": 0.25,
-   "lambda": -1.3837,
-   "heldout_M1_err": 0.01631
+   "lambda": -1.4115,
+   "heldout_M1_err": 0.00261
   },
   {
    "model": "llama31-8b",
@@ -86,35 +109,71 @@
    "base_deficit": 0.5501,
    "a": 2.6323,
    "tau": 0.25,
-   "lambda": -1.3837,
+   "lambda": -1.4115,
    "heldout_M1_err": 0.14084
   },
   {
    "model": "llama31-8b",
    "repair": "REV",
    "base_deficit": 0.9962,
-   "a": 0.0333,
+   "a": 0.0221,
    "tau": 0.25,
-   "lambda": -1.3837,
-   "heldout_M1_err": 0.0
+   "lambda": -1.4115,
+   "heldout_M1_err": 0.00207
   },
   {
    "model": "llama31-8b",
    "repair": "ANS",
    "base_deficit": 0.988,
-   "a": 3.6513,
+   "a": 3.6514,
    "tau": 0.25,
-   "lambda": -1.3837,
-   "heldout_M1_err": 1.46671
+   "lambda": -1.4115,
+   "heldout_M1_err": 1.4667
+  },
+  {
+   "model": "mistral-7b",
+   "repair": "FMT",
+   "base_deficit": 1,
+   "a": 1.3836,
+   "tau": 0.25,
+   "lambda": 6.0547,
+   "heldout_M1_err": 0.1747
+  },
+  {
+   "model": "mistral-7b",
+   "repair": "EVD",
+   "base_deficit": 0.8147,
+   "a": 8.3509,
+   "tau": 0.25,
+   "lambda": 6.0547,
+   "heldout_M1_err": 0.08045
+  },
+  {
+   "model": "mistral-7b",
+   "repair": "REV",
+   "base_deficit": 1,
+   "a": -0.0,
+   "tau": 0.25,
+   "lambda": 6.0547,
+   "heldout_M1_err": 0.0
+  },
+  {
+   "model": "mistral-7b",
+   "repair": "ANS",
+   "base_deficit": 0.996,
+   "a": 3.6809,
+   "tau": 0.25,
+   "lambda": 6.0547,
+   "heldout_M1_err": 1.47858
   },
   {
    "model": "qwen3-1.7b",
    "repair": "FMT",
    "base_deficit": 0.845,
-   "a": 1.5861,
+   "a": 1.6099,
    "tau": 2.0,
-   "lambda": -1.8339,
-   "heldout_M1_err": 0.14004
+   "lambda": -2.015,
+   "heldout_M1_err": 0.12917
   },
   {
    "model": "qwen3-1.7b",
@@ -122,17 +181,17 @@
    "base_deficit": 0.3913,
    "a": 1.6036,
    "tau": 2.0,
-   "lambda": -1.8339,
+   "lambda": -2.015,
    "heldout_M1_err": 0.00956
   },
   {
    "model": "qwen3-1.7b",
    "repair": "REV",
    "base_deficit": 0.69,
-   "a": 0.5137,
+   "a": 0.3402,
    "tau": 2.0,
-   "lambda": -1.8339,
-   "heldout_M1_err": 0.0491
+   "lambda": -2.015,
+   "heldout_M1_err": 0.08104
   },
   {
    "model": "qwen3-1.7b",
@@ -140,17 +199,17 @@
    "base_deficit": 0.9317,
    "a": 0.5935,
    "tau": 2.0,
-   "lambda": -1.8339,
+   "lambda": -2.015,
    "heldout_M1_err": 0.08289
   },
   {
    "model": "qwen3-4b",
    "repair": "FMT",
    "base_deficit": 0.3875,
-   "a": 1.2845,
+   "a": 1.3038,
    "tau": 1.0,
-   "lambda": 1.0711,
-   "heldout_M1_err": 0.00651
+   "lambda": 0.7825,
+   "heldout_M1_err": 0.00229
   },
   {
    "model": "qwen3-4b",
@@ -158,17 +217,17 @@
    "base_deficit": 0.2325,
    "a": 0.0,
    "tau": 1.0,
-   "lambda": 1.0711,
+   "lambda": 0.7825,
    "heldout_M1_err": 0.0283
   },
   {
    "model": "qwen3-4b",
    "repair": "REV",
    "base_deficit": 0.2457,
-   "a": 2.1881,
+   "a": 1.4492,
    "tau": 1.0,
-   "lambda": 1.0711,
-   "heldout_M1_err": 0.2552
+   "lambda": 0.7825,
+   "heldout_M1_err": 0.39123
   },
   {
    "model": "qwen3-4b",
@@ -176,8 +235,8 @@
    "base_deficit": 0.7149,
    "a": 0.8463,
    "tau": 1.0,
-   "lambda": 1.0711,
-   "heldout_M1_err": 0.01066
+   "lambda": 0.7825,
+   "heldout_M1_err": 0.01065
   }
  ]
 }
