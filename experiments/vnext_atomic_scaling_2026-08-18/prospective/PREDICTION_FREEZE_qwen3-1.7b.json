@@ -1,0 +1,66 @@
+{
+ "frozen": "2026-08-18 pre-training",
+ "model": "qwen3-1.7b",
+ "adapted_params": {
+  "a_M1": {
+   "FMT": 1.5861,
+   "EVD": 1.6036,
+   "REV": 0.5137,
+   "ANS": 0.5935
+  },
+  "tau_M2": 2.0,
+  "lambda_M3": -1.8339
+ },
+ "law_optimal": {
+  "recipe": {
+   "FMT": 120,
+   "EVD": 240,
+   "REV": 0,
+   "ANS": 960,
+   "PARA": 60
+  },
+  "n_clean": 620,
+  "pred_gains": {
+   "FMT": 0.4611,
+   "EVD": 0.0309,
+   "ANS": 0.4881
+  },
+  "pred_clean": 0.7475,
+  "pred_fa": 0.0573,
+  "pred_U": 0.5505
+ },
+ "uniform": {
+  "recipe": {
+   "FMT": 270,
+   "EVD": 270,
+   "REV": 270,
+   "ANS": 270,
+   "PARA": 270
+  },
+  "n_clean": 650,
+  "pred_gains": {
+   "FMT": 0.4631,
+   "EVD": 0.0317,
+   "REV": -0.0586,
+   "ANS": 0.2927
+  },
+  "pred_clean": 0.7351,
+  "pred_fa": 0.0305,
+  "pred_U": 0.4877
+ },
+ "replay": {
+  "note": "= dose-0 placebo arm already trained (reused)",
+  "U_Rbranch": 0.2855
+ },
+ "predicted_ranking": [
+  "law_optimal",
+  "uniform",
+  "replay"
+ ],
+ "success_criteria": "RepairGain>0 AND CleanScore>=base AND (clean-loss proxy) AND FA<=.10",
+ "constraint_status": {
+  "law_optimal_fa_ok": true,
+  "law_optimal_clean_ok": true
+ },
+ "note": "single-seed prospective; mixture built by simplified substitution (declared); diversity term fixed dev-family"
+}
