@@ -11,7 +11,8 @@
 - CC(KEEP)轴暴露仪器偏置:immediate-contract margin 在行为正确时也 82.9% 为负(模型天然先倾向 REVISE token,生成时靠推理翻回来);方向仍可判别(失败组 100% 为负),但绝对符号在该轴不可直接当失败判据。**结论:loss/margin 诊断可用,但要按轴校准,不能一刀切。**
 - 最硬的一个案例:Llama-3.1 base 的 R-Original strict score = .002(已知 strict-interface 伪影,score 完全失明),而 loss 侧 L_gold=5.01 连续可比——**score 会被格式伪影击穿,loss 不会**。
 
-**2. 多模型 diagnosis 差异有多大? — 很大且结构化(6 checkpoints 已齐,Mistral 为第 7 个在补)。**
+**2. 多模型 diagnosis 差异有多大? — 很大且结构化(7 checkpoints 全齐:Qwen3×4 + Qwen2.5 + Llama + Mistral = 4 families ✓,≥2 sizes ✓)。**
+Mistral-7B-v0.3 base:又一个 strict-score 伪影案例(orig .008)+ WC decision .93 但 wc_joint .19、FA .34 全场最高——loss 侧照常可读。
 MULTIMODEL_ATOMIC_PROFILE.csv + fig_multimodel_profile.pdf(score/loss 双 panel,无 radar)。要点:Qwen3 家族内 size 单调改善 Original(.52→.77→.79→.87)但 **abstention 全家族躺平**(.17-.31);Qwen2.5-7B contract 近满(.998)但 Original strict 仅 .11(格式伪影);qwen3-0.6b CC-keep 崩(.16);margin 侧模型间差一个量级(WC margin 2.8→17.4)。
 
 **3. Paraphrase repair 能不能修? — score 侧弱,loss 侧真的在修;clean 没掉出 noise band。**
@@ -46,8 +47,18 @@ Anchor(Qwen3-8B 8 剂量全网格,529-fam)冻结候选形族(satexp/shifted-powe
 | llama31-8b | 240 | 960 | 0 | 120 | 30 | 650 | .713≥.713 ✓ | .042 ✓ |
 共性:**REV 被 optimizer 自动打到 0/近 0**(harmful law 跨模型保持),n_clean 自选 620-740(不是拍的 770),4b 的 strict 与 noise-band 解不同(约束真的咬合)。Opt-U 与 Opt-Loss 代理今晚共用 score-side law(anchor 旧 ckpt 已删无法补 loss 曲线)——**clean-loss 硬约束以 λ 代理执行,声明降级**。
 
-**7. Prospective validation:PREDICTION_FREEZE 已在训练前 commit(ca02d0c),4 臂(2 模型 × law-optimal/uniform;replay=placebo 复用)结果:**
-[PENDING — 由收割步骤填入:RepairGain>0? CleanScore≥base? FA≤.10? ranking 对不对?]
+**7. Prospective validation(冻结在训练前,commit ca02d0c):排名 2/2 命中;damage 侧约束每模型各失守一项——诚实开牌。**
+| model | arm | actual U | frozen pred U | clean (base) | FA | verdict |
+|---|---|---|---|---|---|---|
+| qwen3-1.7b | **law-optimal** | **.6323** (1st ✓) | .5505 | .7127 (**< .7372,−.025 FAIL**) | .052 ✓ | RepairGain +.347 ✓;clean 硬约束破 |
+| qwen3-1.7b | uniform | .6112 (2nd ✓) | .4877 | .7467 ✓ | .068 ✓ | — |
+| qwen3-1.7b | replay | .2855 (3rd ✓) | .2855* | .7372 | — | *=anchor |
+| llama31-8b | **law-optimal** | **.5392** (1st ✓) | .5456 | .7164 ≥ .7127 ✓ | **.173 > .10 FAIL** | RepairGain +.423 ✓;FA 硬约束破 |
+| llama31-8b | uniform | .5075 (2nd ✓) | .5414 | .6994(< base) | .000 ✓ | — |
+| llama31-8b | replay | .1164 (3rd ✓) | .1164* | .7127 | — | — |
+- **frozen ranking(optimal>uniform>replay)两个模型全部复现**;RepairGain 巨大(+.35/+.42);U 幅度再次系统性低估(1.7b actual .63 vs pred .55——diverse 低估的旧模式跨到了 vNext)。
+- **但 damage 侧预测在 2 点校准下不可靠**:1.7b 的 λ 预测 clean +.010 实际 −.025(方向都错);llama 的 ANS-damage amplitude 预测 FA .042 实际 .173(低估 4×)。**这正是"τ/λ 需要第三剂量+damage 专用校准点"的实证**——gain 侧 law 已可 prescribe,damage 侧 law 是 v2 的第一优先。
+- 严格按冻结判据(RepairGain>0 ∧ clean≥base ∧ FA≤.10):**llama optimal 2/3,qwen 1.7b optimal 2/3;没有全绿臂**——不粉饰。
 
 ## 6 张图
 1-2. fig_multimodel_profile.pdf(score panel + loss/margin panel);3. fig3_scaling_curves.pdf(anchor 形状+新模型校准点+M1 适配虚线);4. fig4_adaptation.pdf(M0/M1/M2 held-out MAE + a/τ/λ 表);5. fig5_size_vs_a.pdf(EXPLORATORY);6. fig6_prospective.pdf [PENDING]。

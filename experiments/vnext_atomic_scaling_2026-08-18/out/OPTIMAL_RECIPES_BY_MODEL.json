@@ -1,0 +1,138 @@
+{
+ "llama31-8b": {
+  "base_clean": 0.7127,
+  "solutions": {
+   "strict": {
+    "recipe": {
+     "FMT": 240,
+     "EVD": 960,
+     "REV": 0,
+     "ANS": 120,
+     "PARA": 30
+    },
+    "n_clean": 650,
+    "pred_U": 0.5456,
+    "pred_optloss": 1.722,
+    "pred_clean_score": 0.7128,
+    "pred_fa": 0.0415,
+    "pred_gains": {
+     "FMT": 0.5833,
+     "EVD": 0.0653,
+     "ANS": 0.988
+    }
+   },
+   "noise_band": {
+    "recipe": {
+     "FMT": 240,
+     "EVD": 960,
+     "REV": 0,
+     "ANS": 120,
+     "PARA": 30
+    },
+    "n_clean": 650,
+    "pred_U": 0.5456,
+    "pred_optloss": 1.722,
+    "pred_clean_score": 0.7128,
+    "pred_fa": 0.0415,
+    "pred_gains": {
+     "FMT": 0.5833,
+     "EVD": 0.0653,
+     "ANS": 0.988
+    }
+   }
+  },
+  "objectives_note": "Opt-U = R-branch endpoint mean tonight; Opt-Loss = normalized-deficit proxy; clean-loss constraint enforced via lambda clean-score proxy (loss-law absent for anchor ckpts) \u2014 declared",
+  "lambda": -1.3837
+ },
+ "qwen3-1.7b": {
+  "base_clean": 0.7372,
+  "solutions": {
+   "strict": {
+    "recipe": {
+     "FMT": 120,
+     "EVD": 240,
+     "REV": 0,
+     "ANS": 960,
+     "PARA": 60
+    },
+    "n_clean": 620,
+    "pred_U": 0.5505,
+    "pred_optloss": 1.1685,
+    "pred_clean_score": 0.7475,
+    "pred_fa": 0.0573,
+    "pred_gains": {
+     "FMT": 0.4611,
+     "EVD": 0.0309,
+     "ANS": 0.4881
+    }
+   },
+   "noise_band": {
+    "recipe": {
+     "FMT": 120,
+     "EVD": 240,
+     "REV": 0,
+     "ANS": 960,
+     "PARA": 60
+    },
+    "n_clean": 620,
+    "pred_U": 0.5505,
+    "pred_optloss": 1.1685,
+    "pred_clean_score": 0.7475,
+    "pred_fa": 0.0573,
+    "pred_gains": {
+     "FMT": 0.4611,
+     "EVD": 0.0309,
+     "ANS": 0.4881
+    }
+   }
+  },
+  "objectives_note": "Opt-U = R-branch endpoint mean tonight; Opt-Loss = normalized-deficit proxy; clean-loss constraint enforced via lambda clean-score proxy (loss-law absent for anchor ckpts) \u2014 declared",
+  "lambda": -1.8339
+ },
+ "qwen3-4b": {
+  "base_clean": 0.8828,
+  "solutions": {
+   "strict": {
+    "recipe": {
+     "FMT": 240,
+     "EVD": 480,
+     "REV": 60,
+     "ANS": 480,
+     "PARA": 0
+    },
+    "n_clean": 740,
+    "pred_U": 0.7984,
+    "pred_optloss": 0.7673,
+    "pred_clean_score": 0.8831,
+    "pred_fa": 0.0382,
+    "pred_gains": {
+     "FMT": 0.3748,
+     "EVD": 0.0,
+     "REV": -0.2496,
+     "ANS": 0.5689
+    }
+   },
+   "noise_band": {
+    "recipe": {
+     "FMT": 240,
+     "EVD": 120,
+     "REV": 0,
+     "ANS": 960,
+     "PARA": 60
+    },
+    "n_clean": 620,
+    "pred_U": 0.8925,
+    "pred_optloss": 1.9608,
+    "pred_clean_score": 0.8759,
+    "pred_fa": 0.0627,
+    "pred_gains": {
+     "FMT": 0.3748,
+     "EVD": 0.0,
+     "ANS": 0.6959
+    }
+   }
+  },
+  "objectives_note": "Opt-U = R-branch endpoint mean tonight; Opt-Loss = normalized-deficit proxy; clean-loss constraint enforced via lambda clean-score proxy (loss-law absent for anchor ckpts) \u2014 declared",
+  "lambda": 1.0711
+ }
+}
