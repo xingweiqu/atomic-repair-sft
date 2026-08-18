@@ -15,9 +15,9 @@ CARRIER, POOL, OUT_DIR, MODEL = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[
 PREFIX = sys.argv[5] if len(sys.argv) > 5 else "FMT"
 CAP_MODE = len(sys.argv) > 6 and sys.argv[6] == "cap"
 CUSTOM_DOSES = [int(x) for x in sys.argv[7].split(",")] if len(sys.argv) > 7 else None
-if CUSTOM_DOSES: DOSES = CUSTOM_DOSES
 SEED = 20260813
 DOSES = [0, 30, 60, 120, 240, 480, 960, 2000]
+if CUSTOM_DOSES: DOSES = CUSTOM_DOSES
 BUCKETS = [(0, 50), (50, 100), (100, 200), (200, 400), (400, 10**9)]
 CUTOFF, SEQ_PER_STEP, EPOCHS = 2048, 16, 2
 

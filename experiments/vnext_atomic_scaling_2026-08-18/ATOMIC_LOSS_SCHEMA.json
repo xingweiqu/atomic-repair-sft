@@ -1,0 +1,25 @@
+{
+  "version": "vnext-1.0",
+  "instrument": "immediate-contract teacher-forced NLL; chat template of each model, add_generation_prompt=true, thinking disabled; targets scored as assistant completion; NLL summed over target tokens with scaffold/skeleton masked as declared per axis",
+  "answer_scaffold": "Final answer: {gold}",
+  "axes": {
+    "original":   {"target": "scaffold_gold", "quantities": ["nll_gold", "nll_gold_per_tok"], "margin": null},
+    "paraphrase": {"target": "scaffold_gold", "quantities": ["nll_gold", "delta_vs_original"], "margin": null, "flags": ["aux_subset_n50"]},
+    "distractor": {"target": "scaffold_gold", "quantities": ["nll_gold", "delta_vs_original"], "margin": "loss_not_well_defined"},
+    "wc_light":   {"target": "contract_decision_final", "correct_decision": "REVISE", "quantities": ["nll_decision", "nll_final_gold"], "margins": ["decision: logp(REVISE)-logp(KEEP)", "candidate: logp(FINAL=gold)-logp(FINAL=cand)"]},
+    "wc_attempt": {"same_as": "wc_light"},
+    "cc_light":   {"target": "contract_decision_final", "correct_decision": "KEEP", "quantities": ["nll_decision", "nll_final_gold"], "margins": ["decision: logp(KEEP)-logp(REVISE)"]},
+    "cc_attempt": {"same_as": "cc_light"},
+    "insuf_ctr":  {"target": "contract_status", "correct_status": "INSUFFICIENT", "final": "NULL", "quantities": ["nll_status"], "margins": ["status: logp(INSUFFICIENT)-logp(ANSWERABLE)"]},
+    "suff_ctr":   {"target": "contract_status", "correct_status": "ANSWERABLE", "final": "gold", "quantities": ["nll_status"], "margins": ["status: logp(ANSWERABLE)-logp(INSUFFICIENT)"]},
+    "format":     {"target": "ANSWER={gold}", "quantities": ["nll_contract_tokens", "nll_semantic_tokens"], "split": "token mask: chars of 'ANSWER=' = contract; chars of gold integer = semantic", "margin": null},
+    "insufficient": {"loss": "loss_not_well_defined", "keep": "behavioral score only"},
+    "wc_nl":        {"loss": "loss_not_well_defined", "keep": "behavioral score only"},
+    "cc_nl":        {"loss": "loss_not_well_defined", "keep": "behavioral score only"}
+  },
+  "contract_templates": {
+    "contract_decision_final": "DECISION={decision}\nFINAL_ANSWER={final}",
+    "contract_status": "STATUS={status}\nFINAL_ANSWER={final}"
+  },
+  "provenance": "targets derived from prescription/gate1/eval500_proto.jsonl prompts/meta; no new benchmark"
+}
