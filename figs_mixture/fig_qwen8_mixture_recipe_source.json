@@ -1,0 +1,89 @@
+{
+ "arms": {
+  "replay": {
+   "allocation": {
+    "replay_total": 2000,
+    "fmt_R": 0,
+    "fmt_K": 0,
+    "fmt_IF": 0,
+    "ans_R": 0,
+    "ans_K": 0,
+    "ans_IF": 0
+   },
+   "actual_U": 0.5333,
+   "false_abstain_R": 0.008,
+   "valid": true
+  },
+  "worst_repair": {
+   "allocation": {
+    "replay_total": 800,
+    "fmt_R": 0,
+    "fmt_K": 0,
+    "fmt_IF": 0,
+    "ans_R": 400,
+    "ans_K": 400,
+    "ans_IF": 400
+   },
+   "actual_U": 0.5401,
+   "false_abstain_R": 0.0161,
+   "valid": true
+  },
+  "predicted_optimal": {
+   "allocation": {
+    "replay_total": 1460,
+    "fmt_R": 0,
+    "fmt_K": 30,
+    "fmt_IF": 0,
+    "ans_R": 480,
+    "ans_K": 30,
+    "ans_IF": 0
+   },
+   "actual_U": 0.5686,
+   "false_abstain_R": 0.0161,
+   "valid": true
+  },
+  "retention_constrained": {
+   "allocation": {
+    "replay_total": 1490,
+    "fmt_R": 0,
+    "fmt_K": 0,
+    "fmt_IF": 0,
+    "ans_R": 480,
+    "ans_K": 30,
+    "ans_IF": 0
+   },
+   "actual_U": 0.5762,
+   "false_abstain_R": 0.0723,
+   "valid": true
+  },
+  "uniform": {
+   "allocation": {
+    "replay_total": 1400,
+    "fmt_R": 100,
+    "fmt_K": 100,
+    "fmt_IF": 100,
+    "ans_R": 100,
+    "ans_K": 100,
+    "ans_IF": 100
+   },
+   "actual_U": 0.6021,
+   "false_abstain_R": 0.0683,
+   "valid": true
+  },
+  "failure_freq": {
+   "allocation": {
+    "replay_total": 800,
+    "fmt_R": 200,
+    "fmt_K": 210,
+    "fmt_IF": 90,
+    "ans_R": 240,
+    "ans_K": 140,
+    "ans_IF": 320
+   },
+   "actual_U": 0.6343,
+   "false_abstain_R": 0.2008,
+   "valid": false
+  }
+ },
+ "provenance": "MIXTURE_SPEC_FROZEN.json (allocations) + MIXTURE_OPEN_RESULT.json (actual_U, false_abstain_R)"
+}
