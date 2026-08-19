@@ -1723,5 +1723,204 @@
   "best_form": "obs_interp",
   "provenance": "per-model observed clean deltas at 60/480/960 (see ADAPTATION_RESULTS para_clean_obs); all |delta|<=.015 except mistral@960 -.044",
   "note": "no functional form claimed; optimizer uses per-model linear interpolation"
+ },
+ "FMT.contract_nll_gain": {
+  "forms": {
+   "satexp": {
+    "params": [
+     1.0,
+     30
+    ],
+    "extrapolation": {
+     "extrap_mae": 3.37,
+     "per_model_3rd_dose_err": {
+      "qwen3-1.7b": 3.0844,
+      "qwen3-4b": 1.1242,
+      "llama31-8b": 5.7019,
+      "mistral-7b": 3.5696
+     }
+    }
+   }
+  },
+  "best_form": "satexp",
+  "units": "reduction of format contract-token NLL",
+  "provenance": "POOLED 4-model LOSS-SIDE law; shape fit on two lowest doses; per-model amplitudes in ADAPTATION_RESULTS a_loss; exploratory grade"
+ },
+ "EVD.dl_dist_gain": {
+  "forms": {
+   "satexp": {
+    "params": [
+     1.0,
+     240
+    ],
+    "extrapolation": {
+     "extrap_mae": 0.0436,
+     "per_model_3rd_dose_err": {
+      "qwen3-1.7b": 0.0003,
+      "qwen3-4b": 0.0306,
+      "llama31-8b": 0.0343,
+      "mistral-7b": 0.1091
+     }
+    }
+   }
+  },
+  "best_form": "satexp",
+  "units": "reduction of paired dL_distractor",
+  "provenance": "POOLED 4-model LOSS-SIDE law; shape fit on two lowest doses; per-model amplitudes in ADAPTATION_RESULTS a_loss; exploratory grade"
+ },
+ "REV.margin_dec_gain": {
+  "forms": {
+   "satexp": {
+    "params": [
+     1.0,
+     120
+    ],
+    "extrapolation": {
+     "extrap_mae": 0.918,
+     "per_model_3rd_dose_err": {
+      "qwen3-1.7b": 0.9248,
+      "qwen3-4b": 0.6592,
+      "llama31-8b": 0.3446,
+      "mistral-7b": 1.7432
+     }
+    }
+   }
+  },
+  "best_form": "satexp",
+  "units": "increase of wc decision margin",
+  "provenance": "POOLED 4-model LOSS-SIDE law; shape fit on two lowest doses; per-model amplitudes in ADAPTATION_RESULTS a_loss; exploratory grade"
+ },
+ "ANS.margin_status_gain": {
+  "forms": {
+   "satexp": {
+    "params": [
+     1.0,
+     120
+    ],
+    "extrapolation": {
+     "extrap_mae": 1.9473,
+     "per_model_3rd_dose_err": {
+      "qwen3-1.7b": 2.2248,
+      "qwen3-4b": 2.1833,
+      "llama31-8b": 2.5161,
+      "mistral-7b": 0.8649
+     }
+    }
+   }
+  },
+  "best_form": "satexp",
+  "units": "increase of insuf status margin",
+  "provenance": "POOLED 4-model LOSS-SIDE law; shape fit on two lowest doses; per-model amplitudes in ADAPTATION_RESULTS a_loss; exploratory grade"
+ },
+ "PARA.score": {
+  "forms": {},
+  "best_form": "null_law",
+  "provenance": "behavioral paraphrase accuracy stays within +/-.04 at all doses on all 4 models (aux 50-fam subset); NO score-side law exists -- the PARA effect is loss-side only",
+  "observed_deltas": {
+   "qwen3-1.7b": {
+    "60": 0.0,
+    "480": -0.02,
+    "960": 0.0
+   },
+   "qwen3-4b": {
+    "60": 0.02,
+    "480": 0.02,
+    "960": 0.04
+   },
+   "llama31-8b": {
+    "60": 0.06,
+    "480": 0.02,
+    "960": 0.0
+   },
+   "mistral-7b": {
+    "60": 0.06,
+    "480": -0.12,
+    "960": -0.06
+   }
+  }
+ },
+ "COMPOSITION.diversity_premium": {
+  "forms": {},
+  "best_form": "dev_family_points",
+  "points": [
+   [
+    "replay",
+    0,
+    0.0
+   ],
+   [
+    "BRfmtR",
+    30,
+    -0.0
+   ],
+   [
+    "BRansK",
+    30,
+    -0.0
+   ],
+   [
+    "UNIHALF",
+    300,
+    -0.0176
+   ],
+   [
+    "BRansR",
+    480,
+    0.0
+   ],
+   [
+    "retention_constrained",
+    510,
+    -0.0135
+   ],
+   [
+    "PAIRR",
+    510,
+    -0.0067
+   ],
+   [
+    "PAIRX",
+    510,
+    -0.0175
+   ],
+   [
+    "predicted_optimal",
+    540,
+    -0.0211
+   ],
+   [
+    "uniform",
+    600,
+    0.0781
+   ],
+   [
+    "failure_freq",
+    1200,
+    0.1089
+   ],
+   [
+    "worst_repair",
+    1200,
+    -0.0039
+   ]
+  ],
+  "rule": "+premium requires all 6 cells>0 and total>=600 (optimizer uses +.02 flat)",
+  "provenance": "Qwen dev-family INTERACTION_CORRECTION (frozen paper); NOT refit on new models; grade=fixed development-family term"
+ },
+ "COMPOSITION.damage_offsets": {
+  "forms": {},
+  "best_form": "guard_obs",
+  "obs": {
+   "qwen3-1.7b": {
+    "clean_offset": -0.0259,
+    "fa_offset": 0.0157
+   },
+   "llama31-8b": {
+    "clean_offset": -0.0326,
+    "fa_offset": 0.1727
+   }
+  },
+  "usage": "optimizer conservative mode: offset * total/1400 linear scaling (declared insufficient for llama clean, v3 will fit directly)",
+  "provenance": "N=2 v1-mixture observations; guard-grade, NOT a fitted law"
  }
 }
