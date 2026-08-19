@@ -2,7 +2,7 @@
 # Train + eval one PROSPECTIVE mixture arm (C-48 Phase I). Freeze file must exist first.
 # Usage: train_mix.sh <model_path> <template> <model_tag> <arm_name> <spec_json>
 set -u
-MODEL=$1; TPL=$2; MTAG=$3; ARM=$4; SPEC=$5
+MODEL=$1; TPL=$2; MTAG=$3; ARM=$4; SPEC=$5; SEED=${6:-42}
 source ~/atomic_env.sh
 REPO=/opt/tiger/atomic-repair-sft-github
 VX=$REPO/experiments/vnext_atomic_scaling_2026-08-18
@@ -10,7 +10,7 @@ cd $REPO
 NG=$(echo $GPUS | awk -F, '{print NF}')
 GA=$((16 / NG))
 BASE=/mnt/hdfs/xwqu/vnext0818
-RID=${MTAG}_MIX-${ARM}
+RID=${MTAG}_MIX-${ARM}$([ "$SEED" != "42" ] && echo "-S$SEED")
 RD=$BASE/runs/$RID; mkdir -p $RD
 [ -f $RD/DONE ] && { echo "skip $RID"; exit 0; }
 [ -f $BASE/prospective/PREDICTION_FREEZE_${MTAG}.json ] || { echo "NO_FREEZE $MTAG"; exit 1; }
@@ -33,6 +33,7 @@ sed -e "s#^model_name_or_path: .*#model_name_or_path: $MODEL#" \
     -e "s#__MAXSTEPS__#$MS#" \
     -e "s#dataset_dir: ./prescription/lawv1#dataset_dir: $DATA#" \
     -e "s#gradient_accumulation_steps: 2#gradient_accumulation_steps: $GA#" \
+    -e "s#^seed: 42#seed: $SEED#" \
     configs/lawv1/train_smoke_packed.yaml > $RD/train_config.yaml
 export FORCE_TORCHRUN=1 NPROC_PER_NODE=$NG CUDA_VISIBLE_DEVICES=$GPUS DISABLE_VERSION_CHECK=1
 ulimit -c 0
