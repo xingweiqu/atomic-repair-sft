@@ -1,0 +1,192 @@
+{
+ "frozen": "2026-08-19 pre-training (C-50 V2)",
+ "model": "llama31-8b",
+ "adaptation": {
+  "tau_validated_M2": {
+   "per_repair": {
+    "FMT": {
+     "third_dose": 960,
+     "true_gain3": 0.5198,
+     "M1": {
+      "a": 2.034,
+      "err": 0.0763
+     },
+     "M2": {
+      "a": 2.034,
+      "tau": 1.0,
+      "err": 0.0763
+     }
+    },
+    "EVD": {
+     "third_dose": 960,
+     "true_gain3": 0.2061,
+     "M1": {
+      "a": 5.999,
+      "err": 0.0574
+     },
+     "M2": {
+      "a": 9.059,
+      "tau": 5.0,
+      "err": 0.0395
+     }
+    },
+    "REV": {
+     "third_dose": 960,
+     "true_gain3": -0.0038,
+     "M1": {
+      "a": 0.027,
+      "err": 0.0017
+     },
+     "M2": {
+      "a": 0.048,
+      "tau": 0.2,
+      "err": 0.0
+     }
+    },
+    "ANS": {
+     "third_dose": 960,
+     "true_gain3": 0.988,
+     "M1": {
+      "a": 1.774,
+      "err": 0.4706
+     },
+     "M2": {
+      "a": 1.228,
+      "tau": 0.2,
+      "err": 0.0751
+     }
+    }
+   },
+   "M1_mae": 0.1515,
+   "M2_mae": 0.0477
+  },
+  "damage": {
+   "clean_lambda": {
+    "FMT": {
+     "lambda": 6.959,
+     "max_resid": 0.0189,
+     "obs_deltas": {
+      "30": -0.0038,
+      "120": 0.0208,
+      "960": 0.0283
+     }
+    },
+    "EVD": {
+     "lambda": 0.097,
+     "max_resid": 0.0174,
+     "obs_deltas": {
+      "120": -0.017,
+      "480": 0.0075,
+      "960": 0.0056
+     }
+    },
+    "REV": {
+     "lambda": 2.543,
+     "max_resid": 0.0061,
+     "obs_deltas": {
+      "120": 0.0094,
+      "480": 0.017,
+      "960": 0.0245
+     }
+    },
+    "ANS": {
+     "lambda": 0.131,
+     "max_resid": 0.0233,
+     "obs_deltas": {
+      "120": 0.0113,
+      "480": -0.0246,
+      "960": 0.0113
+     }
+    }
+   },
+   "fa": {
+    "amp_from_480": 0.0,
+    "pred_960": 0.0,
+    "obs_960": 0.0,
+    "err": 0.0,
+    "obs_480": 0.0
+   },
+   "keep": {
+    "amp": 2.91,
+    "pred_960": -0.5089,
+    "obs_960": 0.0,
+    "err": 0.5089
+   }
+  },
+  "composition_guards": {
+   "fa_offset_obs": 0.1727,
+   "clean_offset_obs": -0.0326
+  },
+  "para_law": {
+   "amp": 0.138,
+   "fit_mae": 0.0505,
+   "points": [
+    [
+     60,
+     0.0695
+    ],
+    [
+     480,
+     0.1086
+    ],
+    [
+     960,
+     0.2103
+    ]
+   ]
+  }
+ },
+ "arms": {
+  "strict": {
+   "recipe": {
+    "FMT": 240,
+    "EVD": 480,
+    "REV": 0,
+    "ANS": 480,
+    "PARA": 120
+   },
+   "n_clean": 680,
+   "pred_U": 0.5655,
+   "pred_clean": 0.7175,
+   "pred_fa": 0.0,
+   "pred_gains": {
+    "FMT": 0.5962,
+    "EVD": 0.1322,
+    "ANS": 1.1926
+   }
+  },
+  "conservative": {
+   "recipe": {
+    "FMT": 120,
+    "EVD": 30,
+    "REV": 240,
+    "ANS": 240,
+    "PARA": 30
+   },
+   "n_clean": 1340,
+   "pred_U": 0.5037,
+   "pred_clean": 0.7251,
+   "pred_fa": 0.0814,
+   "pred_gains": {
+    "FMT": 0.5962,
+    "EVD": 0.0665,
+    "REV": -0.0035,
+    "ANS": 0.81
+   },
+   "margin_used": 0.012
+  },
+  "replay": {
+   "note": "dose-0 placebo reused"
+  }
+ },
+ "reuse": {
+  "strict_equals_v1_optimal": false
+ },
+ "predicted_ranking_U": [
+  "strict",
+  "conservative",
+  "replay"
+ ],
+ "success_criteria": "per arm: RepairGain>0 AND CleanScore>=base AND FA<=.10; V2 passes if the CONSERVATIVE arm goes all-green while keeping RepairGain large",
+ "hypothesis": "strict may again violate composition-borne damage; conservative (guards scaled by total dose) should be all-green \u2014 this is the safe-frontier bet"
+}
