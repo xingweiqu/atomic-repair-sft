@@ -1,0 +1,31 @@
+{
+ "frozen": "2026-08-19 pre-training",
+ "model": "qwen3-4b",
+ "context": "C-51 GPU-fill batch: CD composition-damage calibration arms + uniform comparator + v1-optimizer strict recipe arm",
+ "law_optimal_v1": {
+  "recipe": {
+   "FMT": 240,
+   "EVD": 480,
+   "REV": 60,
+   "ANS": 480,
+   "PARA": 0
+  },
+  "n_clean": 740,
+  "pred_U": 0.7984,
+  "pred_optloss": 0.7673,
+  "pred_clean_score": 0.8831,
+  "pred_fa": 0.0382,
+  "pred_gains": {
+   "FMT": 0.3748,
+   "EVD": 0.0,
+   "REV": -0.2496,
+   "ANS": 0.5689
+  }
+ },
+ "predicted_ranking": [
+  "optimalv1",
+  "uniform",
+  "replay"
+ ],
+ "note": "strict recipe + prediction frozen in OPTIMAL_RECIPES_BY_MODEL (commit f2cedb3-era, prior to any qwen3-4b mixture training); CD arms are calibration, not prospective"
+}

@@ -1,0 +1,6 @@
+{
+ "frozen": "2026-08-19 pre-training",
+ "model": "mistral-7b",
+ "context": "C-51 GPU-fill batch: CD composition-damage calibration arms + uniform comparator",
+ "note": "calibration-only: no optimizer recipe frozen for mistral yet (cross-family adaptation unresolved); CD/uniform arms inform composition-damage fit and provide comparators only"
+}
