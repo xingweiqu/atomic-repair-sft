@@ -1,0 +1,68 @@
+{
+ "qwen3-1.7b": {
+  "frozen": "2026-08-19 pre-training (C-51 V3)",
+  "finding": "composition damage is model-specific and non-monotonic (CD scan, 20 arms/4 models); smooth (total,coverage) function REJECTED by data; v3 uses empirical frontier anchoring + one local law extrapolation step",
+  "empirical_frontier_observed": {
+   "CD1200d": {
+    "U": 0.599,
+    "d_clean": 0.004,
+    "fa": 0.056,
+    "strict_all_green": true
+   },
+   "uniform": {
+    "U": 0.611,
+    "d_clean": 0.01,
+    "fa": 0.068,
+    "strict_all_green": true
+   }
+  },
+  "v3_proposal": {
+   "recipe": {
+    "FMT": 240,
+    "EVD": 120,
+    "REV": 0,
+    "ANS": 600,
+    "PARA": 240
+   },
+   "total": 1200,
+   "n_clean": 800,
+   "rationale": "local extrapolation from CD1200d toward higher ANS (FA interpolated CD1200d->CD1200c ~ .08), keep 4-cell diversity to hold clean",
+   "pred": {
+    "U": 0.63,
+    "fa": 0.08,
+    "clean": "= base or better"
+   },
+   "success": "U > .611 (best observed all-green) AND strict all-green"
+  }
+ },
+ "llama31-8b": {
+  "frozen": "2026-08-19 pre-training (C-51 V3)",
+  "finding": "llama FA is composition-wild (CD300 fa=.462 vs CD600 .028); the CONCENTRATED CD1200c (FMT240+ANS960) is STRICT ALL-GREEN with U .544 > v1-optimal .539 -- empirical frontier already beats v1",
+  "empirical_frontier_observed": {
+   "CD1200c": {
+    "U": 0.544,
+    "d_clean": 0.007,
+    "fa": 0.004,
+    "strict_all_green": true
+   }
+  },
+  "v3_proposal": {
+   "recipe": {
+    "FMT": 240,
+    "EVD": 240,
+    "REV": 0,
+    "ANS": 960,
+    "PARA": 0
+   },
+   "total": 1440,
+   "n_clean": 560,
+   "rationale": "CD1200c + EVD240 (llama EVD amplitude large, single-arm EVD clean-safe); ANS unchanged at FA-safe 960",
+   "pred": {
+    "U": 0.56,
+    "fa": "<.05",
+    "clean": "~ base"
+   },
+   "success": "U > .544 AND strict all-green"
+  }
+ }
+}
