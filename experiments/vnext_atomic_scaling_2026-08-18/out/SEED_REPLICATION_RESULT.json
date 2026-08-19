@@ -1,0 +1,116 @@
+{
+ "qwen3-1.7b": {
+  "v3frontier": {
+   "n_seeds": 3,
+   "U_seeds": [
+    0.6463,
+    0.6523,
+    0.6408
+   ],
+   "U_mean": 0.6465,
+   "dclean_seeds": [
+    -0.0056,
+    -0.0359,
+    -0.0226
+   ],
+   "dclean_mean": -0.0214,
+   "fa_seeds": [
+    0.0763,
+    0.0602,
+    0.0522
+   ],
+   "fa_mean": 0.0629,
+   "strict_all_green_3seed": false
+  },
+  "CD1200d": {
+   "n_seeds": 3,
+   "U_seeds": [
+    0.5985,
+    0.6169,
+    0.568
+   ],
+   "U_mean": 0.5945,
+   "dclean_seeds": [
+    0.0038,
+    -0.0094,
+    0.0
+   ],
+   "dclean_mean": -0.0019,
+   "fa_seeds": [
+    0.0562,
+    0.0522,
+    0.0522
+   ],
+   "fa_mean": 0.0535,
+   "strict_all_green_3seed": false
+  },
+  "uniform": {
+   "n_seeds": 3,
+   "U_seeds": [
+    0.6112,
+    0.5685,
+    0.5439
+   ],
+   "U_mean": 0.5745,
+   "dclean_seeds": [
+    0.0095,
+    0.0246,
+    0.0038
+   ],
+   "dclean_mean": 0.0126,
+   "fa_seeds": [
+    0.0683,
+    0.0201,
+    0.0442
+   ],
+   "fa_mean": 0.0442,
+   "strict_all_green_3seed": true
+  }
+ },
+ "llama31-8b": {
+  "v3frontier": {
+   "n_seeds": 3,
+   "U_seeds": [
+    0.5945,
+    0.5766,
+    0.5837
+   ],
+   "U_mean": 0.5849,
+   "dclean_seeds": [
+    -0.0095,
+    -0.0152,
+    0.0019
+   ],
+   "dclean_mean": -0.0076,
+   "fa_seeds": [
+    0.0,
+    0.0723,
+    0.0
+   ],
+   "fa_mean": 0.0241,
+   "strict_all_green_3seed": false
+  },
+  "CD1200c": {
+   "n_seeds": 3,
+   "U_seeds": [
+    0.5444,
+    0.5033,
+    0.5109
+   ],
+   "U_mean": 0.5195,
+   "dclean_seeds": [
+    0.0075,
+    0.0132,
+    -0.0303
+   ],
+   "dclean_mean": -0.0032,
+   "fa_seeds": [
+    0.004,
+    0.0,
+    0.0
+   ],
+   "fa_mean": 0.0013,
+   "strict_all_green_3seed": false
+  }
+ }
+}

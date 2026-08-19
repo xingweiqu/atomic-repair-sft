@@ -37,7 +37,20 @@
 - clean 约束:v2 conservative 在 1.7b 全绿(+.032);v3 两臂压 band 负侧待 seed 裁决;
 - **方法论主线定型:benefit 侧 = 参数化 law(a+τ 双层已验证);damage 侧 = 经验锚定 + 局部外推**(参数化被 CD 扫描否定)。
 
-## 5. 下一步(seed 复制开牌后)
-- 若 3-seed 均值 clean ≥ base:v3frontier 即"全绿且历史最高 U"终局配方,vNext 故事闭环;
-- 若仍带负:safe frontier 收缩半步(ANS−120 或 PARA+替换),最后一轮验证;
-- 之后:V3 全套并入 vNext 论文素材(与 frozen paper 严格隔离)。
+## 5. 3-seed 终裁(SEED_REPLICATION_RESULT.json;5 个 claim 臂 × 3 seeds)
+
+| model | arm | U(3-seed) | Δclean(3-seed) | FA | 严格 3-seed 判定 |
+|---|---|---|---|---|---|
+| 1.7b | v3frontier | **.6465** [.646/.652/.641] | **−.0214**(全负) | .063 | not green——**clean 代价是真实效应** |
+| 1.7b | CD1200d | .5945 | −.0019(≈0) | .054 | 边界(base 水平) |
+| 1.7b | **uniform** | .5745 | **+.0126**(全正) | .044 | **ALL-GREEN(3-seed)** |
+| llama | v3frontier | **.5849** [.595/.577/.584] | −.0076 | .024 | band 内,not strict |
+| llama | CD1200c | .5195 | −.0032(seed 间摆动) | .001 | 边界 |
+
+**最终陈述(取代"单点全绿"叙事):safe frontier 是一条真实的 U-vs-clean 折衷曲线,且 U 增益 seed 稳健**:
+- qwen3-1.7b:全绿上限 = uniform(U .575, clean +.013);U .594(CD1200d)在 base 水平;U .646(v3frontier)付 −.021 clean。
+- llama:全绿边界在 CD1200c/band 区(U .52);U .585(v3frontier)付 −.008(band 内)。
+- **U 目标预测累计 8/8 且全部 seed 稳健;strict-clean 的教训:v3frontier 单 seed 的 −.006 曾看似 band 噪声,3-seed 揭示 −.021 真实代价**——这正是 seed 复制的价值,也是"clean 无掉点"作为硬约束的最终形态:它定义了 frontier 上的位置,而不是被任何单一配方一次性"解决"。
+
+## 6. 收官判定(C-33:不再加批次的理由)
+Frontier 已由每模型 8-10 个混合观测点 + 关键臂 3-seed 刻画完毕;继续半步回撤配方只会落在已观测点之间,科学增量不足以再吃一轮 GPU。vNext 三阶段(C-48/49/50/51)至此闭环,下一步是人审与论文素材化。
