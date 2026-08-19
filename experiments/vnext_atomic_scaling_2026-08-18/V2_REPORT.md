@@ -17,7 +17,10 @@ C-49 说 "τ 是 hypothesis"——现在有第三剂量,**τ 升级为 validated
 **2. 最重要的结构性发现:damage 主要是 composition-borne,不是单修复剂量效应。**
 单臂 damage 剂量点全部温和:4 模型 ×5 repair 的 clean 掉幅全部 ≤.015;**llama 单臂 ANS@960 的 FA = 0.000**。而 v1 混合臂:1.7b clean −.025、llama FA .173。观测 offset(mixture − Σ单臂预测):1.7b clean −.026,llama FA +.173、clean −.033。**单修复 damage law 拟合得再好也预测不了混合 damage——damage 有自己的 carrier/composition 依赖**,这与 v1 论文 gain 侧的 carrier dependence 完全对偶。
 
-**3. PARA 转正为 loss-side law(exploratory)**:pooled satexp,shared τ=30,per-model amplitude(1.7b .006 / 4b .076 / llama .138 / mistral .181)——快饱和小幅度;行为分持平如旧。
+**3. PARA 一等公民化(loss-side law + 三点验证 + clean damage)[PARA_LAW_V3.json]**:
+- 三点验证(shared τ=30 只用两低点拟合,预测 960):**模型间异质**——4b 干净命中(err .002,PARA loss-gain 真实且可预测);llama 低估(err .114,其 ΔL 增益到 960 还在涨,τ 应更大);1.7b 幅度≈0(PARA 对它无 loss 效应);mistral 非单调噪声(err .264)。M1≈M2(.103/.104),per-model τ 暂无增益。
+- PARA clean damage:除 mistral@960(−.044)外全部 |Δ|≤.015(noise band 内)——**mistral 高剂量 PARA 伤 clean**,是它唯一的 damage 信号。
+- 判定:**PARA law = model-conditional、loss-side、exploratory grade**;v3 optimizer 中 PARA 配额改由 Opt-Loss 目标(含 PARA loss-gain)+ 各自 clean 插值决定,不再吃 diversity term 白配额。
 
 **4. Optimizer v2 双解**(benefit laws + damage 插值 + composition guards 按总剂量线性缩放):
 | model | 解 | 配方 (FMT/EVD/REV/ANS/PARA) | pred U | pred clean | pred FA |
