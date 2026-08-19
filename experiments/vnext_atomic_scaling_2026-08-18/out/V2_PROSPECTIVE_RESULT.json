@@ -1,0 +1,96 @@
+{
+ "qwen3-1.7b": {
+  "replay": {
+   "U": 0.2855,
+   "clean": 0.7372,
+   "fa": 0.0161,
+   "all_green": null,
+   "pred_U": null,
+   "pred_clean": null,
+   "pred_fa": null
+  },
+  "v2-strict": {
+   "U": 0.6323,
+   "clean": 0.7127,
+   "fa": 0.0522,
+   "all_green": false,
+   "pred_U": 0.5881,
+   "pred_clean": 0.7405,
+   "pred_fa": 0.0365
+  },
+  "v2-conservative": {
+   "U": 0.4864,
+   "clean": 0.7694,
+   "fa": 0.0361,
+   "all_green": true,
+   "pred_U": 0.3707,
+   "pred_clean": 0.7378,
+   "pred_fa": 0.0355
+  },
+  "v1-optimal": {
+   "U": 0.6323,
+   "clean": 0.7127,
+   "fa": 0.0522,
+   "all_green": false,
+   "pred_U": null,
+   "pred_clean": null,
+   "pred_fa": null
+  },
+  "uniform-v1": {
+   "U": 0.6112,
+   "clean": 0.7467,
+   "fa": 0.0683,
+   "all_green": true,
+   "pred_U": null,
+   "pred_clean": null,
+   "pred_fa": null
+  }
+ },
+ "llama31-8b": {
+  "replay": {
+   "U": 0.1164,
+   "clean": 0.7127,
+   "fa": 0.0,
+   "all_green": null,
+   "pred_U": null,
+   "pred_clean": null,
+   "pred_fa": null
+  },
+  "v2-strict": {
+   "U": 0.5142,
+   "clean": 0.6824,
+   "fa": 0.0,
+   "all_green": false,
+   "pred_U": 0.5655,
+   "pred_clean": 0.7175,
+   "pred_fa": 0.0
+  },
+  "v2-conservative": {
+   "U": 0.4891,
+   "clean": 0.7013,
+   "fa": 0.0,
+   "all_green": false,
+   "pred_U": 0.5037,
+   "pred_clean": 0.7251,
+   "pred_fa": 0.0814
+  },
+  "v1-optimal": {
+   "U": 0.5392,
+   "clean": 0.7164,
+   "fa": 0.1727,
+   "all_green": false,
+   "pred_U": null,
+   "pred_clean": null,
+   "pred_fa": null
+  },
+  "uniform-v1": {
+   "U": 0.5075,
+   "clean": 0.6994,
+   "fa": 0.0,
+   "all_green": false,
+   "pred_U": null,
+   "pred_clean": null,
+   "pred_fa": null
+  }
+ }
+}
