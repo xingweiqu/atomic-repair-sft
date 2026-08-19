@@ -6,7 +6,8 @@
     "FMT": 2.029,
     "EVD": 2.6323,
     "REV": 0.0221,
-    "ANS": 3.6514
+    "ANS": 3.6514,
+    "PARA": 0.097
    },
    "tau_M2": 0.25,
    "lambda_M3": -1.4115,
@@ -21,7 +22,12 @@
     "REV": 0.9962,
     "ANS": 0.988
    },
-   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)"
+   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)",
+   "para_clean_obs": {
+    "60": 0.0,
+    "480": 0.0151,
+    "960": 0.0094
+   }
   },
   "mistral-7b": {
    "a_M0": 2.0854,
@@ -29,7 +35,8 @@
     "FMT": 1.3836,
     "EVD": 8.3509,
     "REV": -0.0,
-    "ANS": 3.6809
+    "ANS": 3.6809,
+    "PARA": 0.277
    },
    "tau_M2": 0.25,
    "lambda_M3": 6.0547,
@@ -44,7 +51,12 @@
     "REV": 1,
     "ANS": 0.996
    },
-   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)"
+   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)",
+   "para_clean_obs": {
+    "60": -0.0151,
+    "480": -0.0076,
+    "960": -0.0435
+   }
   },
   "qwen3-1.7b": {
    "a_M0": 1.0005,
@@ -52,7 +64,8 @@
     "FMT": 1.6099,
     "EVD": 1.6036,
     "REV": 0.3402,
-    "ANS": 0.5935
+    "ANS": 0.5935,
+    "PARA": -0.006
    },
    "tau_M2": 2.0,
    "lambda_M3": -2.015,
@@ -67,7 +80,12 @@
     "REV": 0.69,
     "ANS": 0.9317
    },
-   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)"
+   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)",
+   "para_clean_obs": {
+    "60": 0.0019,
+    "480": -0.0113,
+    "960": 0.0114
+   }
   },
   "qwen3-4b": {
    "a_M0": 1.1432,
@@ -75,7 +93,8 @@
     "FMT": 1.3038,
     "EVD": 0.0,
     "REV": 1.4492,
-    "ANS": 0.8463
+    "ANS": 0.8463,
+    "PARA": 0.075
    },
    "tau_M2": 1.0,
    "lambda_M3": 0.7825,
@@ -90,7 +109,12 @@
     "REV": 0.2457,
     "ANS": 0.7149
    },
-   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)"
+   "note_m2": "tau chosen on held-out highs (declared optimistic; needs 3rd dose)",
+   "para_clean_obs": {
+    "60": -0.0057,
+    "480": -0.0132,
+    "960": -0.0095
+   }
   }
  },
  "table": [

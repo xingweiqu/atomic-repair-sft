@@ -1690,5 +1690,38 @@
   },
   "best_form": "loglin",
   "seed_sd_mean": 0.00407
+ },
+ "PARA.dl_gain": {
+  "doses": [
+   0,
+   60,
+   480,
+   960
+  ],
+  "gain": null,
+  "base": null,
+  "forms": {
+   "satexp": {
+    "params": [
+     1.0,
+     30
+    ],
+    "lodo_mae": null,
+    "extrapolation": {
+     "extrap_mae": 0.1026,
+     "extrap_note": "per-model 3rd-dose(960) prediction errors: {\"qwen3-1.7b\": 0.031, \"qwen3-4b\": 0.0019, \"llama31-8b\": 0.1138, \"mistral-7b\": 0.2637}"
+    }
+   }
+  },
+  "best_form": "satexp",
+  "seed_sd_mean": null,
+  "provenance": "POOLED 4-model loss-side law (dL_para reduction); NO anchor grid; shape fit on two lowest doses only; per-model amplitudes in ADAPTATION_RESULTS a_PARA; grade=exploratory, model-conditional (4b predictable, llama underfit, 1.7b null, mistral noisy)",
+  "units": "nats of dL_para reduction (loss-side, not score)"
+ },
+ "PARA.clean": {
+  "forms": {},
+  "best_form": "obs_interp",
+  "provenance": "per-model observed clean deltas at 60/480/960 (see ADAPTATION_RESULTS para_clean_obs); all |delta|<=.015 except mistral@960 -.044",
+  "note": "no functional form claimed; optimizer uses per-model linear interpolation"
  }
 }
